@@ -1,0 +1,12 @@
+{
+  "WASHED_INDIGO_AND_CREAM": {"name": "Washed Indigo & Cream", "P": "#4e6491", "S": "#e4d7b6", "A": "#b85f3c", "L": "#6e4a33", "M": "#bea56c", "K": "#232031"},
+  "FOREST_AND_HEARTH": {"name": "Forest & Hearth", "P": "#3f6140", "S": "#dcc8a0", "A": "#be5530", "L": "#5f3f29", "M": "#b0975c", "K": "#1c2419"},
+  "SCHOLARLY_PLUM": {"name": "Scholarly Plum", "P": "#64416c", "S": "#ddd1b6", "A": "#c79d45", "L": "#4f3529", "M": "#cbb478", "K": "#251828"},
+  "DESERT_SUN": {"name": "Desert Sun", "P": "#c9944d", "S": "#f0e2c0", "A": "#2f7f82", "L": "#7a4e2d", "M": "#c4a35a", "K": "#2e1f15"},
+  "ROYAL_VELVET": {"name": "Royal Velvet", "P": "#413d78", "S": "#d4cdbd", "A": "#a3304a", "L": "#4b3027", "M": "#d6b660", "K": "#1a1830"},
+  "RUSTIC_TWEED": {"name": "Rustic Tweed", "P": "#82714f", "S": "#e0d3b3", "A": "#963f2b", "L": "#5c3b25", "M": "#a29a86", "K": "#2a2218"},
+  "TANNER_AMBER": {"name": "Tanner Amber", "P": "#b06d2c", "S": "#e9d6ad", "A": "#2e5e66", "L": "#5c3a20", "M": "#bea86e", "K": "#2b1a0f"},
+  "WINTER_TUNDRA": {"name": "Winter Tundra", "P": "#7896a8", "S": "#eff0ea", "A": "#3a5578", "L": "#5e4b3f", "M": "#c3cbd0", "K": "#1d2733"},
+  "SAGE_AND_TERRACOTTA": {"name": "Sage & Terracotta", "P": "#86a070", "S": "#eadcbc", "A": "#bf6239", "L": "#6a4630", "M": "#b89e6c", "K": "#232a1d"},
+  "ASH_AND_TEAL": {"name": "Ash & Teal", "P": "#5c6369", "S": "#d9d4c5", "A": "#2c8f86", "L": "#4c3a30", "M": "#adb5b2", "K": "#1b1f23"}
+}

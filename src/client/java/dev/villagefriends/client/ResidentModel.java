@@ -3,7 +3,12 @@ package dev.villagefriends.client;
 import dev.villagefriends.ResidentMotion;
 import dev.villagefriends.outfit.BodyPart;
 import dev.villagefriends.outfit.FaceDetails;
-import java.util.LinkedHashMap;
+import dev.villagefriends.outfit.Garment;
+import dev.villagefriends.outfit.Piece;
+import dev.villagefriends.outfit.Wardrobe;
+import java.util.ArrayList;
+import java.util.IdentityHashMap;
+import java.util.List;
 import java.util.Map;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.player.PlayerModel;
@@ -14,14 +19,24 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Pose;
 
-/** New role-masked wardrobe, with solid head geometry and articulated bone attachments. */
+/**
+ * The player mesh (with its hat/jacket/sleeve/pants overlays carrying painted clothing and hair)
+ * plus every wardrobe garment's 3D pieces, baked once; each resident shows only its outfit's.
+ */
 public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
-    private final Map<OutfitAtlas.Entry, ModelPart> outfitParts = new LinkedHashMap<>();
+    private record Attached(Garment garment, Piece piece, ModelPart part) {}
+    private final Map<Garment, List<Attached>> pieces = new IdentityHashMap<>();
+    /** Pieces made visible by the previous pose; only these and the new outfit's are touched per frame. */
+    private final List<Attached> shown = new ArrayList<>();
     private final ModelPart[] eyes=new ModelPart[2], irises=new ModelPart[2], lids=new ModelPart[2], lowerLids=new ModelPart[2], creases=new ModelPart[2];
     private final ModelPart[] lashes=new ModelPart[2];
     public ResidentModel(boolean baby) {
         super(layer(baby).bakeRoot(), RenderTypes::entityTranslucent);
-        for (var entry : OutfitAtlas.ENTRIES) outfitParts.put(entry, bone(entry.box().bone()).getChild(entry.partName()));
+        for (var garment : Wardrobe.ALL) for (var piece : garment.pieces()) {
+            var part = bone(piece.bone()).getChild(partName(garment, piece));
+            part.visible = false;
+            pieces.computeIfAbsent(garment, g -> new ArrayList<>()).add(new Attached(garment, piece, part));
+        }
         for (int i=0;i<2;i++) {
             eyes[i]=head.getChild("eye"+i); irises[i]=eyes[i].getChild("iris"); lids[i]=eyes[i].getChild("lid");
             lowerLids[i]=eyes[i].getChild("lowerLid"); creases[i]=eyes[i].getChild("crease");
@@ -42,14 +57,20 @@ public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
             case LEFT_LEG -> "left_leg"; case RIGHT_LEG -> "right_leg";
         };
     }
+    private static String partName(Garment garment, Piece piece) { return "wardrobe_"+garment.id()+"_"+piece.id(); }
     public static LayerDefinition layer(boolean baby) {
         var mesh=PlayerModel.createMesh(CubeDeformation.NONE,false); var root=mesh.getRoot(); var head=root.getChild("head");
-        for (var entry : OutfitAtlas.ENTRIES) {
-            var b=entry.box(); float pad=b.inflation();
-            root.getChild(boneName(b.bone())).addOrReplaceChild(entry.partName(),
-                CubeListBuilder.create().texOffs(entry.u(),entry.v()).addBox(0,0,0,entry.tw(),entry.th(),entry.td()),
-                PartPose.ZERO.scaled((b.width()+2*pad)/entry.tw(),(b.height()+2*pad)/entry.th(),(b.depth()+2*pad)/entry.td())
-                    .translated(b.x()-pad,b.y()-pad,b.z()-pad));
+        for (var garment : Wardrobe.ALL) {
+            var block=OutfitAtlas.block(garment);
+            for (var p : garment.pieces()) {
+                var o=p.origin(); var r=p.rotation(); var s=p.scale();
+                var pose=PartPose.offsetAndRotation(p.pivot().x(),p.pivot().y(),p.pivot().z(),
+                    r.x()*Mth.DEG_TO_RAD,r.y()*Mth.DEG_TO_RAD,r.z()*Mth.DEG_TO_RAD);
+                if (!s.equals(Piece.Vec3.ONE)) pose=pose.scaled(s.x(),s.y(),s.z());
+                root.getChild(boneName(p.bone())).addOrReplaceChild(partName(garment,p),
+                    CubeListBuilder.create().texOffs(block.x()+p.u(),block.y()+p.v())
+                        .addBox(o.x(),o.y(),o.z(),p.width(),p.height(),p.depth(),new CubeDeformation(p.inflate())),pose);
+            }
         }
         for(int i=0;i<2;i++) {
             int side=i==0?-1:1;
@@ -81,19 +102,35 @@ public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
             PartPose.ZERO.scaled(w,h,1).translated(x,y,z));
     }
     @Override public void setupAnim(ResidentRenderState state) {
-        super.setupAnim(state); ResidentAnimation.apply(this,state); animateEyes(state); hat.visible=false;
+        super.setupAnim(state); ResidentAnimation.apply(this,state); animateEyes(state);
         boolean helmet=!state.headEquipment.isEmpty(), chest=!state.chestEquipment.isEmpty();
         boolean legs=!state.legsEquipment.isEmpty();
-        for (var item : outfitParts.entrySet()) {
-            var entry=item.getKey(); var part=item.getValue();
-            boolean covered=switch(entry.box().bone()) {
-                case HEAD -> helmet;
-                case TORSO, LEFT_ARM, RIGHT_ARM -> chest;
-                case LEFT_LEG, RIGHT_LEG -> legs;
+        var outfit=state.outfit;
+        hat.visible=outfit!=null && !helmet;
+        float forward=Math.min(0,Math.min(leftLeg.xRot,rightLeg.xRot)), backward=Math.max(0,Math.max(leftLeg.xRot,rightLeg.xRot));
+        boolean moving=ResidentAnimation.canMove(state);
+        for (var attached : shown) attached.part().visible=false;
+        shown.clear();
+        if (outfit==null) return;
+        for (var garment : outfit.garments()) for (var attached : pieces.getOrDefault(garment, List.of())) {
+            var piece=attached.piece(); var part=attached.part();
+            boolean covered=switch(garment.kind()) {
+                case HAIR -> helmet;
+                case TOP -> chest;
+                case BOTTOM -> legs || (piece.bone()==BodyPart.TORSO && chest);
             };
-            part.visible=state.outfit!=null && entry.selected(state.outfit) && !covered;
-            if (part.visible && entry.kind().equals("hair") && entry.box().id().startsWith("braid_") && ResidentAnimation.canMove(state))
-                part.zRot+=Mth.sin(state.walkAnimationPos*.6662F-.5F)*state.walkAnimationSpeed*.035F;
+            if (covered || !outfit.shows(garment,piece)) continue;
+            part.visible=true; shown.add(attached);
+            switch (piece.motion()) {
+                // Long hems ride on the leading/trailing leg so a stride never pokes through them.
+                case FLAP_FRONT -> part.xRot+=forward;
+                case FLAP_BACK -> part.xRot+=backward;
+                case SWAY -> { if (moving) {
+                    part.zRot+=Mth.sin(state.walkAnimationPos*.6662F-.6F)*state.walkAnimationSpeed*.09F;
+                    part.xRot+=Math.abs(Mth.cos(state.walkAnimationPos*.6662F))*state.walkAnimationSpeed*.12F;
+                } }
+                case NONE -> {}
+            }
         }
     }
     private void animateEyes(ResidentRenderState s) {

@@ -1,0 +1,301 @@
+{
+  "id": "t21_herbalists_bandolier",
+  "kind": "top",
+  "name": "Herbalist's Bandolier",
+  "texture": "tops/t21_herbalists_bandolier.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "vial_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        1.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "vial_cork_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        1.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "vial_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        3.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "vial_cork_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        3.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "vial_2",
+      "bone": "TORSO",
+      "pivot": [
+        -0.2,
+        5.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "vial_cork_2",
+      "bone": "TORSO",
+      "pivot": [
+        -0.2,
+        5.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "bandolier_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        1.8,
+        7.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "herb_sprig",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        7.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        17,
+        8
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A work shirt crossed by a leather bandolier of corked vials, with pouches and a sprig of herbs."
+}

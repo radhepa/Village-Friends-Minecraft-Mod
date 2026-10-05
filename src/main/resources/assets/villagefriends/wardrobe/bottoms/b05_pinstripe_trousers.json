@@ -1,0 +1,15 @@
+{
+  "id": "b05_pinstripe_trousers",
+  "kind": "bottom",
+  "name": "Pinstripe Trousers",
+  "texture": "bottoms/b05_pinstripe_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Pressed pinstriped trousers with a buttoned waistband and polished buckle shoes."
+}

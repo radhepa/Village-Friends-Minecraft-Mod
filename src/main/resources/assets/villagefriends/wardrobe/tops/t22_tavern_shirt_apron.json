@@ -1,0 +1,274 @@
+{
+  "id": "t22_tavern_shirt_apron",
+  "kind": "top",
+  "name": "Tavern Shirt & Half-Apron",
+  "texture": "tops/t22_tavern_shirt_apron.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_garter",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.2,
+        0.6,
+        -2.2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_garter",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.2,
+        0.6,
+        -2.2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "apron_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        17,
+        8
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        8,
+        1
+      ],
+      "uv": [
+        46,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shoulder_towel",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        -0.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -1,
+        0,
+        -3
+      ],
+      "size": [
+        2,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "towel_front",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        0.2,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "towel_back",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        0.2,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        24,
+        18
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Sleeve garters, a long half-apron tied at the waist and a serving towel over one shoulder."
+}

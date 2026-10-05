@@ -1,0 +1,47 @@
+{
+  "id": "t07_smiths_apron",
+  "kind": "top",
+  "name": "Smith's Apron",
+  "texture": "tops/t07_smiths_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_skirt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.3,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Henley work shirt, riveted leather bib apron with a stocked pocket, and heavy gloves."
+}

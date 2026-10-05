@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "keys": {
+    "P0": "#1f2d4d",
+    "P1": "#2f4673",
+    "P2": "#44619a",
+    "P3": "#6585bd",
+    "P4": "#93b0dc",
+    "S0": "#6b5d47",
+    "S1": "#968566",
+    "S2": "#c4b28c",
+    "S3": "#e0d0ab",
+    "S4": "#f5ebcf",
+    "A0": "#4d1519",
+    "A1": "#78232b",
+    "A2": "#a8363c",
+    "A3": "#cc5d57",
+    "A4": "#eb958e",
+    "L0": "#2c1c13",
+    "L1": "#4a2f20",
+    "L2": "#6b4630",
+    "L3": "#8f6444",
+    "L4": "#b38962",
+    "M0": "#39342f",
+    "M1": "#655b4d",
+    "M2": "#968870",
+    "M3": "#c4b594",
+    "M4": "#eee2c0",
+    "K0": "#14100c",
+    "K1": "#221a14",
+    "K2": "#2f251d",
+    "K3": "#3c3026",
+    "K4": "#4a3c30",
+    "H0": "#3a2213",
+    "H1": "#5c381f",
+    "H2": "#80522d",
+    "H3": "#a86f3c",
+    "H4": "#d09655"
+  },
+  "shadowKeys": {
+    "X1": 46,
+    "X2": 84
+  },
+  "hair": [
+    "h01_spiky_layered",
+    "h02_messy_parted",
+    "h03_voluminous_curls",
+    "h04_tousled_crop",
+    "h05_low_ponytail",
+    "h06_shaggy_shoulder",
+    "h07_swept_undercut",
+    "h08_top_knot",
+    "h09_curtain_part",
+    "h10_windswept_waves",
+    "h11_pointed_bangs",
+    "h12_hime_cut",
+    "h13_long_sidelocks",
+    "h14_wolf_cut",
+    "h15_ahoge_bob",
+    "h16_side_swept_bangs",
+    "h17_high_ponytail",
+    "h18_back_braid",
+    "h19_pointed_layers",
+    "h20_swept_back_spikes",
+    "h21_half_up_bun",
+    "h22_long_curtains",
+    "h23_undercut_curtains",
+    "h24_sleepy_fluff",
+    "h25_long_low_tail",
+    "h26_headband_spikes",
+    "h27_wavy_layers",
+    "h28_braided_crown",
+    "h29_ronin_tail",
+    "h30_rat_tail_crop"
+  ],
+  "tops": [
+    "t01_squires_brigandine",
+    "t02_trailblazer_vest",
+    "t03_arcanist_longcoat",
+    "t04_farmhand_flannel",
+    "t05_merchants_waistcoat",
+    "t06_mariners_knit",
+    "t07_smiths_apron",
+    "t08_rangers_hood",
+    "t09_minstrels_doublet",
+    "t10_pilgrims_tabard",
+    "t11_belted_linen_tunic",
+    "t12_drawstring_smock",
+    "t13_clasped_half_cloak",
+    "t14_quilted_arming_jacket",
+    "t15_laced_leather_jerkin",
+    "t16_liripipe_hood",
+    "t17_fur_trimmed_houppelande",
+    "t18_buttoned_cotehardie",
+    "t19_sheepskin_vest",
+    "t20_wrapped_wool_shawl",
+    "t21_herbalists_bandolier",
+    "t22_tavern_shirt_apron",
+    "t23_fur_collared_coat",
+    "t24_hooded_wool_poncho",
+    "t25_layered_overtunic",
+    "t26_embroidered_festival_vest",
+    "t27_woodsmans_wrap_jacket",
+    "t28_bakers_floury_smock",
+    "t29_satchel_overshirt",
+    "t30_students_open_gown"
+  ],
+  "bottoms": [
+    "b01_plated_greaves",
+    "b02_trail_breeches",
+    "b03_scholars_slacks",
+    "b04_patched_workpants",
+    "b05_pinstripe_trousers",
+    "b06_rolled_canvas",
+    "b07_heavy_work_trousers",
+    "b08_wrapped_leggings",
+    "b09_minstrel_hose",
+    "b10_wanderers_pantaloons",
+    "b11_cross_gartered_hose",
+    "b12_knee_braies",
+    "b13_tartan_trews",
+    "b14_buttoned_gaiters",
+    "b15_belted_wool_kilt",
+    "b16_sheepskin_leg_wraps",
+    "b17_side_laced_leather",
+    "b18_wooden_clogs",
+    "b19_striped_stockings",
+    "b20_drawstring_trousers",
+    "b21_fur_topped_boots",
+    "b22_tall_riding_boots",
+    "b23_pouch_belt_trousers",
+    "b24_woolen_chausses",
+    "b25_strap_sandals",
+    "b26_quilted_trousers",
+    "b27_knee_breeches",
+    "b28_leather_chaps",
+    "b29_belted_hose_dagger",
+    "b30_embroidered_hem_trousers"
+  ],
+  "outfits": [
+    {
+      "id": "knight_errant",
+      "name": "Knight-Errant",
+      "top": "t01_squires_brigandine",
+      "bottom": "b01_plated_greaves"
+    },
+    {
+      "id": "trailblazer",
+      "name": "Trailblazer",
+      "top": "t02_trailblazer_vest",
+      "bottom": "b02_trail_breeches"
+    },
+    {
+      "id": "arcanist",
+      "name": "Arcanist",
+      "top": "t03_arcanist_longcoat",
+      "bottom": "b03_scholars_slacks"
+    },
+    {
+      "id": "farmhand",
+      "name": "Farmhand",
+      "top": "t04_farmhand_flannel",
+      "bottom": "b04_patched_workpants"
+    },
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "top": "t05_merchants_waistcoat",
+      "bottom": "b05_pinstripe_trousers"
+    },
+    {
+      "id": "mariner",
+      "name": "Mariner",
+      "top": "t06_mariners_knit",
+      "bottom": "b06_rolled_canvas"
+    },
+    {
+      "id": "smith",
+      "name": "Smith",
+      "top": "t07_smiths_apron",
+      "bottom": "b07_heavy_work_trousers"
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "top": "t08_rangers_hood",
+      "bottom": "b08_wrapped_leggings"
+    },
+    {
+      "id": "minstrel",
+      "name": "Minstrel",
+      "top": "t09_minstrels_doublet",
+      "bottom": "b09_minstrel_hose"
+    },
+    {
+      "id": "pilgrim",
+      "name": "Pilgrim",
+      "top": "t10_pilgrims_tabard",
+      "bottom": "b10_wanderers_pantaloons"
+    },
+    {
+      "id": "villager",
+      "name": "Villager",
+      "top": "t11_belted_linen_tunic",
+      "bottom": "b20_drawstring_trousers"
+    },
+    {
+      "id": "goatherd",
+      "name": "Goatherd",
+      "top": "t12_drawstring_smock",
+      "bottom": "b12_knee_braies"
+    },
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer",
+      "top": "t13_clasped_half_cloak",
+      "bottom": "b22_tall_riding_boots"
+    },
+    {
+      "id": "militia",
+      "name": "Militia",
+      "top": "t14_quilted_arming_jacket",
+      "bottom": "b14_buttoned_gaiters"
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "top": "t15_laced_leather_jerkin",
+      "bottom": "b28_leather_chaps"
+    },
+    {
+      "id": "townsman",
+      "name": "Townsman",
+      "top": "t16_liripipe_hood",
+      "bottom": "b11_cross_gartered_hose"
+    },
+    {
+      "id": "burgher",
+      "name": "Burgher",
+      "top": "t17_fur_trimmed_houppelande",
+      "bottom": "b24_woolen_chausses"
+    },
+    {
+      "id": "gallant",
+      "name": "Gallant",
+      "top": "t18_buttoned_cotehardie",
+      "bottom": "b29_belted_hose_dagger"
+    },
+    {
+      "id": "shepherd",
+      "name": "Shepherd",
+      "top": "t19_sheepskin_vest",
+      "bottom": "b16_sheepskin_leg_wraps"
+    },
+    {
+      "id": "highlander",
+      "name": "Highlander",
+      "top": "t20_wrapped_wool_shawl",
+      "bottom": "b15_belted_wool_kilt"
+    },
+    {
+      "id": "herbalist",
+      "name": "Herbalist",
+      "top": "t21_herbalists_bandolier",
+      "bottom": "b25_strap_sandals"
+    },
+    {
+      "id": "innkeeper",
+      "name": "Innkeeper",
+      "top": "t22_tavern_shirt_apron",
+      "bottom": "b18_wooden_clogs"
+    },
+    {
+      "id": "northerner",
+      "name": "Northerner",
+      "top": "t23_fur_collared_coat",
+      "bottom": "b21_fur_topped_boots"
+    },
+    {
+      "id": "drover",
+      "name": "Drover",
+      "top": "t24_hooded_wool_poncho",
+      "bottom": "b13_tartan_trews"
+    },
+    {
+      "id": "yeoman",
+      "name": "Yeoman",
+      "top": "t25_layered_overtunic",
+      "bottom": "b27_knee_breeches"
+    },
+    {
+      "id": "reveler",
+      "name": "Reveler",
+      "top": "t26_embroidered_festival_vest",
+      "bottom": "b19_striped_stockings"
+    },
+    {
+      "id": "woodsman",
+      "name": "Woodsman",
+      "top": "t27_woodsmans_wrap_jacket",
+      "bottom": "b17_side_laced_leather"
+    },
+    {
+      "id": "baker",
+      "name": "Baker",
+      "top": "t28_bakers_floury_smock",
+      "bottom": "b26_quilted_trousers"
+    },
+    {
+      "id": "gardener",
+      "name": "Gardener",
+      "top": "t29_satchel_overshirt",
+      "bottom": "b23_pouch_belt_trousers"
+    },
+    {
+      "id": "student",
+      "name": "Student",
+      "top": "t30_students_open_gown",
+      "bottom": "b30_embroidered_hem_trousers"
+    }
+  ],
+  "professions": {
+    "NONE": [
+      "villager",
+      "farmhand",
+      "goatherd",
+      "yeoman",
+      "reveler",
+      "wayfarer",
+      "highlander",
+      "drover",
+      "mariner",
+      "trailblazer",
+      "northerner"
+    ],
+    "NITWIT": [
+      "minstrel",
+      "reveler",
+      "villager",
+      "goatherd",
+      "townsman"
+    ],
+    "ARMORER": [
+      "smith",
+      "militia",
+      "knight_errant"
+    ],
+    "BUTCHER": [
+      "smith",
+      "innkeeper",
+      "villager"
+    ],
+    "CARTOGRAPHER": [
+      "trailblazer",
+      "wayfarer",
+      "student",
+      "arcanist"
+    ],
+    "CLERIC": [
+      "pilgrim",
+      "student",
+      "burgher"
+    ],
+    "FARMER": [
+      "farmhand",
+      "villager",
+      "gardener",
+      "goatherd"
+    ],
+    "FISHERMAN": [
+      "mariner",
+      "drover",
+      "villager",
+      "northerner"
+    ],
+    "FLETCHER": [
+      "ranger",
+      "hunter",
+      "woodsman"
+    ],
+    "LEATHERWORKER": [
+      "smith",
+      "hunter",
+      "trailblazer"
+    ],
+    "LIBRARIAN": [
+      "arcanist",
+      "student",
+      "merchant"
+    ],
+    "MASON": [
+      "smith",
+      "farmhand",
+      "militia"
+    ],
+    "SHEPHERD": [
+      "shepherd",
+      "farmhand",
+      "drover",
+      "goatherd"
+    ],
+    "TOOLSMITH": [
+      "smith",
+      "woodsman"
+    ],
+    "WEAPONSMITH": [
+      "smith",
+      "knight_errant",
+      "militia"
+    ],
+    "KNIGHT": [
+      "knight_errant",
+      "militia",
+      "gallant"
+    ],
+    "ARCHER": [
+      "ranger",
+      "hunter",
+      "woodsman"
+    ],
+    "COOK": [
+      "baker",
+      "innkeeper",
+      "smith"
+    ],
+    "TAVERN_KEEPER": [
+      "innkeeper",
+      "merchant",
+      "burgher"
+    ],
+    "APOTHECARY": [
+      "herbalist",
+      "pilgrim",
+      "arcanist"
+    ],
+    "PAINTER": [
+      "minstrel",
+      "reveler",
+      "student",
+      "merchant"
+    ],
+    "BARD": [
+      "minstrel",
+      "reveler",
+      "townsman"
+    ],
+    "TAILOR": [
+      "merchant",
+      "gallant",
+      "minstrel",
+      "burgher"
+    ],
+    "CARPENTER": [
+      "woodsman",
+      "smith",
+      "farmhand"
+    ],
+    "SCHOLAR": [
+      "arcanist",
+      "student",
+      "pilgrim"
+    ],
+    "MERCHANT": [
+      "merchant",
+      "burgher",
+      "townsman"
+    ],
+    "ADVENTURER": [
+      "trailblazer",
+      "wayfarer",
+      "ranger",
+      "hunter",
+      "northerner"
+    ],
+    "GUARD": [
+      "knight_errant",
+      "militia",
+      "ranger",
+      "northerner"
+    ],
+    "MAGE": [
+      "arcanist",
+      "student"
+    ]
+  }
+}

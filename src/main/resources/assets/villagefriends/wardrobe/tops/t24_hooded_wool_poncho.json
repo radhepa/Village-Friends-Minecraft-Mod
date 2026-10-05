@@ -1,0 +1,130 @@
+{
+  "id": "t24_hooded_wool_poncho",
+  "kind": "top",
+  "name": "Hooded Wool Poncho",
+  "texture": "tops/t24_hooded_wool_poncho.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "poncho_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "poncho_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "poncho_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -0.8,
+        -3.0
+      ],
+      "size": [
+        9,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.0
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        31,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A hand-woven striped poncho draped over the shoulders, fringed at the hem, hood lying back."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "b21_fur_topped_boots",
+  "kind": "bottom",
+  "name": "Fur-Topped Winter Boots",
+  "texture": "bottoms/b21_fur_topped_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        4.4,
+        -3.0
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        4.4,
+        -3.0
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    }
+  ],
+  "description": "Wool trousers tucked into tall winter boots with thick fur cuffs."
+}

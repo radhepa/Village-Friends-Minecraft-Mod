@@ -1,0 +1,610 @@
+{
+  "id": "h18_back_braid",
+  "kind": "hair",
+  "name": "Back Braid",
+  "texture": "hair/h18_back_braid.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bang_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.9,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bang_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.9,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "bang_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "bang_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.7,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "bang_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.5,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "bang_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.5,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "bang_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "bang_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.55,
+        -4.35
+      ],
+      "rotation": [
+        -10,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "sidelock_right_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "sidelock_right_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "sidelock_left_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "sidelock_left_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.3,
+        -7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "braid_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.2,
+        4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.55,
+        0.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        23,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        1.8,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        32,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.55,
+        3.6,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        41,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        5.4,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        50,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.55,
+        7.2,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        9.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        12
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        10.8,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        18,
+        12
+      ],
+      "inflate": 0.1,
+      "motion": "sway"
+    },
+    {
+      "id": "braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -1.6,
+        4.9
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        11.8,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        27,
+        12
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "A long plaited braid down the back with a ribbon tie and pointed bangs."
+}

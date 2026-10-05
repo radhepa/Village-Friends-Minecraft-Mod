@@ -1,0 +1,192 @@
+{
+  "id": "t30_students_open_gown",
+  "kind": "top",
+  "name": "Student's Open Gown",
+  "texture": "tops/t30_students_open_gown.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bell_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.8,
+        2.4,
+        -2.8
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_bell_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.8,
+        2.4,
+        -2.8
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.7,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gown_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        38,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A long, open scholar's gown with wide bell sleeves and an accent-faced collar over a tunic."
+}

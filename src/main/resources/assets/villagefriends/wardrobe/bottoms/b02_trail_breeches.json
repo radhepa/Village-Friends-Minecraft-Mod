@@ -1,0 +1,130 @@
+{
+  "id": "b02_trail_breeches",
+  "kind": "bottom",
+  "name": "Trail Breeches",
+  "texture": "bottoms/b02_trail_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -4.7,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    }
+  ],
+  "description": "Canvas breeches with side buttons, tall cuffed boots, a belt and a hip pouch."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "b25_strap_sandals",
+  "kind": "bottom",
+  "name": "Summer Trousers & Sandals",
+  "texture": "bottoms/b25_strap_sandals.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Light trousers rolled to mid-calf, bare ankles and leather strap sandals."
+}

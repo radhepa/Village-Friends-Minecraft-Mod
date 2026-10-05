@@ -1,0 +1,16 @@
+{
+  "id": "b14_buttoned_gaiters",
+  "kind": "bottom",
+  "name": "Buttoned Gaiters",
+  "texture": "bottoms/b14_buttoned_gaiters.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Canvas trousers under wool gaiters buttoned up the outer shin, with low boots."
+}

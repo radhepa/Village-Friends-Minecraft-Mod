@@ -1,0 +1,240 @@
+{
+  "id": "h12_hime_cut",
+  "kind": "hair",
+  "name": "Hime Cut",
+  "texture": "hair/h12_hime_cut.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "blunt_fringe",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_sidelock",
+      "bone": "HEAD",
+      "pivot": [
+        -4.2,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.8,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        8,
+        5
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "left_sidelock",
+      "bone": "HEAD",
+      "pivot": [
+        4.2,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "left_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.8,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        8,
+        5
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "back_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -7.8,
+        4.2
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        14,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.8,
+        4.2
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        14,
+        1
+      ],
+      "uv": [
+        9,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_2",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -7.8,
+        4.2
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        14,
+        1
+      ],
+      "uv": [
+        18,
+        14
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Blunt bangs, straight cheek-length sidelocks and long sleek hair down the back."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "b17_side_laced_leather",
+  "kind": "bottom",
+  "name": "Side-Laced Leather Trousers",
+  "texture": "bottoms/b17_side_laced_leather.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Supple leather trousers laced up the outer seam with pale cord, over tall boots."
+}

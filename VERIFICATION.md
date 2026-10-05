@@ -1,3 +1,29 @@
+# Wardrobe expansion verification (2.8.0)
+
+Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (Linux, Xvfb, Mesa lavapipe Vulkan backend).
+
+- `python tools/wardrobe/wardrobe.py --check` passed. All 90 pieces compile with key colors only, painted piece nets, eye/nose/mouth clearance for every hairstyle, compatible templates worn by at least one profession, and complete palettes.
+- Release build passed and all unit tests passed. `WardrobeTest` checks the 30/30/30 counts, distinct template tops and bottoms, key-color textures, Living Eyes protection, the mix-and-match rules (861 of 900 pairs allowed), palette lock for every texel under all ten palettes and hair colors, profession templates reaching all 90 pieces, and hair kept across job changes.
+- `runClientGameTest -PoutfitsOnly` passed inside Minecraft: 30 outfits, 30 hairstyles, 30 tops and 30 bottoms, palette lock on every baked 256×512 atlas texel, armor hiding, cache release and resource reload.
+- The full `runClientGameTest` gameplay suite passed: animation, structures, Phase 2 villages, foundation, gameplay, roadmap (2,000 textures), community (2,400 textures), wardrobe and hair/eyes.
+- `-PhairFacesOnly` passed for all 30 hairstyles on six complexions: protected eye UVs, brows and lashes, blink, gaze, sleep, helmet and baby. `-PanimationsOnly` passed.
+- Game-rendered screenshots in `build/run/clientGameTest/screenshots/`: `village-friends-wardrobe-in-world-1..3`, `-outfits-1..3` (each with `-back` and `-walking`), `-hairstyles-1..3` (each with `-back`), `-mix-and-match-1..2` and `-ten-palettes`.
+
+Earlier verification below records superseded wardrobe versions.
+# Sims-style wardrobe verification (2.7.0)
+
+Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (Linux, Xvfb, Mesa lavapipe Vulkan backend).
+
+- `python tools/wardrobe/wardrobe.py --check` passed. All 30 pieces compile with key colors only, painted piece nets, eye/nose/mouth clearance for every hairstyle, compatible templates and complete palettes.
+- Release build passed; 37 unit tests passed. `WardrobeTest` checks the 10/10/10 counts, key-color textures, Living Eyes protection, the mix-and-match rules (87 of 100 top/bottom pairs allowed), palette lock for every texel under all ten palettes and hair colors, profession templates, and hair kept across job changes.
+- `runClientGameTest -PoutfitsOnly` passed inside Minecraft: profession dressing, palette lock on every baked atlas texel, armor hiding the hair layer and pieces, cache release and resource reload.
+- The full `runClientGameTest` gameplay suite passed: animation, structures, Phase 2 villages, foundation, friendship, roadmap, community, wardrobe and hair/eyes.
+- `-PhairFacesOnly` passed for all ten hairstyles on six complexions: protected eye UVs, brows and lashes, blink, gaze, sleep, helmet and baby. `-PanimationsOnly` passed unchanged.
+- Game-rendered screenshots in `build/run/clientGameTest/screenshots/`: `village-friends-ten-outfits`, `-ten-outfits-back`, `-ten-outfits-walking`, `-ten-hairstyles`, `-ten-hairstyles-back`, `-mix-and-match`, `-ten-palettes` and `-wardrobe-in-world`.
+- One run hung in Fabric's client game-test shutdown (render thread halting the integrated server while the test thread waited on the tick phaser), after all assertions and screenshots had completed. The test now settles for 40 ticks before closing the world; the rerun passed.
+
+Earlier verification below records superseded wardrobe versions.
+
 # Procedural plains village verification
 
 Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (headless client on Mesa lavapipe).

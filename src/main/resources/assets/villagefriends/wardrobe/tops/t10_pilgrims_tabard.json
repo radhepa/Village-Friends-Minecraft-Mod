@@ -1,0 +1,189 @@
+{
+  "id": "t10_pilgrims_tabard",
+  "kind": "top",
+  "name": "Pilgrim's Tabard",
+  "texture": "tops/t10_pilgrims_tabard.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stole_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        -0.3,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "stole_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        -0.3,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "stole_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "cord_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        10.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "panel_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        7,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "panel_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Sun-embroidered tabard with knee-length panels over a long undertunic, a stole and a tasseled cord."
+}

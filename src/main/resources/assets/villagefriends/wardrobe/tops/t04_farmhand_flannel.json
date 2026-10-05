@@ -1,0 +1,130 @@
+{
+  "id": "t04_farmhand_flannel",
+  "kind": "top",
+  "name": "Farmhand Flannel",
+  "texture": "tops/t04_farmhand_flannel.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Plaid flannel shirt with an open collar, chest pocket and rolled sleeves."
+}

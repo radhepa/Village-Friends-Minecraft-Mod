@@ -1,0 +1,73 @@
+{
+  "id": "b16_sheepskin_leg_wraps",
+  "kind": "bottom",
+  "name": "Sheepskin Leg Wraps",
+  "texture": "bottoms/b16_sheepskin_leg_wraps.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Wool trousers with fleece bound around the shins by leather thongs, topped with fur cuffs."
+}

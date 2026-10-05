@@ -1,0 +1,247 @@
+{
+  "id": "t03_arcanist_longcoat",
+  "kind": "top",
+  "name": "Arcanist Longcoat",
+  "texture": "tops/t03_arcanist_longcoat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bell_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        5.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_bell_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        5.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.5,
+        -2.7
+      ],
+      "size": [
+        17,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "mantle_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        2.5,
+        2.3
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        42,
+        18
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        0,
+        27
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        11.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        11,
+        27
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "Clasped velvet longcoat, trimmed shoulder mantle, bell cuffs, sash and split skirts."
+}

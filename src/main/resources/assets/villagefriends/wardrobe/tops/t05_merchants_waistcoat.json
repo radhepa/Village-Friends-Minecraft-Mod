@@ -1,0 +1,186 @@
+{
+  "id": "t05_merchants_waistcoat",
+  "kind": "top",
+  "name": "Merchant's Waistcoat",
+  "texture": "tops/t05_merchants_waistcoat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.55,
+        -2.3,
+        -2.55
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.55,
+        -2.3,
+        -2.55
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "cravat_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.6,
+        -2.75
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "cravat_fall",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.3,
+        -2.7
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "collar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        20
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "collar_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.4,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Double-breasted velvet waistcoat with a pocket-watch chain over a billowing shirt and cravat."
+}

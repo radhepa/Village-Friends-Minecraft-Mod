@@ -1,45 +1,29 @@
 package dev.villagefriends.client;
 
-import dev.villagefriends.outfit.*;
-import java.util.*;
+import dev.villagefriends.outfit.Garment;
+import dev.villagefriends.outfit.Wardrobe;
 
-/** Pixel-density face UVs: each cuboid owns an unfolded texture island with padding. */
+/**
+ * Fixed layout of the per-resident 256x512 texture: the 64x64 player skin at the origin, the
+ * face-detail swatches at (64..67, 0), then one 64-pixel-wide slot per garment kind holding the
+ * box-UV nets of that garment's 3D pieces. An outfit wears exactly one hairstyle, top and
+ * bottom, so every garment of a kind shares its kind's slot and the wardrobe can grow without
+ * growing the texture. One baked model serves every outfit.
+ */
 final class OutfitAtlas {
-    static final int WIDTH=512,HEIGHT=512;
-    record Entry(String modelId,String kind,VoxelBox box,RoleMask mask,int index,int u,int v,int tw,int th,int td) {
-        String partName() { return "outfit_"+index; }
-        boolean selected(Outfit outfit) {
-            return modelId.equals(switch(kind) {
-                case "top" -> outfit.top().id(); case "bottom" -> outfit.bottom().id(); case "hair" -> outfit.hair().id();
-                default -> throw new IllegalStateException("Invalid atlas kind");
-            });
-        }
-    }
-    private static final class Packer {
-        int x,y=64,rowHeight;
-        Entry add(List<Entry> entries,String id,String kind,VoxelBox box,RoleMask mask) {
-            int w=Math.max(1,(int)Math.ceil(box.width())),h=Math.max(1,(int)Math.ceil(box.height())),d=Math.max(1,(int)Math.ceil(box.depth()));
-            int tileW=2*(w+d)+2,tileH=h+d+2;
-            if (tileW>WIDTH) throw new IllegalStateException("Oversized texture island");
-            if (x+tileW>WIDTH) { x=0;y+=rowHeight;rowHeight=0; }
-            if (y+tileH>HEIGHT) throw new IllegalStateException("Textured outfit atlas overflow");
-            var entry=new Entry(id,kind,box,mask,entries.size(),x+1,y+1,w,h,d);
-            entries.add(entry);x+=tileW;rowHeight=Math.max(rowHeight,tileH);return entry;
-        }
-    }
-    static final List<Entry> ENTRIES;
+    static final int WIDTH = 256, HEIGHT = 512;
+    record Block(int x, int y) {}
+    private static final Block HAIR = new Block(64, 8), TOP = new Block(128, 0), BOTTOM = new Block(192, 0);
     static {
-        var entries=new ArrayList<Entry>();var pack=new Packer();
-        for (var top:OutfitCatalog.ALL_TOPS) add(entries,pack,top.id(),"top",top.layers());
-        for (var bottom:OutfitCatalog.ALL_BOTTOMS) add(entries,pack,bottom.id(),"bottom",bottom.layers());
-        for (var hair:OutfitCatalog.ALL_HAIR) {
-            for (var box:hair.voxels()) pack.add(entries,hair.id(),"hair",box,null);
-            add(entries,pack,hair.id(),"hair",hair.ornaments());
+        for (Garment garment : Wardrobe.ALL) {
+            var block = slot(garment.kind());
+            if (block.y() + garment.extrasHeight() > HEIGHT)
+                throw new IllegalStateException("Wardrobe pieces exceed the " + garment.kind() + " slot: " + garment.id());
         }
-        ENTRIES=List.copyOf(entries);
     }
-    private static void add(List<Entry> out,Packer pack,String id,String kind,List<ClothingLayer> layers) {
-        for (var layer:layers) for (var voxel:layer.voxels()) pack.add(out,id,kind,voxel.geometry(),voxel.mask());
+    private static Block slot(Garment.Kind kind) {
+        return switch (kind) { case HAIR -> HAIR; case TOP -> TOP; case BOTTOM -> BOTTOM; };
     }
+    static Block block(Garment garment) { return garment.extrasHeight() == 0 ? null : slot(garment.kind()); }
     private OutfitAtlas() {}
 }

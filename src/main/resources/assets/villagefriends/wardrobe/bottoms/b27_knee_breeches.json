@@ -1,0 +1,74 @@
+{
+  "id": "b27_knee_breeches",
+  "kind": "bottom",
+  "name": "Knee Breeches & Buckle Shoes",
+  "texture": "bottoms/b27_knee_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_buckle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.2,
+        5.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_knee_buckle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.2,
+        5.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "description": "Tailored breeches buckled below the knee, pale stockings and polished buckle shoes."
+}

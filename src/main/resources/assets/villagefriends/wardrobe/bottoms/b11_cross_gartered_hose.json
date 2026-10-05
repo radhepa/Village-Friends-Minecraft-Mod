@@ -1,0 +1,15 @@
+{
+  "id": "b11_cross_gartered_hose",
+  "kind": "bottom",
+  "name": "Cross-Gartered Hose",
+  "texture": "bottoms/b11_cross_gartered_hose.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Fitted wool hose with leather garters criss-crossed up the shins, and low turnshoes."
+}

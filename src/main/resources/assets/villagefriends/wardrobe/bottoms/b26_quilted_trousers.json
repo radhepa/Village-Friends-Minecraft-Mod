@@ -1,0 +1,16 @@
+{
+  "id": "b26_quilted_trousers",
+  "kind": "bottom",
+  "name": "Quilted Trousers",
+  "texture": "bottoms/b26_quilted_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Warm, diamond-quilted padded trousers over plain leather boots."
+}
