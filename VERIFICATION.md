@@ -1,3 +1,14 @@
+# Guard progression verification (2.10.0)
+
+Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- Final release build passed with 54 unit tests and no failures/errors. New policy cases cover weighted/stable starting levels, trained level zero, one-time initialization, thresholds/caps, fractional credit and floating-point threshold precision, codecs, full-key locking, damage shares, mitigation/overkill, blocked hits, expiry and unloading.
+- `runClientGameTest -PguardsOnly` passed both native defense and progression suites. Actual melee, upgraded swords/Sharpness, ordinary arrows/Power and firing-time level capture produce the expected capped damage increase. Existing armor protection, bow poses and protected projectile impacts remain verified.
+- Native death fixtures passed guard/guard/player damage splitting, player killing blows, first-kill locking, duplicate notifications, blocked/excluded mobs, actual non-predator villager attackers and 30-second credit expiry. Downed guards gain capacity without healing or being revived.
+- Generated and migrated guards start in range, migration preserves injury percentage, later profession acquisition starts at zero, temporary job changes preserve progress and repeated refresh never stacks health. Conversion/cure and NBT reload retain fractional XP, locks, wounded health and empty/broken equipment. Restart clears pending damage contributions.
+- `-PcompanionsOnly`, `-PfoundationOnly` and `-PoutfitsOnly` passed existing follow/wait/rescue, professions/trades, all thirty wardrobe sets, armor hiding and resource reload regressions.
+- Evidence logs are `build/leveling-2.10-*.log`; gameplay fixtures and previews are excluded from the release JAR. The 2.9.0 release was installed and pushed separately before progression work.
+
 # Guard defense verification (2.9.0)
 
 Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, integrated with the 2.8 wardrobe and procedural villages.

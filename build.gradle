@@ -70,6 +70,7 @@ tasks.named('processGametestResources') {
             def metadata = new groovy.json.JsonSlurper().parse(descriptor)
             metadata.entrypoints['fabric-client-gametest'] = [guardsOnly ? 'dev.villagefriends.GuardGameTest' : villageGallery ? 'dev.villagefriends.VillageGalleryGameTest' : hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
             if (companionsOnly && !guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.FriendshipGameTest', 'dev.villagefriends.RoadmapGameTest']
+            if (guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.GuardGameTest', 'dev.villagefriends.GuardProgressGameTest']
             descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
         }
     }

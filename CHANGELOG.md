@@ -1,3 +1,12 @@
+# Village Friends 2.10.0 — Guard progression
+
+- Give generated and migrated Knights/Archers saved levels 15–30, weighted toward the middle; ordinary residents acquiring either profession start at 0.
+- Cap progression at 50, with +0.2 maximum HP and +0.5% direct damage per level. Preserve native weapon/enchantment/protection behavior and arrows' firing-time level.
+- Share guard XP on qualifying mob deaths by actual recent health damage, including player/other damage in the denominator. Keep fractional credit and normal Minecraft XP drops.
+- Lock the full registered profession on the guard's first qualifying killing blow. Keep combat progression separate from trading XP and friendship, and preserve it through conversion/cure and reload.
+- Show level, XP, stat bonuses and combat-lock status in the existing conversation and Journal. Leveling never heals, revives or regenerates equipment.
+- Extend `guardsOnly` with native progression and persistence fixtures and add focused balance/contribution policy tests.
+
 # Village Friends 2.9.0 — Knight and Archer defense
 
 - Adult Knights and Archers defend villagers against their predators and actual attackers; Creepers are excluded.

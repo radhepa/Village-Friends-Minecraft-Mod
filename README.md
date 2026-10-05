@@ -1,4 +1,4 @@
-# Village Friends 2.9.0
+# Village Friends 2.10.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -16,7 +16,7 @@ Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, p
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.9.0.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.10.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -77,7 +77,9 @@ Hold a vanilla sword, axe, or ordinary armor piece and choose Equip held item. O
 
 A recruited companion's lethal injury leaves them **downed**, with their identity and equipment intact. Right-click and choose Help them up to rescue them. Further damage is blocked while downed. After one minute without rescue they recover at home and remember the interrupted outing. If their owner dies, disconnects, or leaves the Overworld, they return home. Unloaded residents reconcile their owner state when their chunk next loads.
 
-Adult Knights and Archers use specialized village defense, including ranged bow attacks. Peaceful players can exchange their role's weapon or armor without recruitment; recruited guards accept only their owner's exchanges. See [GUARDS.md](GUARDS.md) for predators, friendship forgiveness, pursuit limits and unlimited arrows.
+Adult Knights and Archers use specialized village defense, including ranged bow attacks. Generated guards start at levels 15–30; newly trained guards start at 0. Defeating actual villager threats earns damage-based guard XP up to level 50, with small health/damage bonuses. Their first qualifying killing blow locks their profession. Read their level and progress in conversation and the Journal.
+
+Peaceful players can exchange their role's weapon or armor without recruitment; recruited guards accept only their owner's exchanges. See [GUARDS.md](GUARDS.md) for progression, predators, friendship forgiveness, pursuit limits and unlimited arrows.
 
 This release supports Overworld travel. Companions cannot use portals while recruited. Nether/End travel, patrols, larger parties, romance, marriage, and family are future expansions. Activities interrupted by a server restart end safely without awarding completion. Pathfinding still needs a reachable route; this mod does not build bridges, clear blocks, or alter terrain.
 

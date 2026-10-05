@@ -68,6 +68,7 @@ public final class GuardController {
                 && !CompanionController.hasActivity(v);
     }
     public static void initializeEquipment(Villager v) {
+        GuardProgression.refresh(v);
         if (!isGuard(v) || target(v).getAttachedOrElse(GUARD_EQUIPPED, false)) return;
         var iron = GuardPolicy.ironSlots(v.getUUID());
         for (int i = 0; i < ARMOR.length; i++) fill(v, ARMOR[i], iron.contains(i) ? IRON[i] : CHAIN[i]);
@@ -80,6 +81,7 @@ public final class GuardController {
     public static void unload(Villager v) { fights.remove(v.getUUID()); recent.remove(v.getUUID()); pending.remove(v.getUUID()); }
     public static void clear() { fights.clear(); recent.clear(); pending.clear(); }
     public static void tick(MinecraftServer server) {
+        GuardProgression.tick(server);
         pending.clear();
         if (server.getTickCount() % 20 == 0) {
             recent.entrySet().removeIf(e -> e.getValue().level().getGameTime() >= e.getValue().until()
@@ -103,17 +105,22 @@ public final class GuardController {
             boolean forgiven = attacker instanceof ServerPlayer p && GuardPolicy.forgives(bond(v, p), state(v, p));
             pending.put(v.getUUID(), new Incident(source, forgiven));
         }
-        return CompanionController.allowDamage(entity, source, amount);
+        boolean allowed = CompanionController.allowDamage(entity, source, amount);
+        if (allowed) GuardProgression.beforeDamage(entity, source);
+        return allowed;
     }
     public static void afterDamage(LivingEntity entity, DamageSource source, float original, float taken, boolean blocked) {
+        GuardProgression.afterDamage(entity, source);
         if (taken > 0 && !blocked) observeDamage(entity, source);
         else if (entity instanceof Villager v) pending.remove(v.getUUID());
     }
     public static boolean allowDeath(LivingEntity entity, DamageSource source, float amount) {
+        GuardProgression.afterDamage(entity, source);
         observeDamage(entity, source);
         return CompanionController.allowDeath(entity, source, amount);
     }
-    private static Entity attacker(DamageSource source) {
+    public static void afterDeath(LivingEntity entity, DamageSource source) { GuardProgression.afterDeath(entity, source); }
+    public static Entity attacker(DamageSource source) {
         if (source.getEntity() != null) return source.getEntity();
         return source.getDirectEntity() instanceof Projectile p ? p.getOwner() : source.getDirectEntity();
     }
@@ -137,7 +144,7 @@ public final class GuardController {
             recent.put(m.getUUID(), new RecentAttack(level, now + GuardPolicy.RECENT_ATTACK_TICKS));
         }
     }
-    private static boolean threat(Mob m, ServerLevel level) {
+    public static boolean threat(Mob m, ServerLevel level) {
         var attack = recent.get(m.getUUID());
         return m.isAlive() && !(m instanceof Villager) && !(m instanceof IronGolem) && GuardPolicy.threat(
                 m instanceof Creeper, BuiltInRegistries.ENTITY_TYPE.wrapAsHolder(m.getType()).is(PREDATORS), m.getTarget() instanceof Villager,
@@ -260,6 +267,7 @@ public final class GuardController {
         var arrow = new Arrow(level, v, new ItemStack(Items.ARROW), bow.copy());
         arrow.pickup = AbstractArrow.Pickup.DISALLOWED;
         target(arrow).setAttached(GUARD_ARROW_TARGET, c.foe.getUUID().toString());
+        GuardProgression.captureArrow(v, arrow);
         var aim = c.foe.getBoundingBox().getCenter().subtract(arrow.position());
         double horizontal = Math.sqrt(aim.x * aim.x + aim.z * aim.z);
         Projectile.spawnProjectileUsingShoot(arrow, level, bow, aim.x, aim.y + horizontal * .2, aim.z, 1.6F, 1F);

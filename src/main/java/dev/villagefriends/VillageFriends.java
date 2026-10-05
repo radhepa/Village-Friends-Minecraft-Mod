@@ -47,6 +47,9 @@ public final class VillageFriends implements ModInitializer {
     public static final AttachmentType<String> HOME_LABEL = AttachmentRegistry.create(id("home_label"), b -> b.persistent(Codec.STRING));
     public static final AttachmentType<Boolean> GUARD_EQUIPPED = AttachmentRegistry.create(id("guard_equipped"), b -> b.persistent(Codec.BOOL));
     public static final AttachmentType<String> GUARD_ARROW_TARGET = AttachmentRegistry.create(id("guard_arrow_target"), b -> b.persistent(Codec.STRING));
+    public static final AttachmentType<GuardProgress> GUARD_PROGRESS = AttachmentRegistry.create(id("guard_progress"), b -> b.persistent(GuardProgress.CODEC));
+    public static final AttachmentType<Boolean> GUARD_OBSERVED = AttachmentRegistry.create(id("guard_observed"), b -> b.persistent(Codec.BOOL));
+    public static final AttachmentType<Integer> GUARD_ARROW_LEVEL = AttachmentRegistry.create(id("guard_arrow_level"), b -> b.persistent(Codec.INT));
     private static final Set<String> TOPICS = Set.of("chat", "work", "adventure", "joke");
     public static AttachmentTarget target(Entity entity) { return (AttachmentTarget) entity; }
 
@@ -58,12 +61,12 @@ public final class VillageFriends implements ModInitializer {
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
-            if (entity instanceof Villager villager) { ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); }
+            if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
@@ -71,6 +74,7 @@ public final class VillageFriends implements ModInitializer {
         ServerLivingEntityEvents.ALLOW_DAMAGE.register(GuardController::allowDamage);
         ServerLivingEntityEvents.AFTER_DAMAGE.register(GuardController::afterDamage);
         ServerLivingEntityEvents.ALLOW_DEATH.register(GuardController::allowDeath);
+        ServerLivingEntityEvents.AFTER_DEATH.register(GuardController::afterDeath);
         PayloadTypeRegistry.clientboundPlay().register(FriendshipPayload.TYPE, FriendshipPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(ActionPayload.TYPE, ActionPayload.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(ActionPayload.TYPE, (payload, context) -> handleAction(context.player(), payload));
@@ -125,6 +129,8 @@ public final class VillageFriends implements ModInitializer {
         copy(before, after, FRIENDSHIPS); copy(before, after, BONDS); copy(before, after, SHARED);
         copy(before, after, HOME); copy(before, after, HOME_LABEL);
         copy(before, after, GUARD_EQUIPPED);
+        copy(before, after, GUARD_PROGRESS); copy(before, after, GUARD_OBSERVED);
+        GuardProgression.converted(after);
         target(after).setAttached(COMPANION, CompanionState.NONE);
         if (before.hasCustomName()) after.setCustomName(before.getCustomName());
         after.setCustomNameVisible(true);
@@ -200,8 +206,9 @@ public final class VillageFriends implements ModInitializer {
         if (p.connection == null || !ServerPlayNetworking.canSend(p, FriendshipPayload.TYPE)) return;
         var affinity = state(v, p); var b = bond(v, p); var profile = profile(v); String job = profession(v);
         String label = v.isBaby() ? "Young Villager" : job.equals("none") ? "Neighbor" : job.equals("nitwit") ? "Free Spirit" : VillageProfessions.label(job);
+        if (GuardController.isGuard(v) && GuardProgression.progress(v) != null) label += " · Level " + GuardProgression.progress(v).level();
         String personality = NarrativeContent.current().personality(profile.personality()).label();
-        String journal = NarrativeEngine.journal(v, p);
+        String journal = GuardProgression.journal(v) + NarrativeEngine.journal(v, p);
         ServerPlayNetworking.send(p, new FriendshipPayload(v.getId(), v.getUUID(), name(v), label, personality,
                 affinity.points(), b.level(affinity), affinity.nextThreshold(), affinity.giftsLeft(day(v.level())), affinity.canTalk(day(v.level())),
                 !v.isBaby() && !job.equals("none") && !job.equals("nitwit"), dialogue, status,
