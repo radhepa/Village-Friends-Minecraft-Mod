@@ -28,6 +28,10 @@ public final class CompanionController {
     private static final Map<UUID, Outing> outings = new HashMap<>();
     private static final Map<UUID, Long> invitations = new HashMap<>();
     public record Outing(String type, long start, double x, double y, double z) {}
+    public static boolean hasActivity(Villager v) {
+        var s = state(v);
+        return outings.containsKey(v.getUUID()) || s.active() && !s.mode().equals("follow") && !s.mode().equals("wait");
+    }
     public static void clear() { loaded.clear(); strikes.clear(); outings.clear(); invitations.clear(); }
     public static void unload(Villager v) {
         loaded.remove(v); strikes.remove(v.getUUID());
@@ -51,8 +55,11 @@ public final class CompanionController {
     public static List<FriendshipPayload.Choice> choices(Villager v, ServerPlayer p) {
         var s = state(v); boolean owns = s.owner().equals(p.getUUID().toString());
         if (s.downed()) return List.of(c("rescue", "Help them up", true), c("home", "Take them home", owns));
-        if (!s.active()) return List.of(c("recruit", "Travel with me", eligible(v, p)), c("talk_tab", "Let's stay here", true));
-        return List.of(c("follow", "Follow me", owns), c("wait", "Wait here", owns), c("home", "Return home", owns), c("equip", "Equip held item", owns));
+        if (!s.active()) {
+            if (GuardController.isGuard(v)) return List.of(c("recruit", "Travel with me", eligible(v, p)), c("equip", "Equip held item", GuardController.canExchange(v, p)), c("talk_tab", "Let's stay here", true));
+            return List.of(c("recruit", "Travel with me", eligible(v, p)), c("talk_tab", "Let's stay here", true));
+        }
+        return List.of(c("follow", "Follow me", owns), c("wait", "Wait here", owns), c("home", "Return home", owns), c("equip", "Equip held item", GuardController.isGuard(v) ? GuardController.canExchange(v,p) : owns));
     }
     public static List<FriendshipPayload.Choice> activityChoices(Villager v, ServerPlayer p) {
         if (outings.containsKey(v.getUUID())) return List.of(c("finish_activity", "Finish our outing", state(v).owner().equals(p.getUUID().toString())), c("home", "End outing and go home", state(v).owner().equals(p.getUUID().toString())));
@@ -94,6 +101,7 @@ public final class CompanionController {
                 show(p, v, "companion", "Thank you for staying with me. Let's be careful, or head home if things are too dangerous.", "Recovered. Equipment and memories kept.", false);
             }
             case "equip" -> {
+                if (GuardController.isGuard(v)) return GuardController.exchange(p, v);
                 if (!owns || s.downed() || outings.containsKey(v.getUUID())) return false;
                 var held = p.getMainHandItem();
                 if (held.isEmpty()) { show(p, v, "companion", "Hold a sword, axe, or armor piece if you'd like me to use it.", "Equipment is separate from gifts.", false); break; }
@@ -177,10 +185,12 @@ public final class CompanionController {
         if (reward) reward(v, p, 8);
     }
     private static void releaseHere(Villager v, ServerPlayer p) {
+        GuardController.unload(v);
         var s = state(v); outings.remove(v.getUUID()); v.getNavigation().stop(); v.setNoAi(s.originalNoAi()); state(v, CompanionState.NONE);
         if (target(p).getAttachedOrElse(VillageFriends.PARTY, "").equals(profile(v).id())) target(p).setAttached(VillageFriends.PARTY, "");
     }
     public static void returnHome(Villager v, ServerPlayer p, boolean record) {
+        GuardController.unload(v);
         var s = state(v); if (!s.active()) return;
         if (s.downed()) {
             var owner = UUID.fromString(s.owner()); var book = target(v).getAttachedOrCreate(BONDS);
@@ -234,7 +244,8 @@ public final class CompanionController {
         } else if (!target(p).getAttachedOrElse(VillageFriends.PARTY, "").equals(profile(v).id())) { returnHome(v, null, false); return; }
         if (s.downed()) { v.getNavigation().stop(); if (level.getGameTime() >= s.until()) returnHome(v, p, false); return; }
         if (v.getY() < level.getMinY() - 4) { returnHome(v, p, false); return; }
-        if (s.mode().equals("follow") && !outings.containsKey(v.getUUID())) {
+        if (GuardController.isGuard(v) && GuardController.drive(v, level, s.mode().equals("wait"))) return;
+        if (!GuardController.isGuard(v) && s.mode().equals("follow") && !outings.containsKey(v.getUUID())) {
             var attacker = p.getLastHurtByMob();
             LivingEntity foe = attacker instanceof Enemy && attacker.isAlive() && attacker.distanceToSqr(p) < 100 ? attacker : null;
             if (foe == null && v.tickCount % 10 == 0) foe = level.getEntitiesOfClass(Mob.class, v.getBoundingBox().inflate(8), m -> m instanceof Enemy && m.isAlive() && (m.getTarget() == v || m.getTarget() == p) && !target(m).hasAttached(PROFILE)).stream().findFirst().orElse(null);

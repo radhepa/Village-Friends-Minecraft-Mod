@@ -1,3 +1,11 @@
+# Village Friends 2.9.0 — Knight and Archer defense
+
+- Adult Knights and Archers defend villagers against their predators and actual attackers; Creepers are excluded.
+- Unforgiven player damage alerts nearby guards, using the victim's effective friendship before trust penalties. Pursuit and per-player anger are bounded.
+- Guards receive persistent mixed iron/chainmail equipment, use native melee and safe bow projectiles, and accept physical equipment exchanges from peaceful players.
+- Recruited guards retain follow/wait, owner-only equipment exchanges and downed recovery. Archers have unlimited, uncollectable ordinary arrows.
+- Preserve the 2.8 wardrobe and procedural villages. Add focused guard and companion gameplay selectors.
+
 # Village Friends 2.8.0 — Casual medieval and anime hair expansion
 
 - Add twenty casual-medieval tops: belted linen tunic, drawstring smock, clasped half-cloak, quilted arming jacket, laced leather jerkin, liripipe hood, fur-trimmed houppelande, buttoned cotehardie, sheepskin vest, wrapped wool shawl, herbalist's bandolier, tavern shirt and half-apron, fur-collared coat, hooded wool poncho, layered overtunic, embroidered festival vest, woodsman's wrap jacket, baker's floury smock, satchel and overshirt, and student's open gown.

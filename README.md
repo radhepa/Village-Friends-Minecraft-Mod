@@ -1,4 +1,4 @@
-# Village Friends 2.8.0
+# Village Friends 2.9.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -12,15 +12,15 @@ Each building is an independent template written as a small design program and c
 
 **Living villagers:** six subtle walking styles give residents their own cadence, stride, shoulder swing and balance. Gentle breathing, head tilts, moving braids and loose accessories keep quiet moments alive. Eyes use each resident's original colors, blink at individual moments and make small glances toward someone nearby. Children get lighter, quicker steps; clothing and armor follow the movement. See [ANIMATION_EDITING.md](ANIMATION_EDITING.md).
 
-Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. New professions use ordinary villager behavior, with equipment assigned manually.
+Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically; other professions use ordinary villager behavior.
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.8.0.jar`. Implementation/testing does not automatically replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.9.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
-The existing profile uses `%APPDATA%\.minecraft\instances\VillageFriends`. The update keeps that profile, its Java installation, and its worlds. The previous mod and a snapshot of this instance's saves are backed up in `%APPDATA%\.minecraft\backups\VillageFriends-setup` before installation. Worlds in other launcher profiles stay in their original folders.
+The existing profile uses `%APPDATA%\.minecraft\instances\VillageFriends`. The update keeps that profile, its Java installation, and its worlds. Authorized releases back up the previous mod and this instance's saves in a dated `%APPDATA%\.minecraft\backups\VillageFriends-<version>-<timestamp>` folder before installation.
 
 ## Your friendship journey
 
@@ -77,7 +77,9 @@ Hold a vanilla sword, axe, or ordinary armor piece and choose Equip held item. O
 
 A recruited companion's lethal injury leaves them **downed**, with their identity and equipment intact. Right-click and choose Help them up to rescue them. Further damage is blocked while downed. After one minute without rescue they recover at home and remember the interrupted outing. If their owner dies, disconnects, or leaves the Overworld, they return home. Unloaded residents reconcile their owner state when their chunk next loads.
 
-This release supports Overworld travel and melee combat. Companions cannot use portals while recruited. Nether/End travel, ranged attacks, specialized roles, larger parties, romance, marriage, and family are future expansions. Activities interrupted by a server restart end safely without awarding completion. Pathfinding still needs a reachable route; this mod does not build bridges, clear blocks, or alter terrain.
+Adult Knights and Archers use specialized village defense, including ranged bow attacks. Peaceful players can exchange their role's weapon or armor without recruitment; recruited guards accept only their owner's exchanges. See [GUARDS.md](GUARDS.md) for predators, friendship forgiveness, pursuit limits and unlimited arrows.
+
+This release supports Overworld travel. Companions cannot use portals while recruited. Nether/End travel, patrols, larger parties, romance, marriage, and family are future expansions. Activities interrupted by a server restart end safely without awarding completion. Pathfinding still needs a reachable route; this mod does not build bridges, clear blocks, or alter terrain.
 
 ## Persistent residents and co-op
 

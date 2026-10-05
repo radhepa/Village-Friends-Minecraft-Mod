@@ -1,3 +1,14 @@
+# Guard defense verification (2.9.0)
+
+Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, integrated with the 2.8 wardrobe and procedural villages.
+
+- Release build and 41 unit tests passed, including threat filtering, effective friendship, anger expiry and deterministic equipment policy.
+- `runClientGameTest -PguardsOnly` passed: natural job acquisition, physical equipment exchanges, native melee/bow damage, durability, armor protection, targeting/retaliation, safe projectile impacts, bounded pursuit, companion Wait/rescue, conversion and reload.
+- `-PcompanionsOnly` passed existing friendship and roadmap fixtures: owner follow/defense/wait, equipment, downing/rescue/home/logout, co-op relationships, conversion/cure, texture cache and save/reload.
+- `-PfoundationOnly` passed all ten natural professions, 100 trades, blocks/items/recipes and profession persistence.
+- `-PoutfitsOnly` passed all thirty outfits, hairstyles, tops and bottoms, palette lock, armor hiding and reload. Its armor comparison now explicitly starts unarmored because guard professions spawn with real equipment.
+- Native profession acquisition initializes equipment immediately; reloads and breakage never replenish it. Development logs are `build/defense-2.9-*.log` and test classes remain outside the release JAR.
+
 # Wardrobe expansion verification (2.8.0)
 
 Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (Linux, Xvfb, Mesa lavapipe Vulkan backend).

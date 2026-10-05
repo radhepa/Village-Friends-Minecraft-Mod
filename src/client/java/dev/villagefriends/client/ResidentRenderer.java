@@ -28,6 +28,11 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
     }
 
     @Override public ResidentRenderState createRenderState() { return new ResidentRenderState(); }
+    @Override protected HumanoidModel.ArmPose getArmPose(Villager villager, net.minecraft.world.entity.HumanoidArm arm) {
+        if (villager.isUsingItem() && villager.getUseItem().getItem() instanceof net.minecraft.world.item.BowItem)
+            return arm == villager.getMainArm() ? HumanoidModel.ArmPose.BOW_AND_ARROW : HumanoidModel.ArmPose.EMPTY;
+        return super.getArmPose(villager, arm);
+    }
     @Override public Identifier getTextureLocation(ResidentRenderState state) { return state.texture; }
     @Override protected float getShadowRadius(ResidentRenderState state) { return super.getShadowRadius(state)*(state.isBaby?.6F:1F); }
 

@@ -6,6 +6,7 @@
   "environment": "client",
   "entrypoints": {
     "fabric-client-gametest": [
+      "dev.villagefriends.GuardGameTest",
       "dev.villagefriends.AnimationGameTest",
       "dev.villagefriends.StructuresGameTest",
       "dev.villagefriends.FoundationGameTest",

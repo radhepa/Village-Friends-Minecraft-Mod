@@ -106,6 +106,8 @@ public final class OutfitGameTest implements FabricClientGameTest {
                     if ((argb >>> 24) == 0) continue;
                     check(allowed.contains(argb) || (argb >>> 24) < 255, "Off-palette texel at " + x + "," + y + " in " + template.id());
                 }
+                // Guard professions now arrive armored; compare an explicit unarmored pose with an armored one.
+                state.headEquipment = ItemStack.EMPTY; state.chestEquipment = ItemStack.EMPTY; state.legsEquipment = ItemStack.EMPTY;
                 var model = new ResidentModel(false); model.setupAnim(state);
                 long visible = model.root().getAllParts().stream().filter(p -> p.visible).count();
                 state.headEquipment = new ItemStack(Items.IRON_HELMET); state.chestEquipment = new ItemStack(Items.IRON_CHESTPLATE);
