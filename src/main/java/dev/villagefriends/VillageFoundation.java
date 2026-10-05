@@ -18,6 +18,8 @@ public final class VillageFoundation {
                 .register(entries -> VillageItems.suppliesAndTools().forEach(entries::accept));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
                 .register(entries -> VillageItems.wearables().forEach(entries::accept));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS)
+                .register(entries -> VillageItems.spawnEggs().forEach(entries::accept));
     }
 
     private VillageFoundation() {}

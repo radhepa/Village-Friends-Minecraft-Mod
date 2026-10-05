@@ -12,6 +12,8 @@ Each new guard receives a weapon and four armor pieces, with exactly two iron an
 
 ## Guard levels
 
+For battle testing, find **Knight Spawn Egg** and **Archer Spawn Egg** in Creative's **Spawn Eggs** tab, or use `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. Both create ordinary adult `minecraft:villager` residents with the requested profession, normal armor/weapon and a saved generated level of 15–30. They also work in dispensers. A point of native trading XP keeps their jobs without nearby workstations; guard XP starts at zero and the first qualifying kill still records the combat lock. These eggs have no Survival crafting recipe.
+
 Knights and Archers have their own combat level, independent of trading levels and friendship. Generated guards and existing guards migrating to this release start at a saved, UUID-seeded level from 15 to 30, weighted toward the middle. An ordinary resident who later becomes a Knight at a Training Dummy or an Archer at an Archery Target starts at level 0. Reloading or changing jobs never rerolls the level.
 
 The maximum level is 50. Each level adds 0.2 maximum HP and 0.5% direct damage after native weapon/enchantment calculations, before the victim's protection. Arrows remember the level when fired. Speed, attack cooldowns, bow draw time, accuracy and armor stay at their normal values, so equipment upgrades remain valuable.

@@ -10,27 +10,32 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.Equippable;
 
 public final class VillageItems {
     private static final Map<String, Item> ITEMS = new LinkedHashMap<>();
-    private static final List<Item> MEALS = new ArrayList<>(), SUPPLIES = new ArrayList<>(), WEARABLES = new ArrayList<>();
+    private static final List<Item> MEALS = new ArrayList<>(), SUPPLIES = new ArrayList<>(), WEARABLES = new ArrayList<>(), SPAWN_EGGS = new ArrayList<>();
     public static Map<String, Item> all() { return Collections.unmodifiableMap(ITEMS); }
     public static List<Item> meals() { return List.copyOf(MEALS); }
     public static List<Item> suppliesAndTools() { return List.copyOf(SUPPLIES); }
     public static List<Item> wearables() { return List.copyOf(WEARABLES); }
+    public static List<Item> spawnEggs() { return List.copyOf(SPAWN_EGGS); }
     public static Item get(String name) {
         Item item = ITEMS.get(name);
         if (item == null) throw new IllegalArgumentException("Unknown Village Friends item: " + name);
@@ -46,6 +51,19 @@ public final class VillageItems {
                 Equippable.builder(EquipmentSlot.CHEST).setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, VillageBlocks.id(name)))
                         .setDamageOnHurt(false).build())), WEARABLES);
     }
+    private static void guardEgg(String job) {
+        var profession = new CompoundTag();
+        profession.putString("profession", VillageProfessions.key(job).identifier().toString());
+        profession.putInt("level", 1);
+        var entity = new CompoundTag();
+        entity.put("VillagerData", profession);
+        entity.putInt("Age", 0);
+        // A little native trading XP keeps a test guard's job without a nearby workstation.
+        // Combat XP and the first-kill combat lock still use their separate saved state.
+        entity.putInt("Xp", 1);
+        add(job + "_spawn_egg", p -> new SpawnEggItem(p.spawnEgg(EntityTypes.VILLAGER)
+                .component(DataComponents.ENTITY_DATA, TypedEntityData.of(EntityTypes.VILLAGER, entity))), SPAWN_EGGS);
+    }
     public static void register() {
         add("smelling_salts", p -> new MedicalSupplyItem(p.stacksTo(16), MedicalSupplyItem.Treatment.SMELLING_SALTS), SUPPLIES);
         add("revival_tonic", p -> new MedicalSupplyItem(p.stacksTo(16), MedicalSupplyItem.Treatment.REVIVAL_TONIC), SUPPLIES);
@@ -60,6 +78,7 @@ public final class VillageItems {
         for (String profession : VillageProfessions.JOBS) wearable(profession + "_uniform");
         for (String tool : List.of("broom", "paintbrush", "lute", "carpenter_hammer", "field_journal"))
             add(tool, p -> new Item(p.stacksTo(1)), SUPPLIES);
+        guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}
 }

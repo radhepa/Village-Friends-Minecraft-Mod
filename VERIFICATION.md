@@ -1,3 +1,13 @@
+# Guard spawn egg verification (2.10.1)
+
+Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- Release build passed with the existing 54 unit tests, no failures/errors, and no gameplay fixtures in the release JAR.
+- `runClientGameTest -PguardsOnly` passed the spawn-egg, defense and progression suites. Real egg use creates adult `minecraft:villager` residents with the exact requested profession, generated levels 15–30, full leveled health, native weapons and two iron/two chainmail armor pieces. Combat XP begins at zero with no combat lock.
+- Survival egg use consumes one item; Creative preserves the stack. Powered dispensers spawn both professions and consume one egg. Guards retain their jobs after 200 AI ticks without workstations; jobs, equipment and levels survive save/reload without rerolling.
+- `-PfoundationOnly` passed all ten natural profession acquisitions, 100 trades, 26 items and existing recipes. Both egg names and distinct tinted icons render in the native item gallery; its rows now fit all 43 blocks/items.
+- Evidence: `build/spawn-eggs-2.10.1-*.log` and `build/run/clientGameTest/screenshots/0000_village-friends-phase1-content.png`.
+
 # Guard progression verification (2.10.0)
 
 Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.

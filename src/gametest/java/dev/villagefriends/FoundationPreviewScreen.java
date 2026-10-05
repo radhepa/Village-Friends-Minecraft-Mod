@@ -14,7 +14,7 @@ final class FoundationPreviewScreen extends Screen {
     @Override public void extractRenderState(GuiGraphicsExtractor g, int mx, int my, float delta) {
         g.fill(0,0,width,height,0xFFF1E4CB);
         g.text(font,"VILLAGE FRIENDS / PHASE 1",16,12,0xFF4E382B,false);
-        int cellWidth=(width-32)/7, cellHeight=(height-40)/6;
+        int cellWidth=(width-32)/7, cellHeight=(height-40)/((items.size()+6)/7);
         for (int n=0; n<items.size(); n++) {
             int x=16+n%7*cellWidth, y=36+n/7*cellHeight;
             g.fill(x+1,y+1,x+cellWidth-3,y+cellHeight-3,0xFFE2D6BC);

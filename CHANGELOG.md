@@ -1,3 +1,9 @@
+# Village Friends 2.10.1 — Guard spawn eggs
+
+- Add Knight and Archer Spawn Eggs to Creative's Spawn Eggs tab and `/give`, using the existing villager entity rather than separate mobs.
+- Spawn equipped adult guards at generated levels 15–30, retaining their profession without a nearby workstation. Support native item accounting and dispensers.
+- Verify spawning, equipment, progression and profession persistence through native gameplay fixtures and save/reload.
+
 # Village Friends 2.10.0 — Guard progression
 
 - Give generated and migrated Knights/Archers saved levels 15–30, weighted toward the middle; ordinary residents acquiring either profession start at 0.

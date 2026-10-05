@@ -1,4 +1,4 @@
-# Village Friends 2.10.0
+# Village Friends 2.10.1
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -14,9 +14,11 @@ Each building is an independent template written as a small design program and c
 
 Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically; other professions use ordinary villager behavior.
 
+For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creative's **Spawn Eggs** tab. They create ordinary equipped adult villagers at levels 15–30, work in dispensers, and keep their jobs without nearby workstations. Commands: `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. See [GUARDS.md](GUARDS.md) for combat and progression rules.
+
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.10.0.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.10.1.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
