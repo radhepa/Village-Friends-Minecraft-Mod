@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:apothecary_uniform",
+    "count": 1
+  },
+  "pattern": [
+    "W W",
+    "WAW",
+    "WWW"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "A": "minecraft:green_dye"
+  }
+}

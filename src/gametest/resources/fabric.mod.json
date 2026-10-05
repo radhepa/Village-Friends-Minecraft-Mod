@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "villagefriends-tests",
+  "version": "1.0.0",
+  "name": "Village Friends Gameplay Tests",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-client-gametest": [
+      "dev.villagefriends.AnimationGameTest",
+      "dev.villagefriends.StructuresGameTest",
+      "dev.villagefriends.FoundationGameTest",
+      "dev.villagefriends.FriendshipGameTest",
+      "dev.villagefriends.RoadmapGameTest",
+      "dev.villagefriends.CommunityGameTest",
+      "dev.villagefriends.OutfitGameTest",
+      "dev.villagefriends.HairFaceGameTest"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:scholar/level_2_sell",
+    "villagefriends:scholar/level_2_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/scholar/level_2"
+}

@@ -1,0 +1,11 @@
+.gradle/
+build/
+run/
+logs/
+previews/
+.idea/
+*.iml
+*.log
+*.pyc
+__pycache__/
+.DS_Store

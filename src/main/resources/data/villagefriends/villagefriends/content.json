@@ -1,0 +1,719 @@
+{
+  "version": 1,
+  "personalities": [
+    {
+      "id": "warmhearted",
+      "label": "Warmhearted",
+      "hobby": "baking",
+      "value": "kindness",
+      "loves": [
+        "minecraft:honey_bottle",
+        "minecraft:bread"
+      ],
+      "dislikes": [
+        "minecraft:spider_eye"
+      ],
+      "lines": {
+        "chat": [
+          "I made more bread than I needed. That's usually how a good afternoon starts.",
+          "Someone left flowers by the bell. I wish I knew who, so I could thank them.",
+          "It's nice seeing you without a trade between us. How have you been?"
+        ],
+        "work": [
+          "My work matters most when it makes someone's day easier.",
+          "I keep a little aside for neighbors who have had a hard week."
+        ],
+        "adventure": [
+          "Bring back a story, and I'll find us something warm to eat.",
+          "When we're out together, let's check on each other. I tend to worry."
+        ],
+        "joke": [
+          "My first loaf was so hard the mason offered to build with it.",
+          "The sheep think my scarf is terribly overdressed. They're wearing the original."
+        ]
+      }
+    },
+    {
+      "id": "thoughtful",
+      "label": "Thoughtful",
+      "hobby": "reading",
+      "value": "patience",
+      "loves": [
+        "minecraft:book",
+        "minecraft:paper"
+      ],
+      "dislikes": [
+        "minecraft:firework_rocket"
+      ],
+      "lines": {
+        "chat": [
+          "I've been thinking about something you said. It's nice having things worth thinking about.",
+          "I reread a favorite page this morning. It felt different this time.",
+          "We can sit quietly for a moment. You don't always have to entertain me."
+        ],
+        "work": [
+          "A careful start saves a lot of fixing later.",
+          "I like the part of work when everything finally falls into place."
+        ],
+        "adventure": [
+          "I want to see a cave with glow berries. Imagine reading by that light.",
+          "I'd like to understand the places we visit, rather than rush through them."
+        ],
+        "joke": [
+          "I lent a book to a golem. It was very well guarded, but not very well read.",
+          "The cartographer says I'm hard to read. I suggested a larger map."
+        ]
+      }
+    },
+    {
+      "id": "playful",
+      "label": "Playful",
+      "hobby": "music",
+      "value": "joy",
+      "loves": [
+        "minecraft:note_block",
+        "minecraft:cookie"
+      ],
+      "dislikes": [
+        "minecraft:rotten_flesh"
+      ],
+      "lines": {
+        "chat": [
+          "I tried to teach a chicken a tune. We disagreed about the rhythm.",
+          "I have a ridiculous idea. Those are usually my best ones.",
+          "You look like you could use a break. I volunteer to distract you."
+        ],
+        "work": [
+          "Work goes faster with a tune. My neighbors might dispute that.",
+          "I finished the dull part first so I'd have something fun to look forward to."
+        ],
+        "adventure": [
+          "If we find a mountain, we should name it something terribly dramatic.",
+          "Let's bring snacks. That's my contribution to expedition planning."
+        ],
+        "joke": [
+          "I asked a sheep for directions. Apparently we need to turn baa-ck.",
+          "The bell and I are starting a band. We're still arguing about who gets the solo."
+        ]
+      }
+    },
+    {
+      "id": "adventurous",
+      "label": "Adventurous",
+      "hobby": "exploring",
+      "value": "courage",
+      "loves": [
+        "minecraft:compass",
+        "minecraft:leather_boots"
+      ],
+      "dislikes": [
+        "minecraft:dead_bush"
+      ],
+      "lines": {
+        "chat": [
+          "I took a different path home and found a pond I'd never noticed.",
+          "There's a ridge on the horizon I keep looking at.",
+          "A quiet day is fine. I just like knowing tomorrow could surprise me."
+        ],
+        "work": [
+          "I practice until I can do it well, then look for a harder challenge.",
+          "Doing something unfamiliar reminds me why I like learning."
+        ],
+        "adventure": [
+          "Pick a direction. We'll watch the light and turn back together.",
+          "I'm brave, but I'm not too proud to ask for help when things get rough."
+        ],
+        "joke": [
+          "My map had a blank corner. I wrote 'probably chickens' to make it less intimidating.",
+          "I packed three compasses. Now I'm very confidently confused."
+        ]
+      }
+    },
+    {
+      "id": "meticulous",
+      "label": "Meticulous",
+      "hobby": "collecting",
+      "value": "care",
+      "loves": [
+        "minecraft:amethyst_shard",
+        "minecraft:glass"
+      ],
+      "dislikes": [
+        "minecraft:dirt"
+      ],
+      "lines": {
+        "chat": [
+          "I sorted my collection by color, then by size. Both arrangements have their merits.",
+          "I noticed the tiny pattern on that stone. Come look, if you have a moment.",
+          "It means a lot when someone remembers a small detail about me."
+        ],
+        "work": [
+          "I measure twice because I'd rather spend the afternoon feeling pleased than annoyed.",
+          "There's a difference between finished and cared for."
+        ],
+        "adventure": [
+          "We should pack carefully. Then we can stop worrying and enjoy ourselves.",
+          "Please tell me before changing our route. I'm much happier with a plan."
+        ],
+        "joke": [
+          "I alphabetized the tool rack. The axe was delighted to come first.",
+          "My collection is almost complete. I only need everything I haven't found."
+        ]
+      }
+    },
+    {
+      "id": "steadfast",
+      "label": "Steadfast",
+      "hobby": "gardening",
+      "value": "reliability",
+      "loves": [
+        "minecraft:wheat_seeds",
+        "minecraft:bone_meal"
+      ],
+      "dislikes": [
+        "minecraft:poisonous_potato"
+      ],
+      "lines": {
+        "chat": [
+          "The seedlings came up. Not all of them, but enough to begin again.",
+          "I like seeing familiar faces arrive safely.",
+          "Some things take longer than we hope. That doesn't make them worthless."
+        ],
+        "work": [
+          "If I say I'll finish something, I want people to be able to count on it.",
+          "Keeping things running quietly is work worth doing."
+        ],
+        "adventure": [
+          "I'll stay close. We can be curious without leaving each other behind.",
+          "Tell me when you're tired. There's no prize for a miserable journey."
+        ],
+        "joke": [
+          "The scarecrow never misses a shift. A difficult colleague to compete with.",
+          "My potatoes are excellent listeners. They have so many eyes, though."
+        ]
+      }
+    },
+    {
+      "id": "reserved",
+      "label": "Reserved",
+      "hobby": "fishing",
+      "value": "privacy",
+      "loves": [
+        "minecraft:cod",
+        "minecraft:fishing_rod"
+      ],
+      "dislikes": [
+        "minecraft:bell"
+      ],
+      "lines": {
+        "chat": [
+          "The river was quiet today. I liked that.",
+          "I don't always know what to say first. I'm glad you stopped by anyway.",
+          "It takes me a while to feel at ease. Please don't mistake that for dislike."
+        ],
+        "work": [
+          "I prefer doing a good job to talking about doing one.",
+          "A little space helps me concentrate."
+        ],
+        "adventure": [
+          "I'd enjoy a quiet route. Somewhere we can hear the water.",
+          "I might not say much while we walk. I can still be happy to be there."
+        ],
+        "joke": [
+          "I caught a boot. It put up less of a fight than its owner.",
+          "My fishing stories are short. So are most of my fish."
+        ]
+      }
+    },
+    {
+      "id": "imaginative",
+      "label": "Imaginative",
+      "hobby": "painting",
+      "value": "creativity",
+      "loves": [
+        "minecraft:orange_dye",
+        "minecraft:blue_dye"
+      ],
+      "dislikes": [
+        "minecraft:gravel"
+      ],
+      "lines": {
+        "chat": [
+          "The clouds looked like a great sleeping fox this morning.",
+          "I keep trying to catch the color of the sky just before sunset.",
+          "What would you make if nobody told you it had to be useful?"
+        ],
+        "work": [
+          "I leave room for an unexpected idea. Sometimes it improves everything.",
+          "Making something by hand leaves a little of you in it."
+        ],
+        "adventure": [
+          "Let's find a view worth remembering. I don't mind taking the long way.",
+          "I'll remember the colors. You remember how to get us home."
+        ],
+        "joke": [
+          "I painted a portrait of a chicken. It said I'd captured its good side.",
+          "I made a landscape entirely in green. The sheep called it a masterpiece."
+        ]
+      }
+    },
+    {
+      "id": "pragmatic",
+      "label": "Pragmatic",
+      "hobby": "carving",
+      "value": "honesty",
+      "loves": [
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot"
+      ],
+      "dislikes": [
+        "minecraft:gold_nugget"
+      ],
+      "lines": {
+        "chat": [
+          "If you need something, ask plainly. I'll do the same for you.",
+          "I fixed the squeak. I rather miss it, now that it's gone.",
+          "You don't have to bring gifts every time. Showing up counts."
+        ],
+        "work": [
+          "A simple tool that works beats a fancy one that doesn't.",
+          "I like knowing exactly what I can offer someone."
+        ],
+        "adventure": [
+          "Food, a way home, and a spare tool. Then we can enjoy the scenery.",
+          "If a fight isn't worth having, we should walk away."
+        ],
+        "joke": [
+          "I invented a silent bell. Nobody noticed.",
+          "I made a chair without a seat. Excellent ventilation, poor results."
+        ]
+      }
+    },
+    {
+      "id": "curious",
+      "label": "Curious",
+      "hobby": "stargazing",
+      "value": "discovery",
+      "loves": [
+        "minecraft:spyglass",
+        "minecraft:amethyst_shard"
+      ],
+      "dislikes": [
+        "minecraft:rotten_flesh"
+      ],
+      "lines": {
+        "chat": [
+          "Do you think the stars look different from the top of a mountain?",
+          "I found something I couldn't identify. An excellent start to the day.",
+          "I ask a lot of questions. You can tell me when you just want company."
+        ],
+        "work": [
+          "I tried a new method today. It didn't work, but now I know why.",
+          "Understanding one small thing often opens up three more questions."
+        ],
+        "adventure": [
+          "I'd like to look at things closely. We might discover something everyone else walks past.",
+          "When we get back, let's compare what we noticed."
+        ],
+        "joke": [
+          "I asked the golem what it dreams about. It said 'poppies.' A surprisingly short research project.",
+          "Why is a map so calm? It already knows where it stands."
+        ]
+      }
+    },
+    {
+      "id": "protective",
+      "label": "Protective",
+      "hobby": "woodworking",
+      "value": "loyalty",
+      "loves": [
+        "minecraft:oak_planks",
+        "minecraft:shield"
+      ],
+      "dislikes": [
+        "minecraft:tnt"
+      ],
+      "lines": {
+        "chat": [
+          "I'm glad you're here in one piece. Sit down before you tell me everything.",
+          "I checked the doors before sunset. Habit, mostly.",
+          "People sometimes need someone beside them before they need advice."
+        ],
+        "work": [
+          "I want what I make to hold up when someone needs it.",
+          "The best part is knowing a neighbor can feel a little safer."
+        ],
+        "adventure": [
+          "We'll watch out for each other. That includes knowing when to turn back.",
+          "If you need a hand, call for me. You don't have to manage alone."
+        ],
+        "joke": [
+          "I told the door a joke. It was wooden, but it opened up eventually.",
+          "The iron golem says my handshake needs work. My hand agrees."
+        ]
+      }
+    },
+    {
+      "id": "gentle",
+      "label": "Gentle",
+      "hobby": "flowers",
+      "value": "empathy",
+      "loves": [
+        "minecraft:poppy",
+        "minecraft:dandelion"
+      ],
+      "dislikes": [
+        "minecraft:spider_eye"
+      ],
+      "lines": {
+        "chat": [
+          "There was a bee resting on a flower. I left it to its afternoon.",
+          "You seem busy. We can make this a quiet visit if you'd like.",
+          "It helps when someone listens without trying to fix everything immediately."
+        ],
+        "work": [
+          "I take my time with things that need a careful hand.",
+          "Small comforts matter. People notice when they're missing."
+        ],
+        "adventure": [
+          "I'd like to walk somewhere with flowers. Let's leave some for the bees.",
+          "I can be frightened and still choose to come with you."
+        ],
+        "joke": [
+          "I apologized to a cactus. It remained rather prickly.",
+          "The bee said my flowers were un-bee-lievable. I chose to believe it."
+        ]
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "garden",
+      "title": "Something worth tending",
+      "intro": "There's a little garden I've been meaning to start. I keep putting it off. It used to be easier when I had someone to share the work with.",
+      "confide": "The garden reminds me of someone who taught me to be patient. I was afraid starting again would feel like replacing them. Working with you helped me see it can be a way of remembering.",
+      "encourage": "I'll keep a little patch for flowers, even when they aren't useful. Thanks for helping me make room for something I missed.",
+      "practical": "One bed at a time. That feels possible now. Thank you for helping me find a beginning instead of insisting I be finished.",
+      "gift": "minecraft:poppy",
+      "requests": [
+        {
+          "id": "seeds",
+          "title": "A small beginning",
+          "item": "minecraft:wheat_seeds",
+          "count": 3,
+          "prompt": "Could you bring three wheat seeds? I'd like to begin with something simple.",
+          "thanks": "You brought the seeds. I can finally stop talking about beginning and actually begin."
+        },
+        {
+          "id": "feeding",
+          "title": "A little encouragement",
+          "item": "minecraft:bone_meal",
+          "count": 3,
+          "prompt": "Three bone meal would help the seedlings along.",
+          "thanks": "That's just what they needed. Thank you for checking back."
+        },
+        {
+          "id": "color",
+          "title": "Room for beauty",
+          "item": "minecraft:poppy",
+          "count": 1,
+          "prompt": "I'd love one poppy for the edge of the garden.",
+          "thanks": "I'll put it where I can see it each morning."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "letters",
+      "title": "Words left unsaid",
+      "intro": "I've been trying to write to an old friend. There are things I should have said before we drifted apart. Every version sounds wrong.",
+      "confide": "We didn't have a dramatic falling-out. We just stopped making time. I worried reaching out would seem foolish after so long. Your visits reminded me people can begin again.",
+      "encourage": "I'll write honestly, even if the words are awkward. Thank you for showing me that being heard doesn't require being perfect.",
+      "practical": "A short letter is a good beginning. I don't have to settle every feeling at once. You've made this seem less impossible.",
+      "gift": "minecraft:book",
+      "requests": [
+        {
+          "id": "paper",
+          "title": "A blank page",
+          "item": "minecraft:paper",
+          "count": 3,
+          "prompt": "Could I have three paper? I want to make room for a few imperfect attempts.",
+          "thanks": "A fresh page helps. Thank you for taking this seriously."
+        },
+        {
+          "id": "ink",
+          "title": "A darker line",
+          "item": "minecraft:ink_sac",
+          "count": 1,
+          "prompt": "One ink sac would help me finish writing.",
+          "thanks": "There. The words are finally staying on the page."
+        },
+        {
+          "id": "book",
+          "title": "Keeping the replies",
+          "item": "minecraft:book",
+          "count": 1,
+          "prompt": "Could you bring a book? I'd like to keep the letters somewhere safe.",
+          "thanks": "There's room for more than old regrets in this now."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "lanterns",
+      "title": "A light to come home to",
+      "intro": "I keep thinking about travelers coming home after dark. I'd like to prepare some lights. It's a small thing, but small things can make a place welcoming.",
+      "confide": "I used to be the person arriving late, hoping somebody had remembered me. Seeing you return from your travels reminds me how much that little light mattered.",
+      "encourage": "I'll keep a light ready when you go exploring. I can't come on every journey, but I can make coming home feel good.",
+      "practical": "We'll prepare the supplies and choose sensible places together. Thank you for helping turn a worry into something useful.",
+      "gift": "minecraft:torch",
+      "requests": [
+        {
+          "id": "torches",
+          "title": "First light",
+          "item": "minecraft:torch",
+          "count": 4,
+          "prompt": "Four torches would get the supply box started. We'll leave your buildings exactly as you've made them.",
+          "thanks": "I'll keep these ready for anyone who needs a light."
+        },
+        {
+          "id": "glass",
+          "title": "Shelter from the wind",
+          "item": "minecraft:glass",
+          "count": 2,
+          "prompt": "Could you bring two glass for my light-making supplies?",
+          "thanks": "This will help me protect the small, useful things."
+        },
+        {
+          "id": "fuel",
+          "title": "Keeping it burning",
+          "item": "minecraft:coal",
+          "count": 3,
+          "prompt": "Three coal would keep the supplies stocked.",
+          "thanks": "Nobody has to arrive to an empty box tonight."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "river",
+      "title": "The quiet bend",
+      "intro": "There's a quiet place by the water I used to enjoy. I'd like to feel comfortable going out again, but I don't quite trust myself yet.",
+      "confide": "I had a frightening trip once. Nothing grand, just being alone when I didn't know what to do. Spending time with you helped me remember a journey can feel safe as well as exciting.",
+      "encourage": "I'd like to make a new memory of that place. Maybe we can go together sometime. Thank you for not laughing at my hesitation.",
+      "practical": "We'll prepare, pick a calm day, and turn back if we need to. A sensible plan makes courage feel less like pretending.",
+      "gift": "minecraft:cooked_cod",
+      "requests": [
+        {
+          "id": "boat",
+          "title": "A steady start",
+          "item": "minecraft:oak_boat",
+          "count": 1,
+          "prompt": "Could you bring an oak boat? Having one ready would make the trip feel more possible.",
+          "thanks": "It's good to have something solid ready instead of worrying in circles."
+        },
+        {
+          "id": "fish",
+          "title": "Supper by the water",
+          "item": "minecraft:cod",
+          "count": 2,
+          "prompt": "Two cod would make a simple supper to share.",
+          "thanks": "That sounds like a much nicer ending to a trip."
+        },
+        {
+          "id": "line",
+          "title": "A patient afternoon",
+          "item": "minecraft:string",
+          "count": 3,
+          "prompt": "Could I have three string for my fishing supplies?",
+          "thanks": "Now we can take our time when we get there."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "music",
+      "title": "An unfinished tune",
+      "intro": "I have a tune I never finish. I can hear the beginning clearly, but I always stop before anyone can hear the rest.",
+      "confide": "Someone once made fun of something I wrote. I told myself I didn't care, then stopped sharing any of it. You've made an audience seem less frightening.",
+      "encourage": "I'll play it imperfectly. Maybe the ending will come while we're listening. Thanks for making it safe to try.",
+      "practical": "A few notes at a time. I can practice without deciding whether I'm good enough forever. That helps more than you know.",
+      "gift": "minecraft:cookie",
+      "requests": [
+        {
+          "id": "notes",
+          "title": "Somewhere to start",
+          "item": "minecraft:note_block",
+          "count": 1,
+          "prompt": "One note block would let me begin practicing.",
+          "thanks": "There it is. A beginning I can actually hear."
+        },
+        {
+          "id": "rhythm",
+          "title": "Finding the rhythm",
+          "item": "minecraft:redstone",
+          "count": 2,
+          "prompt": "Could you bring two redstone for my musical supplies?",
+          "thanks": "I can try something a little more ambitious now."
+        },
+        {
+          "id": "wood",
+          "title": "A sound foundation",
+          "item": "minecraft:oak_planks",
+          "count": 6,
+          "prompt": "Six oak planks would help me prepare more instruments.",
+          "thanks": "It's starting to feel like a real project rather than a private worry."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "carving",
+      "title": "The shape inside",
+      "intro": "I want to make something that means more than just being useful. I keep staring at the materials and thinking I ought to be better at this first.",
+      "confide": "I measure my worth by what I can make for people. When a project isn't useful, I feel selfish. Spending time with you made me wonder if enjoying something is a good enough reason.",
+      "encourage": "I'll make something just because I want to see it exist. Thank you for treating that wish as worth something.",
+      "practical": "A small piece, with room to learn. I can manage that. You've helped me stop turning a first attempt into a final judgment.",
+      "gift": "minecraft:copper_ingot",
+      "requests": [
+        {
+          "id": "stone",
+          "title": "A first attempt",
+          "item": "minecraft:stone",
+          "count": 6,
+          "prompt": "Could you bring six stone for a small practice piece?",
+          "thanks": "Now I have something to work with besides doubts."
+        },
+        {
+          "id": "copper",
+          "title": "A warm detail",
+          "item": "minecraft:copper_ingot",
+          "count": 2,
+          "prompt": "Two copper ingots would add a detail I've been imagining.",
+          "thanks": "That's the color I had in mind. Thank you for remembering."
+        },
+        {
+          "id": "sandstone",
+          "title": "A different texture",
+          "item": "minecraft:sandstone",
+          "count": 4,
+          "prompt": "I'd like four sandstone to try another texture.",
+          "thanks": "I like how different materials tell different parts of the story."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "baking",
+      "title": "A place at the table",
+      "intro": "I've wanted to prepare something for the neighbors, but I keep worrying nobody would come. It feels silly to be nervous about bread.",
+      "confide": "It isn't really the bread. Asking people to share a table feels like admitting I want their company. Your visits made me a little braver about wanting things.",
+      "encourage": "I'll invite people, even if it's a small gathering. There will always be a place for you. Thank you for being the first person I could ask.",
+      "practical": "We'll start with something simple and invite a few people. A small table can still be a good table. I feel better already.",
+      "gift": "minecraft:bread",
+      "requests": [
+        {
+          "id": "wheat",
+          "title": "Enough to share",
+          "item": "minecraft:wheat",
+          "count": 6,
+          "prompt": "Could you bring six wheat for the first batch?",
+          "thanks": "That's enough to make sharing possible. Thank you."
+        },
+        {
+          "id": "sugar",
+          "title": "Something sweet",
+          "item": "minecraft:sugar",
+          "count": 2,
+          "prompt": "Two sugar would let me try a little treat too.",
+          "thanks": "A small celebration deserves something sweet."
+        },
+        {
+          "id": "apples",
+          "title": "Finishing touches",
+          "item": "minecraft:apple",
+          "count": 2,
+          "prompt": "Two apples would make a lovely addition.",
+          "thanks": "I'm starting to look forward to this instead of worrying about it."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    },
+    {
+      "id": "stars",
+      "title": "A bigger sky",
+      "intro": "I've been watching the sky and wondering what I could learn if I looked more carefully. People sometimes think a question needs a useful answer to be worth asking.",
+      "confide": "I worry my curiosity makes me seem childish. I don't expect to understand everything. I just want someone to think it's worthwhile to wonder with me.",
+      "encourage": "Let's keep wondering, then. We don't have to make the sky smaller to feel at home beneath it. Thank you for understanding.",
+      "practical": "I'll keep notes and ask one question at a time. Making room for curiosity in an ordinary day feels like a good beginning.",
+      "gift": "minecraft:amethyst_shard",
+      "requests": [
+        {
+          "id": "spyglass",
+          "title": "A closer look",
+          "item": "minecraft:spyglass",
+          "count": 1,
+          "prompt": "Could you bring a spyglass? I'd love to look at the distant details.",
+          "thanks": "The sky feels a little closer now. Thank you for helping me look."
+        },
+        {
+          "id": "crystal",
+          "title": "A bit of wonder",
+          "item": "minecraft:amethyst_shard",
+          "count": 2,
+          "prompt": "Two amethyst shards would help my collection of things worth studying.",
+          "thanks": "Even this little shard has something to teach us."
+        },
+        {
+          "id": "notes",
+          "title": "Remembering what we saw",
+          "item": "minecraft:paper",
+          "count": 3,
+          "prompt": "Three paper would let me keep proper notes.",
+          "thanks": "Now an ordinary evening can leave a little record behind."
+        }
+      ],
+      "conditions": {
+        "confessionVisits": 3,
+        "endingVisits": 5,
+        "endingTrust": 60,
+        "requireSharedExperience": true
+      }
+    }
+  ]
+}

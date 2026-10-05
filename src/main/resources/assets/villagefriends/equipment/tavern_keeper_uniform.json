@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "villagefriends:tavern_keeper_uniform"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "villagefriends:tavern_keeper_uniform"
+      }
+    ]
+  }
+}

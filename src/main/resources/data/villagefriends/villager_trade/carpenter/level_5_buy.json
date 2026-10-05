@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:oak_log",
+    "count": 5
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16,
+  "xp": 30,
+  "reputation_discount": 0.05
+}

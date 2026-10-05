@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:carpenter/level_3_sell",
+    "villagefriends:carpenter/level_3_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/carpenter/level_3"
+}

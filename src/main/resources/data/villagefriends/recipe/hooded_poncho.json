@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:hooded_poncho",
+    "count": 1
+  },
+  "pattern": [
+    "W W",
+    "WAW",
+    "WWW"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "A": "minecraft:yellow_dye"
+  }
+}

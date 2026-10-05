@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:lute",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:string",
+    "minecraft:oak_planks"
+  ]
+}

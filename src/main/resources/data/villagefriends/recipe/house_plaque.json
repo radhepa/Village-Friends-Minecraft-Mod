@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:house_plaque",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "PBP",
+    " P "
+  ],
+  "key": {
+    "A": "minecraft:oak_sign",
+    "B": "minecraft:paper",
+    "P": "#minecraft:planks"
+  }
+}

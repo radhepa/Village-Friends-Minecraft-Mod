@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "villagefriends:rain_cloak"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "villagefriends:rain_cloak"
+      }
+    ]
+  }
+}

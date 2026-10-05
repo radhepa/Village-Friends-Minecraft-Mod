@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:hearty_stew",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:bowl",
+    "minecraft:baked_potato",
+    "minecraft:carrot",
+    "minecraft:cooked_beef"
+  ]
+}

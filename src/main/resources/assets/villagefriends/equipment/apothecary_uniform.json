@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "villagefriends:apothecary_uniform"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "villagefriends:apothecary_uniform"
+      }
+    ]
+  }
+}

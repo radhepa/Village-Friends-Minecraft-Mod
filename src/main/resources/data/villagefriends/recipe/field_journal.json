@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:field_journal",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:feather"
+  ]
+}

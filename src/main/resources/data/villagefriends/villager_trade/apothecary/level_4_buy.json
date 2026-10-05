@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:paper",
+    "count": 8
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16,
+  "xp": 15,
+  "reputation_discount": 0.05
+}

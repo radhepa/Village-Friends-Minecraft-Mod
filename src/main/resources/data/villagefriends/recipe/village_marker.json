@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    " C ",
+    " P "
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:oak_sign",
+    "C": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "villagefriends:village_marker",
+    "count": 1
+  }
+}

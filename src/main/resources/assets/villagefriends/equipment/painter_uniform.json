@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "villagefriends:painter_uniform"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "villagefriends:painter_uniform"
+      }
+    ]
+  }
+}

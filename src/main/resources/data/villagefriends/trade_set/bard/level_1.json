@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:bard/level_1_sell",
+    "villagefriends:bard/level_1_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/bard/level_1"
+}

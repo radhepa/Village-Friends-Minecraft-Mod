@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:smelling_salts",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:blaze_powder",
+    "minecraft:sugar",
+    "minecraft:glass_bottle"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:painter/level_2_sell",
+    "villagefriends:painter/level_2_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/painter/level_2"
+}

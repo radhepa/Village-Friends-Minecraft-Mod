@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:archer/level_3_sell",
+    "villagefriends:archer/level_3_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/archer/level_3"
+}

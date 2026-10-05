@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:campfire_bench",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "PBP",
+    " P "
+  ],
+  "key": {
+    "A": "minecraft:oak_log",
+    "B": "minecraft:stick",
+    "P": "#minecraft:planks"
+  }
+}

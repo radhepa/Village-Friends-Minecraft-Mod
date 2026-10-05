@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:sewing_table",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "PBP",
+    " P "
+  ],
+  "key": {
+    "A": "minecraft:loom",
+    "B": "minecraft:shears",
+    "P": "#minecraft:planks"
+  }
+}

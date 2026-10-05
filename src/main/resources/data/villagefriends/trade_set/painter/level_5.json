@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:painter/level_5_sell",
+    "villagefriends:painter/level_5_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/painter/level_5"
+}

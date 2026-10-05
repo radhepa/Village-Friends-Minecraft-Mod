@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:carpenter_hammer",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "minecraft:stick"
+  ]
+}

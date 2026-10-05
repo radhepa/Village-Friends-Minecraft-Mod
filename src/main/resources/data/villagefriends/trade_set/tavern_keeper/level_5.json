@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:tavern_keeper/level_5_sell",
+    "villagefriends:tavern_keeper/level_5_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/tavern_keeper/level_5"
+}

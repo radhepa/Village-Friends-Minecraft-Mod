@@ -1,0 +1,696 @@
+{
+  "phase": 1,
+  "professions": {
+    "knight": [
+      "training_dummy"
+    ],
+    "archer": [
+      "archery_target"
+    ],
+    "cook": [
+      "kitchen_stove"
+    ],
+    "tavern_keeper": [
+      "drinks_barrel",
+      "tap_stand"
+    ],
+    "apothecary": [
+      "alchemical_press"
+    ],
+    "painter": [
+      "easel_canvas"
+    ],
+    "bard": [
+      "music_stand"
+    ],
+    "tailor": [
+      "sewing_table"
+    ],
+    "carpenter": [
+      "sawmill"
+    ],
+    "scholar": [
+      "archives"
+    ]
+  },
+  "blocks": {
+    "training_dummy": {
+      "boxes": [
+        [
+          2,
+          0,
+          2,
+          14,
+          2,
+          14
+        ],
+        [
+          7,
+          2,
+          7,
+          9,
+          16,
+          9
+        ],
+        [
+          3,
+          8,
+          6,
+          13,
+          14,
+          10
+        ],
+        [
+          5,
+          14,
+          5,
+          11,
+          16,
+          11
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "archery_target": {
+      "boxes": [
+        [
+          2,
+          0,
+          3,
+          14,
+          2,
+          13
+        ],
+        [
+          3,
+          2,
+          7,
+          5,
+          8,
+          9
+        ],
+        [
+          11,
+          2,
+          7,
+          13,
+          8,
+          9
+        ],
+        [
+          2,
+          7,
+          6,
+          14,
+          16,
+          10
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "kitchen_stove": {
+      "boxes": [
+        [
+          0,
+          0,
+          0,
+          16,
+          12,
+          16
+        ],
+        [
+          3,
+          12,
+          3,
+          13,
+          16,
+          13
+        ]
+      ],
+      "stone": true,
+      "block_entity": false
+    },
+    "drinks_barrel": {
+      "boxes": [
+        [
+          1,
+          0,
+          1,
+          15,
+          16,
+          15
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "tap_stand": {
+      "boxes": [
+        [
+          1,
+          0,
+          2,
+          15,
+          3,
+          14
+        ],
+        [
+          3,
+          3,
+          5,
+          13,
+          12,
+          13
+        ],
+        [
+          5,
+          12,
+          6,
+          11,
+          16,
+          10
+        ],
+        [
+          7,
+          10,
+          2,
+          9,
+          12,
+          6
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "alchemical_press": {
+      "boxes": [
+        [
+          1,
+          0,
+          1,
+          15,
+          3,
+          15
+        ],
+        [
+          3,
+          3,
+          3,
+          5,
+          16,
+          13
+        ],
+        [
+          11,
+          3,
+          3,
+          13,
+          16,
+          13
+        ],
+        [
+          3,
+          14,
+          3,
+          13,
+          16,
+          13
+        ],
+        [
+          5,
+          4,
+          5,
+          11,
+          8,
+          11
+        ]
+      ],
+      "stone": true,
+      "block_entity": false
+    },
+    "easel_canvas": {
+      "boxes": [
+        [
+          2,
+          0,
+          3,
+          4,
+          14,
+          5
+        ],
+        [
+          12,
+          0,
+          3,
+          14,
+          14,
+          5
+        ],
+        [
+          7,
+          0,
+          11,
+          9,
+          14,
+          13
+        ],
+        [
+          2,
+          7,
+          4,
+          14,
+          16,
+          6
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "music_stand": {
+      "boxes": [
+        [
+          2,
+          0,
+          2,
+          14,
+          2,
+          14
+        ],
+        [
+          7,
+          2,
+          7,
+          9,
+          11,
+          9
+        ],
+        [
+          2,
+          11,
+          4,
+          14,
+          13,
+          12
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "sewing_table": {
+      "boxes": [
+        [
+          1,
+          10,
+          1,
+          15,
+          12,
+          15
+        ],
+        [
+          2,
+          0,
+          2,
+          4,
+          10,
+          4
+        ],
+        [
+          12,
+          0,
+          2,
+          14,
+          10,
+          4
+        ],
+        [
+          2,
+          0,
+          12,
+          4,
+          10,
+          14
+        ],
+        [
+          12,
+          0,
+          12,
+          14,
+          10,
+          14
+        ],
+        [
+          5,
+          12,
+          5,
+          11,
+          16,
+          11
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "sawmill": {
+      "boxes": [
+        [
+          0,
+          8,
+          0,
+          16,
+          12,
+          16
+        ],
+        [
+          1,
+          0,
+          1,
+          4,
+          8,
+          15
+        ],
+        [
+          12,
+          0,
+          1,
+          15,
+          8,
+          15
+        ],
+        [
+          7,
+          12,
+          4,
+          9,
+          16,
+          12
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "archives": {
+      "boxes": [
+        [
+          0,
+          0,
+          0,
+          16,
+          16,
+          16
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "village_bench": {
+      "boxes": [
+        [
+          0,
+          6,
+          3,
+          16,
+          9,
+          13
+        ],
+        [
+          1,
+          0,
+          4,
+          4,
+          6,
+          12
+        ],
+        [
+          12,
+          0,
+          4,
+          15,
+          6,
+          12
+        ],
+        [
+          0,
+          9,
+          11,
+          16,
+          16,
+          13
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "campfire_bench": {
+      "boxes": [
+        [
+          0,
+          6,
+          3,
+          16,
+          9,
+          13
+        ],
+        [
+          1,
+          0,
+          4,
+          4,
+          6,
+          12
+        ],
+        [
+          12,
+          0,
+          4,
+          15,
+          6,
+          12
+        ],
+        [
+          0,
+          9,
+          11,
+          16,
+          16,
+          13
+        ]
+      ],
+      "stone": false,
+      "block_entity": false
+    },
+    "apothecary_cot": {
+      "boxes": [
+        [
+          0,
+          5,
+          1,
+          16,
+          9,
+          15
+        ],
+        [
+          1,
+          0,
+          2,
+          3,
+          5,
+          4
+        ],
+        [
+          13,
+          0,
+          2,
+          15,
+          5,
+          4
+        ],
+        [
+          1,
+          0,
+          12,
+          3,
+          5,
+          14
+        ],
+        [
+          13,
+          0,
+          12,
+          15,
+          5,
+          14
+        ]
+      ],
+      "stone": false,
+      "block_entity": true
+    },
+    "house_plaque": {
+      "boxes": [
+        [
+          2,
+          5,
+          12,
+          14,
+          15,
+          16
+        ]
+      ],
+      "stone": false,
+      "block_entity": true
+    },
+    "notice_board": {
+      "boxes": [
+        [
+          2,
+          0,
+          7,
+          4,
+          14,
+          9
+        ],
+        [
+          12,
+          0,
+          7,
+          14,
+          14,
+          9
+        ],
+        [
+          1,
+          6,
+          6,
+          15,
+          16,
+          10
+        ]
+      ],
+      "stone": false,
+      "block_entity": true
+    },
+    "command_desk": {
+      "boxes": [
+        [
+          0,
+          10,
+          0,
+          16,
+          13,
+          16
+        ],
+        [
+          1,
+          0,
+          1,
+          4,
+          10,
+          15
+        ],
+        [
+          12,
+          0,
+          1,
+          15,
+          10,
+          15
+        ],
+        [
+          4,
+          13,
+          7,
+          12,
+          14,
+          14
+        ]
+      ],
+      "stone": false,
+      "block_entity": true
+    }
+  },
+  "items": [
+    "smelling_salts",
+    "revival_tonic",
+    "bandage_wrap",
+    "empty_coffee_mug",
+    "steaming_coffee_mug",
+    "fresh_village_bread",
+    "hearty_stew",
+    "broom",
+    "paintbrush",
+    "lute",
+    "carpenter_hammer",
+    "field_journal",
+    "rain_cloak",
+    "hooded_poncho",
+    "knight_uniform",
+    "archer_uniform",
+    "cook_uniform",
+    "tavern_keeper_uniform",
+    "apothecary_uniform",
+    "painter_uniform",
+    "bard_uniform",
+    "tailor_uniform",
+    "carpenter_uniform",
+    "scholar_uniform"
+  ],
+  "wearables": [
+    "rain_cloak",
+    "hooded_poncho",
+    "knight_uniform",
+    "archer_uniform",
+    "cook_uniform",
+    "tavern_keeper_uniform",
+    "apothecary_uniform",
+    "painter_uniform",
+    "bard_uniform",
+    "tailor_uniform",
+    "carpenter_uniform",
+    "scholar_uniform"
+  ],
+  "recipes": [
+    "training_dummy",
+    "archery_target",
+    "kitchen_stove",
+    "drinks_barrel",
+    "tap_stand",
+    "alchemical_press",
+    "easel_canvas",
+    "music_stand",
+    "sewing_table",
+    "sawmill",
+    "archives",
+    "village_bench",
+    "campfire_bench",
+    "apothecary_cot",
+    "house_plaque",
+    "notice_board",
+    "command_desk",
+    "smelling_salts",
+    "revival_tonic",
+    "bandage_wrap",
+    "empty_coffee_mug",
+    "steaming_coffee_mug",
+    "fresh_village_bread",
+    "hearty_stew",
+    "rain_cloak",
+    "hooded_poncho",
+    "knight_uniform",
+    "archer_uniform",
+    "cook_uniform",
+    "tavern_keeper_uniform",
+    "apothecary_uniform",
+    "painter_uniform",
+    "bard_uniform",
+    "tailor_uniform",
+    "carpenter_uniform",
+    "scholar_uniform",
+    "broom",
+    "paintbrush",
+    "lute",
+    "carpenter_hammer",
+    "field_journal"
+  ],
+  "trade_levels": 5
+}

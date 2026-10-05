@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:drinks_barrel",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "PBP",
+    " P "
+  ],
+  "key": {
+    "A": "minecraft:barrel",
+    "B": "minecraft:glass_bottle",
+    "P": "#minecraft:planks"
+  }
+}

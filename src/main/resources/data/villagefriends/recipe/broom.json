@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:broom",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:hay_block",
+    "minecraft:stick"
+  ]
+}

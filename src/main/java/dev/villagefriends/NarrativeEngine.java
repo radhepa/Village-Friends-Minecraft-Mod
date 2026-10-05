@@ -1,0 +1,199 @@
+package dev.villagefriends;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.npc.villager.Villager;
+import static dev.villagefriends.VillageFriends.*;
+
+public final class NarrativeEngine {
+    private static FriendshipPayload.Choice choice(String id, String label, boolean enabled) { return new FriendshipPayload.Choice(id, label, enabled); }
+    private static NarrativeContent.Story arc(Villager v) { return NarrativeContent.current().story(profile(v).story()); }
+    public static String greeting(Villager v, ServerPlayer p) {
+        var b = bond(v, p);
+        if (CompanionController.state(v).downed()) return "I can't get up. Could you help me?";
+        if (b.has("hurt")) return "I'm still shaken by what happened. I need to know you won't hurt me again.";
+        if (b.has("adventure_return")) return "It's good to see you safely home. I still think about our adventure together.";
+        if (b.has("activity:picnic")) return "I was remembering our picnic. It was nice having time just to be together.";
+        String greeting = Dialogue.greeting(name(v), b.level(state(v, p)), v.isBaby(), day(v.level()));
+        String village = VillageSettlements.reference(v,"chat",day(v.level()));
+        return village.isEmpty()?greeting:greeting+" "+village;
+    }
+    public static String conversation(Villager v, ServerPlayer p, String topic) {
+        var profile = profile(v); var b = bond(v, p); long today = day(v.level());
+        if (v.isBaby()) return Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))) + " " + VillageSettlements.reference(v,topic,today);
+        if (b.has("hurt")) return "I'd like to talk about what happened before we pretend everything is fine. An apology would be a beginning.";
+        var personality = NarrativeContent.current().personality(profile.personality());
+        var lines = personality.lines().get(topic);
+        int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + b.recentLines().size(), lines.size());
+        int index = start;
+        for (int n = 0; n < lines.size(); n++) {
+            int candidate = (start + n) % lines.size();
+            if (!b.recentLines().contains(topic + ":" + candidate)) { index = candidate; break; }
+        }
+        var next = b.line(topic + ":" + index);
+        if (topic.equals("chat") && state(v, p).points() >= 15 && !b.has("preferences")) {
+            next = next.flag("preferences"); saveBond(v, p, next);
+            return "You asked about me. I spend a lot of time " + profile.hobby() + ". I especially like " + itemName(profile.love())
+                    + ", though " + itemName(profile.dislike()) + " isn't for me. I care a lot about " + profile.value() + ".";
+        }
+        saveBond(v, p, next);
+        String villageLine=VillageSettlements.reference(v,topic,today+index);
+        if (topic.equals("adventure") && b.has("adventure_defense")) return "When that attacker came toward us, I was frightened too. I'm glad we watched out for each other. Next time, let's leave room to turn back.";
+        if (topic.equals("adventure") && b.has("adventure_return")) return "I remember our outing. Coming home together felt as important as setting out. I'd like to go again when you're ready.";
+        if (topic.equals("chat") && b.has("activity:picnic") && today % 2 == 0) return "I was thinking about our picnic. There wasn't anything to finish or prove. I'd forgotten how much I needed an afternoon like that.";
+        var story = arc(v);
+        if (topic.equals("work") && story != null && shared(v).done(story.id() + "/" + story.requests().getFirst().id()))
+            return "The " + story.requests().getFirst().title().toLowerCase() + " you helped with mattered to me. " + (b.chapter() >= 3 ? "You know why now. Thank you for listening as well as helping." : "When I find the words, I'd like to tell you why.");
+        String text = lines.get(index);
+        if(!villageLine.isEmpty() && (topic.equals("chat") || topic.equals("work") || topic.equals("adventure")) && (index%2==0 || today%3==1))text=villageLine+" "+text;
+        var neighbors = shared(v).neighbors();
+        if (topic.equals("chat") && !neighbors.isEmpty() && today % 3 == 0) text += " I've also been keeping " + neighbors.getFirst() + " company around the village.";
+        if (topic.equals("work") && today % 2 == 0) text += " " + Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), false, today, b.level(state(v, p)));
+        return text;
+    }
+    public static List<FriendshipPayload.Choice> choices(Villager v, ServerPlayer p, String tab) {
+        var b = bond(v, p); var s = arc(v);
+        if (tab.equals("journal")) return List.of(choice("journal", "Recent memories", true), choice("about", "About this resident", true), choice("story_notes", "Story notes", true), choice("talk_tab", "Back to talking", true));
+        if (tab.equals("together")) return CompanionController.activityChoices(v, p);
+        if (tab.equals("companion")) return CompanionController.choices(v, p);
+        if (tab.equals("request")) return List.of(choice("deliver_side", "Deliver supplies", true), choice("cancel_request", "I can't help right now", true), choice("story", "Back to your story", true));
+        if (tab.equals("story")) {
+            if (v.isBaby() || s == null) return List.of(choice("talk_tab", "Let's just talk", true));
+            return switch (b.chapter()) {
+                case 0 -> List.of(choice("listen", "I'd like to hear more", true), choice("pledge", "You can count on me", true));
+                case 1 -> List.of(choice("deliver", "Help with your request", true), choice("pledge", "I'll help when I can", !b.has("promise")), choice("cancel_request", "I can't promise that", b.has("promise")));
+                case 2 -> List.of(choice("share", "I'm here to listen", b.visits() >= s.conditions().confessionVisits() && (!s.conditions().requireSharedExperience() || b.has("shared_experience"))), choice("together", "Let's spend time together", true), choice("request", "Anything else you need?", true));
+                case 3 -> List.of(choice("encourage", "Your hopes matter to me", b.visits() >= s.conditions().endingVisits() && b.trust() >= s.conditions().endingTrust()), choice("practical", "Let's take one small step", b.visits() >= s.conditions().endingVisits() && b.trust() >= s.conditions().endingTrust()), choice("together", "Let's make more memories", true));
+                default -> List.of(choice("request", "Anything else you need?", true), choice("together", "Let's spend time together", true), choice("companion", "Come on an adventure?", !v.isBaby()));
+            };
+        }
+        return List.of(choice("chat", "How's your day?", true), choice("work", "Tell me about work", true),
+                choice("adventure", "Talk about adventures", true), choice(b.has("hurt") || b.has("broken_promise") ? "apologize" : "joke", b.has("hurt") || b.has("broken_promise") ? "I'm sorry" : "Share a joke", true));
+    }
+    private static String storyText(Villager v, ServerPlayer p) {
+        var s = arc(v); var b = bond(v, p);
+        if (v.isBaby()) return "I'd like to hear your stories! My own adventures can wait until I'm grown.";
+        if (s == null) return "My story pack is unavailable at the moment. We can still enjoy each other's company.";
+        return switch (b.chapter()) {
+            case 0 -> s.intro();
+            case 1 -> s.requests().getFirst().prompt() + (b.has("promise") ? " I remember you said you'd help. There's no rush." : " Only if you have time.");
+            case 2 -> b.visits() < s.conditions().confessionVisits() ? "Thank you for showing up for me. I'm still finding the words for why this matters. Visit on a few different days; I'd like us to get to know each other." : "There's something more personal behind this project. If you're willing to listen, I think I'm ready to tell you.";
+            case 3 -> s.confide() + (b.visits() < s.conditions().endingVisits() ? " I'd like a little more time together before deciding what comes next." : " What do you think?");
+            default -> b.has("ending:practical") ? s.practical() : s.encourage();
+        };
+    }
+    public static boolean handle(ServerPlayer p, Villager v, String action) {
+        var b = bond(v, p); var s = arc(v); long today = day(v.level());
+        switch (action) {
+            case "talk_tab" -> show(p, v, "talk", greeting(v, p), "Take your time.", false);
+            case "story" -> show(p, v, "story", storyText(v, p), s == null ? "Story unavailable" : s.title() + " / Chapter " + Math.min(4, b.chapter() + 1), false);
+            case "journal", "about", "story_notes" -> {
+                String text = action.equals("about") ? about(v, p) : action.equals("story_notes") ? notes(v, p) : journal(v, p);
+                show(p, v, "journal", text, "Journal / scroll to read", false);
+            }
+            case "apologize" -> {
+                if (!b.has("hurt") && !b.has("broken_promise")) return false;
+                saveBond(v, p, b.trust(b.has("hurt") ? 8 : 5).unflag("hurt").unflag("broken_promise").remember(today, "You apologized, and we began repairing trust."));
+                show(p, v, "talk", "Thank you for saying that. I want to feel safe with you. What happens next will matter more than the words.", "A beginning toward repairing trust.", false);
+            }
+            case "listen", "pledge" -> {
+                if (s == null || v.isBaby() || b.chapter() > 1 || (action.equals("listen") && b.chapter() != 0) || (action.equals("pledge") && b.has("promise"))) return false;
+                var next = b.chapter(Math.max(1, b.chapter())).trust(b.chapter() == 0 ? 2 : 0).remember(today, "You listened to why " + s.title().toLowerCase() + " matters to me.");
+                if (action.equals("pledge")) next = next.flag("promise");
+                saveBond(v, p, next);
+                show(p, v, "story", s.requests().getFirst().prompt(), "Hold the requested supplies, then offer them.", false);
+            }
+            case "deliver" -> {
+                if (s == null || v.isBaby() || b.chapter() != 1) return false;
+                deliver(p, v, s, s.requests().getFirst(), true);
+            }
+            case "share" -> {
+                if (s == null || b.chapter() != 2 || b.visits() < s.conditions().confessionVisits() || (s.conditions().requireSharedExperience() && !b.has("shared_experience"))) return false;
+                saveBond(v, p, b.chapter(3).trust(8).remember(today, "I trusted you with the feelings behind my project."));
+                reward(v, p, 16); show(p, v, "story", s.confide(), "Trust grows through shared history.", false);
+            }
+            case "encourage", "practical" -> {
+                if (s == null || b.chapter() != 3 || b.visits() < s.conditions().endingVisits() || b.trust() < s.conditions().endingTrust()) return false;
+                // Commit the reward flag before inserting items; retries cannot issue another gift.
+                saveBond(v, p, b.chapter(4).trust(10).flag("ending:" + action).flag("story_gift")
+                        .remember(today, action.equals("encourage") ? "You encouraged me to try something I cared about." : "You helped me find a practical first step."));
+                reward(v, p, 30); giveItem(p, s.gift(), 2);
+                show(p, v, "story", (action.equals("encourage") ? s.encourage() : s.practical()) + " I saved a little " + itemName(s.gift()) + " for you. You matter to me too.", "Story complete. A gift from your friend.", false);
+            }
+            case "request" -> {
+                if (s == null || b.chapter() < 2 || v.isBaby()) return false;
+                var request = s.requests().stream().skip(1).filter(r -> !shared(v).done(s.id() + "/" + r.id())).findFirst();
+                if (request.isEmpty()) { show(p, v, "story", "You've helped with everything I needed for this project. I'd love your company, though.", "All requests completed.", false); break; }
+                var r = request.get();
+                var next = b;
+                for (String f : b.flags()) if (f.startsWith("request:")) next = next.unflag(f);
+                saveBond(v, p, next.flag("request:" + r.id()).flag("promise"));
+                show(p, v, "request", r.prompt(), r.title() + " / " + r.count() + " " + itemName(r.item()), false);
+            }
+            case "deliver_side" -> {
+                if (s == null || b.chapter() < 2) return false;
+                var r = s.requests().stream().skip(1).filter(q -> b.has("request:" + q.id())).findFirst();
+                if (r.isEmpty()) return false; deliver(p, v, s, r.get(), false);
+            }
+            case "cancel_request" -> {
+                if (!b.has("promise")) return false;
+                var next = b.unflag("promise").trust(-5).flag("broken_promise").remember(today, "You told me you couldn't keep a promise. We can talk it through.");
+                for (String f : b.flags()) if (f.startsWith("request:")) next = next.unflag(f);
+                saveBond(v, p, next);
+                show(p, v, "talk", "I'm disappointed, but thank you for telling me. I'd rather know than keep wondering. We can try again when you're ready.", "Trust can be repaired. No deadline penalty.", false);
+            }
+            default -> { return false; }
+        }
+        return true;
+    }
+    private static void deliver(ServerPlayer p, Villager v, NarrativeContent.Story s, NarrativeContent.Request r, boolean first) {
+        String key = s.id() + "/" + r.id(); var history = shared(v); var b = bond(v, p); long today = day(v.level());
+        if (history.done(key)) {
+            var next = b.unflag("promise").unflag("request:" + r.id());
+            if (first) next = next.chapter(2);
+            saveBond(v, p, next.remember(today, "We talked about help already given to my project."));
+            show(p, v, "story", "Those supplies are already taken care of, thanks to " + history.outcomes().get(key) + ". I'd still like to get to know you in our own way.", "Your supplies were kept. Try a shared activity.", false); return;
+        }
+        var stack = p.getMainHandItem();
+        if (!BuiltInRegistries.ITEM.getKey(stack.getItem()).toString().equals(r.item()) || stack.getCount() < r.count()) {
+            show(p, v, first ? "story" : "request", r.prompt(), "Hold " + r.count() + " " + itemName(r.item()) + " in your main hand.", false); return;
+        }
+        if (!p.getAbilities().instabuild) stack.shrink(r.count());
+        shared(v, history.complete(key, p.getName().getString()));
+        var next = b.trust(6).flag("shared_experience").unflag("promise").unflag("request:" + r.id())
+                .remember(today, "You helped with " + r.title().toLowerCase() + ".");
+        if (first) next = next.chapter(2);
+        int points = first ? 20 : 16;
+        saveBond(v, p, next); reward(v, p, points);
+        show(p, v, "story", r.thanks(), "+" + points + " friendship. Your help is remembered.", false);
+    }
+    public static String journal(Villager v, ServerPlayer p) {
+        var b = bond(v, p); var text = new StringBuilder("OUR SHARED HISTORY\n");
+        if (b.memories().isEmpty()) text.append("Our story is just beginning. Talk, listen, and spend time together.\n");
+        for (int i = b.memories().size() - 1; i >= 0; i--) text.append(b.memories().get(i)).append('\n');
+        return text.toString();
+    }
+    private static String about(Villager v, ServerPlayer p) {
+        var profile = profile(v); var b = bond(v, p);
+        return name(v) + "\n" + NarrativeContent.current().personality(profile.personality()).label() + "\nHobby: " + profile.hobby()
+                + "\nHome village: " + (VillageSettlements.home(v)==null?"Not yet settled":VillageSettlements.home(v).name())
+                + "\nValues: " + profile.value() + "\nLoves: " + itemName(profile.love()) + "\nDislikes: " + itemName(profile.dislike())
+                + "\nTrust: " + b.trustLabel() + "\nVisits on different days: " + b.visits()
+                + "\nResident friendships: " + shared(v).residentFriends().values().stream().filter(score -> score >= 3).count()
+                + "\nNeighbors: " + (shared(v).neighbors().isEmpty() ? "Still getting acquainted" : String.join(", ", shared(v).neighbors()));
+    }
+    private static String notes(Villager v, ServerPlayer p) {
+        var s = arc(v); var b = bond(v, p);
+        if (s == null) return "This resident's story pack is currently unavailable.";
+        var text = new StringBuilder(s.title()).append("\nPersonal chapters: ").append(b.chapter()).append(" / 4\n");
+        for (var r : s.requests()) text.append(shared(v).done(s.id() + "/" + r.id()) ? "Completed: " : "Request: ").append(r.title()).append(" - ").append(r.count()).append(' ').append(itemName(r.item())).append('\n');
+        text.append("\nPersonal confession: ").append(s.conditions().confessionVisits()).append(" visiting days");
+        text.append("\nEnding: ").append(s.conditions().endingVisits()).append(" visiting days, ").append(s.conditions().endingTrust()).append(" trust");
+        text.append("\nClose friendship: share experiences and hear their story.\nBest friendship: finish their story across at least five visiting days.\nGifts alone cannot unlock these milestones.");
+        return text.toString();
+    }
+    private NarrativeEngine() {}
+}

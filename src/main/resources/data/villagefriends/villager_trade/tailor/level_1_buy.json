@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:white_wool",
+    "count": 17
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16,
+  "xp": 2,
+  "reputation_discount": 0.05
+}

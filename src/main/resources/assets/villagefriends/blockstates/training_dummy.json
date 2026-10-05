@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "villagefriends:block/training_dummy",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "villagefriends:block/training_dummy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "villagefriends:block/training_dummy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "villagefriends:block/training_dummy",
+      "y": 270
+    }
+  }
+}

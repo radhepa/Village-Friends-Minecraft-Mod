@@ -1,0 +1,76 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        villagefriends {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
+tasks.withType(JavaCompile).configureEach { options.release = 25 }
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+test { useJUnitPlatform() }
+
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'villagefriends-tests'
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+        clearRunDirectory = false
+        username = 'VillageTester'
+    }
+}
+
+// Focused content/asset validation, without rerunning the long friendship fixtures.
+tasks.named('processGametestResources') {
+    def foundationOnly = providers.gradleProperty('foundationOnly').isPresent()
+    def structuresOnly = providers.gradleProperty('structuresOnly').isPresent()
+    def animationsOnly = providers.gradleProperty('animationsOnly').isPresent()
+    def outfitsOnly = providers.gradleProperty('outfitsOnly').isPresent()
+    def hairFacesOnly = providers.gradleProperty('hairFacesOnly').isPresent()
+    inputs.property 'foundationOnly', foundationOnly
+    inputs.property 'structuresOnly', structuresOnly
+    inputs.property 'animationsOnly', animationsOnly
+    inputs.property 'outfitsOnly', outfitsOnly
+    inputs.property 'hairFacesOnly', hairFacesOnly
+    doLast {
+        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly) {
+            def descriptor = new File(destinationDir, 'fabric.mod.json')
+            def metadata = new groovy.json.JsonSlurper().parse(descriptor)
+            metadata.entrypoints['fabric-client-gametest'] = [hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
+            descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
+        }
+    }
+}
+
+// Development runs use a separate world folder and a recognizable player name.
+loom.runs {
+    client { programArgs '--username', 'VillageTester' }
+}
+
+

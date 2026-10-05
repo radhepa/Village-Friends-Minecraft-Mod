@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "villagefriends:hooded_poncho"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "villagefriends:hooded_poncho"
+      }
+    ]
+  }
+}

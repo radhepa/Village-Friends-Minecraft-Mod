@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sign": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:oak_sign"
+          }
+        ]
+      }
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "villagefriends:village_marker"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sign",
+      "has_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "villagefriends:village_marker"
+    ]
+  }
+}

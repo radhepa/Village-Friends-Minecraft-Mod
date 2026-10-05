@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:apothecary_cot",
+    "villagefriends:archery_target",
+    "villagefriends:archives",
+    "villagefriends:campfire_bench",
+    "villagefriends:command_desk",
+    "villagefriends:drinks_barrel",
+    "villagefriends:easel_canvas",
+    "villagefriends:house_plaque",
+    "villagefriends:music_stand",
+    "villagefriends:notice_board",
+    "villagefriends:sawmill",
+    "villagefriends:sewing_table",
+    "villagefriends:tap_stand",
+    "villagefriends:training_dummy",
+    "villagefriends:village_bench",
+    "villagefriends:village_marker"
+  ]
+}

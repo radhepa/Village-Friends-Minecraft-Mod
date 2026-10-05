@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:steaming_coffee_mug",
+    "count": 1
+  },
+  "ingredients": [
+    "villagefriends:empty_coffee_mug",
+    "minecraft:cocoa_beans",
+    "minecraft:sugar"
+  ]
+}

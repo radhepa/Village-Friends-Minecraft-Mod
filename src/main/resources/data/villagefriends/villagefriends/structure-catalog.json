@@ -1,0 +1,1341 @@
+{
+  "structure": "villagefriends:village",
+  "start_pool": "villagefriends:village/town_centers",
+  "start_jigsaw": "villagefriends:town_start",
+  "expected_pieces": 13,
+  "templates": [
+    {
+      "id": "villagefriends:village/apothecary",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "apothecary_bedroom",
+          "min": [
+            11,
+            1,
+            4
+          ],
+          "max": [
+            13,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            1,
+            4
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          10,
+          1,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          12,
+          1,
+          14
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:alchemical_press",
+          "pos": [
+            4,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            4,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            4,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            4,
+            1,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/cemetery",
+      "size": [
+        17,
+        8,
+        19
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            6,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            10,
+            1,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/central_plaza",
+      "size": [
+        25,
+        8,
+        25
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            12,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:road",
+          "pool": "villagefriends:village/streets/north"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:road",
+          "pool": "villagefriends:village/streets/west"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            12
+          ],
+          "direction": "north",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            12
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:road",
+          "pool": "villagefriends:village/streets/east"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            24
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:road",
+          "pool": "villagefriends:village/streets/south"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            18,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            5,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            6,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            18,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            6,
+            1,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            18,
+            1,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            6,
+            1,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            20,
+            1,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            18,
+            1,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/cottage_birch",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            11,
+            1,
+            4
+          ],
+          "max": [
+            13,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            1,
+            4
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          7,
+          1,
+          7
+        ],
+        [
+          10,
+          1,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          1,
+          14
+        ],
+        [
+          13,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/cottage_oak",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            11,
+            1,
+            4
+          ],
+          "max": [
+            13,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            1,
+            4
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          7,
+          1,
+          7
+        ],
+        [
+          10,
+          1,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          1,
+          14
+        ],
+        [
+          13,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/cottage_spruce",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            11,
+            1,
+            4
+          ],
+          "max": [
+            13,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            1,
+            4
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          7,
+          1,
+          7
+        ],
+        [
+          10,
+          1,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          1,
+          14
+        ],
+        [
+          13,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/family_house",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "front_bedroom",
+          "min": [
+            11,
+            1,
+            4
+          ],
+          "max": [
+            13,
+            4,
+            9
+          ],
+          "probe": [
+            11,
+            1,
+            4
+          ],
+          "beds": 2
+        },
+        {
+          "name": "back_bedroom",
+          "min": [
+            11,
+            1,
+            11
+          ],
+          "max": [
+            13,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            1,
+            11
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          10,
+          1,
+          5
+        ],
+        [
+          7,
+          1,
+          7
+        ],
+        [
+          10,
+          1,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          1,
+          8
+        ],
+        [
+          13,
+          1,
+          8
+        ],
+        [
+          11,
+          1,
+          14
+        ],
+        [
+          13,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/garrison",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ]
+      ],
+      "bed_feet": [
+        [
+          4,
+          1,
+          14
+        ],
+        [
+          6,
+          1,
+          14
+        ],
+        [
+          10,
+          1,
+          14
+        ],
+        [
+          12,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            4,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            12,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:command_desk",
+          "pos": [
+            8,
+            1,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/library",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ]
+      ],
+      "bed_feet": [
+        [
+          4,
+          1,
+          14
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            5,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:archives",
+          "pos": [
+            8,
+            1,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/street_east",
+      "size": [
+        5,
+        6,
+        27
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/tavern"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/apothecary"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            26
+          ],
+          "direction": "south",
+          "name": "villagefriends:road",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            0,
+            1,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/street_north",
+      "size": [
+        5,
+        6,
+        27
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/garrison"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/family_house"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            26
+          ],
+          "direction": "south",
+          "name": "villagefriends:road",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            0,
+            1,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/street_south",
+      "size": [
+        5,
+        6,
+        27
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/cottage"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/workshop"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            26
+          ],
+          "direction": "south",
+          "name": "villagefriends:road",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            0,
+            1,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/street_west",
+      "size": [
+        5,
+        6,
+        27
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/cemetery"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:building_exit",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/buildings/library"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            26
+          ],
+          "direction": "south",
+          "name": "villagefriends:road",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            0,
+            1,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/tavern",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          10,
+          1,
+          8
+        ]
+      ],
+      "bed_feet": [
+        [
+          5,
+          6,
+          13
+        ],
+        [
+          8,
+          6,
+          13
+        ],
+        [
+          11,
+          6,
+          13
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:kitchen_stove",
+          "pos": [
+            11,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            7,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:tap_stand",
+          "pos": [
+            5,
+            1,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/workshop",
+      "size": [
+        17,
+        14,
+        19
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          1,
+          3
+        ]
+      ],
+      "bed_feet": [
+        [
+          5,
+          1,
+          14
+        ],
+        [
+          11,
+          1,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:sawmill",
+          "pos": [
+            4,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:sewing_table",
+          "pos": [
+            12,
+            1,
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "required_modules": [
+    {
+      "pool": "villagefriends:village/town_centers",
+      "templates": [
+        "villagefriends:village/central_plaza"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/streets/north",
+      "templates": [
+        "villagefriends:village/street_north"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/streets/east",
+      "templates": [
+        "villagefriends:village/street_east"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/streets/south",
+      "templates": [
+        "villagefriends:village/street_south"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/streets/west",
+      "templates": [
+        "villagefriends:village/street_west"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/garrison",
+      "templates": [
+        "villagefriends:village/garrison"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/tavern",
+      "templates": [
+        "villagefriends:village/tavern"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/cemetery",
+      "templates": [
+        "villagefriends:village/cemetery"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/apothecary",
+      "templates": [
+        "villagefriends:village/apothecary"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/workshop",
+      "templates": [
+        "villagefriends:village/workshop"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/library",
+      "templates": [
+        "villagefriends:village/library"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/family_house",
+      "templates": [
+        "villagefriends:village/family_house"
+      ]
+    },
+    {
+      "pool": "villagefriends:village/buildings/cottage",
+      "templates": [
+        "villagefriends:village/cottage_oak",
+        "villagefriends:village/cottage_birch",
+        "villagefriends:village/cottage_spruce"
+      ]
+    }
+  ],
+  "resident_range": [
+    14,
+    14
+  ]
+}

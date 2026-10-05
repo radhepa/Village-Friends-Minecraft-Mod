@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "villagefriends",
+  "version": "${version}",
+  "name": "Village Friends",
+  "description": "Get to know your villagers: conversations, thoughtful gifts, and lasting friendships.",
+  "authors": ["minal"],
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["villagefriends.mixins.json"],
+  "entrypoints": {
+    "main": ["dev.villagefriends.VillageFriends"],
+    "client": ["dev.villagefriends.client.VillageFriendsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:apothecary",
+    "villagefriends:archer",
+    "villagefriends:bard",
+    "villagefriends:carpenter",
+    "villagefriends:cook",
+    "villagefriends:knight",
+    "villagefriends:painter",
+    "villagefriends:scholar",
+    "villagefriends:tailor",
+    "villagefriends:tavern_keeper"
+  ]
+}

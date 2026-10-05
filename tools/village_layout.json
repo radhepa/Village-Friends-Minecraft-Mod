@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "expected_pieces": 13,
+  "start_pool": "villagefriends:village/town_centers",
+  "start_jigsaw": "villagefriends:town_start",
+  "pools": {
+    "town_centers": [
+      {
+        "template": "central_plaza",
+        "weight": 1
+      }
+    ],
+    "streets/north": [
+      {
+        "template": "street_north",
+        "weight": 1
+      }
+    ],
+    "streets/east": [
+      {
+        "template": "street_east",
+        "weight": 1
+      }
+    ],
+    "streets/south": [
+      {
+        "template": "street_south",
+        "weight": 1
+      }
+    ],
+    "streets/west": [
+      {
+        "template": "street_west",
+        "weight": 1
+      }
+    ],
+    "buildings/garrison": [
+      {
+        "template": "garrison",
+        "weight": 1
+      }
+    ],
+    "buildings/tavern": [
+      {
+        "template": "tavern",
+        "weight": 1
+      }
+    ],
+    "buildings/cemetery": [
+      {
+        "template": "cemetery",
+        "weight": 1
+      }
+    ],
+    "buildings/apothecary": [
+      {
+        "template": "apothecary",
+        "weight": 1
+      }
+    ],
+    "buildings/workshop": [
+      {
+        "template": "workshop",
+        "weight": 1
+      }
+    ],
+    "buildings/library": [
+      {
+        "template": "library",
+        "weight": 1
+      }
+    ],
+    "buildings/family_house": [
+      {
+        "template": "family_house",
+        "weight": 1
+      }
+    ],
+    "buildings/cottage": [
+      {
+        "template": "cottage_oak",
+        "weight": 1
+      },
+      {
+        "template": "cottage_birch",
+        "weight": 1
+      },
+      {
+        "template": "cottage_spruce",
+        "weight": 1
+      }
+    ]
+  },
+  "required_pools": [
+    "town_centers",
+    "streets/north",
+    "streets/east",
+    "streets/south",
+    "streets/west",
+    "buildings/garrison",
+    "buildings/tavern",
+    "buildings/cemetery",
+    "buildings/apothecary",
+    "buildings/workshop",
+    "buildings/library",
+    "buildings/family_house",
+    "buildings/cottage"
+  ],
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:meadow"
+  ],
+  "depth": 3,
+  "max_distance": 80,
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 12,
+    "salt": 18374629,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 10
+    }
+  }
+}

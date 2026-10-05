@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:revival_tonic",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:golden_apple",
+    "minecraft:glistering_melon_slice",
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:awkward"
+        }
+      }
+    }
+  ]
+}

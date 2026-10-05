@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "villagefriends:block/village_bench",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "villagefriends:block/village_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "villagefriends:block/village_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "villagefriends:block/village_bench",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "trades": [
+    "villagefriends:tailor/level_3_sell",
+    "villagefriends:tailor/level_3_buy"
+  ],
+  "amount": 2,
+  "random_sequence": "villagefriends:trade_set/tailor/level_3"
+}
