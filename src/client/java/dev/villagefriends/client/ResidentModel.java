@@ -7,7 +7,9 @@ import dev.villagefriends.outfit.Garment;
 import dev.villagefriends.outfit.Piece;
 import dev.villagefriends.outfit.Wardrobe;
 import java.util.ArrayList;
+import java.util.IdentityHashMap;
 import java.util.List;
+import java.util.Map;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.player.PlayerModel;
 import net.minecraft.client.model.geom.*;
@@ -23,13 +25,18 @@ import net.minecraft.world.entity.Pose;
  */
 public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
     private record Attached(Garment garment, Piece piece, ModelPart part) {}
-    private final List<Attached> pieces = new ArrayList<>();
+    private final Map<Garment, List<Attached>> pieces = new IdentityHashMap<>();
+    /** Pieces made visible by the previous pose; only these and the new outfit's are touched per frame. */
+    private final List<Attached> shown = new ArrayList<>();
     private final ModelPart[] eyes=new ModelPart[2], irises=new ModelPart[2], lids=new ModelPart[2], lowerLids=new ModelPart[2], creases=new ModelPart[2];
     private final ModelPart[] lashes=new ModelPart[2];
     public ResidentModel(boolean baby) {
         super(layer(baby).bakeRoot(), RenderTypes::entityTranslucent);
-        for (var garment : Wardrobe.ALL) for (var piece : garment.pieces())
-            pieces.add(new Attached(garment, piece, bone(piece.bone()).getChild(partName(garment, piece))));
+        for (var garment : Wardrobe.ALL) for (var piece : garment.pieces()) {
+            var part = bone(piece.bone()).getChild(partName(garment, piece));
+            part.visible = false;
+            pieces.computeIfAbsent(garment, g -> new ArrayList<>()).add(new Attached(garment, piece, part));
+        }
         for (int i=0;i<2;i++) {
             eyes[i]=head.getChild("eye"+i); irises[i]=eyes[i].getChild("iris"); lids[i]=eyes[i].getChild("lid");
             lowerLids[i]=eyes[i].getChild("lowerLid"); creases[i]=eyes[i].getChild("crease");
@@ -102,16 +109,18 @@ public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
         hat.visible=outfit!=null && !helmet;
         float forward=Math.min(0,Math.min(leftLeg.xRot,rightLeg.xRot)), backward=Math.max(0,Math.max(leftLeg.xRot,rightLeg.xRot));
         boolean moving=ResidentAnimation.canMove(state);
-        for (var attached : pieces) {
-            var garment=attached.garment(); var piece=attached.piece(); var part=attached.part();
-            boolean worn=outfit!=null && (garment==outfit.hair() || garment==outfit.top() || garment==outfit.bottom()) && outfit.shows(garment,piece);
+        for (var attached : shown) attached.part().visible=false;
+        shown.clear();
+        if (outfit==null) return;
+        for (var garment : outfit.garments()) for (var attached : pieces.getOrDefault(garment, List.of())) {
+            var piece=attached.piece(); var part=attached.part();
             boolean covered=switch(garment.kind()) {
                 case HAIR -> helmet;
                 case TOP -> chest;
                 case BOTTOM -> legs || (piece.bone()==BodyPart.TORSO && chest);
             };
-            part.visible=worn && !covered;
-            if (!part.visible) continue;
+            if (covered || !outfit.shows(garment,piece)) continue;
+            part.visible=true; shown.add(attached);
             switch (piece.motion()) {
                 // Long hems ride on the leading/trailing leg so a stride never pokes through them.
                 case FLAP_FRONT -> part.xRot+=forward;

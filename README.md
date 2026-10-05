@@ -1,4 +1,4 @@
-# Village Friends 2.7.0
+# Village Friends 2.8.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -8,7 +8,7 @@ The mod includes the master specification's **Phase 1 registry and item foundati
 
 Buildings are basic, independent starting templates. Edit or replace one through its own JSON blueprint and role pool; [BUILDING_EDITING.md](BUILDING_EDITING.md) gives Claude the workflow and stable connector contract.
 
-**Wardrobe:** residents dress from a Sims-style wardrobe of ten hairstyles, ten tops and ten bottoms, drawn as palette-locked pixel art with 3D collars, pauldrons, coat skirts, hoods and hair. Each profession has its own outfit, tops and bottoms mix freely, and every outfit uses one of ten master palettes. The names remain available; Indian names are eligible for brown/dark complexions. See [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
+**Wardrobe:** residents dress from a Sims-style wardrobe of thirty hairstyles, thirty tops and thirty bottoms, drawn as palette-locked pixel art with 3D collars, pauldrons, coat skirts, hoods, cloaks and hair. Clothing is casual medieval village wear, and the newer hairstyles are anime-inspired. Each profession has its own outfits, tops and bottoms mix freely, and every outfit uses one of ten master palettes. The names remain available; Indian names are eligible for brown/dark complexions. See [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
 
 **Living villagers:** six subtle walking styles give residents their own cadence, stride, shoulder swing and balance. Gentle breathing, head tilts, moving braids and loose accessories keep quiet moments alive. Eyes use each resident's original colors, blink at individual moments and make small glances toward someone nearby. Children get lighter, quicker steps; clothing and armor follow the movement. See [ANIMATION_EDITING.md](ANIMATION_EDITING.md).
 
@@ -16,7 +16,7 @@ Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, p
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.7.0.jar`. Implementation/testing does not automatically replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.8.0.jar`. Implementation/testing does not automatically replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -107,7 +107,7 @@ Each resident keeps their first assigned hometown when traveling or moving away.
 
 ## Clothing and hair
 
-Every resident wears one of ten outfits: Knight-Errant, Trailblazer, Arcanist, Farmhand, Merchant, Mariner, Smith, Ranger, Minstrel and Pilgrim. Their profession picks the outfit. Each outfit pairs a top and a bottom, and residents sometimes swap in any compatible bottom from the others, Sims-style. Armor and fancy hose are the exceptions. One master palette colors the whole outfit: primary, secondary, accent, leather, metal and ink, each with hand-shaded pixel ramps. Hair comes in ten volumetric styles and ten natural colors, chosen once per resident so a new job never changes it. Coat skirts, aprons and tabards move with the stride; ponytails and tassels sway. Armor hides conflicting clothing and hair. World residents and conversation portraits share the renderer.
+Every resident wears one of thirty outfits. The originals are Knight-Errant, Trailblazer, Arcanist, Farmhand, Merchant, Mariner, Smith, Ranger, Minstrel and Pilgrim. Twenty casual-medieval outfits join them: Villager, Goatherd, Wayfarer, Militia, Hunter, Townsman, Burgher, Gallant, Shepherd, Highlander, Herbalist, Innkeeper, Northerner, Drover, Yeoman, Reveler, Woodsman, Baker, Gardener and Student. Their profession picks from a short list of fitting outfits. Each outfit pairs a top and a bottom, and residents sometimes swap in any compatible bottom from the others, Sims-style. Armor, fancy hose, kilts and sandals are the exceptions. One master palette colors the whole outfit: primary, secondary, accent, leather, metal and ink, each with hand-shaded pixel ramps. Hair comes in thirty volumetric styles and ten natural colors. Twenty of the styles are anime-inspired, with pointed bangs, sidelocks, a sheen ring, braids and tails, but no gravity-defying spikes. Hair is chosen once per resident so a new job never changes it. Coat skirts, aprons and tabards move with the stride; ponytails and tassels sway. Armor hides conflicting clothing and hair. World residents and conversation portraits share the renderer.
 
 Recipes keep their existing format: saved residents keep complexion, palette and identity and are redressed from the new wardrobe. To edit or add clothing, see [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
 

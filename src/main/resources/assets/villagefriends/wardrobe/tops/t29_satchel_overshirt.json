@@ -1,0 +1,130 @@
+{
+  "id": "t29_satchel_overshirt",
+  "kind": "top",
+  "name": "Satchel & Overshirt",
+  "texture": "tops/t29_satchel_overshirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "satchel_strap",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        -0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "satchel",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        8.2,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        -20,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        4,
+        2
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "An open, sleeves-rolled overshirt over a linen shirt, with a deep leather satchel on a cross strap."
+}

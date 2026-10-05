@@ -1,0 +1,131 @@
+{
+  "id": "b23_pouch_belt_trousers",
+  "kind": "bottom",
+  "name": "Pouch-Belt Trousers",
+  "texture": "bottoms/b23_pouch_belt_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_pouch_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        10.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "waist_pouch_back",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        10.4,
+        2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "waist_rope_coil",
+      "bone": "TORSO",
+      "pivot": [
+        -4.9,
+        10.2,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Hard-wearing trousers, a wide belt hung with pouches, and a coil of rope at the hip."
+}

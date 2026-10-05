@@ -1,0 +1,246 @@
+{
+  "id": "b15_belted_wool_kilt",
+  "kind": "bottom",
+  "name": "Belted Wool Kilt",
+  "texture": "bottoms/b15_belted_wool_kilt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "kilt"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_garter_flash",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -1.5,
+        6.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_flash",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        1.5,
+        6.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "kilt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "kilt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "kilt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "kilt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        11,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sporran",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        40,
+        10
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A pleated tartan kilt, leather sporran, knee socks with garter flashes and laced ghillie shoes."
+}

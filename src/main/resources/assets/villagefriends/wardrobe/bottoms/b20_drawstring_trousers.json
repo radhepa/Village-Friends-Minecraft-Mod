@@ -1,0 +1,73 @@
+{
+  "id": "b20_drawstring_trousers",
+  "kind": "bottom",
+  "name": "Drawstring Trousers",
+  "texture": "bottoms/b20_drawstring_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_drawstring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "waist_drawstring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    }
+  ],
+  "description": "Loose linen trousers with a drawstring waist, tucked into soft boots bound with straps."
+}

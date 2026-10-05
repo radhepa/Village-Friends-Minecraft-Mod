@@ -1,6 +1,8 @@
 # Wardrobe and outfit engine
 
-Residents dress like characters from a Sims-style wardrobe. They pick from 10 hairstyles, 10 tops and 10 bottoms, colored by one of 10 master palettes and one of 10 natural hair colors. The previous voxel/role-mask wardrobe, its male, female and generic registries and their geometry were removed and replaced at the user's request. To add or change clothing, read [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
+Residents dress like characters from a Sims-style wardrobe. They pick from 30 hairstyles, 30 tops and 30 bottoms, colored by one of 10 master palettes and one of 10 natural hair colors.
+
+The first ten of each kind are the original set, drawn from the user's male reference. Version 2.8 added twenty casual-medieval tops and bottoms (tunics, smocks, jerkins, hoods, cloaks, braies, trews, kilts, chausses, clogs and boots, with no modern t-shirts or hoodies) and twenty anime-inspired hairstyles. The hairstyles use clean cel shading, a sheen ring and tapered pointed locks, but stay grounded: no gravity-defying spikes. The previous voxel/role-mask wardrobe, its male, female and generic registries and their geometry were removed and replaced at the user's request. To add or change clothing, read [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
 
 ## Pieces
 
@@ -25,8 +27,9 @@ The wardrobe is Sims-style: any top pairs with any bottom unless a tag rule forb
 - The Squire's Brigandine `requires` sturdy legwear.
 - Plated Greaves require a martial or rugged top.
 - Minstrel Hose `rejects` armor and work tops.
+- The Belted Wool Kilt and the Summer Trousers & Sandals `reject` armor.
 
-87 of the 100 top/bottom pairs are allowed. `Wardrobe.compatible` and `tools/wardrobe/wardrobe.py` apply the same rule.
+861 of the 900 top/bottom pairs are allowed. `Wardrobe.compatible` and `tools/wardrobe/wardrobe.py` apply the same rule.
 
 Skin layers stack as: body, then the bottom, then the top, then hair. A `tucked` top (shirts) goes under the bottom instead, so waistbands and suspenders show over it. A top that `coversWaist` (its own belt, sash or long hem) hides the bottom's 3D pieces whose ids start with `waist`.
 
@@ -35,21 +38,43 @@ Skin layers stack as: body, then the bottom, then the top, then hair. A `tucked`
 `catalog.json` maps each profession to outfit templates (a top plus its matching bottom). `OutfitFactory.assembleOutfit` works in this order:
 
 1. Hair and hair color come from the resident's seed alone, so a new job never changes them.
-2. The profession's preferred template is chosen 70% of the time; otherwise one of its alternatives is used.
+2. The profession's preferred template is chosen 60% of the time; otherwise one of its alternatives is used.
 3. The template's bottom is kept 60% of the time; otherwise a random compatible bottom is used.
 
-| Template | Top | Bottom | Professions (preferred) |
+Bold professions prefer the template; the others use it as an alternative.
+
+| Template | Top | Bottom | Professions |
 |---|---|---|---|
-| Knight-Errant | Squire's Brigandine | Plated Greaves | Knight, Guard |
-| Trailblazer | Trailblazer Vest | Trail Breeches | Adventurer, Cartographer |
-| Arcanist | Arcanist Longcoat | Scholar's Slacks | Mage, Scholar, Librarian |
-| Farmhand | Farmhand Flannel | Patched Workpants | Farmer, Shepherd, unemployed |
-| Merchant | Merchant's Waistcoat | Pinstripe Trousers | Merchant, Tavern Keeper, Tailor |
-| Mariner | Mariner's Knit | Rolled Canvas | Fisherman |
-| Smith | Smith's Apron | Heavy Work Trousers | Smiths, Butcher, Cook, Mason, Carpenter, Leatherworker |
-| Ranger | Ranger's Hood | Wrapped Leggings | Archer, Fletcher |
-| Minstrel | Minstrel's Doublet | Minstrel Hose | Bard, Painter, Nitwit |
-| Pilgrim | Pilgrim's Tabard | Wanderer's Pantaloons | Cleric, Apothecary |
+| Knight-Errant | Squire's Brigandine | Plated Greaves | **Knight**, **Guard**, Armorer, Weaponsmith |
+| Trailblazer | Trailblazer Vest | Trail Breeches | **Cartographer**, **Adventurer**, unemployed, Leatherworker |
+| Arcanist | Arcanist Longcoat | Scholar's Slacks | **Librarian**, **Scholar**, **Mage**, Cartographer, Apothecary |
+| Farmhand | Farmhand Flannel | Patched Workpants | **Farmer**, unemployed, Mason, Shepherd, Carpenter |
+| Merchant | Merchant's Waistcoat | Pinstripe Trousers | **Tailor**, **Merchant**, Librarian, Tavern Keeper, Painter |
+| Mariner | Mariner's Knit | Rolled Canvas | **Fisherman**, unemployed |
+| Smith | Smith's Apron | Heavy Work Trousers | **Armorer**, **Butcher**, **Leatherworker**, **Mason**, **Toolsmith**, **Weaponsmith**, Cook, Carpenter |
+| Ranger | Ranger's Hood | Wrapped Leggings | **Fletcher**, **Archer**, Adventurer, Guard |
+| Minstrel | Minstrel's Doublet | Minstrel Hose | **Nitwit**, **Painter**, **Bard**, Tailor |
+| Pilgrim | Pilgrim's Tabard | Wanderer's Pantaloons | **Cleric**, Apothecary, Scholar |
+| Villager | Belted Linen Tunic | Drawstring Trousers | **unemployed**, Nitwit, Butcher, Farmer, Fisherman |
+| Goatherd | Drawstring Smock | Knee Braies & Stockings | unemployed, Nitwit, Farmer, Shepherd |
+| Wayfarer | Clasped Half-Cloak | Tall Riding Boots | unemployed, Cartographer, Adventurer |
+| Militia | Quilted Arming Jacket | Buttoned Gaiters | Armorer, Mason, Weaponsmith, Knight, Guard |
+| Hunter | Laced Leather Jerkin | Leather Chaps | Fletcher, Leatherworker, Archer, Adventurer |
+| Townsman | Liripipe Hood | Cross-Gartered Hose | Nitwit, Bard, Merchant |
+| Burgher | Fur-Trimmed Houppelande | Woolen Chausses | Cleric, Tavern Keeper, Tailor, Merchant |
+| Gallant | Buttoned Cotehardie | Belted Hose & Dagger | Knight, Tailor |
+| Shepherd | Sheepskin Vest | Sheepskin Leg Wraps | **Shepherd** |
+| Highlander | Wrapped Wool Shawl | Belted Wool Kilt | unemployed |
+| Herbalist | Herbalist's Bandolier | Summer Trousers & Sandals | **Apothecary** |
+| Innkeeper | Tavern Shirt & Half-Apron | Wool Trousers & Clogs | **Tavern Keeper**, Butcher, Cook |
+| Northerner | Fur-Collared Coat | Fur-Topped Winter Boots | unemployed, Fisherman, Adventurer, Guard |
+| Drover | Hooded Wool Poncho | Tartan Trews | unemployed, Fisherman, Shepherd |
+| Yeoman | Layered Overtunic | Knee Breeches & Buckle Shoes | unemployed |
+| Reveler | Embroidered Festival Vest | Striped Stockings & Breeches | unemployed, Nitwit, Painter, Bard |
+| Woodsman | Woodsman's Wrap Jacket | Side-Laced Leather Trousers | **Carpenter**, Fletcher, Toolsmith, Archer |
+| Baker | Baker's Floury Smock | Quilted Trousers | **Cook** |
+| Gardener | Satchel & Overshirt | Pouch-Belt Trousers | Farmer |
+| Student | Student's Open Gown | Embroidered Hem Trousers | Cartographer, Cleric, Librarian, Painter, Scholar, Mage |
 
 Unknown or modded professions dress like the unemployed.
 
@@ -61,7 +86,8 @@ Outfit recolored = outfit.recolor(PaletteID.SAGE_AND_TERRACOTTA);
 ## Rendering
 
 - **Model:** `ResidentModel` is the player mesh with its overlays, plus every garment's 3D pieces baked once. Only the worn outfit's pieces are visible.
-- **Atlas:** `OutfitAtlas` lays out a 512×512 texture with the player skin at the origin, the face-detail swatches at (64..67, 0), and a 64-pixel-wide block per garment for its piece nets.
+- **Atlas:** `OutfitAtlas` lays out a 256×512 texture with the player skin at the origin, the face-detail swatches at (64..67, 0), and one 64-pixel-wide slot per kind for piece nets: hair at x 64 below the swatches, tops at x 128 and bottoms at x 192. An outfit wears one garment of each kind, so all garments of a kind share its slot and the wardrobe grows without growing the texture.
+- **Visibility:** pieces are grouped by garment, so each frame only touches the three worn garments' parts.
 - **Baking:** `ResidentSkins` bakes one texture per complexion and outfit on a cache miss. It resolves key colors through the palette, applies the layering rules and copies the piece nets into their blocks. Animation allocates no textures.
 - **Reload:** wardrobe PNGs reload with resource packs, so a pack can repaint any piece in key colors.
 - **Armor:** a helmet hides the hair layer and hair pieces; chest and leg armor hide the matching garment pieces.
@@ -84,8 +110,8 @@ gradlew.bat runClientGameTest -PhairFacesOnly
 
 The focused Minecraft run checks palette lock on every baked texel, profession dressing, armor hiding and reload. It also captures these screenshots in `build/run/clientGameTest/screenshots/`:
 
-- the ten outfits from the front, from the back and mid-stride
-- the ten hairstyles from the front and back
-- a mix-and-match gallery
+- the thirty outfits, ten per page, from the front, from the back and mid-stride
+- the thirty hairstyles, ten per page, from the front and back
+- two mix-and-match galleries
 - one outfit across all ten palettes
-- an in-world scene
+- an in-world scene for each page of outfits

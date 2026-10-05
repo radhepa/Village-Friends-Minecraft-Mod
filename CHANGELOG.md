@@ -1,3 +1,13 @@
+# Village Friends 2.8.0 — Casual medieval and anime hair expansion
+
+- Add twenty casual-medieval tops: belted linen tunic, drawstring smock, clasped half-cloak, quilted arming jacket, laced leather jerkin, liripipe hood, fur-trimmed houppelande, buttoned cotehardie, sheepskin vest, wrapped wool shawl, herbalist's bandolier, tavern shirt and half-apron, fur-collared coat, hooded wool poncho, layered overtunic, embroidered festival vest, woodsman's wrap jacket, baker's floury smock, satchel and overshirt, and student's open gown.
+- Add twenty casual-medieval bottoms: cross-gartered hose, knee braies, tartan trews, buttoned gaiters, belted wool kilt, sheepskin leg wraps, side-laced leather trousers, wool trousers with clogs, striped stockings, drawstring trousers, fur-topped boots, tall riding boots, pouch-belt trousers, woolen chausses, summer sandals, quilted trousers, knee breeches, leather chaps, belted hose with dagger, and embroidered hem trousers.
+- Add twenty anime-inspired hairstyles with cel-shaded clumps, a sheen ring and pointed tapered locks: pointed bangs, hime cut, long sidelocks, wolf cut, ahoge bob, side-swept bangs, high ponytail, back braid, pointed layers, swept-back spikes, half-up bun, long curtains, undercut curtains, sleepy fluff, long low tail, headband spikes, wavy layers, braided crown, ronin tail and rat-tail crop.
+- Add twenty outfit templates and give each profession a short list of fitting outfits; the preferred template is chosen 60% of the time. Kilts and sandals reject armor; 861 of 900 top/bottom pairs mix.
+- Give the resident atlas one shared slot per garment kind (256×512), so the wardrobe can grow without growing the texture, and only touch the worn garments' parts each frame.
+- Add `kit.py` and `anime.py` building blocks, `tops`/`bottoms` preview modes and `--ids` filtering. The compiler now rejects negative inflation and templates no profession wears.
+- Page the gametest galleries ten per page, with an in-world scene per page.
+
 # Village Friends 2.7.0 — Sims-style wardrobe
 
 - Replace the outfit engine and every old garment and hair model with a palette-locked pixel-art wardrobe of ten hairstyles, ten tops and ten bottoms.

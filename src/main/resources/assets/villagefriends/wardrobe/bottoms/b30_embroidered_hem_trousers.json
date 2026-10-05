@@ -1,0 +1,15 @@
+{
+  "id": "b30_embroidered_hem_trousers",
+  "kind": "bottom",
+  "name": "Embroidered Hem Trousers",
+  "texture": "bottoms/b30_embroidered_hem_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Loose trousers with broad embroidered bands at the hem and waist, over soft boots."
+}

@@ -1,0 +1,133 @@
+{
+  "id": "t13_clasped_half_cloak",
+  "kind": "top",
+  "name": "Clasped Half-Cloak",
+  "texture": "tops/t13_clasped_half_cloak.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cloak_mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.6,
+        -2.8
+      ],
+      "size": [
+        17,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "cloak_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.2,
+        2.6
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        19
+      ]
+    },
+    {
+      "id": "brooch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        0.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        19
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short wool cloak over the shoulders, fastened with a brooch, over a belted tunic."
+}

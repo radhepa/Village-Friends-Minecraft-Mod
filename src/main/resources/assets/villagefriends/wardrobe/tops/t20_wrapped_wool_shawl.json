@@ -1,0 +1,76 @@
+{
+  "id": "t20_wrapped_wool_shawl",
+  "kind": "top",
+  "name": "Wrapped Wool Shawl",
+  "texture": "tops/t20_wrapped_wool_shawl.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shawl_drape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -0.8,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "shawl_pin",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.5,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A checked wool shawl wrapped over both shoulders, crossed on the chest and pinned with a brooch."
+}

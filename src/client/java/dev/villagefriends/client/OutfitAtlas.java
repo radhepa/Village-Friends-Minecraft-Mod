@@ -2,38 +2,28 @@ package dev.villagefriends.client;
 
 import dev.villagefriends.outfit.Garment;
 import dev.villagefriends.outfit.Wardrobe;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
- * Fixed layout of the per-resident 512x512 texture: the 64x64 player skin at the origin, the
- * face-detail swatches at (64..67, 0), then one 64-pixel-wide block per garment holding the
- * box-UV nets of its 3D pieces. Every resident texture shares this layout so one baked model
- * serves every outfit; only the selected garments' blocks are painted.
+ * Fixed layout of the per-resident 256x512 texture: the 64x64 player skin at the origin, the
+ * face-detail swatches at (64..67, 0), then one 64-pixel-wide slot per garment kind holding the
+ * box-UV nets of that garment's 3D pieces. An outfit wears exactly one hairstyle, top and
+ * bottom, so every garment of a kind shares its kind's slot and the wardrobe can grow without
+ * growing the texture. One baked model serves every outfit.
  */
 final class OutfitAtlas {
-    static final int WIDTH = 512, HEIGHT = 512, COLUMN = 64;
+    static final int WIDTH = 256, HEIGHT = 512;
     record Block(int x, int y) {}
-    private static final Map<String, Block> BLOCKS;
+    private static final Block HAIR = new Block(64, 8), TOP = new Block(128, 0), BOTTOM = new Block(192, 0);
     static {
-        var blocks = new LinkedHashMap<String, Block>();
-        int[] next = new int[WIDTH / COLUMN];
-        next[0] = 64; next[1] = 8;
         for (Garment garment : Wardrobe.ALL) {
-            int h = garment.extrasHeight();
-            if (h == 0) continue;
-            int column = 0;
-            while (column < next.length && next[column] + h > HEIGHT) column++;
-            if (column == next.length) throw new IllegalStateException("Wardrobe atlas overflow at " + garment.id());
-            blocks.put(garment.id(), new Block(column * COLUMN, next[column]));
-            next[column] += h;
+            var block = slot(garment.kind());
+            if (block.y() + garment.extrasHeight() > HEIGHT)
+                throw new IllegalStateException("Wardrobe pieces exceed the " + garment.kind() + " slot: " + garment.id());
         }
-        BLOCKS = Map.copyOf(blocks);
     }
-    static Block block(Garment garment) {
-        var block = BLOCKS.get(garment.id());
-        if (block == null && garment.extrasHeight() > 0) throw new IllegalArgumentException("Garment not in atlas " + garment.id());
-        return block;
+    private static Block slot(Garment.Kind kind) {
+        return switch (kind) { case HAIR -> HAIR; case TOP -> TOP; case BOTTOM -> BOTTOM; };
     }
+    static Block block(Garment garment) { return garment.extrasHeight() == 0 ? null : slot(garment.kind()); }
     private OutfitAtlas() {}
 }

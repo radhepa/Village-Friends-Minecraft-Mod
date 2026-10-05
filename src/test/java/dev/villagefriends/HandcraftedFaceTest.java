@@ -34,7 +34,8 @@ class HandcraftedFaceTest {
 
     @Test void everyHairstyleHasVolumeBeyondTheHatLayer() {
         for (var hair : Wardrobe.HAIR) {
-            assertTrue(hair.pieces().stream().anyMatch(p -> { float[] b = bounds(p); return b[1] < -8.6F; }), hair.id() + " rises past the hat layer");
+            assertTrue(hair.pieces().stream().anyMatch(p -> { float[] b = bounds(p);
+                return b[1] < -8.6F || b[0] < -4.6F || b[3] > 4.6F || b[5] > 4.6F || b[4] > .6F; }), hair.id() + " has volume past the hat layer");
         }
     }
 

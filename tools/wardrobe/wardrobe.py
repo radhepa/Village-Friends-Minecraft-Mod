@@ -296,7 +296,7 @@ class Garment:
     def __init__(self, kind: str, gid: str, meta: dict):
         self.kind, self.id, self.meta = kind, gid, meta
         self.skin = Layer(64, 64)
-        self.extras = Layer(self.EXTRAS_W, meta.get("extras_height", 64))
+        self.extras = Layer(self.EXTRAS_W, meta.get("extras_height", 160))
         self.pieces: list[Piece] = []
         self._shelf_x = self._shelf_y = self._shelf_h = 0
         self._parts = {name: Box(self.skin, *spec) for name, spec in SKIN_PARTS.items()}
@@ -315,6 +315,8 @@ class Garment:
         w, h, d = size
         if min(w, h, d) < 1 or any(int(s) != s for s in size):
             raise ValueError(f"{self.id}:{pid} needs positive integer texture size")
+        if inflate < 0:
+            raise ValueError(f"{self.id}:{pid} cannot shrink (negative inflate)")
         tw, th = 2 * (w + d), d + h
         if self._shelf_x + tw > self.extras.w:
             self._shelf_x, self._shelf_y, self._shelf_h = 0, self._shelf_y + self._shelf_h + 1, 0
@@ -405,6 +407,9 @@ class Garment:
                     break
         if kind == "hair" and not any(p.size for p in self.pieces):
             errors.append("hair needs volumetric pieces")
+        limit = 504 if kind == "hair" else 512   # the kind's shared slot in the game's 256x512 atlas
+        if self.used_extras_height() > limit:
+            errors.append(f"3D pieces need {self.used_extras_height()} rows; the {kind} slot holds {limit}")
         return errors
 
 
@@ -523,10 +528,14 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
         if not errors and not compatible(by_id[o["top"]], by_id[o["bottom"]]):
             errors.append(f"outfit {o['id']} pairs incompatible pieces")
     outfit_ids = {o["id"] for o in data["outfits"]}
+    worn = set()
     for job, ids in data["professions"].items():
         for oid in ids:
             if oid not in outfit_ids:
                 errors.append(f"profession {job} names unknown outfit {oid}")
+            worn.add(oid)
+    for oid in sorted(outfit_ids - worn):
+        errors.append(f"outfit {oid} is not worn by any profession")
     for top in tops:
         n = sum(compatible(top, b) for b in bottoms)
         if n == 0:

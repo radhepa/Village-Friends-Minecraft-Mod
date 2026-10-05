@@ -1,0 +1,130 @@
+{
+  "id": "t15_laced_leather_jerkin",
+  "kind": "top",
+  "name": "Laced Leather Jerkin",
+  "texture": "tops/t15_laced_leather_jerkin.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tab_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.5,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tab_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "tab_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "tab_3",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Sleeveless dyed-suede jerkin, laced up the front, pointed tabs at the hem, over a full shirt."
+}

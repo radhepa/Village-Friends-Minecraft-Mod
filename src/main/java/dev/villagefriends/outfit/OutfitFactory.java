@@ -12,7 +12,7 @@ import java.util.random.RandomGenerator;
  * template wins most of the time; the bottom is sometimes swapped for any compatible one.
  */
 public final class OutfitFactory {
-    static final int PREFERRED_TEMPLATE_PERCENT = 70, TEMPLATE_BOTTOM_PERCENT = 60;
+    static final int PREFERRED_TEMPLATE_PERCENT = 60, TEMPLATE_BOTTOM_PERCENT = 60;
 
     public static Outfit assembleOutfit(Gender gender, Profession job, PaletteID palette) {
         return assembleOutfit(gender, job, palette, ThreadLocalRandom.current().nextLong());

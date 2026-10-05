@@ -205,7 +205,7 @@ def save(canvas: Canvas, labels, out: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["outfits", "hair", "mix", "one", "palettes"])
+    ap.add_argument("mode", choices=["outfits", "hair", "mix", "one", "palettes", "tops", "bottoms"])
     ap.add_argument("--palette", default=None)
     ap.add_argument("--color", default="CHESTNUT")
     ap.add_argument("--top"), ap.add_argument("--bottom"), ap.add_argument("--hair")
@@ -213,6 +213,7 @@ def main():
     ap.add_argument("--back", action="store_true")
     ap.add_argument("--walk", action="store_true")
     ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--ids", nargs="*", help="only these piece ids (prefix match) in hair/outfits/mix modes")
     a = ap.parse_args()
     garments = W.build_all()
     for g in garments.values():
@@ -225,6 +226,8 @@ def main():
     tops = [g for g in garments.values() if g.kind == "tops"]
     bottoms = [g for g in garments.values() if g.kind == "bottoms"]
     hair_list = [g for g in garments.values() if g.kind == "hair"]
+    if a.ids:
+        hair_list = [h for h in hair_list if any(h.id.startswith(i) for i in a.ids)] or hair_list
     pose = {"RIGHT_LEG": (28, 0, 0), "LEFT_LEG": (-28, 0, 0), "RIGHT_ARM": (-25, 0, 0), "LEFT_ARM": (25, 0, 0)} if a.walk else None
     yaw = 152 if a.back else -28
     if a.mode == "outfits":
@@ -266,6 +269,22 @@ def main():
                    complexion=rng.randrange(6), yaw=yaw, pose=pose)
             labels += [(x, y + 345, t.meta["name"]), (x, y + 358, "+ " + b.meta["name"])]
         save(canvas, labels, Path(a.out or SCRATCH / "mix.png"))
+    elif a.mode in ("tops", "bottoms"):
+        # A sheet of new tops on one bottom (or bottoms under one top), each in a different palette.
+        pool = tops if a.mode == "tops" else bottoms
+        chosen = [p for p in pool if not a.ids or any(p.id.startswith(i) for i in a.ids)]
+        cols, cw, ch, sc = 5, 300, 560, 11
+        canvas = Canvas(cols * cw, ((len(chosen) + cols - 1) // cols) * ch)
+        labels = []
+        for i, piece in enumerate(chosen):
+            pal = palettes[a.palette or plist[i % len(plist)]]
+            x, y = (i % cols) * cw + cw // 2, (i // cols) * ch + 170
+            top = piece if a.mode == "tops" else garments[a.top or "t11_belted_linen_tunic"]
+            bottom = piece if a.mode == "bottoms" else garments[a.bottom or "b03_scholars_slacks"]
+            figure(canvas, x, y, sc, top, bottom, hair_list[(i * 3) % len(hair_list)], pal,
+                   hairs[list(hairs)[i % len(hairs)]]["ramp"], complexion=i % 6, yaw=yaw, pose=pose)
+            labels += [(x, y + 360, piece.meta["name"]), (x, y + 374, pal["name"])]
+        save(canvas, labels, Path(a.out or SCRATCH / f"{a.mode}.png"))
     elif a.mode == "one":
         canvas = Canvas(1200, 760)
         pal = palettes[a.palette or plist[0]]

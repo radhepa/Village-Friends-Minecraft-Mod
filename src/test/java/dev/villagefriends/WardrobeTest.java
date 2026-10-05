@@ -15,12 +15,12 @@ class WardrobeTest {
         }
     }
 
-    @Test void tenHairstylesTenTopsTenBottomsAndTenOutfits() {
-        assertEquals(10, Wardrobe.HAIR.size()); assertEquals(10, Wardrobe.TOPS.size()); assertEquals(10, Wardrobe.BOTTOMS.size());
-        assertEquals(10, Wardrobe.OUTFITS.size()); assertEquals(10, MasterPalettes.ALL.size()); assertEquals(10, Wardrobe.HAIR_COLORS.size());
-        assertEquals(30, Wardrobe.ALL.stream().map(Garment::id).distinct().count());
-        assertEquals(10, Wardrobe.OUTFITS.stream().map(t -> t.top()).distinct().count(), "each outfit has its own top");
-        assertEquals(10, Wardrobe.OUTFITS.stream().map(t -> t.bottom()).distinct().count(), "each outfit has its own bottom");
+    @Test void thirtyHairstylesTopsBottomsAndOutfits() {
+        assertEquals(30, Wardrobe.HAIR.size()); assertEquals(30, Wardrobe.TOPS.size()); assertEquals(30, Wardrobe.BOTTOMS.size());
+        assertEquals(30, Wardrobe.OUTFITS.size()); assertEquals(10, MasterPalettes.ALL.size()); assertEquals(10, Wardrobe.HAIR_COLORS.size());
+        assertEquals(90, Wardrobe.ALL.stream().map(Garment::id).distinct().count());
+        assertEquals(30, Wardrobe.OUTFITS.stream().map(t -> t.top()).distinct().count(), "each outfit has its own top");
+        assertEquals(30, Wardrobe.OUTFITS.stream().map(t -> t.bottom()).distinct().count(), "each outfit has its own bottom");
         assertThrows(UnsupportedOperationException.class, () -> Wardrobe.HAIR.clear());
         assertThrows(IllegalArgumentException.class, () -> Wardrobe.get("missing"));
     }
@@ -67,7 +67,7 @@ class WardrobeTest {
         }
         int pairs = 0;
         for (var top : Wardrobe.TOPS) for (var bottom : Wardrobe.BOTTOMS) if (Wardrobe.compatible(top, bottom)) pairs++;
-        assertTrue(pairs >= 75, "most tops and bottoms combine: " + pairs);
+        assertTrue(pairs >= 800, "most tops and bottoms combine: " + pairs);
         var brigandine = Wardrobe.get("t01_squires_brigandine"); var hose = Wardrobe.get("b09_minstrel_hose");
         var greaves = Wardrobe.get("b01_plated_greaves"); var waistcoat = Wardrobe.get("t05_merchants_waistcoat");
         assertFalse(Wardrobe.compatible(brigandine, hose), "armor needs sturdy legwear");
@@ -119,7 +119,7 @@ class WardrobeTest {
                 seenTops.add(outfit.top()); seenBottoms.add(outfit.bottom()); seenHair.add(outfit.hair());
             }
         }
-        assertEquals(10, seenTops.size()); assertEquals(10, seenBottoms.size()); assertEquals(10, seenHair.size());
+        assertEquals(30, seenTops.size()); assertEquals(30, seenBottoms.size()); assertEquals(30, seenHair.size());
         assertTrue(mixed > 1000, "bottoms are sometimes swapped for compatible ones");
         assertEquals("knight_errant", Wardrobe.templates(Profession.KNIGHT).getFirst().id());
         assertEquals("arcanist", Wardrobe.templates(Profession.MAGE).getFirst().id());
