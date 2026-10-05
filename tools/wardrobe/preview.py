@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw
 import wardrobe as W
 
 BODY = W.ROOT / "src/main/resources/assets/villagefriends/textures/body"
-SCRATCH = Path("/tmp/claude-0/wardrobe-preview")
+SCRATCH = W.ROOT / "build/wardrobe-preview"
 
 
 def resolve(layer: W.Layer, palette: dict, hair: list[str]) -> np.ndarray:

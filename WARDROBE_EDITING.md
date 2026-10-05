@@ -27,7 +27,7 @@ python tools/wardrobe/preview.py one --top t03_arcanist_longcoat --bottom b03_sc
 python tools/wardrobe/preview.py outfits | hair | tops | bottoms [--back] [--ids t2 b15] | mix [--walk]
 ```
 
-The tools need Python 3 with Pillow and NumPy. Previews go to `/tmp/claude-0/wardrobe-preview/` unless you pass `--out`. They are for fast iteration only; confirm in Minecraft with `gradlew.bat runClientGameTest -PoutfitsOnly`, which saves screenshots to `build/run/clientGameTest/screenshots/`.
+The tools need Python 3 with Pillow and NumPy. Previews go to `build/wardrobe-preview/` unless you pass `--out`. They are for fast iteration only; confirm in Minecraft with `gradlew.bat runClientGameTest -PoutfitsOnly`, which saves screenshots to `build/run/clientGameTest/screenshots/`.
 
 ## Writing a piece
 

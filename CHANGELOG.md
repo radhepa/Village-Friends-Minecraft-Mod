@@ -62,7 +62,7 @@
 - Add partial work layers for all 23 professions, preserving personal trousers, uncovered shirts, faces and hair.
 - Import and deduplicate the supplied name list, retaining existing names: 1,097 first names and 250 surnames. Restrict the supplied Indian pool and overlapping surname to brown/dark complexion indices 2–5.
 - Generate names after assigning the actual saved complexion. Preserve existing/custom names, earlier recipes, child identity, growth and save/reload.
-- Document individual layer edits, semantic masks, palettes, data/resource packs and the Claude handoff. Add focused and full Minecraft verification.
+- Document individual layer edits, semantic masks, palettes, data/resource packs and the developer handoff. Add focused and full Minecraft verification.
 
 # 2.4.0
 
@@ -71,7 +71,7 @@
 - Place fourteen starter residents, all ten new profession anchors, benches, treatment cots, administrative blocks, beds and practical building interiors.
 - Provide three cottage variants, separately enclosed bedrooms and clear doors for future spatial bed scans. The scanner and specialized AI remain later work.
 - Add deterministic template tooling and Minecraft tests for loading, rotation, room boundaries, assembly, natural generation and persistence.
-- Keep every building in a separate editable layered JSON blueprint, with independent role pools, single-building regeneration and a documented Claude handoff/entrance contract.
+- Keep every building in a separate editable layered JSON blueprint, with independent role pools, single-building regeneration and a documented handoff and entrance contract.
 
 # 2.3.0
 
