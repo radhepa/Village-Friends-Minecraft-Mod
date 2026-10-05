@@ -105,9 +105,8 @@ public final class VillageGalleryGameTest implements FabricClientGameTest {
                 });
                 w.getServer().runCommand("place structure villagefriends:village " + vx + " " + (GROUND + 1) + " " + vz);
                 view(c, w, vx - 72, GROUND + 58, vz - 72, -45f, 32f, "village" + v + "-aerial");
-                view(c, w, vx - 21, GROUND + 15, vz - 21, -45f, 22f, "village" + v + "-square");
+                view(c, w, vx - 12, GROUND + 11, vz - 12, -45f, 24f, "village" + v + "-square");
                 view(c, w, vx + 72, GROUND + 58, vz + 72, 135f, 32f, "village" + v + "-aerial2");
-                view(c, w, vx + 0.5, GROUND + 170, vz + 0.5, 0f, 89.5f, "village" + v + "-map");
             }
         }
         VillageFriends.LOGGER.info("VILLAGE GALLERY CAPTURED: {} templates, {} villages.", templates.size(), villages);
