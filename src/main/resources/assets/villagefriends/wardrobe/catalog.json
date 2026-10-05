@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "keys": {
+    "P0": "#1f2d4d",
+    "P1": "#2f4673",
+    "P2": "#44619a",
+    "P3": "#6585bd",
+    "P4": "#93b0dc",
+    "S0": "#6b5d47",
+    "S1": "#968566",
+    "S2": "#c4b28c",
+    "S3": "#e0d0ab",
+    "S4": "#f5ebcf",
+    "A0": "#4d1519",
+    "A1": "#78232b",
+    "A2": "#a8363c",
+    "A3": "#cc5d57",
+    "A4": "#eb958e",
+    "L0": "#2c1c13",
+    "L1": "#4a2f20",
+    "L2": "#6b4630",
+    "L3": "#8f6444",
+    "L4": "#b38962",
+    "M0": "#39342f",
+    "M1": "#655b4d",
+    "M2": "#968870",
+    "M3": "#c4b594",
+    "M4": "#eee2c0",
+    "K0": "#14100c",
+    "K1": "#221a14",
+    "K2": "#2f251d",
+    "K3": "#3c3026",
+    "K4": "#4a3c30",
+    "H0": "#3a2213",
+    "H1": "#5c381f",
+    "H2": "#80522d",
+    "H3": "#a86f3c",
+    "H4": "#d09655"
+  },
+  "shadowKeys": {
+    "X1": 46,
+    "X2": 84
+  },
+  "hair": [
+    "h01_spiky_layered",
+    "h02_messy_parted",
+    "h03_voluminous_curls",
+    "h04_tousled_crop",
+    "h05_low_ponytail",
+    "h06_shaggy_shoulder",
+    "h07_swept_undercut",
+    "h08_top_knot",
+    "h09_curtain_part",
+    "h10_windswept_waves"
+  ],
+  "tops": [
+    "t01_squires_brigandine",
+    "t02_trailblazer_vest",
+    "t03_arcanist_longcoat",
+    "t04_farmhand_flannel",
+    "t05_merchants_waistcoat",
+    "t06_mariners_knit",
+    "t07_smiths_apron",
+    "t08_rangers_hood",
+    "t09_minstrels_doublet",
+    "t10_pilgrims_tabard"
+  ],
+  "bottoms": [
+    "b01_plated_greaves",
+    "b02_trail_breeches",
+    "b03_scholars_slacks",
+    "b04_patched_workpants",
+    "b05_pinstripe_trousers",
+    "b06_rolled_canvas",
+    "b07_heavy_work_trousers",
+    "b08_wrapped_leggings",
+    "b09_minstrel_hose",
+    "b10_wanderers_pantaloons"
+  ],
+  "outfits": [
+    {
+      "id": "knight_errant",
+      "name": "Knight-Errant",
+      "top": "t01_squires_brigandine",
+      "bottom": "b01_plated_greaves"
+    },
+    {
+      "id": "trailblazer",
+      "name": "Trailblazer",
+      "top": "t02_trailblazer_vest",
+      "bottom": "b02_trail_breeches"
+    },
+    {
+      "id": "arcanist",
+      "name": "Arcanist",
+      "top": "t03_arcanist_longcoat",
+      "bottom": "b03_scholars_slacks"
+    },
+    {
+      "id": "farmhand",
+      "name": "Farmhand",
+      "top": "t04_farmhand_flannel",
+      "bottom": "b04_patched_workpants"
+    },
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "top": "t05_merchants_waistcoat",
+      "bottom": "b05_pinstripe_trousers"
+    },
+    {
+      "id": "mariner",
+      "name": "Mariner",
+      "top": "t06_mariners_knit",
+      "bottom": "b06_rolled_canvas"
+    },
+    {
+      "id": "smith",
+      "name": "Smith",
+      "top": "t07_smiths_apron",
+      "bottom": "b07_heavy_work_trousers"
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "top": "t08_rangers_hood",
+      "bottom": "b08_wrapped_leggings"
+    },
+    {
+      "id": "minstrel",
+      "name": "Minstrel",
+      "top": "t09_minstrels_doublet",
+      "bottom": "b09_minstrel_hose"
+    },
+    {
+      "id": "pilgrim",
+      "name": "Pilgrim",
+      "top": "t10_pilgrims_tabard",
+      "bottom": "b10_wanderers_pantaloons"
+    }
+  ],
+  "professions": {
+    "NONE": [
+      "farmhand",
+      "mariner",
+      "trailblazer"
+    ],
+    "NITWIT": [
+      "minstrel",
+      "farmhand"
+    ],
+    "ARMORER": [
+      "smith",
+      "knight_errant"
+    ],
+    "BUTCHER": [
+      "smith"
+    ],
+    "CARTOGRAPHER": [
+      "trailblazer",
+      "arcanist"
+    ],
+    "CLERIC": [
+      "pilgrim"
+    ],
+    "FARMER": [
+      "farmhand"
+    ],
+    "FISHERMAN": [
+      "mariner"
+    ],
+    "FLETCHER": [
+      "ranger"
+    ],
+    "LEATHERWORKER": [
+      "smith",
+      "trailblazer"
+    ],
+    "LIBRARIAN": [
+      "arcanist",
+      "merchant"
+    ],
+    "MASON": [
+      "smith",
+      "farmhand"
+    ],
+    "SHEPHERD": [
+      "farmhand",
+      "mariner"
+    ],
+    "TOOLSMITH": [
+      "smith"
+    ],
+    "WEAPONSMITH": [
+      "smith",
+      "knight_errant"
+    ],
+    "KNIGHT": [
+      "knight_errant"
+    ],
+    "ARCHER": [
+      "ranger"
+    ],
+    "COOK": [
+      "smith",
+      "merchant"
+    ],
+    "TAVERN_KEEPER": [
+      "merchant"
+    ],
+    "APOTHECARY": [
+      "pilgrim",
+      "arcanist"
+    ],
+    "PAINTER": [
+      "minstrel",
+      "merchant"
+    ],
+    "BARD": [
+      "minstrel"
+    ],
+    "TAILOR": [
+      "merchant",
+      "minstrel"
+    ],
+    "CARPENTER": [
+      "smith",
+      "farmhand"
+    ],
+    "SCHOLAR": [
+      "arcanist",
+      "pilgrim"
+    ],
+    "MERCHANT": [
+      "merchant"
+    ],
+    "ADVENTURER": [
+      "trailblazer",
+      "ranger"
+    ],
+    "GUARD": [
+      "knight_errant",
+      "ranger"
+    ],
+    "MAGE": [
+      "arcanist"
+    ]
+  }
+}

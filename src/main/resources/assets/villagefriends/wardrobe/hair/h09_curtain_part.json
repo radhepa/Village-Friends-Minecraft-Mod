@@ -1,0 +1,377 @@
+{
+  "id": "h09_curtain_part",
+  "kind": "hair",
+  "name": "Curtain Part",
+  "texture": "hair/h09_curtain_part.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        -0.15,
+        -8.7,
+        -4.25
+      ],
+      "rotation": [
+        -8,
+        0,
+        -16
+      ],
+      "origin": [
+        -3.4,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_jaw_strand",
+      "bone": "HEAD",
+      "pivot": [
+        -4.25,
+        -7.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "right_side_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.2,
+        -7.8,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "right_side_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.2,
+        -7.8,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "crown_right",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -8.15,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -2,
+        -1,
+        -3.5
+      ],
+      "size": [
+        4,
+        1,
+        7
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "left_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        0.15,
+        -8.7,
+        -4.25
+      ],
+      "rotation": [
+        -8,
+        0,
+        16
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "left_jaw_strand",
+      "bone": "HEAD",
+      "pivot": [
+        4.25,
+        -7.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "left_side_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.2,
+        -7.8,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        6,
+        2
+      ],
+      "uv": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "left_side_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.2,
+        -7.8,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        14,
+        9
+      ]
+    },
+    {
+      "id": "crown_left",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -8.15,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        9
+      ],
+      "origin": [
+        -2,
+        -1,
+        -3.5
+      ],
+      "size": [
+        4,
+        1,
+        7
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "nape_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -7.6,
+        4.15
+      ],
+      "rotation": [
+        4,
+        0,
+        5
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        44,
+        9
+      ]
+    },
+    {
+      "id": "nape_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        4.15
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        53,
+        9
+      ]
+    },
+    {
+      "id": "nape_2",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -7.6,
+        4.15
+      ],
+      "rotation": [
+        4,
+        0,
+        -5
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    }
+  ],
+  "description": "Centre-parted curtain bangs, jaw-length layered sides and a soft nape."
+}

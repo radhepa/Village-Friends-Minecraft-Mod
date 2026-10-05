@@ -1,0 +1,161 @@
+{
+  "id": "b09_minstrel_hose",
+  "kind": "bottom",
+  "name": "Minstrel Hose",
+  "texture": "bottoms/b09_minstrel_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "slim",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor",
+    "work"
+  ],
+  "pieces": [
+    {
+      "id": "right_shoe_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.1,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_shoe_curl",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.5,
+        -4.1
+      ],
+      "rotation": [
+        -30,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "left_shoe_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.1,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "left_shoe_curl",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.5,
+        -4.1
+      ],
+      "rotation": [
+        -30,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "trunk_hose",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        4,
+        5
+      ],
+      "uv": [
+        32,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "description": "One solid and one striped leg, puffed paned trunk hose and curled pointed shoes."
+}

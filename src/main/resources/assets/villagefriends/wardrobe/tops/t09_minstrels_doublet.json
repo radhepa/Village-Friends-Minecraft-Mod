@@ -1,0 +1,219 @@
+{
+  "id": "t09_minstrels_doublet",
+  "kind": "top",
+  "name": "Minstrel's Doublet",
+  "texture": "tops/t09_minstrels_doublet.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_shoulder_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_shoulder_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -2.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "peplum_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "peplum_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "half_cape",
+      "bone": "TORSO",
+      "pivot": [
+        -0.2,
+        -0.4,
+        2.35
+      ],
+      "rotation": [
+        6,
+        0,
+        -3
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        10,
+        1
+      ],
+      "uv": [
+        21,
+        10
+      ]
+    },
+    {
+      "id": "half_cape_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        -0.7,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        0,
+        0,
+        -2.6
+      ],
+      "size": [
+        5,
+        2,
+        6
+      ],
+      "uv": [
+        34,
+        10
+      ]
+    },
+    {
+      "id": "half_cape_clasp",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.5,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        10
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Front-laced doublet with slashed puffed shoulders, a scalloped peplum and a jaunty half-cape."
+}

@@ -1,0 +1,187 @@
+{
+  "id": "t02_trailblazer_vest",
+  "kind": "top",
+  "name": "Trailblazer Vest",
+  "texture": "tops/t02_trailblazer_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "kerchief_drape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0.4,
+        -2.95
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_tip",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.4,
+        -2.95
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        2.3,
+        -0.9,
+        -3.05
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        8
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "Rolled-sleeve linen shirt, pocketed suede vest, crossbody strap and a knotted kerchief."
+}

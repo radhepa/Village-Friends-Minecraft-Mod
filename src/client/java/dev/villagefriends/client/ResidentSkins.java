@@ -12,12 +12,19 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.*;
 import net.minecraft.util.profiling.ProfilerFiller;
 
-/** Bakes per-face grain, clothing overlap occlusion and hair-fringe shadows to palette-locked textures. */
+/**
+ * Bakes one texture per (complexion, outfit): the complexion body, then each garment's key-color
+ * pixel art resolved through the outfit's single palette (hair keys through the natural hair
+ * color), then the garments' 3D-piece nets into their atlas blocks. Baking happens once per
+ * outfit on a cache miss; animation never allocates textures.
+ */
 public final class ResidentSkins {
     private record Entry(Identifier texture, long tick) {}
+    private record Loaded(List<int[]> bodies, Map<String, int[]> art) {}
     private static final LinkedHashMap<String, Entry> textures = new LinkedHashMap<>(64, .75F, true);
     private static final LinkedHashMap<String, Outfit> outfits = new LinkedHashMap<>(256, .75F, true);
     private static List<int[]> bodies = List.of();
+    private static Map<String, int[]> art = Map.of();
     private static Identifier id(String path) { return Identifier.fromNamespaceAndPath("villagefriends", path); }
     private static long tick() { return Minecraft.getInstance().level == null ? 0 : Minecraft.getInstance().level.getGameTime(); }
     public static int cachedCount() { return textures.size(); }
@@ -39,9 +46,11 @@ public final class ResidentSkins {
     }
     public static Identifier texture(String recipe) { return texture(recipe, "none"); }
     public static Identifier texture(String recipe, String profession) {
-        var look = look(recipe); var outfit = outfit(recipe, profession);
-        String key = look.complexion() + "_" + look.palette() + "_" + Integer.toHexString(outfit.hairRgb())
-            + "_"+outfit.hair().id()+"_"+outfit.top().id()+"_"+outfit.bottom().id();
+        return texture(outfit(recipe, profession), look(recipe).complexion());
+    }
+    /** Explicit outfits (previews, portraits, tests) share the same cache and baking path. */
+    public static Identifier texture(Outfit outfit, int complexion) {
+        String key = complexion + "_" + outfit.key();
         var previous = textures.get(key);
         if (previous != null) {
             textures.put(key, new Entry(previous.texture(), tick()));
@@ -49,25 +58,54 @@ public final class ResidentSkins {
         }
         if (bodies.size() != 6) return id("textures/body/0.png");
         var image = new NativeImage(OutfitAtlas.WIDTH, OutfitAtlas.HEIGHT, true);
-        var body = bodies.get(look.complexion());
-        for (int y = 0; y < 64; y++) for (int x = 0; x < 64; x++) image.setPixel(x, y, body[y * 64 + x]);
-        var selected=OutfitAtlas.ENTRIES.stream().filter(e->e.selected(outfit)).toList();
-        var occluders=selected.stream().map(OutfitAtlas.Entry::box).toList();
-        for (var entry:selected) bake(image,entry,outfit,occluders);
-        var face=new VoxelBox("face_shadow",BodyPart.HEAD,0,-4,-8,-4,8,8,8,0);
-        for (int y=8;y<13;y++) for (int x=8;x<16;x++) {
-            if (FaceDetails.protectedUv(x,y)) continue;
-            float shadow=SurfaceTexture.occlusion(face,SurfaceTexture.Face.FRONT,(x-8+.5F)/8,(y-8+.5F)/8,outfit.hair().voxels());
-            if (shadow>0) image.setPixel(x,y,SurfaceTexture.hsv(image.getPixel(x,y),1,1,1-shadow));
+        var body = bodies.get(complexion);
+        int[] skin = body.clone();
+        for (var garment : outfit.layers()) {
+            int[] codes = codes(garment);
+            for (int i = 0; i < 64 * 64; i++) {
+                int code = codes[i];
+                if (code == Wardrobe.TRANSPARENT) continue;
+                if (Wardrobe.shadow(code)) {
+                    if ((skin[i] >>> 24) != 0) skin[i] = darken(skin[i], Wardrobe.shadowAlpha(code));
+                } else skin[i] = 0xFF000000 | resolve(code, outfit);
+            }
         }
-        image.setPixel(FaceDetails.BROW_U,FaceDetails.V,FaceDetails.brow(outfit.hairRgb()));
-        image.setPixel(FaceDetails.LASH_U,FaceDetails.V,FaceDetails.lash(outfit.hairRgb()));
-        image.setPixel(FaceDetails.SOCKET_U,FaceDetails.V,FaceDetails.shadow(body[12*64+12]));
-        image.setPixel(FaceDetails.CHIN_U,FaceDetails.V,FaceDetails.shadow(body[15*64+12]));
+        for (int y = 0; y < 64; y++) for (int x = 0; x < 64; x++) image.setPixel(x, y, skin[y * 64 + x]);
+        for (var garment : outfit.garments()) {
+            var block = OutfitAtlas.block(garment);
+            if (block == null) continue;
+            int[] codes = codes(garment);
+            for (int y = 0; y < garment.extrasHeight(); y++) for (int x = 0; x < 64; x++) {
+                int code = codes[(64 + y) * 64 + x];
+                int argb = code == Wardrobe.TRANSPARENT ? 0
+                    : Wardrobe.shadow(code) ? Wardrobe.shadowAlpha(code) << 24 : 0xFF000000 | resolve(code, outfit);
+                image.setPixel(block.x() + x, block.y() + y, argb);
+            }
+        }
+        int hair = outfit.hairColor().base();
+        image.setPixel(FaceDetails.BROW_U, FaceDetails.V, FaceDetails.brow(hair));
+        image.setPixel(FaceDetails.LASH_U, FaceDetails.V, FaceDetails.lash(hair));
+        image.setPixel(FaceDetails.SOCKET_U, FaceDetails.V, FaceDetails.shadow(body[12 * 64 + 12]));
+        image.setPixel(FaceDetails.CHIN_U, FaceDetails.V, FaceDetails.shadow(body[15 * 64 + 12]));
         Identifier texture = id("generated/" + key.toLowerCase(Locale.ROOT));
         Minecraft.getInstance().getTextureManager().register(texture, new DynamicTexture(() -> "Outfit " + key, image));
         textures.put(key, new Entry(texture, tick()));
         return texture;
+    }
+    private static int[] codes(Garment garment) {
+        var codes = art.get(garment.id());
+        if (codes == null) throw new IllegalStateException("Wardrobe art not loaded: " + garment.id());
+        return codes;
+    }
+    static int resolve(int code, Outfit outfit) {
+        int role = code / Wardrobe.SHADES, shade = code % Wardrobe.SHADES;
+        return role == Wardrobe.HAIR_ROLE ? outfit.hairColor().shade(shade) : outfit.palette().rgb(role, shade);
+    }
+    private static int darken(int argb, int alpha) {
+        float keep = 1 - alpha / 255F;
+        int result = argb & 0xFF000000;
+        for (int shift = 16; shift >= 0; shift -= 8) result |= Math.round(((argb >>> shift) & 255) * keep) << shift;
+        return result;
     }
     private static void prune() {
         if (textures.size() <= 64) return;
@@ -77,42 +115,30 @@ public final class ResidentSkins {
             if (entry.tick() < now - 2) { manager.release(entry.texture()); iterator.remove(); }
         }
     }
-    private static void bake(NativeImage image,OutfitAtlas.Entry e,Outfit outfit,List<VoxelBox> occluders) {
-        int w=e.tw(),h=e.th(),d=e.td();
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.TOP,d,0,w,d);
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.BOTTOM,d+w,0,w,d);
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.LEFT,0,d,d,h);
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.FRONT,d,d,w,h);
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.RIGHT,d+w,d,d,h);
-        paint(image,e,outfit,occluders,SurfaceTexture.Face.BACK,d+w+d,d,w,h);
-    }
-    private static void paint(NativeImage image,OutfitAtlas.Entry e,Outfit outfit,List<VoxelBox> occluders,
-                               SurfaceTexture.Face face,int offsetX,int offsetY,int width,int height) {
-        var material=SurfaceTexture.material(e.box().id(),e.mask()==null);
-        int seed=(e.modelId()+":"+e.box().id()).hashCode();
-        for (int y=0;y<height;y++) for (int x=0;x<width;x++) {
-            float u=(x+.5F)/width,v=(y+.5F)/height;
-            int base=e.mask()==null?0xFF000000|outfit.hairRgb():e.mask().argb(Math.min(e.mask().width()-1,(int)(u*e.mask().width())),
-                Math.min(e.mask().height()-1,(int)(v*e.mask().height())),outfit.palette());
-            if (e.box().id().contains("boot")) base=SurfaceTexture.hsv(base,1,1,.72F);
-            float shadow=SurfaceTexture.occlusion(e.box(),face,u,v,occluders);
-            image.setPixel(e.u()+offsetX+x,e.v()+offsetY+y,SurfaceTexture.pixel(base,material,x,y,seed,shadow,face));
-        }
+    private static int[] read(ResourceManager resources, Identifier location, int width, int height) {
+        try (var stream = resources.getResourceOrThrow(location).open(); var image = NativeImage.read(stream)) {
+            if (image.getWidth() != width || image.getHeight() != height)
+                throw new IllegalArgumentException(location + " must be " + width + "x" + height);
+            return image.getPixels();
+        } catch (Exception e) { throw new IllegalStateException("Unreadable resident texture " + location, e); }
     }
     public static void register() {
-        ResourceLoader.get(PackType.CLIENT_RESOURCES).registerReloadListener(id("outfit_bodies"), new SimplePreparableReloadListener<List<int[]>>() {
-            @Override protected List<int[]> prepare(ResourceManager resources, ProfilerFiller profiler) {
-                var result = new ArrayList<int[]>();
-                for (int skin = 0; skin < 6; skin++) {
-                    try (var stream = resources.getResourceOrThrow(id("textures/body/" + skin + ".png")).open();
-                         var image = NativeImage.read(stream)) {
-                        if (image.getWidth() != 64 || image.getHeight() != 64) throw new IllegalArgumentException("Expected 64x64 body");
-                        result.add(image.getPixels());
-                    } catch (Exception e) { throw new IllegalStateException("Missing resident body " + skin, e); }
+        ResourceLoader.get(PackType.CLIENT_RESOURCES).registerReloadListener(id("outfit_bodies"), new SimplePreparableReloadListener<Loaded>() {
+            @Override protected Loaded prepare(ResourceManager resources, ProfilerFiller profiler) {
+                var loadedBodies = new ArrayList<int[]>();
+                for (int skin = 0; skin < 6; skin++) loadedBodies.add(read(resources, id("textures/body/" + skin + ".png"), 64, 64));
+                var loadedArt = new HashMap<String, int[]>();
+                for (var garment : Wardrobe.ALL) {
+                    int[] pixels = read(resources, id("wardrobe/" + garment.texture()), 64, 64 + garment.extrasHeight());
+                    int[] codes = new int[pixels.length];
+                    for (int i = 0; i < pixels.length; i++) codes[i] = Wardrobe.code(pixels[i]);
+                    loadedArt.put(garment.id(), codes);
                 }
-                return List.copyOf(result);
+                return new Loaded(List.copyOf(loadedBodies), Map.copyOf(loadedArt));
             }
-            @Override protected void apply(List<int[]> loaded, ResourceManager resources, ProfilerFiller profiler) { clear(); bodies = loaded; }
+            @Override protected void apply(Loaded loaded, ResourceManager resources, ProfilerFiller profiler) {
+                clear(); bodies = loaded.bodies(); art = loaded.art();
+            }
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> prune());
         net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> client.execute(ResidentSkins::clear));

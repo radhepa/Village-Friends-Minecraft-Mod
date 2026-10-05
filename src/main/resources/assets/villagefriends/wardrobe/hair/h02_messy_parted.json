@@ -1,0 +1,321 @@
+{
+  "id": "h02_messy_parted",
+  "kind": "hair",
+  "name": "Messy Parted",
+  "texture": "hair/h02_messy_parted.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_swoop",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -8.6,
+        -4.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -6.2,
+        0,
+        -1.2
+      ],
+      "size": [
+        7,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_tip",
+      "bone": "HEAD",
+      "pivot": [
+        -4.1,
+        -7.7,
+        -4.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.2,
+        -8.2,
+        -1.0
+      ],
+      "rotation": [
+        8,
+        0,
+        14
+      ],
+      "origin": [
+        -1.5,
+        -1.6,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.0,
+        -8.1,
+        0.6
+      ],
+      "rotation": [
+        -10,
+        0,
+        -22
+      ],
+      "origin": [
+        -1,
+        -1.4,
+        -1.5
+      ],
+      "size": [
+        2,
+        2,
+        3
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_2",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.0,
+        2.2
+      ],
+      "rotation": [
+        14,
+        0,
+        26
+      ],
+      "origin": [
+        -1.5,
+        -1.2,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "crown_tuft_3",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.1,
+        2.8
+      ],
+      "rotation": [
+        20,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        -1.3,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "side_right",
+      "bone": "HEAD",
+      "pivot": [
+        -4.15,
+        -8.4,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1,
+        0,
+        -3
+      ],
+      "size": [
+        1,
+        4,
+        6
+      ],
+      "uv": [
+        9,
+        6
+      ]
+    },
+    {
+      "id": "side_left",
+      "bone": "HEAD",
+      "pivot": [
+        4.1,
+        -8.3,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        3,
+        5
+      ],
+      "uv": [
+        24,
+        6
+      ]
+    },
+    {
+      "id": "back_lock_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.3,
+        -8.0,
+        4.1
+      ],
+      "rotation": [
+        8,
+        0,
+        6
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        37,
+        6
+      ]
+    },
+    {
+      "id": "back_lock_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.5,
+        -8.0,
+        4.1
+      ],
+      "rotation": [
+        8,
+        0,
+        -2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        46,
+        6
+      ]
+    },
+    {
+      "id": "back_lock_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.4,
+        -8.0,
+        4.1
+      ],
+      "rotation": [
+        8,
+        0,
+        -7
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        6,
+        1
+      ],
+      "uv": [
+        55,
+        6
+      ]
+    }
+  ],
+  "description": "Side-parted, tousled and swept across the brow."
+}

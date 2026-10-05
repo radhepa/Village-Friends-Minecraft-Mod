@@ -1,3 +1,13 @@
+# Village Friends 2.7.0 — Sims-style wardrobe
+
+- Replace the outfit engine and every old garment and hair model with a palette-locked pixel-art wardrobe of ten hairstyles, ten tops and ten bottoms.
+- Paint garments as key colors (role + shade) resolved through five-shade, hue-shifted ramps of the ten master palettes; one palette per outfit, natural hair colors separate.
+- Use the player overlay layers for depth, plus textured 3D pieces: pauldrons, collars, mantles, coat skirts, hoods, quivers, pouches, cuffs, buns, ponytails and layered hair locks.
+- Let coat skirts, aprons and tabards follow the leading leg; let ponytails, tassels and sash tails sway.
+- Mix any top with any compatible bottom; tag rules keep armor with sturdy legwear and hose away from armor and aprons.
+- Map professions to ten outfit templates; keep hair and hair color when a resident changes jobs.
+- Add `tools/wardrobe/` (one module per piece, compiler, offline previews) and gametest galleries of all outfits, hairstyles, mixes, palettes and an in-world scene.
+
 # Male starter set and texture overhaul
 
 - Replace the 150 male entries with five hairs, five tops and five bottoms.

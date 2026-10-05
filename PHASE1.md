@@ -6,7 +6,7 @@ Implements the **Codex Phase 1: Registry & Item Foundation** roadmap from the su
 
 1. **Phase 1:** register professions, workstation POIs, blocks, items and block entity types; package usable models, textures, recipes, loot, localization and trades; expose hooks for the later controllers. Use vanilla job acquisition and trading for the new professions.
 2. **Phase 2:** add plaza, tavern, garrison, cemetery and enclosed-house templates and jigsaw pools. Coordinate house interiors with the future bed scanner.
-3. **Outfit engine:** replace the previous wardrobe with the four-role palette system, volumetric hair and cohesive garment factory in [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
+3. **Outfit engine:** replace the previous wardrobe with the palette-locked Sims-style wardrobe in [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
 
 Specialized guard AI, daily schedules, the real-time knockout system, recruitment, housing scans and animation remain separate work. Knights and archers use the existing resident villager entity; this phase does not need a new entity type.
 

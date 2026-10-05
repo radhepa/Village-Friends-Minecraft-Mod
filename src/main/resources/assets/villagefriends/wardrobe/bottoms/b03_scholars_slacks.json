@@ -1,0 +1,46 @@
+{
+  "id": "b03_scholars_slacks",
+  "kind": "bottom",
+  "name": "Scholar's Slacks",
+  "texture": "bottoms/b03_scholars_slacks.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "slim",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.55,
+        10.0,
+        -2.55
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.03
+    }
+  ],
+  "description": "Slim pressed trousers with a narrow belt and soft buckled shoes."
+}

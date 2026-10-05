@@ -1,0 +1,16 @@
+{
+  "id": "b04_patched_workpants",
+  "kind": "bottom",
+  "name": "Patched Workpants",
+  "texture": "bottoms/b04_patched_workpants.png",
+  "extrasHeight": 0,
+  "tags": [
+    "simple",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Sturdy canvas trousers, a stitched knee patch, suspenders and lace-up boots."
+}

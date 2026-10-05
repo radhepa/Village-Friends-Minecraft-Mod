@@ -1,0 +1,573 @@
+{
+  "id": "h01_spiky_layered",
+  "kind": "hair",
+  "name": "Spiky Layered",
+  "texture": "hair/h01_spiky_layered.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown_spike_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -7.7,
+        -2.4
+      ],
+      "rotation": [
+        21.599999999999998,
+        0,
+        -20.8
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.7,
+        -2.8
+      ],
+      "rotation": [
+        25.2,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -4,
+        -1.0
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -7.7,
+        -2.4
+      ],
+      "rotation": [
+        21.599999999999998,
+        0,
+        20.8
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_3",
+      "bone": "HEAD",
+      "pivot": [
+        -3.2,
+        -7.7,
+        0.4
+      ],
+      "rotation": [
+        -3.6,
+        0,
+        -25.6
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_4",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -7.7,
+        -0.2
+      ],
+      "rotation": [
+        1.8,
+        0,
+        -4.8
+      ],
+      "origin": [
+        -1.0,
+        -4,
+        -1.0
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_5",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -7.7,
+        0.4
+      ],
+      "rotation": [
+        -3.6,
+        0,
+        12.8
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_6",
+      "bone": "HEAD",
+      "pivot": [
+        3.4,
+        -7.7,
+        0.2
+      ],
+      "rotation": [
+        -1.8,
+        0,
+        27.2
+      ],
+      "origin": [
+        -1.0,
+        -2,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    },
+    {
+      "id": "crown_spike_7",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -7.7,
+        2.8
+      ],
+      "rotation": [
+        -25.2,
+        0,
+        -17.6
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "crown_spike_8",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -7.7,
+        2.6
+      ],
+      "rotation": [
+        -23.400000000000002,
+        0,
+        4.8
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        9,
+        7
+      ]
+    },
+    {
+      "id": "crown_spike_9",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -7.7,
+        3.0
+      ],
+      "rotation": [
+        -27.0,
+        0,
+        22.4
+      ],
+      "origin": [
+        -1.0,
+        -2,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        18,
+        7
+      ]
+    },
+    {
+      "id": "fringe_spike_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.3,
+        -4.25
+      ],
+      "rotation": [
+        -28,
+        0,
+        10
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        7
+      ]
+    },
+    {
+      "id": "fringe_spike_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.2,
+        -8.3,
+        -4.25
+      ],
+      "rotation": [
+        -28,
+        0,
+        -4
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        7
+      ]
+    },
+    {
+      "id": "fringe_spike_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -8.3,
+        -4.25
+      ],
+      "rotation": [
+        -28,
+        0,
+        -12
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        7
+      ]
+    },
+    {
+      "id": "right_spike_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -7.0,
+        -1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        48,
+        7
+      ]
+    },
+    {
+      "id": "right_spike_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -7.0,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        55,
+        7
+      ]
+    },
+    {
+      "id": "left_spike_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.0,
+        -1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        14
+      ]
+    },
+    {
+      "id": "left_spike_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -7.0,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        7,
+        14
+      ]
+    },
+    {
+      "id": "nape_spike_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -4.5,
+        4.3
+      ],
+      "rotation": [
+        22,
+        0,
+        10
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        14
+      ]
+    },
+    {
+      "id": "nape_spike_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -4.5,
+        4.3
+      ],
+      "rotation": [
+        22,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        14
+      ]
+    },
+    {
+      "id": "nape_spike_2",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -4.5,
+        4.3
+      ],
+      "rotation": [
+        22,
+        0,
+        -10
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        28,
+        14
+      ]
+    }
+  ],
+  "description": "Stepped spikes radiating from the crown over a layered nape."
+}

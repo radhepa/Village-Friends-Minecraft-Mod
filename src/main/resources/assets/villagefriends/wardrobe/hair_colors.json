@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "colors": {
+    "RAVEN": {
+      "name": "Raven Black",
+      "ramp": [
+        "#121014",
+        "#1d1a20",
+        "#2a2630",
+        "#3c3746",
+        "#5a5468"
+      ]
+    },
+    "ESPRESSO": {
+      "name": "Espresso",
+      "ramp": [
+        "#1f130e",
+        "#2f1d14",
+        "#43291c",
+        "#5a3925",
+        "#7a5235"
+      ]
+    },
+    "CHESTNUT": {
+      "name": "Chestnut",
+      "ramp": [
+        "#2d1810",
+        "#47271a",
+        "#643925",
+        "#844d31",
+        "#a96a45"
+      ]
+    },
+    "AUBURN": {
+      "name": "Auburn",
+      "ramp": [
+        "#3a1510",
+        "#5c2117",
+        "#80321f",
+        "#a4472a",
+        "#c8673f"
+      ]
+    },
+    "GINGER": {
+      "name": "Ginger",
+      "ramp": [
+        "#5a2513",
+        "#86391b",
+        "#b05426",
+        "#d07335",
+        "#eb9a55"
+      ]
+    },
+    "HONEY": {
+      "name": "Honey Brown",
+      "ramp": [
+        "#4a2e16",
+        "#6c4623",
+        "#8e6232",
+        "#b08245",
+        "#cfa463"
+      ]
+    },
+    "WHEAT": {
+      "name": "Wheat Blonde",
+      "ramp": [
+        "#6d5025",
+        "#957237",
+        "#bb9850",
+        "#d8b96c",
+        "#efd894"
+      ]
+    },
+    "ASH_BLONDE": {
+      "name": "Ash Blonde",
+      "ramp": [
+        "#5c5442",
+        "#80775f",
+        "#a49b7f",
+        "#c2baa0",
+        "#ded8c2"
+      ]
+    },
+    "SILVER": {
+      "name": "Silver Grey",
+      "ramp": [
+        "#3e3f45",
+        "#5c5e66",
+        "#80838b",
+        "#a5a8ae",
+        "#cfd1d4"
+      ]
+    },
+    "SNOW": {
+      "name": "Snow White",
+      "ramp": [
+        "#6f7079",
+        "#9a9ca4",
+        "#c3c5ca",
+        "#e0e1e3",
+        "#f7f7f5"
+      ]
+    }
+  }
+}

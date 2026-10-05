@@ -1,0 +1,103 @@
+{
+  "id": "b08_wrapped_leggings",
+  "kind": "bottom",
+  "name": "Wrapped Leggings",
+  "texture": "bottoms/b08_wrapped_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.9,
+        10.0,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "waist_sash_tail",
+      "bone": "TORSO",
+      "pivot": [
+        4.3,
+        11.0,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Linen trousers bound from knee to ankle in leather wraps, soft turnshoes and a tied sash."
+}
