@@ -1,0 +1,278 @@
+{
+ "format": 1,
+ "size": [11, 10, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom"
+   }
+  },
+  "C": {
+   "id": "minecraft:cobblestone"
+  },
+  "D": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "E": {
+   "id": "minecraft:gravel"
+  },
+  "F": {
+   "id": "minecraft:andesite"
+  },
+  "G": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "H": {
+   "id": "minecraft:stone"
+  },
+  "I": {
+   "id": "minecraft:mossy_stone_bricks"
+  },
+  "J": {
+   "id": "minecraft:chest",
+   "properties": {
+    "facing": "north",
+    "type": "single",
+    "waterlogged": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:cobblestone_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "L": {
+   "id": "minecraft:dirt_path"
+  },
+  "M": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "N": {
+   "id": "minecraft:lantern"
+  },
+  "O": {
+   "id": "minecraft:polished_andesite"
+  },
+  "P": {
+   "id": "minecraft:stone_brick_slab",
+   "properties": {
+    "type": "bottom"
+   }
+  },
+  "Q": {
+   "id": "minecraft:stonecutter",
+   "properties": {
+    "facing": "north"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAALAAAAA",
+    "AAAAADAAAAA",
+    "ADECDEFHEHA",
+    "AHFHHDEECEA",
+    "AHCDCEFFFCA",
+    "ACEFFDCEDDA",
+    "ADDDFCDHEFA",
+    "ACCDCEDDCCA",
+    "ADEFEHCECDA",
+    "AFCFCHHECFA",
+    "AAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....M.....",
+    "...........",
+    "...........",
+    "..K....CC..",
+    ".......O...",
+    "...........",
+    ".G...G.....",
+    "...........",
+    "...Q...CII.",
+    ".GJ..G.....",
+    "..........."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..N.....P..",
+    "...........",
+    "...........",
+    ".G...G.....",
+    "...........",
+    ".......CI..",
+    ".G...G.....",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".G...G.....",
+    "...........",
+    "...........",
+    ".G...G.....",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "BBBBBBB....",
+    "BBBBBBB....",
+    "BBBBBBB....",
+    "BBBBBBB....",
+    "BBBBBBB....",
+    "BBBBBBB...."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 9],
+   "nbt": {
+    "id": "minecraft:chest",
+    "LootTable": "minecraft:chests/village/village_mason"
+   }
+  },
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/trades.py",
+  "checksum": "89007a3378b937af"
+ }
+}

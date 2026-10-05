@@ -1,0 +1,155 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farm_wheat",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farm_mixed",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farm_beets",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/pumpkin_patch",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/paddock",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/apiary",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_tree_oak",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_tree_birch",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_haystack",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_woodpile",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_flowerbed",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cottage_oak",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farmhouse",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/shepherd",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_cart",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_lamp_bench",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    }
+  ]
+}

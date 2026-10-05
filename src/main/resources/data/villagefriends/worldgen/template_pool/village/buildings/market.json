@@ -1,0 +1,32 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/market_stalls",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/market_garden",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_well",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

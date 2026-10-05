@@ -1,0 +1,291 @@
+{
+ "format": 1,
+ "size": [11, 6, 10],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:farmland",
+   "properties": {
+    "moisture": "7"
+   }
+  },
+  "B": {
+   "id": "minecraft:structure_void"
+  },
+  "C": {
+   "id": "minecraft:melon_stem",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "D": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "E": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "F": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "G": {
+   "id": "minecraft:pumpkin"
+  },
+  "H": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "I": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "6"
+   }
+  },
+  "J": {
+   "id": "minecraft:melon"
+  },
+  "K": {
+   "id": "minecraft:melon_stem",
+   "properties": {
+    "age": "5"
+   }
+  },
+  "L": {
+   "id": "minecraft:dirt_path"
+  },
+  "M": {
+   "id": "minecraft:melon_stem",
+   "properties": {
+    "age": "4"
+   }
+  },
+  "N": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "4"
+   }
+  },
+  "O": {
+   "id": "minecraft:carved_pumpkin",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "P": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "Q": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "R": {
+   "id": "minecraft:melon_stem",
+   "properties": {
+    "age": "6"
+   }
+  },
+  "S": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "T": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "U": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "X": {
+   "id": "minecraft:oak_fence_gate",
+   "properties": {
+    "facing": "north",
+    "in_wall": "false",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "Y": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "5"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BBBBBLBBBBB",
+    "BBBBBLBBBBB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BAAAAHAAAAB",
+    "BBBBBBBBBBB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".O...Q...P.",
+    "UDDDDXDDDWS",
+    "EGFGG.JCCCE",
+    "EFIIF.KCRME",
+    "EFFFG.CCCJE",
+    "EIYFI.CCCKE",
+    "EFFFG.JCJCE",
+    "EIINN.KCCME",
+    "EFGGF.CJCCE",
+    "VDDDDDDDDDT"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/farms.py",
+  "checksum": "fd44b24d032d6ded"
+ }
+}

@@ -1,640 +1,912 @@
 {
-  "format": 1,
-  "size": [
-    17,
-    14,
-    19
-  ],
-  "palette": {
-    ".": {
-      "id": "minecraft:air"
-    },
-    "A": {
-      "id": "minecraft:grass_block",
-      "properties": {
-        "snowy": "false"
-      }
-    },
-    "B": {
-      "id": "minecraft:gravel"
-    },
-    "C": {
-      "id": "minecraft:stone_bricks"
-    },
-    "D": {
-      "id": "minecraft:oak_planks"
-    },
-    "E": {
-      "id": "minecraft:jigsaw",
-      "properties": {
-        "orientation": "north_up"
-      }
-    },
-    "F": {
-      "id": "minecraft:oak_trapdoor",
-      "properties": {
-        "facing": "north",
-        "half": "top",
-        "open": "false",
-        "powered": "false",
-        "waterlogged": "false"
-      }
-    },
-    "G": {
-      "id": "villagefriends:house_plaque",
-      "properties": {
-        "facing": "north"
-      }
-    },
-    "H": {
-      "id": "minecraft:stripped_oak_log",
-      "properties": {
-        "axis": "y"
-      }
-    },
-    "I": {
-      "id": "minecraft:calcite"
-    },
-    "J": {
-      "id": "minecraft:oak_door",
-      "properties": {
-        "facing": "north",
-        "half": "lower",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
-      }
-    },
-    "K": {
-      "id": "villagefriends:alchemical_press",
-      "properties": {
-        "facing": "south"
-      }
-    },
-    "L": {
-      "id": "minecraft:brewing_stand",
-      "properties": {
-        "has_bottle_0": "false",
-        "has_bottle_1": "false",
-        "has_bottle_2": "false"
-      }
-    },
-    "M": {
-      "id": "minecraft:bookshelf"
-    },
-    "N": {
-      "id": "villagefriends:apothecary_cot",
-      "properties": {
-        "facing": "east"
-      }
-    },
-    "O": {
-      "id": "minecraft:oak_door",
-      "properties": {
-        "facing": "east",
-        "half": "lower",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
-      }
-    },
-    "P": {
-      "id": "minecraft:green_bed",
-      "properties": {
-        "facing": "north",
-        "occupied": "false",
-        "part": "head"
-      }
-    },
-    "Q": {
-      "id": "minecraft:green_bed",
-      "properties": {
-        "facing": "north",
-        "occupied": "false",
-        "part": "foot"
-      }
-    },
-    "R": {
-      "id": "minecraft:potted_poppy"
-    },
-    "S": {
-      "id": "minecraft:potted_dandelion"
-    },
-    "T": {
-      "id": "minecraft:glass"
-    },
-    "U": {
-      "id": "minecraft:oak_door",
-      "properties": {
-        "facing": "north",
-        "half": "upper",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
-      }
-    },
-    "V": {
-      "id": "minecraft:oak_door",
-      "properties": {
-        "facing": "east",
-        "half": "upper",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
-      }
-    },
-    "W": {
-      "id": "minecraft:lantern",
-      "properties": {
-        "hanging": "true"
-      }
-    },
-    "X": {
-      "id": "minecraft:stripped_oak_log",
-      "properties": {
-        "axis": "x"
-      }
-    },
-    "Y": {
-      "id": "minecraft:spruce_stairs",
-      "properties": {
-        "facing": "east",
-        "half": "bottom",
-        "shape": "straight",
-        "waterlogged": "false"
-      }
-    },
-    "Z": {
-      "id": "minecraft:spruce_stairs",
-      "properties": {
-        "facing": "west",
-        "half": "bottom",
-        "shape": "straight",
-        "waterlogged": "false"
-      }
-    }
+ "format": 1,
+ "size": [11, 22, 17],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
   },
-  "layers": [
-    {
-      "y": 0,
-      "rows": [
-        "AAAAAAABBBAAAAAAA",
-        "AAAAAAABBBAAAAAAA",
-        "AAAAAAABBBAAAAAAA",
-        "AACCCCCCCCCCCCCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACDDDDDDDDDDDCAA",
-        "AACCCCCCCCCCCCCAA",
-        "AAAAAAAAAAAAAAAAA",
-        "AAAAAAAAAAAAAAAAA"
-      ]
+  "A": {
+   "id": "minecraft:spruce_planks"
+  },
+  "B": {
+   "id": "minecraft:calcite"
+  },
+  "C": {
+   "id": "minecraft:dark_oak_planks"
+  },
+  "D": {
+   "id": "minecraft:structure_void"
+  },
+  "E": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "F": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "G": {
+   "id": "minecraft:dark_oak_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "H": {
+   "id": "minecraft:dark_oak_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "I": {
+   "id": "minecraft:dirt"
+  },
+  "J": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "K": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "L": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:podzol"
+  },
+  "N": {
+   "id": "minecraft:dark_oak_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "P": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "Q": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "S": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "T": {
+   "id": "minecraft:rooted_dirt"
+  },
+  "U": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:vine",
+   "properties": {
+    "east": "true"
+   }
+  },
+  "W": {
+   "id": "minecraft:fern"
+  },
+  "X": {
+   "id": "minecraft:flowering_azalea_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "Y": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "Z": {
+   "id": "minecraft:brown_mushroom"
+  },
+  "a": {
+   "id": "minecraft:gravel"
+  },
+  "b": {
+   "id": "minecraft:red_mushroom"
+  },
+  "c": {
+   "id": "minecraft:short_grass"
+  },
+  "d": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "top",
+    "waterlogged": "false"
+   }
+  },
+  "e": {
+   "id": "minecraft:allium"
+  },
+  "f": {
+   "id": "minecraft:brewing_stand"
+  },
+  "g": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "h": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "i": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "lower",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "j": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "upper",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "k": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "l": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "top"
+   }
+  },
+  "m": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "2"
+   }
+  },
+  "n": {
+   "id": "villagefriends:apothecary_cot",
+   "properties": {
+    "facing": "west"
+   }
+  },
+  "o": {
+   "id": "minecraft:azure_bluet"
+  },
+  "p": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "q": {
+   "id": "minecraft:bookshelf"
+  },
+  "r": {
+   "id": "minecraft:chest",
+   "properties": {
+    "facing": "east",
+    "type": "single",
+    "waterlogged": "false"
+   }
+  },
+  "s": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "t": {
+   "id": "minecraft:green_bed",
+   "properties": {
+    "facing": "north",
+    "occupied": "false",
+    "part": "foot"
+   }
+  },
+  "u": {
+   "id": "minecraft:green_bed",
+   "properties": {
+    "facing": "north",
+    "occupied": "false",
+    "part": "head"
+   }
+  },
+  "v": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "w": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false"
+   }
+  },
+  "x": {
+   "id": "minecraft:mossy_cobblestone_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "y": {
+   "id": "minecraft:potted_azure_bluet"
+  },
+  "z": {
+   "id": "minecraft:potted_fern"
+  },
+  "0": {
+   "id": "minecraft:water_cauldron",
+   "properties": {
+    "level": "2"
+   }
+  },
+  "1": {
+   "id": "villagefriends:alchemical_press",
+   "properties": {
+    "facing": "east"
+   }
+  },
+  "2": {
+   "id": "villagefriends:house_plaque",
+   "properties": {
+    "facing": "north"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "DDDDDaDDDDD",
+    "DMTTDEDMMMD",
+    "DMMTDaDTMMD",
+    "DMMTDEDTTMD",
+    "DDDDDaDDDDD",
+    "DEEEEEEEEED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEIIIIIIIED",
+    "DEEEEEEEEED",
+    "DDDDDDDDDDD",
+    "DDDDDDDDDDD",
+    "DDDDDDDDDDD"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....v.....",
+    ".cWo...bbZ.",
+    ".mZm...cbe.",
+    ".WZc...WWe.",
+    "....2xw....",
+    ".EEEEEEEEE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EAAAAAAAE.",
+    ".EEEEEEEEE.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..XX...XX..",
+    ".FBBBiBBBF.",
+    ".B1.....AB.",
+    ".Bf.....AB.",
+    ".B0.....AB.",
+    ".F......YF.",
+    ".B.....n.B.",
+    ".B......zB.",
+    ".Bp....n.B.",
+    ".FBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".L..L.L..L.",
+    "UFRRBjBRsFS",
+    ".Q......Ag.",
+    ".Q......Ag.",
+    "UB......YBS",
+    "UF.......FS",
+    ".Q.......Q.",
+    ".Q.......Q.",
+    "UB.......BS",
+    ".FBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".d...d...d.",
+    ".FBBBFBBBF.",
+    ".B......AB.",
+    ".B......YB.",
+    ".B.......B.",
+    ".F...h...F.",
+    ".B.......B.",
+    ".B.......B.",
+    ".B.ll....B.",
+    ".FBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".FKKKKKKKF.",
+    ".JAAAAAAAJ.",
+    ".JAAAAAAYJ.",
+    ".JAAAAAA.J.",
+    ".JAAAAAA.J.",
+    ".JAAAAAAAJ.",
+    ".JAAAAAAAJ.",
+    ".JAAAAAAAJ.",
+    ".JAAAAAAAJ.",
+    ".FKKKKKKKF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".FBBBFBBBF.",
+    ".B.......B.",
+    ".Bqf.....B.",
+    ".B.......B.",
+    ".FAAAiAAAF.",
+    ".B.......B.",
+    ".B.......B.",
+    ".B.u.....B.",
+    ".Brt...y.B.",
+    ".FBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..L.L.L.L..",
+    ".FBRBFBRBF.",
+    "VB.......B.",
+    "UB.......BS",
+    "VQ.......Q.",
+    "UFAAAjAAAFS",
+    ".B.......BS",
+    ".B.......Q.",
+    ".B.......BS",
+    ".B.......B.",
+    "VFBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..L.L.L.L..",
+    ".FBRBFBRBF.",
+    ".B.......B.",
+    "VB.......B.",
+    ".B.......B.",
+    "VFAAAAAAAF.",
+    ".B.......B.",
+    ".B...h...B.",
+    ".B.......B.",
+    "VB.......B.",
+    ".FBBBFBBBF.",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "O.........P",
+    "GFKKKKKKKFH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GJAAAAAAAJH",
+    "GFKKKKKKKFH",
+    "O.........P",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    ".A.......A.",
+    ".CAAAAAAAC.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".CAAAAAAAC.",
+    ".A.......A.",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 11,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    ".O.......P.",
+    ".GAAARAAAH.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".G.......H.",
+    ".GAAAAAAAH.",
+    ".O.......P.",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 12,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..A.....A..",
+    "..CAARAAC..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..C.....C..",
+    "..CAAAAAC..",
+    "..A.....A..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 13,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..O.....P..",
+    "..GAAAAAH..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..G.....H..",
+    "..GAAAAAH..",
+    "..O.....P..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 14,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...A...A...",
+    "...CAAAC...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...C...C...",
+    "...CAAAC...",
+    "...A...A...",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 15,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...O...P...",
+    "...GAAAH...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...G...H...",
+    "...GAAAH...",
+    "...O...P...",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 16,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "....A.A....",
+    "....CAC....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....C.C....",
+    "....CAC....",
+    "....A.A....",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 17,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "....O.P....",
+    "....GAH....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....G.H....",
+    "....GAH....",
+    "....O.P....",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 18,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    ".....A.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....C.....",
+    ".....A.....",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 19,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    ".....k.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....N.....",
+    ".....k.....",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 20,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 21,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 6, 12],
+   "nbt": {
+    "id": "minecraft:chest",
+    "LootTable": "minecraft:chests/village/village_plains_house"
+   }
+  },
+  {
+   "pos": [3, 6, 11],
+   "nbt": {
+    "id": "minecraft:bed"
+   }
+  },
+  {
+   "pos": [3, 6, 12],
+   "nbt": {
+    "id": "minecraft:bed"
+   }
+  },
+  {
+   "pos": [4, 1, 4],
+   "nbt": {
+    "id": "villagefriends:house_plaque"
+   }
+  },
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 2, 10],
+   "nbt": {
+    "id": "villagefriends:apothecary_cot"
+   }
+  },
+  {
+   "pos": [7, 2, 12],
+   "nbt": {
+    "id": "villagefriends:apothecary_cot"
+   }
+  }
+ ],
+ "entities": [
+  {
+   "pos": [4.5, 2.0, 9.5],
+   "blockPos": [4, 2, 9],
+   "nbt": {
+    "id": "minecraft:villager",
+    "PersistenceRequired": true,
+    "Age": 0,
+    "VillagerData": {
+     "type": "minecraft:plains",
+     "profession": "villagefriends:apothecary",
+     "level": 1
     },
-    {
-      "y": 1,
-      "rows": [
-        "........E........",
-        ".................",
-        "...F......G..F...",
-        "..HIIIIIJIIIIIH..",
-        "..I.......D...I..",
-        "..I.K.L...D.M.I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.N.....D...I..",
-        "..H.......D...H..",
-        "..I.......D...I..",
-        "..I.N.....D...I..",
-        "..I.......O...I..",
-        "..I.......D.P.I..",
-        "..I.N.....D.Q.I..",
-        "..I.......D...I..",
-        "..HIIIIIIIIIIIH..",
-        ".................",
-        "................."
-      ]
-    },
-    {
-      "y": 2,
-      "rows": [
-        ".................",
-        ".................",
-        "...R.........S...",
-        "..HIITTIUIITTIH..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..T.......D...T..",
-        "..T.......D...T..",
-        "..I.......D...I..",
-        "..H.......D...H..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..T.......V...T..",
-        "..T.......D...T..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..HIIIIIIIIIIIH..",
-        ".................",
-        "................."
-      ]
-    },
-    {
-      "y": 3,
-      "rows": [
-        ".................",
-        ".................",
-        ".................",
-        "..HIITTIIIITTIH..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..T.......D...T..",
-        "..T.......D...T..",
-        "..I.......D...I..",
-        "..H.......D...H..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..T.......D...T..",
-        "..T.......D...T..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..HIIIIIIIIIIIH..",
-        ".................",
-        "................."
-      ]
-    },
-    {
-      "y": 4,
-      "rows": [
-        ".................",
-        ".................",
-        "........W........",
-        "..XXXXXXXXXXXXX..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..H.....W.D...H..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..I.......D...I..",
-        "..XXXXXXXXXXXXX..",
-        ".................",
-        "................."
-      ]
-    },
-    {
-      "y": 5,
-      "rows": [
-        ".................",
-        ".................",
-        ".Y.............Z.",
-        ".YIIIIIIIIIIIIIZ.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".Y.DDDDDDDDDDD.Z.",
-        ".YIIIIIIIIIIIIIZ.",
-        ".Y.............Z.",
-        "................."
-      ]
-    },
-    {
-      "y": 6,
-      "rows": [
-        ".................",
-        ".................",
-        "..Y...........Z..",
-        "..YIIIIIIIIIIIZ..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..Y...........Z..",
-        "..YIIIIIIIIIIIZ..",
-        "..Y...........Z..",
-        "................."
-      ]
-    },
-    {
-      "y": 7,
-      "rows": [
-        ".................",
-        ".................",
-        "...Y.........Z...",
-        "...YIIIIIIIIIZ...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...Y.........Z...",
-        "...YIIIIIIIIIZ...",
-        "...Y.........Z...",
-        "................."
-      ]
-    },
-    {
-      "y": 8,
-      "rows": [
-        ".................",
-        ".................",
-        "....Y.......Z....",
-        "....YIIIIIIIZ....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....Y.......Z....",
-        "....YIIIIIIIZ....",
-        "....Y.......Z....",
-        "................."
-      ]
-    },
-    {
-      "y": 9,
-      "rows": [
-        ".................",
-        ".................",
-        ".....Y.....Z.....",
-        ".....YIIIIIZ.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....Y.....Z.....",
-        ".....YIIIIIZ.....",
-        ".....Y.....Z.....",
-        "................."
-      ]
-    },
-    {
-      "y": 10,
-      "rows": [
-        ".................",
-        ".................",
-        "......Y...Z......",
-        "......YIIIZ......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......Y...Z......",
-        "......YIIIZ......",
-        "......Y...Z......",
-        "................."
-      ]
-    },
-    {
-      "y": 11,
-      "rows": [
-        ".................",
-        ".................",
-        ".......Y.Z.......",
-        ".......YIZ.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......Y.Z.......",
-        ".......YIZ.......",
-        ".......Y.Z.......",
-        "................."
-      ]
-    },
-    {
-      "y": 12,
-      "rows": [
-        ".................",
-        ".................",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "........Z........",
-        "................."
-      ]
-    },
-    {
-      "y": 13,
-      "rows": [
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        ".................",
-        "................."
-      ]
-    }
-  ],
-  "block_entities": [
-    {
-      "pos": [
-        8,
-        1,
-        0
-      ],
-      "nbt": {
-        "id": "minecraft:jigsaw",
-        "name": "villagefriends:building_entrance",
-        "target": "villagefriends:unused",
-        "pool": "minecraft:empty",
-        "final_state": "minecraft:air",
-        "joint": "aligned",
-        "selection_priority": 0,
-        "placement_priority": 0
-      }
-    },
-    {
-      "pos": [
-        10,
-        1,
-        2
-      ],
-      "nbt": {
-        "id": "villagefriends:house_plaque"
-      }
-    },
-    {
-      "pos": [
-        4,
-        1,
-        8
-      ],
-      "nbt": {
-        "id": "villagefriends:apothecary_cot"
-      }
-    },
-    {
-      "pos": [
-        4,
-        1,
-        11
-      ],
-      "nbt": {
-        "id": "villagefriends:apothecary_cot"
-      }
-    },
-    {
-      "pos": [
-        4,
-        1,
-        14
-      ],
-      "nbt": {
-        "id": "villagefriends:apothecary_cot"
-      }
-    },
-    {
-      "pos": [
-        12,
-        1,
-        14
-      ],
-      "nbt": {
-        "id": "minecraft:bed"
-      }
-    },
-    {
-      "pos": [
-        12,
-        1,
-        13
-      ],
-      "nbt": {
-        "id": "minecraft:bed"
-      }
-    }
-  ],
-  "entities": [
-    {
-      "pos": [
-        7.5,
-        1.0,
-        6.5
-      ],
-      "blockPos": [
-        7,
-        1,
-        6
-      ],
-      "nbt": {
-        "id": "minecraft:villager",
-        "PersistenceRequired": true,
-        "Age": 0,
-        "VillagerData": {
-          "type": "minecraft:plains",
-          "profession": "villagefriends:apothecary",
-          "level": 1
-        },
-        "Xp": 1
-      }
-    }
-  ],
-  "rooms": [
-    {
-      "name": "apothecary_bedroom",
-      "min": [
-        11,
-        1,
-        4
-      ],
-      "max": [
-        13,
-        4,
-        15
-      ],
-      "probe": [
-        11,
-        1,
-        4
-      ],
-      "beds": 1
-    }
-  ]
+    "Xp": 1
+   }
+  }
+ ],
+ "rooms": [
+  {
+   "name": "apothecary_bedroom",
+   "min": [2, 6, 9],
+   "max": [8, 8, 12],
+   "probe": [5, 6, 10]
+  }
+ ],
+ "design": {
+  "source": "tools/village_design/buildings/civic.py",
+  "checksum": "942babffc1c31937"
+ }
 }

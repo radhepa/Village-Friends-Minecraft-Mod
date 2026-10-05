@@ -1,3 +1,10 @@
+# Procedural plains villages
+
+- Replace the fixed 13-piece plus-shaped village with procedural jigsaw villages: three town centres, terrain-following streets with bends, turns, junctions and well squares, and street ends with fading paths, lamps or a timber gatehouse.
+- Ring every square with the guaranteed civic buildings (tavern, garrison and watchtower, workshop, chapel and graveyard, apothecary, library); all ten new professions appear in every village.
+- Add timber-framed cottages, two-storey and jettied houses, townhouses, a farmhouse, vanilla trade workshops, fields, paddocks with livestock, apiaries and street-side details. Chimneys smoke; roads become plank bridges over water; stone weathers with moss.
+- Author buildings as Python design programs (`tools/village_design/`) that compile to independent blueprints, with automatic fence/pane/wall/stair states, door-clearance and bedroom checks, hand-edit protection, a layout simulator and an in-game screenshot gallery.
+- Generalise the lot contract (any size up to 32, entrance at `[x,1,0]`), add layout format 2 (fallbacks, empty entries, projections, processor lists) and make the structure test accept procedural assemblies.
 # Male starter set and texture overhaul
 
 - Replace the 150 male entries with five hairs, five tops and five bottoms.

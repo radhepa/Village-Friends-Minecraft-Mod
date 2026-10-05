@@ -1,0 +1,113 @@
+{
+ "format": 1,
+ "size": [5, 6, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:gravel"
+  },
+  "C": {
+   "id": "minecraft:cobblestone"
+  },
+  "D": {
+   "id": "minecraft:dirt_path"
+  },
+  "E": {
+   "id": "minecraft:grass_block"
+  },
+  "F": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "ABCBA",
+    "ABCBA",
+    "AACBD",
+    "ADAAA",
+    "AEAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "A.F.A",
+    "A...A",
+    "AA...",
+    "A.AAA",
+    "A.AAA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "A...A",
+    "A...A",
+    "AA...",
+    "A.AAA",
+    "A.AAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "A...A",
+    "A...A",
+    "AA...",
+    "A.AAA",
+    "A.AAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "A...A",
+    "A...A",
+    "AA...",
+    "A.AAA",
+    "A.AAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "A...A",
+    "A...A",
+    "AA...",
+    "A.AAA",
+    "A.AAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/streets.py",
+  "checksum": "7b7777e9265def3f"
+ }
+}

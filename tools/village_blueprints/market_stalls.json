@@ -1,0 +1,353 @@
+{
+ "format": 1,
+ "size": [11, 7, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:andesite"
+  },
+  "B": {
+   "id": "minecraft:stone_bricks"
+  },
+  "C": {
+   "id": "minecraft:dirt_path"
+  },
+  "D": {
+   "id": "minecraft:gravel"
+  },
+  "E": {
+   "id": "minecraft:cobblestone"
+  },
+  "F": {
+   "id": "minecraft:structure_void"
+  },
+  "G": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "I": {
+   "id": "minecraft:spruce_planks"
+  },
+  "J": {
+   "id": "minecraft:white_wool"
+  },
+  "K": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "L": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:blue_wool"
+  },
+  "N": {
+   "id": "minecraft:red_wool"
+  },
+  "O": {
+   "id": "minecraft:yellow_wool"
+  },
+  "P": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "T": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up"
+   }
+  },
+  "U": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "V": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "X": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "Y": {
+   "id": "minecraft:bee_nest",
+   "properties": {
+    "facing": "west"
+   }
+  },
+  "Z": {
+   "id": "minecraft:carved_pumpkin",
+   "properties": {
+    "facing": "east"
+   }
+  },
+  "a": {
+   "id": "minecraft:composter",
+   "properties": {
+    "level": "7"
+   }
+  },
+  "b": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "c": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "d": {
+   "id": "minecraft:melon"
+  },
+  "e": {
+   "id": "minecraft:pumpkin"
+  },
+  "f": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "g": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BDEBCABECCA",
+    "BDDBDFABCEC",
+    "CABBCDFEAAB",
+    "CDDDBBEADBF",
+    "FBBEDAACCDE",
+    "FEEFCEFCFAF",
+    "EEBBCECACDA",
+    "CCAAAFBCFCD",
+    "CDADDCEAFEF",
+    "FDABDBDABAA",
+    "EEDCBDAFBBA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....b.....",
+    "........GG.",
+    "........G..",
+    "gI.........",
+    "GG.........",
+    "XI.......If",
+    ".....K...GG",
+    ".........IW",
+    "...........",
+    ".IGI.......",
+    ".XGW......."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "LU.........",
+    ".T.........",
+    "KZ.......YH",
+    ".....K...a.",
+    ".........TH",
+    "...........",
+    ".edU.......",
+    ".K.P......."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "LH.........",
+    "...........",
+    "LH.......LH",
+    ".....K.....",
+    ".........LH",
+    "...........",
+    ".V.V.......",
+    ".P.P......."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "MMQ........",
+    "JJQ........",
+    "MMQ.....SOO",
+    ".....c..SJJ",
+    "........SOO",
+    ".RRR.......",
+    ".NJN.......",
+    ".NJN......."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/civic.py",
+  "checksum": "a2d3bd8aff8339f0"
+ }
+}

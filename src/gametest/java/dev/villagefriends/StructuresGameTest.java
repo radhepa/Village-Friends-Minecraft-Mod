@@ -93,10 +93,10 @@ public final class StructuresGameTest implements FabricClientGameTest {
         var context=new Structure.GenerationContext(level.registryAccess(),generator,generator.getBiomeSource(),
             random.createClimateSampler(SamplerContext.EMPTY_UNCACHED),random,level.getStructureTemplateManager(),seed,ChunkPos.containing(start),level,b->true);
         var pool=level.registryAccess().lookupOrThrow(Registries.TEMPLATE_POOL).getOrThrow(ResourceKey.create(Registries.TEMPLATE_POOL,VillageBlocks.id("village/town_centers")));
-        var stub=JigsawPlacement.addPieces(context,pool,Optional.of(VillageBlocks.id("town_start")),3,start,false,Optional.empty(),
-            new JigsawStructure.MaxDistance(80),PoolAliasLookup.EMPTY,JigsawStructure.DEFAULT_DIMENSION_PADDING,JigsawStructure.DEFAULT_LIQUID_SETTINGS).orElseThrow();
+        var stub=JigsawPlacement.addPieces(context,pool,Optional.of(VillageBlocks.id("town_start")),catalog.get("depth").getAsInt(),start,false,Optional.of(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE_WG),
+            new JigsawStructure.MaxDistance(catalog.get("max_distance").getAsInt()),PoolAliasLookup.EMPTY,JigsawStructure.DEFAULT_DIMENSION_PADDING,JigsawStructure.DEFAULT_LIQUID_SETTINGS).orElseThrow();
         var pieces=stub.getPiecesBuilder().build().pieces().stream().map(p->(PoolElementStructurePiece)p).toList();
-        check(pieces.size()==catalog.get("expected_pieces").getAsInt(),"All planned pieces assemble for seed "+seed+": "+pieces.stream().map(p->p.getElement().toString()).toList());
+        check(pieces.size()>=catalog.get("min_pieces").getAsInt(),"A full procedural village assembles for seed "+seed+": "+pieces.size()+" pieces");
         var names=new HashSet<String>();
         for(var piece:pieces)names.add(((SinglePoolElement)piece.getElement()).getTemplateLocation().toString());
         for(var json:catalog.getAsJsonArray("required_modules")) {
@@ -122,7 +122,7 @@ public final class StructuresGameTest implements FabricClientGameTest {
                 var level=w.getConnection().getServerLevel();var manager=level.getStructureTemplateManager();
                 for(var json:catalog.getAsJsonArray("templates")) {
                     var info=json.getAsJsonObject();var id=Identifier.parse(info.get("id").getAsString());var template=manager.get(id).orElseThrow();
-                    check(template.getSize().equals(pos(info.getAsJsonArray("size"))),"All 15 NBT templates load with correct dimensions: "+id);
+                    check(template.getSize().equals(pos(info.getAsJsonArray("size"))),"Every NBT template loads with correct dimensions: "+id);
                     check(template.getJigsaws(BlockPos.ZERO,Rotation.NONE).size()==info.getAsJsonArray("connectors").size(),"Template connectors parse correctly: "+id);
                     for(var rotation:Rotation.values()) {
                         if(info.getAsJsonArray("rooms").isEmpty()&&rotation!=Rotation.NONE)continue;
@@ -132,8 +132,9 @@ public final class StructuresGameTest implements FabricClientGameTest {
                         rooms(level,info,origin,rotation);
                     }
                 }
-                for(int seed=0;seed<12;seed++)assembly(level,catalog,seed,new BlockPos(0,81,0));
-                VillageFriends.LOGGER.info("STRUCTURE FIXTURES PASSED: 15 templates, four bedroom rotations, clear doors, block entities and 12 complete jigsaw assemblies.");
+                // Like the structure itself, start at the surface so terrain-matching streets stay in range.
+                for(int seed=0;seed<12;seed++)assembly(level,catalog,seed,new BlockPos(0,0,0));
+                VillageFriends.LOGGER.info("STRUCTURE FIXTURES PASSED: {} templates, four bedroom rotations, clear doors, block entities and 12 procedural jigsaw assemblies.",catalog.getAsJsonArray("templates").size());
             });
         }
         // A real normal world exercises biome selection, placement, terrain and entities.
@@ -153,21 +154,22 @@ public final class StructuresGameTest implements FabricClientGameTest {
                 check(located!=null,"Normal world naturally locates the custom village");var entrance=located.getFirst();level.getChunkAt(entrance);
                 StructureStart start=StructureStart.INVALID_START;
                 for(int y=32;y<256&&!start.isValid();y+=4)start=level.structureManager().getStructureAt(new BlockPos(entrance.getX(),y,entrance.getZ()),holder.value());
-                check(start.isValid()&&start.getPieces().size()==catalog.get("expected_pieces").getAsInt(),"Natural structure generates the complete planned layout");
+                check(start.isValid()&&start.getPieces().size()>=catalog.get("min_pieces").getAsInt(),"Natural structure generates a full procedural village");
                 var bounds=start.getBoundingBox();
                 for(int x=bounds.minX()>>4;x<=bounds.maxX()>>4;x++)for(int z=bounds.minZ()>>4;z<=bounds.maxZ()>>4;z++)level.getChunk(x,z);
                 for(var piece:start.getPieces()) {
                     var poolPiece=(PoolElementStructurePiece)piece;var id=((SinglePoolElement)poolPiece.getElement()).getTemplateLocation();var info=definition(catalog,id.toString());
-                    rooms(level,info,poolPiece.getPosition(),poolPiece.getRotation());
-                    if(id.getPath().equals("village/tavern"))views.add(new View(at(new BlockPos(8,1,5),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"tavern"));
-                    if(id.getPath().equals("village/family_house"))views.add(new View(at(new BlockPos(12,1,5),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"bedroom"));
+                    // Terrain-matching streets follow the ground column by column, so their decor has no fixed template height.
+                    if(poolPiece.getElement().getProjection()!=net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool.Projection.TERRAIN_MATCHING)
+                        rooms(level,info,poolPiece.getPosition(),poolPiece.getRotation());
+                    if(id.getPath().equals("village/tavern"))views.add(new View(at(new BlockPos(8,2,6),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"tavern"));
+                    if(id.getPath().equals("village/family_house"))views.add(new View(at(new BlockPos(6,6,6),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"bedroom"));
                     for(var anchor:info.getAsJsonArray("anchors"))if(anchor.getAsJsonObject().get("id").getAsString().equals("villagefriends:house_plaque"))
                         fixtures.add(at(pos(anchor.getAsJsonObject().getAsJsonArray("pos")),poolPiece.getPosition(),poolPiece.getRotation()));
                 }
                 var centerPos=bounds.getCenter();var town=VillageSettlements.discover(level,centerPos);check(town!=null,"Natural custom village receives its town name");
                 var locals=level.getEntitiesOfClass(Villager.class,AABB.of(bounds).inflate(4));
-                var range=catalog.getAsJsonArray("resident_range");
-                check(locals.size()>=range.get(0).getAsInt()&&locals.size()<=range.get(1).getAsInt(),"Natural templates spawn the authored starter residents: "+locals.size());var jobs=new HashSet<String>();
+                check(locals.size()>=catalog.get("resident_minimum").getAsInt(),"Natural templates spawn the authored starter residents: "+locals.size());var jobs=new HashSet<String>();
                 for(var v:locals) {
                     v.setNoAi(true);VillageSettlements.identify(v,true);residents.put(v.getUUID(),v.blockPosition());jobs.add(VillageFriends.profession(v));
                     check(VillageFriends.name(v).endsWith(" of "+town.name()),"Generated residents join their hometown");
@@ -175,7 +177,7 @@ public final class StructuresGameTest implements FabricClientGameTest {
                 }
                 check(jobs.containsAll(VillageProfessions.JOBS),"Every new profession appears in the generated village");
                 var player=w.getConnection().getServerPlayer();player.teleportTo(centerPos.getX(),bounds.maxY()+28,centerPos.getZ()+65);
-                VillageFriends.LOGGER.info("NATURAL VILLAGE GENERATED at {}: 13 pieces, 14 residents, all ten professions, town {}.",centerPos,town.name());
+                VillageFriends.LOGGER.info("NATURAL VILLAGE GENERATED at {}: {} pieces, {} residents, all ten professions, town {}.",centerPos,start.getPieces().size(),locals.size(),town.name());
                 return centerPos;
             });
             // The fast-test all-sections predicate assumes its original tiny view
@@ -206,6 +208,6 @@ public final class StructuresGameTest implements FabricClientGameTest {
             });
         }
         c.runOnClient(client->client.options.renderDistance().set(originalDistance[0]));
-        VillageFriends.LOGGER.info("PHASE 2 GAMEPLAY PASSED: native templates/rotations, enclosed rooms, reachable doors, 12 jigsaw seeds, natural village worldgen, all professions/trades, named residents, block entities and save/reload.");
+        VillageFriends.LOGGER.info("PHASE 2 GAMEPLAY PASSED: native templates/rotations, enclosed rooms, reachable doors, 12 procedural jigsaw seeds, natural village worldgen, all professions/trades, named residents, block entities and save/reload.");
     }
 }

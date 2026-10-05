@@ -53,19 +53,28 @@ tasks.named('processGametestResources') {
     def animationsOnly = providers.gradleProperty('animationsOnly').isPresent()
     def outfitsOnly = providers.gradleProperty('outfitsOnly').isPresent()
     def hairFacesOnly = providers.gradleProperty('hairFacesOnly').isPresent()
+    def villageGallery = providers.gradleProperty('villageGallery').isPresent()
+    inputs.property 'villageGallery', villageGallery
     inputs.property 'foundationOnly', foundationOnly
     inputs.property 'structuresOnly', structuresOnly
     inputs.property 'animationsOnly', animationsOnly
     inputs.property 'outfitsOnly', outfitsOnly
     inputs.property 'hairFacesOnly', hairFacesOnly
     doLast {
-        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly) {
+        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly || villageGallery) {
             def descriptor = new File(destinationDir, 'fabric.mod.json')
             def metadata = new groovy.json.JsonSlurper().parse(descriptor)
-            metadata.entrypoints['fabric-client-gametest'] = [hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
+            metadata.entrypoints['fabric-client-gametest'] = [villageGallery ? 'dev.villagefriends.VillageGalleryGameTest' : hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
             descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
         }
     }
+}
+
+// The art-direction gallery (-PvillageGallery) takes its template list and village count from
+// -Pgallery=tavern,cottage_oak and -PgalleryVillages=2.
+tasks.matching { it.name == 'runClientGameTest' }.configureEach {
+    systemProperty 'villagefriends.gallery', providers.gradleProperty('gallery').getOrElse('')
+    systemProperty 'villagefriends.galleryVillages', providers.gradleProperty('galleryVillages').getOrElse('2')
 }
 
 // Development runs use a separate world folder and a recognizable player name.

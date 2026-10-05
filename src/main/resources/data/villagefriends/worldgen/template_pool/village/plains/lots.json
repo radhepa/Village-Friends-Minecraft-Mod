@@ -1,0 +1,209 @@
+{
+  "fallback": "villagefriends:village/plains/lots_outer",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cottage_oak",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cottage_birch",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cottage_spruce",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cottage_plaster",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/house_tall_oak",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/house_tall_brick",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/townhouse",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/townhouse_plaster",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farmhouse",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/family_house",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/smithy",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/butcher",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/fletcher",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/shepherd",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/fisher",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/cartographer",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/mason",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/tannery",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/farm_wheat",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/paddock",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_tree_oak",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/decor_tree_birch",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 12,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    }
+  ]
+}

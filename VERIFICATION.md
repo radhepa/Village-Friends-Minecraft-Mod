@@ -1,3 +1,14 @@
+# Procedural plains village verification
+
+Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (headless client on Mesa lavapipe).
+
+- `python tools/design_village.py`, then `python tools/create_village_structures.py` rebuilt 60 independent templates and 13 pools. The design kit checked door clearances and the size, separation and enclosure of every bedroom; the compiler checked lot entrances, civic slot widths, start jigsaws and pool references.
+- `python tools/village_design/simulate.py --seeds 300`: 56–139 pieces (median 85), 22–70 residents (median 38), and every civic building present in every seed.
+- `gradlew runClientGameTest -PstructuresOnly` passed. All 60 templates loaded with their connectors; bedrooms stayed sealed and doors stayed walkable in four rotations; block entities were created; 12 procedural assemblies passed without overlapping lots. A natural seed-1 world generated "Willowbridge": 113 pieces, 34 residents, all ten professions with trades, hometown names and save/reload.
+- `gradlew build` passed with 46 unit tests.
+- `gradlew runClientGameTest -PvillageGallery` captured art-direction screenshots of templates and whole villages. The full gameplay suite was not rerun for this change; it touches only village worldgen.
+
+Earlier verification below records previous releases.
 # Male starter texture rebuild verification
 
 Verified October 3, 2026 with Minecraft 26.3/Fabric/Java 25.

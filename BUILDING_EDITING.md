@@ -1,60 +1,64 @@
-# Editing or replacing one Village Friends building
+# Editing the plains village
 
-The buildings are intentionally basic starting layouts. **Each building has an independent JSON blueprint**, and each building role has a separate jigsaw pool. Claude can edit one building without touching Java, other buildings, or village placement.
+Plains villages are assembled procedurally by Minecraft's jigsaw system from about sixty independent templates: three town centres, a street kit, six guaranteed civic buildings, homes, trade workshops, farms and small decorations. Every building is still **one independent file**, and replacing one never requires Java edits.
 
-## Fastest workflow: keep the building's ID
+## How a village is put together
 
-1. Edit its file in `tools/village_blueprints/`, for example `tavern.json`, `garrison.json`, `family_house.json` or `cottage_oak.json`.
-2. Validate with `python tools/create_village_structures.py --check`.
-3. Regenerate only that building with `python tools/create_village_structures.py --only tavern`.
-4. Run `gradlew.bat build`, then `gradlew.bat runClientGameTest -PstructuresOnly` for Minecraft validation.
-
-`--only tavern` writes `src/main/resources/data/villagefriends/structure/village/tavern.nbt` and refreshes the room catalog. It leaves the other NBT templates, pools and natural placement unchanged. The filename determines the template ID; keeping it preserves the pool's existing reference.
-
-## Blueprint format
-
-`size` is `[width, height, depth]`. Coordinates are **X east, Y up, Z south**, starting at zero. `layers` contains one object per Y level. Each object's `rows` run from north to south (increasing Z); each character within a row runs west to east (increasing X). One character represents one complete block state from `palette`. `.` is real air, which clears terrain/foliage inside the lot.
-
-Palette entries use Minecraft IDs and optional state properties, for example:
-
-```json
-"A": {"id": "minecraft:oak_planks"},
-"B": {"id": "minecraft:glass"},
-"C": {"id": "minecraft:oak_stairs", "properties": {
-  "facing": "east", "half": "bottom", "shape": "straight", "waterlogged": "false"
-}}
+```text
+town centre (random of 3, random rotation)
+ ├─ 4 large + 4 small civic slots  → buildings/<role> pools (always placed first)
+ └─ 4 exits → plains/avenues → plains/streets … (fallback plains/street_ends)
+                                  └─ lot jigsaws → plains/lots (fallback plains/lots_outer)
 ```
 
-Reuse or add palette symbols, then edit the rows. Every layer must have exactly `depth` rows, each exactly `width` characters. Change `size[1]` and add/remove layers together to change height. The generator is the compiler; these blueprint files are the source of truth. Do not put building geometry back into the compiler.
+- **Town centres** (`central_plaza`, `plaza_green`, `plaza_market`) are 33×33 squares. In pinwheel order each side has a large slot (≤ 17 wide), a street exit and a small slot (≤ 11 wide). Slots have selection priority 5, so the tavern, garrison, workshop, chapel, apothecary and library are placed before any street can take their space. Each centre assigns the roles to different sides; the painter's easel, the bard's music stand, the notice board, benches and the bell live in the square.
+- **Streets** are terrain-matching, so roads follow the ground column by column. The kit has straights, S-bends, quarter turns, tees, a fork, a crossroads and a small well square. Streets offer `lot` jigsaws on their outer edges every few blocks.
+- **Street ends** are used when a street can't continue or the depth runs out: a path that fades into grass, a lamp-and-bench end, or a timber gatehouse with palisade wings.
+- **Lots** choose from homes, trade workshops, a few trees/decorations and `empty` gaps. Streets at the maximum depth only use `plains/lots_outer`, so fields, paddocks and orchards gather on the outskirts.
+- `structure_void` cells keep the world's own ground, so yards and verges keep their natural grass. Processors add worn road patches, plank bridges where a road crosses water, and mossy/cracked stone on buildings.
 
-`block_entities` stores coordinates and NBT for jigsaws, beds and the four Phase 1 fixture types. When moving one of these blocks, move its NBT entry to the same coordinate. `entities` stores starter villagers and their local positions/role NBT. These are optional furnishings/population choices, independently editable per building; preserve the job's workstation and room access when improving a profession building.
+`tools/village_layout.json` holds the pools, weights, fallbacks, processors, depth (6), maximum distance (100), biomes and placement.
 
-`rooms` records enclosed bedroom bounds and an air probe for later spatial scans. Update bounds/probes when changing partitions. Bed and door coordinates are discovered from the layers, and bed counts are recalculated. Validation checks each room's floor, ceiling, walls, windows and separation; it treats doors as boundaries even when open. Native Minecraft tests also check door walking routes and all four rotations.
+## Where buildings come from
 
-## Drop-in entrance contract
+| Path | Purpose |
+|---|---|
+| `tools/village_design/buildings/*.py` | Design programs. Each module exposes `DESIGNS = {name: function}`. |
+| `tools/village_design/kit.py`, `parts.py`, `roads.py` | Shared drawing helpers: block states, timber walls, roofs, windows, chimneys, furniture, trees, roads. |
+| `tools/village_blueprints/<name>.json` | Compiled layered blueprint, one per template. This is what the structure compiler reads. |
+| `tools/create_village_structures.py` | Compiles blueprints into NBT, pools, processors and the catalog. Keep geometry out of it. |
 
-For any entry in a `buildings/...` pool:
+`python tools/design_village.py [names…]` runs designs and writes their blueprints. Each blueprint records its design source and a checksum. If a blueprint was edited by hand afterwards, the design script leaves it alone unless `--force` is given, so hand edits are never silently lost.
 
-- Keep the padded lot **17 blocks wide × 19 deep**. Height may be **3–32 blocks**. A smaller building can use air padding inside that lot.
-- Keep exactly one `minecraft:jigsaw` at **`[8, 1, 0]`**, with block state `orientation: north_up`.
-- Its NBT `name` is **`villagefriends:building_entrance`**, `pool` is **`minecraft:empty`**, `final_state` is **`minecraft:air`**, and `joint` is **`aligned`**.
-- Put a solid path/floor at Y=0 beneath the entrance, with a two-block walking route into the building at Y=1–2. Place an actual front door farther inside the lot.
-- Keep beds as matching head/foot pairs with the same color and facing. Homes need enclosed, separately accessible bedrooms for the future scanner.
+The kit fills in states Minecraft would normally derive from neighbours (fence, pane and wall connections, wall posts, stair corners) because jigsaw pieces are placed with a known shape. It also checks every door has two clear blocks on both sides and measures each recorded bedroom by flood fill.
 
-The road rotates the entire template to face its lot. With this contract unchanged, Claude can redesign walls, roof, partitions, furniture and materials without changing the streets. Increasing width/depth requires redesigning the street spacing and rerunning assembly checks.
+## Improve one building
 
-## Swap to a new file or add variants
+1. Edit its design function (for example `tavern()` in `buildings/civic.py`), or hand-edit `tools/village_blueprints/tavern.json`.
+2. `python tools/design_village.py tavern --preview` writes the blueprint and isometric previews in `build/previews` (needs Pillow).
+3. `python tools/create_village_structures.py --check`, then `python tools/create_village_structures.py --only tavern`.
+4. `gradlew.bat build`, then `gradlew.bat runClientGameTest -PstructuresOnly`.
 
-Copy a blueprint to a new name such as `tavern_improved.json`. In `tools/village_layout.json`, edit only the `buildings/tavern` pool:
+To look at it in Minecraft, run `gradlew.bat runClientGameTest -PvillageGallery -Pgallery=tavern,cottage_oak -PgalleryVillages=2`. The gallery places the listed templates and whole villages on a superflat world and saves screenshots to `build/run/clientGameTest/screenshots`. It is a development aid outside the regression suite.
 
-```json
-"buildings/tavern": [
-  {"template": "tavern_improved", "weight": 1}
-]
+## Lot contract (anything in a `buildings/…` or lot pool)
+
+- Exactly one `minecraft:jigsaw` named `villagefriends:building_entrance` at **`[x, 1, 0]`** on the north edge, orientation `north_up`, pool `minecraft:empty`, final state `minecraft:air`, joint `aligned`. Its X can be anywhere along the front.
+- Size 3–32 in each dimension. Civic slot buildings: large slots ≤ 17 wide, small slots ≤ 11 wide, with at most 8 (large) or 5 (small) blocks either side of the entrance. `slot_widths` in the layout makes the compiler check this. Depth is free.
+- Y=0 is ground level. Raised floors stand on Y=1 with a step up to the door. Give the entrance a path at Y=0.
+- Doors need two clear blocks on both sides. Beds are matched foot/head pairs. Homes need at least one enclosed bedroom recorded with `b.room(name, probe_cell)`.
+- Keep profession workstations and residents in their building when improving it. Plaza templates must keep `villagefriends:town_start`, the easel, music stand, painter and bard.
+
+## Replace or add variants
+
+To swap a building, change its pool entry in `village_layout.json` and run the full generator (without `--only`). To add a variant, add another entry with a positive weight. The catalog derives required pools from `required_pools`, so tests accept replacements without hard-coded names. Every blueprint must be referenced by some pool. The compiler deletes stale NBT and pool files.
+
+Balance a layout before testing in Minecraft:
+
+```text
+python tools/village_design/simulate.py --seeds 300 --map 4 --out build
 ```
 
-Run the generator **without `--only`** after changing pool references. To add a variant, keep both entries and choose positive weights. The generated catalog derives the required template choices and resident counts from the layout, so assembly tests accept replacements without hardcoding the original building filenames.
+The simulation imitates jigsaw assembly on flat ground. It reports piece and resident counts, how often each template appears, and whether a required building ever went missing. `--map` draws top-down plans. Minecraft remains the authority.
 
-The packaged pool is `data/villagefriends/worldgen/template_pool/village/buildings/tavern.json`. Advanced users can also override that pool or its native NBT template with a normal Minecraft data pack. Building changes affect newly generated villages; existing villages are saved blocks and are not rebuilt.
-
-Central plaza and street blueprints are separate files too. Their connectors define the village graph, so changes to them require the full generator and assembly test. `village_layout.json` also holds biome and placement settings. Keep those unchanged when improving just a house.
+Building changes affect newly generated chunks only; existing villages are saved blocks. Data packs can still override any pool, processor list or template.

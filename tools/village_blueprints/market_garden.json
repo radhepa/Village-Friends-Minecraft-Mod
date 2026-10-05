@@ -1,0 +1,257 @@
+{
+ "format": 1,
+ "size": [11, 8, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:grass_block"
+  },
+  "B": {
+   "id": "minecraft:dirt_path"
+  },
+  "C": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:stripped_oak_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "E": {
+   "id": "minecraft:gravel"
+  },
+  "F": {
+   "id": "minecraft:red_tulip"
+  },
+  "G": {
+   "id": "minecraft:stripped_oak_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "H": {
+   "id": "minecraft:flowering_azalea_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:allium"
+  },
+  "J": {
+   "id": "minecraft:cornflower"
+  },
+  "K": {
+   "id": "minecraft:dandelion"
+  },
+  "L": {
+   "id": "minecraft:lily_of_the_valley"
+  },
+  "M": {
+   "id": "minecraft:oxeye_daisy"
+  },
+  "N": {
+   "id": "minecraft:pink_tulip"
+  },
+  "O": {
+   "id": "minecraft:white_tulip"
+  },
+  "P": {
+   "id": "minecraft:azure_bluet"
+  },
+  "Q": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "R": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:orange_tulip"
+  },
+  "T": {
+   "id": "minecraft:poppy"
+  },
+  "U": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "east"
+   }
+  },
+  "V": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "west"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAEAAAAA",
+    "AAAAABAAAAA",
+    "AAAAABAAAAA",
+    "AAAAAEAAAAA",
+    "AAAAABAAAAA",
+    "ABBEBBEBBEA",
+    "AAAAAEAAAAA",
+    "AAAAABAAAAA",
+    "AAAAABAAAAA",
+    "AAAAAEAAAAA",
+    "AAAAABAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....Q.....",
+    ".FFK...L.F.",
+    ".O.T...NOM.",
+    ".FJC...CFP.",
+    "...........",
+    "....U.V....",
+    "...........",
+    ".IIC...CKK.",
+    ".JNJ...MIM.",
+    ".SFL...IFL.",
+    "..........."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...C...C...",
+    "...........",
+    "...........",
+    "...........",
+    "...C...C...",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...C...C...",
+    "...........",
+    ".....R.....",
+    "...........",
+    "...C...C...",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...DDDDD...",
+    "...GH.HG...",
+    "...G.H.G...",
+    "...GH.HG...",
+    "...DDDDD...",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/civic.py",
+  "checksum": "a30d5ed9e0a3ec30"
+ }
+}

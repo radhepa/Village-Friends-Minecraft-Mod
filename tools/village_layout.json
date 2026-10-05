@@ -1,36 +1,29 @@
 {
-  "format": 1,
-  "expected_pieces": 13,
+  "format": 2,
+  "min_pieces": 20,
   "start_pool": "villagefriends:village/town_centers",
   "start_jigsaw": "villagefriends:town_start",
   "pools": {
     "town_centers": [
       {
         "template": "central_plaza",
-        "weight": 1
+        "weight": 2,
+        "processors": "weathered"
+      },
+      {
+        "template": "plaza_green",
+        "weight": 2,
+        "processors": "weathered"
+      },
+      {
+        "template": "plaza_market",
+        "weight": 2,
+        "processors": "weathered"
       }
     ],
-    "streets/north": [
+    "buildings/tavern": [
       {
-        "template": "street_north",
-        "weight": 1
-      }
-    ],
-    "streets/east": [
-      {
-        "template": "street_east",
-        "weight": 1
-      }
-    ],
-    "streets/south": [
-      {
-        "template": "street_south",
-        "weight": 1
-      }
-    ],
-    "streets/west": [
-      {
-        "template": "street_west",
+        "template": "tavern",
         "weight": 1
       }
     ],
@@ -40,27 +33,22 @@
         "weight": 1
       }
     ],
-    "buildings/tavern": [
+    "buildings/workshop": [
       {
-        "template": "tavern",
+        "template": "workshop",
         "weight": 1
       }
     ],
-    "buildings/cemetery": [
+    "buildings/chapel": [
       {
-        "template": "cemetery",
-        "weight": 1
+        "template": "chapel",
+        "weight": 1,
+        "processors": "weathered"
       }
     ],
     "buildings/apothecary": [
       {
         "template": "apothecary",
-        "weight": 1
-      }
-    ],
-    "buildings/workshop": [
-      {
-        "template": "workshop",
         "weight": 1
       }
     ],
@@ -70,48 +58,531 @@
         "weight": 1
       }
     ],
-    "buildings/family_house": [
+    "buildings/market": [
       {
-        "template": "family_house",
-        "weight": 1
+        "template": "market_stalls",
+        "weight": 3,
+        "processors": "weathered"
+      },
+      {
+        "template": "market_garden",
+        "weight": 2,
+        "processors": "weathered"
+      },
+      {
+        "template": "decor_well",
+        "weight": 1,
+        "processors": "weathered"
       }
     ],
-    "buildings/cottage": [
+    "plains/avenues": [
       {
-        "template": "cottage_oak",
-        "weight": 1
+        "template": "avenue",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "plains_street"
       },
       {
-        "template": "cottage_birch",
-        "weight": 1
-      },
-      {
-        "template": "cottage_spruce",
-        "weight": 1
+        "template": "avenue_bend",
+        "weight": 2,
+        "projection": "terrain_matching",
+        "processors": "plains_street"
       }
-    ]
+    ],
+    "plains/streets": {
+      "fallback": "plains/street_ends",
+      "elements": [
+        {
+          "template": "street_straight_short",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_straight_long",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_straight_lamp",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_bend_right",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_bend_left",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_turn_right",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_turn_left",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_tee_right",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_tee_left",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_fork",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_crossroads",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        },
+        {
+          "template": "street_square",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "plains_street"
+        }
+      ]
+    },
+    "plains/street_ends": [
+      {
+        "template": "end_gate",
+        "weight": 3,
+        "processors": "weathered"
+      },
+      {
+        "template": "end_lamp",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "plains_street"
+      },
+      {
+        "template": "end_fade",
+        "weight": 4,
+        "projection": "terrain_matching",
+        "processors": "plains_street"
+      }
+    ],
+    "plains/lots": {
+      "fallback": "plains/lots_outer",
+      "elements": [
+        {
+          "template": "cottage_oak",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "cottage_birch",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "cottage_spruce",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "cottage_plaster",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "house_tall_oak",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "house_tall_brick",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "townhouse",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "townhouse_plaster",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "farmhouse",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "family_house",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "smithy",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "butcher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "fletcher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "shepherd",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "fisher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "cartographer",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "mason",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "tannery",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "farm_wheat",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "paddock",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_tree_oak",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_tree_birch",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "empty",
+          "weight": 12
+        }
+      ]
+    },
+    "plains/lots_outer": {
+      "fallback": "minecraft:empty",
+      "elements": [
+        {
+          "template": "farm_wheat",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "farm_mixed",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "farm_beets",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "pumpkin_patch",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "paddock",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "apiary",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_tree_oak",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_tree_birch",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_haystack",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_woodpile",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_flowerbed",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "cottage_oak",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "farmhouse",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "shepherd",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_cart",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "decor_lamp_bench",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "empty",
+          "weight": 6
+        }
+      ]
+    }
   },
   "required_pools": [
     "town_centers",
-    "streets/north",
-    "streets/east",
-    "streets/south",
-    "streets/west",
-    "buildings/garrison",
     "buildings/tavern",
-    "buildings/cemetery",
-    "buildings/apothecary",
+    "buildings/garrison",
     "buildings/workshop",
-    "buildings/library",
-    "buildings/family_house",
-    "buildings/cottage"
+    "buildings/chapel",
+    "buildings/apothecary",
+    "buildings/library"
   ],
+  "slot_widths": {
+    "buildings/tavern": 17,
+    "buildings/garrison": 17,
+    "buildings/workshop": 17,
+    "buildings/chapel": 17,
+    "buildings/apothecary": 11,
+    "buildings/library": 11,
+    "buildings/market": 11
+  },
+  "processor_lists": {
+    "village": [],
+    "weathered": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.15
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_stone_bricks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:cracked_stone_bricks"
+          }
+        ]
+      }
+    ],
+    "plains_street": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:dirt_path"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:andesite"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:mossy_cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:coarse_dirt"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:grass_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": {
+              "id": "minecraft:water",
+              "properties": {
+                "level": "0"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:gravel"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.05
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:coarse_dirt"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.2
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          }
+        ]
+      }
+    ]
+  },
   "biomes": [
     "minecraft:plains",
     "minecraft:meadow"
   ],
-  "depth": 3,
-  "max_distance": 80,
+  "depth": 6,
+  "max_distance": 100,
   "placement": {
     "type": "minecraft:random_spread",
     "spacing": 40,

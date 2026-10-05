@@ -1,0 +1,113 @@
+{
+  "fallback": "villagefriends:village/plains/street_ends",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_straight_short",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_straight_long",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_straight_lamp",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_bend_right",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_bend_left",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_turn_right",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_turn_left",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_tee_right",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_tee_left",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_fork",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_crossroads",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/street_square",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    }
+  ]
+}

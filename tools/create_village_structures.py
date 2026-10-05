@@ -155,6 +155,9 @@ class Template:
                 assert len(row) == t.size[0], f'Wrong row width at Y={layer["y"]}, Z={z}: {path}'
                 for x,symbol in enumerate(row):
                     block = data['palette'][symbol]
+                    if block['id'] == 'minecraft:structure_void':
+                        t.blocks.pop((x,layer['y'],z), None)  # Keep the world's block here.
+                        continue
                     t.put(x,layer['y'],z,block['id'],**block.get('properties',{}))
         for entry in data['block_entities']:
             p = tuple(entry['pos'])
@@ -179,7 +182,8 @@ class Template:
             lo, hi = room['min'], room['max']
             # The future scanner can close doors conceptually and walk the air at
             # head height. Every partition, window, floor and ceiling is sealed.
-            probe = (lo[0], lo[1]+1, lo[2])
+            start = room.get('probe', lo)
+            probe = (start[0], start[1]+1, start[2])
             def open_cell(pos):
                 s = self.blocks.get(pos)
                 if s is None: return True
@@ -240,10 +244,42 @@ def location(template):
     return template if ':' in template else f'{NS}:village/{template}'
 
 
-def pool(name, entries):
-    write_json(f'data/{NS}/worldgen/template_pool/village/{name}.json', {'fallback':'minecraft:empty', 'elements':[
-        {'weight':entry['weight'], 'element':{'element_type':'minecraft:single_pool_element',
-         'location':location(entry['template']), 'processors':f'{NS}:village', 'projection':'rigid'}} for entry in entries]})
+def pool_spec(entries):
+    """Format 1 pools are plain lists; format 2 pools are objects with elements and a fallback."""
+    if isinstance(entries, list):
+        return {'elements': entries, 'fallback': 'minecraft:empty'}
+    return {'elements': entries['elements'], 'fallback': entries.get('fallback', 'minecraft:empty')}
+
+
+def pool_name(name):
+    return name if ':' in name else f'{NS}:village/{name}'
+
+
+def pool(name, spec):
+    elements = []
+    for entry in spec['elements']:
+        if entry.get('template') == 'empty':
+            elements.append({'weight': entry['weight'], 'element': {'element_type': 'minecraft:empty_pool_element'}})
+            continue
+        processors = entry.get('processors', 'village')
+        elements.append({'weight': entry['weight'], 'element': {'element_type': 'minecraft:single_pool_element',
+            'location': location(entry['template']), 'processors': processors if ':' in processors else f'{NS}:{processors}',
+            'projection': entry.get('projection', 'rigid')}})
+    fallback = spec['fallback']
+    write_json(f'data/{NS}/worldgen/template_pool/village/{name}.json',
+               {'fallback': fallback if fallback == 'minecraft:empty' else pool_name(fallback), 'elements': elements})
+
+
+def check_lot(t):
+    """The drop-in contract for anything that attaches to a street or plaza slot."""
+    entrance = [c for c in t.connectors if c['name'] == f'{NS}:building_entrance']
+    assert len(entrance) == 1, f'{t.name}: lots need exactly one building_entrance jigsaw'
+    pos = entrance[0]['pos']
+    assert pos[1] == 1 and pos[2] == 0 and entrance[0]['direction'] == 'north', f'{t.name}: keep the north-facing building_entrance at [x,1,0]'
+    nbt = t.nbt[tuple(pos)]
+    assert nbt['pool'] == 'minecraft:empty' and nbt['final_state'] == 'minecraft:air', f'{t.name}: entrance must terminate with air'
+    assert t.blocks[tuple(pos)]['Properties']['orientation'] == 'north_up' and nbt['joint'] == 'aligned', f'{t.name}: entrance orientation/joint must be north_up/aligned'
+    assert 3 <= t.size[0] <= 32 and 3 <= t.size[2] <= 32 and 3 <= t.size[1] <= 32, f'{t.name}: lots are 3..32 blocks in each dimension'
 
 
 def main():
@@ -252,41 +288,76 @@ def main():
     parser.add_argument('--check', action='store_true', help='Validate blueprints and layout without changing files.')
     args = parser.parse_args()
     layout = json.loads(LAYOUT.read_text(encoding='utf-8'))
-    assert layout['format'] == 1
+    assert layout['format'] in (1, 2)
     templates = [Template.from_blueprint(p) for p in sorted(BLUEPRINTS.glob('*.json'))]
     names = {t.name for t in templates}
     by_name = {t.name:t for t in templates}
     if args.only and args.only not in names: parser.error(f'Unknown blueprint: {args.only}')
-    for name,entries in layout['pools'].items():
-        assert entries, f'Empty pool: {name}'
-        for entry in entries:
-            assert entry['template'] in names, f'Pool {name} needs a blueprint for {entry["template"]}'
+    pools = {name: pool_spec(entries) for name, entries in layout['pools'].items()}
+    used = set()
+    for name,spec in pools.items():
+        assert spec['elements'], f'Empty pool: {name}'
+        fallback = spec['fallback']
+        assert fallback == 'minecraft:empty' or fallback in pools, f'{name}: unknown fallback pool {fallback}'
+        for entry in spec['elements']:
             assert 1 <= entry['weight'] <= 150, f'Invalid pool weight: {name}'
-            if name.startswith('buildings/'):
-                t = by_name[entry['template']]
-                assert t.size[0] == 17 and t.size[2] == 19 and 3 <= t.size[1] <= 32, f'{t.name}: keep the 17x19 lot, with height 3..32'
-                entrance = [c for c in t.connectors if c['name'] == f'{NS}:building_entrance']
-                assert len(entrance) == 1 and entrance[0]['pos'] == [8,1,0] and entrance[0]['direction'] == 'north', f'{t.name}: keep the north-facing building_entrance at [8,1,0]'
-                nbt = t.nbt[(8,1,0)]
-                assert nbt['pool'] == 'minecraft:empty' and nbt['final_state'] == 'minecraft:air', f'{t.name}: entrance must terminate with air'
-                assert t.blocks[(8,1,0)]['Properties']['orientation'] == 'north_up' and nbt['joint'] == 'aligned', f'{t.name}: entrance orientation/joint must be north_up/aligned'
+            if entry.get('template') == 'empty': continue
+            assert entry['template'] in names, f'Pool {name} needs a blueprint for {entry["template"]}'
+            assert entry.get('projection', 'rigid') in ('rigid', 'terrain_matching'), f'{name}: unknown projection'
+            used.add(entry['template'])
+            t = by_name[entry['template']]
+            if any(c['name'] == f'{NS}:building_entrance' for c in t.connectors) or name.startswith('buildings/'):
+                check_lot(t)
+            for c in t.connectors:
+                if c['pool'] != 'minecraft:empty':
+                    target = c['pool'].split(f'{NS}:village/')[-1]
+                    assert target in pools, f'{t.name}: jigsaw at {c["pos"]} names unknown pool {c["pool"]}'
+    # Civic slots around the square have fixed widths; a wider building would silently fail to place.
+    for name, width in layout.get('slot_widths', {}).items():
+        half = (width - 1) // 2
+        for entry in pools[name]['elements']:
+            if entry.get('template') == 'empty': continue
+            t = by_name[entry['template']]
+            ex = next(c['pos'][0] for c in t.connectors if c['name'] == f'{NS}:building_entrance')
+            assert ex <= half and t.size[0] - 1 - ex <= half, f'{t.name}: {name} slots allow {half} blocks either side of the entrance'
+    start_pool = layout['start_pool'].split(f'{NS}:village/')[-1]
+    for entry in pools[start_pool]['elements']:
+        t = by_name[entry['template']]
+        assert any(c['name'] == layout['start_jigsaw'] for c in t.connectors), f'{t.name}: town centres need the {layout["start_jigsaw"]} jigsaw'
+    unused = names - used
+    assert not unused, f'Blueprints not referenced by any pool: {sorted(unused)}'
+    lists = layout.get('processor_lists', {'village': []})
+    for name,spec in pools.items():
+        for entry in spec['elements']:
+            processors = entry.get('processors', 'village')
+            assert ':' in processors or processors in lists, f'{name}: unknown processor list {processors}'
     catalog = {'structure':f'{NS}:village','start_pool':layout['start_pool'],
-        'start_jigsaw':layout['start_jigsaw'],'expected_pieces':layout['expected_pieces'],
+        'start_jigsaw':layout['start_jigsaw'],'min_pieces':layout['min_pieces'] if 'min_pieces' in layout else layout['expected_pieces'],
+        'depth':layout['depth'],'max_distance':layout['max_distance'],
         'templates':[t.save(write=not args.check and (not args.only or args.only==t.name)) for t in templates],
-        'required_modules':[{'pool':f'{NS}:village/{name}', 'templates':[location(e['template']) for e in layout['pools'][name]]}
+        'required_modules':[{'pool':f'{NS}:village/{name}', 'templates':[location(e['template']) for e in pools[name]['elements'] if e.get('template') != 'empty']}
                             for name in layout['required_pools']]}
     populations = {t.name:len(t.entities) for t in templates}
-    catalog['resident_range'] = [sum(op(populations[e['template']] for e in layout['pools'][name])
-                                for name in layout['required_pools']) for op in (min,max)]
+    catalog['resident_minimum'] = sum(min(populations[e['template']] for e in pools[name]['elements'] if e.get('template') != 'empty')
+                                      for name in layout['required_pools'])
     if args.check:
-        print(f'Validated {len(templates)} independent blueprints and {len(layout["pools"])} pools; no files changed.')
+        print(f'Validated {len(templates)} independent blueprints and {len(pools)} pools; no files changed.')
         return
     write_json(f'data/{NS}/villagefriends/structure-catalog.json',catalog)
     if args.only:
         print(f'Updated {args.only}.nbt and room catalog; other templates and pools unchanged.')
         return
-    for name,entries in layout['pools'].items(): pool(name,entries)
-    write_json(f'data/{NS}/worldgen/processor_list/village.json',{'processors':[]})
+    keep = {f'{name}.nbt' for name in names}
+    for stale in (ROOT/f'data/{NS}/structure/village').glob('*.nbt'):
+        if stale.name not in keep: stale.unlink()
+    pool_root = ROOT/f'data/{NS}/worldgen/template_pool/village'
+    for stale in pool_root.rglob('*.json'):
+        if stale.relative_to(pool_root).with_suffix('').as_posix() not in pools: stale.unlink()
+    for folder in sorted(pool_root.rglob('*'), reverse=True):
+        if folder.is_dir() and not any(folder.iterdir()): folder.rmdir()
+    for name,spec in pools.items(): pool(name,spec)
+    for name,processors in lists.items():
+        write_json(f'data/{NS}/worldgen/processor_list/{name}.json',{'processors':processors})
     write_json(f'data/{NS}/worldgen/structure/village.json',{
         'type':'minecraft:jigsaw', 'biomes':f'#{NS}:has_structure/village', 'step':'surface_structures',
         'spawn_overrides':{}, 'terrain_adaptation':'beard_thin', 'start_pool':catalog['start_pool'],
@@ -299,7 +370,7 @@ def main():
     tag = json.loads(target.read_text()) if target.exists() else {'replace':False,'values':[]}
     tag['values'] = sorted(set(tag['values']) | {catalog['structure']})
     write_json('data/minecraft/tags/worldgen/structure/village.json',tag)
-    print(f'Generated {len(templates)} templates, {len(layout["pools"])} pools, natural village placement and enclosed-room fixtures.')
+    print(f'Generated {len(templates)} templates, {len(pools)} pools, natural village placement and enclosed-room fixtures.')
 
 
 if __name__ == '__main__': main()

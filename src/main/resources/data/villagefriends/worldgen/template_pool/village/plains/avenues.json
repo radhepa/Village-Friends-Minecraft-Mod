@@ -1,0 +1,23 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/avenue",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/avenue_bend",
+        "processors": "villagefriends:plains_street",
+        "projection": "terrain_matching"
+      }
+    }
+  ]
+}

@@ -4,17 +4,19 @@ Implements the master specification's **Codex Phase 2: Worldgen & Structures** r
 
 ## Layout
 
-`villagefriends:village` generates a complete 13-piece settlement: a fountain plaza, four streets, a tavern, garrison, cemetery, family house, cottage, apothecary, workshop and library. The cottage pool chooses among oak, birch and spruce variants. Fifteen authored templates and thirteen pools provide those pieces and variants.
+`villagefriends:village` is a procedural plains village. One of three town centres (a fountain square, a village green under a great oak, or a market square with a timber market hall) starts the village at a random rotation. Around the 33×33 square stand the six guaranteed civic buildings: tavern, garrison with watchtower and training yard, carpenter-and-tailor workshop, chapel with bell tower and graveyard, apothecary and library. Two more slots hold market stalls or a pocket garden.
 
-The plaza includes a Notice Board, benches, campfire seating, an easel and music stand. The garrison contains training equipment, a Command Desk, beds and an accessible battlement. The tavern has a partitioned kitchen, drinks equipment, tables, seating and a guest loft reached by a ladder. The apothecary has an Alchemical Press, treatment cots and a private bedroom. The workshop and library provide the other new profession anchors. The cemetery contains decorative graves and planting; its graves do not represent saved deceased residents.
+Four avenues leave the square and grow into a random street network: straights, S-bends, turns, tees, forks, crossroads and small well squares. Streets end in fading paths, lamp-and-bench ends or a timber gatehouse with palisade wings. Lots along the streets take timber-framed cottages, two-storey and jettied houses, townhouses, a farmhouse and the family house. Trade workshops (smithy, butcher, fletcher, shepherd, fisher, cartographer, mason and tannery) give unemployed residents vanilla jobs. Trees, haystacks and carts fill some gaps. Fields, paddocks with livestock, pumpkin patches and apiaries gather on the outermost streets.
 
-Fourteen starter villagers include all ten new professions, three unemployed adults and one child. They use the existing resident entity, identity, trading and hometown systems. Profession residents begin with one villager XP to retain their authored role. Uniforms, specialized patrols, treatment, seating and meal routines remain later behavior work.
+The square holds the Notice Board, benches, the easel, music stand and a bell (the vanilla meeting point). The garrison has training dummies, archery targets, a Command Desk and a bunk room; the tavern a bar with tap stand and drinks barrel, a hearth, a kitchen with the stove and two guest rooms; the apothecary an Alchemical Press and treatment cots; the workshop a sawmill shed and a sewing table; the library Archives among bookshelves. The chapel's graves are decorative and do not represent saved deceased residents.
+
+A typical village has 55–140 pieces, about 19 homes and 25–70 residents. The painter and bard work in the square; the other eight new professions work in the civic buildings, so all ten appear in every village. Residents use the existing resident entity, identity, trading and hometown systems. Profession residents begin with one villager XP to retain their authored role. Uniforms, specialized patrols, treatment, seating and meal routines remain later behavior work.
 
 ## Natural generation and commands
 
 The structure generates in plains and meadow biomes using its own random-spread structure set: spacing 40 chunks, separation 12, salt 18374629. An exclusion zone avoids candidate vanilla village placements within ten chunks. Vanilla village templates, pools and placement remain available. The new structure joins the `minecraft:village` structure tag, allowing existing settlement discovery and naming to recognize it.
 
-Rigid pieces keep doors, street surfaces and floors aligned. Minecraft's `beard_thin` terrain adaptation blends foundations into terrain. Depth three and an 80-block distance limit allow the entire planned layout to assemble. As with vanilla worldgen, terrain and other structures can affect the surroundings.
+Buildings are rigid pieces that keep doors and floors level; streets are terrain-matching, so roads follow the ground and become plank bridges over water. Minecraft's `beard_thin` terrain adaptation blends foundations into the terrain. Depth six and a 100-block distance limit bound the village. As with vanilla worldgen, terrain and other structures can affect the surroundings.
 
 New villages appear in **newly generated chunks**. Existing villages and explored chunks are not rebuilt. In a cheats-enabled world:
 
@@ -22,20 +24,21 @@ New villages appear in **newly generated chunks**. Existing villages and explore
 /locate structure villagefriends:village
 /place jigsaw villagefriends:village/town_centers villagefriends:town_start 3
 /place template villagefriends:village/family_house
+/place structure villagefriends:village
 ```
 
 Use the place commands in a clear area or a development world; they place actual blocks and residents.
 
 ## Enclosed houses and future scans
 
-The family house has a living room, central hallway and two independently enclosed bedrooms. Each cottage has a living room, hallway and enclosed bedroom. The apothecary's private bedroom is also enclosed. All bedroom floors, ceilings, walls and windows are solid, with real two-part doors and a clear two-block walking route on each side. Bedrooms contain beds with matching head and foot states; rotating a template rotates doors, beds and custom blocks together.
+Every home has at least one enclosed bedroom: cottages behind a partition, two-storey houses and townhouses upstairs, and the farmhouse in its wing. The tavern, garrison, workshop, apothecary and library also have enclosed bedrooms. Bedroom floors, ceilings, walls and windows are solid, with real two-part doors and a clear two-block walking route on each side. Beds have matching head and foot states, and rotating a template rotates doors, beds and custom blocks together.
 
 The later spatial bed scanner is not implemented here. House Plaques instantiate the Phase 1 block entity with its existing empty scan hooks. The reproducible room catalog records room bounds, probes, bed feet, doors, fixtures and connectors so future scanning can use these layouts as fixtures. Treat doors as room boundaries even when open.
 
 ## Editing and verification
 
-Each building has its own editable layered JSON blueprint in `tools/village_blueprints/`. Pool choices and placement live separately in `tools/village_layout.json`. The buildings are basic layouts intended for later improvement. Read [BUILDING_EDITING.md](BUILDING_EDITING.md) for per-building edits, replacement/variant pools and the stable entrance contract.
+Buildings are written as small Python design programs in `tools/village_design/buildings/`, compiled to one layered JSON blueprint per template in `tools/village_blueprints/`. Pools, weights, processors and placement live in `tools/village_layout.json`. Read [BUILDING_EDITING.md](BUILDING_EDITING.md) for the design kit, lot contract, replacement pools, layout simulation and the in-game gallery.
 
-Run `python tools/create_village_structures.py` to regenerate all templates, pools, biome/structure tags, placement and `data/villagefriends/villagefriends/structure-catalog.json`. Use `--only tavern` to rebuild one building without touching other templates/pools, or `--check` for validation without changes. Only Python's standard library is required. The generator validates enclosed bedrooms, paired beds and compatible entrances before writing deterministic gzip-compressed NBT.
+Run `python tools/design_village.py` to rebuild blueprints from designs, then `python tools/create_village_structures.py` to regenerate templates, pools, processor lists, biome/structure tags, placement and `data/villagefriends/villagefriends/structure-catalog.json`. Use `--only tavern` to rebuild one building, or `--check` for validation without changes. Only Python's standard library is required; previews and maps use Pillow. The generator validates enclosed bedrooms, paired beds, lot entrances, start jigsaws and pool references before writing deterministic gzip-compressed NBT.
 
-`gradlew.bat build` packages the worldgen resources and runs the existing JUnit checks. `gradlew.bat runClientGameTest -PstructuresOnly` exercises native template loading, rotated bedrooms and door access, fixture block entities, twelve complete jigsaw assemblies, natural world generation, all ten professions/trades, hometown assignment and save/reload. The normal gameplay command also runs the five previous tests. Test code and screenshots are excluded from the release JAR.
+`gradlew.bat build` packages the worldgen resources and runs the existing JUnit checks. `gradlew.bat runClientGameTest -PstructuresOnly` exercises native template loading, rotated bedrooms and door access, fixture block entities, twelve procedural jigsaw assemblies, natural world generation, all ten professions/trades, hometown assignment and save/reload. The normal gameplay command also runs the five previous tests. `-PvillageGallery` captures art-direction screenshots. Test code and screenshots are excluded from the release JAR.

@@ -1,0 +1,191 @@
+{
+ "format": 1,
+ "size": [5, 6, 6],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:cobblestone"
+  },
+  "C": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom"
+   }
+  },
+  "D": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "E": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "F": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "G": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "top"
+   }
+  },
+  "H": {
+   "id": "minecraft:cobblestone_wall",
+   "properties": {
+    "east": "low",
+    "north": "none",
+    "south": "none",
+    "up": "false",
+    "waterlogged": "false",
+    "west": "low"
+   }
+  },
+  "I": {
+   "id": "minecraft:cobblestone_wall",
+   "properties": {
+    "east": "none",
+    "north": "low",
+    "south": "low",
+    "up": "false",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "J": {
+   "id": "minecraft:spruce_planks"
+  },
+  "K": {
+   "id": "minecraft:chain",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "L": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "M": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true"
+   }
+  },
+  "N": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAA",
+    "AAAAA",
+    "ABBBA",
+    "ABBBA",
+    "ABBBA",
+    "AAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..L..",
+    ".....",
+    ".BHB.",
+    ".INI.",
+    ".BHB.",
+    "....."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    "..F..",
+    "..M..",
+    "..F..",
+    "....."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    "..F..",
+    "..K..",
+    "..F..",
+    "....."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".....",
+    ".DJE.",
+    ".DGE.",
+    ".DGE.",
+    ".DGE.",
+    ".DJE."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".....",
+    "..C..",
+    "..C..",
+    "..C..",
+    "..C..",
+    "..C.."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/decor.py",
+  "checksum": "bfd97b666a0d709a"
+ }
+}
