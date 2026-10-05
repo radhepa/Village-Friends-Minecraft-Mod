@@ -6,7 +6,8 @@ Verified October 5, 2026 with Minecraft 26.3/Fabric/Java 25 (headless client on 
 - `python tools/village_design/simulate.py --seeds 300`: 56–139 pieces (median 85), 22–70 residents (median 38), and every civic building present in every seed.
 - `gradlew runClientGameTest -PstructuresOnly` passed. All 60 templates loaded with their connectors; bedrooms stayed sealed and doors stayed walkable in four rotations; block entities were created; 12 procedural assemblies passed without overlapping lots. A natural seed-1 world generated "Willowbridge": 113 pieces, 34 residents, all ten professions with trades, hometown names and save/reload.
 - `gradlew build` passed with 46 unit tests.
-- `gradlew runClientGameTest -PvillageGallery` captured art-direction screenshots of templates and whole villages. The full gameplay suite was not rerun for this change; it touches only village worldgen.
+- `gradlew runClientGameTest -PvillageGallery` captured art-direction screenshots of templates and whole villages.
+- The full `gradlew runClientGameTest` suite passed (animation, structures, foundation, friendship, roadmap, community, outfits, hair/faces). The first full run failed the roadmap test's one-minute companion recovery: the client waits a fixed 1,220 ticks, and the software-rendered server fell about 160 ticks behind. That test world is superflat with structures disabled. The same suite passed on `main` and on a rerun of this branch.
 
 Earlier verification below records previous releases.
 # Male starter texture rebuild verification
