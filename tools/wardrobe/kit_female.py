@@ -226,12 +226,15 @@ def fur_box(box, role: str = "S", seed: int = 0, base: int = 3):
 
 
 def mail(face: Face, role: str = "M", base: int = 2, y0: int = 0, y1: int | None = None):
-    """Riveted mail: offset rings of light and shade."""
+    """Riveted mail: rows of lit ring tops over shaded ring bottoms, each row offset by half a ring."""
     y1 = face.h - 1 if y1 is None else y1
     for y in range(y0, y1 + 1):
         for x in range(face.w):
-            ring = (x + (y % 2)) % 2
-            face.set(x, y, k(role, base + 1) if ring == 0 else k(role, base - 1))
+            gx = x + face.x0
+            if y % 2 == 0:
+                face.set(x, y, k(role, base + 1) if gx % 2 == 0 else k(role, base))
+            else:
+                face.set(x, y, k(role, base - 1) if gx % 2 == 1 else k(role, base))
 
 
 def quilt_lines(face: Face, role: str, base: int = 2, step: int = 2, x0: int = 0, y0: int = 0, y1: int | None = None):
@@ -772,6 +775,22 @@ def hose(g, role: str, rows=(0, 11), base: int = 2, texture: str = "knit", seed:
             fabric(leg.top, role, texture, seed, base)
         if seam:
             leg.back.vline(1 if side == "right" else 2, rows[0], rows[1], k(role, base - 1))
+
+
+def leg_rings(g, prefix: str, y: float, h: int, size: int = 5, inflate: float = .04):
+    """A box around each leg at leg-local height y (0 is the hip joint, 12 the sole)."""
+    return [g.piece(f"{side}_{prefix}", leg_bone(side), (-size / 2, y, -size / 2), (size, h, size), inflate=inflate)
+            for side in SIDES]
+
+
+def leg_ring_fold(g, prefix: str, y: float, role: str = "L", base: int = 2, size: int = 5):
+    """Folded-down boot or stocking tops: a lit upper edge over a shaded fold."""
+    boxes = leg_rings(g, prefix, y, 2, size, .06)
+    for box in boxes:
+        solid(box, role, "leather" if role == "L" else "weave", 64, base, edge=False)
+        for face in box.sides:
+            face.hline(0, face.w - 1, 0, k(role, base + 2)), face.hline(0, face.w - 1, 1, k(role, base))
+    return boxes
 
 
 def stockings_row(g, role: str, y0: int, y1: int | None = None, base: int = 3):
