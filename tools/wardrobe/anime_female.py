@@ -64,6 +64,22 @@ def ringlet_strip(box, seed, base=2, period=4):
                 f.set(x, y, k("H", s))
 
 
+def bubble_face(face, seed, base=2):
+    """Soft round curls: 2x2 cells lit at one corner and shaded at the other, every other row of cells offset."""
+    for y in range(face.h):
+        for x in range(face.w):
+            row = y // 2
+            xx = x + face.x0 + (row % 2)
+            cell = rnd(xx // 2, row, seed)
+            lx, ly = xx % 2, y % 2
+            s = base + (1 if (lx, ly) == (0, 0) else -1 if (lx, ly) == (1, 1) else 0)
+            if cell < .22:
+                s -= 1
+            elif cell > .85 and (lx, ly) != (1, 1):
+                s += 1
+            face.set(x, y, k("H", s))
+
+
 def coil_face(face, seed, base=2):
     for y in range(face.h):
         for x in range(face.w):
@@ -75,11 +91,14 @@ def coil_face(face, seed, base=2):
 
 
 def loc_face(face, seed, base=2):
+    """Rounded loc segments: a lit band and a shaded seam every three rows, the far edge in shadow."""
     off = int(rnd(seed, 6) * 3)
     for y in range(face.h):
         for x in range(face.w):
-            ph = (y + off + x) % 3
+            ph = (y + off) % 3
             s = base + (1 if ph == 0 else -1 if ph == 2 else 0)
+            if face.w > 1 and x == face.w - 1:
+                s = min(s, base)
             face.set(x, y, k("H", s))
 
 
@@ -124,6 +143,19 @@ def paint(box, texture="cel", seed=0, base=2, ring=None, top_delta=1, flip=False
         for f in box.sides:
             curls_face(f, seed + f.x0, base)
         curls_face(box.top, seed + 3, base + top_delta)
+        box.bottom.fill(k("H", base - 2))
+    elif texture == "braidlet":
+        # A thin three-strand braid: crossings step one row on each side in turn.
+        for i, f in enumerate(box.sides):
+            for y in range(f.h):
+                ph = (y + i + seed) % 4
+                for x in range(f.w):
+                    f.set(x, y, k("H", base + (1 if ph in (0, 2) and (x + ph // 2) % 2 == 0 else -1 if ph == 3 else 0)))
+        _caps(box, base, top_delta)
+    elif texture == "bubble":
+        for f in box.sides:
+            bubble_face(f, seed, base)
+        bubble_face(box.top, seed + 3, base + top_delta)
         box.bottom.fill(k("H", base - 2))
     elif texture == "coil":
         for f in box.sides + [box.top]:
