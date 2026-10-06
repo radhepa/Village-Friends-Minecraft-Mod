@@ -59,7 +59,7 @@ def clipped_scalp(g, seed: int, base: int = 1, side_rows: int = 6, back_rows: in
     return head
 
 
-def shave(face, seed: int, rows, cols=None, density: float = .19):
+def shave(face, seed: int, rows, cols=None, density: float = .1):
     """Shaved skin: an even translucent shadow with a fine, regular dot of deeper stubble."""
     cols = range(face.w) if cols is None else cols
     for y in rows:
@@ -114,6 +114,21 @@ def coil_face(face, seed: int, base: int = 2):
             edge = x in (0, face.w - 1) and face.w > 2
             s = base + (1 if upper and not edge else 0) - (0 if upper else 1)
             face.set(x, y, k("H", s))
+
+
+def loc_face(face, seed: int, base: int = 2):
+    """A loc: matte felted rope with a soft swell every three texels."""
+    off = int(rnd(seed, 8) * 3)
+    for y in range(face.h):
+        for x in range(face.w):
+            r = (y + off) % 3
+            s = base - (1 if r == 2 else 0) + (1 if r == 0 and rnd(x + face.x0, y, seed) < .6 else 0)
+            face.set(x, y, k("H", s))
+
+
+def ringlet_face(face, seed: int, base: int = 2):
+    """A loose spiral curl: wide diagonal bands of light winding down the lock."""
+    twist_face(face, seed, base, period=4, lean=1)
 
 
 def wave_face(face, seed: int, base: int = 2, period: int = 6):
