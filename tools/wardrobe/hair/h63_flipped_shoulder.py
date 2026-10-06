@@ -13,7 +13,7 @@ def build(g):
     hat = ring_shell(g, 6302, side_rows=7, back_rows=8)
     hat.top.vline(2, 0, 7, "H1")
     for i, (x, rz) in enumerate(((-2.4, -32), (-.2, -40))):
-        taper(g, f"fringe_{i}", (x, -8.6, -4.3), (-8, 0, rz), ((2, 3, 1), (1, 1, 1)), seed=6310 + i * 3, ring=0)
+        taper(g, f"fringe_{i}", (x, -8.7, -4.3), (-8, 0, rz), ((2, 2, 1), (1, 1, 1)), seed=6310 + i * 3, ring=0)
     # Sides: straight down, then a flick out at the ends.
     for side, sign in SIDES:
         for j, (z, length) in enumerate(((-3.0, 6), (-.4, 6), (2.8, 7))):
