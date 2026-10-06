@@ -2,6 +2,7 @@
   "id": "b21_fur_topped_boots",
   "kind": "bottom",
   "name": "Fur-Topped Winter Boots",
+  "gender": "male",
   "texture": "bottoms/b21_fur_topped_boots.png",
   "extrasHeight": 16,
   "tags": [

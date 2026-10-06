@@ -1,7 +1,7 @@
 """Curtain Part: a centre part with curtain bangs sweeping to each temple, jaw-length layered sides."""
 from paint import hair_box, scalp, shell
 
-META = {"name": "Curtain Part", "description": "Centre-parted curtain bangs, jaw-length layered sides and a soft nape."}
+META = {"name": "Curtain Part", "gender": "male", "description": "Centre-parted curtain bangs, jaw-length layered sides and a soft nape."}
 
 
 def build(g):

@@ -4,10 +4,10 @@ Every hairstyle, top and bottom is one Python module that paints pixel art and d
 
 | What | Where |
 |---|---|
-| Hairstyles | `tools/wardrobe/hair/hNN_name.py` |
-| Tops | `tools/wardrobe/tops/tNN_name.py` |
-| Bottoms | `tools/wardrobe/bottoms/bNN_name.py` |
-| Outfit templates and profession mapping | `tools/wardrobe/outfits.json` |
+| Hairstyles | `tools/wardrobe/hair/hNN_name.py` (male), `hfNN_name.py` (female) |
+| Tops | `tools/wardrobe/tops/tNN_name.py` (male), `tfNNN_name.py` (female) |
+| Bottoms | `tools/wardrobe/bottoms/bNN_name.py` (male), `bfNNN_name.py` (female) |
+| Outfit templates and profession mapping, one file per wardrobe set | `tools/wardrobe/outfits/male.json`, `outfits/female.json` |
 | Master palettes (base colors or explicit ramps) | `tools/wardrobe/palettes.json` |
 | Natural hair colors (five-shade ramps) | `tools/wardrobe/hair_colors.json` |
 | Shared brushes (cloth, hems, hair strands, curls, scalp) | `tools/wardrobe/paint.py` |
@@ -31,7 +31,7 @@ The tools need Python 3 with Pillow and NumPy. Previews go to `build/wardrobe-pr
 
 ## Writing a piece
 
-A module defines `META` (`name`, `description`, `tags`, optional `requires`/`rejects`, and for tops `tucked`/`covers_waist`) and a `build(g)` function:
+A module defines `META` (`name`, `gender`, `description`, `tags`, optional `requires`/`rejects`/`locked_to`, and for tops `tucked`/`covers_waist`) and a `build(g)` function:
 
 - `g.part("body")` returns the skin-layout box of a body part. Tops paint `body`, `jacket` and the arms or sleeves. Bottoms paint `body`, `jacket` and the legs or pants. Hair paints `head` and `hat`.
 - `box.front`, `.back`, `.left`, `.right`, `.top` and `.bottom` are faces. `box.strip` is the four sides as one wrap-around strip. On every face, x runs left to right as you look at it from outside.
@@ -47,6 +47,13 @@ The wardrobe's style targets:
 - **Tops and bottoms:** casual medieval village wear such as tunics, smocks, jerkins, hoods, cloaks, braies, hose, trews and boots. Avoid modern cuts like t-shirts, hoodies and jeans.
 - **Hair:** anime-inspired, with clean cel-shaded clumps, a sheen ring and pointed tapered locks, but grounded. Avoid gravity-defying spikes.
 
+## Genders and locked sets
+
+- `gender` is `"male"`, `"female"` or `"unisex"`. A resident only wears hair, tops, bottoms and outfit templates that fit their gender; non-binary residents wear every set.
+- Most tops and bottoms mix freely. A few are designed as one outfit, such as a gown whose bodice and skirt share trim: give the top `"locked_to": "<bottom id>"` and the bottom `"locked_to": "<top id>"`. A locked set is only ever worn whole, and its pieces never mix with anything else.
+- Every top must appear in at least one outfit template, because residents choose tops through their profession's templates. Every free top must mix with at least seven free bottoms of its gender (four for armor).
+- Each file in `tools/wardrobe/outfits/` lists templates (`{"id", "name", "top", "bottom"}`) and appends them to profession lists. The first template a gender can wear in a profession's merged list is that gender's preferred outfit. A gender with any templates must dress every profession.
+
 ## Rules the compiler enforces
 
 - Pixels stay inside the parts the kind may paint. Garments never use hair keys.
@@ -55,4 +62,4 @@ The wardrobe's style targets:
 - Pieces attach to the bones their kind may dress, and their nets fit the extras area.
 - Every outfit template is compatible and worn by at least one profession, every top and bottom pairs with something, and all ten palette ids exist.
 
-To add a variant, add a module with the next number, give it tags, and optionally add it to a template in `outfits.json`. Then run the full compiler. The catalog and tests derive their lists from the compiled output, so no Java changes are needed.
+To add a variant, add a module with the next number, give it a gender and tags, and add its top to a template in its set's `outfits/*.json`. Then run the full compiler. The catalog and tests derive their lists from the compiled output, so no Java changes are needed.

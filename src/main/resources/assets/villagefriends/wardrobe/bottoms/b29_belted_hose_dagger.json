@@ -2,6 +2,7 @@
   "id": "b29_belted_hose_dagger",
   "kind": "bottom",
   "name": "Belted Hose & Dagger",
+  "gender": "male",
   "texture": "bottoms/b29_belted_hose_dagger.png",
   "extrasHeight": 16,
   "tags": [

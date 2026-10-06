@@ -2,6 +2,7 @@
   "id": "h02_messy_parted",
   "kind": "hair",
   "name": "Messy Parted",
+  "gender": "male",
   "texture": "hair/h02_messy_parted.png",
   "extrasHeight": 16,
   "tags": [],

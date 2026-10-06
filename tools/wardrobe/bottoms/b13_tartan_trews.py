@@ -3,6 +3,7 @@ from kit import SIDES, belt, footwear, waistband
 
 META = {
     "name": "Tartan Trews",
+    "gender": "male",
     "description": "Close-cut tartan trews, a plain leather belt and sturdy ankle boots.",
     "tags": ["casual", "sturdy"],
 }

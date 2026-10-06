@@ -2,6 +2,7 @@
   "id": "h07_swept_undercut",
   "kind": "hair",
   "name": "Swept Undercut",
+  "gender": "male",
   "texture": "hair/h07_swept_undercut.png",
   "extrasHeight": 16,
   "tags": [],

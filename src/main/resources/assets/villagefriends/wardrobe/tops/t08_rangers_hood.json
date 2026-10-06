@@ -2,6 +2,7 @@
   "id": "t08_rangers_hood",
   "kind": "top",
   "name": "Ranger's Hood",
+  "gender": "male",
   "texture": "tops/t08_rangers_hood.png",
   "extrasHeight": 32,
   "tags": [

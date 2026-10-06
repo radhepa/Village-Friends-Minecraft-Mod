@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Embroidered Festival Vest",
+    "gender": "male",
     "description": "Feast-day best: a short embroidered vest over a full-sleeved shirt and a knotted sash.",
     "tags": ["casual", "fancy"],
     "tucked": True,

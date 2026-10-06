@@ -2,6 +2,7 @@
   "id": "b08_wrapped_leggings",
   "kind": "bottom",
   "name": "Wrapped Leggings",
+  "gender": "male",
   "texture": "bottoms/b08_wrapped_leggings.png",
   "extrasHeight": 16,
   "tags": [

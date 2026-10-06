@@ -2,6 +2,7 @@
   "id": "t12_drawstring_smock",
   "kind": "top",
   "name": "Drawstring Smock",
+  "gender": "male",
   "texture": "tops/t12_drawstring_smock.png",
   "extrasHeight": 16,
   "tags": [

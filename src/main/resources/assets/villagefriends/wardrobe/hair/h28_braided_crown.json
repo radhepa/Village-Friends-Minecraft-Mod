@@ -2,6 +2,7 @@
   "id": "h28_braided_crown",
   "kind": "hair",
   "name": "Braided Crown",
+  "gender": "male",
   "texture": "hair/h28_braided_crown.png",
   "extrasHeight": 32,
   "tags": [],

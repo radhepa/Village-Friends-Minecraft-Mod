@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, rivets, solid, strip_fabric
 
 META = {
     "name": "Plated Greaves",
+    "gender": "male",
     "description": "Dark quilted chausses under steel greaves and poleyns, with leather sabatons.",
     "tags": ["armor", "sturdy", "martial"],
     # Plate legs only go with martial or rugged tops.

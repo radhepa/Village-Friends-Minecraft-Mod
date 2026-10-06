@@ -1,7 +1,7 @@
 """Shaggy Shoulder-Length: choppy layered locks falling to the shoulders, bangs swept off-centre."""
 from paint import hair_box, rnd, scalp, shell
 
-META = {"name": "Shaggy Shoulder-Length", "description": "Choppy layers falling to the shoulders with face-framing locks."}
+META = {"name": "Shaggy Shoulder-Length", "gender": "male", "description": "Choppy layers falling to the shoulders with face-framing locks."}
 
 
 def ragged(box, seed):

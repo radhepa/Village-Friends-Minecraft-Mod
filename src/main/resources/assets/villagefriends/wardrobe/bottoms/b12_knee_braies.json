@@ -2,6 +2,7 @@
   "id": "b12_knee_braies",
   "kind": "bottom",
   "name": "Knee Braies & Stockings",
+  "gender": "male",
   "texture": "bottoms/b12_knee_braies.png",
   "extrasHeight": 16,
   "tags": [

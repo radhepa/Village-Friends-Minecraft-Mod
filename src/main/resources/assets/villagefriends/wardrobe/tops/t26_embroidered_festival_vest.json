@@ -2,6 +2,7 @@
   "id": "t26_embroidered_festival_vest",
   "kind": "top",
   "name": "Embroidered Festival Vest",
+  "gender": "male",
   "texture": "tops/t26_embroidered_festival_vest.png",
   "extrasHeight": 16,
   "tags": [

@@ -3,6 +3,7 @@ from paint import cap, fabric, k, solid, strip_fabric
 
 META = {
     "name": "Wanderer's Pantaloons",
+    "gender": "male",
     "description": "Loose trousers that billow over gathered ankle cuffs, soft boots and a coin purse on a cord.",
     "tags": ["relaxed", "simple"],
 }

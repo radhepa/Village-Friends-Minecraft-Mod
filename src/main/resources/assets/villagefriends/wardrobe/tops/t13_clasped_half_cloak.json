@@ -2,6 +2,7 @@
   "id": "t13_clasped_half_cloak",
   "kind": "top",
   "name": "Clasped Half-Cloak",
+  "gender": "male",
   "texture": "tops/t13_clasped_half_cloak.png",
   "extrasHeight": 32,
   "tags": [

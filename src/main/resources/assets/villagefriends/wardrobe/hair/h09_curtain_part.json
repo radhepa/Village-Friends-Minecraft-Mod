@@ -2,6 +2,7 @@
   "id": "h09_curtain_part",
   "kind": "hair",
   "name": "Curtain Part",
+  "gender": "male",
   "texture": "hair/h09_curtain_part.png",
   "extrasHeight": 32,
   "tags": [],

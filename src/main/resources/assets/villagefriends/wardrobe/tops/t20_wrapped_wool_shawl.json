@@ -2,6 +2,7 @@
   "id": "t20_wrapped_wool_shawl",
   "kind": "top",
   "name": "Wrapped Wool Shawl",
+  "gender": "male",
   "texture": "tops/t20_wrapped_wool_shawl.png",
   "extrasHeight": 16,
   "tags": [

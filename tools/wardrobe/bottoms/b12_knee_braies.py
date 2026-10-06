@@ -3,6 +3,7 @@ from kit import footwear, leg_ring, legs, stockings, waistband
 
 META = {
     "name": "Knee Braies & Stockings",
+    "gender": "male",
     "description": "Loose linen braies gathered just below the knee, wool stockings and soft turnshoes.",
     "tags": ["casual", "simple"],
 }

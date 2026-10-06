@@ -3,6 +3,7 @@ from kit import footwear, leg_ring, legs, waistband
 
 META = {
     "name": "Woolen Chausses",
+    "gender": "male",
     "description": "Fitted wool chausses with linen braies puffing above, and turn-down ankle boots.",
     "tags": ["casual", "sturdy"],
 }

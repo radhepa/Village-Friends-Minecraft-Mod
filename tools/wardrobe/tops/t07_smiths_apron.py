@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, line, rivets, solid, strip_fabric
 
 META = {
     "name": "Smith's Apron",
+    "gender": "male",
     "description": "Henley work shirt, riveted leather bib apron with a stocked pocket, and heavy gloves.",
     "tags": ["work", "apron"],
     "covers_waist": True,

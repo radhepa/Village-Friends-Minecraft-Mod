@@ -2,6 +2,7 @@
   "id": "t23_fur_collared_coat",
   "kind": "top",
   "name": "Fur-Collared Coat",
+  "gender": "male",
   "texture": "tops/t23_fur_collared_coat.png",
   "extrasHeight": 32,
   "tags": [

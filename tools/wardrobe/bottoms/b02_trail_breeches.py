@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Trail Breeches",
+    "gender": "male",
     "description": "Canvas breeches with side buttons, tall cuffed boots, a belt and a hip pouch.",
     "tags": ["rugged", "sturdy", "casual"],
 }

@@ -4,6 +4,7 @@ from paint import grid
 
 META = {
     "name": "Belted Linen Tunic",
+    "gender": "male",
     "description": "The everyday village tunic: embroidered neckband and cuffs, a belt, and a hem to mid-thigh.",
     "tags": ["casual", "simple"],
     "covers_waist": True,

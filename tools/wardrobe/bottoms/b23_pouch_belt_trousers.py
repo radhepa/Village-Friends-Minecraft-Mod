@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Pouch-Belt Trousers",
+    "gender": "male",
     "description": "Hard-wearing trousers, a wide belt hung with pouches, and a coil of rope at the hip.",
     "tags": ["work", "sturdy", "rugged"],
 }

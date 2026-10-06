@@ -3,6 +3,7 @@ from kit import SIDES, footwear, leg_ring, legs, waistband
 
 META = {
     "name": "Tall Riding Boots",
+    "gender": "male",
     "description": "Slim trousers and thigh-high riding boots with folded-down tops.",
     "tags": ["casual", "sturdy"],
 }

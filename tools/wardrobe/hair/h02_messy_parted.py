@@ -1,7 +1,7 @@
 """Messy Parted: a side part with a swooping fringe, tousled crown tufts and layered back locks."""
 from paint import hair_box, hair_face, k, rnd
 
-META = {"name": "Messy Parted", "description": "Side-parted, tousled and swept across the brow."}
+META = {"name": "Messy Parted", "gender": "male", "description": "Side-parted, tousled and swept across the brow."}
 
 
 def build(g):

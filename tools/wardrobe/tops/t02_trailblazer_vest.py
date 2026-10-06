@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, line, solid, strip_fabric
 
 META = {
     "name": "Trailblazer Vest",
+    "gender": "male",
     "description": "Rolled-sleeve linen shirt, pocketed suede vest, crossbody strap and a knotted kerchief.",
     "tags": ["rugged", "casual"],
     "tucked": True,

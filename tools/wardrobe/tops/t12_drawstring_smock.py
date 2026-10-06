@@ -4,6 +4,7 @@ from paint import k
 
 META = {
     "name": "Drawstring Smock",
+    "gender": "male",
     "description": "Loose smock gathered at a laced neck, smocked across the chest, sleeves pushed to the elbow.",
     "tags": ["casual", "simple"],
 }

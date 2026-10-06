@@ -7,6 +7,8 @@ iteration only; the in-game gametest gallery is the source of truth.
     python tools/wardrobe/preview.py hair [--color CHESTNUT]
     python tools/wardrobe/preview.py mix
     python tools/wardrobe/preview.py one --top t01_x --bottom b01_y --hair h01_z
+    python tools/wardrobe/preview.py tops --only tf0 --bottom bf001_x --out sheet.png   # fast: build just these
+    python tools/wardrobe/preview.py mix --gender female
 """
 from __future__ import annotations
 
@@ -22,6 +24,7 @@ from PIL import Image, ImageDraw
 import wardrobe as W
 
 BODY = W.ROOT / "src/main/resources/assets/villagefriends/textures/body"
+BASE_TOP, BASE_BOTTOM, BASE_HAIR = "t11_belted_linen_tunic", "b03_scholars_slacks", "h01_spiky_layered"
 SCRATCH = W.ROOT / "build/wardrobe-preview"
 
 
@@ -213,21 +216,45 @@ def main():
     ap.add_argument("--back", action="store_true")
     ap.add_argument("--walk", action="store_true")
     ap.add_argument("--seed", type=int, default=7)
-    ap.add_argument("--ids", nargs="*", help="only these piece ids (prefix match) in hair/outfits/mix modes")
+    ap.add_argument("--ids", nargs="*", help="only these piece ids (prefix match) in hair/outfits/tops/bottoms modes")
+    ap.add_argument("--gender", choices=["male", "female"], help="only pieces this gender wears (hair/outfits/mix/tops/bottoms)")
+    ap.add_argument("--only", nargs="*", help="build only these id prefixes (faster; outfits mode needs their templates' pieces)")
     a = ap.parse_args()
-    garments = W.build_all()
+    catalog = W.load_templates()
+    only = None
+    if a.only:
+        # Build just these prefixes plus the pieces the sheet dresses them with (much faster).
+        only = set(a.only) | {BASE_TOP, BASE_BOTTOM, BASE_HAIR} | {x for x in (a.top, a.bottom, a.hair) if x}
+        if a.mode == "outfits":
+            for o in catalog["outfits"]:
+                if any(o["top"].startswith(i) or o["bottom"].startswith(i) for i in a.only):
+                    only |= {o["top"], o["bottom"]}
+    garments = W.build_all(only)
     for g in garments.values():
         errs = g.validate()
         if errs:
             print(g.id, errs[:6])
     palettes, hairs = W.load_palettes(), W.load_hair_colors()
     plist = list(palettes)
-    catalog = json.loads((W.TOOL / "outfits.json").read_text())
-    tops = [g for g in garments.values() if g.kind == "tops"]
-    bottoms = [g for g in garments.values() if g.kind == "bottoms"]
-    hair_list = [g for g in garments.values() if g.kind == "hair"]
+    fits = (lambda g: g.fits(a.gender)) if a.gender else (lambda g: True)
+    tops = [g for g in garments.values() if g.kind == "tops" and fits(g)]
+    bottoms = [g for g in garments.values() if g.kind == "bottoms" and fits(g)]
+    hair_list = [g for g in garments.values() if g.kind == "hair" and fits(g)]
+    catalog["outfits"] = [o for o in catalog["outfits"] if o["top"] in garments and o["bottom"] in garments
+                          and fits(garments[o["top"]])]
+    if a.only:
+        catalog["outfits"] = [o for o in catalog["outfits"]
+                              if any(o["top"].startswith(i) or o["bottom"].startswith(i) for i in a.only)]
+    if a.ids and a.mode == "outfits":
+        catalog["outfits"] = [o for o in catalog["outfits"]
+                              if any(o["top"].startswith(i) or o["bottom"].startswith(i) or o["id"].startswith(i) for i in a.ids)]
     if a.ids:
         hair_list = [h for h in hair_list if any(h.id.startswith(i) for i in a.ids)] or hair_list
+    if a.only and a.mode in ("hair", "tops", "bottoms"):
+        keep = lambda g: any(g.id.startswith(i) for i in a.only)
+        hair_list = [h for h in hair_list if keep(h)] or hair_list
+        tops = [t for t in tops if keep(t)] or tops
+        bottoms = [b for b in bottoms if keep(b)] or bottoms
     pose = {"RIGHT_LEG": (28, 0, 0), "LEFT_LEG": (-28, 0, 0), "RIGHT_ARM": (-25, 0, 0), "LEFT_ARM": (25, 0, 0)} if a.walk else None
     yaw = 152 if a.back else -28
     if a.mode == "outfits":
@@ -247,11 +274,11 @@ def main():
         cols, cw, ch, sc = 5, 300, 330, 19
         canvas = Canvas(cols * cw, ((len(hair_list) + cols - 1) // cols) * ch)
         labels = []
-        base_top = tops[0] if tops else None
+        base_top, base_bottom = garments[a.top or BASE_TOP], garments[a.bottom or BASE_BOTTOM]
         for i, h in enumerate(hair_list):
             x, y = (i % cols) * cw + cw // 2, (i // cols) * ch + 245
             color = a.color if a.color != "ALL" else list(hairs)[i % len(hairs)]
-            figure(canvas, x, y, sc, base_top, bottoms[0], h, palettes[a.palette or plist[0]], hairs[color]["ramp"],
+            figure(canvas, x, y, sc, base_top, base_bottom, h, palettes[a.palette or plist[0]], hairs[color]["ramp"],
                    complexion=i % 6, yaw=yaw if not a.back else 160, pitch=-8, head_only=True)
             labels.append((x, i // cols * ch + 312, h.meta["name"]))
         save(canvas, labels, Path(a.out or SCRATCH / f"hair{'_back' if a.back else ''}.png"))
@@ -279,8 +306,12 @@ def main():
         for i, piece in enumerate(chosen):
             pal = palettes[a.palette or plist[i % len(plist)]]
             x, y = (i % cols) * cw + cw // 2, (i // cols) * ch + 170
-            top = piece if a.mode == "tops" else garments[a.top or "t11_belted_linen_tunic"]
-            bottom = piece if a.mode == "bottoms" else garments[a.bottom or "b03_scholars_slacks"]
+            top = piece if a.mode == "tops" else garments[a.top or BASE_TOP]
+            bottom = piece if a.mode == "bottoms" else garments[a.bottom or BASE_BOTTOM]
+            if a.mode == "tops" and piece.locked_to:
+                bottom = garments.get(piece.locked_to, bottom)   # a locked set is only shown whole
+            if a.mode == "bottoms" and piece.locked_to:
+                top = garments.get(piece.locked_to, top)
             figure(canvas, x, y, sc, top, bottom, hair_list[(i * 3) % len(hair_list)], pal,
                    hairs[list(hairs)[i % len(hairs)]]["ramp"], complexion=i % 6, yaw=yaw, pose=pose)
             labels += [(x, y + 360, piece.meta["name"]), (x, y + 374, pal["name"])]

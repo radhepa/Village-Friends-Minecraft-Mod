@@ -2,6 +2,7 @@
   "id": "b26_quilted_trousers",
   "kind": "bottom",
   "name": "Quilted Trousers",
+  "gender": "male",
   "texture": "bottoms/b26_quilted_trousers.png",
   "extrasHeight": 0,
   "tags": [

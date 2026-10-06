@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Pilgrim's Tabard",
+    "gender": "male",
     "description": "Sun-embroidered tabard with knee-length panels over a long undertunic, a stole and a tasseled cord.",
     "tags": ["robe", "holy"],
     "covers_waist": True,

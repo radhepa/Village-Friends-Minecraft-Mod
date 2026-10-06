@@ -1,7 +1,7 @@
 """Voluminous Curls: a big stepped dome of tight curl clumps with a soft curly fringe."""
 from paint import curls_box, curls_face, k, scalp, shell
 
-META = {"name": "Voluminous Curls", "description": "A rounded cloud of tight curls, full at the crown and sides."}
+META = {"name": "Voluminous Curls", "gender": "male", "description": "A rounded cloud of tight curls, full at the crown and sides."}
 
 
 def build(g):

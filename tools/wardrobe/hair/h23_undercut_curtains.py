@@ -2,7 +2,7 @@
 from anime import cel_box, lock
 from paint import hair_face, rnd, scalp, shell
 
-META = {"name": "Undercut Curtains", "description": "A clipped undercut beneath long centre-parted curtains."}
+META = {"name": "Undercut Curtains", "gender": "male", "description": "A clipped undercut beneath long centre-parted curtains."}
 
 
 def build(g):

@@ -2,6 +2,7 @@
   "id": "t03_arcanist_longcoat",
   "kind": "top",
   "name": "Arcanist Longcoat",
+  "gender": "male",
   "texture": "tops/t03_arcanist_longcoat.png",
   "extrasHeight": 48,
   "tags": [

@@ -3,6 +3,7 @@ from kit import SIDES, footwear, leg_ring, legs, waistband
 
 META = {
     "name": "Striped Stockings & Breeches",
+    "gender": "male",
     "description": "Short puffed breeches with accent knee bands over cheerfully striped stockings and buckled shoes.",
     "tags": ["casual", "whimsical"],
 }

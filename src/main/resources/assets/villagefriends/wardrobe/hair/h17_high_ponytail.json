@@ -2,6 +2,7 @@
   "id": "h17_high_ponytail",
   "kind": "hair",
   "name": "High Ponytail",
+  "gender": "male",
   "texture": "hair/h17_high_ponytail.png",
   "extrasHeight": 16,
   "tags": [],

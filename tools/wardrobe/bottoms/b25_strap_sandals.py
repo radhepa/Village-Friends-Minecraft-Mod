@@ -4,6 +4,7 @@ from paint import strip_fabric
 
 META = {
     "name": "Summer Trousers & Sandals",
+    "gender": "male",
     "description": "Light trousers rolled to mid-calf, bare ankles and leather strap sandals.",
     "tags": ["casual", "relaxed", "simple"],
     "rejects": ["armor"],

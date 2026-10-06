@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Hooded Wool Poncho",
+    "gender": "male",
     "description": "A hand-woven striped poncho draped over the shoulders, fringed at the hem, hood lying back.",
     "tags": ["casual", "rugged"],
 }

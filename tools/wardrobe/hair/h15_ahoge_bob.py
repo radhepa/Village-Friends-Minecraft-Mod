@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, ring_shell
 from paint import scalp
 
-META = {"name": "Ahoge Bob", "description": "A rounded bob with soft bangs and one stubborn strand standing up."}
+META = {"name": "Ahoge Bob", "gender": "male", "description": "A rounded bob with soft bangs and one stubborn strand standing up."}
 
 
 def build(g):

@@ -2,6 +2,7 @@
   "id": "h04_tousled_crop",
   "kind": "hair",
   "name": "Tousled Crop",
+  "gender": "male",
   "texture": "hair/h04_tousled_crop.png",
   "extrasHeight": 16,
   "tags": [],

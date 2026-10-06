@@ -4,6 +4,7 @@ from paint import k, line, solid
 
 META = {
     "name": "Woodsman's Wrap Jacket",
+    "gender": "male",
     "description": "A wrap-front wool jacket tied at the waist, sleeves turned back, a leather patch on the shoulder.",
     "tags": ["casual", "rugged", "work"],
     "covers_waist": True,

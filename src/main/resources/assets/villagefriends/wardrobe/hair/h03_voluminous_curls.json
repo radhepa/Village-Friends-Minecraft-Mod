@@ -2,6 +2,7 @@
   "id": "h03_voluminous_curls",
   "kind": "hair",
   "name": "Voluminous Curls",
+  "gender": "male",
   "texture": "hair/h03_voluminous_curls.png",
   "extrasHeight": 48,
   "tags": [],

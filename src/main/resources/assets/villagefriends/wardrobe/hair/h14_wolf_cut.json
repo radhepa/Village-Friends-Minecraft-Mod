@@ -2,6 +2,7 @@
   "id": "h14_wolf_cut",
   "kind": "hair",
   "name": "Wolf Cut",
+  "gender": "male",
   "texture": "hair/h14_wolf_cut.png",
   "extrasHeight": 32,
   "tags": [],

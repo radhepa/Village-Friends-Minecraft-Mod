@@ -2,6 +2,7 @@
   "id": "b28_leather_chaps",
   "kind": "bottom",
   "name": "Leather Chaps",
+  "gender": "male",
   "texture": "bottoms/b28_leather_chaps.png",
   "extrasHeight": 16,
   "tags": [

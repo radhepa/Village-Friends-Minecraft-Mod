@@ -1,7 +1,7 @@
 """Top Knot: hair drawn up into a knot at the crown, bound with a metal band, temple strands loose."""
 from paint import hair_box, k, scalp, shell, solid
 
-META = {"name": "Top Knot", "description": "Pulled up into a crown knot with a metal band; two loose strands at the temples."}
+META = {"name": "Top Knot", "gender": "male", "description": "Pulled up into a crown knot with a metal band; two loose strands at the temples."}
 
 
 def build(g):

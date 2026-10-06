@@ -4,6 +4,7 @@ from paint import fabric, k, solid
 
 META = {
     "name": "Tavern Shirt & Half-Apron",
+    "gender": "male",
     "description": "Sleeve garters, a long half-apron tied at the waist and a serving towel over one shoulder.",
     "tags": ["casual", "work"],
     "covers_waist": True,

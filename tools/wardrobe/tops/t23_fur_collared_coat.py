@@ -4,6 +4,7 @@ from paint import rnd, solid
 
 META = {
     "name": "Fur-Collared Coat",
+    "gender": "male",
     "description": "A thick wool traveling coat with a heavy fur collar, toggle fastenings and fur-trimmed cuffs.",
     "tags": ["casual", "rugged"],
     "covers_waist": True,

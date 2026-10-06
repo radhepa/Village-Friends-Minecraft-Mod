@@ -2,6 +2,7 @@
   "id": "b13_tartan_trews",
   "kind": "bottom",
   "name": "Tartan Trews",
+  "gender": "male",
   "texture": "bottoms/b13_tartan_trews.png",
   "extrasHeight": 16,
   "tags": [

@@ -2,6 +2,7 @@
   "id": "b17_side_laced_leather",
   "kind": "bottom",
   "name": "Side-Laced Leather Trousers",
+  "gender": "male",
   "texture": "bottoms/b17_side_laced_leather.png",
   "extrasHeight": 0,
   "tags": [

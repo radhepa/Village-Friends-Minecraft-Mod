@@ -2,6 +2,7 @@
   "id": "t29_satchel_overshirt",
   "kind": "top",
   "name": "Satchel & Overshirt",
+  "gender": "male",
   "texture": "tops/t29_satchel_overshirt.png",
   "extrasHeight": 16,
   "tags": [

@@ -3,6 +3,7 @@ from kit import footwear, legs, waistband
 
 META = {
     "name": "Quilted Trousers",
+    "gender": "male",
     "description": "Warm, diamond-quilted padded trousers over plain leather boots.",
     "tags": ["casual", "sturdy", "martial"],
 }

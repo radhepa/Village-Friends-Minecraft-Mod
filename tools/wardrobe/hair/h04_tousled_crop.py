@@ -1,7 +1,7 @@
 """Tousled Crop: short, textured and tidy at the sides, with a ruffled top and a little fringe."""
 from paint import hair_box, scalp, shell
 
-META = {"name": "Tousled Crop", "description": "A short textured crop with ruffled tufts and a light fringe."}
+META = {"name": "Tousled Crop", "gender": "male", "description": "A short textured crop with ruffled tufts and a light fringe."}
 
 TUFTS = [(-2.4, -2.2, 14, 10), (.4, -2.6, -12, -6), (2.6, -1.0, 6, -16), (-2.6, .8, -6, 18),
          (.2, .4, 10, 4), (2.0, 2.4, -14, -10), (-1.0, 2.8, -18, 8)]

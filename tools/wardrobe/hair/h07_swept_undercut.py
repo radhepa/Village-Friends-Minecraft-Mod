@@ -1,7 +1,7 @@
 """Swept Undercut: clipped sides and a long top combed back into a lifted quiff."""
 from paint import hair_box, k, rnd, scalp, shell
 
-META = {"name": "Swept Undercut", "description": "Close-clipped sides under a long top swept back into a quiff."}
+META = {"name": "Swept Undercut", "gender": "male", "description": "Close-clipped sides under a long top swept back into a quiff."}
 
 
 def build(g):

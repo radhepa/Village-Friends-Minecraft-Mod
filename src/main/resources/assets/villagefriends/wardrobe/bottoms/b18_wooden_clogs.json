@@ -2,6 +2,7 @@
   "id": "b18_wooden_clogs",
   "kind": "bottom",
   "name": "Wool Trousers & Clogs",
+  "gender": "male",
   "texture": "bottoms/b18_wooden_clogs.png",
   "extrasHeight": 16,
   "tags": [

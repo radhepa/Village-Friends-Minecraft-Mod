@@ -2,6 +2,7 @@
   "id": "b06_rolled_canvas",
   "kind": "bottom",
   "name": "Rolled Canvas",
+  "gender": "male",
   "texture": "bottoms/b06_rolled_canvas.png",
   "extrasHeight": 16,
   "tags": [

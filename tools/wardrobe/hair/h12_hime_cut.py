@@ -2,7 +2,7 @@
 from anime import cel_box, ring_shell
 from paint import scalp
 
-META = {"name": "Hime Cut", "description": "Blunt bangs, straight cheek-length sidelocks and long sleek hair down the back."}
+META = {"name": "Hime Cut", "gender": "male", "description": "Blunt bangs, straight cheek-length sidelocks and long sleek hair down the back."}
 
 
 def build(g):

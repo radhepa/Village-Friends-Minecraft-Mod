@@ -3,6 +3,7 @@ from kit import SIDES, footwear, legs, waistband
 
 META = {
     "name": "Embroidered Hem Trousers",
+    "gender": "male",
     "description": "Loose trousers with broad embroidered bands at the hem and waist, over soft boots.",
     "tags": ["casual", "fancy"],
 }

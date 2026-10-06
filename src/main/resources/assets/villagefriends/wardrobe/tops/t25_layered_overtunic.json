@@ -2,6 +2,7 @@
   "id": "t25_layered_overtunic",
   "kind": "top",
   "name": "Layered Overtunic",
+  "gender": "male",
   "texture": "tops/t25_layered_overtunic.png",
   "extrasHeight": 16,
   "tags": [

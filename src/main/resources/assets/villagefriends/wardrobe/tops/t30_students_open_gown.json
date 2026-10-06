@@ -2,6 +2,7 @@
   "id": "t30_students_open_gown",
   "kind": "top",
   "name": "Student's Open Gown",
+  "gender": "male",
   "texture": "tops/t30_students_open_gown.png",
   "extrasHeight": 32,
   "tags": [

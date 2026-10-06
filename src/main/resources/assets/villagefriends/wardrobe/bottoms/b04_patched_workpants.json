@@ -2,6 +2,7 @@
   "id": "b04_patched_workpants",
   "kind": "bottom",
   "name": "Patched Workpants",
+  "gender": "male",
   "texture": "bottoms/b04_patched_workpants.png",
   "extrasHeight": 0,
   "tags": [

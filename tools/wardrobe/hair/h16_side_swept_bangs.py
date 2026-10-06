@@ -2,7 +2,7 @@
 from anime import back_fan, lock, ring_shell, sidelocks
 from paint import scalp
 
-META = {"name": "Side-Swept Bangs", "description": "Long pointed bangs swept across the brow, short pointed layers behind."}
+META = {"name": "Side-Swept Bangs", "gender": "male", "description": "Long pointed bangs swept across the brow, short pointed layers behind."}
 
 
 def build(g):

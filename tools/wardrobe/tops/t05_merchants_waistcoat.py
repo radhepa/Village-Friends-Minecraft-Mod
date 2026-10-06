@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Merchant's Waistcoat",
+    "gender": "male",
     "description": "Double-breasted velvet waistcoat with a pocket-watch chain over a billowing shirt and cravat.",
     "tags": ["tailored", "fancy"],
 }

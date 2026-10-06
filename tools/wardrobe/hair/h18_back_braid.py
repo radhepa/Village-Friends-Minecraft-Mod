@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, ring_shell, sidelocks
 from paint import k, scalp, solid
 
-META = {"name": "Back Braid", "description": "A long plaited braid down the back with a ribbon tie and pointed bangs."}
+META = {"name": "Back Braid", "gender": "male", "description": "A long plaited braid down the back with a ribbon tie and pointed bangs."}
 
 
 def build(g):

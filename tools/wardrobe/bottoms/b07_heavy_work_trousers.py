@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Heavy Work Trousers",
+    "gender": "male",
     "description": "Heavy twill with stitched knee pads, steel-toed boots, a wide belt and a hammer at the hip.",
     "tags": ["work", "sturdy"],
 }

@@ -2,6 +2,7 @@
   "id": "t22_tavern_shirt_apron",
   "kind": "top",
   "name": "Tavern Shirt & Half-Apron",
+  "gender": "male",
   "texture": "tops/t22_tavern_shirt_apron.png",
   "extrasHeight": 32,
   "tags": [

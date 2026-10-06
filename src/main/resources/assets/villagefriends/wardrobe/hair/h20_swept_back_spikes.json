@@ -2,6 +2,7 @@
   "id": "h20_swept_back_spikes",
   "kind": "hair",
   "name": "Swept-Back Spikes",
+  "gender": "male",
   "texture": "hair/h20_swept_back_spikes.png",
   "extrasHeight": 32,
   "tags": [],

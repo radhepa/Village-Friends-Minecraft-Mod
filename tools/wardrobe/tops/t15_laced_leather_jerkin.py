@@ -4,6 +4,7 @@ from paint import fabric, k, solid
 
 META = {
     "name": "Laced Leather Jerkin",
+    "gender": "male",
     "description": "Sleeveless dyed-suede jerkin, laced up the front, pointed tabs at the hem, over a full shirt.",
     "tags": ["casual", "rugged"],
 }

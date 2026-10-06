@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Arcanist Longcoat",
+    "gender": "male",
     "description": "Clasped velvet longcoat, trimmed shoulder mantle, bell cuffs, sash and split skirts.",
     "tags": ["robe", "scholarly"],
     "covers_waist": True,

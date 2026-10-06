@@ -4,6 +4,7 @@ from paint import fabric, grid, k, solid
 
 META = {
     "name": "Clasped Half-Cloak",
+    "gender": "male",
     "description": "A short wool cloak over the shoulders, fastened with a brooch, over a belted tunic.",
     "tags": ["casual", "rugged"],
     "covers_waist": True,

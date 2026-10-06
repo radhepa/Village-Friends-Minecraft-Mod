@@ -3,6 +3,7 @@ from kit import SIDES, footwear, legs, waistband
 
 META = {
     "name": "Side-Laced Leather Trousers",
+    "gender": "male",
     "description": "Supple leather trousers laced up the outer seam with pale cord, over tall boots.",
     "tags": ["rugged", "sturdy", "casual"],
 }

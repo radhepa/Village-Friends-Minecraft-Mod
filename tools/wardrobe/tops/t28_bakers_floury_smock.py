@@ -4,6 +4,7 @@ from paint import rnd, solid
 
 META = {
     "name": "Baker's Floury Smock",
+    "gender": "male",
     "description": "A buttoned baker's smock, dusted with flour, a knotted kerchief and a wooden spoon in the pocket.",
     "tags": ["casual", "work"],
 }

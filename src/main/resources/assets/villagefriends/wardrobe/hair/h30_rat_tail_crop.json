@@ -2,6 +2,7 @@
   "id": "h30_rat_tail_crop",
   "kind": "hair",
   "name": "Rat-Tail Crop",
+  "gender": "male",
   "texture": "hair/h30_rat_tail_crop.png",
   "extrasHeight": 16,
   "tags": [],

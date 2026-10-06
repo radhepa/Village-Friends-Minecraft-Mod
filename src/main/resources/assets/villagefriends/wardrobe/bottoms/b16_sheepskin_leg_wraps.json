@@ -2,6 +2,7 @@
   "id": "b16_sheepskin_leg_wraps",
   "kind": "bottom",
   "name": "Sheepskin Leg Wraps",
+  "gender": "male",
   "texture": "bottoms/b16_sheepskin_leg_wraps.png",
   "extrasHeight": 16,
   "tags": [

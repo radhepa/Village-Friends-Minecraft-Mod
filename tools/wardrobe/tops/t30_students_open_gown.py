@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Student's Open Gown",
+    "gender": "male",
     "description": "A long, open scholar's gown with wide bell sleeves and an accent-faced collar over a tunic.",
     "tags": ["scholarly", "robe"],
 }

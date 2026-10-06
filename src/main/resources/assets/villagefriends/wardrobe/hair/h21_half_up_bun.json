@@ -2,6 +2,7 @@
   "id": "h21_half_up_bun",
   "kind": "hair",
   "name": "Half-Up Bun",
+  "gender": "male",
   "texture": "hair/h21_half_up_bun.png",
   "extrasHeight": 32,
   "tags": [],

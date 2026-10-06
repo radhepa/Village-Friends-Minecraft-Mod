@@ -3,6 +3,7 @@ from paint import fabric, k, rnd, strip_fabric
 
 META = {
     "name": "Pinstripe Trousers",
+    "gender": "male",
     "description": "Pressed pinstriped trousers with a buttoned waistband and polished buckle shoes.",
     "tags": ["tailored", "fancy"],
 }

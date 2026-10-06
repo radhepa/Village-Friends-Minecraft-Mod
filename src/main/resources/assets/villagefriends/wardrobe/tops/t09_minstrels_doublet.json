@@ -2,6 +2,7 @@
   "id": "t09_minstrels_doublet",
   "kind": "top",
   "name": "Minstrel's Doublet",
+  "gender": "male",
   "texture": "tops/t09_minstrels_doublet.png",
   "extrasHeight": 32,
   "tags": [

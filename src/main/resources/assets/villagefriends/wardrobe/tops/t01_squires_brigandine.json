@@ -2,6 +2,7 @@
   "id": "t01_squires_brigandine",
   "kind": "top",
   "name": "Squire's Brigandine",
+  "gender": "male",
   "texture": "tops/t01_squires_brigandine.png",
   "extrasHeight": 32,
   "tags": [

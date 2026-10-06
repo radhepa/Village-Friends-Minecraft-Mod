@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Knee Breeches & Buckle Shoes",
+    "gender": "male",
     "description": "Tailored breeches buckled below the knee, pale stockings and polished buckle shoes.",
     "tags": ["fancy", "tailored"],
 }

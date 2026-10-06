@@ -2,6 +2,7 @@
   "id": "b19_striped_stockings",
   "kind": "bottom",
   "name": "Striped Stockings & Breeches",
+  "gender": "male",
   "texture": "bottoms/b19_striped_stockings.png",
   "extrasHeight": 16,
   "tags": [

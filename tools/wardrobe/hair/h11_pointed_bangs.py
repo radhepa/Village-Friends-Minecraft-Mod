@@ -2,7 +2,7 @@
 from anime import back_fan, bangs, ring_shell, spike
 from paint import scalp
 
-META = {"name": "Pointed Bangs", "description": "Anime-style fringe of tapered points, a lifted crown and a pointed nape."}
+META = {"name": "Pointed Bangs", "gender": "male", "description": "Anime-style fringe of tapered points, a lifted crown and a pointed nape."}
 
 
 def build(g):

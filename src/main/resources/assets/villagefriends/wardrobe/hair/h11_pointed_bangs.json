@@ -2,6 +2,7 @@
   "id": "h11_pointed_bangs",
   "kind": "hair",
   "name": "Pointed Bangs",
+  "gender": "male",
   "texture": "hair/h11_pointed_bangs.png",
   "extrasHeight": 32,
   "tags": [],

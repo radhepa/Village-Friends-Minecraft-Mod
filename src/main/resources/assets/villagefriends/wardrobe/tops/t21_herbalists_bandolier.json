@@ -2,6 +2,7 @@
   "id": "t21_herbalists_bandolier",
   "kind": "top",
   "name": "Herbalist's Bandolier",
+  "gender": "male",
   "texture": "tops/t21_herbalists_bandolier.png",
   "extrasHeight": 16,
   "tags": [

@@ -2,6 +2,7 @@
   "id": "b01_plated_greaves",
   "kind": "bottom",
   "name": "Plated Greaves",
+  "gender": "male",
   "texture": "bottoms/b01_plated_greaves.png",
   "extrasHeight": 16,
   "tags": [

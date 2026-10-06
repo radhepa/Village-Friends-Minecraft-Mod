@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, ring_shell
 from paint import scalp
 
-META = {"name": "Sleepy Fluff", "description": "Soft, tousled fluff in rounded tufts, as if just out of bed."}
+META = {"name": "Sleepy Fluff", "gender": "male", "description": "Soft, tousled fluff in rounded tufts, as if just out of bed."}
 
 TUFTS = [(-2.8, -9.0, -2.4, 20, 0, 30), (-.4, -9.4, -2.8, 30, 0, -10), (2.2, -9.1, -2.2, 18, 0, -34), (-3.4, -8.8, .6, 0, 0, 48),
          (-.8, -9.6, .2, -10, 0, 16), (1.8, -9.4, .6, -14, 0, -22), (3.6, -8.6, 1.2, 0, 0, -50), (-2.0, -9.0, 3.0, -36, 0, 18),

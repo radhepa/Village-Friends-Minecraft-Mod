@@ -2,6 +2,7 @@
   "id": "h01_spiky_layered",
   "kind": "hair",
   "name": "Spiky Layered",
+  "gender": "male",
   "texture": "hair/h01_spiky_layered.png",
   "extrasHeight": 32,
   "tags": [],

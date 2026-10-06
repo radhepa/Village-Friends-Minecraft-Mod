@@ -2,6 +2,7 @@
   "id": "b30_embroidered_hem_trousers",
   "kind": "bottom",
   "name": "Embroidered Hem Trousers",
+  "gender": "male",
   "texture": "bottoms/b30_embroidered_hem_trousers.png",
   "extrasHeight": 0,
   "tags": [

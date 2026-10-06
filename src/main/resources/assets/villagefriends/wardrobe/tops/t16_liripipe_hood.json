@@ -2,6 +2,7 @@
   "id": "t16_liripipe_hood",
   "kind": "top",
   "name": "Liripipe Hood",
+  "gender": "male",
   "texture": "tops/t16_liripipe_hood.png",
   "extrasHeight": 32,
   "tags": [

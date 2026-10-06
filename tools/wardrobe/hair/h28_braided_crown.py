@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, ring_shell, sidelocks
 from paint import scalp
 
-META = {"name": "Braided Crown", "description": "A plait circling the head like a crown, with wispy bangs and loose sidelocks."}
+META = {"name": "Braided Crown", "gender": "male", "description": "A plait circling the head like a crown, with wispy bangs and loose sidelocks."}
 
 
 def build(g):

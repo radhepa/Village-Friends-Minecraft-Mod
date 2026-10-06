@@ -2,6 +2,7 @@
   "id": "b03_scholars_slacks",
   "kind": "bottom",
   "name": "Scholar's Slacks",
+  "gender": "male",
   "texture": "bottoms/b03_scholars_slacks.png",
   "extrasHeight": 16,
   "tags": [

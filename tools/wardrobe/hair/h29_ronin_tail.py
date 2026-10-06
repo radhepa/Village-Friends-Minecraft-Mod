@@ -2,7 +2,7 @@
 from anime import back_fan, bangs, cel_box, lock, ring_shell, sidelocks
 from paint import scalp, solid
 
-META = {"name": "Ronin Tail", "description": "Long hair loosely tied far down the back, with messy pointed bangs."}
+META = {"name": "Ronin Tail", "gender": "male", "description": "Long hair loosely tied far down the back, with messy pointed bangs."}
 
 
 def build(g):

@@ -4,6 +4,7 @@ from paint import fabric, rnd, solid
 
 META = {
     "name": "Sheepskin Vest",
+    "gender": "male",
     "description": "A shepherd's leather vest with fleece curling out at the collar, armholes and hem.",
     "tags": ["casual", "rugged"],
 }
