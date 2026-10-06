@@ -257,6 +257,19 @@ def cornrow(g, pid: str, pivot, length: int, rotation=(0, 0, 0), width: int = 1,
     return box
 
 
+def cornrow_path(g, pid: str, start, segments, width: int = 1, seed: int = 0, base: int = 2, overlap: float = .3):
+    """A cornrow lying on top of the head that bends as it runs: segments are (length, yaw), the yaw
+    turning the braid left or right of straight back (0)."""
+    x, y, z = start
+    boxes = []
+    for i, (length, yaw) in enumerate(segments):
+        boxes.append(cornrow(g, f"{pid}_{i}", (x, y, z), length, rotation=(0, yaw, 0), width=width, seed=seed + i * 5,
+                             base=base, phase=i))
+        reach = length - overlap
+        x, z = x + math.sin(math.radians(yaw)) * reach, z + math.cos(math.radians(yaw)) * reach
+    return boxes
+
+
 def tie(g, pid: str, pivot, size, rotation=(0, 0, 0), origin=None, role: str = "L", inflate: float = .12,
         motion: str = "none", seed: int = 0):
     """A band, cord or ribbon wrap in an outfit role (leather by default) with a lit upper edge."""
