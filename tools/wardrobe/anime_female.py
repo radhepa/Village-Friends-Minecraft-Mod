@@ -224,33 +224,92 @@ def tie(g, pid, pivot, rotation=(0, 0, 0), size=(2, 1, 2), y=0.0, role="A", base
     return box
 
 
-def braid(g, pid, pivot, rotation=(0, 0, 0), count=6, w=2, d=2, h=2, step=1.8, shift=.45, seed=0, base=2,
-          motion="sway", start=0.0, taper=None, tie_role="A", tail=((2, 2), (1, 1)), inflate=0.0):
-    """A plait: lobes alternate side to side down local +y, then an optional tie and a pointed tail.
-    taper: index from which lobes lose one texel of width."""
-    boxes = []
-    y = start
-    ww = w
-    for i in range(count):
+# -- bent chains -----------------------------------------------------------------------------
+def local(pivot, rotation, point):
+    """A bone-local point expressed in a piece's rotated frame (the inverse of `world`)."""
+    m = rot_matrix(*rotation)
+    rel = [point[i] - pivot[i] for i in range(3)]
+    return [sum(m[r][c] * rel[r] for r in range(3)) for c in range(3)]
+
+
+def axis(rotation):
+    """The direction a piece's local +y points after its rotation."""
+    m = rot_matrix(*rotation)
+    return [m[r][1] for r in range(3)]
+
+
+def _step(at, rotation, dist):
+    a = axis(rotation)
+    return [at[i] + a[i] * dist for i in range(3)]
+
+
+def link(g, pid, pivot, at, rotation, size, motion="none", dx=0.0, inflate=0.0):
+    """A box whose top centre sits at bone-local point `at`, turned by `rotation` but pivoting on the chain's
+    root `pivot`, so every link of a bent chain swings together."""
+    w, h, d = size
+    lx, ly, lz = local(pivot, rotation, at)
+    return g.piece(pid, "HEAD", (lx - w / 2 + dx, ly, lz - d / 2), size, pivot=pivot, rotation=rotation, motion=motion,
+                   inflate=inflate)
+
+
+def curve(g, pid, pivot, segs, depth=1, seed=0, base=2, ring=1, motion="none", texture="cel", start=None, overlap=.5, ry=0.0):
+    """A bent lock: segs are (w, h, rx, rz) or (w, h, rx, rz, d). Each segment leans its own way and starts
+    where the last one ended, overlapping it a little so bends never open; all share the root pivot.
+    Returns (boxes, end point, last rotation)."""
+    at = list(start or pivot)
+    boxes, rot = [], (0, ry, 0)
+    for i, seg in enumerate(segs):
+        w, h, rx, rz = seg[:4]
+        d = seg[4] if len(seg) > 4 else depth
+        rot = (rx, ry, rz)
+        box = link(g, f"{pid}_{i}", pivot, at, rot, (w, h, d), motion)
+        paint(box, texture, seed + i * 7, base, ring if i == 0 else None, 1 if i == 0 else 0)
+        boxes.append(box)
+        at = _step(at, rot, h - (overlap if i < len(segs) - 1 else 0))
+    return boxes, at, rot
+
+
+def plait_path(g, pid, pivot, angles, w=2, d=2, h=2, step=1.8, shift=.45, seed=0, base=2, motion="sway", start=None,
+               ry=0.0, taper=None):
+    """Braid lobes alternating side to side along a bent path: angles gives one (rx, rz) per lobe.
+    Returns (boxes, end point, last rotation, last lobe width)."""
+    at = list(start or pivot)
+    boxes, rot, ww = [], (0, ry, 0), w
+    for i, (rx, rz) in enumerate(angles):
+        rot = (rx, ry, rz)
         ww = w if taper is None or i < taper else max(1, w - 1)
-        dx = shift if i % 2 == 0 else -shift
-        box = g.piece(f"{pid}_{i}", "HEAD", (dx - ww / 2, y, -d / 2), (ww, h, d), pivot=pivot, rotation=rotation,
-                      motion=motion, inflate=inflate)
+        box = link(g, f"{pid}_{i}", pivot, at, rot, (ww, h, d), motion, dx=shift if i % 2 == 0 else -shift)
         paint(box, "plait", seed + i, base, flip=bool(i % 2))
         boxes.append(box)
-        y += step
-    y = start + (count - 1) * step + h
+        at = _step(at, rot, step)
+    return boxes, _step(at, rot, h - step), rot, ww
+
+
+def finish(g, pid, pivot, at, rotation, w=2, d=2, tie_role="A", tail=((2, 2), (1, 1)), motion="sway", seed=0, base=2):
+    """Tie off a braid or tail at `at`: an optional band in a palette role, then a pointed brush of hair."""
+    boxes = []
     if tie_role:
-        boxes.append(tie(g, f"{pid}_tie", pivot, rotation, (ww, 1, d), y - .3, tie_role, motion=motion))
-        y += .7
-    if tail:
-        for j, (tw, th) in enumerate(tail):
-            box = g.piece(f"{pid}_tail_{j}", "HEAD", (-tw / 2, y, -min(d, tw) / 2), (tw, th, min(d, tw)), pivot=pivot,
-                          rotation=rotation, motion=motion)
-            paint(box, "cel", seed + 40 + j, base, None, 0)
-            boxes.append(box)
-            y += th
+        band = link(g, f"{pid}_tie", pivot, _step(at, rotation, -.3), rotation, (w, 1, d), motion, inflate=.12)
+        solid(band, tie_role, "plain", 0, 2, edge=False)
+        for f in band.sides:
+            f.hline(0, f.w - 1, 0, k(tie_role, 3))
+        boxes.append(band)
+        at = _step(at, rotation, .7)
+    for j, (tw, th) in enumerate(tail or ()):
+        box = link(g, f"{pid}_tail_{j}", pivot, at, rotation, (tw, th, min(d, tw)), motion)
+        paint(box, "cel", seed + 40 + j, base, None, 0)
+        boxes.append(box)
+        at = _step(at, rotation, th)
     return boxes
+
+
+def braid(g, pid, pivot, rotation=(0, 0, 0), count=6, w=2, d=2, h=2, step=1.8, shift=.45, seed=0, base=2,
+          motion="sway", taper=None, tie_role="A", tail=((2, 2), (1, 1))):
+    """A straight plait hanging along `rotation` from the pivot, tied off with a pointed tail."""
+    rx, ry, rz = rotation
+    boxes, end, rot, ww = plait_path(g, pid, pivot, [(rx, rz)] * count, w, d, h, step, shift, seed, base, motion, ry=ry,
+                                     taper=taper)
+    return boxes + finish(g, pid, pivot, end, rot, ww, d, tie_role, tail, motion, seed, base)
 
 
 def wrap_face(face, seed, base=2):
@@ -366,6 +425,18 @@ def flower(g, pid, center, facing="side", petal="A", core="S", size=3):
 
 
 # -- scalp details ---------------------------------------------------------------------------
+def swept_sides(g, ear_from=3, ear_depth=4, base=2):
+    """For hair pulled back: after scalp(side_rows=8), bare the ear and jaw at the front of each side and keep
+    the hair behind them combed to the nape, with a soft shaded edge where it is drawn back."""
+    head = g.part("head")
+    for face, front_is_high in ((head.right, True), (head.left, False)):
+        for y in range(ear_from, 8):
+            for x in range(8):
+                dfront = 7 - x if front_is_high else x
+                if dfront < ear_depth - (1 if y >= 6 else 0):
+                    face.set(x, y, None)
+                elif dfront == ear_depth - (1 if y >= 6 else 0):
+                    face.set(x, y, k("H", base - 1))
 def combed(face, columns, base=2, rows=None):
     """Combed lines: alternating light and shaded columns, for sleek pulled-back hair."""
     for y in (rows if rows is not None else range(face.h)):
