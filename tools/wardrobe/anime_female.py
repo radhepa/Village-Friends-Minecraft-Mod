@@ -17,6 +17,8 @@ Textures (all paint every texel of a box):
 """
 from __future__ import annotations
 
+import math
+
 from anime import cel_box
 from paint import curls_face, k, rnd, solid
 from wardrobe import rot_matrix
@@ -300,6 +302,48 @@ def finish(g, pid, pivot, at, rotation, w=2, d=2, tie_role="A", tail=((2, 2), (1
         paint(box, "cel", seed + 40 + j, base, None, 0)
         boxes.append(box)
         at = _step(at, rotation, th)
+    return boxes
+
+
+def _sample(points, spacing):
+    """Evenly spaced points along a Catmull-Rom curve through `points`, with their unit tangents."""
+    pts = [points[0]] + list(points) + [points[-1]]
+    dense = []
+    for i in range(1, len(pts) - 2):
+        p0, p1, p2, p3 = pts[i - 1], pts[i], pts[i + 1], pts[i + 2]
+        for s in range(12):
+            t = s / 12
+            dense.append(tuple(.5 * (2 * p1[j] + (-p0[j] + p2[j]) * t + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * t * t
+                                     + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * t ** 3) for j in range(3)))
+    dense.append(tuple(points[-1]))
+    out, carry = [], 0.0
+    for a, b in zip(dense, dense[1:]):
+        seg = math.dist(a, b)
+        while seg > 1e-9 and carry <= seg:
+            t = carry / seg
+            p = tuple(a[j] + (b[j] - a[j]) * t for j in range(3))
+            out.append((p, tuple((b[j] - a[j]) / seg for j in range(3))))
+            carry += spacing
+        carry -= seg
+    return out
+
+
+def aim(direction):
+    """(rx, rz) turning a piece's local +y onto `direction`."""
+    dx, dy, dz = direction
+    return math.degrees(math.asin(max(-1, min(1, dz)))), math.degrees(math.atan2(-dx, dy))
+
+
+def plait_along(g, pid, points, w=2, d=2, h=2, spacing=1.8, seed=0, base=2, shift=.3, texture="plait"):
+    """A static braid laid along a curve through `points` (crowns, coronets, pinned-up plaits): each lobe is
+    centred on the curve, turned along it and nudged to alternate sides."""
+    boxes = []
+    for i, (p, t) in enumerate(_sample(points, spacing)):
+        rx, rz = aim(t)
+        box = g.piece(f"{pid}_{i}", "HEAD", (-w / 2 + (shift if i % 2 else -shift), -h / 2, -d / 2), (w, h, d), pivot=p,
+                      rotation=(rx, 0, rz))
+        paint(box, texture, seed + i, base, flip=bool(i % 2))
+        boxes.append(box)
     return boxes
 
 
