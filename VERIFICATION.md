@@ -1,3 +1,13 @@
+# Starlit and Soft Glint faces verification (unreleased)
+
+Verified October 7, 2026 on Linux with Minecraft 26.3, Fabric 0.19.5 and Java 25, rendering in software (Mesa llvmpipe) under Xvfb. SDL asks for an sRGB-capable framebuffer that Xvfb does not offer, so the client ran with `SDL_OPENGL_FORCE_SRGB_FRAMEBUFFER=skip`.
+
+- All 66 unit tests passed. `HandcraftedFaceTest` checks the even, lifelong split between Starlit and Soft Glint eyes, feminine details for women and a mix for non-binary residents, lashes that sweep from the eye's top to its bottom, wings that join the closed lash, brows clear of the lashes, and eye, lip and blush colors derived from the resident's own face.
+- `runClientGameTest -PhairFacesOnly` passed for all 130 hairstyles on six complexions, alternating men and women and both eye styles. It covered the protected eye row, every face swatch, irises and pupils trimmed to the eye while glancing, lashes following the blink, wings, brows, lips and blush by gender, sleep, death, helmets and children.
+- `-PanimationsOnly`, `-PanimationPack` (prayer closes the eyes; reading keeps irises inside the eye) and `-PoutfitsOnly` (palette lock on every baked texel outside the skin and face swatches, 180 outfits) passed.
+- `python tools/wardrobe/wardrobe.py --check` reports 11 hair JSON files as stale on Linux both before and after this change; they differ only in the last digit of some floating-point pivots.
+- Evidence: `build/run/clientGameTest/screenshots/0002_village-friends-living-eyes.png` and `0004_village-friends-expressive-portrait.png`.
+
 # Village Life animation pack verification (2.12.0)
 
 Verified October 6, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, first on the 2.10.1 base and again after merging the 2.11.0 wardrobes.
