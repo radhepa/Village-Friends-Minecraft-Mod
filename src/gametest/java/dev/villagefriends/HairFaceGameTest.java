@@ -18,7 +18,7 @@ import net.minecraft.world.item.Items;
 @SuppressWarnings("UnstableApiUsage")
 public final class HairFaceGameTest implements FabricClientGameTest {
     private static void check(boolean ok,String message) { if (!ok) throw new AssertionError(message); }
-    private static void near(float actual,float expected,String message) { check(Math.abs(actual-expected)<.0001F,message); }
+    private static void near(float actual,float expected,String message) { check(Math.abs(actual-expected)<.0001F,message+": "+actual+" vs "+expected); }
     private static Outfit outfit(int hair) {
         var t=Wardrobe.OUTFITS.getFirst();
         return new Outfit(hair%2==0?Gender.MALE:Gender.FEMALE,Profession.NONE,MasterPalettes.get(PaletteID.WASHED_INDIGO_AND_CREAM),Wardrobe.HAIR.get(hair),
@@ -58,6 +58,7 @@ public final class HairFaceGameTest implements FabricClientGameTest {
                     }
                     ResidentSkins.clear(); // six atlases per style; release them before the next of many styles
                     state.attention=1;state.eyeLookX=n%3==0?-.28F:.28F;state.eyeLookY=.12F;state.pose=Pose.STANDING;state.deathTime=0;state.motionSeed=n*7919;
+                    for (var layer:state.layers) layer.clear(); // clips close eyes too; AnimationPackGameTest covers them
                     var style=FaceDetails.eyeStyle(state.motionSeed);boolean starlit=style==FaceDetails.EyeStyle.STARLIT;
                     boolean feminine=FaceDetails.feminine(outfit.gender(),state.motionSeed);float top=FaceDetails.eyeTop(style);
                     for (float age=0;age<200;age+=.25F) {
