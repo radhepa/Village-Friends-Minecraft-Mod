@@ -9,3 +9,9 @@ previews/
 *.pyc
 __pycache__/
 .DS_Store
+
+# graphify: machine-specific paths, build intermediates and regenerable AST cache
+graphify-out/.graphify_*
+!graphify-out/.graphify_labels.json
+graphify-out/cache/ast/
+graphify-out/cache/stat-index.json

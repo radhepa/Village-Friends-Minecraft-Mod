@@ -1,0 +1,20 @@
+# Keep the knowledge graph about the mod's design: Java source, authoring tools and docs.
+# Compiled game assets and one-file-per-item data would bury the architecture.
+
+# Compiled resources (wardrobe PNG/JSON, textures, sounds, structures, animation packs)
+src/main/resources/assets/
+src/main/resources/data/
+
+# One module or JSON per wardrobe piece, building or name list; the shared kits stay in
+tools/wardrobe/hair/
+tools/wardrobe/tops/
+tools/wardrobe/bottoms/
+tools/village_blueprints/
+*.json
+!src/main/resources/fabric.mod.json
+!src/main/resources/villagefriends.mixins.json
+
+# Images, sounds and the knowledge graph itself
+*.png
+*.ogg
+graphify-out/
