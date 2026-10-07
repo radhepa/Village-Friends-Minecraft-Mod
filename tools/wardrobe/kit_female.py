@@ -105,7 +105,7 @@ MOTIFS = {
     "shell": [".a.", "aba", "aaa"],
     "lily": ["a.a", ".a.", "aba", ".c."],
     "acorn": [".c.", "aaa", ".a."],
-    "bee": ["b.b", "aca", ".a."],
+    "bee": ["b.b", "aca"],
     "eye": [".a.", "aMa", ".a."],
     "rune": ["a.", "aa", "a.", "a."],
     "drop": [".a.", "aba", "aaa"],
@@ -578,6 +578,20 @@ def hood_down(g, prefix: str, role: str, texture: str = "weave", seed: int = 0, 
                       motion="sway")
         solid(tip, role, texture, seed + 2, base)
     return hood
+
+
+def collar_flat(g, pid: str, role: str, base: int = 3, edge: str | None = None, texture: str = "plain"):
+    """A soft round collar lying flat on the shoulders, with a little drop at the front."""
+    ring = g.piece(pid, "TORSO", (-5, -.6, -3), (10, 1, 6), inflate=.05)
+    solid(ring, role, texture, 98, base, edge=False)
+    drop = g.piece(f"{pid}_front", "TORSO", (-3, 0, 0), (6, 2, 1), pivot=(0, .2, -2.85))
+    solid(drop, role, texture, 98, base)
+    if edge:
+        drop.front.hline(0, 5, 1, edge)
+        for face in ring.sides:
+            face.hline(0, face.w - 1, 0, edge)
+    drop.front.set(2, 0, k(role, base - 1)), drop.front.set(3, 0, k(role, base - 1))
+    return ring, drop
 
 
 def brooch(g, pid: str, pivot, size=(2, 2, 1), metal: str = "M", gem: str | None = "A2"):
