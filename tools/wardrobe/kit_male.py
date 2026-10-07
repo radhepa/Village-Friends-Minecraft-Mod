@@ -61,6 +61,15 @@ def lozenge(face, role: str, base: int = 2, step: int = 4, line_key: str | None 
                 face.set(x, y, k(role, base))
 
 
+def mail(face, role: str = "M", base: int = 2, rows=None, ox: int = 0):
+    """Riveted mail: little rings in offset rows, a lit upper edge and a shaded lower edge per ring."""
+    for y in rows if rows is not None else range(face.h):
+        for x in range(face.w):
+            cx, cy = (x + ox + (y // 2) % 2) % 2, y % 2
+            face.set(x, y, k(role, base + 1) if (cx, cy) == (0, 0) else k(role, base - 1) if (cx, cy) == (1, 1)
+                     else k(role, base))
+
+
 def ribbing(face, role: str, base: int = 2, rows=None, horizontal: bool = False):
     """Knitted ribs: alternating raised and sunken columns (or rows)."""
     for y in rows if rows is not None else range(face.h):
