@@ -1,0 +1,16 @@
+{
+  "id": "b63_lozenge_woven_trews",
+  "kind": "bottom",
+  "name": "Lozenge-Woven Trews",
+  "gender": "male",
+  "texture": "bottoms/b63_lozenge_woven_trews.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Close trews woven in a diamond twill with small accent lozenges, worn in soft ankle boots folded at the top."
+}

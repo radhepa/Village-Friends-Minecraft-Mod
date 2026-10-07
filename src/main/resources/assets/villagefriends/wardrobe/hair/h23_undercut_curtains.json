@@ -2,6 +2,7 @@
   "id": "h23_undercut_curtains",
   "kind": "hair",
   "name": "Undercut Curtains",
+  "gender": "male",
   "texture": "hair/h23_undercut_curtains.png",
   "extrasHeight": 32,
   "tags": [],

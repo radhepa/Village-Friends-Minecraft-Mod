@@ -2,6 +2,7 @@
   "id": "t11_belted_linen_tunic",
   "kind": "top",
   "name": "Belted Linen Tunic",
+  "gender": "male",
   "texture": "tops/t11_belted_linen_tunic.png",
   "extrasHeight": 16,
   "tags": [

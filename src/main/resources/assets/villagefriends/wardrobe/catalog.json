@@ -31,6 +31,11 @@
     "K2": "#2f251d",
     "K3": "#3c3026",
     "K4": "#4a3c30",
+    "D0": "#162640",
+    "D1": "#243a5f",
+    "D2": "#355280",
+    "D3": "#5578a7",
+    "D4": "#8ba7d0",
     "H0": "#3a2213",
     "H1": "#5c381f",
     "H2": "#80522d",
@@ -71,7 +76,107 @@
     "h27_wavy_layers",
     "h28_braided_crown",
     "h29_ronin_tail",
-    "h30_rat_tail_crop"
+    "h30_rat_tail_crop",
+    "h31_buzz_fringe",
+    "h32_crew_cut",
+    "h33_side_part_comb",
+    "h34_slicked_back",
+    "h35_pillow_bedhead",
+    "h36_shaved_crest",
+    "h37_bowl_cut",
+    "h38_wavy_crop",
+    "h39_mutton_chop_crop",
+    "h40_steppe_loops",
+    "h41_tight_curl_crop",
+    "h42_loose_ringlets",
+    "h43_afro_puff_fade",
+    "h44_sponge_coils",
+    "h45_hanging_twists",
+    "h46_short_locs",
+    "h47_straight_cornrows",
+    "h48_curved_cornrows",
+    "h49_long_box_braids",
+    "h50_tied_up_locs",
+    "h51_long_curly_mane",
+    "h52_curly_undercut",
+    "h53_messy_man_bun",
+    "h54_samurai_topknot",
+    "h55_warrior_tail",
+    "h56_half_up_tail",
+    "h57_low_nape_bun",
+    "h58_shoulder_braid",
+    "h59_temple_braids",
+    "h60_braided_crest",
+    "h61_long_tucked",
+    "h62_long_flowing_waves",
+    "h63_flipped_shoulder",
+    "h64_village_mullet",
+    "h65_wanderer_fringe",
+    "h66_page_boy",
+    "h67_long_side_fringe",
+    "h68_half_shaved_drape",
+    "h69_wild_mane",
+    "h70_brow_cord",
+    "h71_norse_side_braids",
+    "h72_monk_tonsure",
+    "h73_receding_swept",
+    "h74_horseshoe_balding",
+    "h75_elder_comb_over",
+    "h76_elder_long_wisps",
+    "h77_single_temple_braid",
+    "h78_widows_peak",
+    "h79_floppy_fringe",
+    "h80_frizzy_elder_tufts",
+    "hf01_very_long_straight",
+    "hf02_long_waves",
+    "hf03_long_ringlets",
+    "hf04_waist_length_layers",
+    "hf05_long_hime_headband",
+    "hf06_bound_hime_sidelocks",
+    "hf07_side_swept_long",
+    "hf08_wispy_low_ponytail",
+    "hf09_high_ponytail_scrunchie",
+    "hf10_side_ponytail",
+    "hf11_low_twin_tails",
+    "hf12_high_twin_tails",
+    "hf13_twin_braids",
+    "hf14_shoulder_plait",
+    "hf15_fishtail_braid",
+    "hf16_braided_headband",
+    "hf17_milkmaid_braids",
+    "hf18_braided_side_buns",
+    "hf19_low_chignon",
+    "hf20_high_bun",
+    "hf21_double_buns",
+    "hf22_messy_work_bun",
+    "hf23_half_up_ribbon",
+    "hf24_shoulder_bob",
+    "hf25_short_pixie",
+    "hf26_curly_bob",
+    "hf27_voluminous_curls",
+    "hf28_afro_puff",
+    "hf29_shoulder_coils",
+    "hf30_box_braids",
+    "hf31_short_locs",
+    "hf32_tucked_nape_twist",
+    "hf33_ribbon_bound_tail",
+    "hf34_flower_tucked_waves",
+    "hf35_wind_tousled",
+    "hf36_bathhouse_wet",
+    "hf37_noble_coiled_updo",
+    "hf38_shieldmaiden_side_braid",
+    "hf39_ranger_braid_back",
+    "hf40_elder_neat_bun",
+    "hf41_curtain_bang_shag",
+    "hf42_long_wolf_cut",
+    "hf43_layered_shag",
+    "hf44_modest_drill_curls",
+    "hf45_braided_high_tail",
+    "hf46_low_side_bun",
+    "hf47_snood_bun",
+    "hf48_rose_braid_half_up",
+    "hf49_headband_flip",
+    "hf50_asymmetric_bob"
   ],
   "tops": [
     "t01_squires_brigandine",
@@ -103,7 +208,157 @@
     "t27_woodsmans_wrap_jacket",
     "t28_bakers_floury_smock",
     "t29_satchel_overshirt",
-    "t30_students_open_gown"
+    "t30_students_open_gown",
+    "t31_farriers_split_apron",
+    "t32_millers_sack_pad_tunic",
+    "t33_netmenders_cork_vest",
+    "t34_falconers_gauntlet_jerkin",
+    "t35_coopers_pocket_bib_apron",
+    "t36_thatchers_straw_bundle_tunic",
+    "t37_tanners_stained_tabard",
+    "t38_masons_shoulder_pad_smock",
+    "t39_carpenters_rule_jerkin",
+    "t40_chandlers_wax_apron",
+    "t41_brewers_mash_paddle_apron",
+    "t42_butchers_oversleeve_smock",
+    "t43_cooks_oven_mitt_tunic",
+    "t44_swineherds_hide_cape",
+    "t45_ploughmans_smock_frock",
+    "t46_vintners_hitched_tunic",
+    "t47_beekeepers_veiled_smock",
+    "t48_orchard_pickers_sling_bag",
+    "t49_water_carriers_yoke",
+    "t50_stablehands_lead_rope_tunic",
+    "t51_monks_scapular_habit",
+    "t52_friars_corded_robe",
+    "t53_clerks_buttoned_cassock",
+    "t54_scholars_hood_and_girdle_book",
+    "t55_scribes_inkhorn_coat",
+    "t56_heralds_livery_tabard",
+    "t57_palmers_scallop_cloak",
+    "t58_bards_lute_slung_cotte",
+    "t59_squires_quartered_jupon",
+    "t60_reeves_tally_stick_coat",
+    "t61_lords_velvet_pourpoint",
+    "t62_magnates_floor_houppelande",
+    "t63_spice_merchants_sash_coat",
+    "t64_tailors_measuring_doublet",
+    "t65_assayers_chain_tunic",
+    "t66_ratcatchers_pied_coat",
+    "t67_jesters_motley",
+    "t68_town_criers_bell_coat",
+    "t69_tippeted_cotehardie",
+    "t70_peddlers_pack_frame",
+    "t71_men_at_arms_long_gambeson",
+    "t72_hauberk_mail_shirt",
+    "t73_boiled_leather_cuirass",
+    "t74_pavisiers_shield_jack",
+    "t75_longbowmans_bracer_jerkin",
+    "t76_crusaders_cross_surcoat",
+    "t77_watchmans_lantern_coat",
+    "t78_padded_jack_mail_standard",
+    "t79_rangers_mottled_cloak",
+    "t80_landsknecht_slashed_doublet",
+    "t81_trappers_fur_mantle",
+    "t82_norse_tablet_woven_kaftan",
+    "t83_saffron_leine_and_ionar",
+    "t84_belted_great_plaid",
+    "t85_fishers_oilskin_smock",
+    "t86_desert_nomads_layered_robe",
+    "t87_steppe_riders_deel_coat",
+    "t88_summer_openwork_tunic",
+    "t89_cowled_winter_jack",
+    "t90_northern_banded_gakti",
+    "t91_morris_dancers_baldrics",
+    "t92_straw_mummers_cape",
+    "t93_green_man_leaf_mantle",
+    "t94_bridegrooms_wedding_doublet",
+    "t95_hermits_sackcloth",
+    "t96_charcoal_burners_sooty_smock",
+    "t97_painters_daubed_smock",
+    "t98_illuminators_sleeve_garters",
+    "t99_astrologers_star_robe",
+    "t100_alchemists_bellows_coat",
+    "t101_plain_tee",
+    "t102_bone_tee",
+    "t103_bright_tee",
+    "t104_black_tee",
+    "t105_earth_tee",
+    "t106_plain_tunic",
+    "t107_cream_tunic",
+    "t108_bright_tunic",
+    "t109_charcoal_tunic",
+    "t110_chambray_tunic",
+    "t111_polo_shirt",
+    "t112_tipped_polo",
+    "t113_camp_collar_shirt",
+    "t114_oxford_button_down",
+    "t115_henley",
+    "t116_ringer_tee",
+    "t117_raglan_tee",
+    "t118_pocket_tee",
+    "t119_heather_v_neck",
+    "t120_denim_work_shirt",
+    "tf001_laced_kirtle_bodice",
+    "tf002_milkmaids_puff_bodice",
+    "tf003_patched_work_kirtle",
+    "tf004_side_laced_kirtle",
+    "tf005_crossover_wrap_bodice",
+    "tf006_dyers_rolled_kirtle",
+    "tf007_laundress_tucked_blouse",
+    "tf008_herb_gatherers_bodice",
+    "tf009_midwifes_bib_apron",
+    "tf010_velvet_court_bodice",
+    "tf011_brewsters_hop_bodice",
+    "tf012_alewifes_corset",
+    "tf013_fishwifes_striped_bodice",
+    "tf014_smocked_shepherdess_blouse",
+    "tf015_bakers_dusted_waistcoat",
+    "tf016_nuns_habit",
+    "tf017_huntress_leather_vest",
+    "tf018_archers_quiver_jerkin",
+    "tf019_shieldmaidens_mail_shirt",
+    "tf020_knights_brigandine",
+    "tf021_guards_quilted_gambeson",
+    "tf022_falconers_gauntlet_doublet",
+    "tf023_merchants_peplum_doublet",
+    "tf024_tailors_pinned_jacket",
+    "tf025_scholars_hooded_tabard",
+    "tf026_girdle_book_kirtle",
+    "tf027_abbess_habit",
+    "tf028_sun_priestess_robe",
+    "tf029_starry_mage_robe",
+    "tf030_bards_lute_bodice",
+    "tf031_coin_dancer_bodice",
+    "tf032_maypole_ribbon_bodice",
+    "tf033_travellers_hooded_cloak",
+    "tf034_northern_apron_dress",
+    "tf035_highland_arisaid",
+    "tf036_desert_linen_wrap",
+    "tf037_fur_lined_winter_kirtle",
+    "tf038_summer_linen_shift",
+    "tf039_cooks_crossback_apron",
+    "tf040_butchers_striped_apron",
+    "tf041_smiths_scorched_bib",
+    "tf042_carpenters_tool_vest",
+    "tf043_masons_chalk_smock",
+    "tf044_leatherworkers_awl_apron",
+    "tf045_cartographers_map_coat",
+    "tf046_painters_splattered_smock",
+    "tf047_fletchers_feather_vest",
+    "tf048_gardeners_sackcloth_bib",
+    "tf049_potters_clay_smock",
+    "tf050_beekeepers_veil_shawl",
+    "tf051_sideless_surcoat",
+    "tf052_tippet_cotehardie",
+    "tf053_houppelande_bodice",
+    "tf054_laced_stomacher_overgown",
+    "tf055_brocade_partlet_bodice",
+    "tf056_fur_surcote_hanging_sleeves",
+    "tf057_heraldic_gown_bodice",
+    "tf058_frogged_riding_jacket",
+    "tf059_pearl_netted_bodice",
+    "tf060_corded_lady_mantle"
   ],
   "bottoms": [
     "b01_plated_greaves",
@@ -135,9 +390,519 @@
     "b27_knee_breeches",
     "b28_leather_chaps",
     "b29_belted_hose_dagger",
-    "b30_embroidered_hem_trousers"
+    "b30_embroidered_hem_trousers",
+    "b31_hobnailed_work_boots",
+    "b32_cord_tied_breeches",
+    "b33_barefoot_canvas_slops",
+    "b34_spurred_hunting_boots",
+    "b35_leather_knee_pad_trousers",
+    "b36_laced_rawhide_shin_guards",
+    "b37_greased_knee_boots",
+    "b38_masons_leather_lap_apron",
+    "b39_hammer_loop_trousers",
+    "b40_pattened_shoes",
+    "b41_herringbone_cuffed_trousers",
+    "b42_buckled_leather_spats",
+    "b43_aiglet_points_hose",
+    "b44_mud_spattered_wraps",
+    "b45_rib_wool_yorks_trousers",
+    "b46_ribboned_espadrilles",
+    "b47_beekeepers_bound_trousers",
+    "b48_stirrup_trews",
+    "b49_bast_shoes_and_onuchi",
+    "b50_rumpled_slouch_boots",
+    "b51_monks_under_robe",
+    "b52_friars_patched_robe_skirt",
+    "b53_cassock_skirt",
+    "b54_felt_slippers_and_hose",
+    "b55_seam_banded_trousers",
+    "b56_heralds_parti_hose",
+    "b57_palmers_road_worn_hose",
+    "b58_ribbon_bow_garter_hose",
+    "b59_padded_chausses_knee_guards",
+    "b60_key_chain_trousers",
+    "b61_long_poulaine_hose",
+    "b62_houppelande_train_skirt",
+    "b63_lozenge_woven_trews",
+    "b64_tasseled_ankle_boots",
+    "b65_miners_seat_leather",
+    "b66_ratcatchers_patched_hose",
+    "b67_jesters_bell_hose",
+    "b68_braid_frogged_trews",
+    "b69_rolled_down_hose",
+    "b70_knife_in_boot_trousers",
+    "b71_splinted_leather_greaves",
+    "b72_riveted_brigandine_cuisses",
+    "b73_pleated_bases_skirt",
+    "b74_arrow_bag_thigh_trousers",
+    "b75_laced_hunting_buskins",
+    "b76_crusaders_mail_chausses",
+    "b77_studded_leather_trousers",
+    "b78_mail_skirt_over_trews",
+    "b79_fringed_forest_boots",
+    "b80_slashed_pluderhosen",
+    "b81_bearskin_leggings",
+    "b82_rus_billow_trousers_and_winingas",
+    "b83_rawhide_cuarans_and_breeks",
+    "b84_great_plaid_kilt_and_hose",
+    "b85_fishers_oilskin_waders",
+    "b86_nomads_sirwal",
+    "b87_upturned_toe_riding_boots",
+    "b88_izar_wrap_skirt",
+    "b89_valenki_felt_boots",
+    "b90_reindeer_hide_shoe_bands",
+    "b91_morris_bell_pads",
+    "b92_straw_mummers_leg_bundles",
+    "b93_green_man_leaf_skirt",
+    "b94_bridegrooms_ribboned_hose",
+    "b95_hermits_rag_wrapped_feet",
+    "b96_charcoal_burners_sooty_trousers",
+    "b97_canvas_trousers_and_mules",
+    "b98_chain_garter_hose",
+    "b99_starry_cuffed_soft_boots",
+    "b100_scorched_leather_leggings",
+    "b101_classic_jeans",
+    "b102_slim_dark_jeans",
+    "b103_light_wash_jeans",
+    "b104_worn_in_jeans",
+    "b105_black_jeans",
+    "b106_baggy_jeans",
+    "b107_baggy_light_jeans",
+    "b108_khaki_chinos",
+    "b109_everyday_chinos",
+    "b110_charcoal_slacks",
+    "b111_bright_chinos",
+    "b112_cargo_pants",
+    "b113_carpenter_pants",
+    "b114_corduroy_pants",
+    "b115_linen_drawstring_pants",
+    "b116_joggers",
+    "b117_pleated_trousers",
+    "b118_work_pants",
+    "b119_stone_slacks",
+    "b120_cream_trousers",
+    "bf001_gathered_wool_skirt",
+    "bf002_milkmaid_calf_skirt",
+    "bf003_hitched_work_skirt",
+    "bf004_checkered_weave_skirt",
+    "bf005_tiered_linen_skirt",
+    "bf006_stained_apron_skirt",
+    "bf007_kilted_up_skirt",
+    "bf008_pocketed_herb_skirt",
+    "bf009_plain_kirtle_skirt",
+    "bf010_velvet_court_skirt",
+    "bf011_brewers_leather_apron_skirt",
+    "bf012_ruffled_tavern_skirt",
+    "bf013_striped_fisher_petticoat",
+    "bf014_fleece_edged_skirt",
+    "bf015_bakers_long_apron_skirt",
+    "bf016_nuns_habit_skirt",
+    "bf017_split_riding_skirt",
+    "bf018_archers_hip_wrap_trews",
+    "bf019_shieldmaidens_war_skirt",
+    "bf020_mail_skirt_greaves",
+    "bf021_guards_riding_breeches",
+    "bf022_hawking_skirt_breeches",
+    "bf023_box_pleated_skirt",
+    "bf024_gored_panel_skirt",
+    "bf025_inverted_pleat_robe_skirt",
+    "bf026_ink_hemmed_skirt",
+    "bf027_abbess_habit_skirt",
+    "bf028_sun_priestess_skirt",
+    "bf029_star_hem_skirt",
+    "bf030_parti_colored_skirt",
+    "bf031_coin_dancer_skirt",
+    "bf032_maypole_flower_skirt",
+    "bf033_travellers_bound_hem_skirt",
+    "bf034_northern_underdress_skirt",
+    "bf035_highland_tartan_skirt",
+    "bf036_desert_sirwal_sandals",
+    "bf037_quilted_winter_skirt",
+    "bf038_summer_lace_hem_skirt",
+    "bf039_cooks_pinned_hem_skirt",
+    "bf040_butchers_gaitered_breeches",
+    "bf041_forge_breeches_hobnail_boots",
+    "bf042_nail_pouch_skirt",
+    "bf043_knee_pad_breeches",
+    "bf044_tooled_leather_panel_skirt",
+    "bf045_front_buttoned_skirt",
+    "bf046_patchwork_skirt",
+    "bf047_feather_trim_wrap_skirt",
+    "bf048_kneeling_garden_skirt",
+    "bf049_clay_splashed_skirt",
+    "bf050_honeycomb_hem_skirt",
+    "bf051_marten_hemmed_kirtle_skirt",
+    "bf052_slit_front_trailing_skirt",
+    "bf053_houppelande_skirt",
+    "bf054_guarded_underskirt",
+    "bf055_damask_bell_skirt",
+    "bf056_banded_velvet_skirt",
+    "bf057_heraldic_gown_skirt",
+    "bf058_sidesaddle_riding_skirt",
+    "bf059_pearl_scattered_silk_skirt",
+    "bf060_ermine_hemmed_skirt"
   ],
   "outfits": [
+    {
+      "id": "f_village_lass",
+      "name": "Village Lass",
+      "top": "tf001_laced_kirtle_bodice",
+      "bottom": "bf001_gathered_wool_skirt"
+    },
+    {
+      "id": "f_milkmaid",
+      "name": "Milkmaid",
+      "top": "tf002_milkmaids_puff_bodice",
+      "bottom": "bf002_milkmaid_calf_skirt"
+    },
+    {
+      "id": "f_farm_wife",
+      "name": "Farm Wife",
+      "top": "tf003_patched_work_kirtle",
+      "bottom": "bf003_hitched_work_skirt"
+    },
+    {
+      "id": "f_weaver",
+      "name": "Weaver",
+      "top": "tf004_side_laced_kirtle",
+      "bottom": "bf004_checkered_weave_skirt"
+    },
+    {
+      "id": "f_spinner",
+      "name": "Spinner",
+      "top": "tf005_crossover_wrap_bodice",
+      "bottom": "bf005_tiered_linen_skirt"
+    },
+    {
+      "id": "f_dyer",
+      "name": "Dyer",
+      "top": "tf006_dyers_rolled_kirtle",
+      "bottom": "bf006_stained_apron_skirt"
+    },
+    {
+      "id": "f_laundress",
+      "name": "Laundress",
+      "top": "tf007_laundress_tucked_blouse",
+      "bottom": "bf007_kilted_up_skirt"
+    },
+    {
+      "id": "f_herb_gatherer",
+      "name": "Herb Gatherer",
+      "top": "tf008_herb_gatherers_bodice",
+      "bottom": "bf008_pocketed_herb_skirt"
+    },
+    {
+      "id": "f_midwife",
+      "name": "Midwife",
+      "top": "tf009_midwifes_bib_apron",
+      "bottom": "bf009_plain_kirtle_skirt"
+    },
+    {
+      "id": "f_court_lady",
+      "name": "Court Lady",
+      "top": "tf010_velvet_court_bodice",
+      "bottom": "bf010_velvet_court_skirt"
+    },
+    {
+      "id": "f_brewster",
+      "name": "Brewster",
+      "top": "tf011_brewsters_hop_bodice",
+      "bottom": "bf011_brewers_leather_apron_skirt"
+    },
+    {
+      "id": "f_alewife",
+      "name": "Alewife",
+      "top": "tf012_alewifes_corset",
+      "bottom": "bf012_ruffled_tavern_skirt"
+    },
+    {
+      "id": "f_fishwife",
+      "name": "Fishwife",
+      "top": "tf013_fishwifes_striped_bodice",
+      "bottom": "bf013_striped_fisher_petticoat"
+    },
+    {
+      "id": "f_shepherdess",
+      "name": "Shepherdess",
+      "top": "tf014_smocked_shepherdess_blouse",
+      "bottom": "bf014_fleece_edged_skirt"
+    },
+    {
+      "id": "f_baker",
+      "name": "Baker",
+      "top": "tf015_bakers_dusted_waistcoat",
+      "bottom": "bf015_bakers_long_apron_skirt"
+    },
+    {
+      "id": "f_nun",
+      "name": "Sister of the Cloister",
+      "top": "tf016_nuns_habit",
+      "bottom": "bf016_nuns_habit_skirt"
+    },
+    {
+      "id": "f_huntress",
+      "name": "Huntress",
+      "top": "tf017_huntress_leather_vest",
+      "bottom": "bf017_split_riding_skirt"
+    },
+    {
+      "id": "f_archer",
+      "name": "Archer",
+      "top": "tf018_archers_quiver_jerkin",
+      "bottom": "bf018_archers_hip_wrap_trews"
+    },
+    {
+      "id": "f_shieldmaiden",
+      "name": "Shieldmaiden",
+      "top": "tf019_shieldmaidens_mail_shirt",
+      "bottom": "bf019_shieldmaidens_war_skirt"
+    },
+    {
+      "id": "f_knight",
+      "name": "Lady Knight",
+      "top": "tf020_knights_brigandine",
+      "bottom": "bf020_mail_skirt_greaves"
+    },
+    {
+      "id": "f_town_guard",
+      "name": "Town Guard",
+      "top": "tf021_guards_quilted_gambeson",
+      "bottom": "bf021_guards_riding_breeches"
+    },
+    {
+      "id": "f_falconer",
+      "name": "Falconer",
+      "top": "tf022_falconers_gauntlet_doublet",
+      "bottom": "bf022_hawking_skirt_breeches"
+    },
+    {
+      "id": "f_merchant",
+      "name": "Merchant",
+      "top": "tf023_merchants_peplum_doublet",
+      "bottom": "bf023_box_pleated_skirt"
+    },
+    {
+      "id": "f_tailor",
+      "name": "Tailor",
+      "top": "tf024_tailors_pinned_jacket",
+      "bottom": "bf024_gored_panel_skirt"
+    },
+    {
+      "id": "f_scholar",
+      "name": "Scholar",
+      "top": "tf025_scholars_hooded_tabard",
+      "bottom": "bf025_inverted_pleat_robe_skirt"
+    },
+    {
+      "id": "f_librarian",
+      "name": "Librarian",
+      "top": "tf026_girdle_book_kirtle",
+      "bottom": "bf026_ink_hemmed_skirt"
+    },
+    {
+      "id": "f_abbess",
+      "name": "Abbess",
+      "top": "tf027_abbess_habit",
+      "bottom": "bf027_abbess_habit_skirt"
+    },
+    {
+      "id": "f_sun_priestess",
+      "name": "Sun Priestess",
+      "top": "tf028_sun_priestess_robe",
+      "bottom": "bf028_sun_priestess_skirt"
+    },
+    {
+      "id": "f_star_mage",
+      "name": "Star Mage",
+      "top": "tf029_starry_mage_robe",
+      "bottom": "bf029_star_hem_skirt"
+    },
+    {
+      "id": "f_bard",
+      "name": "Bard",
+      "top": "tf030_bards_lute_bodice",
+      "bottom": "bf030_parti_colored_skirt"
+    },
+    {
+      "id": "f_coin_dancer",
+      "name": "Coin Dancer",
+      "top": "tf031_coin_dancer_bodice",
+      "bottom": "bf031_coin_dancer_skirt"
+    },
+    {
+      "id": "f_may_queen",
+      "name": "May Dancer",
+      "top": "tf032_maypole_ribbon_bodice",
+      "bottom": "bf032_maypole_flower_skirt"
+    },
+    {
+      "id": "f_traveller",
+      "name": "Traveller",
+      "top": "tf033_travellers_hooded_cloak",
+      "bottom": "bf033_travellers_bound_hem_skirt"
+    },
+    {
+      "id": "f_northern_wife",
+      "name": "Northern Wife",
+      "top": "tf034_northern_apron_dress",
+      "bottom": "bf034_northern_underdress_skirt"
+    },
+    {
+      "id": "f_highland_lass",
+      "name": "Highland Lass",
+      "top": "tf035_highland_arisaid",
+      "bottom": "bf035_highland_tartan_skirt"
+    },
+    {
+      "id": "f_desert_wanderer",
+      "name": "Desert Wanderer",
+      "top": "tf036_desert_linen_wrap",
+      "bottom": "bf036_desert_sirwal_sandals"
+    },
+    {
+      "id": "f_winter_wife",
+      "name": "Winter Wife",
+      "top": "tf037_fur_lined_winter_kirtle",
+      "bottom": "bf037_quilted_winter_skirt"
+    },
+    {
+      "id": "f_summer_lass",
+      "name": "Summer Lass",
+      "top": "tf038_summer_linen_shift",
+      "bottom": "bf038_summer_lace_hem_skirt"
+    },
+    {
+      "id": "f_cook",
+      "name": "Cook",
+      "top": "tf039_cooks_crossback_apron",
+      "bottom": "bf039_cooks_pinned_hem_skirt"
+    },
+    {
+      "id": "f_butcher",
+      "name": "Butcher",
+      "top": "tf040_butchers_striped_apron",
+      "bottom": "bf040_butchers_gaitered_breeches"
+    },
+    {
+      "id": "f_smith",
+      "name": "Smith",
+      "top": "tf041_smiths_scorched_bib",
+      "bottom": "bf041_forge_breeches_hobnail_boots"
+    },
+    {
+      "id": "f_carpenter",
+      "name": "Carpenter",
+      "top": "tf042_carpenters_tool_vest",
+      "bottom": "bf042_nail_pouch_skirt"
+    },
+    {
+      "id": "f_mason",
+      "name": "Mason",
+      "top": "tf043_masons_chalk_smock",
+      "bottom": "bf043_knee_pad_breeches"
+    },
+    {
+      "id": "f_leatherworker",
+      "name": "Leatherworker",
+      "top": "tf044_leatherworkers_awl_apron",
+      "bottom": "bf044_tooled_leather_panel_skirt"
+    },
+    {
+      "id": "f_cartographer",
+      "name": "Cartographer",
+      "top": "tf045_cartographers_map_coat",
+      "bottom": "bf045_front_buttoned_skirt"
+    },
+    {
+      "id": "f_painter",
+      "name": "Painter",
+      "top": "tf046_painters_splattered_smock",
+      "bottom": "bf046_patchwork_skirt"
+    },
+    {
+      "id": "f_fletcher",
+      "name": "Fletcher",
+      "top": "tf047_fletchers_feather_vest",
+      "bottom": "bf047_feather_trim_wrap_skirt"
+    },
+    {
+      "id": "f_gardener",
+      "name": "Gardener",
+      "top": "tf048_gardeners_sackcloth_bib",
+      "bottom": "bf048_kneeling_garden_skirt"
+    },
+    {
+      "id": "f_potter",
+      "name": "Potter",
+      "top": "tf049_potters_clay_smock",
+      "bottom": "bf049_clay_splashed_skirt"
+    },
+    {
+      "id": "f_beekeeper",
+      "name": "Beekeeper",
+      "top": "tf050_beekeepers_veil_shawl",
+      "bottom": "bf050_honeycomb_hem_skirt"
+    },
+    {
+      "id": "f_surcoat_lady",
+      "name": "Lady in Surcoat",
+      "top": "tf051_sideless_surcoat",
+      "bottom": "bf051_marten_hemmed_kirtle_skirt"
+    },
+    {
+      "id": "f_cotehardie_lady",
+      "name": "Cotehardie Lady",
+      "top": "tf052_tippet_cotehardie",
+      "bottom": "bf052_slit_front_trailing_skirt"
+    },
+    {
+      "id": "f_houppelande",
+      "name": "Houppelande Gown",
+      "top": "tf053_houppelande_bodice",
+      "bottom": "bf053_houppelande_skirt"
+    },
+    {
+      "id": "f_overgown_lady",
+      "name": "Lady in Overgown",
+      "top": "tf054_laced_stomacher_overgown",
+      "bottom": "bf054_guarded_underskirt"
+    },
+    {
+      "id": "f_brocade_lady",
+      "name": "Brocade Lady",
+      "top": "tf055_brocade_partlet_bodice",
+      "bottom": "bf055_damask_bell_skirt"
+    },
+    {
+      "id": "f_merchants_wife",
+      "name": "Merchant's Wife",
+      "top": "tf056_fur_surcote_hanging_sleeves",
+      "bottom": "bf056_banded_velvet_skirt"
+    },
+    {
+      "id": "f_heraldic_lady",
+      "name": "Heraldic Lady",
+      "top": "tf057_heraldic_gown_bodice",
+      "bottom": "bf057_heraldic_gown_skirt"
+    },
+    {
+      "id": "f_riding_lady",
+      "name": "Riding Lady",
+      "top": "tf058_frogged_riding_jacket",
+      "bottom": "bf058_sidesaddle_riding_skirt"
+    },
+    {
+      "id": "f_pearl_lady",
+      "name": "Pearl Lady",
+      "top": "tf059_pearl_netted_bodice",
+      "bottom": "bf059_pearl_scattered_silk_skirt"
+    },
+    {
+      "id": "f_mantled_lady",
+      "name": "Mantled Lady",
+      "top": "tf060_corded_lady_mantle",
+      "bottom": "bf060_ermine_hemmed_skirt"
+    },
     {
       "id": "knight_errant",
       "name": "Knight-Errant",
@@ -317,10 +1082,563 @@
       "name": "Student",
       "top": "t30_students_open_gown",
       "bottom": "b30_embroidered_hem_trousers"
+    },
+    {
+      "id": "m_farrier",
+      "name": "Farrier",
+      "top": "t31_farriers_split_apron",
+      "bottom": "b31_hobnailed_work_boots"
+    },
+    {
+      "id": "m_miller",
+      "name": "Miller",
+      "top": "t32_millers_sack_pad_tunic",
+      "bottom": "b32_cord_tied_breeches"
+    },
+    {
+      "id": "m_netmender",
+      "name": "Net-Mender",
+      "top": "t33_netmenders_cork_vest",
+      "bottom": "b33_barefoot_canvas_slops"
+    },
+    {
+      "id": "m_falconer",
+      "name": "Falconer",
+      "top": "t34_falconers_gauntlet_jerkin",
+      "bottom": "b34_spurred_hunting_boots"
+    },
+    {
+      "id": "m_cooper",
+      "name": "Cooper",
+      "top": "t35_coopers_pocket_bib_apron",
+      "bottom": "b35_leather_knee_pad_trousers"
+    },
+    {
+      "id": "m_thatcher",
+      "name": "Thatcher",
+      "top": "t36_thatchers_straw_bundle_tunic",
+      "bottom": "b36_laced_rawhide_shin_guards"
+    },
+    {
+      "id": "m_tanner",
+      "name": "Tanner",
+      "top": "t37_tanners_stained_tabard",
+      "bottom": "b37_greased_knee_boots"
+    },
+    {
+      "id": "m_mason",
+      "name": "Stonemason",
+      "top": "t38_masons_shoulder_pad_smock",
+      "bottom": "b38_masons_leather_lap_apron"
+    },
+    {
+      "id": "m_joiner",
+      "name": "Joiner",
+      "top": "t39_carpenters_rule_jerkin",
+      "bottom": "b39_hammer_loop_trousers"
+    },
+    {
+      "id": "m_chandler",
+      "name": "Chandler",
+      "top": "t40_chandlers_wax_apron",
+      "bottom": "b40_pattened_shoes"
+    },
+    {
+      "id": "m_brewer",
+      "name": "Brewer",
+      "top": "t41_brewers_mash_paddle_apron",
+      "bottom": "b41_herringbone_cuffed_trousers"
+    },
+    {
+      "id": "m_butcher",
+      "name": "Shambles Butcher",
+      "top": "t42_butchers_oversleeve_smock",
+      "bottom": "b42_buckled_leather_spats"
+    },
+    {
+      "id": "m_cook",
+      "name": "Hearth Cook",
+      "top": "t43_cooks_oven_mitt_tunic",
+      "bottom": "b43_aiglet_points_hose"
+    },
+    {
+      "id": "m_swineherd",
+      "name": "Swineherd",
+      "top": "t44_swineherds_hide_cape",
+      "bottom": "b44_mud_spattered_wraps"
+    },
+    {
+      "id": "m_ploughman",
+      "name": "Ploughman",
+      "top": "t45_ploughmans_smock_frock",
+      "bottom": "b45_rib_wool_yorks_trousers"
+    },
+    {
+      "id": "m_vintner",
+      "name": "Vintner",
+      "top": "t46_vintners_hitched_tunic",
+      "bottom": "b46_ribboned_espadrilles"
+    },
+    {
+      "id": "m_beekeeper",
+      "name": "Beekeeper",
+      "top": "t47_beekeepers_veiled_smock",
+      "bottom": "b47_beekeepers_bound_trousers"
+    },
+    {
+      "id": "m_orchardman",
+      "name": "Orchardman",
+      "top": "t48_orchard_pickers_sling_bag",
+      "bottom": "b48_stirrup_trews"
+    },
+    {
+      "id": "m_water_carrier",
+      "name": "Water Carrier",
+      "top": "t49_water_carriers_yoke",
+      "bottom": "b49_bast_shoes_and_onuchi"
+    },
+    {
+      "id": "m_stablehand",
+      "name": "Stablehand",
+      "top": "t50_stablehands_lead_rope_tunic",
+      "bottom": "b50_rumpled_slouch_boots"
+    },
+    {
+      "id": "m_monk",
+      "name": "Cloister Monk",
+      "top": "t51_monks_scapular_habit",
+      "bottom": "b51_monks_under_robe"
+    },
+    {
+      "id": "m_friar",
+      "name": "Mendicant Friar",
+      "top": "t52_friars_corded_robe",
+      "bottom": "b52_friars_patched_robe_skirt"
+    },
+    {
+      "id": "m_parish_clerk",
+      "name": "Parish Clerk",
+      "top": "t53_clerks_buttoned_cassock",
+      "bottom": "b53_cassock_skirt"
+    },
+    {
+      "id": "m_master_scholar",
+      "name": "Master Scholar",
+      "top": "t54_scholars_hood_and_girdle_book",
+      "bottom": "b54_felt_slippers_and_hose"
+    },
+    {
+      "id": "m_scribe",
+      "name": "Copyist",
+      "top": "t55_scribes_inkhorn_coat",
+      "bottom": "b55_seam_banded_trousers"
+    },
+    {
+      "id": "m_herald",
+      "name": "Herald",
+      "top": "t56_heralds_livery_tabard",
+      "bottom": "b56_heralds_parti_hose"
+    },
+    {
+      "id": "m_palmer",
+      "name": "Palmer",
+      "top": "t57_palmers_scallop_cloak",
+      "bottom": "b57_palmers_road_worn_hose"
+    },
+    {
+      "id": "m_lutenist",
+      "name": "Lutenist",
+      "top": "t58_bards_lute_slung_cotte",
+      "bottom": "b58_ribbon_bow_garter_hose"
+    },
+    {
+      "id": "m_squire",
+      "name": "Squire",
+      "top": "t59_squires_quartered_jupon",
+      "bottom": "b59_padded_chausses_knee_guards"
+    },
+    {
+      "id": "m_reeve",
+      "name": "Reeve",
+      "top": "t60_reeves_tally_stick_coat",
+      "bottom": "b60_key_chain_trousers"
+    },
+    {
+      "id": "m_lord",
+      "name": "Velvet Lord",
+      "top": "t61_lords_velvet_pourpoint",
+      "bottom": "b61_long_poulaine_hose"
+    },
+    {
+      "id": "m_magnate",
+      "name": "Magnate",
+      "top": "t62_magnates_floor_houppelande",
+      "bottom": "b62_houppelande_train_skirt"
+    },
+    {
+      "id": "m_spice_merchant",
+      "name": "Spice Merchant",
+      "top": "t63_spice_merchants_sash_coat",
+      "bottom": "b63_lozenge_woven_trews"
+    },
+    {
+      "id": "m_tailor",
+      "name": "Master Tailor",
+      "top": "t64_tailors_measuring_doublet",
+      "bottom": "b64_tasseled_ankle_boots"
+    },
+    {
+      "id": "m_assayer",
+      "name": "Assayer",
+      "top": "t65_assayers_chain_tunic",
+      "bottom": "b65_miners_seat_leather"
+    },
+    {
+      "id": "m_ratcatcher",
+      "name": "Ratcatcher",
+      "top": "t66_ratcatchers_pied_coat",
+      "bottom": "b66_ratcatchers_patched_hose"
+    },
+    {
+      "id": "m_jester",
+      "name": "Jester",
+      "top": "t67_jesters_motley",
+      "bottom": "b67_jesters_bell_hose"
+    },
+    {
+      "id": "m_town_crier",
+      "name": "Town Crier",
+      "top": "t68_town_criers_bell_coat",
+      "bottom": "b68_braid_frogged_trews"
+    },
+    {
+      "id": "m_gallant_tippets",
+      "name": "Young Gallant",
+      "top": "t69_tippeted_cotehardie",
+      "bottom": "b69_rolled_down_hose"
+    },
+    {
+      "id": "m_peddler",
+      "name": "Peddler",
+      "top": "t70_peddlers_pack_frame",
+      "bottom": "b70_knife_in_boot_trousers"
+    },
+    {
+      "id": "m_man_at_arms",
+      "name": "Man-at-Arms",
+      "top": "t71_men_at_arms_long_gambeson",
+      "bottom": "b71_splinted_leather_greaves"
+    },
+    {
+      "id": "m_mail_sergeant",
+      "name": "Mail Sergeant",
+      "top": "t72_hauberk_mail_shirt",
+      "bottom": "b72_riveted_brigandine_cuisses"
+    },
+    {
+      "id": "m_cuirassier",
+      "name": "Leather Cuirassier",
+      "top": "t73_boiled_leather_cuirass",
+      "bottom": "b78_mail_skirt_over_trews"
+    },
+    {
+      "id": "m_pavisier",
+      "name": "Pavisier",
+      "top": "t74_pavisiers_shield_jack",
+      "bottom": "b74_arrow_bag_thigh_trousers"
+    },
+    {
+      "id": "m_longbowman",
+      "name": "Longbowman",
+      "top": "t75_longbowmans_bracer_jerkin",
+      "bottom": "b75_laced_hunting_buskins"
+    },
+    {
+      "id": "m_crusader",
+      "name": "Crusader",
+      "top": "t76_crusaders_cross_surcoat",
+      "bottom": "b76_crusaders_mail_chausses"
+    },
+    {
+      "id": "m_watchman",
+      "name": "Night Watchman",
+      "top": "t77_watchmans_lantern_coat",
+      "bottom": "b77_studded_leather_trousers"
+    },
+    {
+      "id": "m_jack_soldier",
+      "name": "Jack Soldier",
+      "top": "t78_padded_jack_mail_standard",
+      "bottom": "b73_pleated_bases_skirt"
+    },
+    {
+      "id": "m_forest_ranger",
+      "name": "Forest Ranger",
+      "top": "t79_rangers_mottled_cloak",
+      "bottom": "b79_fringed_forest_boots"
+    },
+    {
+      "id": "m_landsknecht",
+      "name": "Landsknecht",
+      "top": "t80_landsknecht_slashed_doublet",
+      "bottom": "b80_slashed_pluderhosen"
+    },
+    {
+      "id": "m_trapper",
+      "name": "Trapper",
+      "top": "t81_trappers_fur_mantle",
+      "bottom": "b81_bearskin_leggings"
+    },
+    {
+      "id": "m_norseman",
+      "name": "Northman",
+      "top": "t82_norse_tablet_woven_kaftan",
+      "bottom": "b82_rus_billow_trousers_and_winingas"
+    },
+    {
+      "id": "m_gael",
+      "name": "Gael in Leine",
+      "top": "t83_saffron_leine_and_ionar",
+      "bottom": "b83_rawhide_cuarans_and_breeks"
+    },
+    {
+      "id": "m_clansman",
+      "name": "Clansman",
+      "top": "t84_belted_great_plaid",
+      "bottom": "b84_great_plaid_kilt_and_hose"
+    },
+    {
+      "id": "m_oilskin_fisher",
+      "name": "Oilskin Fisher",
+      "top": "t85_fishers_oilskin_smock",
+      "bottom": "b85_fishers_oilskin_waders"
+    },
+    {
+      "id": "m_desert_nomad",
+      "name": "Desert Nomad",
+      "top": "t86_desert_nomads_layered_robe",
+      "bottom": "b86_nomads_sirwal"
+    },
+    {
+      "id": "m_steppe_rider",
+      "name": "Steppe Rider",
+      "top": "t87_steppe_riders_deel_coat",
+      "bottom": "b87_upturned_toe_riding_boots"
+    },
+    {
+      "id": "m_summer_reaper",
+      "name": "Summer Reaper",
+      "top": "t88_summer_openwork_tunic",
+      "bottom": "b88_izar_wrap_skirt"
+    },
+    {
+      "id": "m_winter_wanderer",
+      "name": "Winter Wanderer",
+      "top": "t89_cowled_winter_jack",
+      "bottom": "b89_valenki_felt_boots"
+    },
+    {
+      "id": "m_reindeer_herder",
+      "name": "Reindeer Herder",
+      "top": "t90_northern_banded_gakti",
+      "bottom": "b90_reindeer_hide_shoe_bands"
+    },
+    {
+      "id": "m_morris_dancer",
+      "name": "Morris Dancer",
+      "top": "t91_morris_dancers_baldrics",
+      "bottom": "b91_morris_bell_pads"
+    },
+    {
+      "id": "m_straw_mummer",
+      "name": "Straw Mummer",
+      "top": "t92_straw_mummers_cape",
+      "bottom": "b92_straw_mummers_leg_bundles"
+    },
+    {
+      "id": "m_green_man",
+      "name": "Green Man",
+      "top": "t93_green_man_leaf_mantle",
+      "bottom": "b93_green_man_leaf_skirt"
+    },
+    {
+      "id": "m_bridegroom",
+      "name": "Bridegroom",
+      "top": "t94_bridegrooms_wedding_doublet",
+      "bottom": "b94_bridegrooms_ribboned_hose"
+    },
+    {
+      "id": "m_hermit",
+      "name": "Forest Hermit",
+      "top": "t95_hermits_sackcloth",
+      "bottom": "b95_hermits_rag_wrapped_feet"
+    },
+    {
+      "id": "m_charcoal_burner",
+      "name": "Charcoal Burner",
+      "top": "t96_charcoal_burners_sooty_smock",
+      "bottom": "b96_charcoal_burners_sooty_trousers"
+    },
+    {
+      "id": "m_painter",
+      "name": "Workshop Painter",
+      "top": "t97_painters_daubed_smock",
+      "bottom": "b97_canvas_trousers_and_mules"
+    },
+    {
+      "id": "m_illuminator",
+      "name": "Illuminator",
+      "top": "t98_illuminators_sleeve_garters",
+      "bottom": "b98_chain_garter_hose"
+    },
+    {
+      "id": "m_astrologer",
+      "name": "Astrologer",
+      "top": "t99_astrologers_star_robe",
+      "bottom": "b99_starry_cuffed_soft_boots"
+    },
+    {
+      "id": "m_alchemist",
+      "name": "Alchemist",
+      "top": "t100_alchemists_bellows_coat",
+      "bottom": "b100_scorched_leather_leggings"
+    },
+    {
+      "id": "m_plain_tee_jeans",
+      "name": "Plain Tee & Jeans",
+      "top": "t101_plain_tee",
+      "bottom": "b101_classic_jeans"
+    },
+    {
+      "id": "m_bone_tee",
+      "name": "Bone Tee & Light Jeans",
+      "top": "t102_bone_tee",
+      "bottom": "b103_light_wash_jeans"
+    },
+    {
+      "id": "m_bright_tee",
+      "name": "Bright Tee & Black Jeans",
+      "top": "t103_bright_tee",
+      "bottom": "b105_black_jeans"
+    },
+    {
+      "id": "m_black_tee",
+      "name": "Black Tee & Baggy Jeans",
+      "top": "t104_black_tee",
+      "bottom": "b106_baggy_jeans"
+    },
+    {
+      "id": "m_earth_tee",
+      "name": "Earth Tee & Carpenter Pants",
+      "top": "t105_earth_tee",
+      "bottom": "b113_carpenter_pants"
+    },
+    {
+      "id": "m_plain_tunic",
+      "name": "Plain Tunic & Linen Pants",
+      "top": "t106_plain_tunic",
+      "bottom": "b115_linen_drawstring_pants"
+    },
+    {
+      "id": "m_cream_tunic",
+      "name": "Cream Tunic & Cords",
+      "top": "t107_cream_tunic",
+      "bottom": "b114_corduroy_pants"
+    },
+    {
+      "id": "m_bright_tunic",
+      "name": "Bright Tunic & Chinos",
+      "top": "t108_bright_tunic",
+      "bottom": "b109_everyday_chinos"
+    },
+    {
+      "id": "m_charcoal_tunic",
+      "name": "Charcoal Tunic & Stone Slacks",
+      "top": "t109_charcoal_tunic",
+      "bottom": "b119_stone_slacks"
+    },
+    {
+      "id": "m_chambray_tunic",
+      "name": "Chambray Tunic",
+      "top": "t110_chambray_tunic",
+      "bottom": "b120_cream_trousers"
+    },
+    {
+      "id": "m_polo",
+      "name": "Polo & Khakis",
+      "top": "t111_polo_shirt",
+      "bottom": "b108_khaki_chinos"
+    },
+    {
+      "id": "m_tipped_polo",
+      "name": "Tipped Polo & Pleats",
+      "top": "t112_tipped_polo",
+      "bottom": "b117_pleated_trousers"
+    },
+    {
+      "id": "m_camp_collar",
+      "name": "Camp Collar & Bright Chinos",
+      "top": "t113_camp_collar_shirt",
+      "bottom": "b111_bright_chinos"
+    },
+    {
+      "id": "m_oxford",
+      "name": "Oxford & Slacks",
+      "top": "t114_oxford_button_down",
+      "bottom": "b110_charcoal_slacks"
+    },
+    {
+      "id": "m_henley",
+      "name": "Henley & Worn-In Jeans",
+      "top": "t115_henley",
+      "bottom": "b104_worn_in_jeans"
+    },
+    {
+      "id": "m_ringer_tee",
+      "name": "Ringer Tee & Dark Jeans",
+      "top": "t116_ringer_tee",
+      "bottom": "b102_slim_dark_jeans"
+    },
+    {
+      "id": "m_raglan_tee",
+      "name": "Raglan Tee & Joggers",
+      "top": "t117_raglan_tee",
+      "bottom": "b116_joggers"
+    },
+    {
+      "id": "m_pocket_tee",
+      "name": "Pocket Tee & Cargos",
+      "top": "t118_pocket_tee",
+      "bottom": "b112_cargo_pants"
+    },
+    {
+      "id": "m_heather_v_neck",
+      "name": "V-Neck & Baggy Light Jeans",
+      "top": "t119_heather_v_neck",
+      "bottom": "b107_baggy_light_jeans"
+    },
+    {
+      "id": "m_denim_work_shirt",
+      "name": "Denim Work Shirt",
+      "top": "t120_denim_work_shirt",
+      "bottom": "b118_work_pants"
     }
   ],
   "professions": {
     "NONE": [
+      "f_village_lass",
+      "f_spinner",
+      "f_laundress",
+      "f_milkmaid",
+      "f_alewife",
+      "f_summer_lass",
+      "f_winter_wife",
+      "f_northern_wife",
+      "f_highland_lass",
+      "f_desert_wanderer",
+      "f_traveller",
+      "f_potter",
+      "f_beekeeper",
       "villager",
       "farmhand",
       "goatherd",
@@ -331,156 +1649,500 @@
       "drover",
       "mariner",
       "trailblazer",
-      "northerner"
+      "northerner",
+      "m_miller",
+      "m_netmender",
+      "m_joiner",
+      "m_swineherd",
+      "m_ploughman",
+      "m_orchardman",
+      "m_water_carrier",
+      "m_stablehand",
+      "m_palmer",
+      "m_ratcatcher",
+      "m_peddler",
+      "m_watchman",
+      "m_trapper",
+      "m_norseman",
+      "m_gael",
+      "m_clansman",
+      "m_summer_reaper",
+      "m_winter_wanderer",
+      "m_reindeer_herder",
+      "m_morris_dancer",
+      "m_bridegroom",
+      "m_charcoal_burner",
+      "m_painter",
+      "m_plain_tee_jeans",
+      "m_bone_tee",
+      "m_bright_tee",
+      "m_black_tee",
+      "m_earth_tee",
+      "m_plain_tunic",
+      "m_cream_tunic",
+      "m_bright_tunic",
+      "m_charcoal_tunic",
+      "m_chambray_tunic",
+      "m_polo",
+      "m_tipped_polo",
+      "m_camp_collar",
+      "m_oxford",
+      "m_henley",
+      "m_ringer_tee",
+      "m_raglan_tee",
+      "m_pocket_tee",
+      "m_heather_v_neck",
+      "m_denim_work_shirt"
     ],
     "NITWIT": [
+      "f_laundress",
+      "f_spinner",
+      "f_bard",
+      "f_may_queen",
       "minstrel",
       "reveler",
       "villager",
       "goatherd",
-      "townsman"
+      "townsman",
+      "m_swineherd",
+      "m_water_carrier",
+      "m_lutenist",
+      "m_ratcatcher",
+      "m_jester",
+      "m_morris_dancer",
+      "m_straw_mummer",
+      "m_green_man",
+      "m_hermit",
+      "m_black_tee",
+      "m_raglan_tee",
+      "m_ringer_tee",
+      "m_heather_v_neck"
     ],
     "ARMORER": [
+      "f_smith",
+      "f_knight",
+      "f_town_guard",
       "smith",
       "militia",
-      "knight_errant"
+      "knight_errant",
+      "m_farrier",
+      "m_squire",
+      "m_mail_sergeant",
+      "m_cuirassier"
     ],
     "BUTCHER": [
+      "f_butcher",
+      "f_dyer",
+      "f_baker",
       "smith",
       "innkeeper",
-      "villager"
+      "villager",
+      "m_tanner",
+      "m_butcher",
+      "m_cook",
+      "m_plain_tee_jeans"
     ],
     "CARTOGRAPHER": [
+      "f_cartographer",
+      "f_scholar",
+      "f_traveller",
+      "f_riding_lady",
       "trailblazer",
       "wayfarer",
       "student",
-      "arcanist"
+      "arcanist",
+      "m_scribe",
+      "m_forest_ranger",
+      "m_desert_nomad",
+      "m_winter_wanderer",
+      "m_astrologer",
+      "m_henley",
+      "m_pocket_tee"
     ],
     "CLERIC": [
+      "f_nun",
+      "f_abbess",
+      "f_sun_priestess",
+      "f_midwife",
       "pilgrim",
       "student",
-      "burgher"
+      "burgher",
+      "m_monk",
+      "m_friar",
+      "m_parish_clerk",
+      "m_palmer",
+      "m_crusader",
+      "m_hermit",
+      "m_bright_tunic"
     ],
     "FARMER": [
+      "f_farm_wife",
+      "f_milkmaid",
+      "f_gardener",
+      "f_beekeeper",
+      "f_summer_lass",
       "farmhand",
       "villager",
       "gardener",
-      "goatherd"
+      "goatherd",
+      "m_miller",
+      "m_thatcher",
+      "m_swineherd",
+      "m_ploughman",
+      "m_vintner",
+      "m_beekeeper",
+      "m_orchardman",
+      "m_reeve",
+      "m_summer_reaper",
+      "m_green_man",
+      "m_earth_tee",
+      "m_denim_work_shirt"
     ],
     "FISHERMAN": [
+      "f_fishwife",
+      "f_northern_wife",
+      "f_laundress",
       "mariner",
       "drover",
       "villager",
-      "northerner"
+      "northerner",
+      "m_netmender",
+      "m_norseman",
+      "m_oilskin_fisher",
+      "m_winter_wanderer",
+      "m_pocket_tee"
     ],
     "FLETCHER": [
+      "f_fletcher",
+      "f_archer",
+      "f_herb_gatherer",
       "ranger",
       "hunter",
-      "woodsman"
+      "woodsman",
+      "m_falconer",
+      "m_joiner",
+      "m_longbowman"
     ],
     "LEATHERWORKER": [
+      "f_leatherworker",
+      "f_dyer",
+      "f_huntress",
       "smith",
       "hunter",
-      "trailblazer"
+      "trailblazer",
+      "m_tanner",
+      "m_stablehand",
+      "m_trapper",
+      "m_steppe_rider",
+      "m_reindeer_herder",
+      "m_cream_tunic"
     ],
     "LIBRARIAN": [
+      "f_librarian",
+      "f_scholar",
+      "f_mantled_lady",
+      "f_court_lady",
       "arcanist",
       "student",
-      "merchant"
+      "merchant",
+      "m_monk",
+      "m_parish_clerk",
+      "m_master_scholar",
+      "m_scribe",
+      "m_reeve",
+      "m_illuminator",
+      "m_oxford"
     ],
     "MASON": [
+      "f_mason",
+      "f_farm_wife",
+      "f_winter_wife",
       "smith",
       "farmhand",
-      "militia"
+      "militia",
+      "m_thatcher",
+      "m_mason",
+      "m_assayer",
+      "m_denim_work_shirt"
     ],
     "SHEPHERD": [
+      "f_shepherdess",
+      "f_highland_lass",
+      "f_milkmaid",
       "shepherd",
       "farmhand",
       "drover",
-      "goatherd"
+      "goatherd",
+      "m_swineherd",
+      "m_ploughman",
+      "m_gael",
+      "m_clansman",
+      "m_steppe_rider",
+      "m_reindeer_herder",
+      "m_plain_tunic"
     ],
     "TOOLSMITH": [
+      "f_smith",
+      "f_carpenter",
+      "f_farm_wife",
       "smith",
-      "woodsman"
+      "woodsman",
+      "m_farrier",
+      "m_mason",
+      "m_assayer",
+      "m_charcoal_burner",
+      "m_denim_work_shirt"
     ],
     "WEAPONSMITH": [
+      "f_smith",
+      "f_shieldmaiden",
+      "f_town_guard",
       "smith",
       "knight_errant",
-      "militia"
+      "militia",
+      "m_farrier",
+      "m_man_at_arms",
+      "m_jack_soldier",
+      "m_landsknecht"
     ],
     "KNIGHT": [
+      "f_knight",
+      "f_shieldmaiden",
+      "f_heraldic_lady",
+      "f_riding_lady",
       "knight_errant",
       "militia",
-      "gallant"
+      "gallant",
+      "m_stablehand",
+      "m_herald",
+      "m_squire",
+      "m_lord",
+      "m_man_at_arms",
+      "m_mail_sergeant",
+      "m_crusader",
+      "m_jack_soldier",
+      "m_landsknecht"
     ],
     "ARCHER": [
+      "f_archer",
+      "f_huntress",
+      "f_falconer",
       "ranger",
       "hunter",
-      "woodsman"
+      "woodsman",
+      "m_falconer",
+      "m_pavisier",
+      "m_longbowman",
+      "m_forest_ranger"
     ],
     "COOK": [
+      "f_cook",
+      "f_baker",
+      "f_brewster",
+      "f_midwife",
       "baker",
       "innkeeper",
-      "smith"
+      "smith",
+      "m_miller",
+      "m_chandler",
+      "m_brewer",
+      "m_butcher",
+      "m_cook",
+      "m_spice_merchant",
+      "m_bone_tee"
     ],
     "TAVERN_KEEPER": [
+      "f_alewife",
+      "f_brewster",
+      "f_cook",
+      "f_merchants_wife",
+      "f_merchant",
       "innkeeper",
       "merchant",
-      "burgher"
+      "burgher",
+      "m_cooper",
+      "m_brewer",
+      "m_cook",
+      "m_vintner",
+      "m_camp_collar"
     ],
     "APOTHECARY": [
+      "f_herb_gatherer",
+      "f_midwife",
       "herbalist",
       "pilgrim",
-      "arcanist"
+      "arcanist",
+      "m_chandler",
+      "m_beekeeper",
+      "m_friar",
+      "m_spice_merchant",
+      "m_alchemist",
+      "m_chambray_tunic"
     ],
     "PAINTER": [
+      "f_painter",
+      "f_dyer",
+      "f_bard",
+      "f_potter",
+      "f_brocade_lady",
       "minstrel",
       "reveler",
       "student",
-      "merchant"
+      "merchant",
+      "m_lutenist",
+      "m_gallant_tippets",
+      "m_painter",
+      "m_illuminator",
+      "m_ringer_tee",
+      "m_camp_collar"
     ],
     "BARD": [
+      "f_bard",
+      "f_coin_dancer",
+      "f_may_queen",
+      "f_cotehardie_lady",
+      "f_pearl_lady",
+      "f_spinner",
       "minstrel",
       "reveler",
-      "townsman"
+      "townsman",
+      "m_herald",
+      "m_lutenist",
+      "m_jester",
+      "m_town_crier",
+      "m_gallant_tippets",
+      "m_gael",
+      "m_morris_dancer",
+      "m_straw_mummer",
+      "m_black_tee",
+      "m_bright_tee"
     ],
     "TAILOR": [
+      "f_tailor",
+      "f_weaver",
+      "f_overgown_lady",
+      "f_cotehardie_lady",
+      "f_surcoat_lady",
+      "f_merchant",
+      "f_court_lady",
       "merchant",
       "gallant",
       "minstrel",
-      "burgher"
+      "burgher",
+      "m_lord",
+      "m_tailor",
+      "m_gallant_tippets",
+      "m_bridegroom",
+      "m_tipped_polo",
+      "m_charcoal_tunic"
     ],
     "CARPENTER": [
+      "f_carpenter",
+      "f_farm_wife",
       "woodsman",
       "smith",
-      "farmhand"
+      "farmhand",
+      "m_cooper",
+      "m_thatcher",
+      "m_joiner",
+      "m_earth_tee",
+      "m_henley"
     ],
     "SCHOLAR": [
+      "f_scholar",
+      "f_librarian",
+      "f_star_mage",
+      "f_houppelande",
       "arcanist",
       "student",
-      "pilgrim"
+      "pilgrim",
+      "m_monk",
+      "m_parish_clerk",
+      "m_master_scholar",
+      "m_scribe",
+      "m_magnate",
+      "m_astrologer",
+      "m_polo"
     ],
     "MERCHANT": [
+      "f_merchant",
+      "f_merchants_wife",
+      "f_court_lady",
+      "f_surcoat_lady",
+      "f_brocade_lady",
+      "f_pearl_lady",
+      "f_houppelande",
+      "f_overgown_lady",
+      "f_heraldic_lady",
+      "f_desert_wanderer",
       "merchant",
       "burgher",
-      "townsman"
+      "townsman",
+      "m_chandler",
+      "m_vintner",
+      "m_reeve",
+      "m_lord",
+      "m_magnate",
+      "m_spice_merchant",
+      "m_tailor",
+      "m_assayer",
+      "m_peddler",
+      "m_desert_nomad",
+      "m_bridegroom",
+      "m_oxford",
+      "m_tipped_polo"
     ],
     "ADVENTURER": [
+      "f_traveller",
+      "f_huntress",
+      "f_shieldmaiden",
+      "f_falconer",
+      "f_cartographer",
+      "f_riding_lady",
       "trailblazer",
       "wayfarer",
       "ranger",
       "hunter",
-      "northerner"
+      "northerner",
+      "m_falconer",
+      "m_palmer",
+      "m_peddler",
+      "m_forest_ranger",
+      "m_landsknecht",
+      "m_trapper",
+      "m_norseman",
+      "m_desert_nomad",
+      "m_steppe_rider",
+      "m_pocket_tee"
     ],
     "GUARD": [
+      "f_town_guard",
+      "f_shieldmaiden",
+      "f_knight",
+      "f_archer",
       "knight_errant",
       "militia",
       "ranger",
-      "northerner"
+      "northerner",
+      "m_squire",
+      "m_town_crier",
+      "m_man_at_arms",
+      "m_mail_sergeant",
+      "m_cuirassier",
+      "m_pavisier",
+      "m_watchman",
+      "m_jack_soldier"
     ],
     "MAGE": [
+      "f_star_mage",
+      "f_sun_priestess",
+      "f_mantled_lady",
+      "f_court_lady",
       "arcanist",
-      "student"
+      "student",
+      "m_master_scholar",
+      "m_astrologer",
+      "m_alchemist"
     ]
   }
 }

@@ -4,6 +4,7 @@ from paint import rivets, solid
 
 META = {
     "name": "Belted Hose & Dagger",
+    "gender": "male",
     "description": "Fitted hose, a plaque-studded belt with a sheathed dagger at the hip and a small purse.",
     "tags": ["fancy", "slim"],
 }

@@ -2,7 +2,7 @@
 from anime import back_fan, lock, ring_shell, spike
 from paint import scalp, solid
 
-META = {"name": "Headband Spikes", "description": "Spiky hair over a cloth headband, its knotted tails trailing behind."}
+META = {"name": "Headband Spikes", "gender": "male", "description": "Spiky hair over a cloth headband, its knotted tails trailing behind."}
 
 
 def build(g):

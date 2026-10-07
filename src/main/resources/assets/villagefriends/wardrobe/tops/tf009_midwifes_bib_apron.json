@@ -1,0 +1,135 @@
+{
+  "id": "tf009_midwifes_bib_apron",
+  "kind": "top",
+  "name": "Midwife's Bib Apron",
+  "gender": "female",
+  "texture": "tops/tf009_midwifes_bib_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.0,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        10,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "chatelaine",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "chatelaine_keys",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        -0.1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A spotless full bib apron over a plain kirtle, with turned-back cuffs and a chatelaine of keys and shears."
+}

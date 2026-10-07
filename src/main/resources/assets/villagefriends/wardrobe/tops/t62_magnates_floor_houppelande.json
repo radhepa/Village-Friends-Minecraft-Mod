@@ -1,0 +1,136 @@
+{
+  "id": "t62_magnates_floor_houppelande",
+  "kind": "top",
+  "name": "Magnate's Floor Houppelande",
+  "gender": "male",
+  "texture": "tops/t62_magnates_floor_houppelande.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_funnel_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_funnel_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        1.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "high_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        5.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        16
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "lockedTo": "b62_houppelande_train_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A great man's floor-length houppelande in deep pleats, belted high, with vast funnel sleeves lined in accent and a fur collar."
+}

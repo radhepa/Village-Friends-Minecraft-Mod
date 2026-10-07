@@ -1,0 +1,75 @@
+{
+  "id": "b46_ribboned_espadrilles",
+  "kind": "bottom",
+  "name": "Ribboned Espadrilles",
+  "gender": "male",
+  "texture": "bottoms/b46_ribboned_espadrilles.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_ribbon_bow",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7.6,
+        -2.95
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_ribbon_bow",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        7.6,
+        -2.95
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    }
+  ],
+  "description": "Loose summer linen trousers gathered at the ankle by the crossing ribbons of rope-soled canvas espadrilles."
+}

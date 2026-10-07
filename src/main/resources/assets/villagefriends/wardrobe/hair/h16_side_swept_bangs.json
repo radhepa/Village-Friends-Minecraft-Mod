@@ -2,6 +2,7 @@
   "id": "h16_side_swept_bangs",
   "kind": "hair",
   "name": "Side-Swept Bangs",
+  "gender": "male",
   "texture": "hair/h16_side_swept_bangs.png",
   "extrasHeight": 16,
   "tags": [],

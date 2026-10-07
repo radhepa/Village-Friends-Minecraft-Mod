@@ -4,6 +4,7 @@ from paint import rnd
 
 META = {
     "name": "Fur-Topped Winter Boots",
+    "gender": "male",
     "description": "Wool trousers tucked into tall winter boots with thick fur cuffs.",
     "tags": ["rugged", "sturdy", "casual"],
 }

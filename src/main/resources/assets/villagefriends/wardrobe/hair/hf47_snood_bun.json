@@ -1,0 +1,381 @@
+{
+  "id": "hf47_snood_bun",
+  "kind": "hair",
+  "name": "Snood Bun",
+  "gender": "female",
+  "texture": "hair/hf47_snood_bun.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_curtain_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.3,
+        -8.75,
+        -4.35
+      ],
+      "rotation": [
+        -6,
+        0,
+        62
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_curtain_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.3,
+        -8.75,
+        -4.35
+      ],
+      "rotation": [
+        -6,
+        0,
+        62
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "right_side",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -7.8,
+        1.2
+      ],
+      "rotation": [
+        14,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "right_band",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -8.6,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_curtain_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.3,
+        -8.75,
+        -4.35
+      ],
+      "rotation": [
+        -6,
+        0,
+        -62
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        4,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "left_curtain_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.3,
+        -8.75,
+        -4.35
+      ],
+      "rotation": [
+        -6,
+        0,
+        -62
+      ],
+      "origin": [
+        -0.5,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "left_side",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -7.8,
+        1.2
+      ],
+      "rotation": [
+        14,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_band",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -8.6,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "band_top",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.45,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        9,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "snood_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        5.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.0,
+        -1.5
+      ],
+      "size": [
+        7,
+        4,
+        3
+      ],
+      "uv": [
+        21,
+        11
+      ]
+    },
+    {
+      "id": "snood_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        5.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -1.5
+      ],
+      "size": [
+        5,
+        1,
+        3
+      ],
+      "uv": [
+        42,
+        11
+      ]
+    },
+    {
+      "id": "snood_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -0.1,
+        5.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -1.0
+      ],
+      "size": [
+        5,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        19
+      ]
+    },
+    {
+      "id": "snood_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        7.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1.5,
+        -0.5
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        15,
+        19
+      ]
+    }
+  ],
+  "description": "Centre-parted hair gathered at the nape into a gold-thread snood, held by a slim band over the crown."
+}

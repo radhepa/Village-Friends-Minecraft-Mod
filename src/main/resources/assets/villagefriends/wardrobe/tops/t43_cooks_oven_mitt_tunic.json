@@ -1,0 +1,191 @@
+{
+  "id": "t43_cooks_oven_mitt_tunic",
+  "kind": "top",
+  "name": "Cook's Oven-Mitt Tunic",
+  "gender": "male",
+  "texture": "tops/t43_cooks_oven_mitt_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "oven_mitt",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "ladle_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        8.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "ladle_bowl",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        12.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        10
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pale kitchen tunic scorched along the hem from the hearth, a big quilted mitt on the right hand and a basting ladle."
+}

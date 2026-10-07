@@ -1,0 +1,17 @@
+{
+  "id": "b120_cream_trousers",
+  "kind": "bottom",
+  "name": "Cream Trousers",
+  "gender": "male",
+  "texture": "bottoms/b120_cream_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Plain straight-leg trousers in soft cream, worn with dark shoes."
+}

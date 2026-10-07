@@ -1,0 +1,190 @@
+{
+  "id": "t36_thatchers_straw_bundle_tunic",
+  "kind": "top",
+  "name": "Thatcher's Straw-Bundle Tunic",
+  "gender": "male",
+  "texture": "tops/t36_thatchers_straw_bundle_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "straw_yealm",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        0.4,
+        3.9
+      ],
+      "rotation": [
+        4,
+        0,
+        24
+      ],
+      "origin": [
+        -2,
+        0,
+        -1.5
+      ],
+      "size": [
+        4,
+        10,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "hazel_spar_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        7.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "hazel_spar_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        7.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        14
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A roofer's tunic with a leather shoulder yoke, a bound bundle of straw slung on the back and hazel spars at the belt."
+}

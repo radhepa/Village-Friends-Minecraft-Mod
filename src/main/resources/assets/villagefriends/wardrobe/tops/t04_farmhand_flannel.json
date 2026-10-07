@@ -2,6 +2,7 @@
   "id": "t04_farmhand_flannel",
   "kind": "top",
   "name": "Farmhand Flannel",
+  "gender": "male",
   "texture": "tops/t04_farmhand_flannel.png",
   "extrasHeight": 16,
   "tags": [

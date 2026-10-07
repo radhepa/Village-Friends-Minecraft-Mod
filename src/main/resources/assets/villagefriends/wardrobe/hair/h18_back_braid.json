@@ -2,6 +2,7 @@
   "id": "h18_back_braid",
   "kind": "hair",
   "name": "Back Braid",
+  "gender": "male",
   "texture": "hair/h18_back_braid.png",
   "extrasHeight": 16,
   "tags": [],

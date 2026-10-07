@@ -1,0 +1,19 @@
+{
+  "id": "tf038_summer_linen_shift",
+  "kind": "top",
+  "name": "Summer Linen Shift",
+  "gender": "female",
+  "texture": "tops/tf038_summer_linen_shift.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A light linen shift with cap sleeves and a cross-stitched yoke, a string of wooden beads and a braided cord."
+}

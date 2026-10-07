@@ -1,0 +1,190 @@
+{
+  "id": "t79_rangers_mottled_cloak",
+  "kind": "top",
+  "name": "Ranger's Mottled Cloak",
+  "gender": "male",
+  "texture": "tops/t79_rangers_mottled_cloak.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cloak_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        12,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        37,
+        7
+      ]
+    },
+    {
+      "id": "cloak_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        3.1
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "cloak_hem",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        12.2,
+        3.4
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        5,
+        1
+      ],
+      "uv": [
+        23,
+        17
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "antler_toggle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        17
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A forest warden's long cloak dappled like leaf-shade, its hood thrown back, fastened with an antler toggle over a plain tunic."
+}

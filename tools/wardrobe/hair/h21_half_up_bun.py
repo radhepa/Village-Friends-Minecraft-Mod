@@ -2,7 +2,7 @@
 from anime import back_fan, bangs, cel_box, ring_shell, sidelocks
 from paint import scalp, solid
 
-META = {"name": "Half-Up Bun", "description": "A small bun from the top half of the hair; the rest falls loose to the shoulders."}
+META = {"name": "Half-Up Bun", "gender": "male", "description": "A small bun from the top half of the hair; the rest falls loose to the shoulders."}
 
 
 def build(g):

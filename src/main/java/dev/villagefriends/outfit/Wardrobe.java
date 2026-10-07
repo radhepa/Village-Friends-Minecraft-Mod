@@ -13,11 +13,16 @@ import java.util.*;
  * Loaded once from the mod's own resources so client and server agree on every choice.
  */
 public final class Wardrobe {
-    public static final String ROLE_LETTERS = "PSALMKH";
-    public static final int HAIR_ROLE = 6, SHADES = 5, TRANSPARENT = -1, SHADOW_LIGHT = 40, SHADOW_DEEP = 41;
+    /** Palette roles in {@link ColorPalette} order, then natural hair. */
+    public static final String ROLE_LETTERS = "PSALMKDH";
+    public static final int HAIR_ROLE = 7, SHADES = 5, TRANSPARENT = -1, SHADOW_LIGHT = 40, SHADOW_DEEP = 41;
     private static final String ROOT = "/assets/villagefriends/wardrobe/";
 
-    public record OutfitTemplate(String id, String name, Garment top, Garment bottom) {}
+    public record OutfitTemplate(String id, String name, Garment top, Garment bottom) {
+        /** Worn by residents that both pieces fit. */
+        public boolean fits(Gender gender) { return top.fits(gender) && bottom.fits(gender); }
+        public boolean locked() { return top.locked(); }
+    }
 
     public static final List<Garment> HAIR, TOPS, BOTTOMS, ALL;
     public static final List<OutfitTemplate> OUTFITS;
@@ -25,6 +30,8 @@ public final class Wardrobe {
     static final Map<PaletteID, ColorPalette> PALETTES;
     private static final Map<String, Garment> BY_ID;
     private static final Map<Profession, List<OutfitTemplate>> BY_PROFESSION;
+    private static final Map<Gender, Map<Profession, List<OutfitTemplate>>> BY_GENDER;
+    private static final Map<Gender, List<Garment>> HAIR_BY_GENDER, TOPS_BY_GENDER, BOTTOMS_BY_GENDER;
     private static final Map<Integer, Integer> KEY_CODES;
     private static final int[] SHADOW_ALPHA = new int[2];
 
@@ -53,6 +60,13 @@ public final class Wardrobe {
             if (HAIR.isEmpty() || TOPS.isEmpty() || BOTTOMS.isEmpty()) throw new IllegalArgumentException("Empty wardrobe");
             BY_ID = Collections.unmodifiableMap(byId);
             ALL = List.copyOf(byId.values());
+            for (var garment : ALL) if (garment.locked()) {
+                var partner = byId.get(garment.lockedTo());
+                if (partner == null || partner.kind() == garment.kind() || partner.kind() == Garment.Kind.HAIR
+                        || !partner.lockedTo().equals(garment.id()))
+                    throw new IllegalArgumentException("Locked set must name each other: " + garment.id() + " / " + garment.lockedTo());
+            }
+            HAIR_BY_GENDER = byGender(HAIR); TOPS_BY_GENDER = byGender(TOPS); BOTTOMS_BY_GENDER = byGender(BOTTOMS);
 
             var outfits = new ArrayList<OutfitTemplate>(); var templateIds = new HashMap<String, OutfitTemplate>();
             for (var element : catalog.getAsJsonArray("outfits")) {
@@ -77,6 +91,20 @@ public final class Wardrobe {
             }
             if (!jobs.containsKey(Profession.NONE)) throw new IllegalArgumentException("NONE needs outfits");
             BY_PROFESSION = Collections.unmodifiableMap(jobs);
+            // Each gender keeps the profession's order, filtered to templates it wears. A gender
+            // without a wardrobe of its own (or a job it has no outfit for) falls back gracefully.
+            var genders = new EnumMap<Gender, Map<Profession, List<OutfitTemplate>>>(Gender.class);
+            for (var gender : Gender.values()) {
+                var lists = new EnumMap<Profession, List<OutfitTemplate>>(Profession.class);
+                var none = jobs.get(Profession.NONE).stream().filter(t -> t.fits(gender)).toList();
+                if (none.isEmpty()) none = jobs.get(Profession.NONE);
+                for (var job : Profession.values()) {
+                    var list = jobs.getOrDefault(job, List.of()).stream().filter(t -> t.fits(gender)).toList();
+                    lists.put(job, list.isEmpty() ? none : list);
+                }
+                genders.put(gender, Collections.unmodifiableMap(lists));
+            }
+            BY_GENDER = Collections.unmodifiableMap(genders);
 
             var palettes = new EnumMap<PaletteID, ColorPalette>(PaletteID.class);
             for (var entry : read("palettes.json").getAsJsonObject("palettes").entrySet()) {
@@ -145,11 +173,21 @@ public final class Wardrobe {
             }
             var garment = new Garment(id, kind, o.get("name").getAsString(), o.get("texture").getAsString(), o.get("extrasHeight").getAsInt(),
                 strings(o, "tags"), strings(o, "requires"), strings(o, "rejects"),
-                o.has("tucked") && o.get("tucked").getAsBoolean(), o.has("coversWaist") && o.get("coversWaist").getAsBoolean(), pieces);
+                o.has("tucked") && o.get("tucked").getAsBoolean(), o.has("coversWaist") && o.get("coversWaist").getAsBoolean(), pieces,
+                o.has("gender") ? Garment.Fit.parse(o.get("gender").getAsString()) : Garment.Fit.UNISEX,
+                o.has("lockedTo") ? o.get("lockedTo").getAsString() : "");
             if (byId.put(id, garment) != null) throw new IllegalArgumentException("Duplicate garment " + id);
             list.add(garment);
         }
         return List.copyOf(list);
+    }
+    private static Map<Gender, List<Garment>> byGender(List<Garment> garments) {
+        var map = new EnumMap<Gender, List<Garment>>(Gender.class);
+        for (var gender : Gender.values()) {
+            var list = garments.stream().filter(g -> g.fits(gender)).toList();
+            map.put(gender, list.isEmpty() ? garments : list);
+        }
+        return Collections.unmodifiableMap(map);
     }
     private static Garment require(String id, Garment.Kind kind) {
         var garment = BY_ID.get(id);
@@ -168,18 +206,34 @@ public final class Wardrobe {
     public static HairColor hairColor(String id) {
         return HAIR_COLORS.stream().filter(c -> c.id().equals(id)).findFirst().orElseThrow(() -> new IllegalArgumentException("Unknown hair color " + id));
     }
-    /** Outfit templates for a profession, preferred first; unknown jobs dress like the unemployed. */
+    /** Every gender's outfit templates for a profession, preferred first; unknown jobs dress like the unemployed. */
     public static List<OutfitTemplate> templates(Profession job) {
         return BY_PROFESSION.getOrDefault(Objects.requireNonNull(job, "profession"), BY_PROFESSION.get(Profession.NONE));
     }
-    /** Sims-style mixing: any pair works unless a tag rule (armor, fancy hose...) forbids it. */
+    /** The templates a resident of this gender wears for a profession, in the profession's order. */
+    public static List<OutfitTemplate> templates(Profession job, Gender gender) {
+        return BY_GENDER.get(Objects.requireNonNull(gender, "gender")).get(Objects.requireNonNull(job, "profession"));
+    }
+    public static List<Garment> hair(Gender gender) { return HAIR_BY_GENDER.get(Objects.requireNonNull(gender, "gender")); }
+    public static List<Garment> tops(Gender gender) { return TOPS_BY_GENDER.get(Objects.requireNonNull(gender, "gender")); }
+    public static List<Garment> bottoms(Gender gender) { return BOTTOMS_BY_GENDER.get(Objects.requireNonNull(gender, "gender")); }
+    /**
+     * Sims-style mixing: any pair works unless a tag rule (armor, fancy hose...) forbids it. A
+     * locked set (a gown's bodice and skirt, say) only pairs with its own partner.
+     */
     public static boolean compatible(Garment top, Garment bottom) {
         if (top.kind() != Garment.Kind.TOP || bottom.kind() != Garment.Kind.BOTTOM) return false;
+        if (top.locked() || bottom.locked()) return top.lockedTo().equals(bottom.id()) && bottom.lockedTo().equals(top.id());
         if (!Collections.disjoint(top.rejects(), bottom.tags()) || !Collections.disjoint(bottom.rejects(), top.tags())) return false;
         if (!top.requires().isEmpty() && Collections.disjoint(top.requires(), bottom.tags())) return false;
         return bottom.requires().isEmpty() || !Collections.disjoint(bottom.requires(), top.tags());
     }
     public static List<Garment> bottomsFor(Garment top) { return BOTTOMS.stream().filter(b -> compatible(top, b)).toList(); }
+    /** Bottoms this gender wears with a top; a locked top only ever lists its own partner. */
+    public static List<Garment> bottomsFor(Garment top, Gender gender) {
+        var list = bottoms(gender).stream().filter(b -> compatible(top, b)).toList();
+        return list.isEmpty() ? bottomsFor(top) : list;
+    }
 
     /** Key code for one texel: role * 5 + shade, a shadow code, or {@link #TRANSPARENT}. */
     public static int code(int argb) {

@@ -1,0 +1,47 @@
+{
+  "id": "b101_classic_jeans",
+  "kind": "bottom",
+  "name": "Classic Jeans",
+  "gender": "male",
+  "texture": "bottoms/b101_classic_jeans.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "denim",
+    "modern"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Straight-leg five-pocket jeans with copper rivets, gold stitching, a leather belt and lace-up shoes."
+}

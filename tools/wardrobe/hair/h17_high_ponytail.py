@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, lock, ring_shell, sidelocks
 from paint import scalp, solid
 
-META = {"name": "High Ponytail", "description": "A high, swinging ponytail with pointed bangs and slim sidelocks."}
+META = {"name": "High Ponytail", "gender": "male", "description": "A high, swinging ponytail with pointed bangs and slim sidelocks."}
 
 
 def build(g):

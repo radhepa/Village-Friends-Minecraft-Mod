@@ -2,7 +2,7 @@
 from anime import bangs, lock, ring_shell
 from paint import k
 
-META = {"name": "Wavy Layers", "description": "Shoulder-length waves with wispy bangs and pointed tips."}
+META = {"name": "Wavy Layers", "gender": "male", "description": "Shoulder-length waves with wispy bangs and pointed tips."}
 
 
 def waves(face, seed, base=2):

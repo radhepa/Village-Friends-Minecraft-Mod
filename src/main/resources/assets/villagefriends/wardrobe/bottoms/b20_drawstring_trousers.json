@@ -2,6 +2,7 @@
   "id": "b20_drawstring_trousers",
   "kind": "bottom",
   "name": "Drawstring Trousers",
+  "gender": "male",
   "texture": "bottoms/b20_drawstring_trousers.png",
   "extrasHeight": 16,
   "tags": [

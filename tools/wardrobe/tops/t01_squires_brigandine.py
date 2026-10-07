@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, rivets, solid, strip_fabric
 
 META = {
     "name": "Squire's Brigandine",
+    "gender": "male",
     "description": "Riveted brigandine with a heraldic chevron, quilted sleeves, steel pauldrons and tassets.",
     "tags": ["armor", "martial"],
     # Armor only sits right over sturdy legwear.

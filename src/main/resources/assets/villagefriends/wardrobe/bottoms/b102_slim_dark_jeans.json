@@ -1,0 +1,18 @@
+{
+  "id": "b102_slim_dark_jeans",
+  "kind": "bottom",
+  "name": "Slim Dark Jeans",
+  "gender": "male",
+  "texture": "bottoms/b102_slim_dark_jeans.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "denim",
+    "modern",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Slim five-pocket jeans in a deep, even rinse, worn with dark shoes."
+}

@@ -2,6 +2,7 @@
   "id": "b25_strap_sandals",
   "kind": "bottom",
   "name": "Summer Trousers & Sandals",
+  "gender": "male",
   "texture": "bottoms/b25_strap_sandals.png",
   "extrasHeight": 16,
   "tags": [

@@ -2,7 +2,7 @@
 from anime import back_fan, bangs, lock, ring_shell, spike
 from paint import scalp
 
-META = {"name": "Pointed Layers", "description": "Layered hair ending in points all the way around the head."}
+META = {"name": "Pointed Layers", "gender": "male", "description": "Layered hair ending in points all the way around the head."}
 
 
 def build(g):

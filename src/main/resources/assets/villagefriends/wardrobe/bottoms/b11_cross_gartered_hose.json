@@ -2,6 +2,7 @@
   "id": "b11_cross_gartered_hose",
   "kind": "bottom",
   "name": "Cross-Gartered Hose",
+  "gender": "male",
   "texture": "bottoms/b11_cross_gartered_hose.png",
   "extrasHeight": 0,
   "tags": [

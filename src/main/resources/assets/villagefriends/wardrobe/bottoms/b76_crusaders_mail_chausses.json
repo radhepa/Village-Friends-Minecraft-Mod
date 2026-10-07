@@ -1,0 +1,131 @@
+{
+  "id": "b76_crusaders_mail_chausses",
+  "kind": "bottom",
+  "name": "Crusader's Mail Chausses",
+  "gender": "male",
+  "texture": "bottoms/b76_crusaders_mail_chausses.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "holy",
+    "martial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_cop",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.8,
+        -2.9
+      ],
+      "size": [
+        4,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_spur",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.2,
+        1.7000000000000002
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_cop",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.8,
+        -2.9
+      ],
+      "size": [
+        4,
+        3,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "left_spur",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.2,
+        1.7000000000000002
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t76_crusaders_cross_surcoat",
+  "description": "Riveted mail chausses laced behind the calf, domed steel knee cops, and leather shoes with prick spurs."
+}

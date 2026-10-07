@@ -2,6 +2,7 @@
   "id": "t19_sheepskin_vest",
   "kind": "top",
   "name": "Sheepskin Vest",
+  "gender": "male",
   "texture": "tops/t19_sheepskin_vest.png",
   "extrasHeight": 16,
   "tags": [

@@ -1,0 +1,76 @@
+{
+  "id": "t113_camp_collar_shirt",
+  "kind": "top",
+  "name": "Camp-Collar Shirt",
+  "gender": "male",
+  "texture": "tops/t113_camp_collar_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        34
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A loose short-sleeved button-up with an open flat collar and a breast pocket."
+}

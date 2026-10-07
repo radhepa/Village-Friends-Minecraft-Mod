@@ -1,0 +1,129 @@
+{
+  "id": "b43_aiglet_points_hose",
+  "kind": "bottom",
+  "name": "Aiglet-Points Hose",
+  "gender": "male",
+  "texture": "bottoms/b43_aiglet_points_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_point_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "waist_point_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "waist_point_2",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.0,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "waist_point_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.0,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    }
+  ],
+  "description": "Close-fitting footed hose with sewn leather soles, trussed up by laces tipped with metal aiglets at the waist."
+}

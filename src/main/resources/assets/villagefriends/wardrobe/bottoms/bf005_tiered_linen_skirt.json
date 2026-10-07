@@ -1,0 +1,251 @@
+{
+  "id": "bf005_tiered_linen_skirt",
+  "kind": "bottom",
+  "name": "Tiered Linen Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf005_tiered_linen_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "long_skirt",
+    "relaxed",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "tier_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        6,
+        -0.08
+      ],
+      "size": [
+        12,
+        6,
+        1
+      ],
+      "uv": [
+        13,
+        18
+      ],
+      "inflate": 0.04,
+      "motion": "flap_front"
+    },
+    {
+      "id": "tier_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        6,
+        0.08
+      ],
+      "size": [
+        12,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        36
+      ],
+      "inflate": 0.04,
+      "motion": "flap_back"
+    },
+    {
+      "id": "tier_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        -0.4,
+        6,
+        -2.7
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        27,
+        36
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "tier_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -0.6,
+        6,
+        -2.7
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        40,
+        36
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "A breezy two-tier linen skirt with gathered seams and strapped leather shoes."
+}

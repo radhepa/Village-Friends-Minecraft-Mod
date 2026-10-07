@@ -1,0 +1,164 @@
+{
+  "id": "tf037_fur_lined_winter_kirtle",
+  "kind": "top",
+  "name": "Fur-Lined Winter Kirtle",
+  "gender": "female",
+  "texture": "tops/tf037_fur_lined_winter_kirtle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -1.6,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_mitten",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -1.0,
+        9.8,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_mitten",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        9.8,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        28,
+        9
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A thick winter kirtle edged with fur at the collar, down the toggled front and at the cuffs, mittens on a cord."
+}

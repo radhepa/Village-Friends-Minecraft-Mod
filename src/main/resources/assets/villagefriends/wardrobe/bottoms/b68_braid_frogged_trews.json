@@ -1,0 +1,16 @@
+{
+  "id": "b68_braid_frogged_trews",
+  "kind": "bottom",
+  "name": "Braid-Frogged Trews",
+  "gender": "male",
+  "texture": "bottoms/b68_braid_frogged_trews.png",
+  "extrasHeight": 0,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Tight trews decorated with knotted accent braid looping down each thigh, worn in short boots with a braided cuff."
+}

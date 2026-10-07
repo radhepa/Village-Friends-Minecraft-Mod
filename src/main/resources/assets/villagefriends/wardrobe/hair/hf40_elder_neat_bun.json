@@ -1,0 +1,266 @@
+{
+  "id": "hf40_elder_neat_bun",
+  "kind": "hair",
+  "name": "Elder's Neat Bun",
+  "gender": "female",
+  "texture": "hair/hf40_elder_neat_bun.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_temple_wave",
+      "bone": "HEAD",
+      "pivot": [
+        -2.3,
+        -8.15,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -2.5
+      ],
+      "size": [
+        3,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_side_wave",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -5.8,
+        0.7
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -3
+      ],
+      "size": [
+        1,
+        4,
+        6
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "right_hairline_roll",
+      "bone": "HEAD",
+      "pivot": [
+        -1.9,
+        -8.45,
+        -3.7
+      ],
+      "rotation": [
+        24,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "left_temple_wave",
+      "bone": "HEAD",
+      "pivot": [
+        2.3,
+        -8.15,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -2.5
+      ],
+      "size": [
+        3,
+        1,
+        5
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "left_side_wave",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -5.8,
+        0.7
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -3
+      ],
+      "size": [
+        1,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "left_hairline_roll",
+      "bone": "HEAD",
+      "pivot": [
+        1.9,
+        -8.45,
+        -3.7
+      ],
+      "rotation": [
+        24,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        15,
+        11
+      ]
+    },
+    {
+      "id": "bun",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.2,
+        5.0
+      ],
+      "rotation": [
+        -80,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -1.0,
+        -2.0
+      ],
+      "size": [
+        4,
+        2,
+        4
+      ],
+      "uv": [
+        26,
+        11
+      ]
+    },
+    {
+      "id": "bun_cap",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.2,
+        5.0
+      ],
+      "rotation": [
+        -80,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -2.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        43,
+        11
+      ]
+    },
+    {
+      "id": "pin",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        5.9
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        -2.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        11
+      ]
+    }
+  ],
+  "description": "A centre part, soft combed waves over the temples and a small, tidy pinned bun."
+}

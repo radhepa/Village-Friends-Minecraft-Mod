@@ -55,6 +55,8 @@ tasks.named('processGametestResources') {
     def hairFacesOnly = providers.gradleProperty('hairFacesOnly').isPresent()
     def villageGallery = providers.gradleProperty('villageGallery').isPresent()
     inputs.property 'villageGallery', villageGallery
+    def residentSample = providers.gradleProperty('residentSample').isPresent()
+    inputs.property 'residentSample', residentSample
     def guardsOnly = providers.gradleProperty('guardsOnly').isPresent()
     def companionsOnly = providers.gradleProperty('companionsOnly').isPresent()
     inputs.property 'foundationOnly', foundationOnly
@@ -65,10 +67,10 @@ tasks.named('processGametestResources') {
     inputs.property 'guardsOnly', guardsOnly
     inputs.property 'companionsOnly', companionsOnly
     doLast {
-        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly || villageGallery || guardsOnly || companionsOnly) {
+        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly || villageGallery || residentSample || guardsOnly || companionsOnly) {
             def descriptor = new File(destinationDir, 'fabric.mod.json')
             def metadata = new groovy.json.JsonSlurper().parse(descriptor)
-            metadata.entrypoints['fabric-client-gametest'] = [guardsOnly ? 'dev.villagefriends.GuardGameTest' : villageGallery ? 'dev.villagefriends.VillageGalleryGameTest' : hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
+            metadata.entrypoints['fabric-client-gametest'] = [guardsOnly ? 'dev.villagefriends.GuardGameTest' : residentSample ? 'dev.villagefriends.ResidentSampleGameTest' : villageGallery ? 'dev.villagefriends.VillageGalleryGameTest' : hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
             if (companionsOnly && !guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.FriendshipGameTest', 'dev.villagefriends.RoadmapGameTest']
             if (guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.GuardSpawnEggGameTest', 'dev.villagefriends.GuardGameTest', 'dev.villagefriends.GuardProgressGameTest']
             descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
@@ -77,10 +79,12 @@ tasks.named('processGametestResources') {
 }
 
 // The art-direction gallery (-PvillageGallery) takes its template list and village count from
-// -Pgallery=tavern,cottage_oak and -PgalleryVillages=2.
+// -Pgallery=tavern,cottage_oak and -PgalleryVillages=2. The resident sample (-PresidentSample)
+// draws five random men and women; -PsampleSeed=123 repeats a draw.
 tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     systemProperty 'villagefriends.gallery', providers.gradleProperty('gallery').getOrElse('')
     systemProperty 'villagefriends.galleryVillages', providers.gradleProperty('galleryVillages').getOrElse('2')
+    systemProperty 'villagefriends.sampleSeed', providers.gradleProperty('sampleSeed').getOrElse('')
 }
 
 // Development runs use a separate world folder and a recognizable player name.

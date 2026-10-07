@@ -3,6 +3,7 @@ from paint import cap, fabric, k, solid, strip_fabric
 
 META = {
     "name": "Mariner's Knit",
+    "gender": "male",
     "description": "Chunky knit sweater with banded chest, cable panel, roll neck, ribbed hem and elbow patches.",
     "tags": ["knit", "casual", "simple"],
     "covers_waist": True,

@@ -2,6 +2,7 @@
   "id": "t18_buttoned_cotehardie",
   "kind": "top",
   "name": "Buttoned Cotehardie",
+  "gender": "male",
   "texture": "tops/t18_buttoned_cotehardie.png",
   "extrasHeight": 16,
   "tags": [

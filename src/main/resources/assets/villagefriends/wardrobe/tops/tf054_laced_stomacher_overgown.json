@@ -1,0 +1,164 @@
+{
+  "id": "tf054_laced_stomacher_overgown",
+  "kind": "top",
+  "name": "Laced-Stomacher Overgown",
+  "gender": "female",
+  "texture": "tops/tf054_laced_stomacher_overgown.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "overgown_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.5,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        11,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "overgown_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.5,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        11,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "overgown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "An overgown open over a jeweled stomacher and laced across it, with slashed and puffed upper sleeves."
+}

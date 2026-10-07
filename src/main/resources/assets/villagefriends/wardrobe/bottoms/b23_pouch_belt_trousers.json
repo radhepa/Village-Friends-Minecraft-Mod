@@ -2,6 +2,7 @@
   "id": "b23_pouch_belt_trousers",
   "kind": "bottom",
   "name": "Pouch-Belt Trousers",
+  "gender": "male",
   "texture": "bottoms/b23_pouch_belt_trousers.png",
   "extrasHeight": 16,
   "tags": [

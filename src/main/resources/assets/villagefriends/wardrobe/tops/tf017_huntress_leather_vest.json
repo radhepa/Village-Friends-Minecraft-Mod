@@ -1,0 +1,133 @@
+{
+  "id": "tf017_huntress_leather_vest",
+  "kind": "top",
+  "name": "Huntress's Leather Vest",
+  "gender": "female",
+  "texture": "tops/tf017_huntress_leather_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -1.3,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "chest_knife",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        2.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "chest_knife_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        2.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A side-laced leather vest with a fur collar over a linen shirt, wrapped cuffs and a knife on the chest strap."
+}

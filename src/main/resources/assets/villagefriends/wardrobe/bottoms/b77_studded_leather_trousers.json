@@ -1,0 +1,16 @@
+{
+  "id": "b77_studded_leather_trousers",
+  "kind": "bottom",
+  "name": "Studded Leather Trousers",
+  "gender": "male",
+  "texture": "bottoms/b77_studded_leather_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Hard leather trousers set with rows of iron studs down the front of the thighs, worn with heavy cuffed boots."
+}

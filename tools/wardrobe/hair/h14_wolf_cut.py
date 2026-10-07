@@ -2,7 +2,7 @@
 from anime import back_fan, bangs, lock, ring_shell, spike
 from paint import scalp
 
-META = {"name": "Wolf Cut", "description": "Shaggy pointed layers with outward flicks and a longer nape."}
+META = {"name": "Wolf Cut", "gender": "male", "description": "Shaggy pointed layers with outward flicks and a longer nape."}
 
 
 def build(g):

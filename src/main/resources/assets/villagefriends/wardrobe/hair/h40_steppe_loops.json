@@ -1,0 +1,468 @@
+{
+  "id": "h40_steppe_loops",
+  "kind": "hair",
+  "name": "Steppe Loops",
+  "gender": "male",
+  "texture": "hair/h40_steppe_loops.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "forelock_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.4,
+        -4.3
+      ],
+      "rotation": [
+        -8,
+        0,
+        4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "forelock_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.4,
+        -4.3
+      ],
+      "rotation": [
+        -8,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "right_root",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -5.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "right_loop_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.75,
+        -5.2,
+        1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "right_loop_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.75,
+        0.2999999999999998,
+        1.4
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "right_loop_2",
+      "bone": "HEAD",
+      "pivot": [
+        -4.75,
+        0.3,
+        3.9
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "right_loop_tie",
+      "bone": "HEAD",
+      "pivot": [
+        -4.75,
+        -3.7,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_root",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -5.6,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        2,
+        4
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "left_loop_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.75,
+        -5.2,
+        1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "left_loop_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.75,
+        0.2999999999999998,
+        1.4
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "left_loop_2",
+      "bone": "HEAD",
+      "pivot": [
+        4.75,
+        0.3,
+        3.9
+      ],
+      "rotation": [
+        180,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        14,
+        8
+      ]
+    },
+    {
+      "id": "left_loop_tie",
+      "bone": "HEAD",
+      "pivot": [
+        4.75,
+        -3.7,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "nape",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -5.0,
+        4.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        6,
+        3,
+        1
+      ],
+      "uv": [
+        28,
+        8
+      ]
+    },
+    {
+      "id": "nape_braid",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.7
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        43,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "nape_braid_tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.7
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        52,
+        8
+      ],
+      "inflate": 0.12,
+      "motion": "sway"
+    },
+    {
+      "id": "nape_braid_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.6,
+        4.7
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "A shaved crown and forelock, with the hair behind the ears plaited into a loop on each side."
+}

@@ -2,6 +2,7 @@
   "id": "b24_woolen_chausses",
   "kind": "bottom",
   "name": "Woolen Chausses",
+  "gender": "male",
   "texture": "bottoms/b24_woolen_chausses.png",
   "extrasHeight": 16,
   "tags": [

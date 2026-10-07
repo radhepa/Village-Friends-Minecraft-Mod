@@ -2,7 +2,7 @@
 from anime import back_fan, lock, ring_shell
 from paint import scalp
 
-META = {"name": "Long Curtains", "description": "Centre-parted curtain bangs falling past the jaw on both sides."}
+META = {"name": "Long Curtains", "gender": "male", "description": "Centre-parted curtain bangs falling past the jaw on both sides."}
 
 
 def build(g):

@@ -2,6 +2,7 @@
   "id": "h15_ahoge_bob",
   "kind": "hair",
   "name": "Ahoge Bob",
+  "gender": "male",
   "texture": "hair/h15_ahoge_bob.png",
   "extrasHeight": 32,
   "tags": [],

@@ -1,0 +1,105 @@
+{
+  "id": "tf055_brocade_partlet_bodice",
+  "kind": "top",
+  "name": "Brocade Partlet Bodice",
+  "gender": "female",
+  "texture": "tops/tf055_brocade_partlet_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_elbow_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_elbow_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "throat_frill",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -1.6,
+        -2.4
+      ],
+      "size": [
+        6,
+        2,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A brocade bodice over a high linen partlet with a frilled throat, and linen puffed through slashed elbows."
+}

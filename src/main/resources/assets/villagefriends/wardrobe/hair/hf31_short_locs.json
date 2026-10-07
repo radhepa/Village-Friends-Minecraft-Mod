@@ -1,0 +1,878 @@
+{
+  "id": "hf31_short_locs",
+  "kind": "hair",
+  "name": "Short Locs",
+  "gender": "female",
+  "texture": "hair/hf31_short_locs.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crown_loc_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -8.6,
+        -0.2
+      ],
+      "rotation": [
+        -8,
+        0,
+        14
+      ],
+      "origin": [
+        -1,
+        -1,
+        -3
+      ],
+      "size": [
+        2,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "crown_loc_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -8.6,
+        0.2
+      ],
+      "rotation": [
+        -8,
+        0,
+        -14
+      ],
+      "origin": [
+        -1,
+        -1,
+        -3
+      ],
+      "size": [
+        2,
+        2,
+        6
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "crown_loc_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        2.4
+      ],
+      "rotation": [
+        -8,
+        0,
+        2
+      ],
+      "origin": [
+        -1,
+        -1,
+        -3
+      ],
+      "size": [
+        2,
+        2,
+        6
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "brow_loc_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.4,
+        -8.9,
+        -3.7
+      ],
+      "rotation": [
+        -24,
+        0,
+        12
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "brow_loc_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.2,
+        -8.9,
+        -3.7
+      ],
+      "rotation": [
+        -24,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "brow_loc_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.1,
+        -8.9,
+        -3.7
+      ],
+      "rotation": [
+        -24,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        9,
+        9
+      ]
+    },
+    {
+      "id": "right_loc_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        18,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        27,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        32,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        41,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        46,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        0,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_loc_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -7.4,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        14,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        23,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        28,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        42,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        56,
+        19
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_loc_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -7.4,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -7.4,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        9
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "uv": [
+        5,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.7,
+        -7.4,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        9
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.9,
+        -7.4,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        8,
+        2
+      ],
+      "uv": [
+        19,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.9,
+        -7.4,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.9,
+        -7.4,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        -3
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        8,
+        2
+      ],
+      "uv": [
+        33,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.9,
+        -7.4,
+        4.6
+      ],
+      "rotation": [
+        6,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -7.4,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        -9
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        47,
+        29
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_loc_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.7,
+        -7.4,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        -9
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        56,
+        29
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Chin-length locs, thick and rounded, a few falling over the brow, each its own length and lean."
+}

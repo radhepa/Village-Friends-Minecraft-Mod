@@ -1,0 +1,220 @@
+{
+  "id": "tf024_tailors_pinned_jacket",
+  "kind": "top",
+  "name": "Tailor's Pinned Jacket",
+  "gender": "female",
+  "texture": "tops/tf024_tailors_pinned_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pincushion",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.2,
+        7.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "ribbon_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        -0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "ribbon_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        -0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "ribbon_neck",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.7,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        31,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "shears_cord",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shears",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        3,
+        -0.1
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        10
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A neat fitted jacket with pins down the lapel, a marked measuring ribbon, a wrist pincushion and shears."
+}

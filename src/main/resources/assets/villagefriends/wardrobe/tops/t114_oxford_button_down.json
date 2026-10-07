@@ -1,0 +1,76 @@
+{
+  "id": "t114_oxford_button_down",
+  "kind": "top",
+  "name": "Oxford Button-Down",
+  "gender": "male",
+  "texture": "tops/t114_oxford_button_down.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        16
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A crisp long-sleeved oxford shirt tucked in, with a buttoned-down collar and a breast pocket."
+}

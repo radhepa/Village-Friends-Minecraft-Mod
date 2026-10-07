@@ -1,0 +1,19 @@
+{
+  "id": "t103_bright_tee",
+  "kind": "top",
+  "name": "Bright Tee",
+  "gender": "male",
+  "texture": "tops/t103_bright_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain crew-neck tee in the palette's bright accent."
+}

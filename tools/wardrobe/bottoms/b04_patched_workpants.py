@@ -3,6 +3,7 @@ from paint import fabric, k, rnd, strip_fabric
 
 META = {
     "name": "Patched Workpants",
+    "gender": "male",
     "description": "Sturdy canvas trousers, a stitched knee patch, suspenders and lace-up boots.",
     "tags": ["work", "sturdy", "simple"],
 }

@@ -4,6 +4,7 @@ from paint import fabric
 
 META = {
     "name": "Leather Chaps",
+    "gender": "male",
     "description": "Hard-wearing leather chaps buckled over canvas trousers, open at the inner leg.",
     "tags": ["rugged", "sturdy", "work"],
 }

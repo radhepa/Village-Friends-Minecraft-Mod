@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, lock, ring_shell, sidelocks
 from paint import scalp, solid
 
-META = {"name": "Long Low Tail", "description": "A long tail tied low at the nape, with centre-parted bangs and long sidelocks."}
+META = {"name": "Long Low Tail", "gender": "male", "description": "A long tail tied low at the nape, with centre-parted bangs and long sidelocks."}
 
 
 def build(g):

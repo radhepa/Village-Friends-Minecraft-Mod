@@ -4,6 +4,7 @@ from paint import fabric
 
 META = {
     "name": "Quilted Arming Jacket",
+    "gender": "male",
     "description": "A padded, diamond-quilted jacket with leather toggles and a standing collar.",
     "tags": ["casual", "martial"],
     "covers_waist": True,

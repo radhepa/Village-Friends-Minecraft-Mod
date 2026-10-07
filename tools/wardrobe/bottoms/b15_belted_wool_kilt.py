@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Belted Wool Kilt",
+    "gender": "male",
     "description": "A pleated tartan kilt, leather sporran, knee socks with garter flashes and laced ghillie shoes.",
     "tags": ["casual", "kilt"],
     "rejects": ["armor"],

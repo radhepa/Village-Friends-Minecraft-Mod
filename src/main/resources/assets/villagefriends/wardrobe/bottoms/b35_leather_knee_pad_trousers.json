@@ -1,0 +1,73 @@
+{
+  "id": "b35_leather_knee_pad_trousers",
+  "kind": "bottom",
+  "name": "Leather Knee-Pad Trousers",
+  "gender": "male",
+  "texture": "bottoms/b35_leather_knee_pad_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_pad",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.8,
+        -2.95
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_pad",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.8,
+        -2.95
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Woollen work trousers with stitched leather knee pads strapped and buckled round each leg, over low boots."
+}

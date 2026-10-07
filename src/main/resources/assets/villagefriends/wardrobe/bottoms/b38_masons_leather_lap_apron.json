@@ -1,0 +1,75 @@
+{
+  "id": "b38_masons_leather_lap_apron",
+  "kind": "bottom",
+  "name": "Mason's Leather Lap Apron",
+  "gender": "male",
+  "texture": "bottoms/b38_masons_leather_lap_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_apron_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lap_apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "Stone-dusted trousers under a heavy leather lap apron strapped at the hip, with laced ankle boots."
+}

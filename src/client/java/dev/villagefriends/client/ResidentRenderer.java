@@ -22,6 +22,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         // Use the vanilla player's exact mesh, with a mob state: AvatarRenderState is
         // dispatched to the player renderer even when it originated from a villager.
         super(context, new ResidentModel(false), new ResidentModel(true), 0.45F);
+        this.addLayer(new WardrobeLayer(this));
         this.addLayer(new net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer<>(this,
                 ModelLayers.PLAYER_ARMOR.map(layer -> new ResidentArmorModel(context.bakeLayer(layer))),
                 net.minecraft.client.model.player.PlayerModel.createArmorMeshSet(new net.minecraft.client.model.geom.builders.CubeDeformation(.5F),new net.minecraft.client.model.geom.builders.CubeDeformation(1F))

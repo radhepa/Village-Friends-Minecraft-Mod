@@ -1,0 +1,47 @@
+{
+  "id": "b108_khaki_chinos",
+  "kind": "bottom",
+  "name": "Khaki Chinos",
+  "gender": "male",
+  "texture": "bottoms/b108_khaki_chinos.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Flat-front chinos in pale khaki, slant pockets, a leather belt and plain loafers."
+}

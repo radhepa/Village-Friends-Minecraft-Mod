@@ -1,0 +1,135 @@
+{
+  "id": "t90_northern_banded_gakti",
+  "kind": "top",
+  "name": "Northern Banded Gakti",
+  "gender": "male",
+  "texture": "tops/t90_northern_banded_gakti.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "banded_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "pewter_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "gakti_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gakti_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A reindeer herder's wool tunic with bright woven bands across the shoulders and hem, a tall banded collar and a pewter-studded belt."
+}

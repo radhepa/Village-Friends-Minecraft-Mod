@@ -1,0 +1,188 @@
+{
+  "id": "tf013_fishwifes_striped_bodice",
+  "kind": "top",
+  "name": "Fishwife's Striped Bodice",
+  "gender": "female",
+  "texture": "tops/tf013_fishwifes_striped_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        1.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "knife_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        6.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "shawl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        2.3
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ]
+    },
+    {
+      "id": "shawl_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.7,
+        2.7
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A sea-striped bodice over a rolled-up chemise, a creel strap, a gutting knife and a knitted shoulder shawl."
+}

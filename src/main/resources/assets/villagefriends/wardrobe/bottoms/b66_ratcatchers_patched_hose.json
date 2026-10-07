@@ -1,0 +1,46 @@
+{
+  "id": "b66_ratcatchers_patched_hose",
+  "kind": "bottom",
+  "name": "Ratcatcher's Patched Hose",
+  "gender": "male",
+  "texture": "bottoms/b66_ratcatchers_patched_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "whimsical",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_rat_trap",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t66_ratcatchers_pied_coat",
+  "description": "Pied hose with the colours swapped against the coat, patched at the knees, laced soft boots and a spring trap at the hip."
+}

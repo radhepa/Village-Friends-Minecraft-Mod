@@ -11,6 +11,7 @@ is palette-locked: no garment carries its own RGB.
     python tools/wardrobe/wardrobe.py            # compile everything
     python tools/wardrobe/wardrobe.py --check    # validate and confirm outputs are current
     python tools/wardrobe/wardrobe.py --only t03_arcanist_longcoat
+    python tools/wardrobe/wardrobe.py --only tf bf          # every id starting with tf or bf
     python tools/wardrobe/preview.py             # offline 3D previews (see preview.py)
 """
 from __future__ import annotations
@@ -21,6 +22,7 @@ import importlib.util
 import io
 import json
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -31,15 +33,18 @@ ROOT = TOOL.parents[1]
 OUT = ROOT / "src/main/resources/assets/villagefriends/wardrobe"
 KINDS = ("hair", "tops", "bottoms")
 KIND_NAME = {"hair": "hair", "tops": "top", "bottoms": "bottom"}
+GENDERS = ("male", "female", "unisex")
 
 # --------------------------------------------------------------------------------------------
 # Key colors. Each opaque authoring pixel names a palette role and one of five shades:
 # 0 deep crease/outline, 1 shadow, 2 base, 3 light, 4 highlight. The authoring RGB values only
 # make the PNGs readable in an image editor; the game maps them back to (role, shade).
-# P primary 60%, S secondary 30%, A accent 10%, L leather, M metal, K ink, H natural hair.
+# P primary 60%, S secondary 30%, A accent 10%, L leather, M metal, K ink, D denim, H natural hair.
+# Leather, metal, ink and denim are material roles: every palette has its own tone of each.
 # X1/X2 are translucent shadows that darken whatever is beneath them.
 # --------------------------------------------------------------------------------------------
-ROLES = "PSALMKH"
+ROLES = "PSALMKDH"
+PALETTE_ROLES = "PSALMKD"
 KEY_RGB = {
     "P": ["1f2d4d", "2f4673", "44619a", "6585bd", "93b0dc"],
     "S": ["6b5d47", "968566", "c4b28c", "e0d0ab", "f5ebcf"],
@@ -47,6 +52,7 @@ KEY_RGB = {
     "L": ["2c1c13", "4a2f20", "6b4630", "8f6444", "b38962"],
     "M": ["39342f", "655b4d", "968870", "c4b594", "eee2c0"],
     "K": ["14100c", "221a14", "2f251d", "3c3026", "4a3c30"],
+    "D": ["162640", "243a5f", "355280", "5578a7", "8ba7d0"],
     "H": ["3a2213", "5c381f", "80522d", "a86f3c", "d09655"],
 }
 SHADOW_KEYS = {"X1": 46, "X2": 84}  # alpha of a black multiply
@@ -116,7 +122,7 @@ def load_palettes() -> dict:
     result = {}
     for pid, p in src.items():
         ramps = {}
-        for role in "PSALMK":
+        for role in PALETTE_ROLES:
             spec = p[role]
             if isinstance(spec, list):
                 ramps[role] = spec
@@ -347,12 +353,25 @@ class Garment:
                         img.putpixel((x, oy + y), key_rgba(k))
         return img
 
+    @property
+    def gender(self) -> str:
+        return self.meta["gender"]
+
+    @property
+    def locked_to(self) -> str | None:
+        return self.meta.get("locked_to")
+
+    def fits(self, gender: str) -> bool:
+        return self.gender in (gender, "unisex")
+
     def definition(self) -> dict:
         m = self.meta
-        data = {"id": self.id, "kind": KIND_NAME[self.kind], "name": m["name"],
+        data = {"id": self.id, "kind": KIND_NAME[self.kind], "name": m["name"], "gender": m["gender"],
                 "texture": f"{self.kind}/{self.id}.png", "extrasHeight": self.used_extras_height(),
                 "tags": sorted(m.get("tags", [])), "requires": sorted(m.get("requires", [])),
                 "rejects": sorted(m.get("rejects", [])), "pieces": [p.json() for p in self.pieces]}
+        if self.locked_to:
+            data["lockedTo"] = self.locked_to
         if self.kind == "tops":
             data["tucked"] = bool(m.get("tucked", False))
             data["coversWaist"] = bool(m.get("covers_waist", False))
@@ -364,6 +383,10 @@ class Garment:
     def validate(self):
         errors = []
         kind = KIND_NAME[self.kind]
+        if self.meta.get("gender") not in GENDERS:
+            errors.append(f"META gender must be one of {GENDERS}")
+        if self.locked_to is not None and (kind == "hair" or not isinstance(self.locked_to, str)):
+            errors.append("only tops and bottoms may set locked_to (the id of their partner)")
         allowed = set()
         for name in ALLOWED_PARTS[kind]:
             u, v, w, h, d = SKIN_PARTS[name]
@@ -469,15 +492,22 @@ def build(kind: str, path: Path) -> Garment:
     return g
 
 
+def natural(path: Path):
+    """t2 < t10 < t100 < tf001: letters first, then the number, then the name."""
+    m = re.match(r"([a-z]+)(\d+)_(.*)", path.stem)
+    return (m.group(1), int(m.group(2)), m.group(3)) if m else (path.stem, 0, "")
+
+
 def sources(kind: str):
-    return sorted(p for p in (TOOL / kind).glob("*.py") if not p.name.startswith("_"))
+    return sorted((p for p in (TOOL / kind).glob("*.py") if not p.name.startswith("_")), key=natural)
 
 
 def build_all(only=None):
+    """only: ids or id prefixes ("tf" builds every female top)."""
     out = {}
     for kind in KINDS:
         for path in sources(kind):
-            if only and path.stem not in only:
+            if only and not any(path.stem.startswith(o) for o in only):
                 continue
             out[path.stem] = build(kind, path)
     return out
@@ -493,8 +523,24 @@ def json_text(data) -> str:
     return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
 
 
+def load_templates() -> dict:
+    """Merge every tools/wardrobe/outfits/*.json: templates in file order, profession lists appended.
+
+    Each file belongs to one wardrobe set (male.json, female.json...) so they can be edited
+    independently. A template is worn by the genders its top and bottom both fit; the factory
+    keeps each profession's order and filters it by the resident's gender.
+    """
+    outfits, professions = [], {}
+    for path in sorted((TOOL / "outfits").glob("*.json")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        outfits += data.get("outfits", [])
+        for job, ids in data.get("professions", {}).items():
+            professions.setdefault(job, []).extend(ids)
+    return {"outfits": outfits, "professions": professions}
+
+
 def catalog(garments: dict) -> dict:
-    templates = json.loads((TOOL / "outfits.json").read_text())
+    templates = load_templates()
     data = {"schemaVersion": 1, "keys": {k: "#" + v for k, v in KEYS.items()},
             "shadowKeys": SHADOW_KEYS,
             "hair": [g.id for g in garments.values() if g.kind == "hair"],
@@ -504,7 +550,14 @@ def catalog(garments: dict) -> dict:
     return data
 
 
+def template_genders(top: Garment, bottom: Garment) -> list[str]:
+    return [g for g in ("male", "female") if top.fits(g) and bottom.fits(g)]
+
+
 def compatible(top: Garment, bottom: Garment) -> bool:
+    """Sims-style mixing with tag rules; a locked set only ever pairs with its own partner."""
+    if top.locked_to or bottom.locked_to:
+        return top.locked_to == bottom.id and bottom.locked_to == top.id
     t, b = top.meta, bottom.meta
     tt, bt = set(t.get("tags", [])), set(b.get("tags", []))
     if set(t.get("rejects", [])) & bt or set(b.get("rejects", [])) & tt:
@@ -516,33 +569,86 @@ def compatible(top: Garment, bottom: Garment) -> bool:
     return True
 
 
+# Professions in the catalog that are not registered villager jobs yet.
+ARCHETYPES = {"MERCHANT", "ADVENTURER", "GUARD", "MAGE"}
+# Free (unlocked) tops must mix with at least this many free bottoms of their own gender.
+MIN_PARTNERS, MIN_ARMOR_PARTNERS = 7, 4
+
+
 def validate_catalog(garments: dict, data: dict) -> list[str]:
     errors = []
     by_id = garments
     tops = [g for g in garments.values() if g.kind == "tops"]
     bottoms = [g for g in garments.values() if g.kind == "bottoms"]
+    # Locked sets: two pieces naming each other, same gender, other kind.
+    for g in tops + bottoms:
+        if not g.locked_to:
+            continue
+        other = by_id.get(g.locked_to)
+        want = "bottoms" if g.kind == "tops" else "tops"
+        if other is None or other.kind != want:
+            errors.append(f"{g.id} is locked to unknown {KIND_NAME[want]} {g.locked_to}")
+        elif other.locked_to != g.id:
+            errors.append(f"{g.id} is locked to {other.id}, which must set locked_to = {g.id!r} too")
+        elif other.gender != g.gender:
+            errors.append(f"locked set {g.id} + {other.id} mixes genders")
+    seen_ids = set()
+    templates_for = {}
     for o in data["outfits"]:
+        if o["id"] in seen_ids:
+            errors.append(f"duplicate outfit id {o['id']}")
+        seen_ids.add(o["id"])
+        bad = False
         for field, kind in (("top", "tops"), ("bottom", "bottoms")):
             if o[field] not in by_id or by_id[o[field]].kind != kind:
                 errors.append(f"outfit {o['id']} names unknown {field} {o[field]}")
-        if not errors and not compatible(by_id[o["top"]], by_id[o["bottom"]]):
+                bad = True
+        if bad:
+            continue
+        top, bottom = by_id[o["top"]], by_id[o["bottom"]]
+        if not compatible(top, bottom):
             errors.append(f"outfit {o['id']} pairs incompatible pieces")
-    outfit_ids = {o["id"] for o in data["outfits"]}
+        if not template_genders(top, bottom):
+            errors.append(f"outfit {o['id']} pairs a {top.gender} top with a {bottom.gender} bottom")
+        templates_for[o["id"]] = (top, bottom)
+    # A gender that has outfits at all must dress every profession.
+    dressed = {g for pair in templates_for.values() for g in template_genders(*pair)}
     worn = set()
     for job, ids in data["professions"].items():
+        covered = set()
         for oid in ids:
-            if oid not in outfit_ids:
+            if oid not in seen_ids:
                 errors.append(f"profession {job} names unknown outfit {oid}")
+                continue
             worn.add(oid)
-    for oid in sorted(outfit_ids - worn):
+            if oid in templates_for:
+                covered |= set(template_genders(*templates_for[oid]))
+        for gender in sorted(dressed):
+            if gender not in covered:
+                errors.append(f"profession {job} has no {gender} outfit")
+    for oid in sorted(seen_ids - worn):
         errors.append(f"outfit {oid} is not worn by any profession")
+    # Merchant, Adventurer, Guard and Mage are archetypes no villager can hold yet, so an outfit
+    # listed only under them would never appear in a village.
+    playable = {oid for job, ids in data["professions"].items() if job not in ARCHETYPES for oid in ids}
+    for oid in sorted(worn - playable):
+        errors.append(f"outfit {oid} is only worn by unregistered archetypes {sorted(ARCHETYPES)}")
+    # Residents only wear tops that some template names, so every top needs one.
+    in_template = {t.id for t, b in templates_for.values()}
     for top in tops:
-        n = sum(compatible(top, b) for b in bottoms)
-        if n == 0:
-            errors.append(f"top {top.id} pairs with no bottom")
+        if top.id not in in_template:
+            errors.append(f"top {top.id} is in no outfit template, so no resident would ever wear it")
+        if top.locked_to:
+            continue
+        free = [b for b in bottoms if not b.locked_to and template_genders(top, b) and compatible(top, b)]
+        need = MIN_ARMOR_PARTNERS if "armor" in top.meta.get("tags", []) else MIN_PARTNERS
+        if len(free) < need:
+            errors.append(f"top {top.id} mixes with only {len(free)} bottoms of its gender (needs {need})")
     for b in bottoms:
-        if not any(compatible(t, b) for t in tops):
-            errors.append(f"bottom {b.id} pairs with no top")
+        if b.locked_to:
+            continue
+        if not any(compatible(t, b) and template_genders(t, b) for t in tops):
+            errors.append(f"bottom {b.id} pairs with no top of its gender")
     return errors
 
 

@@ -1,0 +1,133 @@
+{
+  "id": "b53_cassock_skirt",
+  "kind": "bottom",
+  "name": "Cassock Skirt",
+  "gender": "male",
+  "texture": "bottoms/b53_cassock_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cassock_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cassock_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "cassock_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "cassock_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t53_clerks_buttoned_cassock",
+  "description": "The cassock's ankle-length skirts with the long run of buttons continuing to the hem, over buckled black shoes."
+}

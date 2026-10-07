@@ -2,6 +2,7 @@
   "id": "b22_tall_riding_boots",
   "kind": "bottom",
   "name": "Tall Riding Boots",
+  "gender": "male",
   "texture": "bottoms/b22_tall_riding_boots.png",
   "extrasHeight": 16,
   "tags": [

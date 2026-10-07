@@ -1,0 +1,132 @@
+{
+  "id": "t120_denim_work_shirt",
+  "kind": "top",
+  "name": "Denim Work Shirt",
+  "gender": "male",
+  "texture": "tops/t120_denim_work_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        20
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A denim work shirt with twin flap pockets, metal snaps and sleeves rolled to the forearm."
+}

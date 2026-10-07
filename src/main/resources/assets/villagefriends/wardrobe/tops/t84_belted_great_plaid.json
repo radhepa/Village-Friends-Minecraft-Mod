@@ -1,0 +1,105 @@
+{
+  "id": "t84_belted_great_plaid",
+  "kind": "top",
+  "name": "Belted Great Plaid",
+  "gender": "male",
+  "texture": "tops/t84_belted_great_plaid.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "kilt",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "plaid_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        -0.9,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -3.0
+      ],
+      "size": [
+        3,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "plaid_drape",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        0.6,
+        2.7
+      ],
+      "rotation": [
+        4,
+        0,
+        -8
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        9,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "plaid_brooch",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        0.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "b84_great_plaid_kilt_and_hose",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "The upper fold of a great kilted plaid drawn over the left shoulder and down the back, pinned with a round brooch over a linen shirt."
+}

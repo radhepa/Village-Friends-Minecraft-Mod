@@ -4,6 +4,7 @@ from paint import line, solid
 
 META = {
     "name": "Satchel & Overshirt",
+    "gender": "male",
     "description": "An open, sleeves-rolled overshirt over a linen shirt, with a deep leather satchel on a cross strap.",
     "tags": ["casual", "work"],
 }

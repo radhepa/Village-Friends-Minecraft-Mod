@@ -1,0 +1,135 @@
+{
+  "id": "t83_saffron_leine_and_ionar",
+  "kind": "top",
+  "name": "Saffron Leine & Ionar",
+  "gender": "male",
+  "texture": "tops/t83_saffron_leine_and_ionar.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "kilt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_pleated_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        8,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_pleated_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.4,
+        -2.4
+      ],
+      "size": [
+        5,
+        8,
+        6
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "leine_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "leine_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A Gaelic leine with vast pleated sleeves falling to the knee-length hem, under a short cropped ionar jacket edged in braid."
+}

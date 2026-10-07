@@ -1,0 +1,190 @@
+{
+  "id": "t44_swineherds_hide_cape",
+  "kind": "top",
+  "name": "Swineherd's Hide Cape",
+  "gender": "male",
+  "texture": "tops/t44_swineherds_hide_cape.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hide_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        12,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "cape_fur_rim",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6,
+        3.2,
+        -2.9
+      ],
+      "size": [
+        12,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "bone_toggle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.3,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        11
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        19
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "calling_horn",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        19
+      ]
+    },
+    {
+      "id": "calling_horn_tip",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        10.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        19
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short rawhide cape over the shoulders, fur at its edge and a bone toggle at the throat, with a calling horn on a cord."
+}

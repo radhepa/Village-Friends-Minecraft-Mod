@@ -3,6 +3,7 @@ from paint import fabric, k, rnd
 
 META = {
     "name": "Farmhand Flannel",
+    "gender": "male",
     "description": "Plaid flannel shirt with an open collar, chest pocket and rolled sleeves.",
     "tags": ["simple", "casual"],
     "tucked": True,

@@ -2,6 +2,7 @@
   "id": "h06_shaggy_shoulder",
   "kind": "hair",
   "name": "Shaggy Shoulder-Length",
+  "gender": "male",
   "texture": "hair/h06_shaggy_shoulder.png",
   "extrasHeight": 32,
   "tags": [],

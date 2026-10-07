@@ -1,0 +1,323 @@
+{
+  "id": "h54_samurai_topknot",
+  "kind": "hair",
+  "name": "Samurai Topknot",
+  "gender": "male",
+  "texture": "hair/h54_samurai_topknot.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_side_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -8.3,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        5,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_side_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -8.3,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        6,
+        3
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "left_side_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -8.3,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        5,
+        3
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "left_side_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -8.3,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        6,
+        3
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "back_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.0,
+        -8.4,
+        4.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        6,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "back_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.0,
+        -8.4,
+        4.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        6,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "knot",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "cord",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.6,
+        2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -0.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        13,
+        10
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "queue_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.9,
+        2.2
+      ],
+      "rotation": [
+        -84,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        22,
+        10
+      ]
+    },
+    {
+      "id": "queue_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -9.523697532236447,
+        -1.3802788233257837
+      ],
+      "rotation": [
+        -74,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        31,
+        10
+      ]
+    },
+    {
+      "id": "queue_2",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -9.082677762929249,
+        -2.918297536827094
+      ],
+      "rotation": [
+        -100,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        10
+      ]
+    }
+  ],
+  "description": "A shaved pate with the sides combed up, tied at the crown and the queue folded forward."
+}

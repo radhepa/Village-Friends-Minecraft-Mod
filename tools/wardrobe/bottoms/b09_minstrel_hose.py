@@ -3,6 +3,7 @@ from paint import cap, fabric, k, solid, strip_fabric
 
 META = {
     "name": "Minstrel Hose",
+    "gender": "male",
     "description": "One solid and one striped leg, puffed paned trunk hose and curled pointed shoes.",
     "tags": ["whimsical", "slim", "fancy"],
     # Too fine for plate armor or a smith's apron.

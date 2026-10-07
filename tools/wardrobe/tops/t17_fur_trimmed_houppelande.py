@@ -4,6 +4,7 @@ from paint import fabric, k, rnd, solid
 
 META = {
     "name": "Fur-Trimmed Houppelande",
+    "gender": "male",
     "description": "A townsman's pleated overgown: high fur collar, deep bag sleeves, belt and fur-edged hem.",
     "tags": ["fancy", "robe"],
     "covers_waist": True,

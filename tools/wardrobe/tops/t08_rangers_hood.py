@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, line, solid, strip_fabric
 
 META = {
     "name": "Ranger's Hood",
+    "gender": "male",
     "description": "Laced woodland tunic, cowl and lowered hood, leather bracers, belt and a fletched quiver.",
     "tags": ["martial", "rugged"],
     "covers_waist": True,

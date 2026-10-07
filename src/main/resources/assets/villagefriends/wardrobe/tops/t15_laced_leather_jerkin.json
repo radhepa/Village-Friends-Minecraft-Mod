@@ -2,6 +2,7 @@
   "id": "t15_laced_leather_jerkin",
   "kind": "top",
   "name": "Laced Leather Jerkin",
+  "gender": "male",
   "texture": "tops/t15_laced_leather_jerkin.png",
   "extrasHeight": 16,
   "tags": [

@@ -2,6 +2,7 @@
   "id": "h25_long_low_tail",
   "kind": "hair",
   "name": "Long Low Tail",
+  "gender": "male",
   "texture": "hair/h25_long_low_tail.png",
   "extrasHeight": 32,
   "tags": [],

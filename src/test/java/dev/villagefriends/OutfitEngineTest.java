@@ -14,14 +14,14 @@ class OutfitEngineTest {
             assertEquals(Garment.Kind.HAIR, outfit.hair().kind());
         }
         assertEquals(10, MasterPalettes.ALL.size());
-        for (var palette : MasterPalettes.ALL) assertEquals(6, palette.ramps().length);
+        for (var palette : MasterPalettes.ALL) assertEquals(7, palette.ramps().length);
     }
 
     @Test void paletteRampsAreImmutableCopies() {
         var palette = MasterPalettes.ALL.getFirst();
         palette.ramps()[0][2] = 0;
         assertNotEquals(0, palette.rgb(ColorPalette.PRIMARY, 2));
-        assertThrows(IllegalArgumentException.class, () -> new ColorPalette(PaletteID.ASH_AND_TEAL, "bad", new int[5][5]));
+        assertThrows(IllegalArgumentException.class, () -> new ColorPalette(PaletteID.ASH_AND_TEAL, "bad", new int[6][5]));
         assertThrows(IllegalArgumentException.class, () -> new HairColor("BAD", "bad", new int[]{1, 2, 3}));
         assertThrows(IllegalArgumentException.class, () -> new Piece("flat", BodyPart.HEAD, Piece.Vec3.ZERO, Piece.Vec3.ZERO,
             Piece.Vec3.ZERO, 4, 4, 0, 0, 0, 0, Piece.Motion.NONE, Piece.Vec3.ONE));

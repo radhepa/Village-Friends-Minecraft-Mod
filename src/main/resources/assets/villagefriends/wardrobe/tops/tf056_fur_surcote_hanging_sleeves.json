@@ -1,0 +1,164 @@
+{
+  "id": "tf056_fur_surcote_hanging_sleeves",
+  "kind": "top",
+  "name": "Fur Surcote with Hanging Sleeves",
+  "gender": "female",
+  "texture": "tops/tf056_fur_surcote_hanging_sleeves.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.0,
+        -3
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_hanging_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -1.5,
+        2.1
+      ],
+      "size": [
+        4,
+        12,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_hanging_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -1.5,
+        2.1
+      ],
+      "size": [
+        4,
+        12,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "surcote_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "surcote_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        14
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A merchant wife's fur-lined surcote with a wide fur collar and open sleeves hanging from the shoulders."
+}

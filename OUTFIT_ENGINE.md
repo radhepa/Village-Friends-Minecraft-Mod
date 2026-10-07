@@ -1,8 +1,13 @@
 # Wardrobe and outfit engine
 
-Residents dress like characters from a Sims-style wardrobe. They pick from 30 hairstyles, 30 tops and 30 bottoms, colored by one of 10 master palettes and one of 10 natural hair colors.
+Residents dress like characters from a Sims-style wardrobe with a men's set and a women's set. Men pick from 80 hairstyles, 120 tops and 120 bottoms; women from 50 hairstyles, 60 tops and 60 bottoms; non-binary residents from both. Every outfit is colored by one of 10 master palettes, and hair by one of 10 natural hair colors.
 
-The first ten of each kind are the original set, drawn from the user's male reference. Version 2.8 added twenty casual-medieval tops and bottoms (tunics, smocks, jerkins, hoods, cloaks, braies, trews, kilts, chausses, clogs and boots, with no modern t-shirts or hoodies) and twenty anime-inspired hairstyles. The hairstyles use clean cel shading, a sheen ring and tapered pointed locks, but stay grounded: no gravity-defying spikes. The previous voxel/role-mask wardrobe, its male, female and generic registries and their geometry were removed and replaced at the user's request. To add or change clothing, read [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
+The first ten of each kind are the original set, drawn from the user's male reference. Version 2.8 added twenty casual-medieval tops and bottoms (tunics, smocks, jerkins, hoods, cloaks, braies, trews, kilts, chausses, clogs and boots) and twenty anime-inspired hairstyles. Version 2.11 made those ninety pieces the men's set and added:
+
+- **Men:** fifty hairstyles (crops, curls, coils, locs, cornrows, braids, buns, warrior tails, long manes, a tonsure and balding elder styles); seventy casual-medieval tops and bottoms for trades, clergy, nobles, soldiers, regions and festivals; and a twenty-piece *supreme casual* line of plain tees, tunics, polos, shirts, chinos, slacks and jeans.
+- **Women:** the first women's wardrobe: fifty hairstyles (long, braided, tailed, bunned, bobbed, curly, coily and locked) and sixty tops and bottoms such as kirtles, bodices, chemises, overgowns, aprons, skirts, breeches and armor, with an outfit for every profession.
+
+The hairstyles use clean cel shading, a sheen ring and tapered pointed locks, but stay grounded: no gravity-defying spikes. The supreme casual line is the one deliberate exception to the medieval cut; everything else avoids modern clothing. The previous voxel/role-mask wardrobe and its registries were removed and replaced at the user's request. To add or change clothing, read [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
 
 ## Pieces
 
@@ -14,34 +19,35 @@ Each hairstyle, top and bottom is one PNG and one JSON file under `assets/villag
 
 ## Palette lock
 
-The PNGs contain no clothing color. Every opaque pixel is a *key color*: a role (primary 60%, secondary 30%, accent 10%, leather, metal, ink, or natural hair) plus one of five shades (deep, shadow, base, light, highlight).
+The PNGs contain no clothing color. Every opaque pixel is a *key color*: a role (primary 60%, secondary 30%, accent 10%, the materials leather, metal, ink and denim, or natural hair) plus one of five shades (deep, shadow, base, light, highlight).
 
-- **Palettes:** `palettes.json` stores the ten master palettes as five-shade ramps. Shadows shift cooler and highlights warmer, so pixel-art shading stays within the palette.
+- **Palettes:** `palettes.json` stores the ten master palettes as five-shade ramps. Shadows shift cooler and highlights warmer, so pixel-art shading stays within the palette. Each palette has its own tone of every material, including a denim wash, so jeans read as denim while still matching the outfit.
+- **Plain colorways:** a plain garment takes its color from the role it is painted in. The supreme casual tees and tunics use one cut in five roles each, so they come out as five differently colored shirts in every palette.
 - **One palette per outfit:** each `Outfit` owns a single palette. Hair keys resolve through the natural `HairColor` ramp instead.
 - **Shadow keys:** two translucent keys (`X1`/`X2`) darken whatever lies beneath them, such as hairline shadows or a tucked shirt's fold.
 
 ## Mix and match
 
-The wardrobe is Sims-style: any top pairs with any bottom unless a tag rule forbids it.
+The wardrobe is Sims-style: within a resident's set, any top pairs with any bottom unless a rule forbids it.
 
-- The Squire's Brigandine `requires` sturdy legwear.
-- Plated Greaves require a martial or rugged top.
-- Minstrel Hose `rejects` armor and work tops.
-- The Belted Wool Kilt and the Summer Trousers & Sandals `reject` armor.
+- **Tag rules:** armor tops `require` sturdy legwear, plated legs require a martial or rugged top, and fancy hose, kilts and sandals `reject` armor.
+- **Locked sets:** a few outfits only work as one piece. Their top and bottom name each other (`locked_to`) and are always worn together, never mixed. The men's set has 19 (monk, friar, herald, jester, crusader, morris dancer, green man and others); the women's has 8 (court gown, nun, abbess, sun priestess, coin dancer, May dancer, houppelande and heraldic gown).
+- **Coverage:** every free top mixes with at least seven free bottoms of its set. 9,849 of the men's 10,201 free pairs and 2,665 of the women's 2,704 are allowed.
 
-861 of the 900 top/bottom pairs are allowed. `Wardrobe.compatible` and `tools/wardrobe/wardrobe.py` apply the same rule.
+`Wardrobe.compatible` and `tools/wardrobe/wardrobe.py` apply the same rule.
 
 Skin layers stack as: body, then the bottom, then the top, then hair. A `tucked` top (shirts) goes under the bottom instead, so waistbands and suspenders show over it. A top that `coversWaist` (its own belt, sash or long hem) hides the bottom's 3D pieces whose ids start with `waist`.
 
 ## Professions
 
-`catalog.json` maps each profession to outfit templates (a top plus its matching bottom). `OutfitFactory.assembleOutfit` works in this order:
+Outfit templates (a top plus its matching bottom) live in one file per set, `tools/wardrobe/outfits/male.json` and `female.json`. The compiler merges them into `catalog.json`. Every top is in at least one template, and every profession has templates for both sets. `OutfitFactory.assembleOutfit` works in this order:
 
-1. Hair and hair color come from the resident's seed alone, so a new job never changes them.
-2. The profession's preferred template is chosen 60% of the time; otherwise one of its alternatives is used.
-3. The template's bottom is kept 60% of the time; otherwise a random compatible bottom is used.
+1. Everything comes from the resident's own set: men's, women's, or both for non-binary residents.
+2. Hair and hair color come from the resident's seed alone, so a new job never changes them.
+3. The profession's preferred template for that set is chosen 30% of the time; otherwise one of its alternatives is used.
+4. The template's bottom is kept 50% of the time; otherwise a random compatible bottom from the set is used. A locked set is always worn whole.
 
-Bold professions prefer the template; the others use it as an alternative.
+The men's original templates are listed below. Bold professions prefer the template; the others use it as an alternative. The 90 newer men's templates (`m_` ids) and the 60 women's templates (`f_` ids) follow the same pattern in their files. Each women's profession prefers its own outfit, for example the Knight's lady-knight armor, the Cleric's nun's habit and the Farmer's farm wife.
 
 | Template | Top | Bottom | Professions |
 |---|---|---|---|
@@ -85,9 +91,9 @@ Outfit recolored = outfit.recolor(PaletteID.SAGE_AND_TERRACOTTA);
 
 ## Rendering
 
-- **Model:** `ResidentModel` is the player mesh with its overlays, plus every garment's 3D pieces baked once. Only the worn outfit's pieces are visible.
+- **Model:** `ResidentModel` is the player mesh with its overlays and the Living Eyes parts, and nothing else.
+- **Pieces:** `WardrobeLayer` bakes every garment's 3D pieces once as plain cubes. Each frame it places only the worn hair's, top's and bottom's pieces on their posed bones, so the frame cost does not grow with the wardrobe. With 490 hairstyles, tops and bottoms (about 4,400 pieces), the focused wardrobe test measured about 8 µs to pose a resident. Before, when every piece lived in the model, it measured 67 µs, and that was paid twice per frame.
 - **Atlas:** `OutfitAtlas` lays out a 256×512 texture with the player skin at the origin, the face-detail swatches at (64..67, 0), and one 64-pixel-wide slot per kind for piece nets: hair at x 64 below the swatches, tops at x 128 and bottoms at x 192. An outfit wears one garment of each kind, so all garments of a kind share its slot and the wardrobe grows without growing the texture.
-- **Visibility:** pieces are grouped by garment, so each frame only touches the three worn garments' parts.
 - **Baking:** `ResidentSkins` bakes one texture per complexion and outfit on a cache miss. It resolves key colors through the palette, applies the layering rules and copies the piece nets into their blocks. Animation allocates no textures.
 - **Reload:** wardrobe PNGs reload with resource packs, so a pack can repaint any piece in key colors.
 - **Armor:** a helmet hides the hair layer and hair pieces; chest and leg armor hide the matching garment pieces.
@@ -95,9 +101,9 @@ Outfit recolored = outfit.recolor(PaletteID.SAGE_AND_TERRACOTTA);
 
 ## Recipes and genders
 
-Recipes keep the `outfitN:complexion:GENDER:PALETTE_ID:seed` format. Saved residents keep their complexion, palette, seed, identity and history, and are redressed from the new wardrobe.
+Recipes keep the `outfitN:complexion:GENDER:PALETTE_ID:seed` format. Saved residents keep their complexion, gender, palette, seed, identity and history, and are redressed from the expanded wardrobe: women now wear the women's set.
 
-The wardrobe is currently shared by all genders. A dedicated female set is future work: add garments tagged for it and filter by gender in the factory. The old draft female data was removed with the old engine.
+Each garment declares its set (`male`, `female` or `unisex`). `Wardrobe.hair/tops/bottoms(gender)` and `Wardrobe.templates(job, gender)` return what a resident of that gender wears. A gender without pieces of its own, or a job with no outfit for it, falls back gracefully.
 
 ## Verification
 
@@ -106,12 +112,15 @@ python tools/wardrobe/wardrobe.py --check
 gradlew.bat test
 gradlew.bat runClientGameTest -PoutfitsOnly
 gradlew.bat runClientGameTest -PhairFacesOnly
+gradlew.bat runClientGameTest -PresidentSample
 ```
 
-The focused Minecraft run checks palette lock on every baked texel, profession dressing, armor hiding and reload. It also captures these screenshots in `build/run/clientGameTest/screenshots/`:
+The focused Minecraft run checks palette lock on every baked texel, profession dressing for both sets, armor hiding and reload, and logs what posing the shared model costs. It also captures these screenshots in `build/run/clientGameTest/screenshots/`:
 
-- the thirty outfits, ten per page, from the front, from the back and mid-stride
-- the thirty hairstyles, ten per page, from the front and back
-- two mix-and-match galleries
+- every outfit template, ten per page, from the front, from the back and mid-stride
+- every hairstyle, ten per page, from the front and back
+- two mix-and-match galleries per set
 - one outfit across all ten palettes
 - an in-world scene for each page of outfits
+
+`-PresidentSample` is a development sample rather than a regression test. It dresses five random men and five random women exactly as a new village would, with fresh recipes and real professions. It saves an in-world shot plus labelled front and back close-ups of each group, and logs every resident's pieces. Pass `-PsampleSeed=<n>` to repeat a draw.

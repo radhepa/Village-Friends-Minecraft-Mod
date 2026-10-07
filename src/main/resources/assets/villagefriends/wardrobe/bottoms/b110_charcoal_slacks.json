@@ -1,0 +1,48 @@
+{
+  "id": "b110_charcoal_slacks",
+  "kind": "bottom",
+  "name": "Charcoal Slacks",
+  "gender": "male",
+  "texture": "bottoms/b110_charcoal_slacks.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "slim",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Pressed charcoal dress slacks with sharp creases, a slim belt and dark shoes."
+}

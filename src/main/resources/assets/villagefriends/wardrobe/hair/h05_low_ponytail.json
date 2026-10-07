@@ -2,6 +2,7 @@
   "id": "h05_low_ponytail",
   "kind": "hair",
   "name": "Low Ponytail",
+  "gender": "male",
   "texture": "hair/h05_low_ponytail.png",
   "extrasHeight": 16,
   "tags": [],

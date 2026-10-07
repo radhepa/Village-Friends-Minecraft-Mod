@@ -2,6 +2,7 @@
   "id": "b10_wanderers_pantaloons",
   "kind": "bottom",
   "name": "Wanderer's Pantaloons",
+  "gender": "male",
   "texture": "bottoms/b10_wanderers_pantaloons.png",
   "extrasHeight": 16,
   "tags": [

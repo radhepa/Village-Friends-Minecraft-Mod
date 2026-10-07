@@ -1,0 +1,218 @@
+{
+  "id": "t31_farriers_split_apron",
+  "kind": "top",
+  "name": "Farrier's Split Apron",
+  "gender": "male",
+  "texture": "tops/t31_farriers_split_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.1,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.1,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        7,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "horseshoe",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        51,
+        8
+      ]
+    },
+    {
+      "id": "hoof_knife",
+      "bone": "TORSO",
+      "pivot": [
+        3.1,
+        9.9,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        60,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A shoeing smith's leather apron split between the legs and fringed, a horseshoe on the belt and a hoof knife."
+}

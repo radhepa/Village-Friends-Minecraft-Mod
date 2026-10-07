@@ -1,0 +1,17 @@
+{
+  "id": "b96_charcoal_burners_sooty_trousers",
+  "kind": "bottom",
+  "name": "Charcoal Burner's Sooty Trousers",
+  "gender": "male",
+  "texture": "bottoms/b96_charcoal_burners_sooty_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "lockedTo": "t96_charcoal_burners_sooty_smock",
+  "description": "Work trousers blackened with soot from the boots up, sacking bound round the shins against embers, and wooden-soled boots."
+}

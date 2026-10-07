@@ -2,6 +2,7 @@
   "id": "t14_quilted_arming_jacket",
   "kind": "top",
   "name": "Quilted Arming Jacket",
+  "gender": "male",
   "texture": "tops/t14_quilted_arming_jacket.png",
   "extrasHeight": 16,
   "tags": [

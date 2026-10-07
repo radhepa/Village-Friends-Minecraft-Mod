@@ -4,6 +4,7 @@ from paint import grid, k, rivets, solid
 
 META = {
     "name": "Buttoned Cotehardie",
+    "gender": "male",
     "description": "A close-fitting jacket buttoned from collar to hem and down the forearms, with a jeweled hip belt.",
     "tags": ["fancy", "tailored"],
     "covers_waist": True,

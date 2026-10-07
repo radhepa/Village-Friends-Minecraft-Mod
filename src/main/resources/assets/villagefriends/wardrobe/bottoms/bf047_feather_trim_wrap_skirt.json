@@ -1,0 +1,189 @@
+{
+  "id": "bf047_feather_trim_wrap_skirt",
+  "kind": "bottom",
+  "name": "Feather-Trim Wrap Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf047_feather_trim_wrap_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "long_skirt",
+    "rugged",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "waist_wrap_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        5.6,
+        9.8,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        13,
+        17
+      ]
+    },
+    {
+      "id": "waist_wrap_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        5.6,
+        9.8,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        18,
+        17
+      ]
+    }
+  ],
+  "description": "An ankle-length wrap skirt with feathers embroidered down its overlapping edge, tied at the hip, and soft boots."
+}

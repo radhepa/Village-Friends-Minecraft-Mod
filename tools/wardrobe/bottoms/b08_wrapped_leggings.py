@@ -3,6 +3,7 @@ from paint import cap, fabric, k, solid, strip_fabric
 
 META = {
     "name": "Wrapped Leggings",
+    "gender": "male",
     "description": "Linen trousers bound from knee to ankle in leather wraps, soft turnshoes and a tied sash.",
     "tags": ["rugged", "sturdy", "simple"],
 }

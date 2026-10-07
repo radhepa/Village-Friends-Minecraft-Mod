@@ -4,6 +4,7 @@ from paint import solid, strip_fabric
 
 META = {
     "name": "Wool Trousers & Clogs",
+    "gender": "male",
     "description": "Plain wool trousers, hems turned up, over carved wooden clogs.",
     "tags": ["work", "simple", "sturdy"],
 }

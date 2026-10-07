@@ -1,0 +1,137 @@
+{
+  "id": "t72_hauberk_mail_shirt",
+  "kind": "top",
+  "name": "Hauberk Mail Shirt",
+  "gender": "male",
+  "texture": "tops/t72_hauberk_mail_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "martial"
+  ],
+  "requires": [
+    "sturdy"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "lowered_coif",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -1.2,
+        -2.7
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "mail_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mail_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A riveted mail hauberk to mid-thigh with elbow-length sleeves over a padded tunic, its mail coif lowered round the neck."
+}

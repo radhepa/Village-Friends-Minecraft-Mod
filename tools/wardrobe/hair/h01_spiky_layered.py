@@ -1,7 +1,7 @@
 """Spiky Layered: tapered spikes fanning out from the crown, forward fringe points and a layered nape."""
 from paint import hair_box, scalp, shell
 
-META = {"name": "Spiky Layered", "description": "Stepped spikes radiating from the crown over a layered nape."}
+META = {"name": "Spiky Layered", "gender": "male", "description": "Stepped spikes radiating from the crown over a layered nape."}
 
 # (pivot x, pivot z, size, tilt scale)
 CROWN = [(-2.6, -2.4, (2, 3, 2)), (0, -2.8, (2, 4, 2)), (2.6, -2.4, (2, 3, 2)),

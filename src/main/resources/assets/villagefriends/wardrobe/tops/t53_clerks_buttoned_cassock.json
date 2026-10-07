@@ -1,0 +1,137 @@
+{
+  "id": "t53_clerks_buttoned_cassock",
+  "kind": "top",
+  "name": "Clerk's Buttoned Cassock",
+  "gender": "male",
+  "texture": "tops/t53_clerks_buttoned_cassock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "pellegrina",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        11,
+        3,
+        6
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "fascia",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "fascia_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "motion": "sway"
+    }
+  ],
+  "lockedTo": "b53_cassock_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A parish clerk's dark cassock buttoned from collar to hem, a short buttoned shoulder cape and a sash with a long tail."
+}

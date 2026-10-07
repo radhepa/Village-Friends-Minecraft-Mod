@@ -1,0 +1,105 @@
+{
+  "id": "t98_illuminators_sleeve_garters",
+  "kind": "top",
+  "name": "Illuminator's Sleeve Garters",
+  "gender": "male",
+  "texture": "tops/t98_illuminators_sleeve_garters.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_garter",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_sleeve_garter",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "brush_roll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.6,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A manuscript illuminator's fine shirt, its full sleeves gathered by garters above the elbow, gold leaf on the cuffs and a brush roll."
+}

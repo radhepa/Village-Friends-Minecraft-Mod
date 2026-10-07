@@ -1,0 +1,217 @@
+{
+  "id": "t41_brewers_mash_paddle_apron",
+  "kind": "top",
+  "name": "Brewer's Mash-Paddle Apron",
+  "gender": "male",
+  "texture": "tops/t41_brewers_mash_paddle_apron.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron_skirt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hop_cone_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "hop_cone_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        9.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "hop_cone_2",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "paddle_shaft",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        -1.6,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "paddle_blade",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        -1.6,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -1.5,
+        8,
+        -0.5
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "An alewright's knee-length linen apron with a wort-darkened hem, hop cones tied at the waist and a mash paddle on the back."
+}

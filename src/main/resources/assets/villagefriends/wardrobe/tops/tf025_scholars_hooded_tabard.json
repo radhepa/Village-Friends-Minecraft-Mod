@@ -1,0 +1,192 @@
+{
+  "id": "tf025_scholars_hooded_tabard",
+  "kind": "top",
+  "name": "Scholar's Hooded Tabard",
+  "gender": "female",
+  "texture": "tops/tf025_scholars_hooded_tabard.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shoulder_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -2.8
+      ],
+      "size": [
+        11,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.5,
+        2.3
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "hood_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        2.0,
+        3.2
+      ],
+      "rotation": [
+        10,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        12,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        12,
+        1
+      ],
+      "uv": [
+        44,
+        10
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "An open-sided academic tabard with a shoulder cape and a liripipe hood, over a buttoned kirtle."
+}

@@ -1,0 +1,131 @@
+{
+  "id": "b78_mail_skirt_over_trews",
+  "kind": "bottom",
+  "name": "Mail Skirt over Trews",
+  "gender": "male",
+  "texture": "bottoms/b78_mail_skirt_over_trews.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mail_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mail_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "mail_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "mail_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        3,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "description": "A short skirt of riveted mail hung from the hips to mid-thigh over wool trews, with low buckled boots."
+}

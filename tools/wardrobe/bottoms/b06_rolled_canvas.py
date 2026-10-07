@@ -3,6 +3,7 @@ from paint import cap, fabric, k, rnd, solid, strip_fabric
 
 META = {
     "name": "Rolled Canvas",
+    "gender": "male",
     "description": "Canvas trousers rolled to the shin over glossy wading boots, held by a knotted rope.",
     "tags": ["rugged", "simple", "sea"],
 }

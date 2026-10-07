@@ -1,0 +1,129 @@
+{
+  "id": "b87_upturned_toe_riding_boots",
+  "kind": "bottom",
+  "name": "Upturned-Toe Riding Boots",
+  "gender": "male",
+  "texture": "bottoms/b87_upturned_toe_riding_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "right_boot_toe_curl",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.6,
+        -4.0
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_toe_curl",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.6,
+        -4.0
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    }
+  ],
+  "description": "Loose steppe riding trousers stuffed into tall leather boots with embroidered tops and toes that curl upward."
+}

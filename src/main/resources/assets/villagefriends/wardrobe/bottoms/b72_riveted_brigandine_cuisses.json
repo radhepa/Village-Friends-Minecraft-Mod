@@ -1,0 +1,79 @@
+{
+  "id": "b72_riveted_brigandine_cuisses",
+  "kind": "bottom",
+  "name": "Riveted Brigandine Cuisses",
+  "gender": "male",
+  "texture": "bottoms/b72_riveted_brigandine_cuisses.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "martial",
+    "sturdy"
+  ],
+  "requires": [
+    "martial",
+    "rugged"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cuisse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_cuisse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "description": "Cloth-covered thigh plates studded with rows of rivets, strapped over quilted hose, with tall riding boots."
+}

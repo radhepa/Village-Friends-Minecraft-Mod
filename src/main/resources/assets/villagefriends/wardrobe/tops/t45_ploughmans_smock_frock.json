@@ -1,0 +1,163 @@
+{
+  "id": "t45_ploughmans_smock_frock",
+  "kind": "top",
+  "name": "Ploughman's Smock Frock",
+  "gender": "male",
+  "texture": "tops/t45_ploughmans_smock_frock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "flat_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "frock_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "frock_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "frock_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "frock_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        32,
+        9
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A knee-length linen smock frock, honeycomb smocking on chest and back, embroidered side boxes and a flat stitched collar."
+}

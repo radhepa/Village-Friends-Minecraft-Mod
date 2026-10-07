@@ -1,0 +1,73 @@
+{
+  "id": "b34_spurred_hunting_boots",
+  "kind": "bottom",
+  "name": "Spurred Hunting Boots",
+  "gender": "male",
+  "texture": "bottoms/b34_spurred_hunting_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_spur",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.0,
+        1.7000000000000002
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_spur",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.0,
+        1.7000000000000002
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "description": "Buff riding breeches in close calf boots, a buckled strap round each ankle and a prick spur at the heel."
+}

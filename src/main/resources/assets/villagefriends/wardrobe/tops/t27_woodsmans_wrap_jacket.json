@@ -2,6 +2,7 @@
   "id": "t27_woodsmans_wrap_jacket",
   "kind": "top",
   "name": "Woodsman's Wrap Jacket",
+  "gender": "male",
   "texture": "tops/t27_woodsmans_wrap_jacket.png",
   "extrasHeight": 16,
   "tags": [

@@ -1,0 +1,217 @@
+{
+  "id": "t67_jesters_motley",
+  "kind": "top",
+  "name": "Jester's Motley",
+  "gender": "male",
+  "texture": "tops/t67_jesters_motley.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "dagged_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "collar_point_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.0,
+        1.0,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "collar_point_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        1.0,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "collar_point_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        1.0,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "collar_point_3",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        1.0,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "right_elbow_bell",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.8,
+        4.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "left_elbow_bell",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.8,
+        4.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "b67_jesters_bell_hose",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A fool's motley of chequered quarters, a dagged collar whose points each end in a little bell, and bells at both elbows."
+}

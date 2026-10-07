@@ -1,0 +1,132 @@
+{
+  "id": "b54_felt_slippers_and_hose",
+  "kind": "bottom",
+  "name": "Felt Slippers & Hose",
+  "gender": "male",
+  "texture": "bottoms/b54_felt_slippers_and_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "scholarly",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_felt_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_felt_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_felt_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_felt_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "description": "Dark woollen study hose in thick felt slippers with turned-down cuffs and rounded toes, for long hours at the desk."
+}

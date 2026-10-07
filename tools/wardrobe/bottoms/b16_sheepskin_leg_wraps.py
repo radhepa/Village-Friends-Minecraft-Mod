@@ -4,6 +4,7 @@ from paint import rnd
 
 META = {
     "name": "Sheepskin Leg Wraps",
+    "gender": "male",
     "description": "Wool trousers with fleece bound around the shins by leather thongs, topped with fur cuffs.",
     "tags": ["rugged", "sturdy", "casual"],
 }

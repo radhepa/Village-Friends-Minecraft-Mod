@@ -1,0 +1,108 @@
+{
+  "id": "t76_crusaders_cross_surcoat",
+  "kind": "top",
+  "name": "Crusader's Cross Surcoat",
+  "gender": "male",
+  "texture": "tops/t76_crusaders_cross_surcoat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "holy",
+    "martial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sword_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "surcoat_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "surcoat_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "lockedTo": "b76_crusaders_mail_chausses",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long pale surcoat bearing a great cross over a mail hauberk with mail sleeves, girt with a broad sword belt."
+}

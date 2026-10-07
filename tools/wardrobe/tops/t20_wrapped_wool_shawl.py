@@ -4,6 +4,7 @@ from paint import k, solid
 
 META = {
     "name": "Wrapped Wool Shawl",
+    "gender": "male",
     "description": "A checked wool shawl wrapped over both shoulders, crossed on the chest and pinned with a brooch.",
     "tags": ["casual", "rugged"],
     "tucked": True,

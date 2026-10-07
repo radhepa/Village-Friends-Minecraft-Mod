@@ -1,0 +1,220 @@
+{
+  "id": "tf036_desert_linen_wrap",
+  "kind": "top",
+  "name": "Desert Linen Wrap",
+  "gender": "female",
+  "texture": "tops/tf036_desert_linen_wrap.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bell",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.6,
+        -3.0
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_bell",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        1.6,
+        -3.0
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_bangle",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_bangle",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        10
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "scarf_front",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        -0.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        10,
+        1
+      ],
+      "uv": [
+        42,
+        10
+      ]
+    },
+    {
+      "id": "scarf_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.2,
+        -0.6,
+        -2.8
+      ],
+      "size": [
+        3,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "scarf_back",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        -0.6,
+        2.4
+      ],
+      "rotation": [
+        4,
+        0,
+        -4
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        19,
+        22
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Layered white linen wrapped across the body, an embroidered neckline, a fringed shoulder scarf and bangles."
+}

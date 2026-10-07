@@ -1,0 +1,76 @@
+{
+  "id": "b85_fishers_oilskin_waders",
+  "kind": "bottom",
+  "name": "Fisher's Oilskin Waders",
+  "gender": "male",
+  "texture": "bottoms/b85_fishers_oilskin_waders.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wader_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_wader_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "lockedTo": "t85_fishers_oilskin_smock",
+  "description": "Stiff oiled waders reaching to the hip and strapped at the thigh, shining wet, over heavy black-soled sea boots."
+}

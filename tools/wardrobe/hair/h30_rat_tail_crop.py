@@ -2,7 +2,7 @@
 from anime import bangs, cel_box, lock, ring_shell, spike
 from paint import scalp, solid
 
-META = {"name": "Rat-Tail Crop", "description": "A short pointed crop with a thin braided tail from the nape."}
+META = {"name": "Rat-Tail Crop", "gender": "male", "description": "A short pointed crop with a thin braided tail from the nape."}
 
 
 def build(g):

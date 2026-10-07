@@ -1,0 +1,164 @@
+{
+  "id": "t69_tippeted_cotehardie",
+  "kind": "top",
+  "name": "Tippeted Cotehardie",
+  "gender": "male",
+  "texture": "tops/t69_tippeted_cotehardie.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_tippet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -2.6,
+        2.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_tippet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        2.6,
+        2.4,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "plaque_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "dagged_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dagged_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A close cotehardie laced up the side, long accent tippets streaming from the elbows, a plaque belt and a leaf-dagged hem."
+}

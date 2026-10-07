@@ -1,0 +1,136 @@
+{
+  "id": "b33_barefoot_canvas_slops",
+  "kind": "bottom",
+  "name": "Barefoot Canvas Slops",
+  "gender": "male",
+  "texture": "bottoms/b33_barefoot_canvas_slops.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "sea",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_slop",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.8,
+        0.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "left_slop",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.2,
+        0.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18000000000000002
+    },
+    {
+      "id": "waist_rope",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.55,
+        9.7,
+        -2.55
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_rope_knot",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        12
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Wide knee-length canvas slops with a tarred hem, held up with a knotted rope, worn barefoot on deck or shore."
+}

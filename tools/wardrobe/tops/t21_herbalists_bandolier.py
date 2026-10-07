@@ -4,6 +4,7 @@ from paint import k, line, solid
 
 META = {
     "name": "Herbalist's Bandolier",
+    "gender": "male",
     "description": "A work shirt crossed by a leather bandolier of corked vials, with pouches and a sprig of herbs.",
     "tags": ["casual", "work"],
     "tucked": True,

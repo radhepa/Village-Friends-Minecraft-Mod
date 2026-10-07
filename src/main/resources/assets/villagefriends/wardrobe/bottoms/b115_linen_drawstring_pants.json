@@ -1,0 +1,74 @@
+{
+  "id": "b115_linen_drawstring_pants",
+  "kind": "bottom",
+  "name": "Linen Drawstring Pants",
+  "gender": "male",
+  "texture": "bottoms/b115_linen_drawstring_pants.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_drawstring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "waist_drawstring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    }
+  ],
+  "description": "Loose pale linen pants gathered by a drawstring, over canvas shoes."
+}

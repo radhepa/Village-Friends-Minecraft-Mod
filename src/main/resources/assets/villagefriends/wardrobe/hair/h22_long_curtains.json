@@ -2,6 +2,7 @@
   "id": "h22_long_curtains",
   "kind": "hair",
   "name": "Long Curtains",
+  "gender": "male",
   "texture": "hair/h22_long_curtains.png",
   "extrasHeight": 32,
   "tags": [],

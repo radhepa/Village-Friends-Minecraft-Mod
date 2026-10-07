@@ -1,0 +1,73 @@
+{
+  "id": "b97_canvas_trousers_and_mules",
+  "kind": "bottom",
+  "name": "Canvas Trousers & Mules",
+  "gender": "male",
+  "texture": "bottoms/b97_canvas_trousers_and_mules.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_mule_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_mule_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Easy canvas workshop trousers turned up twice at the hem, worn with backless leather mules that leave the heel bare."
+}

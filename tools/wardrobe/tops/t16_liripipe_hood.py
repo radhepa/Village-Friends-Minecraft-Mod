@@ -4,6 +4,7 @@ from paint import fabric, k, solid
 
 META = {
     "name": "Liripipe Hood",
+    "gender": "male",
     "description": "A lowered hood whose dagged shoulder cape and long liripipe tail hang over a belted tunic.",
     "tags": ["casual", "whimsical"],
     "covers_waist": True,

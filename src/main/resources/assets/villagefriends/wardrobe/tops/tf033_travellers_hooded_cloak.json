@@ -1,0 +1,162 @@
+{
+  "id": "tf033_travellers_hooded_cloak",
+  "kind": "top",
+  "name": "Traveller's Hooded Cloak",
+  "gender": "female",
+  "texture": "tops/tf033_travellers_hooded_cloak.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cloak_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.7,
+        -2.8
+      ],
+      "size": [
+        17,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "cloak_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        2.75
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "cloak_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.423204552858065,
+        3.5173212111853784
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        11
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.5,
+        2.3
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        46,
+        11
+      ]
+    },
+    {
+      "id": "brooch",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A long hooded wool cloak over a plain kirtle, the hood thrown back and a round brooch at the throat."
+}

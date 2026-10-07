@@ -2,6 +2,7 @@
   "id": "h24_sleepy_fluff",
   "kind": "hair",
   "name": "Sleepy Fluff",
+  "gender": "male",
   "texture": "hair/h24_sleepy_fluff.png",
   "extrasHeight": 32,
   "tags": [],

@@ -1,7 +1,7 @@
 """Low Ponytail: swept back and tied at the nape with a palette ribbon; the tail sways as they walk."""
 from paint import hair_box, k, scalp, shell, solid
 
-META = {"name": "Low Ponytail", "description": "Swept-back hair tied low with a ribbon, loose strands framing the face."}
+META = {"name": "Low Ponytail", "gender": "male", "description": "Swept-back hair tied low with a ribbon, loose strands framing the face."}
 
 
 def build(g):

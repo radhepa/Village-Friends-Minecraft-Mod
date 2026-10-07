@@ -1,0 +1,378 @@
+{
+  "id": "h43_afro_puff_fade",
+  "kind": "hair",
+  "name": "Afro Puff Fade",
+  "gender": "male",
+  "texture": "hair/h43_afro_puff_fade.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "puff_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.3,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        -12,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -2
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "puff_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        5,
+        0
+      ],
+      "origin": [
+        -2,
+        -4,
+        -2
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "puff_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.3,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        -2,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -2
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "puff_3",
+      "bone": "HEAD",
+      "pivot": [
+        -2.8,
+        -8.3,
+        0
+      ],
+      "rotation": [
+        0,
+        -9,
+        0
+      ],
+      "origin": [
+        -2,
+        -4,
+        -2
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "puff_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        0
+      ],
+      "rotation": [
+        0,
+        8,
+        0
+      ],
+      "origin": [
+        -2,
+        -5,
+        -2
+      ],
+      "size": [
+        4,
+        5,
+        4
+      ],
+      "uv": [
+        17,
+        9
+      ]
+    },
+    {
+      "id": "puff_5",
+      "bone": "HEAD",
+      "pivot": [
+        2.8,
+        -8.3,
+        0
+      ],
+      "rotation": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        -2,
+        -4,
+        -2
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        34,
+        9
+      ]
+    },
+    {
+      "id": "puff_6",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -8.3,
+        2.6
+      ],
+      "rotation": [
+        0,
+        -6,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -2
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        0,
+        19
+      ]
+    },
+    {
+      "id": "puff_7",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.3,
+        2.8
+      ],
+      "rotation": [
+        0,
+        11,
+        0
+      ],
+      "origin": [
+        -2,
+        -4,
+        -2
+      ],
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "uv": [
+        17,
+        19
+      ]
+    },
+    {
+      "id": "puff_8",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.3,
+        2.6
+      ],
+      "rotation": [
+        0,
+        4,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -2
+      ],
+      "size": [
+        4,
+        3,
+        4
+      ],
+      "uv": [
+        34,
+        19
+      ]
+    },
+    {
+      "id": "rim_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        -4.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        51,
+        19
+      ]
+    },
+    {
+      "id": "rim_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.0,
+        -8.2,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        28
+      ]
+    },
+    {
+      "id": "rim_2",
+      "bone": "HEAD",
+      "pivot": [
+        4.0,
+        -8.2,
+        0
+      ],
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        13,
+        28
+      ]
+    },
+    {
+      "id": "rim_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.2,
+        4.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        26,
+        28
+      ]
+    }
+  ],
+  "description": "A rounded afro-textured puff on top over a high fade and a crisp hairline."
+}

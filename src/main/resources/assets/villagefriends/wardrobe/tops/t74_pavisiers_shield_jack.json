@@ -1,0 +1,132 @@
+{
+  "id": "t74_pavisiers_shield_jack",
+  "kind": "top",
+  "name": "Pavisier's Shield Jack",
+  "gender": "male",
+  "texture": "tops/t74_pavisiers_shield_jack.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "pavise",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        3.0
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        12,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "pavise_ridge",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        4.0
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        12,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "falchion",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        10.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A shield-bearer's padded jack with a tall painted pavise slung across the back on a strap, and a short falchion."
+}

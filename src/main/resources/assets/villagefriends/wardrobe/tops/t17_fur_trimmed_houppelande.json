@@ -2,6 +2,7 @@
   "id": "t17_fur_trimmed_houppelande",
   "kind": "top",
   "name": "Fur-Trimmed Houppelande",
+  "gender": "male",
   "texture": "tops/t17_fur_trimmed_houppelande.png",
   "extrasHeight": 32,
   "tags": [

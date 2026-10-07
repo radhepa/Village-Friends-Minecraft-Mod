@@ -1,0 +1,582 @@
+{
+  "id": "h64_village_mullet",
+  "kind": "hair",
+  "name": "Village Mullet",
+  "gender": "male",
+  "texture": "hair/h64_village_mullet.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tuft_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.3,
+        -8.35,
+        -2.2
+      ],
+      "rotation": [
+        10,
+        0,
+        12
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "tuft_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.3,
+        -8.35,
+        -2.6
+      ],
+      "rotation": [
+        14,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        13,
+        0
+      ]
+    },
+    {
+      "id": "tuft_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -8.35,
+        -1.8
+      ],
+      "rotation": [
+        8,
+        0,
+        -14
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "tuft_3",
+      "bone": "HEAD",
+      "pivot": [
+        -1.4,
+        -8.35,
+        0.8
+      ],
+      "rotation": [
+        -8,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "tuft_4",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -8.35,
+        1.0
+      ],
+      "rotation": [
+        -10,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "fringe_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        5
+      ]
+    },
+    {
+      "id": "fringe_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        5
+      ]
+    },
+    {
+      "id": "fringe_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        5
+      ]
+    },
+    {
+      "id": "fringe_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        5
+      ]
+    },
+    {
+      "id": "fringe_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        -10
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        5
+      ]
+    },
+    {
+      "id": "fringe_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -8.5,
+        -4.3
+      ],
+      "rotation": [
+        -12,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        5
+      ]
+    },
+    {
+      "id": "fall_root",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -7.6,
+        4.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        -0.5
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        36,
+        5
+      ]
+    },
+    {
+      "id": "fall_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        55,
+        5
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        1
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        5,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        1
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        -1
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        17,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        -1
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        24,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        -4
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        14
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "fall_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -4.2,
+        4.55
+      ],
+      "rotation": [
+        5,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        7.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        14
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Short and textured on top, cropped sides, and a long straight fall to the shoulders behind."
+}

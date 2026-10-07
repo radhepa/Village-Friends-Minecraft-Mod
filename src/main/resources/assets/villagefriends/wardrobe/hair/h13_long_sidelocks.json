@@ -2,6 +2,7 @@
   "id": "h13_long_sidelocks",
   "kind": "hair",
   "name": "Long Sidelocks",
+  "gender": "male",
   "texture": "hair/h13_long_sidelocks.png",
   "extrasHeight": 48,
   "tags": [],

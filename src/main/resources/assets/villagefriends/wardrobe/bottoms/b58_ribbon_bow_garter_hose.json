@@ -1,0 +1,133 @@
+{
+  "id": "b58_ribbon_bow_garter_hose",
+  "kind": "bottom",
+  "name": "Ribbon-Bow Garter Hose",
+  "gender": "male",
+  "texture": "bottoms/b58_ribbon_bow_garter_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "slim",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_garter_bow",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.7,
+        4.5,
+        -1.9
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_bow_tail",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.2,
+        5.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_garter_bow",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.7000000000000002,
+        4.5,
+        -1.9
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "left_bow_tail",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.2,
+        5.6,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Fitted hose gartered below the knee with ribbons tied in big bows whose tails flutter, over soft pointed shoes."
+}

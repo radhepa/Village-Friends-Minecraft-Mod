@@ -1,0 +1,134 @@
+{
+  "id": "t82_norse_tablet_woven_kaftan",
+  "kind": "top",
+  "name": "Norse Tablet-Woven Kaftan",
+  "gender": "male",
+  "texture": "tops/t82_norse_tablet_woven_kaftan.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "ring_brooch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        1.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "kaftan_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "kaftan_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A northern wrap-front kaftan crossing to the hip, every edge bound with tablet-woven bands, pinned with a ring brooch."
+}

@@ -1,0 +1,191 @@
+{
+  "id": "bf019_shieldmaidens_war_skirt",
+  "kind": "bottom",
+  "name": "Shieldmaiden's War Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf019_shieldmaidens_war_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged",
+    "skirt",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_fur_top",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "left_fur_top",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        9
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "waist_hip_strap_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.040000000000001,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        42,
+        9
+      ]
+    },
+    {
+      "id": "waist_hip_strap_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.040000000000001,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        49,
+        9
+      ]
+    }
+  ],
+  "description": "A knee-length wool skirt split at the sides with studded leather strips, over trousers and fur-topped boots."
+}

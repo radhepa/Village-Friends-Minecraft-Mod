@@ -2,6 +2,7 @@
   "id": "h12_hime_cut",
   "kind": "hair",
   "name": "Hime Cut",
+  "gender": "male",
   "texture": "hair/h12_hime_cut.png",
   "extrasHeight": 32,
   "tags": [],

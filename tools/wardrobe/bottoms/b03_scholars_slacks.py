@@ -3,6 +3,7 @@ from paint import fabric, grid, solid, strip_fabric
 
 META = {
     "name": "Scholar's Slacks",
+    "gender": "male",
     "description": "Slim pressed trousers with a narrow belt and soft buckled shoes.",
     "tags": ["tailored", "slim", "scholarly"],
 }

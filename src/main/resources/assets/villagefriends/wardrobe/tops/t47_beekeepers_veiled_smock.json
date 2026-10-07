@@ -1,0 +1,306 @@
+{
+  "id": "t47_beekeepers_veiled_smock",
+  "kind": "top",
+  "name": "Beekeeper's Veiled Smock",
+  "gender": "male",
+  "texture": "tops/t47_beekeepers_veiled_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_glove_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "left_glove_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "veil_gather",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.9,
+        -3.0
+      ],
+      "size": [
+        11,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        3.0
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        35,
+        8
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "smoker_can",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        29,
+        18
+      ]
+    },
+    {
+      "id": "smoker_spout",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        18
+      ]
+    },
+    {
+      "id": "bee",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        3.6,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        18
+      ]
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        25
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "lockedTo": "b47_beekeepers_bound_trousers",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pale bee-ward's smock with a dark gauze veil gathered at the throat, hood thrown back, long gloves and a smoker."
+}

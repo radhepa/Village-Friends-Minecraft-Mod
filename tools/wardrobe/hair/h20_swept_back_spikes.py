@@ -2,7 +2,7 @@
 from anime import lock, ring_shell, spike
 from paint import scalp
 
-META = {"name": "Swept-Back Spikes", "description": "Hair raked back into tidy backward spikes, a couple of loose strands in front."}
+META = {"name": "Swept-Back Spikes", "gender": "male", "description": "Hair raked back into tidy backward spikes, a couple of loose strands in front."}
 
 
 def build(g):

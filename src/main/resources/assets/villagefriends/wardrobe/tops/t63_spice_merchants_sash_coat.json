@@ -1,0 +1,220 @@
+{
+  "id": "t63_spice_merchants_sash_coat",
+  "kind": "top",
+  "name": "Spice Merchant's Sash Coat",
+  "gender": "male",
+  "texture": "tops/t63_spice_merchants_sash_coat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "silk_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "silk_sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "silk_sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "pomander",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        10.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "pomander_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        10.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A travelling spice merchant's long coat wound with a fringed silk sash, broad embroidered cuffs and a filigree pomander."
+}

@@ -2,6 +2,7 @@
   "id": "b02_trail_breeches",
   "kind": "bottom",
   "name": "Trail Breeches",
+  "gender": "male",
   "texture": "bottoms/b02_trail_breeches.png",
   "extrasHeight": 16,
   "tags": [

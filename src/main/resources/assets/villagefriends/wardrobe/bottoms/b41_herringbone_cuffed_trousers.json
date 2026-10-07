@@ -1,0 +1,75 @@
+{
+  "id": "b41_herringbone_cuffed_trousers",
+  "kind": "bottom",
+  "name": "Herringbone Cuffed Trousers",
+  "gender": "male",
+  "texture": "bottoms/b41_herringbone_cuffed_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_turned_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_turned_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "description": "Herringbone wool trousers with deep turned-up cuffs, over ankle boots fastened with wooden toggles."
+}

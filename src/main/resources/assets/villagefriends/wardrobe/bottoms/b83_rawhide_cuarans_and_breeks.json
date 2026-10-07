@@ -1,0 +1,75 @@
+{
+  "id": "b83_rawhide_cuarans_and_breeks",
+  "kind": "bottom",
+  "name": "Rawhide Cuarans & Breeks",
+  "gender": "male",
+  "texture": "bottoms/b83_rawhide_cuarans_and_breeks.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_cuaran_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_cuaran_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Hairy undyed wool breeks to the knee, bare shins, and pale rawhide cuarans drawn up with thongs crossing at the ankle."
+}

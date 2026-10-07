@@ -1,0 +1,74 @@
+{
+  "id": "b47_beekeepers_bound_trousers",
+  "kind": "bottom",
+  "name": "Beekeeper's Bound Trousers",
+  "gender": "male",
+  "texture": "bottoms/b47_beekeepers_bound_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_knot",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.75,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_knot",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.75,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t47_beekeepers_veiled_smock",
+  "description": "Pale linen trousers corded tight at the knee and ankle so no bee can climb in, a mended knee and soft pale boots."
+}

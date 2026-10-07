@@ -1,0 +1,161 @@
+{
+  "id": "t68_town_criers_bell_coat",
+  "kind": "top",
+  "name": "Town Crier's Bell Coat",
+  "gender": "male",
+  "texture": "tops/t68_town_criers_bell_coat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "crier_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        35,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "handbell_grip",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "handbell",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        11.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "proclamation",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        8.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        9
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A town crier's coat with big brass buttons, a short shoulder cape, a badged livery armband, a handbell and a scroll."
+}

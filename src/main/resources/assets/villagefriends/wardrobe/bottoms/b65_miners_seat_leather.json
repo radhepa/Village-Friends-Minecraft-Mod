@@ -1,0 +1,75 @@
+{
+  "id": "b65_miners_seat_leather",
+  "kind": "bottom",
+  "name": "Miner's Seat Leather",
+  "gender": "male",
+  "texture": "bottoms/b65_miners_seat_leather.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_seat_strap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "seat_leather",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "Hard-wearing twill trousers with leather knee patches and a stiff leather seat flap strapped behind, for sliding down the adits."
+}

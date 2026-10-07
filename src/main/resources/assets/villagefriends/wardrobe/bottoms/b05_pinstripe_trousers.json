@@ -2,6 +2,7 @@
   "id": "b05_pinstripe_trousers",
   "kind": "bottom",
   "name": "Pinstripe Trousers",
+  "gender": "male",
   "texture": "bottoms/b05_pinstripe_trousers.png",
   "extrasHeight": 0,
   "tags": [

@@ -1,0 +1,190 @@
+{
+  "id": "t97_painters_daubed_smock",
+  "kind": "top",
+  "name": "Painter's Daubed Smock",
+  "gender": "male",
+  "texture": "tops/t97_painters_daubed_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "whimsical",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pocket_brush_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        0.2,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pocket_brush_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        0.5,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "pocket_brush_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        0.8,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "palette_board",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        6
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A loose painter's smock dabbed with every colour of the workshop, brushes standing in the breast pocket and a palette board."
+}

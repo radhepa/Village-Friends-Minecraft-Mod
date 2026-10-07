@@ -1,0 +1,195 @@
+{
+  "id": "tf053_houppelande_bodice",
+  "kind": "top",
+  "name": "Houppelande Bodice",
+  "gender": "female",
+  "texture": "tops/tf053_houppelande_bodice.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "gown",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "high_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        4.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -1.8,
+        -2.7
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "right_funnel_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        1.5,
+        -3.5
+      ],
+      "size": [
+        7,
+        8,
+        7
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_funnel_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.5,
+        -3.5
+      ],
+      "size": [
+        7,
+        8,
+        7
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_funnel_fur",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        9.5,
+        -3.5
+      ],
+      "size": [
+        7,
+        2,
+        7
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "left_funnel_fur",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.5,
+        -3.5
+      ],
+      "size": [
+        7,
+        2,
+        7
+      ],
+      "uv": [
+        29,
+        25
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "lockedTo": "bf053_houppelande_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A high-waisted velvet houppelande, belted under the bust, with a fur collar and vast fur-edged funnel sleeves."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "t75_longbowmans_bracer_jerkin",
+  "kind": "top",
+  "name": "Longbowman's Bracer Jerkin",
+  "gender": "male",
+  "texture": "tops/t75_longbowmans_bracer_jerkin.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bow_bracer",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "belt_arrow_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        6.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "belt_arrow_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        6.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "belt_arrow_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        6.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A yeoman archer's sleeveless jerkin over a linen shirt, a broad horn-and-leather bracer and arrows thrust through the belt."
+}

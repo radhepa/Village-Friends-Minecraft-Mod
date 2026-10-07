@@ -1,0 +1,106 @@
+{
+  "id": "t85_fishers_oilskin_smock",
+  "kind": "top",
+  "name": "Fisher's Oilskin Smock",
+  "gender": "male",
+  "texture": "tops/t85_fishers_oilskin_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.0
+      ],
+      "rotation": [
+        12,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "smock_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "lockedTo": "b85_fishers_oilskin_waders",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A stiff oiled smock shining with wet, toggled at the throat, its deep hood thrown back and the cuffs strapped tight."
+}

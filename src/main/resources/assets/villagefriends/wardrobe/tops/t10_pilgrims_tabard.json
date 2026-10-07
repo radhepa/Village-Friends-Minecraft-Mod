@@ -2,6 +2,7 @@
   "id": "t10_pilgrims_tabard",
   "kind": "top",
   "name": "Pilgrim's Tabard",
+  "gender": "male",
   "texture": "tops/t10_pilgrims_tabard.png",
   "extrasHeight": 32,
   "tags": [

@@ -1,0 +1,189 @@
+{
+  "id": "tf030_bards_lute_bodice",
+  "kind": "top",
+  "name": "Bard's Lute Bodice",
+  "gender": "female",
+  "texture": "tops/tf030_bards_lute_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "rosette",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        6.8,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "lute_body",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        7.0,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -35
+      ],
+      "origin": [
+        -2.5,
+        -3,
+        -1
+      ],
+      "size": [
+        5,
+        6,
+        2
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "lute_neck",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        7.0,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -35
+      ],
+      "origin": [
+        -0.5,
+        -9,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "lute_pegbox",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        7.0,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -35
+      ],
+      "origin": [
+        -1,
+        -10,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A laced bodice with slashed puff sleeves, a ribbon sash with a rosette and a lute slung across the back."
+}

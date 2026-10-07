@@ -1,0 +1,75 @@
+{
+  "id": "tf014_smocked_shepherdess_blouse",
+  "kind": "top",
+  "name": "Smocked Shepherdess Blouse",
+  "gender": "female",
+  "texture": "tops/tf014_smocked_shepherdess_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "horn",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        6.8,
+        3.2
+      ],
+      "rotation": [
+        0,
+        30,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1.5
+      ],
+      "size": [
+        1,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "horn_mouth",
+      "bone": "TORSO",
+      "pivot": [
+        -3.6,
+        6.8,
+        2.2
+      ],
+      "rotation": [
+        0,
+        30,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A honeycomb-smocked linen blouse under a fleece-lined sheepskin bolero, with a herding horn on a cord."
+}

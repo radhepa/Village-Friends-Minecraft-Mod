@@ -1,0 +1,75 @@
+{
+  "id": "b82_rus_billow_trousers_and_winingas",
+  "kind": "bottom",
+  "name": "Rus Billow Trousers & Winingas",
+  "gender": "male",
+  "texture": "bottoms/b82_rus_billow_trousers_and_winingas.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_billow",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "left_knee_billow",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.16
+    }
+  ],
+  "description": "Deep-pleated trousers ballooning over the knee, the shins bound in herringbone winingas hooked at the top, and turnshoes."
+}

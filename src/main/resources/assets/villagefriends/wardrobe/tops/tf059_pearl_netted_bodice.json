@@ -1,0 +1,76 @@
+{
+  "id": "tf059_pearl_netted_bodice",
+  "kind": "top",
+  "name": "Pearl-Netted Bodice",
+  "gender": "female",
+  "texture": "tops/tf059_pearl_netted_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pearl_choker",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.55
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "pearl_drop",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A velvet bodice veiled in a lattice of pearls, a pearl choker and full linen sleeves banded with pearls."
+}

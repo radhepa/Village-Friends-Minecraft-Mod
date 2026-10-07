@@ -4,6 +4,7 @@ from paint import fabric
 
 META = {
     "name": "Buttoned Gaiters",
+    "gender": "male",
     "description": "Canvas trousers under wool gaiters buttoned up the outer shin, with low boots.",
     "tags": ["casual", "sturdy", "rugged"],
 }

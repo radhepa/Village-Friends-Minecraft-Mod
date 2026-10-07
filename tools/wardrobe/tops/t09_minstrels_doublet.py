@@ -3,6 +3,7 @@ from paint import cap, fabric, grid, k, solid, strip_fabric
 
 META = {
     "name": "Minstrel's Doublet",
+    "gender": "male",
     "description": "Front-laced doublet with slashed puffed shoulders, a scalloped peplum and a jaunty half-cape.",
     "tags": ["whimsical", "fancy"],
 }

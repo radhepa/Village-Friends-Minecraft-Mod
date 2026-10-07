@@ -1,7 +1,7 @@
 """Windswept Waves: wavy hair blown to one side, a curling front wave and rippling locks at the nape."""
 from paint import hair_box, k, scalp, shell
 
-META = {"name": "Windswept Waves", "description": "Wavy, wind-blown hair swept to one side with a curling forelock."}
+META = {"name": "Windswept Waves", "gender": "male", "description": "Wavy, wind-blown hair swept to one side with a curling forelock."}
 
 
 def waves(face, seed, base=2):

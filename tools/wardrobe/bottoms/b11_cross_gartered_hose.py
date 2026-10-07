@@ -4,6 +4,7 @@ from paint import line
 
 META = {
     "name": "Cross-Gartered Hose",
+    "gender": "male",
     "description": "Fitted wool hose with leather garters criss-crossed up the shins, and low turnshoes.",
     "tags": ["casual", "slim"],
 }

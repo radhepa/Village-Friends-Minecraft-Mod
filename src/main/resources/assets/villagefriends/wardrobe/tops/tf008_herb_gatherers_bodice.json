@@ -1,0 +1,102 @@
+{
+  "id": "tf008_herb_gatherers_bodice",
+  "kind": "top",
+  "name": "Herb-Gatherer's Bodice",
+  "gender": "female",
+  "texture": "tops/tf008_herb_gatherers_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "satchel",
+      "bone": "TORSO",
+      "pivot": [
+        5.2,
+        6.4,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "sprig_0",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        6.6,
+        0.09999999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "sprig_1",
+      "bone": "TORSO",
+      "pivot": [
+        5.5,
+        6.6,
+        1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A leaf-embroidered bodice over a chemise, a gathering satchel at the hip with fresh sprigs poking out."
+}

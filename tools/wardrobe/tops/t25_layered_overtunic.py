@@ -4,6 +4,7 @@ from paint import solid
 
 META = {
     "name": "Layered Overtunic",
+    "gender": "male",
     "description": "A side-slit sleeveless overtunic with banded neck and hem over a contrasting undertunic.",
     "tags": ["casual", "simple"],
     "covers_waist": True,
