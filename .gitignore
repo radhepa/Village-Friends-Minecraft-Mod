@@ -15,3 +15,4 @@ graphify-out/.graphify_*
 !graphify-out/.graphify_labels.json
 graphify-out/cache/ast/
 graphify-out/cache/stat-index.json
+graphify-out/cache/last_query_stamp
