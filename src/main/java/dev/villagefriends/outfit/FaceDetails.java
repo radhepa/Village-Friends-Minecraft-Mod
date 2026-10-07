@@ -37,6 +37,8 @@ public final class FaceDetails {
     public static float wingHeight(float blink) { return 1-.5F*blink; }
 
     public static boolean protectedUv(int x,int y) { return y==12 && x>=8 && x<16; }
+    /** The baked face swatches beside the skin: per-resident colors, not palette keys. */
+    public static boolean swatch(int x,int y) { return y==V && x>=BROW_U && x<=BLUSH_U; }
     public static int brow(int hairRgb) { return shade(0xFF000000|hairRgb,.8F); }
     public static int lash(int hairRgb) { return shade(0xFF000000|hairRgb,.35F); }
     public static int shadow(int skinArgb) { return shade(skinArgb,.9F); }

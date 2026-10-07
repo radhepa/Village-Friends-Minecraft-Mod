@@ -58,6 +58,7 @@ class HandcraftedFaceTest {
         assertEquals(swatches.size(), new HashSet<>(swatches).size());
         // Row 0 of the hair slot's columns, above the hair piece block that starts at y 8.
         for (int u : swatches) assertTrue(u >= 64 && u < 128 && FaceDetails.V < 8);
+        for (int u = 60; u < 80; u++) assertEquals(swatches.contains(u), FaceDetails.swatch(u, FaceDetails.V), "swatch " + u);
     }
 
     @Test void residentsSplitBetweenStarlitAndSoftGlintEyesForLife() {

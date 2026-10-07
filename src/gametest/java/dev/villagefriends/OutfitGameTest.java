@@ -102,7 +102,7 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 for (var ramp : state.outfit.palette().ramps()) for (int rgb : ramp) allowed.add(0xFF000000 | rgb);
                 for (int rgb : state.outfit.hairColor().ramp()) allowed.add(0xFF000000 | rgb);
                 for (int y = 0; y < image.getHeight(); y++) for (int x = 0; x < image.getWidth(); x++) {
-                    if (x < 64 && y < 64 || y == 0 && x >= 64 && x < 68) continue;
+                    if (x < 64 && y < 64 || FaceDetails.swatch(x, y)) continue;
                     int argb = image.getPixel(x, y);
                     if ((argb >>> 24) == 0) continue;
                     check(allowed.contains(argb) || (argb >>> 24) < 255, "Off-palette texel at " + x + "," + y + " in " + template.id());
