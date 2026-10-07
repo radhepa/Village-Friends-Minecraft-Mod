@@ -274,8 +274,8 @@ MOTIONS = ("none", "flap_front", "flap_back", "sway")
 BONE_PIVOT = {"HEAD": (0, 0, 0), "TORSO": (0, 0, 0), "RIGHT_ARM": (-5, 2, 0), "LEFT_ARM": (5, 2, 0),
               "RIGHT_LEG": (-1.9, 12, 0), "LEFT_LEG": (1.9, 12, 0)}
 
-# Base-face pixels that the Living Eyes model samples or animates over: never paint them.
-EYE_ROW = {(x, 12) for x in range(8, 16)} | {(11, 14)}
+# Base-face pixels the Living Eyes model samples for eye whites, irises and skin: never paint them.
+EYE_ROW = {(x, 12) for x in range(8, 16)}
 
 
 class Piece:

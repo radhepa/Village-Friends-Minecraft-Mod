@@ -93,11 +93,11 @@ Outfit recolored = outfit.recolor(PaletteID.SAGE_AND_TERRACOTTA);
 
 - **Model:** `ResidentModel` is the player mesh with its overlays and the Living Eyes parts, and nothing else.
 - **Pieces:** `WardrobeLayer` bakes every garment's 3D pieces once as plain cubes. Each frame it places only the worn hair's, top's and bottom's pieces on their posed bones, so the frame cost does not grow with the wardrobe. With 490 hairstyles, tops and bottoms (about 4,400 pieces), the focused wardrobe test measured about 8 µs to pose a resident. Before, when every piece lived in the model, it measured 67 µs, and that was paid twice per frame.
-- **Atlas:** `OutfitAtlas` lays out a 256×512 texture with the player skin at the origin, the face-detail swatches at (64..67, 0), and one 64-pixel-wide slot per kind for piece nets: hair at x 64 below the swatches, tops at x 128 and bottoms at x 192. An outfit wears one garment of each kind, so all garments of a kind share its slot and the wardrobe grows without growing the texture.
+- **Atlas:** `OutfitAtlas` lays out a 256×512 texture with the player skin at the origin, the face-detail swatches at (64..71, 0), and one 64-pixel-wide slot per kind for piece nets: hair at x 64 below the swatches, tops at x 128 and bottoms at x 192. An outfit wears one garment of each kind, so all garments of a kind share its slot and the wardrobe grows without growing the texture.
 - **Baking:** `ResidentSkins` bakes one texture per complexion and outfit on a cache miss. It resolves key colors through the palette, applies the layering rules and copies the piece nets into their blocks. Animation allocates no textures.
 - **Reload:** wardrobe PNGs reload with resource packs, so a pack can repaint any piece in key colors.
 - **Armor:** a helmet hides the hair layer and hair pieces; chest and leg armor hide the matching garment pieces.
-- **Eyes:** the Living Eyes UVs and face swatches are unchanged. Hair never paints the eye row, and the compiler rejects fringes that would hang over the eyes, nose or mouth.
+- **Faces:** the eye whites and irises sample the native eye row; brows, lashes, the pupil, lips and blush come from face swatches baked per outfit. Hair never paints the eye row, and the compiler rejects fringes that would hang over the eyes or mouth. See [ANIMATION_EDITING.md](ANIMATION_EDITING.md#eyes-and-face) for the Starlit and Soft Glint eyes.
 
 ## Recipes and genders
 

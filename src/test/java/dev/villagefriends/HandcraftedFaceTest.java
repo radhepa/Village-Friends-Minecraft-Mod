@@ -51,9 +51,61 @@ class HandcraftedFaceTest {
 
     @Test void EyeSamplingGridIsProtectedAndFaceSwatchesAreOutsideTheBodyAtlas() {
         for (int x = 8; x < 16; x++) assertTrue(FaceDetails.protectedUv(x, 12));
-        assertTrue(FaceDetails.protectedUv(11, 14));
+        assertFalse(FaceDetails.protectedUv(11, 14));
         assertFalse(FaceDetails.protectedUv(12, 11));
-        for (int u : List.of(FaceDetails.BROW_U, FaceDetails.LASH_U, FaceDetails.SOCKET_U, FaceDetails.CHIN_U)) assertTrue(u >= 64);
-        assertEquals(1, (FaceDetails.LASH_Y - .5F) - (FaceDetails.BROW_Y + .5F), .0001);
+        var swatches = List.of(FaceDetails.BROW_U, FaceDetails.LASH_U, FaceDetails.SHADOW_U, FaceDetails.TINT_U,
+            FaceDetails.PUPIL_U, FaceDetails.LIP_U, FaceDetails.ROSE_LIP_U, FaceDetails.BLUSH_U);
+        assertEquals(swatches.size(), new HashSet<>(swatches).size());
+        // Row 0 of the hair slot's columns, above the hair piece block that starts at y 8.
+        for (int u : swatches) assertTrue(u >= 64 && u < 128 && FaceDetails.V < 8);
     }
+
+    @Test void residentsSplitBetweenStarlitAndSoftGlintEyesForLife() {
+        int starlit = 0, feminine = 0;
+        for (int seed = 0; seed < 20000; seed++) {
+            var style = FaceDetails.eyeStyle(seed * 7919);
+            assertEquals(style, FaceDetails.eyeStyle(seed * 7919));
+            if (style == FaceDetails.EyeStyle.STARLIT) starlit++;
+            assertTrue(FaceDetails.feminine(Gender.FEMALE, seed));
+            assertFalse(FaceDetails.feminine(Gender.MALE, seed));
+            if (FaceDetails.feminine(Gender.NON_BINARY, seed * 7919)) feminine++;
+        }
+        assertTrue(starlit > 9000 && starlit < 11000, "both eye styles are common: " + starlit);
+        assertTrue(feminine > 9000 && feminine < 11000, "non-binary faces mix both: " + feminine);
+    }
+
+    @Test void lashesSweepDownToCloseTheEyeAndBrowsKeepAGap() {
+        for (var style : FaceDetails.EyeStyle.values()) {
+            float top = FaceDetails.eyeTop(style), previous = Float.NEGATIVE_INFINITY;
+            assertEquals(top, FaceDetails.lashBottom(style, 0), .0001, "an open eye sits under its lash");
+            assertEquals(FaceDetails.EYE_BOTTOM, FaceDetails.lashBottom(style, 1), .0001, "a closed lash reaches the eye's bottom");
+            for (float blink = 0; blink <= 1.0001F; blink += .05F) {
+                float bottom = FaceDetails.lashBottom(style, blink), lashTop = bottom - FaceDetails.lashHeight(blink);
+                assertTrue(bottom >= previous && bottom <= FaceDetails.EYE_BOTTOM + .0001F);
+                assertTrue(lashTop >= top - 1.0001F, "lash stays below its resting line");
+                previous = bottom;
+            }
+            float wingBottom = FaceDetails.wingTop(style, 1) + FaceDetails.wingHeight(1);
+            assertTrue(wingBottom > FaceDetails.lashBottom(style, 1) - FaceDetails.lashHeight(1), "the wing joins the closed lash");
+            assertTrue(FaceDetails.browTop(style) + .55F < top - 1.4F, "brows clear the lashes");
+        }
+        assertEquals(-4, FaceDetails.eyeTop(FaceDetails.EyeStyle.STARLIT), .0001);
+        assertEquals(-3, FaceDetails.eyeTop(FaceDetails.EyeStyle.SOFT_GLINT), .0001);
+    }
+
+    @Test void eyeAndMouthColorsComeFromTheResidentsOwnFace() {
+        int iris = 0xFF557653, white = 0xFFEDE0CD;
+        for (int skin : List.of(0xFFE9C8AF, 0xFFC38B64, 0xFF643F33)) {
+            assertTrue(red(FaceDetails.blush(skin)) - green(FaceDetails.blush(skin)) > red(skin) - green(skin), "blush is rosier");
+            assertTrue(red(FaceDetails.roseLip(skin)) - green(FaceDetails.roseLip(skin)) > red(FaceDetails.lip(skin)) - green(FaceDetails.lip(skin)), "rose lips are pinker");
+            assertTrue(green(FaceDetails.lip(skin)) < green(skin), "lips are darker than skin");
+        }
+        for (int shift : new int[]{16, 8, 0}) {
+            assertTrue(((FaceDetails.tint(iris, white) >>> shift) & 255) > ((iris >>> shift) & 255), "tinted white is lighter than the iris");
+            assertEquals(Math.round(((iris >>> shift) & 255) * .5F), (FaceDetails.pupil(iris) >>> shift) & 255);
+        }
+    }
+
+    private static int red(int argb) { return (argb >>> 16) & 255; }
+    private static int green(int argb) { return (argb >>> 8) & 255; }
 }

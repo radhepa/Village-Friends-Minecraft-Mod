@@ -82,11 +82,15 @@ public final class ResidentSkins {
                 image.setPixel(block.x() + x, block.y() + y, argb);
             }
         }
-        int hair = outfit.hairColor().base();
+        int hair = outfit.hairColor().base(), face = body[12 * 64 + 12], iris = body[12 * 64 + 10];
         image.setPixel(FaceDetails.BROW_U, FaceDetails.V, FaceDetails.brow(hair));
         image.setPixel(FaceDetails.LASH_U, FaceDetails.V, FaceDetails.lash(hair));
-        image.setPixel(FaceDetails.SOCKET_U, FaceDetails.V, FaceDetails.shadow(body[12 * 64 + 12]));
-        image.setPixel(FaceDetails.CHIN_U, FaceDetails.V, FaceDetails.shadow(body[15 * 64 + 12]));
+        image.setPixel(FaceDetails.SHADOW_U, FaceDetails.V, FaceDetails.shadow(face));
+        image.setPixel(FaceDetails.TINT_U, FaceDetails.V, FaceDetails.tint(iris, body[12 * 64 + 9]));
+        image.setPixel(FaceDetails.PUPIL_U, FaceDetails.V, FaceDetails.pupil(iris));
+        image.setPixel(FaceDetails.LIP_U, FaceDetails.V, FaceDetails.lip(face));
+        image.setPixel(FaceDetails.ROSE_LIP_U, FaceDetails.V, FaceDetails.roseLip(face));
+        image.setPixel(FaceDetails.BLUSH_U, FaceDetails.V, FaceDetails.blush(face));
         Identifier texture = id("generated/" + key.toLowerCase(Locale.ROOT));
         Minecraft.getInstance().getTextureManager().register(texture, new DynamicTexture(() -> "Outfit " + key, image));
         textures.put(key, new Entry(texture, tick()));

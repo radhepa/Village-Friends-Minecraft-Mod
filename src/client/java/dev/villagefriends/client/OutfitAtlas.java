@@ -5,7 +5,7 @@ import dev.villagefriends.outfit.Wardrobe;
 
 /**
  * Fixed layout of the per-resident 256x512 texture: the 64x64 player skin at the origin, the
- * face-detail swatches at (64..67, 0), then one 64-pixel-wide slot per garment kind holding the
+ * face-detail swatches at (64..71, 0), then one 64-pixel-wide slot per garment kind holding the
  * box-UV nets of that garment's 3D pieces. An outfit wears exactly one hairstyle, top and
  * bottom, so every garment of a kind shares its kind's slot and the wardrobe can grow without
  * growing the texture. One baked model serves every outfit.

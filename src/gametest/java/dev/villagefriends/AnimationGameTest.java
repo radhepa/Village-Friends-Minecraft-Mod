@@ -2,6 +2,7 @@ package dev.villagefriends;
 
 import static dev.villagefriends.VillageFriends.*;
 import dev.villagefriends.client.*;
+import dev.villagefriends.outfit.FaceDetails;
 import java.util.*;
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.*;
@@ -72,15 +73,20 @@ public final class AnimationGameTest implements FabricClientGameTest {
                 var model=new ResidentModel(false);var s=new ResidentRenderState();s.motionSeed=5131;s.onGround=true;s.pose=Pose.STANDING;
                 for(float age=0;age<300;age+=.2F) {
                     s.ageInTicks=age;s.eyeLookX=.28F;s.eyeLookY=.12F;model.setupAnim(s);
+                    float top=FaceDetails.eyeTop(FaceDetails.eyeStyle(s.motionSeed));
                     for(int i=0;i<2;i++) {
-                        var eye=model.head.getChild("eye"+i);var iris=eye.getChild("iris");var lid=eye.getChild("lid");
-                        float center=i==0?-2:2;
-                        check(iris.x-.45F>=center-1.0001F && iris.x+.45F<=center+1.0001F,"Pupils stay inside the eye white");
-                        check(iris.y-.5F*iris.yScale>=-4.0001F && iris.y+.5F*iris.yScale<=-2.9999F,"Eyes remain within the pixel-art eye line");
-                        check(lid.yScale>=0 && lid.yScale<=1,"Blink stays within face");
+                        var eye=model.head.getChild("eye"+i);var lash=eye.getChild("lash");
+                        float left=i==0?-3:1,right=i==0?-1:3;
+                        for(var name:List.of("pupil","iris")) {
+                            var iris=eye.getChild(name);if(!iris.visible) continue;
+                            check(iris.x-iris.xScale/2>=left-.0001F && iris.x+iris.xScale/2<=right+.0001F,"Pupils stay inside the eye");
+                            check(iris.y-iris.yScale/2>=top-.0001F && iris.y+iris.yScale/2<=FaceDetails.EYE_BOTTOM+.0001F,"Eyes remain within the pixel-art eye");
+                        }
+                        float shut=lash.y+lash.yScale/2;check(shut>=top-.0001F && shut<=FaceDetails.EYE_BOTTOM+.0001F,"Blink stays within the eye");
                     }
                 }
-                s.pose=Pose.SLEEPING;model.setupAnim(s);near(model.head.getChild("eye0").getChild("lid").yScale,.5F,"Sleeping upper eyelid closes");near(model.head.getChild("eye0").getChild("lowerLid").yScale,.5F,"Sleeping lower eyelid closes");
+                s.pose=Pose.SLEEPING;model.setupAnim(s);var sleepLash=model.head.getChild("eye0").getChild("lash");
+                near(sleepLash.y+sleepLash.yScale/2,FaceDetails.EYE_BOTTOM,"Sleeping lash line closes the eye");check(model.head.getChild("eye0").getChild("lid").visible,"Sleeping eyelid closes");
                 s.pose=Pose.STANDING;s.headEquipment=new ItemStack(Items.IRON_HELMET);model.setupAnim(s);
                 s.isBaby=true;s.headEquipment=ItemStack.EMPTY;new ResidentModel(true).setupAnim(s);
                 var before=ResidentSkins.cachedCount();for(int n=0;n<100;n++){s.ageInTicks=n;model.setupAnim(s);}check(before==ResidentSkins.cachedCount(),"No per-frame skin allocation");

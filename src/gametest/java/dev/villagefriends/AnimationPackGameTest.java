@@ -4,6 +4,7 @@ import static dev.villagefriends.VillageFriends.*;
 import dev.villagefriends.animation.AnimationClip;
 import dev.villagefriends.animation.AnimationLibrary;
 import dev.villagefriends.client.*;
+import dev.villagefriends.outfit.FaceDetails;
 import java.util.*;
 import java.util.function.Predicate;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentTarget;
@@ -103,12 +104,15 @@ public final class AnimationPackGameTest implements FabricClientGameTest {
             walking.layers[1].set(clip("cheer"), .5F, 1, false, 0); model.setupAnim(walking);
             near(model.rightLeg.xRot, stride, "Reactions while walking leave the stride alone");
             var pray = standing(77); pray.layers[0].set(clip("pray"), 2.5F, 1, false, 1); model.setupAnim(pray);
-            near(model.head.getChild("eye0").getChild("lid").yScale, .5F, "Praying residents close their eyes");
+            var prayLash = model.head.getChild("eye0").getChild("lash");
+            near(prayLash.y + prayLash.yScale / 2, FaceDetails.EYE_BOTTOM, "Praying residents close their eyes");
             var read = standing(77); read.layers[0].set(clip("read_a_book"), 1.4F, 1, false, 1);
             for (float age = 0; age < 200; age += .5F) {
                 read.ageInTicks = age; read.eyeLookX = .28F; read.eyeLookY = .12F; model.setupAnim(read);
                 var iris = model.head.getChild("eye0").getChild("iris");
-                check(iris.x - .45F >= -3.0001F && iris.x + .45F <= -.9999F && iris.y >= -4.0001F && iris.y <= -2.9999F, "Reading eyes stay in the eye whites");
+                check(iris.x - iris.xScale / 2 >= -3.0001F && iris.x + iris.xScale / 2 <= -.9999F
+                    && iris.y - iris.yScale / 2 >= FaceDetails.eyeTop(FaceDetails.eyeStyle(read.motionSeed)) - .0001F
+                    && iris.y + iris.yScale / 2 <= FaceDetails.EYE_BOTTOM + .0001F, "Reading eyes stay in the eye whites");
             }
             var adult = standing(77); adult.layers[0].set(clip("cheer"), .5F, 1, false, 1); model.setupAnim(adult);
             float adultHop = model.root().y;

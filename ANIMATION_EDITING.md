@@ -23,11 +23,20 @@ Rules worth keeping when editing clips or the poser:
 - The resident's personality reaches the client through the synced `villagefriends:temperament` attachment so body language matches the Journal; the conversation window's portrait plays the same clips as the resident in the world.
 - Conversation outcomes are cued from `FriendshipScreen` (joke, gift accepted/loved/declined); vanilla villager events (hearts, angry clouds, happy sparkles, raid sweat) arrive through `VillagerEventMixin`.
 
-## Eyes
+## Eyes and face
 
-`ResidentModel.java` adds two small eye patches beneath the volumetric hair. Each patch samples the original skin's eye white, iris and complexion directly from the native face UVs: whites at `(9,12)` and `(14,12)`, irises at `(10,12)` and `(13,12)`, eyelids at `(12,12)`. Upper and lower lids meet at the center; a tiny closed-eye crease samples the existing facial shade at `(11,14)`. These coordinates are preserved in the new body-only texture atlas. Resource packs that move the eye line should also update these coordinates and patch placement. Pupils remain within the existing two-pixel-wide, one-pixel-high eye regions.
+Every resident has one of two pixel-art eye styles for life, picked from their UUID's motion seed (`FaceDetails.eyeStyle`), about half each:
 
-Blink timing comes from `ResidentMotion.blink`: about 0.2 seconds per blink, an individual interval of roughly five to eight seconds, varied timing within each cycle and occasional double blinks. There are no random draws, timer allocations, extra skin images or texture uploads per frame. Sleeping and dying residents have closed eyes. Clips can squint or close the eyes (`eyes.lid`, combined with blinking) and redirect the gaze (`eyes.look`), always inside the eye whites. `ResidentRenderer` supplies small pupil offsets toward the camera within six blocks and a front-facing cone; while greeting or talking, the head also turns toward the player.
+- **Starlit:** three rows tall. A lash line on face row 3; a tinted white beside a dark pupil on row 4; a white glint beside the iris on row 5.
+- **Soft Glint:** two rows tall and lower. A lash line on row 4 over the glint and iris on row 5.
+
+The iris sits in the inner column and the white on the outer one, so residents look at you. `ResidentModel.java` draws each feature as a plane in front of the face and behind the hair. The bottom white and the iris still sample the resident's own face row: whites at `(9,12)` and `(14,12)`, irises at `(10,12)` and `(13,12)`, lids at `(12,12)`. `ResidentSkins` bakes the other colors from them into swatches at `(64..71, 0)`: brow and lash from the hair color, a neck shade, the Starlit upper white tinted by the iris, the pupil, two lip tones and a blush. Resource packs that recolor the eye row recolor the whole eye.
+
+Faces are young and clean: no nose, eye bags or chin shadow. Masculine faces have straight, fuller half-pixel brows and a small neutral mouth. Feminine faces add a lash wing at the outer corner (below a Starlit lash, flicking up from a Soft Glint lash), finer arched brows, rosy lips and blush. Women always wear the feminine details, men never, and non-binary residents get one or the other from their seed (`FaceDetails.feminine`).
+
+To blink, the lash line sweeps down over the eye and thins slightly, and a skin lid follows it. Closed, the lash lies along the bottom of the eye and a feminine wing joins its outer end. Glances slide the iris and Starlit pupil by up to 0.28 px across and 0.09 px up or down, trimmed to the eye's edges so they never cross into skin. `FaceDetails` keeps the geometry (`eyeTop`, `lashBottom`, `wingTop`, `browTop`) in one place, and the unit and game tests use the same functions.
+
+Blink timing comes from `ResidentMotion.blink`: about 0.2 seconds per blink, an individual interval of roughly five to eight seconds, varied timing within each cycle and occasional double blinks. There are no random draws, timer allocations, extra skin images or texture uploads per frame. Sleeping and dying residents have closed eyes. Clips can squint or close the eyes (`eyes.lid`, combined with blinking) and redirect the gaze (`eyes.look`), always inside the eye. `ResidentRenderer` supplies small pupil offsets toward the camera within six blocks and a front-facing cone; while greeting or talking, the head also turns toward the player.
 
 ## Verification
 

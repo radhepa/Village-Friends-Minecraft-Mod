@@ -68,7 +68,6 @@ class WardrobeTest {
         for (var hair : Wardrobe.HAIR) {
             var image = texture(hair);
             for (int x = 8; x < 16; x++) assertEquals(Wardrobe.TRANSPARENT, Wardrobe.code(image.getRGB(x, 12)), hair.id());
-            assertEquals(Wardrobe.TRANSPARENT, Wardrobe.code(image.getRGB(11, 14)), hair.id());
             for (int y = 11; y < 16; y++) for (int x = 41; x <= 46; x++)
                 assertEquals(Wardrobe.TRANSPARENT, Wardrobe.code(image.getRGB(x, y)), "hat layer over the eyes: " + hair.id());
             assertTrue(hair.pieces().size() >= 5, "volumetric hair: " + hair.id());

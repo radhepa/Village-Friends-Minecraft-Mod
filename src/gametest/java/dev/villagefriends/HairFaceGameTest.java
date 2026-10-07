@@ -21,7 +21,7 @@ public final class HairFaceGameTest implements FabricClientGameTest {
     private static void near(float actual,float expected,String message) { check(Math.abs(actual-expected)<.0001F,message); }
     private static Outfit outfit(int hair) {
         var t=Wardrobe.OUTFITS.getFirst();
-        return new Outfit(Gender.MALE,Profession.NONE,MasterPalettes.get(PaletteID.WASHED_INDIGO_AND_CREAM),Wardrobe.HAIR.get(hair),
+        return new Outfit(hair%2==0?Gender.MALE:Gender.FEMALE,Profession.NONE,MasterPalettes.get(PaletteID.WASHED_INDIGO_AND_CREAM),Wardrobe.HAIR.get(hair),
             Wardrobe.HAIR_COLORS.get(hair%Wardrobe.HAIR_COLORS.size()),t.top(),t.bottom(),t);
     }
     @Override public void runTest(ClientGameTestContext c) {
@@ -46,30 +46,45 @@ public final class HairFaceGameTest implements FabricClientGameTest {
                         try (var stream=client.getResourceManager().getResourceOrThrow(Identifier.fromNamespaceAndPath("villagefriends","textures/body/"+skin+".png")).open();
                              var base=NativeImage.read(stream)) {
                             for (int x=8;x<16;x++) check(baked.getPixel(x,12)==base.getPixel(x,12),"Living Eyes row untouched, skin "+skin+" "+outfit.hair().id());
-                            check(baked.getPixel(11,14)==base.getPixel(11,14),"Blink crease UV untouched");
-                            int hair=outfit.hairColor().base();
+                            int hair=outfit.hairColor().base(),face=base.getPixel(12,12),iris=base.getPixel(10,12);
                             check(baked.getPixel(FaceDetails.BROW_U,0)==FaceDetails.brow(hair),"Brows 20% darker than selected hair");
                             check(baked.getPixel(FaceDetails.LASH_U,0)==FaceDetails.lash(hair),"Dark lash swatch");
-                            check(baked.getPixel(FaceDetails.SOCKET_U,0)==FaceDetails.shadow(base.getPixel(12,12)),"Eye socket 10% skin shade");
-                            check(baked.getPixel(FaceDetails.CHIN_U,0)==FaceDetails.shadow(base.getPixel(12,15)),"Chin 10% skin shade");
+                            check(baked.getPixel(FaceDetails.SHADOW_U,0)==FaceDetails.shadow(face),"Neck 10% skin shade");
+                            check(baked.getPixel(FaceDetails.TINT_U,0)==FaceDetails.tint(iris,base.getPixel(9,12)),"Starlit upper white tinted by the resident's iris");
+                            check(baked.getPixel(FaceDetails.PUPIL_U,0)==FaceDetails.pupil(iris),"Pupil from the resident's iris");
+                            check(baked.getPixel(FaceDetails.LIP_U,0)==FaceDetails.lip(face) && baked.getPixel(FaceDetails.ROSE_LIP_U,0)==FaceDetails.roseLip(face),"Lips from the complexion");
+                            check(baked.getPixel(FaceDetails.BLUSH_U,0)==FaceDetails.blush(face),"Blush from the complexion");
                         } catch (Exception e) { throw new AssertionError(e); }
                     }
                     ResidentSkins.clear(); // six atlases per style; release them before the next of many styles
-                    state.attention=1;state.eyeLookX=.28F;state.eyeLookY=.12F;state.pose=Pose.STANDING;state.deathTime=0;
+                    state.attention=1;state.eyeLookX=n%3==0?-.28F:.28F;state.eyeLookY=.12F;state.pose=Pose.STANDING;state.deathTime=0;state.motionSeed=n*7919;
+                    var style=FaceDetails.eyeStyle(state.motionSeed);boolean starlit=style==FaceDetails.EyeStyle.STARLIT;
+                    boolean feminine=FaceDetails.feminine(outfit.gender(),state.motionSeed);float top=FaceDetails.eyeTop(style);
                     for (float age=0;age<200;age+=.25F) {
-                        state.ageInTicks=age;model.setupAnim(state);
+                        state.ageInTicks=age;model.setupAnim(state);float blink=ResidentMotion.blink(age,state.motionSeed);
                         for (int eye=0;eye<2;eye++) {
-                            var root=model.head.getChild("eye"+eye);var iris=root.getChild("iris");var lid=root.getChild("lid");
-                            float center=eye==0?-2:2;
-                            check(iris.x-.45F>=center-1.0001F && iris.x+.45F<=center+1.0001F,"Gaze stays in eye width");
-                            check(iris.y-.5F*iris.yScale>=-4.0001F && iris.y+.5F*iris.yScale<=-2.9999F,"Gaze stays in eye height");
-                            check(lid.yScale>=0 && lid.yScale<=.5F,"Original blink closure retained");
-                            near(root.getChild("lash").y,FaceDetails.LASH_Y+ResidentMotion.blink(age,state.motionSeed)*.5F,"Lashes follow upper lid");
-                            near(model.head.getChild("brow"+eye).yScale,1,"One-pixel eyebrow thickness");
+                            var root=model.head.getChild("eye"+eye);var lid=root.getChild("lid");var lash=root.getChild("lash");
+                            float left=eye==0?-3:1,right=eye==0?-1:3;
+                            for (var name:List.of("pupil","iris")) {
+                                var part=root.getChild(name);if(!part.visible) continue;
+                                check(part.x-part.xScale/2>=left-.0001F && part.x+part.xScale/2<=right+.0001F,"Gaze stays in eye width");
+                                check(part.y-part.yScale/2>=top-.0001F && part.y+part.yScale/2<=FaceDetails.EYE_BOTTOM+.0001F,"Gaze stays in eye height");
+                            }
+                            check(root.getChild("iris").visible,"The iris always shows");
+                            check(root.getChild("sclera").visible==starlit,"Only Starlit eyes have the tinted upper white");
+                            check(root.getChild("wing").visible==feminine,"Feminine faces wear the lash wing");
+                            near(lash.y+lash.yScale/2,FaceDetails.lashBottom(style,blink),"Lashes sweep down with the blink");
+                            check(!lid.visible || Math.abs(lid.y-lid.yScale/2-(top-1))<.0001F,"The lid starts at the resting lash line");
+                            near(model.head.getChild("brow"+eye).yScale,feminine?.45F:.55F,"Fine brows");
+                            check(model.head.getChild("blush"+eye).visible==feminine,"Blush on feminine faces");
                         }
+                        check(model.head.getChild("lips").visible==feminine && model.head.getChild("mouth").visible!=feminine,"One mouth per face");
                     }
-                    state.pose=Pose.SLEEPING;model.setupAnim(state);near(model.head.getChild("eye0").getChild("lid").yScale,.5F,"Sleeping eyes close");
-                    state.pose=Pose.STANDING;state.deathTime=1;model.setupAnim(state);near(model.head.getChild("eye1").getChild("lowerLid").yScale,.5F,"Death pose closes eyes");
+                    state.pose=Pose.SLEEPING;model.setupAnim(state);
+                    var shut=model.head.getChild("eye0").getChild("lash");near(shut.y+shut.yScale/2,FaceDetails.EYE_BOTTOM,"Sleeping eyes close");
+                    check(model.head.getChild("eye0").getChild("lid").visible,"Sleeping lids cover the eyes");
+                    state.pose=Pose.STANDING;state.deathTime=1;model.setupAnim(state);
+                    shut=model.head.getChild("eye1").getChild("lash");near(shut.y+shut.yScale/2,FaceDetails.EYE_BOTTOM,"Death pose closes eyes");
                     state.deathTime=0;model.setupAnim(state);
                     long hairParts=WardrobeLayer.shown(state).stream().filter(s->s.garment()==outfit.hair()).count();
                     check(hairParts==outfit.hair().pieces().size(),"Every hair piece shows bareheaded");
@@ -79,7 +94,7 @@ public final class HairFaceGameTest implements FabricClientGameTest {
                     state.headEquipment=ItemStack.EMPTY;state.isBaby=true;new ResidentModel(true).setupAnim(state);
                 }
             });
-            c.waitTicks(10);VillageFriends.LOGGER.info("HAIR CHECKS PASSED: {} styles, 6 complexions, protected eye UVs, lashes/brows, blink/gaze/sleep/helmet/baby.",Wardrobe.HAIR.size());
+            c.waitTicks(10);VillageFriends.LOGGER.info("HAIR CHECKS PASSED: {} styles, 6 complexions, protected eye UVs, Starlit and Soft Glint eyes, lashes/brows/lips/blush, blink/gaze/sleep/helmet/baby.",Wardrobe.HAIR.size());
         }
         VillageFriends.LOGGER.info("HAIR AND LIVING EYES GAMEPLAY PASSED.");
     }
