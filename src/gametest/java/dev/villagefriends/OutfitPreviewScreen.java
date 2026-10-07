@@ -51,7 +51,10 @@ final class OutfitPreviewScreen extends Screen {
             state.ageInTicks = 30;
             for (int age = 0; age < 300; age++) if (ResidentMotion.blink(age, state.motionSeed) == 0) { state.ageInTicks = age; break; }
             state.attention = 1; state.eyeLookX = 0; state.eyeLookY = 0; state.scale = 1;
-            int labels = cell.subtitle().isEmpty() ? 16 : cell.detail().isEmpty() ? 28 : 40;
+            var lines = new java.util.ArrayList<String>(List.of(cell.title()));
+            if (!cell.subtitle().isEmpty()) lines.add(cell.subtitle());
+            if (!cell.detail().isEmpty()) lines.addAll(List.of(cell.detail().split("\n")));
+            int labels = 4 + 12 * lines.size();
             if (head) {
                 int size = Math.min((int)(cellW * 1.0F), (int)((cellH - labels) * 1.02F));
                 g.entity(state, size, new Vector3f(0, 1.80F, 0), new Quaternionf().rotateZ((float)Math.PI), new Quaternionf(),
@@ -61,9 +64,8 @@ final class OutfitPreviewScreen extends Screen {
                 g.entity(state, size, new Vector3f(0, state.boundingBoxHeight / 2 + .02F, 0), new Quaternionf().rotateZ((float)Math.PI),
                     new Quaternionf(), x + 6, y + 8, x + cellW - 6, y + cellH - labels - 2);
             }
-            g.centeredText(font, cell.title(), x + cellW / 2, y + cellH - labels + 2, 0xFF4E382B);
-            if (!cell.subtitle().isEmpty()) g.centeredText(font, cell.subtitle(), x + cellW / 2, y + cellH - labels + 14, 0xFF77674F);
-            if (!cell.detail().isEmpty()) g.centeredText(font, cell.detail(), x + cellW / 2, y + cellH - 14, 0xFF77674F);
+            for (int line = 0; line < lines.size(); line++)
+                g.centeredText(font, lines.get(line), x + cellW / 2, y + cellH - labels + 2 + 12 * line, line == 0 ? 0xFF4E382B : 0xFF77674F);
         }
     }
 }

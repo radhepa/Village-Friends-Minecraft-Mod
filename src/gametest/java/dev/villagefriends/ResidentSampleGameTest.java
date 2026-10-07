@@ -129,7 +129,7 @@ public final class ResidentSampleGameTest implements FabricClientGameTest {
                 }
                 context.runOnClient(client -> { if (!client.gui.hud.isHidden()) client.gui.hud.toggle(); });
                 world.getServer().runCommand("gamemode spectator @p");
-                world.getServer().runCommand(String.format(Locale.ROOT, "tp @p %.2f %.2f %.2f 0 18", origin[0], origin[1] + 1.75, origin[2] - 1.4));
+                world.getServer().runCommand(String.format(Locale.ROOT, "tp @p %.2f %.2f %.2f 0 10", origin[0], origin[1] + 1.45, origin[2] + 1.3));
                 context.waitTicks(30);
                 context.takeScreenshot("village-friends-random-" + who + "-in-world");
                 context.runOnClient(client -> { if (client.gui.hud.isHidden()) client.gui.hud.toggle(); });
@@ -138,8 +138,8 @@ public final class ResidentSampleGameTest implements FabricClientGameTest {
                 var cells = new ArrayList<OutfitPreviewScreen.Cell>();
                 for (int i = 0; i < residents.size(); i++) {
                     var r = residents.get(i);
-                    cells.add(new OutfitPreviewScreen.Cell(r.outfit(), r.look().complexion(), names.get(i) + "  /  " + jobLabel(r.job()),
-                        r.outfit().top().name(), r.outfit().bottom().name()));
+                    cells.add(new OutfitPreviewScreen.Cell(r.outfit(), r.look().complexion(), names.get(i), jobLabel(r.job()),
+                        r.outfit().top().name() + "\n" + r.outfit().bottom().name()));
                 }
                 int first = ids.getFirst();
                 String title = "VILLAGE FRIENDS  /  FIVE RANDOM " + who.toUpperCase(Locale.ROOT);
