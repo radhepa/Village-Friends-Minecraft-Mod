@@ -1,4 +1,4 @@
-# Village Friends 2.10.1
+# Village Friends 2.11.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -8,7 +8,7 @@ The mod includes the master specification's **Phase 1 registry and item foundati
 
 Each building is an independent template written as a small design program and compiled to its own blueprint. Edit or replace one through its blueprint and pool; [BUILDING_EDITING.md](BUILDING_EDITING.md) gives the workflow and the lot contract.
 
-**Wardrobe:** residents dress from a Sims-style wardrobe of thirty hairstyles, thirty tops and thirty bottoms, drawn as palette-locked pixel art with 3D collars, pauldrons, coat skirts, hoods, cloaks and hair. Clothing is casual medieval village wear, and the newer hairstyles are anime-inspired. Each profession has its own outfits, tops and bottoms mix freely, and every outfit uses one of ten master palettes. The names remain available; Indian names are eligible for brown/dark complexions. See [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
+**Wardrobe:** residents dress from Sims-style men's and women's wardrobes. Men choose from 80 hairstyles, 120 tops and 120 bottoms; women from 50 hairstyles, 60 tops and 60 bottoms. Everything is drawn as palette-locked pixel art with 3D collars, pauldrons, skirts, hoods, cloaks and hair. Clothing is casual medieval village wear, plus a plain modern casual line for men, and hair is anime-inspired. Each profession has its own outfits for both sets. Tops and bottoms mix freely, except a few locked one-piece outfits such as gowns and habits. Every outfit uses one of ten master palettes. The names remain available; Indian names are eligible for brown/dark complexions. See [OUTFIT_ENGINE.md](OUTFIT_ENGINE.md).
 
 **Living villagers:** six subtle walking styles give residents their own cadence, stride, shoulder swing and balance. Gentle breathing, head tilts, moving braids and loose accessories keep quiet moments alive. Eyes use each resident's original colors, blink at individual moments and make small glances toward someone nearby. Children get lighter, quicker steps; clothing and armor follow the movement. See [ANIMATION_EDITING.md](ANIMATION_EDITING.md).
 
@@ -18,7 +18,7 @@ For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creativ
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.10.1.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.11.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -113,9 +113,16 @@ Each resident keeps their first assigned hometown when traveling or moving away.
 
 ## Clothing and hair
 
-Every resident wears one of thirty outfits. The originals are Knight-Errant, Trailblazer, Arcanist, Farmhand, Merchant, Mariner, Smith, Ranger, Minstrel and Pilgrim. Twenty casual-medieval outfits join them: Villager, Goatherd, Wayfarer, Militia, Hunter, Townsman, Burgher, Gallant, Shepherd, Highlander, Herbalist, Innkeeper, Northerner, Drover, Yeoman, Reveler, Woodsman, Baker, Gardener and Student. Their profession picks from a short list of fitting outfits. Each outfit pairs a top and a bottom, and residents sometimes swap in any compatible bottom from the others, Sims-style. Armor, fancy hose, kilts and sandals are the exceptions. One master palette colors the whole outfit: primary, secondary, accent, leather, metal and ink, each with hand-shaded pixel ramps. Hair comes in thirty volumetric styles and ten natural colors. Twenty of the styles are anime-inspired, with pointed bangs, sidelocks, a sheen ring, braids and tails, but no gravity-defying spikes. Hair is chosen once per resident so a new job never changes it. Coat skirts, aprons and tabards move with the stride; ponytails and tassels sway. Armor hides conflicting clothing and hair. World residents and conversation portraits share the renderer.
+Men and women dress from their own wardrobes; non-binary residents choose from both. The men's set has 120 outfits:
+- **Originals:** Knight-Errant, Trailblazer, Arcanist, Farmhand, Merchant, Mariner, Smith, Ranger, Minstrel and Pilgrim, and the 2.8 casual-medieval outfits from Villager to Student.
+- **Trades and roles:** farriers, millers, monks, heralds, lords, men-at-arms, Norsemen, desert nomads, morris dancers and others.
+- **Supreme casual:** a modern line of plain tees and tunics in five colors each, polos, oxford, henley and denim shirts, five jeans, two baggy jeans, chinos, slacks, cargos and joggers.
 
-Recipes keep their existing format: saved residents keep complexion, palette and identity and are redressed from the new wardrobe. To edit or add clothing, see [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
+The women's set has 60 outfits. They run from village lass, milkmaid, brewster and fishwife to huntress, shieldmaiden, lady knight, nun, sun priestess, star mage, coin dancer and court lady.
+
+A profession picks from its fitting outfits. Each outfit pairs a top and a bottom, and residents often swap in any compatible bottom from their set, Sims-style. Armor, fancy hose, kilts and sandals have rules. A few outfits are locked sets whose top and bottom are always worn together, such as gowns, habits, the jester's motley and the green man. One master palette colors the whole outfit: primary, secondary, accent, leather, metal and ink, each with hand-shaded pixel ramps. Hair comes in 80 men's and 50 women's volumetric styles and ten natural colors. They are anime-inspired, with pointed bangs, sidelocks, a sheen ring, braids, buns, curls, coils, locs and tails, but no gravity-defying spikes. Hair is chosen once per resident so a new job never changes it. Coat skirts, aprons and tabards move with the stride; ponytails and tassels sway. Armor hides conflicting clothing and hair. World residents and conversation portraits share the renderer.
+
+Recipes keep their existing format: saved residents keep complexion, gender, palette and identity and are redressed from the expanded wardrobe. To edit or add clothing, see [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
 
 ## Content packs and development
 

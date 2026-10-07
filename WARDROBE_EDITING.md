@@ -11,8 +11,8 @@ Every hairstyle, top and bottom is one Python module that paints pixel art and d
 | Master palettes (base colors or explicit ramps) | `tools/wardrobe/palettes.json` |
 | Natural hair colors (five-shade ramps) | `tools/wardrobe/hair_colors.json` |
 | Shared brushes (cloth, hems, hair strands, curls, scalp) | `tools/wardrobe/paint.py` |
-| Garment building blocks (bodies, necklines, sleeves, belts, skirt flaps, legs, footwear) | `tools/wardrobe/kit.py` |
-| Anime hair building blocks (cel shading, sheen ring, pointed locks, bangs, sidelocks) | `tools/wardrobe/anime.py` |
+| Garment building blocks (bodies, necklines, sleeves, belts, skirt flaps, legs, footwear) | `tools/wardrobe/kit.py`; set-specific extras in `kit_male.py`, `kit_female.py` and `kit_casual.py` (tees, shirts, trousers, jeans) |
+| Anime hair building blocks (cel shading, sheen ring, pointed locks, bangs, sidelocks) | `tools/wardrobe/anime.py`; extras in `anime_male.py` and `anime_female.py` (braids, buns, coils, locs) |
 | Compiler, key colors, validation | `tools/wardrobe/wardrobe.py` |
 | Offline 3D previews | `tools/wardrobe/preview.py` |
 | Compiled runtime assets (do not hand-edit) | `src/main/resources/assets/villagefriends/wardrobe/` |
@@ -36,7 +36,7 @@ A module defines `META` (`name`, `gender`, `description`, `tags`, optional `requ
 - `g.part("body")` returns the skin-layout box of a body part. Tops paint `body`, `jacket` and the arms or sleeves. Bottoms paint `body`, `jacket` and the legs or pants. Hair paints `head` and `hat`.
 - `box.front`, `.back`, `.left`, `.right`, `.top` and `.bottom` are faces. `box.strip` is the four sides as one wrap-around strip. On every face, x runs left to right as you look at it from outside.
 - `g.piece(id, bone, origin, size, pivot=..., rotation=..., inflate=..., motion=...)` adds a cuboid and returns its box to paint. Coordinates are bone-local model pixels (y down, +x is the wearer's left). Sizes are whole texels, and every texel of a piece must be painted.
-- Paint only key colors: `P/S/A/L/M/K` (primary, secondary, accent, leather, metal, ink) or `H` (hair, hairstyles only), with shade `0`–`4`, for example `"P2"`. Use `X1`/`X2` for translucent shadows.
+- Paint only key colors: `P/S/A/L/M/K/D` (primary, secondary, accent, leather, metal, ink, denim) or `H` (hair, hairstyles only), with shade `0`–`4`, for example `"P2"`. Use `X1`/`X2` for translucent shadows.
 
 Prefer calm, structured cloth (weave, twill, knit, quilt) and deliberate details (hems, seams, buttons, folds) over random noise. Break large hair masses into several smaller locks with varied angles and lengths; one big slab reads as a helmet.
 
@@ -44,7 +44,8 @@ Prefer calm, structured cloth (weave, twill, knit, quilt) and deliberate details
 
 The wardrobe's style targets:
 
-- **Tops and bottoms:** casual medieval village wear such as tunics, smocks, jerkins, hoods, cloaks, braies, hose, trews and boots. Avoid modern cuts like t-shirts, hoodies and jeans.
+- **Tops and bottoms:** casual medieval village wear such as tunics, smocks, jerkins, hoods, cloaks, braies, hose, trews and boots, and for women kirtles, bodices, chemises, overgowns, aprons and skirts. Avoid modern cuts. The one exception is the men's *supreme casual* line (t101–t120, b101–b120, tagged `modern`): plain tees, tunics, polos, shirts, chinos, slacks and jeans requested by the user. Keep it plain, with no prints or logos.
+- **Layering depth:** top hems and flaps sit at z -2.85/1.85. Skirt and kilt panels from bottoms sit just outside at -2.95/1.95, so a top's hem reads as tucked in. Over-layers that must lie over a skirt (aprons, tabards, overdress panels) sit at -3.15/2.15.
 - **Hair:** anime-inspired, with clean cel-shaded clumps, a sheen ring and pointed tapered locks, but grounded. Avoid gravity-defying spikes.
 
 ## Genders and locked sets

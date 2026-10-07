@@ -1,3 +1,19 @@
+# Village Friends 2.11.0 — Men's and women's wardrobes
+
+- Split the wardrobe into men's and women's sets. Residents wear their own set's hair, tops, bottoms and profession outfits; non-binary residents wear both. The original 90 pieces become the men's set.
+- Add the first women's wardrobe: 50 hairstyles and 60 tops and bottoms, with kirtles, bodices, chemises, overgowns, aprons, skirts, breeches and armor. Every profession has women's outfits and its own preferred look.
+- Add 50 men's hairstyles and 70 casual-medieval men's tops and bottoms for trades, clergy, nobles, soldiers, regions and festivals.
+- Add a men's *supreme casual* line of 20 tops and 20 bottoms:
+  - plain tees and tunics in five colors each;
+  - polos, camp-collar, oxford, henley, ringer, raglan, pocket and V-neck tees and a denim work shirt;
+  - five jeans and two baggy jeans;
+  - chinos, slacks, cargo, carpenter and work pants, cords, linen pants and joggers.
+- Add locked sets: a top and bottom that name each other are always worn together and never mixed. There are 19 men's sets and 8 women's sets, such as habits, gowns, the jester's motley and the green man. Everything else still mixes freely, with at least seven partners per top.
+- Add a denim material role to every palette, so jeans read as denim while matching the outfit.
+- Move outfit templates into one file per set under `tools/wardrobe/outfits/`. Every top must be in a template, and every profession must dress each set.
+- Preferred profession outfits now appear 30% of the time and template bottoms 50%, so villages show more of the wardrobe.
+- Scale the wardrobe tests and galleries to the gendered sets. Add `-PresidentSample`, which dresses five random men and five random women in Minecraft and screenshots them.
+
 # Village Friends 2.10.1 — Guard spawn eggs
 
 - Add Knight and Archer Spawn Eggs to Creative's Spawn Eggs tab and `/give`, using the existing villager entity rather than separate mobs.
