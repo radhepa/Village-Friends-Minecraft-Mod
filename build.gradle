@@ -59,6 +59,8 @@ tasks.named('processGametestResources') {
     inputs.property 'residentSample', residentSample
     def guardsOnly = providers.gradleProperty('guardsOnly').isPresent()
     def companionsOnly = providers.gradleProperty('companionsOnly').isPresent()
+    def villageLifeOnly = providers.gradleProperty('villageLifeOnly').isPresent()
+    inputs.property 'villageLifeOnly', villageLifeOnly
     inputs.property 'foundationOnly', foundationOnly
     inputs.property 'structuresOnly', structuresOnly
     inputs.property 'animationsOnly', animationsOnly
@@ -67,11 +69,12 @@ tasks.named('processGametestResources') {
     inputs.property 'guardsOnly', guardsOnly
     inputs.property 'companionsOnly', companionsOnly
     doLast {
-        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly || villageGallery || residentSample || guardsOnly || companionsOnly) {
+        if (foundationOnly || structuresOnly || animationsOnly || outfitsOnly || hairFacesOnly || villageGallery || residentSample || guardsOnly || companionsOnly || villageLifeOnly) {
             def descriptor = new File(destinationDir, 'fabric.mod.json')
             def metadata = new groovy.json.JsonSlurper().parse(descriptor)
             metadata.entrypoints['fabric-client-gametest'] = [guardsOnly ? 'dev.villagefriends.GuardGameTest' : residentSample ? 'dev.villagefriends.ResidentSampleGameTest' : villageGallery ? 'dev.villagefriends.VillageGalleryGameTest' : hairFacesOnly ? 'dev.villagefriends.HairFaceGameTest' : outfitsOnly ? 'dev.villagefriends.OutfitGameTest' : animationsOnly ? 'dev.villagefriends.AnimationGameTest' : structuresOnly ? 'dev.villagefriends.StructuresGameTest' : 'dev.villagefriends.FoundationGameTest']
-            if (companionsOnly && !guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.FriendshipGameTest', 'dev.villagefriends.RoadmapGameTest']
+            if (companionsOnly && !guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.FriendshipGameTest', 'dev.villagefriends.RoadmapGameTest', 'dev.villagefriends.VillageLifeGameTest']
+            if (villageLifeOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.VillageLifeGameTest']
             if (guardsOnly) metadata.entrypoints['fabric-client-gametest'] = ['dev.villagefriends.GuardSpawnEggGameTest', 'dev.villagefriends.GuardGameTest', 'dev.villagefriends.GuardProgressGameTest']
             descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
         }
@@ -111,4 +114,18 @@ tasks.named('processGametestResources') {
 tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     systemProperty 'villagefriends.filmScenes', providers.gradleProperty('filmScenes').getOrElse('')
     systemProperty 'villagefriends.filmStride', providers.gradleProperty('filmStride').getOrElse('1')
+}
+
+// Any set of gameplay tests by class name: -Ptests=CommunityGameTest,VillageLifeGameTest
+tasks.named('processGametestResources') {
+    def selected = providers.gradleProperty('tests').getOrElse('')
+    inputs.property 'tests', selected
+    doLast {
+        if (!selected.isBlank()) {
+            def descriptor = new File(destinationDir, 'fabric.mod.json')
+            def metadata = new groovy.json.JsonSlurper().parse(descriptor)
+            metadata.entrypoints['fabric-client-gametest'] = selected.split(',').collect { 'dev.villagefriends.' + it.trim() }
+            descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
+        }
+    }
 }

@@ -14,6 +14,7 @@
       "dev.villagefriends.FoundationGameTest",
       "dev.villagefriends.FriendshipGameTest",
       "dev.villagefriends.RoadmapGameTest",
+      "dev.villagefriends.VillageLifeGameTest",
       "dev.villagefriends.CommunityGameTest",
       "dev.villagefriends.OutfitGameTest",
       "dev.villagefriends.HairFaceGameTest"

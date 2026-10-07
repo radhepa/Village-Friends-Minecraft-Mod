@@ -78,6 +78,7 @@ public final class VillageItems {
         for (String profession : VillageProfessions.JOBS) wearable(profession + "_uniform");
         for (String tool : List.of("broom", "paintbrush", "lute", "carpenter_hammer", "field_journal"))
             add(tool, p -> new Item(p.stacksTo(1)), SUPPLIES);
+        add("village_ledger", p -> new VillageLedgerItem(p.stacksTo(1)), SUPPLIES);
         guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}

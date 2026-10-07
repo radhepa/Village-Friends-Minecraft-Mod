@@ -1,5 +1,6 @@
 package dev.villagefriends.client;
 
+import dev.villagefriends.Emote;
 import dev.villagefriends.ResidentMotion;
 import dev.villagefriends.VillageFriends;
 import dev.villagefriends.animation.AnimationClip;
@@ -71,6 +72,8 @@ public final class ResidentLife {
     public static void entityEvent(Villager villager, byte id) {
         String trigger = switch (id) { case 12 -> "love"; case 13 -> "angry"; case 14 -> "happy"; case 42 -> "nervous"; default -> null; };
         if (trigger != null) of(villager).react(villager, trigger);
+        var emote = switch (id) { case 12 -> Emote.HEART; case 13 -> Emote.ANGER; case 14 -> Emote.NOTE; case 42 -> Emote.SWEAT; default -> null; };
+        if (emote != null) EmoteBubbles.ambient(villager, emote);
     }
     /** A conversation outcome for the resident with this entity id. */
     public static void cue(int entityId, String trigger) {
@@ -114,7 +117,7 @@ public final class ResidentLife {
         }
         if (!able) { activity.fade(now); return; }
 
-        if (v.hurtTime > lastHurt) react(v, "hurt");
+        if (v.hurtTime > lastHurt) { react(v, "hurt"); EmoteBubbles.show(v.getId(), Emote.ANGER, 0); }
         lastHurt = v.hurtTime;
         boolean sad = v.getUnhappyCounter() > 0;
         if (sad && !unhappy) react(v, "decline");
@@ -145,6 +148,8 @@ public final class ResidentLife {
         if (clip == null) { nextActivity = now + 40; return; }
         start(activity, clip, now, trigger);
         previous = recent; recent = clip.id();
+        // Neighbors chatting now and then show what they're on about.
+        if (trigger.equals("chat_speak") && random.nextFloat() < .3F) EmoteBubbles.ambient(v, random.nextFloat() < .7F ? Emote.DOTS : Emote.NOTE);
     }
 
     private void noticePlayer(Villager v, Minecraft client, int now) {
@@ -156,7 +161,7 @@ public final class ResidentLife {
             greeted = true; greetCooldown = now + 1200;
             greetAt = now + 3 + random.nextInt(14);
         }
-        if (greetAt >= 0 && now >= greetAt) { greetAt = -1; if (!reaction.active()) react(v, "greet"); }
+        if (greetAt >= 0 && now >= greetAt) { greetAt = -1; if (!reaction.active()) { react(v, "greet"); EmoteBubbles.ambient(v, Emote.EXCLAIM); } }
     }
 
     /** Another resident standing close by and roughly in front of this one: a conversation partner. */
