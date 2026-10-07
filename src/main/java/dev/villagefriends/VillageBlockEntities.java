@@ -10,6 +10,8 @@ public final class VillageBlockEntities {
     public static BlockEntityType<NoticeBoardBlockEntity> NOTICE_BOARD;
     public static BlockEntityType<CommandDeskBlockEntity> COMMAND_DESK;
     public static BlockEntityType<ApothecaryCotBlockEntity> APOTHECARY_COT;
+    /** Every profession workstation shares one block entity type. */
+    public static BlockEntityType<WorkstationBlockEntity> WORKSTATION;
 
     public static void register() {
         HOUSE_PLAQUE = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, VillageBlocks.id("house_plaque"),
@@ -20,6 +22,9 @@ public final class VillageBlockEntities {
                 FabricBlockEntityTypeBuilder.create(CommandDeskBlockEntity::new, VillageBlocks.get("command_desk")).build());
         APOTHECARY_COT = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, VillageBlocks.id("apothecary_cot"),
                 FabricBlockEntityTypeBuilder.create(ApothecaryCotBlockEntity::new, VillageBlocks.get("apothecary_cot")).build());
+        WORKSTATION = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, VillageBlocks.id("workstation"),
+                FabricBlockEntityTypeBuilder.create(WorkstationBlockEntity::new, VillageBlocks.stations().stream().map(VillageBlocks::get)
+                        .toArray(net.minecraft.world.level.block.Block[]::new)).build());
     }
 
     private VillageBlockEntities() {}
