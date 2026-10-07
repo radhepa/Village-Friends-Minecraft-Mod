@@ -199,7 +199,7 @@ public final class VillageFriends implements ModInitializer {
             var old = state(v, player); long today = day(v.level()); var next = old.talk(today); save(v, player, next);
             saveBond(v, player, bond(v, player).visit(today));
             // Sometimes "How's your day?" turns into a question for you, or an offer to help.
-            var question = a.equals("chat") && !v.isBaby() && !bond(v, player).has("hurt") ? TalkWorld.ask(v, player) : null;
+            var question = a.equals("chat") && !bond(v, player).has("hurt") ? TalkWorld.ask(v, player) : null;
             String reply = question != null ? TalkWorld.askText(v, player, question) : NarrativeEngine.conversation(v, player, a);
             celebrate(v, old, next);
             String status = old.canTalk(today) ? "+4 friendship - thanks for visiting!" : "Happy to keep talking. Friendship rewards return tomorrow.";

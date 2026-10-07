@@ -125,7 +125,7 @@ def read_questions():
             if not line or line.startswith('# ') or line == '#':
                 continue
             if line[0] in '?!' and (len(line) == 1 or line[1] == ' '):
-                head = [part.strip() for part in line[1:].split('|')]
+                head = [part.strip() for part in re.split(r'\s\|\s', line[1:])]
                 qid = head[0]
                 if not re.fullmatch(r'[a-z0-9_]{2,40}', qid):
                     fail(where, f'bad question id {qid!r}')

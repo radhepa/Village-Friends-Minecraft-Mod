@@ -1,0 +1,132 @@
+# Offers: a resident notices something and offers to help. Each can come up once a day per resident
+# when its conditions hold. Effects are carried out by TalkWorld.effect.
+
+! patch_up_healer | when: hurt job:apothecary|job:cleric
+Q: You're hurt! Sit down, let me see to that. I've got salve and clean bandages right here.
+Q: Look at you, all scraped up. Hold still and I'll patch you.
+- Yes, please :: Hold still... there. Clean, wrapped and on the mend. Try not to do that again. {heal} [HEART]
+- I'm fine, really :: Fine? You're bleeding on my floor. All right, but come back if it gets worse. [SWEAT]
+
+! patch_up_kind | when: hurt personality:warmhearted|personality:gentle|personality:protective
+Q: Oh, you're hurt! Come here, let me look after you. I always keep bandages handy.
+Q: You're limping, {player}. Let me wrap that for you. It won't take a moment.
+- Thank you :: There we are. Gently, gently. You'll be right as rain soon. {heal} [HEART]
+- It's just a scratch :: Just a scratch, they all say. Promise me you'll rest. [DOTS]
+
+! patch_up_friend | when: hurt level:4
+Q: You look rough. Let me patch you up before you go anywhere. That's what friends are for.
+- Please :: Ow, I know, I know. Done. Now eat something and stay out of trouble for an hour. {heal} [NOTE]
+- I'll manage :: You'll manage. You always do. But I worry, you know. [GLOOM]
+
+! meal_trade | when: hungry job:cook|job:farmer|job:butcher|job:fisherman|job:tavern_keeper
+Q: I can hear your stomach from here. Let me give you something to eat. No charge.
+Q: You look hungry, {player}. I've got food to spare. Want some?
+- Yes, thank you :: Here. Eat it all, and properly, not on the run. {meal} [HEART]
+- I've got food :: You've got food? Then eat it! Right now! I'm watching you. [ANGER]
+
+! meal_friend | when: hungry level:3
+Q: When did you last eat? Never mind, don't tell me. Take some bread.
+- Thank you :: There. Now I'll sleep tonight knowing you've eaten. {bread} [HEART]
+- I'm not hungry :: Not hungry? Your stomach says otherwise. Suit yourself. [DOTS]
+
+! cookie_gift | when: personality:warmhearted level:3
+Q: I baked cookies this morning. Far too many. Would you like a couple?
+- I'd love some :: Here you go. Still a little warm. Don't share them with the cat. {cookie} [HEART]
+- Maybe next time :: Next time, then. I'll save you the biggest ones. [NOTE]
+
+! flower_gift | when: personality:gentle level:3
+Q: I picked a few flowers this morning. Would you like one? It might brighten your journey.
+- I'd love one :: Here. Keep it somewhere safe, or plant it somewhere new. {flower} [HEART]
+- Keep it for yourself :: Keep it? You're sweet. Then I'll put it in my window for you. [BLUSH]
+
+! apple_gift | when: job:farmer level:2
+Q: The orchard's been generous. Take an apple for the road?
+- Gladly :: Here's a good red one. Crunchy. Don't eat the core, there's seeds in there. {apple} [NOTE]
+- No, thanks :: No? More for the pigs. They won't complain. [DOTS]
+
+! seed_gift | when: job:farmer held:crops|held:hoe
+Q: You're carrying farming things. Want some seeds to get you started?
+- Yes, please :: Here's a handful of wheat seeds. Plant them near water and you'll have bread in no time. {seeds} [SPARKLE]
+- I've got plenty :: Plenty? A farmer after my own heart. [NOTE]
+
+! shelter_together | when: rain wet level:2
+Q: You're soaked! Come stand under here with me until the worst of it passes.
+Q: Want to wait out the rain together? I'll tell you a story while we wait.
+- I'd like that :: We watched the rain come down in silver sheets and talked about nothing in particular. It was lovely. {shelter} [HEART]
+- I like the rain :: You like the rain? Off you go, then, you strange duck. Don't catch a cold. [NOTE]
+
+! storm_shelter | when: thunder level:1
+Q: That storm's right overhead! Stay here with me until it calms down, please.
+- I'll stay :: Thank you. Every flash is less scary with someone here. {shelter} [HEART]
+- I'll be careful :: Careful isn't enough in a storm like this! ...Fine. Stay low. Move fast. [SWEAT]
+
+! torches_night | when: night dark !held:torch level:2
+Q: It's dark out and you've no torch in hand. Take a few of mine, please.
+- Thank you :: Three torches. Light your way home. Or wherever you're going. {torch} [NOTE]
+- I can see fine :: You can see fine until a creeper's on your shoulder. Suit yourself. [ANGER]
+
+! cook_for_you | when: held:raw_food job:cook|job:butcher
+Q: Is that raw? Give it here, I'll cook it for you on my fire. Won't take a moment.
+- Yes, please :: Sizzle, sizzle... and done. Cooked properly. Eat it while it's hot. {cook_held} [HEART]
+- I'll cook it myself :: Do it properly, then. Not on a campfire in the rain. [DOTS]
+
+! mend_for_you | when: damaged job:armorer|job:toolsmith|job:weaponsmith
+Q: That's seen some hard use. Let me put it right for you on my anvil.
+Q: You're carrying a battered thing there. Want me to knock the dents out?
+- Please do :: A few good strikes and... there. Not new, but much better. {mend_held} [NOTE]
+- It's fine as it is :: Fine? It'll break at the worst moment. They always do. [SWEAT]
+
+! mend_for_you_tailor | when: damaged job:tailor|job:leatherworker
+Q: That's fraying. Hand it over a moment. A few stitches and it'll hold for ages.
+- Thank you :: In, out, pull... there. Neat as anything. {mend_held} [HEART]
+- No need :: No need? You'll be back when it falls apart. I'll be here. [DOTS]
+
+! directions_home | when: held:map|held:compass job:cartographer
+Q: You're carrying a map. Want me to mark where {village} sits, so you can always find your way back?
+- Yes, please :: There. The heart of {village}, right where the bell hangs. Never be lost. {directions} [SPARKLE]
+- I know the way :: You know the way? Good. Some people never do. [NOTE]
+
+! directions_stranger | when: held:map|held:compass level:1
+Q: Need directions home to {village}? I can tell you exactly where the bell is.
+- Please :: Here's where we are. Write it down somewhere safe. {directions} [NOTE]
+- No, thanks :: All right. The bell's loud enough to follow anyway. [NOTE]
+
+! fishing_tip | when: held:fishing_rod job:fisherman
+Q: ...You've got a rod. Want a tip? And a fish, while I'm at it?
+- Yes, please :: ...Cast where the water's dark and still. Wait longer than you think. And here, have this one. {fish} [NOTE]
+- I'm good, thanks :: ...All right. The fish are biting at dusk. Just so you know. [DOTS]
+
+! reading_tip | when: held:book job:librarian|job:scholar
+Q: You've brought a book! Would you like me to read you a passage? It's very educational.
+- I'd love that :: "The patient miner finds the deepest veins." There. You're wiser already. {study} [SPARKLE]
+- Another time :: Another time. The words will wait for you. They're good at that. [NOTE]
+
+! study_together | when: job:scholar|job:librarian level:3
+Q: I'm reading about the old builders. Want to learn something with me?
+- Teach me :: Did you know the first villages were built around wells, not bells? The bell came later. {study} [IDEA]
+- Not today :: Not today? Then I'll save it for you. It's a good story. [DOTS]
+
+! song_for_you | when: job:bard level:2
+Q: I've just finished a little tune. Would you like to hear it? It's short. Mostly.
+- Play it :: The notes fill the air, bright and bouncing, and for a minute everything feels lighter. {points:1} [NOTE]
+- Maybe later :: Later, then. It'll still be here. I'll hum it to myself until then. [DOTS]
+
+! lucky_emerald | when: level:6 personality:warmhearted|personality:gentle|personality:adventurous
+Q: I've been keeping something for you. Just a little thing. For luck. Will you take it?
+- You're too kind :: An emerald. Buy yourself something nice. Or don't, and keep it for luck. {emerald_tip} [HEART]
+- Keep it, please :: Keep it? You're impossible. Then it stays here, waiting for you. [BLUSH]
+
+! guard_escort | when: night job:knight|job:archer level:2
+Q: It's dark, {player}. I can walk you to the edge of the village if you like.
+- That would be kind :: Stay close. Eyes open. ...There. You're past the worst of the dark now. Go safely. {points:1} [NOTE]
+- I'll be fine :: You'll be fine. You always say that. Just stay near the torches. [DOTS]
+
+! cider_offer | when: job:tavern_keeper level:2
+Q: You look like you could use a warm mug of something. On the house today?
+- Please :: Here. Warm cider with a pinch of spice. Don't tell the others it was free. {meal} [HEART]
+- I'm all right :: All right. Bring a mug next time and I'll fill it. [NOTE]
+
+! hug_offer | when: level:8 personality:warmhearted|personality:playful|personality:gentle
+Q: Can I give you a hug? You look like you need one. Or I do. One of us does.
+- Yes :: There. That's better. For both of us, I think. {points:1} [HEART]
+- Maybe a handshake :: A handshake! Very formal. Very you. Here. [NOTE]

@@ -144,6 +144,7 @@ public final class TalkWorld {
         if (p.isInWaterOrRain() && !p.isInWater()) states.add("wet");
         if (p.isOnFire()) states.add("fire");
         if (p.isPassenger()) states.add("riding");
+        if (p.getMainHandItem().isDamaged()) states.add("damaged");
         var head = p.getItemBySlot(EquipmentSlot.HEAD); var chest = p.getItemBySlot(EquipmentSlot.CHEST);
         if (head.is(Items.CARVED_PUMPKIN)) states.add("pumpkin");
         if (chest.is(Items.ELYTRA)) states.add("elytra");
@@ -179,7 +180,8 @@ public final class TalkWorld {
             if (flag.startsWith("offer:") && flag.endsWith(":" + today)) done.add(flag.substring(6, flag.lastIndexOf(':')));
         }
         DialogueBank.Question q = null;
-        if (RANDOM.nextFloat() < .7F) q = Talk.question(bank, c, done, true, RANDOM);
+        // Children ask questions, but only grown-ups make offers.
+        if (!v.isBaby() && RANDOM.nextFloat() < .7F) q = Talk.question(bank, c, done, true, RANDOM);
         if (q == null && RANDOM.nextFloat() < .24F) q = Talk.question(bank, c, done, false, RANDOM);
         if (q == null) return null;
         var next = b;
@@ -227,7 +229,7 @@ public final class TalkWorld {
         for (var flag : List.copyOf(b.flags())) if (flag.startsWith("offer:") && !flag.endsWith(":" + today)) b = b.unflag(flag);
         saveBond(v, p, b);
         String status = q.offer() ? "" : "They'll remember that.";
-        if (a.points() > 0 && !q.offer()) { reward(v, p, a.points()); status = "+" + a.points() + " friendship. They'll remember that."; }
+        if (a.points() > 0) { reward(v, p, a.points()); status = "+" + a.points() + " friendship." + (q.offer() ? "" : " They'll remember that."); }
         if (a.effect() != null && !a.effect().isEmpty()) status = effect(a.effect(), p, v);
         var c = context(v, p, "chat");
         String reply = Talk.fill(a.reply(), c.fill());
@@ -249,7 +251,8 @@ public final class TalkWorld {
             case "meal" -> {
                 String job = profession(v);
                 var food = switch (job) {
-                    case "cook", "tavern_keeper" -> new ItemStack(VillageItems.get("fresh_village_bread"));
+                    case "cook" -> new ItemStack(VillageItems.get("fresh_village_bread"));
+                    case "tavern_keeper" -> new ItemStack(VillageItems.get("mug_of_cider"));
                     case "fisherman" -> new ItemStack(Items.COOKED_COD, 2);
                     case "butcher" -> new ItemStack(Items.COOKED_PORKCHOP);
                     case "farmer" -> new ItemStack(Items.BREAD, 2);

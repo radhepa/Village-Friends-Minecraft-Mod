@@ -1,0 +1,476 @@
+# Children: baby.greet, baby.chat, baby.work, baby.adventure, baby.joke, baby.weather.<w>, baby.routine.<block>, baby.time.<period>, baby.market
+
+## baby.greet
+Hi! Hi! Hi! Are you the adventurer everyone talks about?
+Hello! I'm not supposed to talk to strangers, but you look nice.
+Hi! Do you have any cookies? You look like you have cookies.
+Hello, grown-up! Want to see my rock collection?
+Hi! I'm {name}! I'm this many years old! Well, almost!
+Ooh, a visitor! Are you a knight? You look like a knight.
+Hello! Did you bring presents? I'm only asking.
+Hi! I can count to sixty-four! Want to hear?
+Hello! My mum says I talk too much. Is that true?
+Hi! Is that a real sword? Can I hold it? No? Okay.
+Hello! I just saw a beetle as big as my thumb!
+Hi! You're tall! Are all adventurers tall?
+Hello! Do you want to play tag? You're it!
+Hi! I lost a tooth! Look! There's a hole!
+Hello! I'm going to be the bravest villager ever when I grow up.
+Hi! The golem picked me up today! I was so high!
+Hello! My friend says you've been to the Nether. Is it really on fire?
+Hi! Shh, I'm hiding from my sister.
+Hello! I drew a picture of you. You have very square hair.
+Hi! Want to see me do a cartwheel? ...That was a cartwheel.
+Hello! Can I ride on your shoulders? Please? Please?
+Hi! I found a feather! It's blue! Well, grey. Bluish-grey.
+Hello! Are you staying for supper? We're having stew. We're always having stew.
+Hi! I'm not tired. I'm never tired. *yawn*
+Hello! I've been waiting for you forever! Since lunch!
+Hi, {player}! I remembered your name!
+Hello! Guess what? No, guess! I learned to whistle! Listen! ...Fffft. Almost!
+Hi! Did you see any dragons today?
+Hello! Do you know any good games?
+Hi! I'm practicing being a grown-up. Good day to you, sir or madam. How was that?
+
+## baby.chat
+I found a frog and named it Captain Hops. It's my best friend now.
+I built a fort out of hay bales! Nobody's allowed in except my friends. And you, maybe.
+The golem gave me a poppy today! I'm going to keep it forever.
+I'm not allowed near the river by myself. But I can see it from here!
+When I grow up I'm going to have a hundred cats.
+I ate a whole carrot today. A whole one! Raw!
+My grandma tells the best stories. Mostly about when she was little. Like me!
+I can hop on one foot all the way to the well. Almost.
+The baker gave me a bread crust. I fed it to a duck. The duck was happy.
+I'm scared of the dark. A little. Only at night.
+I have a secret. I can't tell you. Okay, I'll tell you. I like pickles.
+My friend said creepers are made of leaves. Is that true? I don't think that's true.
+I saw a rainbow and tried to run to the end. It kept moving!
+I'm learning my letters. B is for bell! And bread! And bees!
+My big brother says I'm annoying. I'm not annoying. I'm enthusiastic.
+I've been collecting shiny pebbles. I have eleven! And one that's sort of shiny.
+The chickens chase me sometimes. I chase them back.
+I helped my mum bake today. I mostly ate the dough.
+I can't wait to grow up. Then I can stay up late every night!
+I named the clouds today. That one's called Fluffy and that one's called Also Fluffy.
+I fell in a puddle. It was the best thing that happened all week.
+The cat sleeps on my bed every night. She snores!
+I made a crown out of daisies! I'm a princess now. Or a king. Or a queen-king.
+My favorite color is every color.
+I tried to catch a butterfly. It caught me. It landed on my nose!
+I'm going to be a knight when I grow up. Or a baker. Or a knight who bakes.
+My dad can lift a whole hay bale. By himself! He's the strongest.
+I found a hole in the ground. I think a rabbit lives there. Or a dragon. A small dragon.
+I'm not allowed to touch the bell. I touched it once. It was cold.
+The other kids and I are digging to the other side of the world. We're nearly there.
+I can do a really good pig noise. Oink! See?
+Grown-ups talk about boring things. Like weather. And taxes. What are taxes?
+I saw a spider in the barn. I wasn't scared. Much.
+I want to go on an adventure like you! Can I come next time? When I'm bigger?
+I lost my shoe. Then I found it. It was on my foot.
+My friend {friend} can wiggle their ears! I'm practicing.
+I put a worm in my pocket. Mum found it. Mum screamed.
+I like the sound of rain on the roof. It sounds like clapping.
+I'm making a map of the village. The bell is in the middle and it's very big.
+I can count all the cows. There are lots. Lots and lots.
+Do you have a pet? I want a pet. A wolf! A tame one.
+I had a dream that I could fly. I flew over the whole village!
+I'm not crying, my eyes are just leaking because I bumped my knee.
+The tavern smells like apples. I'm not allowed in yet. When I'm big!
+I found a really good stick. It's a sword. And a wand. And a fishing rod.
+I'm going to build the biggest sandcastle ever. Out of real sand blocks!
+When the bard plays, I dance! Like this! Wheee!
+My teacher says I'm clever. My teacher says I'm also loud.
+I tried to ride a sheep. It didn't work.
+Why is the sky blue? Nobody knows. I asked everyone.
+I gave the golem a hug. It's very cold and very hard. Still nice.
+I'm going to stay up until midnight tonight. Maybe. Probably not.
+The best day is Market Day. There's honey cake!
+I found a robin's egg! Well, a blue rock. But it looked like an egg!
+I want to be just like you when I grow up, {player}.
+My sister and I had a race. I won! She says she let me. She didn't.
+I hid a cookie under my pillow for later. Then I forgot. Then the cat found it.
+There's a monster under my bed. It's actually my slipper. But it might be a monster.
+I can jump over the fence! Okay, the little fence. The very little one.
+I'm learning to whistle. Pheeeew! Close enough.
+My favorite food is everything with honey on it.
+I've decided to be a scholar. I'm going to know every single thing.
+I like when you visit. You're fun for a grown-up.
+The goats are funny. They yell for no reason!
+I sang a song for the chickens. They liked it. I think.
+I've got a loose tooth! Wanna see? Wiggle, wiggle!
+I'm going to marry a frog. A nice frog. When I'm older.
+Grown-ups worry too much. I don't worry. I play.
+I made mud pies! Don't eat them. I learned that the hard way.
+The moon follows me when I walk at night! Everywhere I go!
+I collected all the feathers in the chicken coop. Now I'm part chicken.
+Today was the best day ever! Yesterday was also the best day ever.
+I'm going to grow up to be the tallest villager in the whole world.
+Shh, I'm a ninja. You can't see me.
+I fed the fish in the pond. Some of them waved. Fish can't wave. These ones did.
+I wrote my name in the dirt. It's a bit wobbly. The rain washed it away.
+I'm going to train a parrot to say my name. And "cookie."
+The well echoes! Hello! Hello! Hello! See?
+I pretended to be a zombie and scared my brother. Then he cried. Then I said sorry.
+Why do grown-ups drink coffee? It smells nice but tastes like burnt dirt.
+My favorite animal is a llama. Because they spit! Ew! But funny!
+I want to see the ocean one day. Is it really really big?
+I'm brave. I walked past the dark barn all by myself. Fast. But by myself.
+I found a mushroom! Don't worry, I didn't eat it. This time.
+The baby next door can't talk yet. I'm teaching her words. She says "ba."
+I've got a secret clubhouse. The password is "potato."
+I'm a very good helper. I helped carry ONE apple today.
+Stars are tiny holes in the sky's blanket. My grandpa said so.
+I'm going to be a painter! I already painted the dog. He didn't like it.
+
+## baby.work
+When I grow up I'm going to be a farmer and grow the biggest pumpkin ever!
+I want to be a librarian so I can read all the books. ALL of them.
+I'm going to be a knight and fight a dragon! A small one first.
+I'll be a baker and make cookies every day. Cookies for breakfast!
+I'm practicing being a fisherman. I caught a stick! It counts.
+I want to be a cartographer and draw maps of everywhere!
+When I'm grown I'm going to be a bard and sing all day.
+I'm going to work at the sawmill! Saw saw saw!
+My mum says I can be anything I want. Even a llama. Especially a llama.
+I'd like to be an apothecary. I already know which flowers smell nice.
+I'm going to be the golem's helper. Do golems need helpers?
+I want to be a painter! I'll paint the whole village purple.
+I'm going to be a cook! I can already make toast. Mostly burnt.
+When I grow up I'll have a trade and an apron and everything!
+I'm practicing my serious trading face. Hrrmm. Hrrmm!
+I'm going to be the tavern keeper so I can have all the cider.
+I'd be a shepherd! I love sheep. They're like clouds with legs.
+I want to be an archer! I can already hit the barn. It's a big barn.
+I'm going to be a tailor and make clothes for the cats.
+When I'm big I'll be a scholar and know everything about everything.
+I help my dad at work. I hold things. Very important job.
+I want to be a mason and build a castle. A real one.
+I'll be a cleric and make potions that turn things blue.
+I'm going to work so hard and then take a nap. Like the nitwit.
+Being a grown-up looks hard. You have to work AND be tired.
+I made a workstation out of a box. It's a cookie workstation.
+I'm going to be a carpenter! I already made a stick. It's a wooden stick.
+I'd be a toolsmith and make a pickaxe made of cake.
+I want to be everything! Can I be everything?
+Grown-ups go to work and come home smelly. I can't wait!
+I'll be a fletcher and make arrows out of chicken feathers! The chickens won't like that.
+I'm going to be an adventurer like you. That's a job, right?
+I'd be a leatherworker and make boots for every animal in the village.
+I'm going to be a butcher. No, wait, I like the animals. A vegetable butcher!
+I watched the smith hammer all morning. Clang clang! I want to clang!
+When I'm big, I'll have a workstation right next to the bell.
+I already know how to sweep. That's basically a job.
+I'll be a painter and paint your portrait. You'll be very handsome. Or pretty. Very square.
+My dream job is cookie taster.
+I want to work at the market selling honey cakes. And eating the leftovers.
+I'm going to be the bell ringer! Ding dong! Is that a job?
+I'll be a guard and protect everyone. Even the cranky ones.
+Every day I'm going to work and then play. Work then play. Perfect.
+When I'm a farmer, I'll grow carrots for every rabbit in the world.
+I'm learning about stars so I can be an astronomer. What's an astronomer?
+
+## baby.adventure
+Did you fight a dragon? Was it big? Was it this big? Bigger?
+Tell me about the scariest monster you ever saw!
+Have you been to the bottom of the ocean? Are there mermaids?
+When I'm bigger, I'm going on an adventure. Just like you!
+Did you find treasure? Real treasure? Gold and diamonds?
+Is it true that endermen steal blocks? Why do they want blocks?
+I went on an adventure to the end of the garden. I found a snail.
+Have you ever ridden a horse? A really fast one?
+What's the farthest you've ever walked? Farther than the well?
+Do zombies have friends? Do they play together?
+I want to see a polar bear! Are they soft? Can you hug them?
+Have you been in a cave? Is it dark? Are there bats? I love bats!
+Did you sleep outside? Under the stars? With the monsters?
+I went exploring in the barn. I found three eggs and a very angry chicken.
+Is the Nether hot like soup? Or hot like the sun?
+Have you seen a panda? I want to see a panda more than anything!
+I'm going to sail a boat across the whole ocean someday.
+Did you ever get lost? What did you do?
+I want to find a dungeon. A friendly one. With friendly skeletons.
+Have you been to the End? Is it really the end? What's after the end?
+I made a treasure map of the village. X marks the cookie jar.
+Can you take me on an adventure? Just a little one? To the river?
+Are there villages like ours far away? With kids like me?
+I want to climb the biggest mountain and wave at everyone.
+I found a cave behind the waterfall! Okay, it's a dent in the rock. But it's MY cave.
+Have you ever met a wandering trader's llama? Did it spit at you?
+I'm going to tame a wolf and call him Sir Woofington.
+Tell me a story about your adventures. A long one!
+When I grow up I'll explore the whole world and come back and tell you about it.
+Is it scary being an adventurer? I'd be brave. Mostly.
+Have you seen the ocean? Is it blue all the way down?
+I want to ride a pig! With a saddle! Into battle!
+Did you ever fight a creeper? Did it go boom? Did you go boom?
+I'm saving my pebbles for a big adventure. Pebbles are very useful.
+Do you have a sword? Can I see? Ooh! Shiny!
+Have you been to the jungle? Are there monkeys? There should be monkeys.
+I went on an adventure in my dreams. I flew to the moon on a chicken.
+What's the coolest thing you ever found?
+I want to see snow! Lots of snow! A whole mountain of snow!
+Promise you'll take me exploring when I'm grown up!
+Is the world flat? My brother says it's square. Like everything.
+I heard there's a mansion full of baddies in the forest. Did you go in?
+I want to find a geode. They're like rocks with sparkly insides!
+Do fish sleep? Have you seen a fish sleep?
+When I go adventuring I'm bringing my whole rock collection.
+
+## baby.joke
+Why did the chicken cross the road? To get to the other side! Hee hee!
+Knock knock! Who's there? Banana. Banana who? Knock knock! Who's there? Orange. Orange you glad I didn't say banana!
+What do you call a cow with no legs? Ground beef! My uncle told me that one.
+Why did the cookie cry? Because its mother was a wafer so long! Hee!
+What's brown and sticky? A stick! Ha ha ha!
+Why can't a nose be twelve inches long? Because then it'd be a foot!
+What do you call a sleeping dinosaur? A dino-snore! Zzzzz!
+Why did the teddy bear say no to dessert? It was stuffed! Hee hee!
+What's a pig's favorite color? Mud! Okay, mud's not a color. It should be.
+Knock knock! Who's there? Boo. Boo who? Don't cry! It's just me!
+Why do cows wear bells? Because their horns don't work! Moo!
+What do you call a funny chicken? A comedi-hen!
+Why did the zombie go to school? To get smarter! Grrr! Brains!
+What do you call a fish with no eye? A fsh! Fsh! Get it?
+Why did the golem cross the road? To pick up the flower! It's true, I saw it!
+Knock knock! Who's there? Cow says. Cow says who? No silly, cow says MOO!
+What do you call a bear with no ears? B! Hee hee!
+Why are frogs so happy? They eat whatever bugs them!
+What did the sheep say to the other sheep? Baaa! That's it. That's the joke. Baaa!
+Why don't skeletons go to parties? They have no BODY to go with! Hahaha!
+What has four legs and goes boo? A cow with a cold!
+What's the fastest vegetable? A runner bean! Zoom!
+Why did the banana go to the doctor? It wasn't peeling well!
+What do you call a rabbit that tells jokes? A funny bunny! Hop hop!
+Knock knock! Who's there? Lettuce. Lettuce who? Lettuce in, it's cold!
+Why did the egg hide? It was a little chicken!
+What do you call a duck that gets all A's? A wise quacker!
+What do you call a cat that's a beach? A sandy claws! Hee hee!
+Why did the creeper cross the road? Hssssss! BOOM! ...I don't know the end.
+What's a ghost's favorite fruit? Boo-berries!
+What's a pirate's favorite animal? An aaaaardvark! Arrr!
+Why couldn't the pony sing? It was a little horse!
+Why did the bee go to school? To get a little buzz! Bzzz!
+What's a snake's favorite subject? Hiss-tory!
+What do you get when you cross a snowman and a vampire? Frostbite! Grrr!
+Knock knock! Who's there? Interrupting cow. Interrupting c- MOO!
+Why did the tomato go red? It saw the salad dressing! Hee!
+What's a cat's favorite dessert? Mice cream!
+I told the golem a joke. It didn't laugh. Golems don't have funny bones.
+What do you call a dog that does magic? A Labracadabrador! My favorite!
+
+## baby.weather.rain
+Rain! Puddles! I'm going to jump in every single one!
+Mum says I have to stay inside. The puddles are calling me!
+I caught a raindrop on my tongue! It tasted like sky!
+The worms are coming out! Hello, worms!
+Rain sounds like a hundred tiny drums.
+I'm a frog! Ribbit! Frogs love rain!
+I made a boat out of a leaf and it sailed down the path!
+I'm all wet and I don't even care!
+The rain made a river in the road! It's MY river.
+When it rains, the flowers drink. Glug glug glug.
+
+## baby.weather.thunder
+The thunder's so loud! Is the sky angry?
+I'm not scared of thunder. I'm just hiding under the table for fun.
+Every time it flashes, I count! One, two, BOOM!
+My dog is hiding under my bed. I'm hiding with him.
+Is lightning hot? It looks hot.
+Mum says thunder is just the clouds bumping heads.
+I hope the golem's okay out there.
+I'm being brave. Look how brave I'm being. Eek!
+When it booms, I squeeze my cat. She doesn't like it.
+I want the storm to stop so I can go play.
+
+## baby.weather.snow
+SNOW! It's snowing! Snow snow snow!
+I'm going to build a snow golem! A really big one!
+I made a snow angel! Look! It's me but flat!
+My nose is cold but I don't care! Snow!
+Can I eat the snow? Mum says no. I already did.
+I threw a snowball at my brother and he threw one back. War!
+The snow's so deep it's up to my tummy!
+Everything's white and sparkly! It's like the world's covered in sugar!
+I want to slide down the hill on a boat! Is that allowed?
+I wish it snowed every day forever!
+
+## baby.weather.clearing
+The rain stopped! Puddle time!
+Did you see the rainbow? I'm going to find the end of it!
+Everything smells like wet grass! I love it!
+The snails are out! I'm racing them.
+The sun's back! Hello, sun!
+I'm going to splash in every puddle before they dry up!
+
+## baby.weather.hot
+It's so hot! I want to swim in the river!
+My ice melted. Well, my snowball. It was a snowball from yesterday.
+I'm hiding in the shade with the cats.
+Can we have cold milk? It's so hot!
+The sand's too hot for my feet! Ouch! Ouch!
+I'm going to dig a hole and sit in it. It's cooler in holes.
+
+## baby.routine.wake
+I'm awake! I'm SO awake!
+Is it morning? Yay, morning!
+I had the best dream. There were cookies. Big ones.
+I'm still sleepy. But I don't want to miss anything!
+Morning! Is breakfast ready? Is it porridge?
+I woke up before everyone! Even the rooster!
+
+## baby.routine.breakfast
+I'm eating breakfast! It's porridge. With honey!
+I have a milk mustache. Look!
+Breakfast is my favorite meal. Then lunch. Then supper. Then snacks.
+I ate all my bread and the crusts. The crusts make you brave!
+Mum says I have to finish breakfast before I can play. I'm eating SO fast.
+Can I have cookies for breakfast? No? Okay. Porridge.
+
+## baby.routine.play
+We're playing tag! You're it! No tag-backs!
+I'm hiding! Count to ten! No, twenty!
+We're building a fort out of hay! Want to come in? Password's potato.
+I'm a dragon! Rawr! I'm going to eat the village! Not really. Rawr!
+Race you to the bell! Go!
+We're playing village and I'm the golem. Clank! Clank!
+I'm on a quest to find the shiniest pebble in the whole world!
+Look at me jump! I'm jumping!
+
+## baby.routine.lessons
+We're doing lessons! I'm learning about bees!
+Shh, the teacher's talking. She's telling us about the stars.
+I know my letters! A, B, C... um... bell!
+We learned that sheep can be different colors! I want a purple one!
+I'm learning numbers. Sixty-four is a whole stack!
+Lessons are fun today. We're drawing maps!
+
+## baby.routine.lunch_home
+I'm having lunch at home! Bread and cheese!
+Mum made soup. I'm blowing on it. Whoosh!
+Lunch! I'm so hungry I could eat a whole cow. A small one.
+I'm eating my carrots first so I can have dessert.
+Lunch is short! I have to eat fast and go play!
+I shared my lunch with the cat. She ate the cheese.
+
+## baby.routine.market
+It's Market Day! I got a copper! I'm buying a honey cake!
+There are so many stalls! I want everything!
+Market Day is the best day! There's music and cake!
+I saw a llama at the market! It looked at me funny!
+I traded my best pebble for a ribbon. Good trade!
+Mum says I can have ONE treat. I'm choosing very carefully.
+
+## baby.routine.supper
+It's supper time! We're having stew. We're always having stew.
+I have to eat my vegetables. I'm hiding them under my bread.
+Supper with everyone is the best!
+I'm so full! My tummy is round like a pumpkin!
+Dad told a funny story at supper. Milk came out my nose!
+After supper I get a story. Then bed. Booo, bed.
+
+## baby.routine.evening
+I'm getting ready for bed. Do I have to?
+Mum's reading me a story. It's about a brave chicken.
+I'm in my pajamas. They have bells on them!
+The stars are coming out! I'm counting them! One, two, lots!
+I'm not tired. I'm just resting my eyes. Very hard.
+Can I stay up five more minutes? Please? Five?
+
+## baby.routine.sleep
+I'm supposed to be asleep. Shh, don't tell!
+Is it bedtime already? Noooo.
+I'm so sleepy... but I want to talk to you...
+Goodnight! Will you be here tomorrow?
+I sleep with my wooden sword. In case of monsters.
+Night night! Don't let the spiders bite!
+
+## baby.routine.shelter
+I have to stay inside because of the rain. Boooring!
+I'm watching the rain from the window. Drip drip drip.
+Can I go out? Just for one puddle? Please?
+I'm building a fort out of blankets until the rain stops.
+The rain's making music on the roof!
+I'm drawing pictures of rainbows to make the rain stop.
+
+## baby.routine.storm
+I'm hiding! The thunder's too loud!
+Mum's holding my hand. I'm not scared. She is. A little.
+The lightning made the whole room white!
+I'm under the table with my dog. We're very brave.
+When will the storm stop? Soon? Now? Now?
+I'm counting the booms. Seven so far!
+
+## baby.routine.snowed_in
+We're stuck inside because of the snow! Can we go play in it?
+I'm warming my toes by the fire. They're toasty now!
+Mum made hot cocoa! It's the best thing ever!
+I'm drawing snowflakes on the frosty window!
+The snow's so high it's covering the door!
+I want to go out and make a snow golem!
+
+## baby.routine.rain_walk
+I'm splashing in puddles! Splash! Splash!
+I'm a duck! Quack! Ducks love rain!
+I'm soaking wet! Mum's going to be so mad. Worth it!
+Look how big this puddle is! It's an ocean!
+The rain tickles!
+I'm dancing in the rain! Come dance!
+
+## baby.routine.snow_play
+I'm building a snow golem! He needs a pumpkin head!
+Snowball fight! Duck!
+I made a snow angel! It's the best one ever!
+I'm sliding on the ice! Wheee! Ow. Wheee!
+My mittens are soaked but I don't care!
+I'm making a snow fort! It's going to be HUGE!
+
+## baby.time.dawn
+It's so early! The roosters are still yawning.
+The sky's pink! Like a strawberry!
+Shh, everyone's still asleep. Except me!
+I got up to see the sunrise! It was worth it!
+
+## baby.time.morning
+Morning is for playing!
+I've already found two beetles and a snail this morning!
+The morning sun is warm on my face!
+It's morning! The whole day is ahead! So much playing to do!
+
+## baby.time.noon
+It's lunchtime! My tummy's rumbling!
+The sun's right on top of us! I can't find my shadow!
+Noon means lunch, and lunch means food!
+I'm hungry. Are you hungry? I'm always hungry.
+
+## baby.time.afternoon
+The afternoon's the best for playing tag!
+I'm not tired! Okay, a little tired.
+The shadows are getting long! Mine's taller than me!
+Afternoon is when the cats nap. I don't nap. I'm too busy.
+
+## baby.time.evening
+The sun's going down! It's all orange!
+Mum says I have to come in soon. Five more minutes!
+The fireflies are coming out! I'm going to catch one!
+It's getting dark! Time for stories!
+
+## baby.time.night
+I'm supposed to be in bed! Shh!
+The stars are out! I'm making wishes on them!
+Night is spooky. I like spooky. A little.
+Are there monsters out there? The golem will protect us!
+
+## baby.time.late
+I can't sleep! There's too much thinking in my head.
+It's so late! I've never been up this late! I'm so grown up!
+I heard a noise. Was it a ghost? It was probably the cat.
+I'm only up because I needed water. And to see the moon.
+
+## baby.market
+It's Market Day! Everything smells like honey cake!
+Mum gave me a copper to spend. I'm going to spend it so carefully.
+There's a juggler at the market! Well, the bard juggling apples. Badly.
+I saw so many stalls! Toys and ribbons and cakes!
+On Market Day nobody makes me do chores!
+I want to buy a wooden sword. And a cake. And a llama.

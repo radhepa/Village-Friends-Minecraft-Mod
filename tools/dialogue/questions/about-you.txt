@@ -1,0 +1,234 @@
+# Questions residents ask about you. Each is asked once; flagged answers are remembered (see lines/remember.txt).
+
+? sunrise_sunset
+Q: Be honest with me. Are you a sunrise person or a sunset person?
+Q: Settle an argument for me. Sunrises or sunsets?
+- Sunrise, always :: Me too! The whole village goes pink for a minute and nobody else is awake to see it. @likes:sunrise {points:1} [SPARKLE]
+- Sunset, easily :: A sunset person. Then you'd love the view from the bell around six. It's like the sky's on fire. @likes:sunset {points:1} [NOTE]
+- Whichever has breakfast :: Ha! A practical answer. I respect that. {points:1} [NOTE]
+
+? cats_dogs
+Q: Cats or dogs? I need to know who I'm dealing with.
+Q: Important question: are you a cat person or a dog person?
+- Cats, obviously :: A cat person! Creepers are scared of them, you know. Very sensible choice. @likes:cats {points:1} [HEART]
+- Dogs, every time :: A dog person! Loyal, brave, a bit muddy. Suits you. @likes:dogs {points:1} [NOTE]
+- Parrots :: Parrots! Bold. Noisy. I like it. Teach yours to say my name. @likes:parrots {points:1} [EXCLAIM]
+- Llamas :: Llamas? They spit! ...I suppose you'd forgive them anything. {points:1} [QUESTION]
+
+? sweet_savory
+Q: If you could only eat one forever: something sweet or something savory?
+- Sweet. Cake forever. :: A cake person. I'll remember that next time there's a party. @likes:sweet {points:1} [HEART]
+- Savory. Give me stew. :: A stew person! You'd get on well with our cook. @likes:savory {points:1} [NOTE]
+- Bread. Just bread. :: Just bread. Simple, honest, perfect. I couldn't agree more. @likes:bread {points:1} [NOTE]
+
+? rain_or_shine
+Q: Do you like the rain, or are you a sunshine sort?
+- I love the rain :: You love the rain? Most people run from it! You're a kindred spirit, then. @likes:rain {points:1} [SPARKLE]
+- Sunshine, please :: Sunshine it is. The village is prettiest in the sun anyway. @likes:sun {points:1} [NOTE]
+- Snow beats both :: Snow! Quiet and white and sparkly. I like how you think. @likes:snow {points:1} [SPARKLE]
+
+? where_from
+Q: Where are you from, really? You don't talk like anyone from around here.
+Q: Do you have a home somewhere, out there past the hills?
+- A house I built myself :: You built it yourself? Then you know what it means to make a place your own. @home:built {points:1} [EXCLAIM]
+- Wherever I sleep tonight :: A wanderer at heart. I hope you'll count {village} as one of your homes. @home:wanderer {points:1} [DOTS]
+- Somewhere far away :: Far away. You must miss it sometimes. You can always tell me about it. {points:1} [NOTE]
+- Here, I hope :: Here? Oh, that's the nicest thing anyone's said all week. @home:village {points:2} [HEART]
+
+? scariest_mob
+Q: What's the scariest thing you've ever faced out there?
+- Creepers. Every time. :: Creepers! Silent, green and explosive. I'd scream too. @fears:creepers {points:1} [SWEAT]
+- The warden :: The warden? The one in the deep dark that hears your heartbeat? You're braver than anyone I know. @fears:warden {points:1} [EXCLAIM]
+- Endermen :: Endermen give me the shivers. Don't look them in the eye, they say. @fears:endermen {points:1} [SWEAT]
+- Nothing scares me :: Nothing at all? Hmm. Even heroes are allowed to be scared, you know. {points:1} [DOTS]
+
+? favorite_biome
+Q: Out of everywhere you've been, where's the most beautiful place?
+- Cherry groves :: Cherry groves! Pink petals everywhere. I'd love to see one someday. @loves:cherry {points:1} [HEART]
+- The ocean :: The ocean. All that blue going on forever. I've only dreamed about it. @loves:ocean {points:1} [SPARKLE]
+- Snowy mountains :: Snowy peaks! Cold and quiet and enormous. You've got good taste. @loves:mountains {points:1} [SPARKLE]
+- Right here :: Right here? In {village}? Oh, you're just saying that. ...Are you? Thank you. {points:2} [BLUSH]
+
+? night_or_day
+Q: Are you a day person or a night owl, {player}?
+- Up with the sun :: Early riser! You'd get on with the farmers. They're up before the roosters. @hours:early {points:1} [NOTE]
+- Night owl :: A night owl. Be careful out there after dark. The phantoms like sleepy people. @hours:late {points:1} [DOTS]
+- I nap whenever I can :: Ha! You'd love our nitwit. Naps are his whole philosophy. {points:1} [NOTE]
+
+? favorite_food
+Q: What's your favorite thing to eat after a long day?
+- Golden carrots :: Golden carrots! Very fancy. Very nourishing. You must be rich. @food:carrots {points:1} [EXCLAIM]
+- Pumpkin pie :: Pumpkin pie! The baker would adore you. @food:pie {points:1} [HEART]
+- Steak, well cooked :: A steak person. Hearty and simple. The butcher would approve. @food:steak {points:1} [NOTE]
+- Whatever's in my pocket :: Whatever's in your pocket? Oh, you poor thing. Come back at supper and I'll feed you properly. {points:1} [SWEAT]
+
+? why_adventure
+Q: Why do you do it? All the traveling, the danger. What keeps you going?
+- To see everything :: To see everything. I understand that. The world's too big to leave unseen. @why:see {points:1} [SPARKLE]
+- To build something great :: To build something great. I'd like to see it when it's done. @why:build {points:1} [IDEA]
+- For the people I meet :: For the people. That's the best answer anyone's ever given me. @why:people {points:2} [HEART]
+- Honestly, I'm not sure :: Not sure? That's honest. Maybe you'll find out on the way. {points:1} [DOTS]
+
+? tools_favorite
+Q: If you could only keep one tool forever, which would it be?
+- My pickaxe :: The pickaxe. Of course. Can't get anywhere without digging. {points:1} [NOTE]
+- My sword :: Your sword. Practical, but I hope you need it less and less.  {points:1} [DOTS]
+- My fishing rod :: A fishing rod! Peace, patience and supper all in one. @likes:fishing {points:1} [HEART]
+- A bed :: A bed? Ha! Is that a tool? I suppose it is. The best one. {points:1} [NOTE]
+
+? lucky_number
+Q: Do you have a lucky number? I'm collecting them.
+- Seven :: Seven! Like the days of our week. Lucky indeed. {points:1} [NOTE]
+- Sixty-four :: Sixty-four! A full stack. Very satisfying number. @number:64 {points:1} [SPARKLE]
+- Thirteen :: Thirteen? Bold. Most people think that's unlucky. You like to be different. {points:1} [QUESTION]
+
+? color_favorite
+Q: What's your favorite color? I'm painting something and I need inspiration.
+- Blue, like the sky :: Blue! Calm and clear. I'll use a lot of it. @color:blue {points:1} [NOTE]
+- Green, like the grass :: Green! Like the hills around {village}. Lovely. @color:green {points:1} [NOTE]
+- Red, like redstone :: Red! Bold. Like a poppy, or a warning sign. @color:red {points:1} [EXCLAIM]
+- Purple, like amethyst :: Purple! Royal and mysterious. I knew you had good taste. @color:purple {points:1} [SPARKLE]
+
+? first_village
+Q: Is {village} the first village you've ever visited?
+- The very first :: The first? Then we'd better make a good impression! Welcome, properly. {points:2} [HEART]
+- One of many :: One of many. I hope we're one of your favorites. {points:1} [NOTE]
+- My favorite one :: Your favorite? Oh, I'm going to tell everyone you said that. @fond:village {points:2} [BLUSH]
+
+? pet_name
+Q: If you tamed a wolf tomorrow, what would you call it?
+- Biscuit :: Biscuit! Adorable. Every wolf deserves a snack name. @pet:biscuit {points:1} [HEART]
+- Shadow :: Shadow. Very mysterious. Very cool. {points:1} [NOTE]
+- Sir Barks-a-Lot :: Sir Barks-a-Lot! That's the best name I've ever heard. I'm laughing. @pet:sir {points:1} [NOTE]
+- Wolf :: Just "Wolf"? Practical. Very practical. A little sad. {points:1} [DOTS]
+
+? build_dream
+Q: If you could build anything at all, what would it be?
+- A castle in the clouds :: A castle in the clouds! You'd need a lot of scaffolding. And courage. @dream:castle {points:1} [SPARKLE]
+- A cozy cottage :: A cozy cottage. Simple, warm and yours. That's the best dream there is. @dream:cottage {points:1} [HEART]
+- A giant farm :: A giant farm! You'd feed the whole world. @dream:farm {points:1} [NOTE]
+- A redstone machine :: A redstone machine! What would it do? Never mind, I wouldn't understand it. @dream:redstone {points:1} [IDEA]
+
+? music_taste
+Q: Do you like music? The bard's always looking for requests.
+- I love a good jig :: A jig! Tell the bard. The tavern floor could use the exercise. @likes:music {points:1} [NOTE]
+- Something slow and sad :: Slow and sad. Sometimes those are the songs that help most. {points:1} [DOTS]
+- I only like note blocks :: Note blocks! You and the redstone folk. Beep boop. {points:1} [NOTE]
+
+? morning_drink
+Q: How do you start your mornings? Coffee? Cider? Water from the well?
+- Coffee, strong :: Strong coffee! The tavern's tap pours a good mug. Bring your own. @drink:coffee {points:1} [NOTE]
+- Cider, warm :: Warm cider in the morning? You're a bit wild, aren't you? I like it. @drink:cider {points:1} [NOTE]
+- Milk, cold :: Cold milk! Good for the bones, they say. And for curing bad potions. @drink:milk {points:1} [NOTE]
+- Whatever's nearest :: Whatever's nearest. A true adventurer. {points:1} [DOTS]
+
+? brave_or_careful
+Q: Would you say you're brave or careful?
+- Brave :: Brave. I could tell. Just don't be brave and foolish at the same time. @trait:brave {points:1} [EXCLAIM]
+- Careful :: Careful. Good. The careful ones come home. @trait:careful {points:1} [NOTE]
+- Both, depending :: Both! Brave when it counts, careful when it doesn't. That's wisdom. {points:1} [IDEA]
+
+? collect_anything
+Q: Do you collect anything? I have a box of interesting buttons.
+- Music discs :: Music discs! Creepers drop them, I hear. Only when skeletons shoot them. Strange world. @collects:discs {points:1} [EXCLAIM]
+- Flowers :: Flowers! Press them in a book and they'll last forever. @collects:flowers {points:1} [HEART]
+- Ores and gems :: Ores and gems. A treasure hunter. I'd love to see your collection. @collects:gems {points:1} [SPARKLE]
+- Friends :: Friends! Well, you've got one more now. Me. @collects:friends {points:2} [HEART]
+
+? best_memory
+Q: What's the best day you've ever had? I like to collect those too.
+- The day I found diamonds :: Diamonds! I'd have screamed. Did you scream? You screamed. {points:1} [EXCLAIM]
+- The first night I survived :: Your first night! I remember mine. Hiding in a hole in a hill, waiting for dawn. {points:1} [DOTS]
+- A quiet day here :: A quiet day here? In {village}? That makes me so happy. @fond:village {points:2} [HEART]
+
+? sleep_where
+Q: Where do you sleep when you're on the road?
+- In a bed I carry :: A bed in your pack? Very sensible. Phantoms hate people who sleep. @sleeps:bed {points:1} [NOTE]
+- Under the stars :: Under the stars! Romantic. Also full of spiders. @sleeps:stars {points:1} [SPARKLE]
+- I don't sleep much :: You don't sleep much? Please do. The phantoms will come for you. {points:1} [SWEAT]
+
+? mining_or_building
+Q: Are you more of a miner or a builder?
+- Miner, deep down :: A miner! You'd love the old mineshafts. Rails and cobwebs everywhere. @trait:miner {points:1} [NOTE]
+- Builder, up high :: A builder! The carpenter would love to talk shop with you. @trait:builder {points:1} [IDEA]
+- Explorer, far away :: An explorer! Never staying put long enough to dig or build. I understand. @trait:explorer {points:1} [SPARKLE]
+- Farmer, honestly :: A farmer at heart! The best kind of person. Don't tell the miners I said so. @trait:farmer {points:1} [HEART]
+
+? hardest_lesson
+Q: What's the hardest lesson the world's taught you?
+- Never dig straight down :: Never dig straight down. My grandfather said the same thing, and he learned it the hard way. {points:1} [SWEAT]
+- Always carry a bed :: Always carry a bed. Wise. The night comes for everyone. {points:1} [NOTE]
+- Don't trust gravel :: Gravel! Falling on your head when you least expect it. Treacherous stuff. {points:1} [EXCLAIM]
+- Kindness is worth it :: Kindness is worth it. That's a lesson I hope everyone learns. {points:2} [HEART]
+
+? companion_type
+Q: When you travel, do you like company, or do you go alone?
+- Alone, mostly :: Alone. Peaceful, but lonely. You can always take a friend from {village}, you know. @travels:alone {points:1} [DOTS]
+- With a wolf :: With a wolf! A loyal friend who never complains. Lovely. @travels:wolf {points:1} [HEART]
+- With friends :: With friends. Adventures are better shared. @travels:friends {points:1} [NOTE]
+
+? enchantment_pick
+Q: If you could put any enchantment on yourself, which would it be?
+- Mending :: Mending! Heal as you learn. That's beautiful, actually. @enchant:mending {points:1} [SPARKLE]
+- Feather Falling :: Feather Falling. Very sensible for someone who climbs things. {points:1} [NOTE]
+- Fortune :: Fortune! Double everything. Greedy, but honest. {points:1} [NOTE]
+- Unbreaking :: Unbreaking. I like that. Being hard to break is a good thing to want. @enchant:unbreaking {points:1} [HEART]
+
+? fear_of_dark
+Q: Can I ask something silly? Are you ever afraid of the dark?
+- Sometimes, yes :: Me too. Thank you for saying so. It makes me feel less silly. {points:2} [HEART]
+- Never :: Never? I envy you. I keep a candle lit all night. {points:1} [DOTS]
+- Only without a torch :: Only without a torch. Fair. Torches make everything braver. {points:1} [NOTE]
+
+? keep_journal
+Q: Do you keep a journal of your adventures?
+- Every single day :: Every day! I'd love to read it someday. Only the parts you'd let me. @writes:journal {points:1} [IDEA]
+- I keep it in my head :: In your head. Then I hope your head has a very good memory. {points:1} [DOTS]
+- I draw maps instead :: Maps instead of words. A cartographer's soul. {points:1} [NOTE]
+
+? birthday
+Q: When's your birthday? I keep a list so nobody's ever forgotten.
+- I don't know :: You don't know? Then let's say it's Market Day. Every Market Day. More cake that way. @birthday:market {points:2} [HEART]
+- Today, actually :: Today?! Happy birthday! Why didn't you say? I'll tell everyone. @birthday:today {points:2} [SPARKLE]
+- I don't celebrate it :: You don't celebrate? Everyone deserves one day that's just theirs. Think about it. {points:1} [DOTS]
+
+? village_change
+Q: If you could change one thing about {village}, what would it be?
+- More lanterns at night :: More lanterns. You're right, the paths get very dark. I'll mention it at the next meeting. @idea:lanterns {points:1} [IDEA]
+- A bigger tavern :: A bigger tavern! Everyone would agree with that. Especially the bard. @idea:tavern {points:1} [NOTE]
+- Nothing. It's perfect. :: Nothing? Oh, that's lovely to hear. It's not perfect, but it's ours. @fond:village {points:2} [HEART]
+- A wall, for safety :: A wall. Sensible. The guards have been saying the same thing. @idea:wall {points:1} [NOTE]
+
+? secret_talent
+Q: Do you have a secret talent? Everyone has one.
+- I can tame anything :: Anything? Even a llama? Even a grumpy one? I'm impressed. {points:1} [EXCLAIM]
+- I can cook :: You can cook! Why didn't you say? You must come to supper and show me. @talent:cooking {points:1} [HEART]
+- I can't think of one :: Nonsense. Your talent is turning up when people need you. I've seen it. {points:2} [HEART]
+
+? best_season
+Q: Which time of year do you love most?
+- Spring blossoms :: Spring! Everything new and green and full of bees. @season:spring {points:1} [SPARKLE]
+- Summer days :: Summer! Long days and warm nights and swimming in the river. @season:summer {points:1} [NOTE]
+- Autumn harvest :: Autumn! Pumpkins and full barns. My favorite too. @season:autumn {points:1} [HEART]
+- Winter snow :: Winter! Cozy fires and snow on everything. You're a romantic. @season:winter {points:1} [SPARKLE]
+
+? regret_question
+Q: Have you ever left somewhere you wish you'd stayed?
+- Once or twice :: Once or twice. Me too, in my own small way. Places stay with you. {points:1} [DOTS]
+- Never :: Never. You always know when it's time to go. That's a gift. {points:1} [NOTE]
+- I'll stay here a while :: Stay a while? Here? Then let me be the first to say I'm glad. {points:2} [HEART]
+
+? how_feeling
+Q: How are you, really? Not the polite answer. The real one.
+Q: I've been meaning to ask: how are you doing, truly?
+- Honestly, tired :: Tired. Then rest here a while. Nobody's going to rush you in {village}. {points:2} [DOTS]
+- Really happy today :: Really happy? Good. I'm going to borrow some of that. {points:2} [HEART]
+- A bit lonely :: A bit lonely. I'm glad you told me. You've always got a friend here. Always. {points:2} [HEART]
+- Better now :: Better now? Then my day's done its job. {points:2} [BLUSH]
+
+? recommend_place
+Q: If I ever left {village} for a day, where should I go first?
+- The river, to fish :: The river! Close, quiet, full of fish. Perfect first adventure. {points:1} [NOTE]
+- The next village over :: The next village? To spy on their bell? Ha! I'd like that. {points:1} [NOTE]
+- The tallest hill :: The tallest hill. You'll see {village} from above. It looks tiny and precious. {points:1} [SPARKLE]
+- Nowhere. Stay here. :: Nowhere? You think I should stay? ...You might be right. {points:1} [DOTS]
