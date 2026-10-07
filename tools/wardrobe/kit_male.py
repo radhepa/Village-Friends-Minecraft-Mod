@@ -86,11 +86,17 @@ def flecks(face, key: str, seed: int, density: float = .08, rows=None, cols=None
 
 
 def fur_face(face, role: str = "S", seed: int = 0, base: int = 3, rows=None):
-    """Soft fur tufts: a lit base with highlights and shaded roots."""
+    """Soft fur in short slanted locks: a lit tip and a shaded root per lock, broken up a little."""
     for y in rows if rows is not None else range(face.h):
         for x in range(face.w):
+            lock = (x + face.x0 + (y + face.y0) // 2) % 3
             r = rnd(x + face.x0, y + face.y0, seed)
-            face.set(x, y, k(role, base + 1) if r > .7 else k(role, base - 1) if r < .25 else k(role, base))
+            if lock == 0 and r < .6:
+                face.set(x, y, k(role, base + 1))
+            elif lock == 2 and r < .25:
+                face.set(x, y, k(role, base - 1))
+            else:
+                face.set(x, y, k(role, base))
 
 
 def fur(box, role: str = "S", seed: int = 0, base: int = 3):
