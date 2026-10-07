@@ -569,6 +569,8 @@ def compatible(top: Garment, bottom: Garment) -> bool:
     return True
 
 
+# Professions in the catalog that are not registered villager jobs yet.
+ARCHETYPES = {"MERCHANT", "ADVENTURER", "GUARD", "MAGE"}
 # Free (unlocked) tops must mix with at least this many free bottoms of their own gender.
 MIN_PARTNERS, MIN_ARMOR_PARTNERS = 7, 4
 
@@ -626,6 +628,11 @@ def validate_catalog(garments: dict, data: dict) -> list[str]:
                 errors.append(f"profession {job} has no {gender} outfit")
     for oid in sorted(seen_ids - worn):
         errors.append(f"outfit {oid} is not worn by any profession")
+    # Merchant, Adventurer, Guard and Mage are archetypes no villager can hold yet, so an outfit
+    # listed only under them would never appear in a village.
+    playable = {oid for job, ids in data["professions"].items() if job not in ARCHETYPES for oid in ids}
+    for oid in sorted(worn - playable):
+        errors.append(f"outfit {oid} is only worn by unregistered archetypes {sorted(ARCHETYPES)}")
     # Residents only wear tops that some template names, so every top needs one.
     in_template = {t.id for t, b in templates_for.values()}
     for top in tops:
