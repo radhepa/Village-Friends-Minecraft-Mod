@@ -71,9 +71,11 @@ public final class HairFaceGameTest implements FabricClientGameTest {
                     state.pose=Pose.SLEEPING;model.setupAnim(state);near(model.head.getChild("eye0").getChild("lid").yScale,.5F,"Sleeping eyes close");
                     state.pose=Pose.STANDING;state.deathTime=1;model.setupAnim(state);near(model.head.getChild("eye1").getChild("lowerLid").yScale,.5F,"Death pose closes eyes");
                     state.deathTime=0;model.setupAnim(state);
-                    long hairParts=model.head.getAllParts().stream().filter(p->p.visible).count();
+                    long hairParts=WardrobeLayer.shown(state).stream().filter(s->s.garment()==outfit.hair()).count();
+                    check(hairParts==outfit.hair().pieces().size(),"Every hair piece shows bareheaded");
                     state.headEquipment=new ItemStack(Items.IRON_HELMET);model.setupAnim(state);
-                    check(hairParts-model.head.getAllParts().stream().filter(p->p.visible).count()>=outfit.hair().pieces().size(),"Helmet hides every hair piece");
+                    check(WardrobeLayer.shown(state).stream().noneMatch(s->s.garment()==outfit.hair()),"Helmet hides every hair piece");
+                    check(!model.hat.visible,"Helmet hides the hair layer");
                     state.headEquipment=ItemStack.EMPTY;state.isBaby=true;new ResidentModel(true).setupAnim(state);
                 }
             });

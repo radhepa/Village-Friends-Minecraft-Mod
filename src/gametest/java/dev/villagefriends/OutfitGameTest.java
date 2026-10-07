@@ -110,14 +110,17 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 // Guard professions now arrive armored; compare an explicit unarmored pose with an armored one.
                 state.headEquipment = ItemStack.EMPTY; state.chestEquipment = ItemStack.EMPTY; state.legsEquipment = ItemStack.EMPTY;
                 var model = new ResidentModel(false); model.setupAnim(state);
-                long visible = model.root().getAllParts().stream().filter(p -> p.visible).count();
+                var bare = WardrobeLayer.shown(state);
+                int pieces = state.outfit.garments().stream().mapToInt(g -> g.pieces().size()).sum();
+                check(bare.size() <= pieces && bare.stream().allMatch(s -> state.outfit.garments().contains(s.garment())),
+                    "Only the worn garments' pieces are drawn");
                 state.headEquipment = new ItemStack(Items.IRON_HELMET); state.chestEquipment = new ItemStack(Items.IRON_CHESTPLATE);
                 state.legsEquipment = new ItemStack(Items.IRON_LEGGINGS); model.setupAnim(state);
-                check(model.root().getAllParts().stream().filter(p -> p.visible).count() < visible, "Armor hides wardrobe pieces");
+                check(WardrobeLayer.shown(state).isEmpty(), "Full armor hides every wardrobe piece");
                 check(!model.hat.visible, "Helmet hides the hair layer");
                 state.headEquipment = ItemStack.EMPTY; state.chestEquipment = ItemStack.EMPTY; state.legsEquipment = ItemStack.EMPTY;
                 model.setupAnim(state);
-                check(model.root().getAllParts().stream().filter(p -> p.visible).count() == visible, "Pieces return without armor");
+                check(WardrobeLayer.shown(state).equals(bare), "Pieces return without armor");
             }
         });
     }
@@ -233,13 +236,18 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 var renderer = (ResidentRenderer)client.getEntityRenderDispatcher().getRenderer(resident);
                 check(renderer.createRenderState(resident, 1).texture.getPath().startsWith("generated/"), "Outfits survive resource reload");
                 ResidentSkins.clear(); check(ResidentSkins.cachedCount() == 0, "Atlas cache released");
-                // Every garment's pieces live in one shared model; measure what posing it costs per resident per frame.
+                // Measure what posing one resident costs per frame: the body model plus its worn garments' pieces.
                 var state = renderer.createRenderState(resident, 1); var timed = new ResidentModel(false);
-                for (int i = 0; i < 500; i++) { state.ageInTicks = i; timed.setupAnim(state); }
+                var stack = new com.mojang.blaze3d.vertex.PoseStack(); int[] drawn = {0};
+                for (int i = 0; i < 500; i++) { state.ageInTicks = i; timed.setupAnim(state); WardrobeLayer.pose(timed, state, stack, (part, posed) -> drawn[0]++); }
+                drawn[0] = 0;
                 long start = System.nanoTime();
-                for (int i = 0; i < 4000; i++) { state.ageInTicks = i * .5F; state.walkAnimationPos = i * .1F; timed.setupAnim(state); }
-                VillageFriends.LOGGER.info("WARDROBE MODEL: {} parts, setupAnim {} us per resident", timed.allParts().size(),
-                    String.format(Locale.ROOT, "%.1f", (System.nanoTime() - start) / 4000 / 1000.0));
+                for (int i = 0; i < 4000; i++) {
+                    state.ageInTicks = i * .5F; state.walkAnimationPos = i * .1F; state.walkAnimationSpeed = .6F;
+                    timed.setupAnim(state); WardrobeLayer.pose(timed, state, stack, (part, posed) -> drawn[0]++);
+                }
+                VillageFriends.LOGGER.info("WARDROBE MODEL: {} body parts, {} pieces worn, pose {} us per resident", timed.allParts().size(),
+                    drawn[0] / 4000, String.format(Locale.ROOT, "%.1f", (System.nanoTime() - start) / 4000 / 1000.0));
             });
             // Let the client/server test phases settle after reload before disconnecting the integrated server.
             context.waitTicks(40);
