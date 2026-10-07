@@ -1,3 +1,37 @@
+# Men's and women's wardrobe verification (2.11.0)
+
+Verified October 6, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `python tools/wardrobe/wardrobe.py` compiled all 490 pieces with no errors:
+  - men: 80 hairstyles, 120 tops and 120 bottoms;
+  - women: 50 hairstyles, 60 tops and 60 bottoms.
+- The compiler also checks the new rules:
+  - gender declared on every piece;
+  - locked sets that name each other;
+  - every top in a template, and no template worn only by unregistered archetypes;
+  - every profession dressed for both sets;
+  - at least seven partners per free top.
+- Release build passed with 55 unit tests, no failures or errors, and no gameplay fixtures in the release JAR. `WardrobeTest` checks:
+  - per-set counts and set-only hair, tops and bottoms;
+  - locked sets pairing only with their partner;
+  - mixing coverage: 9,849 of 10,201 men's and 2,665 of 2,704 women's free pairs;
+  - every top reachable through a profession, every hairstyle worn, and hair kept across job changes;
+  - palette lock under all ten palettes, including the new denim role.
+- The full `runClientGameTest` gameplay suite passed: guard spawn eggs, guards, guard progression, animation, structures, Phase 2 villages, foundation, gameplay, roadmap (2,000 textures), community (2,400 textures), wardrobe and hair/eyes.
+- `-PoutfitsOnly` passed inside Minecraft:
+  - all 180 outfit templates are dressed by real professions in their own set;
+  - palette lock holds on every baked atlas texel;
+  - full armor hides every wardrobe piece, and the pieces return without it;
+  - cache release and resource reload work.
+- A first run found two women's outfits listed only under the unregistered Merchant/Mage archetypes. They now have real jobs, and the compiler rejects such outfits.
+- Rendering performance:
+  - **Before:** baking every garment's pieces into the resident model gave 4,391 parts, and posing them took 67 µs per resident, twice per frame.
+  - **After:** the model is now 33 body parts. `WardrobeLayer` draws only the about 35 worn pieces, which took 8.1 µs per resident in the focused run and 40 µs in the busier full-suite run.
+  - Gallery, in-world and mid-stride screenshots show the pieces in place.
+- `-PhairFacesOnly` passed for all 130 hairstyles on six complexions. `-PanimationsOnly` passed.
+- `-PresidentSample` dressed five random men and five random women with real professions, each wearing only their own set; evidence is in `build/resident-sample/`.
+- Evidence logs: `build/outfits-2.11*.log`, `build/hairfaces-2.11.log`, `build/animations-2.11.log` and `build/full-suite-2.11.log`. Screenshots: `build/run/clientGameTest/screenshots/` and `build/wardrobe-preview/`.
+
 # Guard spawn egg verification (2.10.1)
 
 Verified October 5, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
