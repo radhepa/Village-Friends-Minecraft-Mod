@@ -54,6 +54,7 @@ public final class HairFaceGameTest implements FabricClientGameTest {
                             check(baked.getPixel(FaceDetails.CHIN_U,0)==FaceDetails.shadow(base.getPixel(12,15)),"Chin 10% skin shade");
                         } catch (Exception e) { throw new AssertionError(e); }
                     }
+                    ResidentSkins.clear(); // six atlases per style; release them before the next of many styles
                     state.attention=1;state.eyeLookX=.28F;state.eyeLookY=.12F;state.pose=Pose.STANDING;state.deathTime=0;
                     for (float age=0;age<200;age+=.25F) {
                         state.ageInTicks=age;model.setupAnim(state);

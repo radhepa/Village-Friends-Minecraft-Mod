@@ -23,28 +23,29 @@ public final class OutfitGameTest implements FabricClientGameTest {
     private static final Set<String> VANILLA_JOBS = Set.of("none", "nitwit", "armorer", "butcher", "cartographer", "cleric", "farmer",
         "fisherman", "fletcher", "leatherworker", "librarian", "mason", "shepherd", "toolsmith", "weaponsmith");
     private static void check(boolean ok, String message) { if (!ok) throw new AssertionError(message); }
-    private static String nice(String id) {
-        var words = id.toLowerCase(Locale.ROOT).split("_");
-        var out = new StringBuilder();
-        for (var w : words) out.append(out.isEmpty() ? "" : " ").append(Character.toUpperCase(w.charAt(0))).append(w.substring(1));
-        return out.toString();
-    }
     private static ResourceKey<VillagerProfession> registryKey(Profession job) {
         String name = job.name().toLowerCase(Locale.ROOT);
         if (VillageProfessions.JOBS.contains(name)) return VillageProfessions.key(name);
         if (VANILLA_JOBS.contains(name)) return ResourceKey.create(Registries.VILLAGER_PROFESSION, Identifier.withDefaultNamespace(name));
         return null;
     }
+    /** The resident gender a template dresses: its own set's (unisex templates show on men). */
+    static Gender gender(Wardrobe.OutfitTemplate template) {
+        return template.top().fit() == Garment.Fit.FEMALE ? Gender.FEMALE : Gender.MALE;
+    }
+    static String setName(Gender gender) { return gender == Gender.FEMALE ? "Women's wardrobe" : "Men's wardrobe"; }
     /** A real, registered profession that wears this template, preferring jobs where it comes first. */
     private static Profession sceneJob(Wardrobe.OutfitTemplate template) {
-        for (int rank = 0; rank < 10; rank++) for (var job : Profession.values()) {
-            var list = Wardrobe.templates(job);
-            if (registryKey(job) != null && list.size() > rank && list.get(rank) == template) return job;
+        Profession best = null; int bestRank = Integer.MAX_VALUE;
+        for (var job : Profession.values()) {
+            int rank = Wardrobe.templates(job, gender(template)).indexOf(template);
+            if (registryKey(job) != null && rank >= 0 && rank < bestRank) { best = job; bestRank = rank; }
         }
-        throw new AssertionError("No registered profession wears " + template.id());
+        if (best == null) throw new AssertionError("No registered profession wears " + template.id());
+        return best;
     }
     private static Profession jobFor(Wardrobe.OutfitTemplate template) {
-        for (var job : Profession.values()) if (Wardrobe.templates(job).contains(template)) return job;
+        for (var job : Profession.values()) if (Wardrobe.templates(job, gender(template)).contains(template)) return job;
         return Profession.NONE;
     }
     private static void gallery(ClientGameTestContext c, int villager, List<OutfitPreviewScreen.Cell> cells, int columns,
@@ -61,11 +62,11 @@ public final class OutfitGameTest implements FabricClientGameTest {
             var list = new ArrayList<Integer>(); var level = world.getConnection().getServerLevel();
             for (int index = 0; index < templates.size(); index++) {
                 var template = templates.get(index); int n = offset + index;
-                var job = sceneJob(template); var palette = palettes[n % palettes.length];
-                var wantHair = Wardrobe.HAIR.get(n % Wardrobe.HAIR.size());
+                var job = sceneJob(template); var palette = palettes[n % palettes.length]; var gender = gender(template);
+                var hairs = Wardrobe.hair(gender); var wantHair = hairs.get(n % hairs.size());
                 long seed = -1;
-                for (long s = 0; s < 2_000_000 && seed < 0; s++) {
-                    var o = new ResidentLook(n % 6, Gender.MALE, palette, s).outfit(job);
+                for (long s = 0; s < 4_000_000 && seed < 0; s++) {
+                    var o = new ResidentLook(n % 6, gender, palette, s).outfit(job);
                     if (o.top() == template.top() && o.bottom() == template.bottom() && o.hair() == wantHair) seed = s;
                 }
                 check(seed >= 0, "Scene seed for " + template.id());
@@ -76,7 +77,7 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 resident.setPos(origin[0] + (column - 2) * 1.5 - .4 + row * .8, origin[1], origin[2] + 4.4 + row * 1.9);
                 resident.setYRot(180); resident.yBodyRot = resident.yHeadRot = 180;
                 resident.setVillagerData(resident.getVillagerData().withProfession(server.registryAccess(), registryKey(job)));
-                String recipe = new ResidentLook(n % 6, Gender.MALE, palette, seed).recipe();
+                String recipe = new ResidentLook(n % 6, gender, palette, seed).recipe();
                 VillageFriends.target(resident).setAttached(VillageFriends.PROFILE, ResidentProfile.generate(resident.getUUID(), recipe));
                 level.addFreshEntity(resident);
                 list.add(resident.getId());
@@ -156,13 +157,15 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 var cells = new ArrayList<OutfitPreviewScreen.Cell>();
                 for (int i = page * PAGE; i < Math.min(templates.size(), (page + 1) * PAGE); i++) {
                     var t = templates.get(i); var palette = MasterPalettes.get(palettes[i % palettes.length]);
-                    var outfit = new Outfit(Gender.MALE, jobFor(t), palette, Wardrobe.HAIR.get(i % Wardrobe.HAIR.size()),
+                    var hairs = Wardrobe.hair(gender(t));
+                    var outfit = new Outfit(gender(t), jobFor(t), palette, hairs.get(i % hairs.size()),
                         Wardrobe.HAIR_COLORS.get((i * 3) % Wardrobe.HAIR_COLORS.size()), t.top(), t.bottom(), t);
-                    cells.add(new OutfitPreviewScreen.Cell(outfit, i % 6, t.name(), palette.name()));
+                    cells.add(new OutfitPreviewScreen.Cell(outfit, i % 6, t.name(), palette.name() + (t.locked() ? "  /  set" : "")));
                 }
                 String n = String.valueOf(page + 1);
+                var sets = cells.stream().map(c -> setName(c.outfit().gender())).distinct().toList();
                 gallery(context, model, cells, 5, OutfitPreviewScreen.View.FRONT, "VILLAGE FRIENDS  /  OUTFITS " + (page * PAGE + 1) + "-" + (page * PAGE + cells.size()),
-                    page == 0 ? "Profession outfits  /  palette-locked pixel art and 3D pieces" : "Casual medieval  /  palette-locked pixel art and 3D pieces",
+                    String.join(" + ", sets) + "  /  palette-locked pixel art and 3D pieces",
                     "village-friends-outfits-" + n);
                 gallery(context, model, cells, 5, OutfitPreviewScreen.View.BACK, "VILLAGE FRIENDS  /  OUTFITS " + (page * PAGE + 1) + "-" + (page * PAGE + cells.size()) + "  (BACK)",
                     "Every garment is painted all the way around", "village-friends-outfits-" + n + "-back");
@@ -170,40 +173,43 @@ public final class OutfitGameTest implements FabricClientGameTest {
                     "Skirts, aprons and cloaks follow the leading leg", "village-friends-outfits-" + n + "-walking");
             }
 
-            // 2. Every hairstyle, ten per page, in natural colors.
-            var base = templates.get(Math.min(10, templates.size() - 1));
+            // 2. Every hairstyle, ten per page, in natural colors, over its own set's everyday outfit.
             for (int page = 0; page * PAGE < Wardrobe.HAIR.size(); page++) {
                 var cells = new ArrayList<OutfitPreviewScreen.Cell>();
                 for (int i = page * PAGE; i < Math.min(Wardrobe.HAIR.size(), (page + 1) * PAGE); i++) {
                     var hair = Wardrobe.HAIR.get(i); var color = Wardrobe.HAIR_COLORS.get(i % Wardrobe.HAIR_COLORS.size());
-                    var outfit = new Outfit(Gender.MALE, Profession.NONE, MasterPalettes.get(palettes[i % palettes.length]), hair, color,
+                    var gender = hair.fit() == Garment.Fit.FEMALE ? Gender.FEMALE : Gender.MALE;
+                    var base = Wardrobe.templates(Profession.NONE, gender).getFirst();
+                    var outfit = new Outfit(gender, Profession.NONE, MasterPalettes.get(palettes[i % palettes.length]), hair, color,
                         base.top(), base.bottom(), base);
-                    cells.add(new OutfitPreviewScreen.Cell(outfit, (i + 2) % 6, nice(hair.id().substring(4)), color.name()));
+                    cells.add(new OutfitPreviewScreen.Cell(outfit, (i + 2) % 6, hair.name(), color.name()));
                 }
                 String n = String.valueOf(page + 1);
+                var sets = cells.stream().map(c -> setName(c.outfit().gender())).distinct().toList();
                 gallery(context, model, cells, 5, OutfitPreviewScreen.View.HEAD, "VILLAGE FRIENDS  /  HAIRSTYLES " + (page * PAGE + 1) + "-" + (page * PAGE + cells.size()),
-                    page == 0 ? "Volumetric hair  /  independent natural hair colors" : "Anime-inspired  /  pointed bangs, sidelocks and sheen",
+                    String.join(" + ", sets) + "  /  anime-inspired, independent natural hair colors",
                     "village-friends-hairstyles-" + n);
                 gallery(context, model, cells, 5, OutfitPreviewScreen.View.HEAD_BACK, "VILLAGE FRIENDS  /  HAIRSTYLES " + (page * PAGE + 1) + "-" + (page * PAGE + cells.size()) + "  (BACK)",
                     "Layered locks, tails, braids, knots and buns", "village-friends-hairstyles-" + n + "-back");
             }
 
-            // 3. Mix and match: any top with any compatible bottom, any palette, any hair.
+            // 3. Mix and match within each set: any free top with any compatible bottom, any palette, any hair.
             var random = new SplittableRandom(20261005L);
-            for (int page = 1; page <= 2; page++) {
+            int mixPage = 0;
+            for (var gender : List.of(Gender.MALE, Gender.FEMALE)) for (int page = 1; page <= 2; page++) {
+                var tops = Wardrobe.tops(gender).stream().filter(t -> !t.locked()).toList(); var hairs = Wardrobe.hair(gender);
+                if (tops.isEmpty()) continue;
                 var mixCells = new ArrayList<OutfitPreviewScreen.Cell>();
                 for (int i = 0; i < 10; i++) {
-                    var top = Wardrobe.TOPS.get(random.nextInt(Wardrobe.TOPS.size()));
-                    var bottoms = Wardrobe.bottomsFor(top); var bottom = bottoms.get(random.nextInt(bottoms.size()));
+                    var top = tops.get(random.nextInt(tops.size()));
+                    var bottoms = Wardrobe.bottomsFor(top, gender); var bottom = bottoms.get(random.nextInt(bottoms.size()));
                     var palette = MasterPalettes.get(palettes[random.nextInt(palettes.length)]);
-                    var outfit = new Outfit(Gender.MALE, Profession.NONE, palette, Wardrobe.HAIR.get(random.nextInt(Wardrobe.HAIR.size())),
+                    var outfit = new Outfit(gender, Profession.NONE, palette, hairs.get(random.nextInt(hairs.size())),
                         Wardrobe.HAIR_COLORS.get(random.nextInt(Wardrobe.HAIR_COLORS.size())), top, bottom, templates.getFirst());
-                    var topName = templates.stream().filter(t -> t.top() == top).findFirst().map(Wardrobe.OutfitTemplate::name).orElse(top.id());
-                    var bottomName = templates.stream().filter(t -> t.bottom() == bottom).findFirst().map(Wardrobe.OutfitTemplate::name).orElse(bottom.id());
-                    mixCells.add(new OutfitPreviewScreen.Cell(outfit, random.nextInt(6), topName + " top", bottomName + " bottom / " + palette.name()));
+                    mixCells.add(new OutfitPreviewScreen.Cell(outfit, random.nextInt(6), top.name(), bottom.name(), palette.name()));
                 }
-                gallery(context, model, mixCells, 5, OutfitPreviewScreen.View.FRONT, "VILLAGE FRIENDS  /  MIX AND MATCH",
-                    "Tops and bottoms combine freely within one palette (armor and hose have rules)", "village-friends-mix-and-match-" + page);
+                gallery(context, model, mixCells, 5, OutfitPreviewScreen.View.FRONT, "VILLAGE FRIENDS  /  MIX AND MATCH  /  " + setName(gender).toUpperCase(Locale.ROOT),
+                    "Tops and bottoms combine freely within one palette (armor, hose and locked sets have rules)", "village-friends-mix-and-match-" + ++mixPage);
             }
 
             // 4. One outfit across all ten master palettes.
@@ -211,7 +217,8 @@ public final class OutfitGameTest implements FabricClientGameTest {
             var showcase = templates.get(Math.min(16, templates.size() - 1));
             for (int i = 0; i < palettes.length; i++) {
                 var palette = MasterPalettes.get(palettes[i]);
-                var outfit = new Outfit(Gender.MALE, jobFor(showcase), palette, Wardrobe.HAIR.get((i + 12) % Wardrobe.HAIR.size()),
+                var hairs = Wardrobe.hair(gender(showcase));
+                var outfit = new Outfit(gender(showcase), jobFor(showcase), palette, hairs.get((i + 12) % hairs.size()),
                     Wardrobe.HAIR_COLORS.get((i + 5) % Wardrobe.HAIR_COLORS.size()), showcase.top(), showcase.bottom(), showcase);
                 paletteCells.add(new OutfitPreviewScreen.Cell(outfit, i % 6, palette.name(), ""));
             }
@@ -226,6 +233,13 @@ public final class OutfitGameTest implements FabricClientGameTest {
                 var renderer = (ResidentRenderer)client.getEntityRenderDispatcher().getRenderer(resident);
                 check(renderer.createRenderState(resident, 1).texture.getPath().startsWith("generated/"), "Outfits survive resource reload");
                 ResidentSkins.clear(); check(ResidentSkins.cachedCount() == 0, "Atlas cache released");
+                // Every garment's pieces live in one shared model; measure what posing it costs per resident per frame.
+                var state = renderer.createRenderState(resident, 1); var timed = new ResidentModel(false);
+                for (int i = 0; i < 500; i++) { state.ageInTicks = i; timed.setupAnim(state); }
+                long start = System.nanoTime();
+                for (int i = 0; i < 4000; i++) { state.ageInTicks = i * .5F; state.walkAnimationPos = i * .1F; timed.setupAnim(state); }
+                VillageFriends.LOGGER.info("WARDROBE MODEL: {} parts, setupAnim {} us per resident", timed.allParts().size(),
+                    String.format(Locale.ROOT, "%.1f", (System.nanoTime() - start) / 4000 / 1000.0));
             });
             // Let the client/server test phases settle after reload before disconnecting the integrated server.
             context.waitTicks(40);
