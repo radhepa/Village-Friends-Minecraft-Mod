@@ -11,7 +11,11 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
+import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 
 public final class FriendshipScreen extends Screen {
@@ -20,6 +24,11 @@ public final class FriendshipScreen extends Screen {
     private static final int PAPER = 0xFFF6E9CE;
     private static final int HEART = 0xFFC56565;
     private static final int SAGE = 0xFF62734E;
+    // Dialogue types out like a farming-sim textbox: a wordless blip every other letter, a pop as each line starts.
+    private static final SoundEvent BLIP = SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath("villagefriends", "ui.blip"));
+    private static final SoundEvent POP = SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath("villagefriends", "ui.pop"));
+    private static final float CHARS_PER_SECOND = 36F;
+    private static final int SPACE_KEY = 32; // GLFW_KEY_SPACE
     private FriendshipPayload data;
     private final List<Button> actions = new ArrayList<>();
     private boolean waiting;
@@ -28,6 +37,15 @@ public final class FriendshipScreen extends Screen {
     private int dialogueScroll;
     private String lastDialogue;
     private String lastAction;
+    private List<String> typeLines = List.of();
+    private int[] lineStarts = new int[0];
+    private String typeKey = "";
+    private String typeFlat = "";
+    private int shown;
+    private float typeBudget, typePause;
+    private int sinceBlip;
+    private long lastFrameNanos;
+    private boolean popPending = true;
 
     public FriendshipScreen(FriendshipPayload data) {
         super(Component.literal("Village Friends - " + data.name()));
@@ -38,7 +56,7 @@ public final class FriendshipScreen extends Screen {
     public boolean matches(FriendshipPayload next) { return data.villagerId().equals(next.villagerId()); }
     public int residentId() { return data.entityId(); }
     public void update(FriendshipPayload next) {
-        if (!lastDialogue.equals(next.dialogue())) { dialogueScroll = 0; lastDialogue = next.dialogue(); }
+        if (!lastDialogue.equals(next.dialogue())) { dialogueScroll = 0; lastDialogue = next.dialogue(); restartTyping(); }
         react(lastAction, data, next);
         lastAction = null;
         data = next;
@@ -46,6 +64,53 @@ public final class FriendshipScreen extends Screen {
         waitTicks = 0;
         rebuildWidgets();
         triggerImmediateNarration(false);
+    }
+    private void restartTyping() { shown = 0; typeBudget = 0; typePause = 0; sinceBlip = 0; popPending = true; }
+    private boolean typing() { return shown < typeFlat.length(); }
+    /** True while the resident's line is still typing out: they gesture as they speak, then listen. */
+    public boolean speaking() { return typing() || typeFlat.isEmpty(); }
+    // Space finishes the line at once.
+    @Override public boolean keyPressed(KeyEvent event) {
+        if (event.key() == SPACE_KEY && typing()) {
+            shown = typeFlat.length();
+            playUi(POP, 1.25F, 0.35F);
+            return true;
+        }
+        return super.keyPressed(event);
+    }
+    private void playUi(SoundEvent sound, float pitch, float volume) {
+        if (minecraft != null) minecraft.getSoundManager().play(SimpleSoundInstance.forUI(sound, pitch, volume));
+    }
+    private void layoutTyping(int wrapWidth) {
+        String key = data.dialogue() + '|' + wrapWidth;
+        if (key.equals(typeKey)) return;
+        typeKey = key;
+        typeLines = font.splitIgnoringLanguage(Component.literal(data.dialogue()), wrapWidth).stream().map(t -> t.getString()).toList();
+        lineStarts = new int[typeLines.size()];
+        int total = 0;
+        for (int i = 0; i < lineStarts.length; i++) { lineStarts[i] = total; total += typeLines.get(i).length(); }
+        typeFlat = String.join("", typeLines);
+        shown = Math.min(shown, total);
+    }
+    private void advanceTyping() {
+        long now = System.nanoTime();
+        float dt = lastFrameNanos == 0 ? 0F : Math.min(0.1F, (now - lastFrameNanos) / 1.0E9F);
+        lastFrameNanos = now;
+        if (popPending) { popPending = false; playUi(POP, 0.95F + (float)Math.random() * 0.15F, 0.5F); }
+        if (!typing()) return;
+        typeBudget += dt;
+        float cost = 1F / CHARS_PER_SECOND;
+        while (typeBudget > 0 && typing()) {
+            if (typePause > 0) { float used = Math.min(typePause, typeBudget); typePause -= used; typeBudget -= used; continue; }
+            if (typeBudget < cost) break;
+            typeBudget -= cost;
+            char c = typeFlat.charAt(shown++);
+            if (!Character.isWhitespace(c) && ++sinceBlip >= 2) {
+                sinceBlip = 0;
+                playUi(BLIP, 0.85F + Character.toLowerCase(c) % 11 * 0.045F, 0.3F);
+            }
+            if (".!?".indexOf(c) >= 0) typePause = 0.18F; else if (",;:".indexOf(c) >= 0) typePause = 0.08F;
+        }
     }
     @Override protected void init() {
         actions.clear();
@@ -169,13 +234,22 @@ public final class FriendshipScreen extends Screen {
         if(mouseX>=textLeft&&mouseX<textLeft+textWidth&&mouseY>=top+15&&mouseY<top+42)
             g.setTooltipForNextFrame(Component.literal(data.name()+" / "+data.profession()+" / "+data.personality()+" / "+data.trust()),mouseX,mouseY);
         if(nameLines.size()==1)g.text(font, font.plainSubstrByWidth(data.profession() + " / " + data.personality() + " / " + data.trust(), textWidth), textLeft, top + 31, MUTED, false);
-        var lines = font.split(Component.literal(data.dialogue()), textWidth - 8);
+        layoutTyping(textWidth - 8);
+        advanceTyping();
+        var lines = typeLines;
         int visibleLines = Math.max(1, (topicsY - 6 - (top + 65)) / 11);
+        if (typing()) {
+            int lastLine = 0;
+            for (int i = 0; i < lineStarts.length; i++) if (lineStarts[i] < shown) lastLine = i;
+            dialogueScroll = Math.max(dialogueScroll, lastLine - visibleLines + 1);
+        }
         dialogueScroll = Math.clamp(dialogueScroll, 0, Math.max(0, lines.size() - visibleLines));
         g.enableScissor(textLeft, top + 64, textLeft + textWidth, topicsY - 5);
         int y = top + 65;
         for (int line = dialogueScroll; line < Math.min(lines.size(), dialogueScroll + visibleLines); line++) {
-            g.text(font, lines.get(line), textLeft, y, INK, false);
+            int visibleChars = Math.min(lines.get(line).length(), shown - lineStarts[line]);
+            if (visibleChars <= 0) break;
+            g.text(font, lines.get(line).substring(0, visibleChars), textLeft, y, INK, false);
             y += 11;
         }
         g.disableScissor();

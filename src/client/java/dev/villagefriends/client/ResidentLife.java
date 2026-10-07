@@ -48,7 +48,7 @@ public final class ResidentLife {
     private final boolean leftHanded;
     private final Playing activity = new Playing(), reaction = new Playing();
     private int stillTicks, nextActivity, lastHurt, greetAt = -1, greetCooldown, partnerId = -1, partnerCheck, lastTick = -1;
-    private boolean unhappy, greeted, talking;
+    private boolean unhappy, greeted, talking, speaking;
     private String recent, previous;
 
     private ResidentLife(Villager villager) {
@@ -120,13 +120,19 @@ public final class ResidentLife {
         if (sad && !unhappy) react(v, "decline");
         unhappy = sad;
 
-        talking = client.gui.screen() instanceof FriendshipScreen screen && screen.residentId() == v.getId();
+        var screen = client.gui.screen() instanceof FriendshipScreen open && open.residentId() == v.getId() ? open : null;
+        talking = screen != null;
+        boolean wasSpeaking = speaking;
+        speaking = talking && screen.speaking();
+        // A new line starts: stop listening and start talking right away.
+        if (speaking && !wasSpeaking && activity.active() && !"talk".equals(activity.trigger)) { activity.fade(now); nextActivity = now + 2; }
         noticePlayer(v, client, now);
         if (activity.active() && moving && !talking) activity.fade(now);
         if (activity.active() || reaction.active() || now < nextActivity) return;
 
         String trigger = null;
-        if (talking) trigger = "talk";
+        // In conversation they gesture while their line types out, then listen while you choose a reply.
+        if (talking) trigger = speaking ? "talk" : "chat_listen";
         else if (stillTicks > 20) {
             int partner = partner(v, now);
             trigger = partner >= 0 && random.nextFloat() < .8F ? (speaker(v, partner) ? "chat_speak" : "chat_listen") : "idle";
@@ -205,7 +211,7 @@ public final class ResidentLife {
         };
     }
     private int pause(Villager v, String trigger) {
-        if ("talk".equals(trigger)) return 4 + random.nextInt(14);
+        if ("talk".equals(trigger) || talking) return 4 + random.nextInt(14);
         if (trigger != null && trigger.startsWith("chat")) return 6 + random.nextInt(22);
         return ResidentBehavior.pause(ResidentBehavior.energy(personality(v), v.isBaby()), random.nextFloat());
     }

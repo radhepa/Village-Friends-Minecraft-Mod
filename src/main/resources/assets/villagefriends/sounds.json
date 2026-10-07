@@ -1,0 +1,8 @@
+{
+  "ui.blip": {
+    "sounds": ["villagefriends:ui/blip_a", "villagefriends:ui/blip_e", "villagefriends:ui/blip_i", "villagefriends:ui/blip_o", "villagefriends:ui/blip_u"]
+  },
+  "ui.pop": {
+    "sounds": ["villagefriends:ui/pop"]
+  }
+}

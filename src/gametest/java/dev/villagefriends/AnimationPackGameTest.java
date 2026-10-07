@@ -164,7 +164,10 @@ public final class AnimationPackGameTest implements FabricClientGameTest {
         c.runOnClient(client -> { var v = client.level.getEntity(hostId); client.gameMode.interact(client.player, v, new EntityHitResult(v), InteractionHand.MAIN_HAND); });
         c.waitForScreen(FriendshipScreen.class);
         await(c, hostId, reacting("greet"), 20, "Opening a conversation greets the player");
-        await(c, hostId, life -> life.activity() != null && life.activity().trigger().equals("talk"), 140, "Residents gesture while you talk");
+        await(c, hostId, life -> life.activity() != null && life.activity().trigger().equals("chat_listen"), 240, "Residents listen once their line has typed out");
+        c.clickScreenButton("Tell me about work");
+        await(c, hostId, life -> life.activity() != null && life.activity().trigger().equals("talk"), 140, "Residents gesture while their reply types out");
+        c.waitTicks(40);
         c.clickScreenButton("Share a joke");
         await(c, hostId, reacting("laugh"), 60, "A joke gets a laugh");
         c.takeScreenshot("village-friends-animation-portrait-laugh");
