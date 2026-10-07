@@ -89,6 +89,9 @@ public final class Routine {
     }
 
     public static final int MARKET_EVERY = 7;
+    private static final String[] WEEK = {"Moonday", "Bellday", "Hearthday", "Wellday", "Lanternday", "Hayday", "Market Day"};
+    /** The village week: six working days and Market Day. */
+    public static String weekday(long day) { return WEEK[(int) Math.floorMod(day, 7L)]; }
     public static boolean marketDay(long day) { return Math.floorMod(day, MARKET_EVERY) == MARKET_EVERY - 1; }
     /** Clock time in ticks: {@code at(8, 30)} is 8:30 in the morning. */
     public static int at(int hour, int minute) { return Math.floorMod((hour - 6) * 1000 + minute * 1000 / 60, 24000); }

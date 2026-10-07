@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/archery_target"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/archery_target"
+ }
 }

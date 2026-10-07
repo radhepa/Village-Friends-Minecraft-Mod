@@ -1,20 +1,20 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "villagefriends:block/tap_stand",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "villagefriends:block/tap_stand",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "villagefriends:block/tap_stand",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "villagefriends:block/tap_stand",
-      "y": 270
-    }
+ "variants": {
+  "facing=north": {
+   "model": "villagefriends:block/tap_stand",
+   "y": 0
+  },
+  "facing=east": {
+   "model": "villagefriends:block/tap_stand",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "villagefriends:block/tap_stand",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "villagefriends:block/tap_stand",
+   "y": 270
   }
+ }
 }

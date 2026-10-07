@@ -1,20 +1,148 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "villagefriends:block/easel_canvas",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "villagefriends:block/easel_canvas",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "villagefriends:block/easel_canvas",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "villagefriends:block/easel_canvas",
-      "y": 270
-    }
+ "variants": {
+  "art=0,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art0",
+   "y": 0
+  },
+  "art=1,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art1",
+   "y": 0
+  },
+  "art=2,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art2",
+   "y": 0
+  },
+  "art=3,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art3",
+   "y": 0
+  },
+  "art=4,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art4",
+   "y": 0
+  },
+  "art=5,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art5",
+   "y": 0
+  },
+  "art=6,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art6",
+   "y": 0
+  },
+  "art=7,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art7",
+   "y": 0
+  },
+  "art=8,facing=north": {
+   "model": "villagefriends:block/easel_canvas_art8",
+   "y": 0
+  },
+  "art=0,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art0",
+   "y": 90
+  },
+  "art=1,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art1",
+   "y": 90
+  },
+  "art=2,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art2",
+   "y": 90
+  },
+  "art=3,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art3",
+   "y": 90
+  },
+  "art=4,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art4",
+   "y": 90
+  },
+  "art=5,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art5",
+   "y": 90
+  },
+  "art=6,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art6",
+   "y": 90
+  },
+  "art=7,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art7",
+   "y": 90
+  },
+  "art=8,facing=east": {
+   "model": "villagefriends:block/easel_canvas_art8",
+   "y": 90
+  },
+  "art=0,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art0",
+   "y": 180
+  },
+  "art=1,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art1",
+   "y": 180
+  },
+  "art=2,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art2",
+   "y": 180
+  },
+  "art=3,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art3",
+   "y": 180
+  },
+  "art=4,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art4",
+   "y": 180
+  },
+  "art=5,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art5",
+   "y": 180
+  },
+  "art=6,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art6",
+   "y": 180
+  },
+  "art=7,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art7",
+   "y": 180
+  },
+  "art=8,facing=south": {
+   "model": "villagefriends:block/easel_canvas_art8",
+   "y": 180
+  },
+  "art=0,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art0",
+   "y": 270
+  },
+  "art=1,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art1",
+   "y": 270
+  },
+  "art=2,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art2",
+   "y": 270
+  },
+  "art=3,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art3",
+   "y": 270
+  },
+  "art=4,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art4",
+   "y": 270
+  },
+  "art=5,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art5",
+   "y": 270
+  },
+  "art=6,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art6",
+   "y": 270
+  },
+  "art=7,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art7",
+   "y": 270
+  },
+  "art=8,facing=west": {
+   "model": "villagefriends:block/easel_canvas_art8",
+   "y": 270
   }
+ }
 }

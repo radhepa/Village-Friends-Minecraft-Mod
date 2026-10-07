@@ -54,9 +54,10 @@ def boxes(text):
 source = (JAVA / 'VillageBlocks.java').read_text(encoding='utf-8')
 bench = boxes(re.search(r'double\[\]\[\] bench = (.*?);', source).group(1))
 blocks = {}
-for match in re.finditer(r'add\("([^"]+)", (true|false), (new double\[\]\[\]\{.*?\}|bench)(?:, FoundationEntityBlock.Kind.([A-Z_]+))?\);', source):
-    name, stone, geometry, entity = match.groups()
-    blocks[name] = {'boxes': bench if geometry == 'bench' else boxes(geometry), 'stone': stone == 'true', 'block_entity': entity is not None}
+for match in re.finditer(r'(add|station)\("([^"]+)", (true|false), (new double\[\]\[\]\{.*?\}|bench)(?:, FoundationEntityBlock.Kind.([A-Z_]+))?\);', source):
+    kind, name, stone, geometry, entity = match.groups()
+    blocks[name] = {'boxes': bench if geometry == 'bench' else boxes(geometry), 'stone': stone == 'true',
+                    'block_entity': entity is not None or kind == 'station', 'workstation': kind == 'station'}
 assert len(blocks) == 17, 'Update the generator when the registry changes.'
 jobs = re.findall(r'"([a-z_]+)"', re.search(r'JOBS = List.of\((.*?)\);', (JAVA / 'VillageProfessions.java').read_text()).group(1))
 workstations = {
@@ -64,7 +65,7 @@ workstations = {
     for match in re.findall(r'case "([a-z_]+)" -> List.of\((.*?)\);', (JAVA / 'VillageProfessions.java').read_text())
 }
 supplies = ['smelling_salts', 'revival_tonic', 'bandage_wrap', 'empty_coffee_mug']
-meals = ['steaming_coffee_mug', 'fresh_village_bread', 'hearty_stew']
+meals = ['steaming_coffee_mug', 'mug_of_cider', 'fresh_village_bread', 'hearty_stew']
 tools = ['broom', 'paintbrush', 'lute', 'carpenter_hammer', 'field_journal']
 wearables = ['rain_cloak', 'hooded_poncho'] + [job + '_uniform' for job in jobs]
 items = supplies + meals + tools + wearables
@@ -114,14 +115,16 @@ def block_art(name, stone):
 
 
 for name, entry in blocks.items():
+    language[f'block.{NS}.{name}'] = name.replace('_', ' ').title()
+    save(f'data/{NS}/loot_table/blocks/{name}.json', {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
+    if entry['workstation']:
+        continue  # Workstation models and art come from tools/workstations/workstations.py.
     png(f'assets/{NS}/textures/block/{name}.png', block_art(name, entry['stone']))
     model = {'parent': 'minecraft:block/block', 'textures': {'surface': f'{NS}:block/{name}', 'side': 'minecraft:block/polished_andesite' if entry['stone'] else 'minecraft:block/stripped_oak_log', 'particle': f'{NS}:block/{name}'},
              'elements': [{'from': b[:3], 'to': b[3:], 'faces': {face: {'texture': '#surface' if face in ('north','south','up') else '#side', 'uv': [0,0,16,16]} for face in ('down','up','north','south','east','west')}} for b in entry['boxes']]}
     save(f'assets/{NS}/models/block/{name}.json', model)
     save(f'assets/{NS}/blockstates/{name}.json', {'variants': {f'facing={direction}': {'model': f'{NS}:block/{name}', 'y': rotation} for direction,rotation in [('north',0),('east',90),('south',180),('west',270)]}})
     save(f'assets/{NS}/items/{name}.json', {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{name}'}})
-    save(f'data/{NS}/loot_table/blocks/{name}.json', {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
-    language[f'block.{NS}.{name}'] = name.replace('_', ' ').title()
 tag('data/minecraft/tags/block/mineable/axe.json', [f'{NS}:{name}' for name,b in blocks.items() if not b['stone']])
 tag('data/minecraft/tags/block/mineable/pickaxe.json', [f'{NS}:{name}' for name,b in blocks.items() if b['stone']])
 tag('data/minecraft/tags/point_of_interest_type/acquirable_job_site.json', [f'{NS}:{job}' for job in jobs])
@@ -135,7 +138,7 @@ for name in items:
     png(f'assets/{NS}/textures/item/{name}.png', icon(name))
     save(f'assets/{NS}/models/item/{name}.json', {'parent': 'minecraft:item/handheld' if name in tools[:4] else 'minecraft:item/generated', 'textures': {'layer0': f'{NS}:item/{name}'}})
     save(f'assets/{NS}/items/{name}.json', {'model': {'type': 'minecraft:model', 'model': f'{NS}:item/{name}'}})
-    language[f'item.{NS}.{name}'] = name.replace('_',' ').title()
+    language[f'item.{NS}.{name}'] = name.replace('_',' ').title().replace(' Of ', ' of ')
 for name in wearables:
     image = Image.new('RGBA',(64,32))
     d = ImageDraw.Draw(image)
@@ -214,7 +217,7 @@ save(f'data/{NS}/villagefriends/foundation-catalog.json', {'phase':1,'profession
 sheet = Image.new('RGB',(8*100,6*74),'#EBE4D2');draw=ImageDraw.Draw(sheet)
 for n,name in enumerate(list(blocks)+items):
     x,y=(n%8)*100,(n//8)*74
-    part=block_art(name,blocks[name]['stone']) if name in blocks else icon(name)
+    part=(block_art(name,blocks[name]['stone']) if name in blocks else icon(name))
     sheet.paste(part.resize((40,40),Image.Resampling.NEAREST),(x+30,y+2),part.resize((40,40),Image.Resampling.NEAREST))
     title=name.replace('_',' ').title()
     for line,text in enumerate([title[:16],title[16:]]):draw.text((x+2,y+44+line*12),text,fill='#443D35')

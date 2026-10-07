@@ -273,14 +273,14 @@ public final class Workstations {
         }
         if (tailorable(stack)) {
             if (!stack.isDamaged()) return tell(p, "That's in fine shape already.");
+            // Each length of string mends a quarter; a click mends it as far as your string goes.
             int step = Math.max(1, stack.getMaxDamage() / 4), used = 0;
-            do {
-                if (!creative && !useString(p)) break;
+            while (stack.isDamaged() && used < 4 && (creative || useString(p))) {
                 stack.setDamageValue(Math.max(0, stack.getDamageValue() - step)); used++;
-            } while (p.isShiftKeyDown() && stack.isDamaged());
+            }
             if (used == 0) return tell(p, "You need string to mend that. Wool unravels into string here.");
             level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, .8F, 1.4F);
-            return tell(p, "Mended" + (stack.isDamaged() ? " a quarter" : "") + " with " + used + " string." + (stack.isDamaged() && !p.isShiftKeyDown() ? " Sneak to mend it all at once." : ""));
+            return tell(p, (stack.isDamaged() ? "Partly mended" : "Good as new") + ", with " + used + " string.");
         }
         if (!stack.isEmpty()) return InteractionResult.TRY_WITH_EMPTY_HAND;
         return tell(p, "Mend leather, bows, rods and elytra here with string. Wool unravels into string.");
@@ -304,7 +304,7 @@ public final class Workstations {
                 e.stock = 0; e.changed();
                 return tell(p, text);
             }
-            return tell(p, "Saw logs into half again as many planks, and planks into sticks. The carpenter leaves offcuts here.");
+            return tell(p, "Saw logs into half again as many planks, and planks into sticks, sixteen at a time. The carpenter leaves offcuts here.");
         }
         ItemStack result;
         if (stack.is(ItemTags.PLANKS)) result = new ItemStack(Items.STICK, 3);
@@ -315,7 +315,8 @@ public final class Workstations {
             var crafted = recipe.get().value().assemble(input);
             result = crafted.copyWithCount(sawn(crafted.getCount()));
         }
-        int times = p.isShiftKeyDown() ? stack.getCount() : 1;
+        // A click saws up to a stack of sixteen.
+        int times = Math.min(16, stack.getCount());
         var particle = new ItemParticleOption(ParticleTypes.ITEM, stack.getItem());
         for (int i = 0; i < times; i++) give(p, result.copy());
         take(stack, times, creative);

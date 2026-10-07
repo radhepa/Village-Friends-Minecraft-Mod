@@ -71,6 +71,7 @@ public final class VillageFriends implements ModInitializer {
         VillageMarkerBlock.register();
         VillageFoundation.register();
         NarrativeContent.register();
+        dev.villagefriends.talk.DialogueBank.register();
         ResidentNames.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
@@ -197,7 +198,9 @@ public final class VillageFriends implements ModInitializer {
             }
             var old = state(v, player); long today = day(v.level()); var next = old.talk(today); save(v, player, next);
             saveBond(v, player, bond(v, player).visit(today));
-            String reply = NarrativeEngine.conversation(v, player, a);
+            // Sometimes "How's your day?" turns into a question for you, or an offer to help.
+            var question = a.equals("chat") && !v.isBaby() && !bond(v, player).has("hurt") ? TalkWorld.ask(v, player) : null;
+            String reply = question != null ? TalkWorld.askText(v, player, question) : NarrativeEngine.conversation(v, player, a);
             celebrate(v, old, next);
             String status = old.canTalk(today) ? "+4 friendship - thanks for visiting!" : "Happy to keep talking. Friendship rewards return tomorrow.";
             if (old.canTalk(today) && friendLevel >= FriendshipLevels.DAILY_GIFT && !v.isBaby()) {
@@ -205,6 +208,7 @@ public final class VillageFriends implements ModInitializer {
                 giveItem(player, gift, 2);
                 status = "+4 friendship. They slipped you " + itemName(gift) + ", just because.";
             }
+            if (question != null) { show(player, v, "question", reply, question.offer() ? status : "They're asking you. " + status, false, question.offer() ? Emote.IDEA : Emote.QUESTION); return; }
             show(player, v, "talk", reply, status, false, NarrativeEngine.mood(v, player, a)); return;
         }
         if (a.equals("ledger")) { VillageLedger.open(player, v); return; }

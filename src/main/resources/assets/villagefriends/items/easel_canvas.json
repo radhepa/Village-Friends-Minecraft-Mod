@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/easel_canvas"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/easel_canvas_art5"
+ }
 }

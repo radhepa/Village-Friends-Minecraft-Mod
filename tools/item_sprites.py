@@ -345,6 +345,7 @@ def item_sprite(name):
     if name == 'revival_tonic':return raster(TONIC,dict(GLASS,s='558558',S='91BA7F',d='39634C',a='294E43'))
     if name == 'bandage_wrap':return raster(BANDAGE,LINEN)
     if name == 'steaming_coffee_mug':return raster(MUG,CERAMIC)
+    if name == 'mug_of_cider':return raster(MUG,dict(CERAMIC,c='E8AE4A',b='C27F24'))
     if name == 'empty_coffee_mug':
         pattern=MUG.splitlines()
         pattern[2]='................';pattern[3]='................';pattern[4]='................'
