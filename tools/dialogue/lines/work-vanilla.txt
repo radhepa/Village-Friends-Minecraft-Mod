@@ -1,0 +1,643 @@
+# "Tell me about work" for the vanilla professions, nitwits and residents without a job.
+
+## work.farmer
+The wheat's coming in tall this year. You can hear it whisper when the wind blows.
+Carrots, potatoes, beetroots. Same rows every season, and every season it still feels like a small miracle.
+The composter's my best friend. Rotten food in, bone meal out. Magic, really.
+I talk to my crops. Don't laugh. The pumpkins grow bigger when I do.
+Crows are the bane of my life. And rabbits. And the occasional cow.
+I water the fields first thing, before the sun gets fierce.
+A good farmer watches the sky more than the soil.
+Farmland dries out if you're not careful. Keep water within four blocks. That's the trick.
+Harvest week is the busiest week of the year. Everyone pitches in, even the nitwit. Sort of.
+I've got calluses on my calluses.
+Melons are tricky. They need space to spread. Like teenagers.
+I swap my extra wheat for emeralds with anyone who'll have it.
+Don't trample the crops! Jumping on farmland turns it right back to dirt.
+I plant by the moon. My grandmother did. Can't hurt.
+The beetroot this year is so red it looks embarrassed.
+Bees love the flowers along my fields. More bees, more crops.
+I rotate my fields every year. Keeps the soil happy.
+Nothing tastes better than a carrot you grew yourself.
+I bake my own bread from my own wheat. Field to table.
+Pumpkins! I grew one so big last year the children carved a house in it.
+A rainy week does more for my fields than a month of watering.
+The golem watches over the fields at night. It's a fine scarecrow, honestly.
+My hoe's been in the family for three generations. New handle, new blade, same hoe.
+I grew sweet berries along the fence to keep the foxes out. Now the foxes come for the berries.
+Every seed's a promise. Not every promise is kept, but most are.
+I leave the edge of each field wild for the bees.
+Sugar cane by the river's doing well. The baker wants it all for cakes.
+Farming's honest work. The soil gives back what you put in.
+Some mornings the mist sits on the fields like a blanket. Beautiful.
+A good harvest means a good winter. Simple as that.
+I once grew a potato shaped exactly like the cleric. We don't talk about it.
+Up before the sun, done after it. That's farming.
+The children help me pick the carrots. Half of them get eaten on the spot.
+I've got dirt under my nails that's older than you.
+The farmers in the desert grow cactus and sugar cane. Brave people.
+
+## work.librarian
+Every book on my shelves has been read at least twice. Mostly by me.
+I've been copying an old atlas. My hand's cramping, but the maps are beautiful.
+Someone returned a book with a pressed flower inside. That's the best kind of late fee.
+I have enchanted books for trade, if you're interested. Efficiency, mending, all sorts.
+The lectern's where I do my best thinking. And my worst handwriting.
+Quiet, please. Oh, it's just me here. Never mind. Hello!
+Books are doors. Every one opens somewhere new.
+I'm cataloguing the village's history. It's surprisingly dramatic for such a small place.
+Paper's getting expensive. Sugar cane's in short supply. Tell the farmer.
+I read to the children every evening. Their favorite is the one about the brave chicken.
+A bookshelf around an enchanting table makes the magic stronger. Fifteen is the number.
+I've been trying to read an old book in a language I don't know. Mostly I stare at the pictures.
+Ink stains on my fingers, dust on my sleeves. Proper librarian.
+Every word written down is a word that lives longer than the writer.
+I traded for a book about the End. I read it twice and slept with a lamp on.
+The best stories aren't on my shelves yet. They're still out there being lived.
+Mending's the most precious book I have. Repairs your gear as you gather experience.
+I rearrange the shelves by subject, then by author, then by color. It never sticks.
+Books need care. Keep them dry, keep them out of the sun, keep them away from goats.
+I'm writing my own book. It's about a librarian. Very autobiographical.
+If you find any old books on your travels, bring them to me. I'll pay well.
+Someone asked me for a book on how to be patient. It's on loan. Indefinitely.
+Silence isn't empty. It's full of stories waiting to be read.
+I learned to read before I could walk. I'm still a slow walker.
+My lectern creaks when I lean on it. It's like it's listening.
+The village archives go back over a hundred years. Births, weddings, the great cabbage blight.
+I'll read anything. Recipes, maps, tombstones. Words are words.
+I've lent my favorite book to {neighbor}. I check on it every day.
+Knowledge is the only treasure that grows when you give it away.
+Enchantments are tricky. Some stack, some don't. I keep notes.
+The candle burns down while I read. I never notice until it's out.
+I've got a book on every animal in the region. Even the ones I've never seen.
+Paper, ink and quiet. That's all a librarian needs.
+Reading by the fire on a rainy evening. Is there anything better?
+I once fell asleep reading and woke up with the book's words printed backwards on my cheek.
+
+## work.fisherman
+The river's been generous this week. Cod, salmon, and one very angry pufferfish.
+Patience is the whole trick. The fish come to those who wait.
+The barrel by my door's always full of something wriggling.
+Never eat a pufferfish. I learned that one the hard way.
+Early mornings are best. The fish are hungry and the water's still.
+I've caught all sorts. Boots, bowls, a saddle once. Sometimes even fish.
+Rainy days are good fishing days. The fish don't mind getting wet.
+I tie my own lures. This one's got a feather and a bit of string and a lot of hope.
+The best fishing spot's my secret. I'd tell you, but then I'd have to move.
+Nothing beats a fresh-caught salmon cooked over a campfire.
+A good fisherman knows the water like his own hand.
+My boat leaks a bit. I bail as I row. Good exercise.
+I've been trying to catch the legendary big cod of the lake. I've seen its shadow. Huge.
+I trade fish for emeralds. Cooked or raw, your choice.
+Tropical fish are pretty, but you can't eat them. Well, you can. Don't.
+The river teaches you to be still. Not many places do that anymore.
+I fish with an enchanted rod. Lure and Luck of the Sea. Best investment I ever made.
+Got a nibble! ...No. Just the wind.
+I mend my nets every evening. Holes appear like magic. Bad magic.
+Some days I catch nothing and still come home happy.
+The drowned in the deep water frighten me. I stay near the shore after dark.
+I can tell the weather by the way the fish bite.
+Squid ink's useful. Turns paper black. The librarian buys it all.
+I caught a fish so big once, it pulled me halfway into the lake. Nobody believes me.
+The bobber goes under and your heart goes up. Every time.
+My grandmother fished this same river. Same rock, same patience.
+Salmon jump upstream in the spring. A sight to see.
+Never fish where the guardians swim. That's not fishing, that's foolishness.
+I sell my catch at the market. The cats follow me there. All of them.
+A quiet morning, a still lake, a full basket. Perfect day.
+I've caught enough cod to feed the whole village. And I have. Twice.
+Kelp grows wild in the shallows. Dried, it's a decent snack. An acquired taste.
+The water tells you things if you listen. Mostly it says "be patient."
+I don't need conversation. I have the river.
+The best part of fishing isn't the fish. It's the waiting.
+
+## work.fletcher
+A good arrow needs three things: a straight shaft, sharp flint and true feathers.
+I've been fletching all morning. Feathers everywhere. I look like a chicken.
+Bows need care. Wax the string, check the limbs, never leave them strung overnight.
+I make arrows for the guards and for hunters. Same arrows, different hopes.
+The chickens give me feathers, the gravel gives me flint, the trees give me sticks. Teamwork.
+My fletching table is the most organized surface in {village}.
+I've been experimenting with tipped arrows. Potion-dipped. Slowness, poison, healing even.
+A crossbow's slower but hits harder. Some swear by them. I'm a bow person.
+Every arrow I make goes somewhere. I hope mostly to targets.
+I can tell a good feather by the way it bends.
+Spectral arrows glow and show where your target hides. Clever things.
+The archers come to me first. I keep their quivers full.
+I trade arrows by the stack. Sixty-four's a proper bundle.
+Straight shafts are hard to find. I go through a lot of sticks.
+I tested a new bow this morning. It sings when you loose. Beautiful sound.
+The trick to a good arrow is balance. Front and back, like a good conversation.
+The pillagers use crossbows. Poorly made ones, if you ask me.
+Flint knapping is noisy work. My neighbors have learned to love it. Or ignore it.
+Some people think fletching is simple. Those people have never fletched.
+I made a bow for the children. It shoots arrows about four feet. Very safe.
+I've got feathers in my hair, in my bed, in my soup.
+An archer's only as good as the arrows they shoot. I take that seriously.
+I watch the guards practice. I can tell which of my arrows fly truest.
+I traded for a box of parrot feathers once. Beautiful arrows. Terrible flight.
+I sand every shaft by hand. Smooth as river stone.
+Good work takes time. Fast work takes twice the time to fix.
+A fletching table, a sharp knife and a quiet afternoon. Bliss.
+I sell to hunters, guards and the odd adventurer. Odd ones especially.
+Feathers from white chickens make the prettiest arrows.
+I can fletch a stack in an hour. Well, a nice slow hour.
+There's poetry in a well-made arrow. I'm not a poet, but I see it.
+The best compliment I ever got was an archer who never missed with my arrows.
+I keep my flint dry and my feathers sorted. That's half the job.
+I tried to make an arrow out of a carrot once. Don't ask.
+Bowstrings come from spiders. I don't think about that too much.
+
+## work.cleric
+The brewing stand's been bubbling all day. Healing potions, mostly.
+I help where I can. A little prayer, a little potion, a lot of listening.
+Redstone dust, glowstone, lapis. Strange things, holy things.
+People come to me with their worries. I try to send them away lighter.
+I've been brewing a potion of regeneration. It smells like a wet dog, but it works.
+The church is quiet in the mornings. That's when I do my best work.
+Rotten flesh, rabbit feet, bottles of experience. My trades are an odd lot.
+I light candles for anyone who's sick. There are a lot of candles this week.
+Healing isn't only about potions. Sometimes it's about a kind word.
+I've been trying to brew something that cures loneliness. No luck yet.
+Ender pearls are mysterious. Hold one and you can feel it humming.
+I bless the fields every spring. The farmers like it. The crops don't seem to mind.
+A potion of fire resistance saved an adventurer once. They brought me a cake. Lovely cake.
+I don't preach. I listen. That's the job, mostly.
+Nether wart's the base of almost everything. Strange that the best medicine grows in such a terrible place.
+I've been studying the old texts. Some of them talk about the dragon at the end of the world.
+The bell rings and I remember why I do this. To keep people together.
+Golden carrots in a brew make you see in the dark. Fascinating.
+I sit with the dying and I sit with the newborn. Both are holy.
+People think clerics are serious. I laugh more than you'd think.
+I keep the church open day and night. Nobody should be turned away.
+Splash potions are useful in a hurry. Just don't throw them at your friends.
+A potion of weakness and a golden apple can cure a zombie villager. Remember that.
+Lapis lazuli is lovely stuff. Blue as a summer sky.
+Every potion's a promise. I try to keep mine.
+The incense makes me sneeze. Holy sneezes, I tell myself.
+Faith's a kind of hope with good posture.
+I trade experience bottles. Bottled wisdom, I call it. Very marketable.
+The stained glass catches the morning light just so. Worth waking for.
+I'm not a miracle worker. But sometimes I get close.
+I've been teaching the children their letters on the church steps.
+A cleric's door is never locked. That's an old rule.
+I brew late into the night. The bubbling helps me think.
+Turtle shells make a strange potion. Slow but strong. Like me.
+Kindness heals more than any potion. But I'll make you a potion too.
+
+## work.cartographer
+I'm drawing a new map of the region. There's a forest to the north I've never charted.
+Every map I make is a little out of date by the time the ink dries.
+I trade explorer maps. Ocean monuments, woodland mansions. Very exciting stuff.
+My cartography table's covered in ink and compass needles.
+An empty corner of a map is the most exciting thing in the world.
+I measure distances in steps. My legs are very tired.
+I've charted every river within a day's walk. They all end up at the sea eventually.
+Banners make good landmarks. I mark them on every map I draw.
+A locator map shows you where you are. A good one shows you where you should be.
+I copied a map for a traveler yesterday. They're off to find a shipwreck.
+Glass panes on a map lock it so nobody can change it. Very useful for finished work.
+Did you know you can zoom a map out with more paper? Bigger world, same desk.
+The world keeps going, past every edge I draw.
+I dream in contour lines.
+I once drew a map so detailed you could see individual sheep.
+My favorite tool is a good compass. It never lies about north.
+I'd love to map the Nether, but it's so hot the ink boils.
+Maps are just stories about places.
+I traded a map to a woodland mansion once. The buyer never came back to tell me about it.
+Every village has a map of itself. Ours is on my wall. It's got a coffee stain shaped like a lake.
+Rivers are the hardest to draw. They never sit still.
+Some cartographers make maps for kings. I make them for neighbors. Better customers.
+I keep spare maps for anyone who gets lost. People get lost a lot.
+The coastline's hard. Every tide changes it a little.
+I mark dangerous places in red. There's a lot of red to the east.
+A good map can save your life. A bad one can end it.
+I'm teaching my apprentice to read a compass. She keeps pointing at lunch.
+I've been to the edges of three maps. Each one felt like a door.
+Maps make the world smaller and bigger at the same time.
+Cartography is careful work. One slip and a mountain becomes a lake.
+I'd love to see a map of the whole world someday. It would need a very big wall.
+I trade banner patterns too. Colors and crests for every taste.
+I've been mapping the caves under the village. There are more than I thought.
+The best maps are the ones made by people who walked every step.
+When I finish a map, I always sign it with a tiny drawing of the bell.
+
+## work.armorer
+The forge is hot and the hammer's heavy. Perfect day for armor.
+Iron chestplates, chainmail, the odd diamond helmet. I make it all.
+Good armor's the difference between a bad day and a last day.
+I've been working on a chainmail shirt. Thousands of little rings. My fingers ache.
+The blast furnace smelts ore twice as fast. I'd never go back.
+I hammer out dents in the guards' armor every week.
+Diamond armor's the best, if you can afford it. Most can't.
+I keep the forge burning all day. The heat gets into your bones.
+A breastplate should fit like it was made for you. Because it was.
+I've got burns on my arms from the forge. Badges of honor.
+Shields deflect arrows and creeper blasts. Don't leave home without one.
+Every piece I make goes out the door with a little bit of me.
+I'm experimenting with armor trims. Fancy patterns. Very fashionable.
+The anvil sings when the metal's right. Ring, ring, ring.
+I sell helmets cheap to adventurers. Head injuries are bad for business.
+Netherite's the stuff of legend. I've only seen it once. It was black as midnight.
+Armor's heavy, but it's lighter than regret.
+I measure everyone who walks by. Habit. You'd be a medium, by the way.
+Rust is my nemesis. Oil everything. Every week.
+I made a tiny helmet for the baker's cat. It was a joke. The cat took it seriously.
+The guards trust me with their lives. I don't take that lightly.
+Leather's for beginners, iron's for workers, diamond's for heroes.
+I've been at the forge since dawn. My arms are made of noodles now.
+Hammer, tongs, bellows, anvil. My whole world.
+A good armorer listens to the metal. Sounds silly. It isn't.
+I've seen armor that's survived a hundred battles. Mine will survive a thousand. Hopefully.
+The best armor is the kind you never have to test.
+I trade armor for coal and iron. The forge eats a lot.
+Quench in water and the steel hardens. Quench too fast and it cracks. Like people.
+I'm proud of every rivet. Every single one.
+If you come back with dents, I'll fix them. If you don't come back, I'll be sad.
+The bellows breathe and the coals glow. Like the forge is alive.
+I've got a scar for every year at the anvil.
+Chainmail's lighter than plate and quieter too. Good for sneaking. Not that I sneak.
+Smithing tables let you upgrade diamond to netherite. If you're very lucky and very rich.
+
+## work.toolsmith
+A good pickaxe is a miner's best friend. Mine are the best friends you'll find.
+I've been forging hoes for the farmers. Harvest season's coming.
+Iron tools for most, diamond for the brave, stone for the frugal.
+Keep your tools dry and your edges sharp and they'll outlive you.
+The smithing table's where I do the clever bits.
+I made an axe so sharp it split a log just by looking at it. Nearly.
+Efficiency enchantments make a pickaxe sing through stone.
+A dull shovel's a crime. I won't stand for it.
+I've got a soft spot for golden tools. They break fast, but they're so shiny.
+Every tool tells a story. That nick on the handle? A creeper, I bet.
+I sharpen the village's tools for free on Hearthday. Bring yours.
+The grindstone takes enchantments off if you need a fresh start. Useful.
+A well-balanced hammer is a joy to hold.
+I trade tools for iron and coal. Simple business.
+Shears are the trickiest. Two blades that have to agree.
+I tested a new pickaxe on the hardest stone I could find. Obsidian laughed at it.
+Diamond pickaxes are the only things that mine obsidian. Remember that.
+My workshop smells of hot iron and oil. Best smell there is.
+Tools are extensions of your hands. They should feel like it.
+I fix tools the anvil way. A bit of material, a bit of experience.
+The farmers break more hoes than anyone. They're rough with them.
+I'm working on a fishing rod for the fisherman. Even toolsmiths dabble.
+Flint and steel's the oldest tool there is. Still the most useful.
+A cheap tool costs you twice. Buy good, buy once.
+I've made tools for every resident in {village}. Some of them twice.
+I keep a spare pickaxe by every door. Old habit.
+Unbreaking's the most underrated enchantment.
+I tempered a blade wrong this morning. It's now a very expensive paperweight.
+My apprentice made his first shovel today. It's lopsided. I'm very proud.
+The forge never sleeps. Well, I do. The forge stays warm.
+Copper tools? Someone asked me for copper tools. I told them to ask the lightning rod.
+Respect your tools and they'll respect you.
+I hear the miners singing in the ravine. Using my pickaxes, I hope.
+I'd rather fix something than throw it away.
+Steel and patience. That's the whole trade.
+
+## work.weaponsmith
+I make swords and axes. Mostly I hope they stay on the wall.
+The grindstone's turning all day. Edge, edge, edge.
+A sword's a responsibility. I only sell to people I trust.
+The guards need fresh blades every season. Monsters are hard on steel.
+I've been forging a sword with a curved edge. Experimental. Very pretty.
+Sharpness, Smite, Bane of Arthropods. I've seen them all on enchanted blades.
+The weight of a good sword should feel like a handshake.
+I made an axe that could cleave a shield in two. I keep it locked away.
+Bells and swords are made the same way, you know. Hot metal, hard hammer.
+I'd rather make plowshares, but villages need protecting.
+Diamond swords are rare. I've made two in my life. Both still in service.
+The trick is in the tempering. Too hard and it shatters. Too soft and it bends.
+A knight came by and said my sword saved her life. That's why I do this.
+I keep my blades oiled and wrapped. Rust is the enemy.
+Every sword has a name, if you listen. That one's called Grace.
+The forge glows red at night. Some think it's dragon breath.
+I teach the guards to care for their blades. A well-kept sword lasts years.
+Swords are for defending. Never for bullying. I tell every buyer that.
+I trade blades for coal and emeralds. The coal goes fast.
+I've been experimenting with axe heads. Heavier hits, slower swings.
+Sweeping edge lets you hit a whole crowd of zombies. Very satisfying.
+I hope one day the village won't need my work at all.
+My grandfather made swords for a king. I make them for neighbors. I prefer neighbors.
+The sound of a blade being sharpened is the sound of peace being kept.
+Fire Aspect sets enemies alight. Don't use it near hay. I learned that.
+A hilt wrapped in good leather never slips.
+I test every blade on a hay bale. The hay bales are not fans of me.
+I made a wooden sword for every child in {village}. Safer than mine.
+Maces are back in fashion, I hear. Heavy things. For falling on enemies.
+My hands know the shape of a good blade by heart.
+I sleep better knowing the guards have good steel.
+The best weapon's the one you never have to draw.
+I forged through the night once to arm the village before a raid. Never again, I hope.
+Iron, fire, hammer, water. Four things and a lifetime of practice.
+Swords hang on my wall like sleeping dogs. Let them sleep.
+
+## work.leatherworker
+Cow hide, rabbit hide, and a lot of scraping. Leatherwork's not for the faint of nose.
+I've just finished a saddle. Smooth as butter. The horses will love it.
+Leather armor's light and quiet. Good for hunters and the nervous.
+I dye my leather. Red, blue, green. The adventurers love bright colors.
+The cauldron's my best tool. Washing, dyeing, soaking.
+I made a pair of boots that'll last ten years. Guaranteed. Mostly guaranteed.
+Rabbit hide's soft enough for gloves. Rabbits disagree.
+I've got a horse armor order. Leather barding for the knight's mount.
+Bundles! I've been making bundles. Little leather bags for all your little things.
+Scaly turtle leather makes the strangest helmets.
+The tanning racks smell, but the leather's worth it.
+I stitch every seam twice. Double stitching never fails.
+A good belt's the foundation of any outfit.
+I trade leather for emeralds and flint. Flint for cutting.
+I made the cleric a book cover. Gold-tooled. Very fancy.
+Leather breathes. That's why it's better than iron for long walks.
+Everyone needs good boots. You'd be amazed how many people don't have them.
+I can tell a cow's age by its hide. Strange skill. Useful, somehow.
+I made a little leather pouch for {friend}. They keep buttons in it.
+Leather horse armor's dyeable. Purple horses. Fashion.
+My hands are tough as my hides.
+I keep my needles in a pincushion shaped like a pig. Gift from my mother.
+Waterproofing's the secret. Beeswax and patience.
+A well-made saddle is the difference between a long ride and a long walk.
+I made a tiny saddle for a pig once. The pig was very proud.
+Some leather's for armor, some's for books, some's for shoes. All of it's useful.
+I've got blisters from the awl. Nobody tells you about the awl.
+The nicest thing anyone said to me: "These boots feel like home."
+I smell like a cow. I've made my peace with it.
+Leather's warm in winter and cool in summer. Perfect material.
+I patched the farmer's apron four times this year. He's very rough on aprons.
+Every scrap gets used. Off-cuts become laces, laces become bracelets.
+I'm proud of my craft. It's old, quiet and honest.
+I've been teaching the children to braid leather cords.
+Good leather ages like a good friend. Softer and better every year.
+
+## work.mason
+Stone's patient. You have to be patient with it.
+I cut every brick in the church wall. Took me a summer.
+The stonecutter makes clean cuts. Saves me hours of chiseling.
+Terracotta, quartz, polished granite. I love all the stones.
+Mortar's half the trick. The other half's knowing where to put it.
+I've been building a new wall around the well. It's going to be lovely.
+Glazed terracotta has the prettiest patterns. Fit four together and they make a circle.
+I've got stone dust in my lungs and stone in my heart.
+Chiseled stone bricks are my favorite. A little decoration never hurt anyone.
+A good foundation's everything. Houses, friendships, villages.
+I can tell where a stone came from just by its color.
+Deepslate's tough to cut, but it makes fine tiles.
+I'm building a little bridge over the stream. Arched. Very elegant.
+The clay pits by the river are where I get my bricks. Muddy work.
+A wall should stand for a hundred years. Mine will.
+Sandstone crumbles. Granite lasts. Choose your stone wisely.
+I trade stone and pottery for clay and emeralds.
+Every brick I lay is a promise to the people inside.
+I carve little faces into stones where nobody looks. My secret signature.
+Mason's work is slow. That's the point.
+I polish andesite until it shines like water.
+The hardest part of building is waiting for the mortar to set.
+I made a fountain for the square. It's not finished. It might never be finished.
+Stone remembers. Every crack, every chip. Like an old face.
+I'm teaching the young ones to lay bricks straight. It's harder than it looks.
+Calcite's lovely and white. Rare round here.
+A good mason never rushes. A bad mason rebuilds.
+Bricks and mortar, rain and time. That's all a wall needs.
+I patched the church steps. Again. People really stomp on those steps.
+I'd like to build a tower someday. Tall enough to see three villages.
+Stone's cold to touch but it holds the warmth of the sun all night.
+I made pots for everyone's herbs. Terracotta, hand-pressed.
+Some people see rocks. I see houses waiting to happen.
+I've got stone chips in every pocket. I find them in my bed.
+The old builders used mud bricks. I'm trying their recipe. It's very muddy.
+
+## work.shepherd
+The sheep have been grazing on the east meadow. They're fat and happy.
+I've sheared six sheep today. My arms are wool. Everything's wool.
+Dyed wool's my specialty. I made a rainbow flock once. Pink one's my favorite.
+The loom clacks all day. Banners, carpets, beds. It's all wool in the end.
+Sheep are smarter than people think. Not much smarter. But a bit.
+The wolves came sniffing last night. The golem chased them off.
+Shearing doesn't hurt them. They grow it right back. Like magic.
+I count my sheep every evening. It's soothing. Also it makes me sleepy.
+Brown sheep, black sheep, white sheep. Every one's a friend.
+I made beds for half the village. Wool and wood. Simple and warm.
+Banners are fun to design. I made one with a creeper face. People hated it.
+A good shepherd knows every sheep by name. I know mine by personality.
+The lambs are adorable this year. Wobbly little things.
+Sheep eat grass and grass grows back. A good arrangement for everyone.
+I made a scarf from my own sheep's wool. It's itchy, but it's mine.
+Dyeing a sheep is easier than dyeing wool. The color stays when it regrows.
+I trade wool for emeralds and dyes. And paintings, sometimes.
+The sheep wander off if you don't watch them. Like children.
+Carpets are just very flat wool. Very comfortable flat wool.
+I named one sheep Princess. She acts like it too.
+Shears need sharpening every week. Wool's tough stuff.
+I lie in the meadow with the sheep on sunny days. They don't mind.
+I spun a whole bale of yarn this morning.
+Purple sheep are rare. You need red and blue dye. I have three.
+The loom's patterns are endless. I've only scratched the surface.
+I lost a sheep last week. Found her on the church roof. Don't ask how.
+Sheep follow you anywhere if you hold wheat. Useful trick.
+The best bed in {village} is mine. Five layers of wool.
+I sing to the flock in the evenings. They seem to like the low notes.
+My dog helps me herd. Well, he barks. The sheep do the rest.
+Winter's coming. Everyone's buying wool.
+I can tell a good sheep by its fleece. Thick, soft, clean.
+My hands smell of lanolin. Very good for the skin, apparently.
+I made a wool blanket for the golem. It didn't want it. I left it anyway.
+Shepherding's quiet work. Grass, sky, sheep, me.
+
+## work.butcher
+The smoker's been going since dawn. Smell that? Ham.
+I trade meat for coal and emeralds. Cooked meat, of course.
+Rabbit stew's my specialty. Carrots, mushrooms, potato and love.
+I've got sausages hanging from every beam. My house smells wonderful.
+A good butcher wastes nothing. Nothing at all.
+Cooked porkchops are the best food there is. Ask anyone.
+The smoker cooks twice as fast as a furnace. Food only, mind.
+I make jerky for the travelers. Lasts forever. Tastes like a boot. A tasty boot.
+Salted fish for the winter, smoked meat for the summer.
+My knives are sharp and my apron's stained. Hard work.
+Sweet berries make a lovely glaze. Don't tell anyone my secret.
+I feed the whole village on feast days. Biggest roast you've ever seen.
+Kelp dries well in the smoker. Good snack, if you're desperate.
+I'm careful with my knives. Ten fingers, still. Proud of that.
+A butcher's job is to make sure nobody goes hungry.
+I've been practicing a new stew. Mutton and beetroot. It's purple.
+The dogs follow me everywhere. Can't imagine why.
+I trade for sweet berries and coal. Coal keeps the smoker going.
+My grandmother's recipe for roast chicken has been in the family forever.
+I've got a cleaver older than my house.
+Cooked salmon with a bit of honey. You'll never eat anything else.
+Hunger's the worst enemy. Worse than zombies. I fight it every day.
+The smell of my smoker brings people from three houses away.
+I'm not just a butcher. I'm a cook, a trader, a feeder of families.
+I give the scraps to the village dogs. They're very loyal.
+Stew's best on cold nights. Sit by the fire with a bowl.
+I've been smoking meat since I was a child. It's in my blood.
+Good food makes good friends.
+I can carve a roast in thirty seconds. It's my party trick.
+Beef stew, mushroom stew, rabbit stew. I'm a stew person.
+My hands smell of smoke. Permanently.
+A full belly makes a happy village.
+I hang garlic over the door. Keeps the bats away. And the visitors.
+Feast days are my favorite. Everyone eats together.
+I make sure the guards get the best cuts. They earn it.
+
+## work.nitwit
+Work? I'm busy watching the clouds. They need someone to watch them.
+I tried a job once. Didn't take. I'm more of a free spirit.
+I'm a professional appreciator. Of sunsets, mostly. And naps.
+Everyone else works so hard. Someone has to remind them to stop and look around.
+I spent the morning lying in the meadow. Very productive meadow time.
+I'm conducting important research into how many naps fit into one day.
+People call me lazy. I call myself relaxed.
+I don't have a workstation. I have a favorite haystack.
+I help in my own way. Mostly by being cheerful.
+I'm the village's official greeter. Unofficially. Self-appointed.
+I tried farming. The carrots hated me. The feeling was mutual.
+My job is to make sure the bench by the well is comfortable. It is.
+I follow the cats around. They know all the best spots.
+I'd work, but who'd keep everyone company?
+I'm an expert in doing nothing. It's harder than it looks.
+I have many talents. I'm still discovering what they are.
+I asked the librarian for a job. She gave me a book on patience. I'm still reading it.
+I'm the only one in {village} who's never in a hurry.
+I hum. That's my contribution to society.
+Every village needs someone who stops to smell the flowers. I'm that someone.
+I tried to make bread once. The kitchen still smells of it. Not in a good way.
+Work is for people who don't know how to enjoy a sunny day.
+I guard the bench by the well. Nobody's stolen it yet.
+I'm saving my energy for something important. I don't know what yet.
+I watch everyone work and cheer them on. Very supportive.
+I can name every cloud shape there is. That's a skill.
+I'm the village's resident dreamer. It's a full-time position.
+Somebody has to taste-test the baker's pies. I volunteered.
+I collect interesting pebbles. That's a job, right?
+Busy? Me? Never. And proud of it.
+I've got a very important nap scheduled for this afternoon.
+I tried to be a librarian but I kept falling asleep on the books.
+My workstation is the sky. I'm very good at looking at it.
+The children love me. I'm the only grown-up who plays tag.
+I'm a philosopher, really. A lying-down philosopher.
+
+## work.none
+I'm between jobs at the moment. Looking for the right workstation.
+Nobody's built a workstation near me yet. I'm patient.
+I'd love to be a librarian. If someone places a lectern, I'm there.
+I help where I'm needed. Carrying things, mostly.
+Without a job I've got time to think. Too much time, maybe.
+I keep wandering past the workstations, hoping one calls my name.
+I've been helping the farmer. Unofficially. He hasn't noticed.
+A job's not everything. But it'd be nice to have one.
+I'd like to work at a sewing table. Or an easel. Something with color.
+I tried every workstation in the village. They're all taken.
+If you build a new workshop, I'm your resident. Just saying.
+I'm good with my hands. I just need something to put them to.
+Every day I check if there's a free workstation. Every day there isn't.
+I've been sweeping the square. Nobody asked. It needed sweeping.
+Some people find their calling young. I'm still listening for mine.
+I'd make a fine cook. Or a fine anything, really, given the chance.
+Without a job, the days are long. But the evenings are lovely.
+I'm learning a bit of everything while I wait.
+If a cartography table appears, I'll be there before the dust settles.
+I help the children with their lessons. That's a sort of job.
+I'm not lazy. I'm just unassigned.
+Maybe I'm meant to be an adventurer like you.
+I'd take any honest work. Even shearing. Especially shearing, actually.
+I fetch water for the old folks. Keeps me busy.
+I've been offered a job as a scarecrow. I think it was a joke.
+I keep my hands busy whittling. Maybe I'll be a carpenter.
+I spend my days walking the village. I know every stone.
+Someone told me if you put a blast furnace near me, I'll become an armorer. Fancy!
+A workstation is like a home for your hands.
+I'm ready for whatever work finds me.
+I help out at the market. Unpaid. For the gossip.
+I've been practicing my trading face. Very serious. Very honest.
+One day I'll have a workstation and a trade and a proper apron.
+I'm not worried. Work comes to those who wait. And walk past workstations a lot.
+I'd be a bard if I could carry a tune. I can't, so I'm waiting.
+
+## work.general
+Work's work. Some days it's a song, some days it's a grind.
+I like being useful. It makes the day feel full.
+Every job in the village matters. Even the small ones. Especially the small ones.
+I'm good at what I do. That's not bragging. It's just true.
+Honest work, honest pay, honest sleep.
+Whatever we do, we do it for each other here.
+Work's better when the sun's out and the bell's ringing.
+I take pride in every job, big or small.
+The village runs on all of us pulling together.
+At the end of the day, tired hands are happy hands.
+I learned my trade from someone wiser. Now I'm teaching someone else.
+A day's work done right is a good night's sleep.
+There's always more to learn, even after years at it.
+I like my job. Not every day. Most days.
+Work's how I say thank you to {village}.
+The trades keep the village alive. Emeralds keep the trades alive.
+I've had a busy week. Busy's good. Busy means people need me.
+I could do my job in my sleep. Some mornings I nearly do.
+Every workstation in {village} has a story.
+The best part of work is finishing it.
+I trade fair. Ask anyone. Well, most people.
+My hands know what to do even when my head's elsewhere.
+Good work speaks for itself. I just help it along.
+Some jobs are fun. Some are necessary. Mine's both.
+I'd rather be busy than bored.
+
+## work.on
+I'm at my station right now. Watch and you'll see how it's done.
+Work hours! Can't stop long, but I'm glad you're here.
+This is the busiest part of my day. Pull up a stool.
+I've been at it since the bell. Hands haven't stopped.
+I'm in the middle of something. Talk to me while I finish it.
+Right now? Working. Always working at this hour.
+You've caught me mid-task. Perfect timing, actually. I needed a break.
+My station's warm and my work's flowing. Good day for it.
+Watch your elbows. Work in progress.
+I'm right where I should be. At work, doing my bit.
+I've done half today's work already. The other half's waiting impatiently.
+Busy, busy. But never too busy for you.
+The workday's in full swing. Can you hear it? Everyone's hammering, sawing, stirring.
+Ask me anything about the trade. I'm in the mood to explain.
+This is my favorite part of the day. Hands busy, mind clear.
+
+## work.off
+I'm off duty now. Ask me tomorrow and you'll get the full speech.
+Work's done for today. My station's tidied and my feet are up.
+Don't make me think about work, it's my free time!
+I'll be back at it in the morning. For now, I'm just me.
+I clocked off an hour ago. Well, the bell clocked me off.
+Off-hours! I've left work at work, where it belongs.
+I think about work even when I'm not working. Is that bad?
+The station will still be there tomorrow. So will I.
+Work's finished. Now I'm just a neighbor like anyone else.
+I'm resting my hands. They've earned it.
+Tomorrow's another workday. Tonight's mine.
+I never talk shop after hours. Except to you. And {friend}.
+I put my tools away neatly. Ready for the morning.
+It's not working hours, so I'm not working. That's the rule.
+Ask me about work in the morning, when I'm fresh.
+
+## work.weather.rain
+The rain slows everything down. Wet hands, wet tools.
+Work goes on, rain or no rain.
+Rainy days are good for indoor work. I've been catching up.
+The rain gets into everything. My workbench is damp.
+I don't mind working in the rain. It keeps the flies away.
+Rain means half the village is indoors and my work's twice as quiet.
+
+## work.weather.thunder
+I stopped working when the thunder started. Not worth the risk.
+The storm's too loud to concentrate.
+Nobody works through a storm like this. Not if they're sensible.
+I covered my station and ran. It'll keep.
+
+## work.weather.snow
+Cold fingers make for slow work.
+I keep a brazier by my station in winter. Toasty.
+Snowy days, everyone wants warm things. Good for business.
+The cold makes the tools stiff. And me.
+
+## work.weather.hot
+It's too hot to work hard, so I'm working slowly.
+I wet my hat in the well every hour. Keeps my head cool.
+In this heat, I do the heavy work at dawn.
+The sun's brutal today. I've moved my station into the shade.

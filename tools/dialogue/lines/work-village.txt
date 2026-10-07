@@ -1,0 +1,555 @@
+# "Tell me about work" for the Village Friends professions, and station.<job> hints that explain each workstation.
+
+## work.knight
+I drill with the training dummy every morning. It never hits back, which is restful.
+A knight's job is mostly standing still and looking alert. The rest is moments of terror.
+I've been training the young ones with wooden swords. One of them's got real talent.
+My armor needs polishing. It always needs polishing.
+I patrol the village twice a day. Every path, every fence.
+The dummy's taken a beating today. Poor thing has a pot for a helmet and still no fear.
+A good shield is worth three swords. I'll stand by that.
+I keep my sword sharp and my temper dull.
+Every scar I have, I earned keeping this village safe.
+Zombies come in the dark. I'm usually there to meet them.
+I've been practicing my footwork. It's all in the feet, a fight.
+The archers and I have a rivalry. I say a blade's more honest. They say I'm slow.
+A raid's the worst thing that can happen to a village. I'm ready for one.
+The tailor mends my padding when I'm on duty. Bless her quick fingers.
+Discipline isn't glamorous. But it's what keeps people alive.
+I sleep with my boots by the bed. Old habit.
+My helmet's dented in three places. Three creepers. All defeated.
+The children want to be knights. I tell them to be farmers. Farmers live longer.
+I swing at that dummy until my arms burn. Then I swing some more.
+Every morning I check the walls. Every evening I check them again.
+A knight's oath is simple: protect the village, help the weak, don't run from spiders.
+I gain a little more skill every day I train. The dummy's my best teacher.
+I'm not the strongest, but I'm the most stubborn. That counts for a lot.
+My grandfather was a guard. His sword hangs over my fireplace.
+Courage isn't not being afraid. It's being afraid and standing your ground anyway.
+I've been sparring with the dummy so long I've started apologizing to it.
+Watch the treeline at dusk. That's where trouble starts.
+I keep the peace. Sometimes that means a sword. Usually it means a kind word.
+I've faced pillagers, vindicators and one very angry ravager. Still here.
+The night watch is long, but the dawn makes it worth it.
+Strike the dummy yourself if you like. It'll tell you how hard you hit. Humbling.
+My shield arm's stronger than my sword arm. That says something about my job.
+Every night I pray the bell stays quiet.
+I'm a knight. I'm also a terrible cook. Nobody's perfect.
+A good knight knows when not to fight.
+
+## work.archer
+I've been at the target since dawn. Three bullseyes in a row this morning.
+Draw, breathe, release. Draw, breathe, release. That's the whole art.
+The archery target's my second home. I know every ring on it.
+I can hit a skeleton at fifty paces. Before it hits me, ideally.
+The fletcher makes my arrows. Best in the region. I'd never use anyone else's.
+Wind's the archer's enemy. You learn to read it.
+I keep watch from the rooftops. Best view in {village}.
+A bow's quiet. That's what I like about it.
+I've been practicing at the target. Practice arrows only; nothing sharp in the village.
+The knights think arrows are cowardly. The knights also get bitten a lot.
+My string snapped this morning. Mid-draw. Stung like a bee.
+I can split a stick at thirty paces. Showing off, mostly.
+Patience makes a better archer than strength.
+The center ring's gold, then red, then blue, then black, then white. I aim for gold. I hit blue a lot.
+I learned to shoot from my mother. She could hit a falling apple.
+Every arrow you loose is a promise you can't take back.
+I stand guard on the night watch with a quiver full of arrows and a pocket full of bread.
+Shoot the target yourself, if you like. It'll tell you how close you got.
+I count my arrows every evening. Archers who don't, run out.
+Phantoms are the worst to hit. They swoop.
+I'd rather shoot a target than anything alive. Targets don't flinch.
+My fingers are calloused from the string. Ugly hands, good aim.
+A good archer stands very still. I'm the stillest person in {village}.
+Training gets you ready for the moment you hope never comes.
+I painted my target myself. The bullseye's a little lopsided.
+Spectral arrows make things glow. Very helpful at night.
+I've been teaching the children to shoot. Blunt arrows, soft targets.
+The best shot I ever made was one I didn't take.
+I can hear a skeleton's bones rattle from across the field. Skill or paranoia? Both.
+My bow's made of yew. It's older than me.
+Morning practice keeps the eye sharp. Evening practice keeps the nerves calm.
+I watch the treeline. Always the treeline.
+A crossbow's for people who don't trust their arms. I trust mine.
+Breathe out, then loose. Never hold your breath.
+Some people meditate. I shoot.
+
+## work.cook
+The stove's been lit since before dawn. Breakfast, lunch, and I'm already thinking about supper.
+I make a dish of the day at my stove. Come by and you'll get a helping. One each, mind.
+Bread on even days, stew on odd days. That's the kitchen's rhythm.
+Hearty stew, fresh bread, steaming coffee. The holy trinity.
+My stove cooks twice as fast as a campfire. Put your raw meat on it and watch.
+A good cook never measures. A great cook measures and then ignores it.
+I've been simmering this stew since sunrise. The longer, the better.
+Carrots, potatoes, beef, a pinch of something secret. That's all I'll say.
+The whole village eats at my stove eventually.
+I burned my thumb on the stove this morning. Kitchens bite back.
+Cooking's love you can taste.
+I've been experimenting with a pumpkin soup. It's either brilliant or terrible.
+The smell of baking bread is the best alarm clock in the world.
+I cook for the guards before their night watch. Warm bellies, brave hearts.
+Salt, fire and patience. That's cooking.
+I trade bread and stew for wheat and emeralds.
+My kitchen's small but my portions are large.
+Somebody always comes sniffing around the stove at noon. Usually several somebodies.
+The chimney smokes all day when I'm cooking. It's how everyone knows I'm open.
+I've fed this village for years. Every face here has eaten my bread.
+A meal shared is a meal doubled. That's kitchen mathematics.
+I've got flour in my hair, sauce on my sleeve and a smile on my face.
+Never trust a thin cook.
+The kettle sings on my stove all morning.
+Cooking for one is boring. Cooking for a village is an adventure.
+I've got a new bread recipe with honey. People have been lining up.
+The fire's the hardest part. Too hot, it burns. Too cool, it's raw.
+My stove's my pride. I scrub it every evening.
+Taste everything. Twice. That's the cook's privilege.
+I can tell the bread's done by the sound when I knock on it.
+On Market Day, I cook from dawn to dusk. Everyone's hungry on Market Day.
+Rabbit stew's the hardest to get right. Rabbit stew is also the best.
+If you've got raw food, bring it by. The stove's always hot.
+A full pot is a happy pot.
+I'll teach you a recipe someday. When you've earned it.
+
+## work.tavern_keeper
+The barrels are full and the mugs are clean. Ready for the evening crowd.
+I press cider from apples in the drinks barrel. Bring me apples and I'll pour you a mug.
+The tap stand pours coffee. Cocoa beans in, steaming mugs out.
+Running a tavern means knowing everyone's business and keeping it to yourself.
+I restock the barrel every working day. Apples, berries, and a bit of muscle.
+A warm fire, a full mug and a friendly face. That's what a tavern's for.
+I've heard every story in {village}. Most of them twice. Some of them true.
+Bring an empty mug and I'll fill it. That's the tavern way.
+Somebody broke a stool last night dancing. Again.
+The bard's been playing here every evening. The crowd loves it.
+I sweep the floor three times a day. Taverns get muddy.
+Every village needs a tavern. Where else would people complain about the weather together?
+I know who likes their cider warm and who likes it cold.
+The busiest hour is right after supper. Everyone wants one more drink and one more story.
+I wipe down the counter so often it's worn smooth.
+Tavern keeping is half pouring, half listening.
+I keep a slate of everyone's tabs. Some of them are very long.
+I make a special spiced cider for Market Day. People talk about it all week.
+The fireplace is the heart of the tavern. I never let it go out.
+My feet ache after a long night. But a full tavern's a happy one.
+I've broken up three arguments this week. All about pie.
+A tavern without music is just a room with chairs.
+I open late and close later. My sleep's a mess.
+Coffee in the mornings, cider in the evenings. Something for everyone.
+Travelers always stop at the tavern first. I'm the welcome committee.
+I've got the best seat in the house. Behind the counter, watching everyone.
+I keep a spare blanket for anyone who's had a long night.
+I can pour a mug blindfolded. I've done it. For a bet.
+The cider barrel's the most popular resident in {village}.
+I like a busy night. Laughter and clinking mugs. Music to my ears.
+Every mug I pour, I hope it makes someone's day a little warmer.
+I've been tavern keeper for years. I know every creak in the floor.
+The apples this year are sweet. The cider's going to be special.
+Tavern's open to everyone. Even grumpy folks. Especially grumpy folks.
+I'll pour you a mug if you've got an empty one. That's a promise.
+
+## work.apothecary
+I keep bandages and smelling salts ready. A little preparation goes a long way.
+The press squeezes herbs into tonics. Three flowers and a glass bottle make an Herbal Tonic.
+I tend to anyone hurt near my workstation. Scrapes, bruises, the occasional arrow.
+Chamomile for sleep, lavender for nerves, poppy for pain.
+The alchemical press is my pride and joy. You turn the bar and the herbs give up their goodness.
+I've been gathering flowers all morning. My basket smells like summer.
+Bring me berries, ferns or kelp too. All herbs have something to give.
+A tonic a day keeps the cleric away. Don't tell the cleric I said that.
+I've got remedies for coughs, colds, aches and broken hearts. Well, not hearts. I'm working on hearts.
+The smelling salts can wake a fallen companion. Very useful on adventures.
+I keep my bottles corked and labeled. Mixing them up would be a disaster.
+Healing's slow work. Patience is the best medicine.
+I sit with the sick and keep them company. That's half the cure.
+The revival tonic's my best work. It can bring someone back from the edge.
+Herbs, honey, hot water. That's my answer to most things.
+I've been studying the old herbals. Some of them are pure nonsense. Some of them work.
+I smell like a meadow all day. Not a bad thing.
+I dabbed salve on three skinned knees this morning. Children are reckless.
+The press needs a strong arm and a gentle heart.
+I keep a cot ready for anyone who needs a rest.
+Bandage wraps from paper and wool. Simple and effective.
+Never mix poison with potion. Rule one of the apothecary.
+My hands are always green from the herbs.
+I grow my own mint behind the house. It's taking over the garden.
+A good apothecary listens before she treats.
+I make a cough syrup from honey and berries. The children pretend to cough to get it.
+If you're hurt, come to my workstation. I'll patch you up.
+I learned the old remedies from my grandmother. The new ones I'm learning from mistakes.
+The press drips green when the herbs are fresh. That's how you know it's good.
+I can tell what's wrong with most people just by looking at them. Except for grumpiness. That's incurable.
+A dried flower in a book, a fresh one in a tonic. Both have their uses.
+Prevention's better than cure. Eat your vegetables, wear your armor.
+I've got a tonic for courage. It's mostly honey. It still works.
+The best medicine is a good night's sleep and a friend to talk to.
+I'll keep you in one piece, {player}. That's my job.
+
+## work.painter
+My easel's set up by the window. The light's perfect this time of day.
+I paint a new picture every day. Some days it's good. Some days it's a learning experience.
+When a painting's finished, take it off my easel and hang it at home. I'll start another.
+A dye or two on a blank canvas makes a sketch, then a picture. Try it yourself!
+I've been painting the sunset all week. It keeps changing on me.
+Blue for the sky, green for the hills, a dab of gold for the sun. That's most landscapes.
+I paint portraits too. Sit still and I'll make you famous.
+My fingers are every color today.
+I wanted to paint the sea, so I mixed blue dye. Blue dye makes ships, apparently.
+Mixing colors is like cooking. Too much of anything ruins it.
+I've painted every building in {village}. Twice.
+A painter sees the world differently. Everything's a shape and a shade.
+I've got a painting of a creeper in a meadow. It's my most popular work. I don't understand people.
+I sketch in charcoal first. Then the colors come.
+My paintbrush has seen things. Mostly the sky.
+Art takes patience. And a lot of dye.
+I painted the village at night with all the windows lit. It made the cleric cry.
+Every finished painting goes to whoever takes it home. Art should be lived with.
+The paint pots on my easel tray are always running low.
+Painting outdoors is best. Painting in the rain is not.
+I'm trying to capture the light on the river. It won't hold still.
+Some people collect emeralds. I collect sunsets.
+A blank canvas is terrifying and exciting at the same time.
+I painted the flowers in a vase this morning. The vase was empty. I imagined the flowers.
+My work hangs in half the houses in {village}.
+Colors have feelings. Red's angry, blue's calm, yellow's showing off.
+I paint what I love. That's why there are so many paintings of bread.
+Bring a paintbrush to a finished canvas and I'll show you how to start over.
+The best painting I ever did was of my mother. She hung it upside down.
+I get paint everywhere. My cat's slightly purple.
+I paint best in the afternoons. Morning light's too sharp.
+I'm working on a mural for the tavern wall. It's going to be enormous.
+Painting is just looking very carefully and then telling the truth with color.
+You can have any painting you find finished on my easel. That's a promise.
+I see beauty everywhere. Even in mud. Especially in mud. Lovely browns.
+
+## work.bard
+I play the music stand every evening at the tavern. Come and listen!
+Music lifts the spirits. Literally. When I play, everyone works a little faster.
+Play the stand yourself if you like. Everyone nearby gets a little spring in their step.
+I know songs from every corner of the world. Well, three corners.
+My lute's been with me for years. We've been through a lot.
+A bard's job is to remember the stories and sing them back.
+I'm working on a ballad about {village}. It has thirty verses. So far.
+The tavern goes quiet when I start a sad song. That's the best feeling.
+I can play "Greensleeves," "Frère Jacques" and a jig I wrote myself.
+The children dance when I play. The adults pretend they're not tapping their feet.
+I practice at my music stand in the mornings. The roosters harmonize, sort of.
+Every song's a little bit of magic. I believe that.
+I wrote a lullaby for the golem. It didn't fall asleep. It doesn't sleep.
+A tavern without a bard is just a room full of people drinking quietly.
+My fingers are calloused from the strings. Worth it.
+I play for coins on Market Day. Mostly I get apples.
+Music makes the long nights shorter.
+Hold a lute and play the stand for a guitar sound. A bell for chimes. An amethyst for something magical.
+I've been learning to play the flute. The neighbors have been learning to sleep with pillows over their heads.
+Songs are how villages remember who they are.
+I once played so long my fingers fell asleep.
+Everyone hums my tunes. They don't know they're mine. I don't mind.
+A good song can stop an argument mid-shout.
+I play a quiet tune at dusk to call everyone home.
+My sheet music's mostly scribbles only I can read.
+Music is the only thing that sounds better shared.
+I'm composing a song for each resident. Yours will have a lot of drums. Adventurous drums.
+When the bell rings for a wedding, I play the procession.
+Sometimes I just play to the empty square. The pigeons appreciate it.
+A bard is a walking library of songs.
+I'd play for the Ender Dragon if it'd listen.
+I tune my lute every morning. It goes out of tune every afternoon. It's a moody lute.
+I've got a new song about a brave chicken. It's a crowd favorite.
+Music, stories and a warm mug. That's a bard's whole life.
+Play a tune for the village. They'll love you for it.
+
+## work.tailor
+Needle, thread, and a steady hand. That's tailoring.
+Bring me torn leather or a frayed bowstring and I'll mend it at my sewing table. A bit of string, that's all.
+Wool unravels into string at my table. Handy if you're out of thread.
+I mend the guards' padding while they're on duty. They come back to it good as new.
+I've been sewing a rain cloak. Waterproofed with beeswax. Very fashionable.
+A good seam is invisible. That's how you know it's good.
+I've got pins in my mouth half the day. Don't make me laugh.
+Every coat in {village} has a stitch of mine in it somewhere.
+Bolts of wine and mustard cloth. My two favorite colors.
+I patched the farmer's trousers again. He kneels on everything.
+A hooded poncho for every traveler. Rain or shine.
+My spool of red thread is my most precious thing.
+I measure everyone by eye. You're a size "adventurer," by the way.
+I'm making a cloak for the knight. Blue with silver trim.
+The trick to sewing is never rushing the last stitch.
+Leather boots, wool cloaks, linen shirts. I make it all.
+I can mend almost anything. Except a broken heart. Though I try with a nice scarf.
+I've been embroidering flowers on the cleric's robes. Don't tell her yet.
+Thimbles save fingers. I've learned that the painful way.
+My sewing table's covered in scraps. Every scrap's a future patch.
+Elytra need delicate mending. Very delicate. Very expensive.
+I make uniforms for every trade in the village. Each one's different.
+The bard wants a cape with stars on it. I'm on it.
+I sew by candlelight in the evenings. Bad for the eyes. Good for the soul.
+A well-made garment can last a lifetime.
+I found a moth in my wool. We had words.
+I'm teaching my niece to sew. She's better at it than I was.
+Clothes make people feel like themselves. That's important work.
+Fishing rods, bows, crossbows. All mendable with good string.
+I've got a pincushion shaped like a tomato. It's very old. It's very loved.
+I can tell a lot about a person from the state of their sleeves.
+Bring me your worn things. I'll make them good as new.
+I darn socks for the whole village. Socks wear out faster than anything.
+Fashion comes and goes. Good stitching stays.
+Every garment I make, I make it like it's for a friend.
+
+## work.carpenter
+The sawmill cuts logs into half again as many planks as hand-crafting does. Bring me your logs.
+I've been building benches for the village square. Sturdy ones. No more wobbling.
+Measure twice, cut once. My father said it. I say it. My apprentice is sick of hearing it.
+The saw sings when the wood's good. Squeaks when it's not.
+I leave offcuts by the sawmill. Sticks are always handy. Help yourself.
+I built half the houses in {village}. The other half I've repaired.
+Oak's my favorite. Strong, honest, smells lovely.
+Spruce for roofs, oak for floors, birch for furniture. Every wood has its place.
+My hands are covered in splinters. Occupational hazard.
+I made a rocking chair for my grandmother. She says it's the best chair in the world.
+A good joint needs no nails. Just a snug fit.
+I'm building a new bridge over the stream. Arched, of course.
+Sawdust in my hair, sawdust in my boots, sawdust in my soup.
+Planks into sticks, three to a plank at my sawmill. Much better than the crafting table.
+I fixed the church door. It stopped creaking. The cleric's thrilled.
+A carpenter's work is everywhere. Doors, floors, beds, barrels.
+I can tell the age of a tree by its rings. That oak was older than the village.
+I carved a little bird for the windowsill. It's mostly for me.
+Sanding's the boring part. Also the most important part.
+I built a treehouse for the children. They haven't come down since.
+The sawmill's the best tool in my workshop. It saves me hours.
+Every house in {village} needs fixing eventually. I'm never out of work.
+I made a cradle for the newest baby. Smoothed every edge.
+Wood breathes, wood moves, wood remembers. You have to respect it.
+I've got a hammer for every job and a job for every hammer.
+I'd like to build a ship someday. A real one. With a mast.
+I mended the well's roof last week. Now it doesn't leak on people's heads.
+A crooked shelf is a carpenter's nightmare.
+I build things to last. My great-grandchildren will sit on my benches.
+I keep a stack of planks by the door. You never know.
+My workshop smells of sap and pine. Best smell in the world.
+I made the notice board by the bell. Proudest work I've done.
+Bamboo's strange wood. Grows fast, splits easy. Saws nicely, though.
+Bring me a log and I'll show you what it wants to be.
+Woodwork's slow, but it's honest.
+
+## work.scholar
+I keep the village archives. Every birth, wedding and great event in {village}.
+Bring a book to the archives and I'll copy out the village chronicle for you.
+Study with me while I work at the archives. You'll learn a thing or two. Literally.
+Every neighbor has a story worth keeping. Our archives help us remember where we came from.
+I've been cataloguing the village's history. Did you know we once had a mayor who was a llama? Briefly.
+Scrolls, ledgers, boxes of letters. The archives are a treasure.
+I write down the news every day. Someday, someone will want to know.
+History isn't dusty. It's people. People are never dusty.
+I'm working on a history of the founding of {village}. Lots of goats in it.
+The archives smell of old paper and candle wax. My favorite smell.
+Right-click the archives with an empty hand and you'll read the village news. Hold a book to copy it all.
+I've read every letter in the archive. Some of them made me cry.
+A scholar's work is never done. History keeps happening.
+I teach lessons by the bell some mornings. The children are better students than they think.
+Knowledge kept is knowledge shared. Eventually.
+I found a map in the archives showing a village that isn't there anymore.
+I study everything. Plants, stars, people. Especially people.
+My candle burns down every night. I go through a lot of candles.
+I've been writing an encyclopedia of {village}. Volume one: the bell.
+The past teaches us. If we listen.
+I keep records of every wedding. The happiest pages in the archive.
+Ink, quill and a good chair. All a scholar needs.
+I've got questions no book can answer. That's what keeps me going.
+The library's for books. The archives are for us. Our own story.
+I record the weather every day. Patterns emerge. Slowly.
+Every resident in the village has a page in my ledger.
+I've been reading about the old kingdoms. They had bells too.
+Scholars and librarians are cousins. We argue about filing systems.
+I wrote down the bard's songs so they'll never be forgotten.
+Curiosity is the scholar's only qualification.
+I've been translating an old stone tablet. It's either a poem or a shopping list.
+History is just yesterday's gossip with better handwriting.
+The archives are open to everyone. Knowledge shouldn't be locked away.
+I'd like to know what the first villagers dreamed about.
+Every day is a page. I'm writing as fast as I can.
+
+## station.farmer
+My composter turns scraps into bone meal. Feed it anything that rots.
+Put a composter near any unemployed neighbor and you might make a farmer.
+Fill the composter to the top and it'll give you bone meal. Spread that on your crops.
+Bring me your rotten apples and old seeds. The composter's hungry.
+A farmer's workstation is a barrel of muck. A very useful barrel of muck.
+Composting is just patience in a bucket.
+
+## station.librarian
+The lectern holds a book open so anyone can read it. Put a book and quill on it to share your writing.
+A lectern near a free resident makes a librarian. Then bring them books.
+The lectern gives off a little redstone signal when you turn the page. Clever, isn't it?
+I keep my favorite book on the lectern. You may read it, but don't fold the corners.
+Lecterns and bookshelves go together like bread and butter.
+If you want enchanted books, a librarian with a lectern is your friend.
+
+## station.fisherman
+The barrel by my door holds my catch. Sixty-four of anything per slot. Very roomy.
+Give a free resident a barrel and they'll take up fishing.
+My barrel keeps the fish fresh. Well, fresh enough.
+A barrel's a good chest for small spaces. It opens even with something on top.
+Barrels smell of fish after a while. All of them. Forever.
+I trade fish for emeralds. My barrel's always stocked.
+
+## station.fletcher
+The fletching table's for arrows and bows. Mostly arrows.
+Put a fletching table near an unemployed resident and they'll learn to make arrows.
+My fletching table's covered in feathers and flint. Organized chaos.
+A fletching table is a sort of promise. Arrows when you need them.
+The table's where I sort my feathers. White on the left, grey on the right.
+Every good archer needs a fletcher, and every fletcher needs a table.
+
+## station.cleric
+The brewing stand bubbles all day. Blaze powder fuels it; nether wart starts every potion.
+A brewing stand near a free resident makes a cleric.
+Put water bottles in the stand, add nether wart, then your ingredient. Magic.
+My brewing stand's been in the church for generations.
+The stand's three arms hold three bottles. Efficient.
+Blaze powder burns slow in the stand. One rod lasts a long time.
+
+## station.cartographer
+The cartography table copies and zooms maps. Paper makes them bigger.
+A cartography table near a free resident makes a mapmaker.
+Lock a map with glass at the table and it'll never change.
+My cartography table's got compass marks scratched all over it.
+Two maps in, one copy out. Perfect for travelers.
+The table's the most useful thing in my house. And the most cluttered.
+
+## station.armorer
+The blast furnace smelts ore and armor twice as fast. Only metal, mind.
+A blast furnace near a free resident makes an armorer.
+Melt old iron armor in the blast furnace and you'll get nuggets back.
+My blast furnace roars all day. You get used to it.
+Fuel it well and it'll smelt a stack before lunch.
+The blast furnace is faster than a regular furnace, but it won't cook your supper.
+
+## station.toolsmith
+The smithing table upgrades diamond gear to netherite and puts trims on armor.
+A smithing table near a free resident makes a toolsmith.
+The smithing table's for the clever work. Upgrades and decorations.
+I use the smithing table for finishing touches.
+Templates go in the smithing table. Rare things, templates.
+A smithing table never wears out. Unlike my patience.
+
+## station.weaponsmith
+The grindstone repairs and removes enchantments. Good for a fresh start.
+A grindstone near a free resident makes a weaponsmith.
+Put two worn swords in the grindstone and you'll get one better one.
+The grindstone strips curses off. Most curses.
+I spin the grindstone all day. My arms are like iron.
+The grindstone gives you a bit of experience back when you strip enchantments.
+
+## station.leatherworker
+The cauldron holds water, lava or powder snow. I use it for dyeing and washing leather.
+A cauldron near a free resident makes a leatherworker.
+Wash the dye off leather armor in a cauldron of water.
+My cauldron's always full. Rain fills it up for free.
+Cauldrons catch drips from pointed dripstone. Clever trick, that.
+The cauldron's the oldest tool in my trade.
+
+## station.mason
+The stonecutter makes stairs, slabs and walls from a single block. No waste.
+A stonecutter near a free resident makes a mason.
+One stone block in, one stone stair out. The stonecutter's a marvel.
+My stonecutter's blade spins so fast you can't see it.
+Mind your fingers near the stonecutter.
+The stonecutter saves me so much stone.
+
+## station.shepherd
+The loom turns banners into art. Dye plus a pattern, and you've got a crest.
+A loom near a free resident makes a shepherd.
+Put a banner and a dye in the loom and pick a pattern. Endless designs.
+My loom clacks all day. It's like a heartbeat.
+Banner patterns go in the loom too. Creeper faces, flowers, globes.
+I've woven every banner in {village}.
+
+## station.butcher
+The smoker cooks food twice as fast as a furnace. Food only.
+A smoker near a free resident makes a butcher.
+Smoked meat keeps longer and tastes better. Everyone knows that.
+My smoker never goes cold.
+Put raw meat and fuel in the smoker and you'll have supper in no time.
+The smoker's smoke tells the whole village when dinner's coming.
+
+## station.knight
+Strike my training dummy to see how hard you hit. It shows your combo too.
+The dummy won't break if you hit it. Sneak and swing if you want to move it.
+I train on the dummy every working day. A little more skill each time.
+Put a training dummy near a free resident and you might make a knight.
+The dummy's got a pot for a helmet. Aim for the bullseye on its chest.
+A full swing does more damage than a quick tap. The dummy will show you.
+
+## station.archer
+Shoot the archery target and it'll tell you your score. Ten for the bullseye.
+Put an archery target near a free resident and you might make an archer.
+I loose practice arrows at the target every working day. Blunt ones; they hurt nobody.
+The target's rings go gold, red, blue, black, white. Gold is ten points.
+Arrows that clip the edge still earn a point. Everyone deserves a point.
+Practice makes the archer. The target never complains.
+
+## station.cook
+My kitchen stove cooks raw food twice as fast as a campfire. Four pieces at a time.
+Put raw meat, fish or potatoes on the stove and they'll pop out cooked.
+When I've worked at my stove, there's a dish of the day for every visitor. Just ask.
+A kitchen stove near a free resident might make a cook.
+The stove's fire glows while something's cooking. Smell that?
+One helping of the dish of the day per visitor. I'm generous, but not that generous.
+
+## station.tavern_keeper
+The drinks barrel takes apples and berries and pours cider into an empty mug.
+The tap stand brews cocoa beans into coffee. Bring a mug.
+I restock the barrel and the tap every working day.
+A drinks barrel or a tap stand near a free resident might make a tavern keeper.
+Right-click the barrel with an empty hand to see how many mugs are left.
+Cider warms you up and helps you heal a little. Coffee gives you a spring in your step.
+
+## station.apothecary
+Press three herbs, flowers, berries, ferns or kelp, then bring a glass bottle for an Herbal Tonic.
+The alchemical press holds up to twelve herbs at once.
+When I work at my press, anyone hurt nearby gets patched up.
+An alchemical press near a free resident might make an apothecary.
+An Herbal Tonic gives you a few seconds of regeneration. Gentle stuff.
+Every flower in the meadow has a little medicine in it.
+
+## station.painter
+Paint my easel's canvas with a dye to sketch, and a second dye to finish the painting.
+The color of the second dye decides the picture: blue for the sea, red for flowers, yellow for a sunset.
+Take a finished painting off the easel with an empty hand. It's yours to hang.
+A paintbrush on a finished canvas paints it over into a different picture.
+I paint a new picture on my easel every working day.
+An easel near a free resident might make a painter.
+
+## station.bard
+Play my music stand and everyone nearby gets Haste for a minute. Music makes the work go faster.
+Hold a lute when you play the stand for a guitar sound. A bell rings like chimes.
+The stand knows ten songs. Some old, some mine.
+I perform at my stand every working day. The neighbors gather round.
+A music stand near a free resident might make a bard.
+Let a song finish before you start another. Even bards need to breathe.
+
+## station.tailor
+Mend leather, bows, fishing rods and elytra at my sewing table with string.
+Unravel wool into string at the sewing table. Three lengths per block.
+Each length of string mends a quarter of the damage. Bring enough.
+When I'm sewing, I mend the guards' armor too.
+A sewing table near a free resident might make a tailor.
+Good thread, good needle, good table. That's all tailoring needs.
+
+## station.carpenter
+My sawmill turns a log into six planks instead of four. And planks into three sticks.
+The sawmill cuts up to sixteen at a time. Saves your arm.
+I leave offcuts at the sawmill when I work. Take the sticks if you need them.
+A sawmill near a free resident might make a carpenter.
+Bamboo blocks saw into planks too.
+Sawmills are louder than they look. Mind your ears.
+
+## station.scholar
+Open the archives with an empty hand to read the village news.
+Hold a book to the archives and I'll copy you the whole village chronicle.
+Study near me while I'm at the archives and you'll pick up a little experience.
+Archives near a free resident might make a scholar.
+The chronicle has everything: births, weddings, quarrels, the lot.
+Everything that happens in {village} ends up in the archives eventually.
