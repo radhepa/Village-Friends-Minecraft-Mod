@@ -1,4 +1,4 @@
-# Village Friends 2.13.0
+# Village Friends 2.14.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Villages are real communities: everyone knows everyone, families grow, and love blooms slowly. Conversations work offline, with no AI account or service fees.
 
@@ -16,13 +16,19 @@ Each building is an independent template written as a small design program and c
 
 **Village life:** every resident knows everyone in their village and has a relationship meter with each of them that grows with time and company and dips after a quarrel. Natural villages are settled by families who share a surname: couples, brothers and sisters, parents and children. Single residents can fall in love with someone outside their family, but slowly: each pair needs its own 50 to 1,000 days of knowing each other, and some residents never fall in love. Sweethearts marry, and babies join their parents' family. Residents talk about all of it: their partner and children, their best friend and their rival, who just fell in love, the new baby, the neighbor who needs curing. Speech bubbles pop over their heads Tomodachi Life–style: a "!" when they spot you, hearts between sweethearts, a "..." while neighbors chat, sparks between rivals, "Zz" while they sleep. The **Village Ledger** lists everyone in a village with their family, love life and your friendship level, and shows how each resident feels about every neighbor. See [VILLAGE_LIFE.md](VILLAGE_LIFE.md).
 
-Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically; other professions use ordinary villager behavior.
+**Village days:** every resident keeps their own hours. Early birds are up at five, night owls stay up past ten, and everyone has breakfast at home, goes to work, takes a lunch hour at the bell, at home or at the tavern, spends the afternoon on a hobby somewhere that suits it, catches up with the neighbors at the bell, has supper and turns in. Farmers start early, the tavern keeper works the evening, the bard performs at the tavern, children have lessons by the bell, and half the guards keep the night watch. Every seventh day is Market Day, when nobody works except the cook. Rain sends most people indoors (a few love it), storms send everyone in except the guards, and snow brings the children out to play. The conversation window and the Village Ledger show what each resident is doing and their day.
+
+**Working workstations:** all eleven Village Friends workstations were redesigned, and each one does something. Strike the training dummy to measure your hits, shoot the archery target for a score, cook on the kitchen stove (and get a dish of the day once the cook has worked), pour cider from the drinks barrel and coffee from the tap stand into an empty mug, press herbs into an Herbal Tonic, paint the easel's canvas and take the painting home, play the music stand for Haste, mend leather and bows at the sewing table, saw logs into extra planks at the sawmill, and copy the village chronicle at the archives. Residents work at their stations too: knights and archers train, the apothecary heals anyone hurt nearby, the tavern keeper restocks, the painter paints and the bard performs. See [VILLAGE_DAYS.md](VILLAGE_DAYS.md).
+
+**5,898 pieces of dialogue:** residents talk about the weather, the time, what they're doing, their work and its workstation, their hometown, what you're holding and how you look, in their own personality's voice; children talk like children. Sometimes they ask you a question (a riddle, a would-you-rather, something about you) and remember your answer, or offer to help: patching you up, sharing food, waiting out the rain with you, cooking or mending what you hold.
+
+Bread and stew restore health; coffee grants a short speed boost and cider a little regeneration. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically.
 
 For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creative's **Spawn Eggs** tab. They create ordinary equipped adult villagers at levels 15–30, work in dispensers, and keep their jobs without nearby workstations. Commands: `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. See [GUARDS.md](GUARDS.md) for combat and progression rules.
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.13.0.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.14.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -155,7 +161,7 @@ Requirements: **Minecraft 26.3, Fabric Loader 0.19.5+, Fabric API 0.161.0+26.3, 
 - Run `powershell -ExecutionPolicy Bypass -File .\build.ps1`, or `gradlew.bat build` with JDK 25 as JAVA_HOME. Gradle installs its own build runtime.
 - `gradlew.bat runClient` starts a separate development client.
 - `gradlew.bat runClientGameTest` runs real client/server interaction tests, screenshot checks, and save/reload tests. The test mod is excluded from the release JAR.
-- Release output: `build/libs/village-friends-2.13.0.jar`. Install this file, not the sources JAR.
+- Release output: `build/libs/village-friends-2.14.0.jar`. Install this file, not the sources JAR.
 - The art generator needs Python and Pillow only when regenerating assets.
 
 Read VERIFICATION.md for test coverage and its limits. Families, romance and the Village Ledger are described in [VILLAGE_LIFE.md](VILLAGE_LIFE.md).

@@ -395,7 +395,13 @@ def write():
 
 
 def check():
-    bad = [str(p.relative_to(PROJECT)) for p, data in outputs().items() if not p.exists() or p.read_bytes() != data]
+    def same(path, data):
+        # Git may check text files out with CRLF line endings; compare them line by line.
+        if not path.exists():
+            return False
+        current = path.read_bytes()
+        return current == data if path.suffix == '.png' else current.replace(b'\r\n', b'\n') == data
+    bad = [str(p.relative_to(PROJECT)) for p, data in outputs().items() if not same(p, data)]
     if bad:
         print('Out of date (run tools/workstations/workstations.py):\n  ' + '\n  '.join(bad)); sys.exit(1)
     for name, models in designs().items():

@@ -249,7 +249,46 @@ public final class WorkstationGameTest implements FabricClientGameTest {
             c.waitForScreen(FriendshipScreen.class); flush(w); c.waitTicks(40);
             c.takeScreenshot("workstations-routine-conversation");
             c.clickScreenButton("Goodbye"); c.waitForScreen(null);
+
+            // Dialogue: every topic has something to say, and answers are remembered.
+            w.getServer().runOnServer(s -> {
+                var v = (Villager) level(w).getEntity(resident); var p = player(w);
+                for (String topic : List.of("chat", "work", "adventure", "joke"))
+                    check(!NarrativeEngine.conversation(v, p, topic).isBlank(), "Something to say about " + topic);
+                check(TalkWorld.line(v, p, "greet") != null, "A written greeting");
+                saveBond(v, p, bond(v, p).flag("asking:sunrise_sunset"));
+                check(TalkWorld.answer(p, v, "answer:sunrise_sunset:0"), "Answering a question works");
+                check(bond(v, p).has("q:sunrise_sunset") && bond(v, p).has("a:likes:sunrise") && !bond(v, p).has("asking:sunrise_sunset"),
+                        "The question is answered once and the answer remembered");
+            });
+            // An apothecary offers to patch up a hurt visitor, and does.
+            int healer = w.getServer().computeOnServer(s -> {
+                var level = level(w); var at = press;
+                var v = new Villager(EntityTypes.VILLAGER, level); v.setPos(at.getX() + .5, at.getY(), at.getZ() - 1.5); v.setNoAi(true);
+                v.setVillagerData(v.getVillagerData().withProfession(s.registryAccess(), VillageProfessions.key("apothecary")));
+                v.setYRot(180); v.yBodyRot = v.yHeadRot = 180;
+                level.addFreshEntity(v);
+                player(w).teleportTo(level, v.getX(), v.getY(), v.getZ() - 2.5, java.util.Set.of(), 0, 10, true);
+                return v.getId();
+            });
+            flush(w); c.waitTicks(5); w.getConnection().waitForClientboundEntityUpdates(EntityTypes.VILLAGER);
+            c.runOnClient(client -> { var e = client.level.getEntity(healer); client.gameMode.interact(client.player, e, new EntityHitResult(e), InteractionHand.MAIN_HAND); });
+            c.waitForScreen(FriendshipScreen.class); flush(w);
+            String label = w.getServer().computeOnServer(s -> {
+                var v = (Villager) level(w).getEntity(healer); var p = player(w); p.setHealth(6);
+                dev.villagefriends.talk.DialogueBank.Question offer = null;
+                for (int i = 0; i < 80 && (offer == null || !offer.id().startsWith("patch_up")); i++) offer = TalkWorld.ask(v, p);
+                check(offer != null && offer.id().startsWith("patch_up"), "A hurt visitor is offered help: " + (offer == null ? "nothing" : offer.id()));
+                show(p, v, "question", TalkWorld.askText(v, p, offer), "They're offering to help.", false, Emote.IDEA);
+                return offer.answers().getFirst().label();
+            });
+            flush(w); c.waitTicks(50);
+            c.takeScreenshot("workstations-dialogue-offer");
+            c.clickScreenButton(label); flush(w); c.waitTicks(40);
+            c.takeScreenshot("workstations-dialogue-healed");
+            w.getServer().runOnServer(s -> check(player(w).getHealth() > 6, "Accepting the offer heals: " + player(w).getHealth()));
+            c.clickScreenButton("Goodbye"); c.waitForScreen(null);
         }
-        LOGGER.info("WORKSTATIONS PASSED: 11 redesigned workstations placed and photographed; stove, barrel, tap, press, easel, sawmill, sewing table, archives, music stand, dummy and target used by a player; cook, painter, tavern keeper and knight at work; a resident's routine through midnight, a storm and clear skies.");
+        LOGGER.info("WORKSTATIONS PASSED: 11 redesigned workstations placed and photographed; stove, barrel, tap, press, easel, sawmill, sewing table, archives, music stand, dummy and target used by a player; cook, painter, tavern keeper and knight at work; a resident's routine through midnight, a storm and clear skies; written dialogue on every topic, a remembered answer, and an apothecary's offer that heals.");
     }
 }
