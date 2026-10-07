@@ -133,13 +133,16 @@ public final class ResidentModel extends HumanoidModel<ResidentRenderState> {
             }
         }
     }
+    private final float[] clipEyes=new float[3];
     private void animateEyes(ResidentRenderState s) {
         boolean sleeping=s.hasPose(Pose.SLEEPING) || s.deathTime>0;
-        float blink=sleeping?1:ResidentMotion.blink(s.ageInTicks,s.motionSeed);
+        // Animation pack clips can squint, close or redirect the eyes (a yawn, a laugh, reading).
+        if(ResidentAnimation.canAnimate(s)) ResidentPoser.eyes(s,clipEyes); else clipEyes[0]=clipEyes[1]=clipEyes[2]=0;
+        float blink=sleeping?1:Math.max(ResidentMotion.blink(s.ageInTicks,s.motionSeed),clipEyes[0]);
         float phase=ResidentMotion.phase(s.motionSeed);
         float glance=Mth.sin(s.ageInTicks*.031F+phase)*Mth.sin(s.ageInTicks*.013F+phase)*.18F;
-        float gazeX=Mth.clamp(s.eyeLookX+glance*(1-s.attention),-.28F,.28F);
-        float gazeY=Mth.clamp(s.eyeLookY,-.12F,.12F);
+        float gazeX=Mth.clamp(s.eyeLookX+glance*(1-s.attention)+clipEyes[1]*.28F,-.28F,.28F);
+        float gazeY=Mth.clamp(s.eyeLookY+clipEyes[2]*.12F,-.12F,.12F);
         for(int i=0;i<2;i++) {
             irises[i].x+=gazeX;
             // Compress the iris within the original one-pixel eye line, never outside it.

@@ -38,6 +38,9 @@ public final class VillageFriends implements ModInitializer {
     public static final AttachmentType<String> LOOK = AttachmentRegistry.create(id("look"),
             b -> b.persistent(Codec.STRING).syncWith(ByteBufCodecs.STRING_UTF8, AttachmentSyncPredicate.all()));
     public static final AttachmentType<ResidentProfile> PROFILE = AttachmentRegistry.create(id("resident"), b -> b.persistent(ResidentProfile.CODEC));
+    /** The resident's personality id, shared with clients so body language matches who they are. */
+    public static final AttachmentType<String> TEMPERAMENT = AttachmentRegistry.create(id("temperament"),
+            b -> b.syncWith(ByteBufCodecs.STRING_UTF8, AttachmentSyncPredicate.all()));
     public static final AttachmentType<BondBook> BONDS = AttachmentRegistry.create(id("bonds"), b -> b.initializer(BondBook::empty).persistent(BondBook.CODEC));
     public static final AttachmentType<SharedHistory> SHARED = AttachmentRegistry.create(id("shared_history"), b -> b.initializer(() -> SharedHistory.EMPTY).persistent(SharedHistory.CODEC));
     public static final AttachmentType<CompanionState> COMPANION = AttachmentRegistry.create(id("companion"), b -> b.initializer(() -> CompanionState.NONE).persistent(CompanionState.CODEC));
@@ -118,6 +121,7 @@ public final class VillageFriends implements ModInitializer {
         if (!v.hasCustomName()) v.setCustomName(Component.literal(Dialogue.name(v.getUUID(),look)));
         v.setCustomNameVisible(true);
         if (!look.equals(t.getAttached(LOOK))) t.setAttached(LOOK, look);
+        if (!profile.personality().equals(t.getAttached(TEMPERAMENT))) t.setAttached(TEMPERAMENT, profile.personality());
     }
     private static <T> void copy(Entity before, Entity after, AttachmentType<T> type) {
         T data = target(before).getAttached(type); if (data != null) target(after).setAttached(type, data);

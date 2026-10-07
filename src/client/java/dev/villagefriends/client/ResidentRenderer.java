@@ -16,6 +16,8 @@ import net.minecraft.util.Mth;
 
 /** Vanilla villagers retain their trades and AI, but use the actual player mesh and skin layout. */
 public final class ResidentRenderer extends HumanoidMobRenderer<Villager, ResidentRenderState, HumanoidModel<ResidentRenderState>> {
+    /** Set while a GUI portrait is extracted; the portrait follows the mouse, not the camera. */
+    public static boolean portrait;
     public ResidentRenderer(EntityRendererProvider.Context context) {
         // Use the vanilla player's exact mesh, with a mob state: AvatarRenderState is
         // dispatched to the player renderer even when it originated from a villager.
@@ -63,5 +65,6 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         String job = villager.isBaby() ? "none" : VillageFriends.profession(villager);
         state.outfit = ResidentSkins.outfit(look, job);
         state.texture = ResidentSkins.texture(look, job);
+        ResidentLife.of(villager).extract(villager, state, portrait);
     }
 }

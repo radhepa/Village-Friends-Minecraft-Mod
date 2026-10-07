@@ -27,15 +27,20 @@ public final class FriendshipScreen extends Screen {
     private int left, top, panelWidth, panelHeight, portraitWidth, textLeft, textWidth, topicsY;
     private int dialogueScroll;
     private String lastDialogue;
+    private String lastAction;
 
     public FriendshipScreen(FriendshipPayload data) {
         super(Component.literal("Village Friends - " + data.name()));
         this.data = data;
         lastDialogue = data.dialogue();
+        if (data.opening()) ResidentLife.cue(data.entityId(), "greet");
     }
     public boolean matches(FriendshipPayload next) { return data.villagerId().equals(next.villagerId()); }
+    public int residentId() { return data.entityId(); }
     public void update(FriendshipPayload next) {
         if (!lastDialogue.equals(next.dialogue())) { dialogueScroll = 0; lastDialogue = next.dialogue(); }
+        react(lastAction, data, next);
+        lastAction = null;
         data = next;
         waiting = false;
         waitTicks = 0;
@@ -83,8 +88,21 @@ public final class FriendshipScreen extends Screen {
         Button button = new ConversationButton(x, y, w, 16, label, selected, pressed -> send(action));
         button.active = !waiting; actions.add(button); addRenderableWidget(button);
     }
+    /** The resident's body language answers what just happened in the conversation. */
+    private static void react(String action, FriendshipPayload before, FriendshipPayload after) {
+        if (action == null) return;
+        String trigger = switch (action) {
+            case "joke" -> "laugh";
+            case "gift" -> after.points() > before.points()
+                    ? after.dialogue().startsWith("You remembered!") ? "delighted" : "thanks"
+                    : after.status().contains("declined") || after.status().contains("kept") ? "decline" : null;
+            default -> null;
+        };
+        if (trigger != null) ResidentLife.cue(after.entityId(), trigger);
+    }
     private void send(String action) {
         if (waiting || !ClientPlayNetworking.canSend(ActionPayload.TYPE)) return;
+        lastAction = action;
         ClientPlayNetworking.send(new ActionPayload(data.entityId(), data.villagerId(), action));
         if (action.equals("trade") || action.equals("home")) { onClose(); return; }
         waiting = true;
@@ -131,10 +149,13 @@ public final class FriendshipScreen extends Screen {
         g.fillGradient(portraitX + 2, portraitY + 2, portraitX + portraitWidth - 2,
                 portraitY + portraitHeight - 2, 0xFFD2DEC0, 0xFFF0E7CB);
         if (minecraft.level != null && minecraft.level.getEntity(data.entityId()) instanceof LivingEntity villager) {
-            InventoryScreen.extractEntityInInventoryFollowsMouse(g, portraitX + 2, portraitY + 2,
-                    portraitX + portraitWidth - 2, portraitY + portraitHeight - 2,
-                    (int)Math.min(portraitWidth * 1.07, portraitHeight * 0.65), 0.36F,
-                    portraitX + portraitWidth / 2F - 10, portraitY + portraitHeight / 2F, villager);
+            ResidentRenderer.portrait = true;
+            try {
+                InventoryScreen.extractEntityInInventoryFollowsMouse(g, portraitX + 2, portraitY + 2,
+                        portraitX + portraitWidth - 2, portraitY + portraitHeight - 2,
+                        (int)Math.min(portraitWidth * 1.07, portraitHeight * 0.65), 0.36F,
+                        portraitX + portraitWidth / 2F - 10, portraitY + portraitHeight / 2F, villager);
+            } finally { ResidentRenderer.portrait = false; }
         }
         int heartsX = portraitX + (portraitWidth - 79) / 2;
         int heartsY = top + panelHeight - 74;

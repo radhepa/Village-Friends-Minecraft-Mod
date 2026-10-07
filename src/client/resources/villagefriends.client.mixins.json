@@ -1,0 +1,1 @@
+{"required":true,"package":"dev.villagefriends.client.mixin","compatibilityLevel":"JAVA_25","client":["VillagerEventMixin"],"injectors":{"defaultRequire":1}}

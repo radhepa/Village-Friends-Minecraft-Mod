@@ -7,7 +7,7 @@
   "authors": ["minal"],
   "license": "MIT",
   "environment": "*",
-  "mixins": ["villagefriends.mixins.json"],
+  "mixins": ["villagefriends.mixins.json", {"config": "villagefriends.client.mixins.json", "environment": "client"}],
   "entrypoints": {
     "main": ["dev.villagefriends.VillageFriends"],
     "client": ["dev.villagefriends.client.VillageFriendsClient"]

@@ -9,6 +9,9 @@ import net.minecraft.world.entity.EntityTypes;
 public final class VillageFriendsClient implements ClientModInitializer {
     @Override public void onInitializeClient() {
         ResidentSkins.register();
+        AnimationPacks.register();
+        net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(ResidentLife::tickAll);
+        net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> client.execute(ResidentLife::clear));
         EntityRendererRegistry.register(EntityTypes.VILLAGER, ResidentRenderer::new);
         ClientPlayNetworking.registerGlobalReceiver(FriendshipPayload.TYPE, (payload, context) -> {
             var client = context.client();

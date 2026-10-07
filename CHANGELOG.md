@@ -1,3 +1,12 @@
+# Village Friends — Village Life animation pack (unreleased)
+
+- Add resident animation packs: client resources under `assets/<namespace>/resident_animations/` that resource packs can extend, replace or trim. Clips key rotations and offsets for the head, body, arms, legs, a hip-pivoting waist and a feet-pivoting root, plus eyelids and gaze, sampled with smooth, overshoot-free curves.
+- Ship the first pack, Village Life: 99 clips (90 motions) covering everyday idles, a hobby for each of the twelve personalities, a work motion for every vanilla and Village Friends profession, greetings, conversation gestures, neighbor chats, reactions, weather and children's play.
+- Give each resident a client-side director: idles paced by personality, neighbors who take turns speaking and listening, greetings when a player walks up, gestures while the conversation window is open, laughs at jokes, cheers or thanks for gifts, polite refusals for disliked gifts and refused trades, and reactions to hearts, angry clouds, happy sparkles, raid sweat and harm. One resident in nine is left-handed.
+- Add always-on idle life: a slow weight shift, a drifting gaze between AI look targets, visible breathing in the shoulders, and a forward lean when hurrying.
+- Sync each resident's personality to clients (`villagefriends:temperament`) so body language matches the Journal. Turn the head toward the player while greeting or talking.
+- Add `tools/animations/` (authoring kit, compiler with `--check`, offline previews and a film assembler), `-PanimationPack` in-game checks with a still of every clip, and a development `-PanimationVideo` showcase.
+
 # Village Friends 2.10.1 — Guard spawn eggs
 
 - Add Knight and Archer Spawn Eggs to Creative's Spawn Eggs tab and `/give`, using the existing villager entity rather than separate mobs.

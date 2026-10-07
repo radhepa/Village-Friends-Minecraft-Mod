@@ -88,4 +88,23 @@ loom.runs {
     client { programArgs '--username', 'VillageTester' }
 }
 
-
+// Animation pack checks (-PanimationPack) and the showcase film (-PanimationVideo, development only:
+// it writes numbered frames under build/run/clientGameTest/screenshots for tools/animations/film.py).
+tasks.named('processGametestResources') {
+    def animationPack = providers.gradleProperty('animationPack').isPresent()
+    def animationVideo = providers.gradleProperty('animationVideo').isPresent()
+    inputs.property 'animationPack', animationPack
+    inputs.property 'animationVideo', animationVideo
+    doLast {
+        if (animationPack || animationVideo) {
+            def descriptor = new File(destinationDir, 'fabric.mod.json')
+            def metadata = new groovy.json.JsonSlurper().parse(descriptor)
+            metadata.entrypoints['fabric-client-gametest'] = [animationVideo ? 'dev.villagefriends.AnimationFilmGameTest' : 'dev.villagefriends.AnimationPackGameTest']
+            descriptor.setText(new groovy.json.JsonBuilder(metadata).toPrettyString() + '\n', 'UTF-8')
+        }
+    }
+}
+tasks.matching { it.name == 'runClientGameTest' }.configureEach {
+    systemProperty 'villagefriends.filmScenes', providers.gradleProperty('filmScenes').getOrElse('')
+    systemProperty 'villagefriends.filmStride', providers.gradleProperty('filmStride').getOrElse('1')
+}
