@@ -1,0 +1,37 @@
+{
+  "entity.villager.ambient": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.ambient",
+    "sounds": ["villagefriends:voice/ambient1", "villagefriends:voice/ambient2", "villagefriends:voice/ambient3"]
+  },
+  "entity.villager.celebrate": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.celebrate",
+    "sounds": ["villagefriends:voice/yes1", "villagefriends:voice/yes2", "villagefriends:voice/yes3"]
+  },
+  "entity.villager.yes": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.yes",
+    "sounds": ["villagefriends:voice/yes1", "villagefriends:voice/yes2", "villagefriends:voice/yes3"]
+  },
+  "entity.villager.no": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.no",
+    "sounds": ["villagefriends:voice/no1", "villagefriends:voice/no2", "villagefriends:voice/no3"]
+  },
+  "entity.villager.trade": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.trade",
+    "sounds": ["villagefriends:voice/trade1", "villagefriends:voice/trade2", "villagefriends:voice/trade3"]
+  },
+  "entity.villager.hurt": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.hurt",
+    "sounds": ["villagefriends:voice/hurt1", "villagefriends:voice/hurt2", "villagefriends:voice/hurt3", "villagefriends:voice/hurt4"]
+  },
+  "entity.villager.death": {
+    "replace": true,
+    "subtitle": "subtitles.entity.villager.death",
+    "sounds": ["villagefriends:voice/death"]
+  }
+}
