@@ -22,6 +22,7 @@ def build(g):
         strand(g, f"{side}_tip", pivot, (0, 0, -2 * sign), ((2, 2), (1, 2)), 1, 5624 + (sign > 0), ring=None, start=10.2)
         curtain = g.piece(f"{side}_curtain", "HEAD", (-.5, 0, -2.5), (1, 7, 5), pivot=(4.4 * sign, -7.8, 1.1), rotation=(0, 0, -3 * sign))
         cel_box(curtain, 5628 + (sign > 0), ring=1)
-    for i, (x, length, z, rz) in enumerate(((-3.3, 10, 4.3, 3), (-1.1, 11, 4.65, 1), (1.1, 11, 4.3, -1), (3.3, 10, 4.65, -3))):
-        panel = g.piece(f"back_{i}", "HEAD", (-1.5, 0, -.5), (3, length, 1), pivot=(x, -7.8, z), rotation=(5, 0, rz), motion="sway")
+    for i, (x, length, z, rx, rz) in enumerate(((-3.3, 9, 4.3, 3, 6), (-1.1, 12, 4.8, 1, 2), (1.1, 11, 4.3, 2, -1.5),
+                                                (3.3, 8, 4.8, 4, -6))):
+        panel = g.piece(f"back_{i}", "HEAD", (-1.5, 0, -.5), (3, length, 1), pivot=(x, -7.8, z), rotation=(rx, 0, rz), motion="sway")
         cel_box(panel, 5640 + i, ring=1)

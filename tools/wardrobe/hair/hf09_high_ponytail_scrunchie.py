@@ -1,9 +1,9 @@
-"""High Ponytail: pulled up to a ruffled scrunchie at the crown, a full tail arcing back with two side strands."""
+"""Scrunchie High Ponytail: pulled up to a ruffled scrunchie at the crown, a full tail arcing back with two side strands."""
 from anime import cel_box, ring_shell
 from anime_female import combed, curve, pointed, points, swept_sides, SIDES
 from paint import k, scalp, solid
 
-META = {"name": "High Ponytail", "gender": "female",
+META = {"name": "Scrunchie High Ponytail", "gender": "female",
         "description": "A full high ponytail in a ruffled scrunchie, arcing back as it falls, with pointed bangs."}
 
 

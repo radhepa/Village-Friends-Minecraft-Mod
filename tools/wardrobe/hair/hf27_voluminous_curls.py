@@ -1,9 +1,9 @@
-"""Voluminous Curls: a big, full cloud of soft curls past the shoulders, widest at the jaw, with a curly fringe."""
+"""Voluminous Long Curls: a big, full cloud of soft curls past the shoulders, widest at the jaw, with a curly fringe."""
 from anime import ring_shell
 from anime_female import bubble_face, fall, paint, SIDES
 from paint import scalp
 
-META = {"name": "Voluminous Curls", "gender": "female",
+META = {"name": "Voluminous Long Curls", "gender": "female",
         "description": "A big, full head of soft curls past the shoulders, widest at the jaw, with a curly fringe."}
 
 CURL = ((3, 4, 0, 2), (3, 4, .5, 2), (2, 3, -.4, 2))

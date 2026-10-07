@@ -23,6 +23,10 @@ def build(g):
         paint(wave, "wave", 9010 + (sign > 0), 2, ring=0)
         side_wave = g.piece(f"{side}_side_wave", "HEAD", (-.5, -2, -3), (1, 4, 6), pivot=(4.45 * sign, -5.8, .7), rotation=(-8, 0, 0))
         paint(side_wave, "wave", 9015 + (sign > 0), 2, ring=None)
+        # A soft scalloped roll at the hairline either side of the part.
+        roll = g.piece(f"{side}_hairline_roll", "HEAD", (-1.5, -.5, -1), (3, 1, 2), pivot=(1.9 * sign, -8.45, -3.7),
+                       rotation=(24, 0, 10 * sign))
+        paint(roll, "wave", 9018 + (sign > 0), 3, ring=None)
     bun(g, "bun", (0, -5.2, 5.0), (-80, 0, 0), (4, 2, 4), seed=9020)
     pin = g.piece("pin", "HEAD", (-2.5, -.5, -.5), (5, 1, 1), pivot=(0, -5.0, 5.9), rotation=(0, 0, 30))
     solid(pin, "M", "smooth", 9030, 3, edge=False)

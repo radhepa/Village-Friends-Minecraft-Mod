@@ -26,9 +26,9 @@ def build(g):
     for f in top.sides:
         f.hline(0, f.w - 1, 0, k("A", 3))
     # Waist-length blunt panels: each a different length and tilt, so the hem steps rather than slabs.
-    for i, (x, w, length, z, rz) in enumerate(((-3.6, 2, 18, 4.3, 3), (-1.9, 3, 20, 4.65, 1), (0, 3, 21, 4.3, 0),
-                                                (1.9, 3, 19, 4.65, -1), (3.6, 2, 17, 4.3, -3))):
-        panel = g.piece(f"back_{i}", "HEAD", (-w / 2, 0, -.5), (w, length, 1), pivot=(x, -7.8, z), rotation=(-3, 0, rz), motion="sway")
+    for i, (x, w, length, z, rx, rz) in enumerate(((-3.7, 2, 15, 4.3, -2, 5), (-2.0, 3, 19, 4.85, -5, 2), (0, 3, 21, 4.3, -4, -.5),
+                                                    (2.0, 3, 18, 4.85, -5, -2.5), (3.7, 2, 14, 4.3, -2, -6))):
+        panel = g.piece(f"back_{i}", "HEAD", (-w / 2, 0, -.5), (w, length, 1), pivot=(x, -7.8, z), rotation=(rx, 0, rz), motion="sway")
         cel_box(panel, 5530 + i, ring=1)
         for y in range(2, length):   # a parting shadow down each panel's edge keeps the panels apart
             panel.back.set(0, y, k("H", 1)), panel.front.set(w - 1, y, k("H", 1))
