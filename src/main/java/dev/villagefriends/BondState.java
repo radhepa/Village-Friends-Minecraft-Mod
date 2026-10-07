@@ -59,9 +59,10 @@ public record BondState(int trust, int chapter, int legacyLevel, int visits, lon
         return copy(trust + (activityDay == day ? 0 : 5), chapter, legacyLevel, visits, visitDay, day, memories, flags, recentLines)
                 .flag("activity:" + type).flag("shared_experience").remember(day, "We shared " + type + " together.");
     }
+    /** The highest relationship tier shared history allows: points alone cannot pass it. */
+    public int gate() { return chapter >= 4 && visits >= 5 ? 4 : chapter >= 3 ? 3 : has("shared_experience") ? 2 : 1; }
     public int level(FriendshipState affinity) {
-        int gate = chapter >= 4 && visits >= 5 ? 4 : chapter >= 3 ? 3 : has("shared_experience") ? 2 : 1;
-        return Math.max(legacyLevel, Math.min(affinity.level(), gate));
+        return Math.max(legacyLevel, Math.min(affinity.level(), gate()));
     }
     public String trustLabel() { return trust < 30 ? "Wary" : trust < 50 ? "Hesitant" : trust < 70 ? "Comfortable" : "Trusting"; }
 }
