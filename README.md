@@ -1,6 +1,6 @@
-# Village Friends 2.12.0
+# Village Friends 2.13.0
 
-A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
+A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Villages are real communities: everyone knows everyone, families grow, and love blooms slowly. Conversations work offline, with no AI account or service fees.
 
 The mod includes the master specification's **Phase 1 registry and item foundation**: ten professions with distinct workstations and five levels of trades, 17 new blocks, 24 items, and 41 recipes. Place a new workstation near an unemployed adult to let them acquire its job. Find the content in vanilla creative tabs or craft it in Survival. The implementation plan and integration details are in [PHASE1.md](PHASE1.md).
 
@@ -14,13 +14,15 @@ Each building is an independent template written as a small design program and c
 
 **Village Life animation pack:** residents decide what to do from moment to moment, choosing from 99 animation clips. They stretch, yawn, hum, scratch their heads and kick pebbles; practice their trade (smiths hammer, farmers hoe, clerics pray, cooks stir, tailors stitch, knights stand guard) and a hobby that fits their personality; chat with a neighbor beside them, taking turns to speak and listen; wave, bow or salute when you walk up; gesture while you talk, laugh at your jokes, cheer for a favorite gift and shake their heads at one they dislike; hunch in the rain and shiver in the snow. Children hop, twirl, play airplane and peekaboo. About one resident in nine is left-handed. Resource packs can add more packs; see [ANIMATION_PACKS.md](ANIMATION_PACKS.md).
 
+**Village life:** every resident knows everyone in their village and has a relationship meter with each of them that grows with time and company and dips after a quarrel. Natural villages are settled by families who share a surname: couples, brothers and sisters, parents and children. Single residents can fall in love with someone outside their family, but slowly: each pair needs its own 50 to 1,000 days of knowing each other, and some residents never fall in love. Sweethearts marry, and babies join their parents' family. Residents talk about all of it: their partner and children, their best friend and their rival, who just fell in love, the new baby, the neighbor who needs curing. Speech bubbles pop over their heads Tomodachi Life–style: a "!" when they spot you, hearts between sweethearts, a "..." while neighbors chat, sparks between rivals, "Zz" while they sleep. The **Village Ledger** lists everyone in a village with their family, love life and your friendship level, and shows how each resident feels about every neighbor. See [VILLAGE_LIFE.md](VILLAGE_LIFE.md).
+
 Bread and stew restore health; coffee grants a short speed boost. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Medical supplies, bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically; other professions use ordinary villager behavior.
 
 For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creative's **Spawn Eggs** tab. They create ordinary equipped adult villagers at levels 15–30, work in dispensers, and keep their jobs without nearby workstations. Commands: `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. See [GUARDS.md](GUARDS.md) for combat and progression rules.
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.12.0.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.13.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -28,11 +30,11 @@ The existing profile uses `%APPDATA%\.minecraft\instances\VillageFriends`. The u
 
 ## Your friendship journey
 
-The conversation window keeps its wood-and-parchment design and a live portrait of the resident, including their equipment. Dialogue types out with soft blips (Space finishes a line), and residents speak in wordless, human-like hums instead of vanilla villager sounds. Use these tabs:
+The conversation window keeps the resident in view: the world stays sharp, and their mood shows in a speech bubble over their head. At the bottom, a parchment dialogue box holds their live portrait (including equipment), a name ribbon with their job, personality and hometown, and the line they are saying. Dialogue types out with soft blips (Space or a click finishes a line), and residents speak in wordless, human-like hums instead of vanilla villager sounds. Your replies float as numbered bubbles on the right; press 1–6 or click. A card in the corner shows your friendship level as ten hearts and what the next level needs. The dock along the bottom switches between these tabs and holds Give gift (showing the item in your hand and how many gifts are left today), Trade, Village (the Village Ledger at their page) and Goodbye:
 
 | Tab | What you can do |
 |---|---|
-| Talk | Talk about daily life, work, adventures, or jokes. Repair trust with an apology after harmful actions or a broken promise. |
+| Talk | Talk about daily life, work, adventures, or jokes. Ask for village news (level 3) and, once you're good friends, whether there's anyone special in their life (level 5). Repair trust with an apology after harmful actions or a broken promise. |
 | Story | Listen to a four-chapter personal story, help with a request, hear a confession, and choose encouragement or a practical first step. |
 | Journal | Read the latest 24 shared memories, preferences, resident friendships, and story requirements. Scroll long text with the mouse wheel. |
 | Time | Take a walk, share a picnic, explore together, or invite nearby neighbors to a gathering. |
@@ -49,6 +51,8 @@ Your first conversation each day gives four points. The first story request give
 | Friend | 40 and a shared experience |
 | Close Friend | 80 and the personal confession |
 | Best Friend | 140 and the completed story across at least five visiting days |
+
+Each tier spans two **friendship levels**, from Lv. 0 New Neighbor to Lv. 10 Lifelong Friend, at 5, 15, 28, 40, 58, 80, 105, 140, 170 and 200 points. Every level unlocks something: their favorite things and time together (2), village news (3), adventures and picnic invitations (4), heart-to-heart talks about love and family (5), village secrets (6), a heart when they see you (7), best-friend greetings (8), a small daily gift (9). Reaching a level is celebrated in the conversation.
 
 Points stop at 200. Gifts alone cannot unlock the upper tiers. Stories, requests, visits, and activities can earn those tiers without repeated gifting. Existing unlocked tiers from 1.1.0 are preserved even if the new story has not yet been completed.
 
@@ -69,7 +73,7 @@ Activities unlock at 15 points and at least 30 trust. They occupy your one compa
 - **Exploration:** at least 30 seconds together and 32 blocks from where you started.
 - **Gathering:** offer picnic food with at least two other adult residents nearby. Up to six neighbors join for at least 20 seconds.
 
-Residents form up to 16 persistent connections with other residents they spend days near. Shared hobbies and values help these connections grow. Their nearby neighbors appear in conversation and the journal. Friends may invite you to a picnic; invitations are limited to one per player per Minecraft day.
+Every resident has a relationship meter with every neighbor in their village. Days spent near each other and a shared personality help it grow; quarrels dent it for a few weeks. Their family, partner, closest friend and rival appear in conversation, the Journal and the Village Ledger. Friends may invite you to a picnic; invitations are limited to one per player per Minecraft day.
 
 ## Adventure companions
 
@@ -85,7 +89,7 @@ Adult Knights and Archers use specialized village defense, including ranged bow 
 
 Peaceful players can exchange their role's weapon or armor without recruitment; recruited guards accept only their owner's exchanges. See [GUARDS.md](GUARDS.md) for progression, predators, friendship forgiveness, pursuit limits and unlimited arrows.
 
-This release supports Overworld travel. Companions cannot use portals while recruited. Nether/End travel, patrols, larger parties, romance, marriage, and family are future expansions. Activities interrupted by a server restart end safely without awarding completion. Pathfinding still needs a reachable route; this mod does not build bridges, clear blocks, or alter terrain.
+This release supports Overworld travel. Companions cannot use portals while recruited. Nether/End travel, patrols and larger parties are future expansions. Activities interrupted by a server restart end safely without awarding completion. Pathfinding still needs a reachable route; this mod does not build bridges, clear blocks, or alter terrain.
 
 ## Persistent residents and co-op
 
@@ -112,6 +116,16 @@ Plank | Oak sign | Plank
 To choose or change a village name, name the marker in an **anvil**, then place it in that village. Names may contain up to 48 characters. Place an unnamed marker to accept the generated name. A placed marker can be broken and moved; breaking it never deletes the settlement or its residents' origins. No markers or terrain edits are placed automatically.
 
 Each resident keeps their first assigned hometown when traveling or moving away. Renaming the village updates its residents' suffix when they load, without appending it twice or changing their underlying identity. Name tags can still change the personal part of a resident's name. Conversion and curing preserve hometown membership as well as friendship. Players on the same server share settlement names.
+
+## Families, love and the Village Ledger
+
+When you first find a natural village, many of its residents turn out to be family: married couples, brothers and sisters, parents and children, sharing a surname. Babies born in the village join their parents' family and take their surname. Relatives never start a family together, and someone in love only with their own partner.
+
+Love takes its time. Two single adults who aren't related may become sweethearts after knowing each other for their pair's own 50 to 1,000 days, and only if they really like each other. Close friends hear about secret crushes first. Sweethearts marry after a courtship of one to five months. About one resident in five is happy on their own, and some pairs simply never click. Villages live their days while some of their residents are loaded, and catch up on up to 30 days after you've been away.
+
+Big news (a new couple, a wedding, a birth, a death, a neighbor turned into a zombie villager or cured) is announced in chat to players in the village, and residents talk about it. A zombified resident can still be cured and come home.
+
+Craft a **Village Ledger** from a book, an ink sac and paper, or right-click a **Notice Board**. Inside a village it lists every resident with their job, their family or love life and your friendship level. Click a name to read their page: personality, family, partner, closest friend and rival, their favorite gift once you're acquaintances, a secret crush once you're close friends, and a meter for how they feel about every neighbor. With nobody selected, it shows the village news.
 
 ## Clothing and hair
 
@@ -141,10 +155,10 @@ Requirements: **Minecraft 26.3, Fabric Loader 0.19.5+, Fabric API 0.161.0+26.3, 
 - Run `powershell -ExecutionPolicy Bypass -File .\build.ps1`, or `gradlew.bat build` with JDK 25 as JAVA_HOME. Gradle installs its own build runtime.
 - `gradlew.bat runClient` starts a separate development client.
 - `gradlew.bat runClientGameTest` runs real client/server interaction tests, screenshot checks, and save/reload tests. The test mod is excluded from the release JAR.
-- Release output: `build/libs/village-friends-2.12.0.jar`. Install this file, not the sources JAR.
+- Release output: `build/libs/village-friends-2.13.0.jar`. Install this file, not the sources JAR.
 - The art generator needs Python and Pillow only when regenerating assets.
 
-Read VERIFICATION.md for test coverage and its limits. Romance and family remain milestone 7, after the friendship systems have been used in real worlds.
+Read VERIFICATION.md for test coverage and its limits. Families, romance and the Village Ledger are described in [VILLAGE_LIFE.md](VILLAGE_LIFE.md).
 
 MIT license. Original artwork; no Stardew Valley assets included.
 
