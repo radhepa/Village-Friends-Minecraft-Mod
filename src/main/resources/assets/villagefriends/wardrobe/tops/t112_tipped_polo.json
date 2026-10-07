@@ -1,0 +1,76 @@
+{
+  "id": "t112_tipped_polo",
+  "kind": "top",
+  "name": "Tipped Polo",
+  "gender": "male",
+  "texture": "tops/t112_tipped_polo.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A pale pique polo; thin accent stripes tip its collar and sleeve bands."
+}

@@ -1,0 +1,133 @@
+{
+  "id": "bf017_split_riding_skirt",
+  "kind": "bottom",
+  "name": "Split Riding Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf017_split_riding_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_culotte",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_culotte_flare",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        5,
+        -3
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_culotte",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_culotte_flare",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        5,
+        -3
+      ],
+      "size": [
+        6,
+        3,
+        6
+      ],
+      "uv": [
+        21,
+        12
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "A divided riding skirt, each leg cut wide and pleated like a skirt, over tall riding boots."
+}

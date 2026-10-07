@@ -1,0 +1,190 @@
+{
+  "id": "tf060_corded_lady_mantle",
+  "kind": "top",
+  "name": "Corded Lady's Mantle",
+  "gender": "female",
+  "texture": "tops/tf060_corded_lady_mantle.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.7,
+        -2.8
+      ],
+      "size": [
+        17,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "fur_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -1.6,
+        -2.8
+      ],
+      "size": [
+        9,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "mantle_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        2.75
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        31,
+        10
+      ]
+    },
+    {
+      "id": "mantle_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.423204552858065,
+        3.5173212111853784
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        23
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tassel_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        5.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        23
+      ]
+    },
+    {
+      "id": "tassel_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        5.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        28,
+        23
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A long mantle with a fur collar, held by tasseled cords crossed over the breast, over a velvet kirtle."
+}

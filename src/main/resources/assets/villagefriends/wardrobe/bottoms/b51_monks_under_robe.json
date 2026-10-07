@@ -1,0 +1,132 @@
+{
+  "id": "b51_monks_under_robe",
+  "kind": "bottom",
+  "name": "Monk's Under-Robe",
+  "gender": "male",
+  "texture": "bottoms/b51_monks_under_robe.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "robe_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "robe_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t51_monks_scapular_habit",
+  "description": "The habit's ankle-length skirts falling in deep folds, over bare feet in plain strapped sandals."
+}

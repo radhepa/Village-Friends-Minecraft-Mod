@@ -1,0 +1,107 @@
+{
+  "id": "t92_straw_mummers_cape",
+  "kind": "top",
+  "name": "Straw Mummer's Cape",
+  "gender": "male",
+  "texture": "tops/t92_straw_mummers_cape.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "straw_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.9,
+        -3.4
+      ],
+      "size": [
+        12,
+        9,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "ribbon_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        1.6,
+        -3.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "ribbon_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        1.6,
+        -3.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "lockedTo": "b92_straw_mummers_leg_bundles",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A midwinter guiser's cape of thatched straw falling in layers from shoulders to hips, bound with bright ribbons, straw at the wrists."
+}

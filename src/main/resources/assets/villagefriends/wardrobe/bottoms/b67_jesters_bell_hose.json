@@ -1,0 +1,130 @@
+{
+  "id": "b67_jesters_bell_hose",
+  "kind": "bottom",
+  "name": "Jester's Bell Hose",
+  "gender": "male",
+  "texture": "bottoms/b67_jesters_bell_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_curl_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -3
+      ],
+      "size": [
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_curl_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -3
+      ],
+      "size": [
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "right_bell_tip",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        22,
+        0
+      ]
+    },
+    {
+      "id": "left_bell_tip",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t67_jesters_motley",
+  "description": "Chequered motley hose with each leg reversed, in long soft shoes curling up at the toe, a little bell on every tip."
+}

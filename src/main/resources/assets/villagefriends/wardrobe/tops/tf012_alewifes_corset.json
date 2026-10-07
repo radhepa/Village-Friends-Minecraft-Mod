@@ -1,0 +1,106 @@
+{
+  "id": "tf012_alewifes_corset",
+  "kind": "top",
+  "name": "Alewife's Corset",
+  "gender": "female",
+  "texture": "tops/tf012_alewifes_corset.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bar_towel",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "key_cord",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "keys",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        3,
+        -0.1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A boned corset laced with ribbon over a billowing chemise, a striped bar towel and the cellar keys."
+}

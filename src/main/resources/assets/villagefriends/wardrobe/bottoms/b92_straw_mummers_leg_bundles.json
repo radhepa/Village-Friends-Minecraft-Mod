@@ -1,0 +1,134 @@
+{
+  "id": "b92_straw_mummers_leg_bundles",
+  "kind": "bottom",
+  "name": "Straw Mummer's Leg Bundles",
+  "gender": "male",
+  "texture": "bottoms/b92_straw_mummers_leg_bundles.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_thigh_straw",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "left_thigh_straw",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "right_shin_straw",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "left_shin_straw",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.16
+    }
+  ],
+  "lockedTo": "t92_straw_mummers_cape",
+  "description": "Wool trousers bound at the thigh and the shin with sheaves of straw tied on with ribbons, over plain turnshoes."
+}

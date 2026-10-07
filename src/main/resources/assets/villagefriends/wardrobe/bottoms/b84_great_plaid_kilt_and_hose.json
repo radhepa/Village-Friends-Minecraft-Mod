@@ -1,0 +1,189 @@
+{
+  "id": "b84_great_plaid_kilt_and_hose",
+  "kind": "bottom",
+  "name": "Great Plaid Kilt & Hose",
+  "gender": "male",
+  "texture": "bottoms/b84_great_plaid_kilt_and_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "kilt",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "plaid_kilt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "plaid_kilt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "plaid_kilt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "plaid_kilt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "right_garter_flash",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.25,
+        5.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "left_garter_flash",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.25,
+        5.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    }
+  ],
+  "lockedTo": "t84_belted_great_plaid",
+  "description": "The great plaid's pleated lower fold belted at the waist, diced hose with garter flashes, and brogues with long tongues."
+}

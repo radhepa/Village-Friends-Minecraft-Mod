@@ -1,0 +1,78 @@
+{
+  "id": "t107_cream_tunic",
+  "kind": "top",
+  "name": "Cream Tunic",
+  "gender": "male",
+  "texture": "tops/t107_cream_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain long-sleeved pullover tunic in soft cream."
+}

@@ -1,0 +1,77 @@
+{
+  "id": "tf015_bakers_dusted_waistcoat",
+  "kind": "top",
+  "name": "Baker's Dusted Waistcoat",
+  "gender": "female",
+  "texture": "tops/tf015_bakers_dusted_waistcoat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bunched_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_bunched_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A buttoned waistcoat marked with a floury handprint, chemise sleeves bunched above the elbow, dusty forearms."
+}

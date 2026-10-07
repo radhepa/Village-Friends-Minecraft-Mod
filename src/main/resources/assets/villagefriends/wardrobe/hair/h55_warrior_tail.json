@@ -1,0 +1,361 @@
+{
+  "id": "h55_warrior_tail",
+  "kind": "hair",
+  "name": "Wrapped Warrior Tail",
+  "gender": "male",
+  "texture": "hair/h55_warrior_tail.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "dragged_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.0,
+        -8.3,
+        -0.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        9.0
+      ],
+      "origin": [
+        -1.0,
+        -1,
+        -3.5
+      ],
+      "size": [
+        2,
+        1,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "dragged_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.0,
+        -8.450000000000001,
+        -0.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        3.0
+      ],
+      "origin": [
+        -1.0,
+        -1,
+        -3.5
+      ],
+      "size": [
+        2,
+        1,
+        7
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "dragged_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.0,
+        -8.3,
+        -0.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        -3.0
+      ],
+      "origin": [
+        -1.0,
+        -1,
+        -3.5
+      ],
+      "size": [
+        2,
+        1,
+        7
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "dragged_3",
+      "bone": "HEAD",
+      "pivot": [
+        3.0,
+        -8.450000000000001,
+        -0.6
+      ],
+      "rotation": [
+        -8,
+        0,
+        -9.0
+      ],
+      "origin": [
+        -1.0,
+        -1,
+        -3.5
+      ],
+      "size": [
+        2,
+        1,
+        7
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "tail_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        19,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "wrap_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        2.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        32,
+        9
+      ],
+      "inflate": 0.2,
+      "motion": "sway"
+    },
+    {
+      "id": "tail_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        3.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        41,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "wrap_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        6.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        50,
+        9
+      ],
+      "inflate": 0.2,
+      "motion": "sway"
+    },
+    {
+      "id": "tail_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        7.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "wrap_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        10.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        18
+      ],
+      "inflate": 0.2,
+      "motion": "sway"
+    },
+    {
+      "id": "tail_6",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        11.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        18,
+        18
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_7",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.0,
+        4.0
+      ],
+      "rotation": [
+        7,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        14.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        18
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Shaved sides and a high tail bound down its length with leather wraps."
+}

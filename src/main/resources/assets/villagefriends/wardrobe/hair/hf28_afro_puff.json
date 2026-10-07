@@ -1,0 +1,381 @@
+{
+  "id": "hf28_afro_puff",
+  "kind": "hair",
+  "name": "Afro Puff",
+  "gender": "female",
+  "texture": "hair/hf28_afro_puff.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "puff_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.0,
+        -3.5
+      ],
+      "size": [
+        7,
+        4,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "puff_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "puff_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -4.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        1,
+        3
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "puff_3",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "puff_4",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.5,
+        -2.5
+      ],
+      "size": [
+        1,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        12
+      ]
+    },
+    {
+      "id": "puff_5",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        3.5,
+        -1.5,
+        -2.5
+      ],
+      "size": [
+        1,
+        3,
+        5
+      ],
+      "uv": [
+        34,
+        12
+      ]
+    },
+    {
+      "id": "puff_6",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1.5,
+        -4.5
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        12
+      ]
+    },
+    {
+      "id": "puff_7",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -10.9,
+        1.6
+      ],
+      "rotation": [
+        -18,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -1.5,
+        3.5
+      ],
+      "size": [
+        5,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        21
+      ]
+    },
+    {
+      "id": "band",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.55,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        9,
+        1,
+        2
+      ],
+      "uv": [
+        13,
+        21
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_band",
+      "bone": "HEAD",
+      "pivot": [
+        -4.6,
+        -8.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        36,
+        21
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_edge",
+      "bone": "HEAD",
+      "pivot": [
+        -4.2,
+        -6.4,
+        -3.8
+      ],
+      "rotation": [
+        0,
+        0,
+        20
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        21
+      ]
+    },
+    {
+      "id": "left_band",
+      "bone": "HEAD",
+      "pivot": [
+        4.6,
+        -8.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        48,
+        21
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_edge",
+      "bone": "HEAD",
+      "pivot": [
+        4.2,
+        -6.4,
+        -3.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        21
+      ]
+    }
+  ],
+  "description": "Coily hair gathered into a big round puff on the crown, with a slim cloth band at the hairline."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "t119_heather_v_neck",
+  "kind": "top",
+  "name": "Heather V-Neck",
+  "gender": "male",
+  "texture": "tops/t119_heather_v_neck.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A soft heathered tee with a clean V neckline and plain short sleeves."
+}

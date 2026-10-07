@@ -1,0 +1,17 @@
+{
+  "id": "b103_light_wash_jeans",
+  "kind": "bottom",
+  "name": "Light-Wash Jeans",
+  "gender": "male",
+  "texture": "bottoms/b103_light_wash_jeans.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "denim",
+    "modern"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Sun-faded light-wash jeans with whiskered thighs and paler knees, over canvas shoes."
+}

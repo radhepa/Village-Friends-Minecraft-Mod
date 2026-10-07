@@ -1,0 +1,19 @@
+{
+  "id": "t102_bone_tee",
+  "kind": "top",
+  "name": "Bone Tee",
+  "gender": "male",
+  "texture": "tops/t102_bone_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain crew-neck tee in pale bone."
+}

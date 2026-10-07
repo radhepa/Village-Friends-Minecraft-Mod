@@ -1,0 +1,135 @@
+{
+  "id": "t93_green_man_leaf_mantle",
+  "kind": "top",
+  "name": "Green Man's Leaf Mantle",
+  "gender": "male",
+  "texture": "tops/t93_green_man_leaf_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "leaf_mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        12,
+        5,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "leaf_drape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.0,
+        3.2
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        10,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "right_leaf_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "left_leaf_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        12
+      ],
+      "inflate": 0.14
+    }
+  ],
+  "lockedTo": "b93_green_man_leaf_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A May-Day guise of overlapping leaves layered over the shoulders and down the back, a berried ivy garland and leafy cuffs."
+}

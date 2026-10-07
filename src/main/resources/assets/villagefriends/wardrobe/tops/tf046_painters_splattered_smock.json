@@ -1,0 +1,188 @@
+{
+  "id": "tf046_painters_splattered_smock",
+  "kind": "top",
+  "name": "Painter's Splattered Smock",
+  "gender": "female",
+  "texture": "tops/tf046_painters_splattered_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.6,
+        -3
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "collar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "neckerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "brush_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.4000000000000004,
+        4.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "brush_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        4.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    },
+    {
+      "id": "brush_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.5999999999999996,
+        4.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A loose smock spattered in every color, a soft round collar, a knotted neckerchief and brushes in the pocket."
+}

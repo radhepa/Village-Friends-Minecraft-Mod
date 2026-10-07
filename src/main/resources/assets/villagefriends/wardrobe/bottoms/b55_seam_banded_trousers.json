@@ -1,0 +1,16 @@
+{
+  "id": "b55_seam_banded_trousers",
+  "kind": "bottom",
+  "name": "Seam-Banded Trousers",
+  "gender": "male",
+  "texture": "bottoms/b55_seam_banded_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Sober wool trousers with a narrow embroidered vine running down each outer seam and round the waist, over soft turnshoes."
+}

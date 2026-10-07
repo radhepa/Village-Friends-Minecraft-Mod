@@ -25,8 +25,8 @@ class WardrobeTest {
 
     @Test void menAndWomenEachHaveTheirOwnWardrobe() {
         assertEquals(80, count(Wardrobe.HAIR, Garment.Fit.MALE)); assertEquals(50, count(Wardrobe.HAIR, Garment.Fit.FEMALE));
-        assertEquals(200, count(Wardrobe.TOPS, Garment.Fit.MALE)); assertEquals(200, count(Wardrobe.TOPS, Garment.Fit.FEMALE));
-        assertEquals(200, count(Wardrobe.BOTTOMS, Garment.Fit.MALE)); assertEquals(200, count(Wardrobe.BOTTOMS, Garment.Fit.FEMALE));
+        assertEquals(120, count(Wardrobe.TOPS, Garment.Fit.MALE)); assertEquals(60, count(Wardrobe.TOPS, Garment.Fit.FEMALE));
+        assertEquals(120, count(Wardrobe.BOTTOMS, Garment.Fit.MALE)); assertEquals(60, count(Wardrobe.BOTTOMS, Garment.Fit.FEMALE));
         assertEquals(10, MasterPalettes.ALL.size()); assertEquals(10, Wardrobe.HAIR_COLORS.size());
         assertEquals(Wardrobe.ALL.size(), Wardrobe.ALL.stream().map(Garment::id).distinct().count());
         assertEquals(Wardrobe.OUTFITS.size(), Wardrobe.OUTFITS.stream().map(Wardrobe.OutfitTemplate::id).distinct().count());
@@ -163,7 +163,7 @@ class WardrobeTest {
             for (long seed = 0; seed < 3000; seed++) {
                 var base = OutfitFactory.assembleOutfit(gender, Profession.NONE, PaletteID.FOREST_AND_HEARTH, seed);
                 seenHair.add(base.hair());
-                if (seed >= 600) continue;
+                if (seed >= 1000) continue;
                 for (var job : Profession.values()) {
                     var outfit = OutfitFactory.assembleOutfit(gender, job, PaletteID.FOREST_AND_HEARTH, seed);
                     outfits++;

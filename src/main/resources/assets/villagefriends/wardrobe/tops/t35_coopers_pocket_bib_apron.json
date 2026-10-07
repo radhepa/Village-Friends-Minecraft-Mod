@@ -1,0 +1,161 @@
+{
+  "id": "t35_coopers_pocket_bib_apron",
+  "kind": "top",
+  "name": "Cooper's Pocket Bib Apron",
+  "gender": "male",
+  "texture": "tops/t35_coopers_pocket_bib_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belly_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.2,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mallet_handle",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        3.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "mallet_head",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        2.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    },
+    {
+      "id": "apron_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron_skirt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A barrel-maker's canvas bib apron with a deep belly pocket and mallet, straps crossed on the back, leather wrist guards."
+}

@@ -1,0 +1,247 @@
+{
+  "id": "t54_scholars_hood_and_girdle_book",
+  "kind": "top",
+  "name": "Scholar's Hood & Girdle Book",
+  "gender": "male",
+  "texture": "tops/t54_scholars_hood_and_girdle_book.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "academic_hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        2.6
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hood_fur_rim",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        8,
+        1,
+        2
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "rivet_spectacles",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "girdle_book_tail",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ]
+    },
+    {
+      "id": "girdle_book",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "gown_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        41,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A master's gown with a fur-rimmed academic hood down the back, rivet spectacles on a cord and a girdle book at the belt."
+}

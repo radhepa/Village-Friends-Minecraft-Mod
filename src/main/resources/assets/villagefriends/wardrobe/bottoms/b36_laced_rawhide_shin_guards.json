@@ -1,0 +1,74 @@
+{
+  "id": "b36_laced_rawhide_shin_guards",
+  "kind": "bottom",
+  "name": "Laced Rawhide Shin Guards",
+  "gender": "male",
+  "texture": "bottoms/b36_laced_rawhide_shin_guards.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_lace_tail",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        2.0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_lace_tail",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        2.0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    }
+  ],
+  "description": "Twill trousers under stiff rawhide shin guards laced up the back of the calf, and soft turnshoes."
+}

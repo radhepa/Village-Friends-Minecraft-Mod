@@ -1,0 +1,245 @@
+{
+  "id": "t49_water_carriers_yoke",
+  "kind": "top",
+  "name": "Water Carrier's Yoke",
+  "gender": "male",
+  "texture": "tops/t49_water_carriers_yoke.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shoulder_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -9,
+        0,
+        -1
+      ],
+      "size": [
+        18,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "yoke_pad",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.3,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        6,
+        1,
+        2
+      ],
+      "uv": [
+        41,
+        0
+      ]
+    },
+    {
+      "id": "rope_drop_0",
+      "bone": "TORSO",
+      "pivot": [
+        -8.4,
+        1.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "rope_hook_0",
+      "bone": "TORSO",
+      "pivot": [
+        -8.4,
+        5.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "rope_drop_1",
+      "bone": "TORSO",
+      "pivot": [
+        8.4,
+        1.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "rope_hook_1",
+      "bone": "TORSO",
+      "pivot": [
+        8.4,
+        5.0,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": "water_skin",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        7.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        15,
+        6
+      ]
+    },
+    {
+      "id": "water_skin_stopper",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        7.0,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        6
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A laced work shirt under a carved wooden shoulder yoke with rope drops and iron hooks, and a stoppered water skin."
+}

@@ -1,0 +1,78 @@
+{
+  "id": "tf031_coin_dancer_bodice",
+  "kind": "top",
+  "name": "Coin Dancer's Bodice",
+  "gender": "female",
+  "texture": "tops/tf031_coin_dancer_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_coin_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        6.8,
+        -3.0
+      ],
+      "size": [
+        6,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_coin_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        6.8,
+        -3.0
+      ],
+      "size": [
+        6,
+        2,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "lockedTo": "bf031_coin_dancer_skirt",
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A short sweetheart bodice fringed with coins, a bare midriff, light banded sleeves and jingling coin cuffs."
+}

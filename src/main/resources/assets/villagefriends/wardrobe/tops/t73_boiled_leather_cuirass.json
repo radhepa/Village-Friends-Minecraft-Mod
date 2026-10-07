@@ -1,0 +1,137 @@
+{
+  "id": "t73_boiled_leather_cuirass",
+  "kind": "top",
+  "name": "Boiled-Leather Cuirass",
+  "gender": "male",
+  "texture": "tops/t73_boiled_leather_cuirass.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "martial"
+  ],
+  "requires": [
+    "sturdy"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_rerebrace",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -1.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_rerebrace",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "fauld_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "fauld_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A cuir-bouilli breastplate tooled with a border and buckled at the sides, cupped leather rerebraces and a fauld of strips."
+}

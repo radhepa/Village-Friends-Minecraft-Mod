@@ -1,0 +1,219 @@
+{
+  "id": "t77_watchmans_lantern_coat",
+  "kind": "top",
+  "name": "Watchman's Lantern Coat",
+  "gender": "male",
+  "texture": "tops/t77_watchmans_lantern_coat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "martial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "turned_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lantern",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "lantern_ring",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        8
+      ]
+    },
+    {
+      "id": "watch_rattle",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        10.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        8
+      ]
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A night watchman's warm coat with a turned collar and pewter badge, a horn lantern glowing at the hip and a wooden rattle."
+}

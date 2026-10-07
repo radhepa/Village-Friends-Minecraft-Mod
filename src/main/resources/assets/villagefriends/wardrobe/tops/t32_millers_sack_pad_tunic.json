@@ -1,0 +1,220 @@
+{
+  "id": "t32_millers_sack_pad_tunic",
+  "kind": "top",
+  "name": "Miller's Sack-Pad Tunic",
+  "gender": "male",
+  "texture": "tops/t32_millers_sack_pad_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sack_pad",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.6,
+        -3.0
+      ],
+      "size": [
+        5,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "kerchief",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.3,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        0
+      ]
+    },
+    {
+      "id": "rope_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "rope_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        10.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A flour-dusted work tunic with a quilted pad on the shoulder for hauling sacks, a neckerchief and a rope belt."
+}

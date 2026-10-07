@@ -1,0 +1,160 @@
+{
+  "id": "bf018_archers_hip_wrap_trews",
+  "kind": "bottom",
+  "name": "Archer's Hip-Wrap & Trews",
+  "gender": "female",
+  "texture": "bottoms/bf018_archers_hip_wrap_trews.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        5,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        9
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.3,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        13,
+        11
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Close wool trews criss-crossed with leather garters, under a short wrap skirt tied at the hip."
+}

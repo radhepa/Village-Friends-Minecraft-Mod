@@ -1,0 +1,217 @@
+{
+  "id": "bf007_kilted_up_skirt",
+  "kind": "bottom",
+  "name": "Kilted-Up Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf007_kilted_up_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "relaxed",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        9
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -9
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "waist_tuck_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.9,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        13,
+        11
+      ]
+    },
+    {
+      "id": "waist_tuck_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.9,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        24,
+        11
+      ]
+    },
+    {
+      "id": "waist_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.2,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "An overskirt kilted up at both hips over a lace-edged petticoat, bare calves and strap sandals."
+}

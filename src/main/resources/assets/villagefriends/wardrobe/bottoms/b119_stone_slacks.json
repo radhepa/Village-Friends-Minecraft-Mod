@@ -1,0 +1,47 @@
+{
+  "id": "b119_stone_slacks",
+  "kind": "bottom",
+  "name": "Stone Slacks",
+  "gender": "male",
+  "texture": "bottoms/b119_stone_slacks.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Pressed slacks in a pale stone shade with a leather belt and shoes."
+}

@@ -1,0 +1,192 @@
+{
+  "id": "tf040_butchers_striped_apron",
+  "kind": "top",
+  "name": "Butcher's Striped Apron",
+  "gender": "female",
+  "texture": "tops/tf040_butchers_striped_apron.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_oversleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_oversleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        10,
+        1
+      ],
+      "uv": [
+        21,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "honing_steel",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        40,
+        10
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A heavy striped bib apron over a rolled-sleeve shirt, leather oversleeves and a honing steel at the hip."
+}

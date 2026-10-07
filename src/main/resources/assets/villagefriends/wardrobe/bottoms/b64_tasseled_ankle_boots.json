@@ -1,0 +1,75 @@
+{
+  "id": "b64_tasseled_ankle_boots",
+  "kind": "bottom",
+  "name": "Tasseled Ankle Boots",
+  "gender": "male",
+  "texture": "bottoms/b64_tasseled_ankle_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_tassel",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_tassel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Slim pressed trousers over soft ankle boots, each tied at the instep with a cord ending in a swinging tassel."
+}

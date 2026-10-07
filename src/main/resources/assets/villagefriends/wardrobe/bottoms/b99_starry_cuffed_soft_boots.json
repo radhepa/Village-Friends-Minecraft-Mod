@@ -1,0 +1,131 @@
+{
+  "id": "b99_starry_cuffed_soft_boots",
+  "kind": "bottom",
+  "name": "Starry-Cuffed Soft Boots",
+  "gender": "male",
+  "texture": "bottoms/b99_starry_cuffed_soft_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_star_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_star_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_pointed_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_pointed_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    }
+  ],
+  "description": "Night-dark hose in soft pointed boots whose wide turned-down cuffs are sewn with little pale stars."
+}

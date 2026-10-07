@@ -1,0 +1,75 @@
+{
+  "id": "b37_greased_knee_boots",
+  "kind": "bottom",
+  "name": "Greased Knee Boots",
+  "gender": "male",
+  "texture": "bottoms/b37_greased_knee_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_blouse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_blouse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Tall knee boots shining with tallow grease against the wet, wool trousers bloused in soft gathers over their tops."
+}

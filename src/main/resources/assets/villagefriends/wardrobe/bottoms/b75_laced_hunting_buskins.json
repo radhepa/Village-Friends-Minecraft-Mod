@@ -1,0 +1,75 @@
+{
+  "id": "b75_laced_hunting_buskins",
+  "kind": "bottom",
+  "name": "Laced Hunting Buskins",
+  "gender": "male",
+  "texture": "bottoms/b75_laced_hunting_buskins.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_buskin_fold",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_buskin_fold",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Close hose in soft knee-high hunting buskins laced all the way up the shin with thongs, their tops folded over."
+}

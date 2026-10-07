@@ -1,0 +1,161 @@
+{
+  "id": "t94_bridegrooms_wedding_doublet",
+  "kind": "top",
+  "name": "Bridegroom's Wedding Doublet",
+  "gender": "male",
+  "texture": "tops/t94_bridegrooms_wedding_doublet.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rosemary_sprig",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        2.2,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -15
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_favour",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.8,
+        0.4,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "left_favour",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.8,
+        0.4,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tucked_gloves",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "b94_bridegrooms_ribboned_hose",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pale brocade wedding doublet with a sprig of rosemary at the breast, ribbon favours on the sleeves and gloves tucked in the belt."
+}

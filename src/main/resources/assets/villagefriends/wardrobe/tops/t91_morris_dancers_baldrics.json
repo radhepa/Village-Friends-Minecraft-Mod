@@ -1,0 +1,164 @@
+{
+  "id": "t91_morris_dancers_baldrics",
+  "kind": "top",
+  "name": "Morris Dancer's Baldrics",
+  "gender": "male",
+  "texture": "tops/t91_morris_dancers_baldrics.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rosette",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        4.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "rosette_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        6.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "rosette_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        6.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_kerchief",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        -1.0,
+        8.2,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_kerchief",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        8.2,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "lockedTo": "b91_morris_bell_pads",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A white dancing shirt crossed front and back by two ribbon baldrics meeting at a rosette, kerchiefs tied at both wrists."
+}

@@ -1,0 +1,106 @@
+{
+  "id": "tf026_girdle_book_kirtle",
+  "kind": "top",
+  "name": "Girdle-Book Kirtle",
+  "gender": "female",
+  "texture": "tops/tf026_girdle_book_kirtle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "book_strap",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "girdle_book",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -0.2
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A high-necked kirtle with a linen collar band, ink-stained cuffs and a little girdle-book on its strap."
+}

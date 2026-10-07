@@ -1,0 +1,103 @@
+{
+  "id": "tf007_laundress_tucked_blouse",
+  "kind": "top",
+  "name": "Laundress's Tucked Blouse",
+  "gender": "female",
+  "texture": "tops/tf007_laundress_tucked_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "kerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_end_right",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        4.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_end_left",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        4.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A drawstring linen blouse tucked into the skirt, sleeves tied up for the washtub and a knotted kerchief."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "b114_corduroy_pants",
+  "kind": "bottom",
+  "name": "Corduroy Pants",
+  "gender": "male",
+  "texture": "bottoms/b114_corduroy_pants.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Soft wide-wale corduroy trousers in warm brown, with leather shoes."
+}

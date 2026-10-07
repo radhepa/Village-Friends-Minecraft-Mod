@@ -1,0 +1,73 @@
+{
+  "id": "b49_bast_shoes_and_onuchi",
+  "kind": "bottom",
+  "name": "Bast Shoes & Onuchi",
+  "gender": "male",
+  "texture": "bottoms/b49_bast_shoes_and_onuchi.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bast_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_bast_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Pale linen foot wraps bound to the knee with crossing cords, worn in shoes plaited from strips of bast bark."
+}

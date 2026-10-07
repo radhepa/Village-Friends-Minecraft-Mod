@@ -1,0 +1,16 @@
+{
+  "id": "b100_scorched_leather_leggings",
+  "kind": "bottom",
+  "name": "Scorched Leather Leggings",
+  "gender": "male",
+  "texture": "bottoms/b100_scorched_leather_leggings.png",
+  "extrasHeight": 0,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Stiff leather leggings pocked with burn holes from the furnace, over boots with thick wooden soles shod in iron."
+}

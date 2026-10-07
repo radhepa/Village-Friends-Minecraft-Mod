@@ -1,0 +1,247 @@
+{
+  "id": "tf018_archers_quiver_jerkin",
+  "kind": "top",
+  "name": "Archer's Quiver Jerkin",
+  "gender": "female",
+  "texture": "tops/tf018_archers_quiver_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_wing",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_wing",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_bracer",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "quiver",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        4.4,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        3,
+        8,
+        3
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "arrow_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        4.4,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -1.4,
+        -2.55,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        13,
+        10
+      ]
+    },
+    {
+      "id": "arrow_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        4.4,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        18,
+        10
+      ]
+    },
+    {
+      "id": "arrow_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        4.4,
+        4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        0.4,
+        -2.55,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        23,
+        10
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        28,
+        10
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A twill jerkin with dagged shoulder wings, a laced bracer, a shooting glove and a quiver across the back."
+}

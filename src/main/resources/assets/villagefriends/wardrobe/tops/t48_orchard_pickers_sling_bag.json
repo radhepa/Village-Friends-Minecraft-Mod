@@ -1,0 +1,132 @@
+{
+  "id": "t48_orchard_pickers_sling_bag",
+  "kind": "top",
+  "name": "Orchard Picker's Sling Bag",
+  "gender": "male",
+  "texture": "tops/t48_orchard_pickers_sling_bag.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "picking_bag",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.2,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        -3
+      ],
+      "size": [
+        6,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apple_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        5.5,
+        -4.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "apple_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        5.5,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "apple_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        5.5,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A twill harvest tunic with a canvas picking bag slung on the belly from crossed straps, apples heaped at its mouth."
+}

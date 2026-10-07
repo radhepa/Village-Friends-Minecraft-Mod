@@ -1,0 +1,134 @@
+{
+  "id": "b88_izar_wrap_skirt",
+  "kind": "bottom",
+  "name": "Izar Wrap Skirt",
+  "gender": "male",
+  "texture": "bottoms/b88_izar_wrap_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "izar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "izar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "izar_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        8,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "izar_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        8,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "description": "A length of striped cloth wrapped round the hips and tucked at the waist, falling to mid-calf over bare calves and thong sandals."
+}

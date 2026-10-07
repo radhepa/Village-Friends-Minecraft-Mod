@@ -1,0 +1,187 @@
+{
+  "id": "t39_carpenters_rule_jerkin",
+  "kind": "top",
+  "name": "Carpenter's Rule Jerkin",
+  "gender": "male",
+  "texture": "tops/t39_carpenters_rule_jerkin.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        4.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        4.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "folding_rule",
+      "bone": "TORSO",
+      "pivot": [
+        1.0,
+        1.6,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "flat_pencil",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        2.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "square_stock",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        8.8,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "square_blade",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        11.4,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A sleeveless tweed jerkin over a pushed-up shirt, a folding rule and flat pencil in the pocket and a try-square at the hip."
+}

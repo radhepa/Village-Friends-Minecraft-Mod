@@ -1,0 +1,552 @@
+{
+  "id": "hf06_bound_hime_sidelocks",
+  "kind": "hair",
+  "name": "Bound Hime Sidelocks",
+  "gender": "female",
+  "texture": "hair/hf06_bound_hime_sidelocks.png",
+  "extrasHeight": 48,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fringe_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.4,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "fringe_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.7,
+        -8.6,
+        -4.38
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "fringe_2",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "fringe_3",
+      "bone": "HEAD",
+      "pivot": [
+        1.7,
+        -8.6,
+        -4.38
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "fringe_4",
+      "bone": "HEAD",
+      "pivot": [
+        3.4,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "right_sidelock",
+      "bone": "HEAD",
+      "pivot": [
+        -4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "right_cuff",
+      "bone": "HEAD",
+      "pivot": [
+        -4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        8.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "right_tip_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -1.0,
+        10.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ]
+    },
+    {
+      "id": "right_tip_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        2
+      ],
+      "origin": [
+        -0.5,
+        12.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "right_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        -4.4,
+        -7.8,
+        1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "left_sidelock",
+      "bone": "HEAD",
+      "pivot": [
+        4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        9,
+        1
+      ],
+      "uv": [
+        13,
+        11
+      ]
+    },
+    {
+      "id": "left_cuff",
+      "bone": "HEAD",
+      "pivot": [
+        4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        8.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        11
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "left_tip_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -1.0,
+        10.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        11
+      ]
+    },
+    {
+      "id": "left_tip_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.25,
+        -7.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -2
+      ],
+      "origin": [
+        -0.5,
+        12.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        11
+      ]
+    },
+    {
+      "id": "left_curtain",
+      "bone": "HEAD",
+      "pivot": [
+        4.4,
+        -7.8,
+        1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        7,
+        5
+      ],
+      "uv": [
+        39,
+        11
+      ]
+    },
+    {
+      "id": "back_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.3,
+        -7.8,
+        4.3
+      ],
+      "rotation": [
+        3,
+        0,
+        6
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        9,
+        1
+      ],
+      "uv": [
+        52,
+        11
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.1,
+        -7.8,
+        4.8
+      ],
+      "rotation": [
+        1,
+        0,
+        2
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_2",
+      "bone": "HEAD",
+      "pivot": [
+        1.1,
+        -7.8,
+        4.3
+      ],
+      "rotation": [
+        2,
+        0,
+        -1.5
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        11,
+        1
+      ],
+      "uv": [
+        9,
+        24
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_3",
+      "bone": "HEAD",
+      "pivot": [
+        3.3,
+        -7.8,
+        4.8
+      ],
+      "rotation": [
+        4,
+        0,
+        -6
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        18,
+        24
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Blunt see-through bangs and long sidelocks bound near the tips with ribbon cuffs."
+}

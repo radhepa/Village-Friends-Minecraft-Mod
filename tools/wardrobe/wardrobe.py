@@ -39,10 +39,12 @@ GENDERS = ("male", "female", "unisex")
 # Key colors. Each opaque authoring pixel names a palette role and one of five shades:
 # 0 deep crease/outline, 1 shadow, 2 base, 3 light, 4 highlight. The authoring RGB values only
 # make the PNGs readable in an image editor; the game maps them back to (role, shade).
-# P primary 60%, S secondary 30%, A accent 10%, L leather, M metal, K ink, H natural hair.
+# P primary 60%, S secondary 30%, A accent 10%, L leather, M metal, K ink, D denim, H natural hair.
+# Leather, metal, ink and denim are material roles: every palette has its own tone of each.
 # X1/X2 are translucent shadows that darken whatever is beneath them.
 # --------------------------------------------------------------------------------------------
-ROLES = "PSALMKH"
+ROLES = "PSALMKDH"
+PALETTE_ROLES = "PSALMKD"
 KEY_RGB = {
     "P": ["1f2d4d", "2f4673", "44619a", "6585bd", "93b0dc"],
     "S": ["6b5d47", "968566", "c4b28c", "e0d0ab", "f5ebcf"],
@@ -50,6 +52,7 @@ KEY_RGB = {
     "L": ["2c1c13", "4a2f20", "6b4630", "8f6444", "b38962"],
     "M": ["39342f", "655b4d", "968870", "c4b594", "eee2c0"],
     "K": ["14100c", "221a14", "2f251d", "3c3026", "4a3c30"],
+    "D": ["162640", "243a5f", "355280", "5578a7", "8ba7d0"],
     "H": ["3a2213", "5c381f", "80522d", "a86f3c", "d09655"],
 }
 SHADOW_KEYS = {"X1": 46, "X2": 84}  # alpha of a black multiply
@@ -119,7 +122,7 @@ def load_palettes() -> dict:
     result = {}
     for pid, p in src.items():
         ramps = {}
-        for role in "PSALMK":
+        for role in PALETTE_ROLES:
             spec = p[role]
             if isinstance(spec, list):
                 ramps[role] = spec

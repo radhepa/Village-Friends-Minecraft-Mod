@@ -1,0 +1,322 @@
+{
+  "id": "h74_horseshoe_balding",
+  "kind": "hair",
+  "name": "Horseshoe Balding",
+  "gender": "male",
+  "texture": "hair/h74_horseshoe_balding.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_tuft_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -6.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_tuft_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -6.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        4,
+        3
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "left_tuft_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -6.4,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        4,
+        3
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "left_tuft_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -6.4,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        4,
+        3
+      ],
+      "uv": [
+        27,
+        0
+      ]
+    },
+    {
+      "id": "back_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.6,
+        -6.9,
+        4.45
+      ],
+      "rotation": [
+        6,
+        0,
+        5.2
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ]
+    },
+    {
+      "id": "back_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.9,
+        4.45
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "back_2",
+      "bone": "HEAD",
+      "pivot": [
+        2.6,
+        -6.9,
+        4.45
+      ],
+      "rotation": [
+        6,
+        0,
+        -5.2
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        5,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    },
+    {
+      "id": "nape_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.3,
+        -2.4,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        5.2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "nape_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.3,
+        -2.4,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        5.2
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "nape_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.3,
+        -2.4,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -5.2
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "nape_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.3,
+        -2.4,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -5.2
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ]
+    }
+  ],
+  "description": "A bald crown with a horseshoe of soft hair round the sides and back."
+}

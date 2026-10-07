@@ -1,0 +1,163 @@
+{
+  "id": "tf021_guards_quilted_gambeson",
+  "kind": "top",
+  "name": "Guard's Quilted Gambeson",
+  "gender": "female",
+  "texture": "tops/tf021_guards_quilted_gambeson.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "standing_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "badge",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        3.4,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gambeson_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gambeson_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A channel-quilted gambeson with a standing collar, tie-laced front, the town's badge and a sword baldric."
+}

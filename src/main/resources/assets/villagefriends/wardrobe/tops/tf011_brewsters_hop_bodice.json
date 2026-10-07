@@ -1,0 +1,162 @@
+{
+  "id": "tf011_brewsters_hop_bodice",
+  "kind": "top",
+  "name": "Brewster's Hop Bodice",
+  "gender": "female",
+  "texture": "tops/tf011_brewsters_hop_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "ladle_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "ladle_bowl",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        7,
+        -0.6
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A brewster's bodice with a hop vine climbing the front, rolled chemise sleeves and a wooden mash ladle."
+}

@@ -1,0 +1,133 @@
+{
+  "id": "b40_pattened_shoes",
+  "kind": "bottom",
+  "name": "Pattened Shoes",
+  "gender": "male",
+  "texture": "bottoms/b40_pattened_shoes.png",
+  "extrasHeight": 16,
+  "tags": [
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_patten",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        11.0,
+        -2.5
+      ],
+      "size": [
+        4,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "right_patten_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        9.8,
+        -2.5
+      ],
+      "size": [
+        4,
+        1,
+        3
+      ],
+      "uv": [
+        19,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "left_patten",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        11.0,
+        -2.5
+      ],
+      "size": [
+        4,
+        1,
+        5
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "inflate": 0.3
+    },
+    {
+      "id": "left_patten_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        9.8,
+        -2.5
+      ],
+      "size": [
+        4,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.3
+    }
+  ],
+  "description": "Wool trousers and pale hose over low shoes, raised on wooden pattens strapped across the instep against the mud."
+}

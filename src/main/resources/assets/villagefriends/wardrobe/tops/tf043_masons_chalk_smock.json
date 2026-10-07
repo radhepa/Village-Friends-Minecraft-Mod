@@ -1,0 +1,193 @@
+{
+  "id": "tf043_masons_chalk_smock",
+  "kind": "top",
+  "name": "Mason's Chalk Smock",
+  "gender": "female",
+  "texture": "tops/tf043_masons_chalk_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.0,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "chalk_reel",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        6.8,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        23,
+        8
+      ]
+    },
+    {
+      "id": "plumb_line",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        32,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "plumb_bob",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5,
+        -0.4
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        37,
+        8
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A stone-dusted hip-length smock, gathered cuffs, a chalk-line reel and a brass plumb bob on the girdle."
+}

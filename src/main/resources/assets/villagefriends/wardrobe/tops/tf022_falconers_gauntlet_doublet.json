@@ -1,0 +1,190 @@
+{
+  "id": "tf022_falconers_gauntlet_doublet",
+  "kind": "top",
+  "name": "Falconer's Gauntlet Doublet",
+  "gender": "female",
+  "texture": "tops/tf022_falconers_gauntlet_doublet.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "gauntlet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        4.4,
+        -2.6
+      ],
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "falcon",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        8.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -3,
+        -1
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "falcon_hood",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        5.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "falcon_tail",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        8.6,
+        -2.9
+      ],
+      "rotation": [
+        20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lure_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        6.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        12
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A buttoned doublet, a fringed falconry gauntlet on the left arm and a hooded falcon riding her fist."
+}

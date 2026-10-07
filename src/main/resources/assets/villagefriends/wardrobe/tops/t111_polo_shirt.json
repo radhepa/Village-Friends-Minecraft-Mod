@@ -1,0 +1,76 @@
+{
+  "id": "t111_polo_shirt",
+  "kind": "top",
+  "name": "Polo Shirt",
+  "gender": "male",
+  "texture": "tops/t111_polo_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        22
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_collar_point",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        -0.2,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -22
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pique-knit polo with a two-button placket, a soft collar and ribbed sleeve cuffs."
+}

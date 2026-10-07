@@ -1,0 +1,163 @@
+{
+  "id": "t37_tanners_stained_tabard",
+  "kind": "top",
+  "name": "Tanner's Stained Tabard",
+  "gender": "male",
+  "texture": "tops/t37_tanners_stained_tabard.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_glove_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_glove_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.7,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "fleshing_blade",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        3,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A tanyard tabard of stained leather tied at the sides, elbow-length wet-leather gloves and a two-handled fleshing blade."
+}

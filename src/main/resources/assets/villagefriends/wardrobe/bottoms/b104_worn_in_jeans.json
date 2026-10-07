@@ -1,0 +1,106 @@
+{
+  "id": "b104_worn_in_jeans",
+  "kind": "bottom",
+  "name": "Worn-In Jeans",
+  "gender": "male",
+  "texture": "bottoms/b104_worn_in_jeans.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "denim",
+    "modern",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hem_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_hem_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Well-loved jeans with faded knees, one frayed knee, turned-up cuffs and a leather belt."
+}

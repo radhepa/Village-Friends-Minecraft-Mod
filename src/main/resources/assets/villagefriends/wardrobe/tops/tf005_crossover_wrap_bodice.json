@@ -1,0 +1,161 @@
+{
+  "id": "tf005_crossover_wrap_bodice",
+  "kind": "top",
+  "name": "Crossover Wrap Bodice",
+  "gender": "female",
+  "texture": "tops/tf005_crossover_wrap_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "bow_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        8.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bow_loop_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.199999999999999,
+        7.7,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "bow_loop_left",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        7.7,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -25
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "bow_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bow_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A spinner's wrap bodice crossed left over right, tied with a bow at the side, over chemise frills."
+}

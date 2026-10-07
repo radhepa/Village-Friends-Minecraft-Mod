@@ -1,0 +1,132 @@
+{
+  "id": "b62_houppelande_train_skirt",
+  "kind": "bottom",
+  "name": "Houppelande Train Skirt",
+  "gender": "male",
+  "texture": "bottoms/b62_houppelande_train_skirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "gown_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "gown_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "gown_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t62_magnates_floor_houppelande",
+  "description": "The houppelande's floor-length skirts in deep organ pleats, a band of fur at the hem, over pointed black shoes."
+}

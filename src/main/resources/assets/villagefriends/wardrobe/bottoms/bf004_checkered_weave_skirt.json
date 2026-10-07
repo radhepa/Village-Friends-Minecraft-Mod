@@ -1,0 +1,218 @@
+{
+  "id": "bf004_checkered_weave_skirt",
+  "kind": "bottom",
+  "name": "Checkered Weave Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf004_checkered_weave_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.4,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        13,
+        17
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        48,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.8,
+        9.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        53,
+        17
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A home-woven checked wool skirt, a fringed sash knotted at the hip and low leather shoes."
+}

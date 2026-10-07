@@ -1,0 +1,220 @@
+{
+  "id": "bf015_bakers_long_apron_skirt",
+  "kind": "bottom",
+  "name": "Baker's Long Apron Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf015_bakers_long_apron_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "apron",
+    "long_skirt",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        13,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_apron_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        0,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        36
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tucked_cloth",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        35,
+        36
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A wool skirt under a long gathered white apron with a floury handprint and a striped cloth tucked in."
+}

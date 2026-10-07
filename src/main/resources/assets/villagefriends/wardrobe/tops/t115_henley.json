@@ -1,0 +1,19 @@
+{
+  "id": "t115_henley",
+  "kind": "top",
+  "name": "Henley",
+  "gender": "male",
+  "texture": "tops/t115_henley.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long-sleeved cotton henley with a three-button placket, worn loose."
+}

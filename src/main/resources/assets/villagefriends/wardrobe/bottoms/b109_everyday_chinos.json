@@ -1,0 +1,17 @@
+{
+  "id": "b109_everyday_chinos",
+  "kind": "bottom",
+  "name": "Everyday Chinos",
+  "gender": "male",
+  "texture": "bottoms/b109_everyday_chinos.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Plain flat-front chinos in the outfit's main color, worn with canvas shoes."
+}

@@ -1,0 +1,188 @@
+{
+  "id": "bf025_inverted_pleat_robe_skirt",
+  "kind": "bottom",
+  "name": "Inverted-Pleat Robe Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf025_inverted_pleat_robe_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "long_skirt",
+    "scholarly",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "waist_pen_case",
+      "bone": "TORSO",
+      "pivot": [
+        5.7,
+        9.8,
+        -0.4
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        13,
+        18
+      ]
+    },
+    {
+      "id": "waist_inkhorn",
+      "bone": "TORSO",
+      "pivot": [
+        5.7,
+        10.4,
+        1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        18
+      ]
+    }
+  ],
+  "description": "A dark floor-length skirt with one deep inverted pleat, an inkhorn and pen case hung at the hip."
+}

@@ -1,0 +1,162 @@
+{
+  "id": "t42_butchers_oversleeve_smock",
+  "kind": "top",
+  "name": "Butcher's Oversleeve Smock",
+  "gender": "male",
+  "texture": "tops/t42_butchers_oversleeve_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_oversleeve_tie",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.8,
+        2.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_oversleeve_tie",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.8,
+        2.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "half_apron",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_tie",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sharpening_steel",
+      "bone": "TORSO",
+      "pivot": [
+        3.1,
+        10.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A shambles smock with linen oversleeves tied at elbow and wrist, a striped half-apron and a sharpening steel on a chain."
+}

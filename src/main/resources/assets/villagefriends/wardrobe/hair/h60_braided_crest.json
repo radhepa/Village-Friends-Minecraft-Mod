@@ -1,0 +1,298 @@
+{
+  "id": "h60_braided_crest",
+  "kind": "hair",
+  "name": "Braided Crest",
+  "gender": "male",
+  "texture": "hair/h60_braided_crest.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "wisp_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        -10,
+        0,
+        12
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "wisp_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.6,
+        -8.6,
+        -4.3
+      ],
+      "rotation": [
+        -10,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "braid_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -9.1,
+        -3.9
+      ],
+      "rotation": [
+        98,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "braid_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -9.454891407448166,
+        -1.3748164247089956
+      ],
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "braid_2",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -9.454891407448166,
+        1.1751835752910043
+      ],
+      "rotation": [
+        68,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "braid_3",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -8.49964459423759,
+        3.539502404436312
+      ],
+      "rotation": [
+        32,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "braid_4",
+      "bone": "HEAD",
+      "pivot": [
+        0.0,
+        -7.185170045195131,
+        4.3608772639977795
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        6
+      ]
+    },
+    {
+      "id": "tail",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.3,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        4,
+        2
+      ],
+      "uv": [
+        11,
+        6
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "tail_tie",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.3,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        4.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        20,
+        6
+      ],
+      "inflate": 0.12,
+      "motion": "sway"
+    },
+    {
+      "id": "tail_tuft",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -2.3,
+        5.0
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        6
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Shaved sides and one thick braid running from the brow over the crown to a tail."
+}

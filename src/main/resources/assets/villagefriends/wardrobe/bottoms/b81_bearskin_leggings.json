@@ -1,0 +1,75 @@
+{
+  "id": "b81_bearskin_leggings",
+  "kind": "bottom",
+  "name": "Bearskin Leggings",
+  "gender": "male",
+  "texture": "bottoms/b81_bearskin_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_boot_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Shaggy fur leggings bound at the shin with crossing hide thongs, over fur-lined boots with a pale turned cuff."
+}

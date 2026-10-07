@@ -1,0 +1,73 @@
+{
+  "id": "b71_splinted_leather_greaves",
+  "kind": "bottom",
+  "name": "Splinted Leather Greaves",
+  "gender": "male",
+  "texture": "bottoms/b71_splinted_leather_greaves.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_cop",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.6,
+        -2.9
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_cop",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        2.6,
+        -2.9
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Wool hose under leather greaves set with vertical steel splints, small steel knee cops and buckled leather boots."
+}

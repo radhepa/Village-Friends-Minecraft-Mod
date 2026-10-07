@@ -1,0 +1,135 @@
+{
+  "id": "t89_cowled_winter_jack",
+  "kind": "top",
+  "name": "Cowled Winter Jack",
+  "gender": "male",
+  "texture": "tops/t89_cowled_winter_jack.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "knit_cowl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.8,
+        -1.4,
+        -2.9
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "cowl_end",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_mitten",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_mitten",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A deep-winter jack quilted in thick horizontal rolls, a knitted cowl wound about the neck with a trailing end, and mittens."
+}

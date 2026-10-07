@@ -1,0 +1,101 @@
+{
+  "id": "b39_hammer_loop_trousers",
+  "kind": "bottom",
+  "name": "Hammer-Loop Trousers",
+  "gender": "male",
+  "texture": "bottoms/b39_hammer_loop_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "hammer_handle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        1.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "hammer_head",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.1,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        1,
+        3
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "waist_nail_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    }
+  ],
+  "description": "Canvas work trousers with a claw hammer in a leather thigh loop, a rule pocket and a nail pouch at the hip."
+}

@@ -1,0 +1,130 @@
+{
+  "id": "tf006_dyers_rolled_kirtle",
+  "kind": "top",
+  "name": "Dyer's Rolled Kirtle",
+  "gender": "female",
+  "texture": "tops/tf006_dyers_rolled_kirtle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        0.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        0.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "paddle",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        5.6,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -28
+      ],
+      "origin": [
+        -0.5,
+        -7,
+        -0.5
+      ],
+      "size": [
+        1,
+        13,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "paddle_blade",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        5.6,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -28
+      ],
+      "origin": [
+        -1,
+        6,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A dye-splashed kirtle, sleeves rolled high over vat-stained forearms and a stirring paddle slung behind."
+}

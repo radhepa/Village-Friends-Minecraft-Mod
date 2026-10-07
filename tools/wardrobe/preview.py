@@ -25,6 +25,7 @@ import wardrobe as W
 
 BODY = W.ROOT / "src/main/resources/assets/villagefriends/textures/body"
 BASE_TOP, BASE_BOTTOM, BASE_HAIR = "t11_belted_linen_tunic", "b03_scholars_slacks", "h01_spiky_layered"
+BASE_HAIR_FEMALE = "hf0"   # a handful of women's styles, so --gender female sheets have hair
 SCRATCH = W.ROOT / "build/wardrobe-preview"
 
 
@@ -224,7 +225,7 @@ def main():
     only = None
     if a.only:
         # Build just these prefixes plus the pieces the sheet dresses them with (much faster).
-        only = set(a.only) | {BASE_TOP, BASE_BOTTOM, BASE_HAIR} | {x for x in (a.top, a.bottom, a.hair) if x}
+        only = set(a.only) | {BASE_TOP, BASE_BOTTOM, BASE_HAIR, BASE_HAIR_FEMALE} | {x for x in (a.top, a.bottom, a.hair) if x}
         if a.mode == "outfits":
             for o in catalog["outfits"]:
                 if any(o["top"].startswith(i) or o["bottom"].startswith(i) for i in a.only):
@@ -285,7 +286,7 @@ def main():
     elif a.mode == "mix":
         rng = random.Random(a.seed)
         cols, cw, ch, sc = 6, 250, 470, 10
-        canvas = Canvas(cols * cw, 2 * ch)
+        canvas = Canvas(cols * cw, 2 * ch + 24)   # room for the last row's two-line labels
         labels = []
         pairs = [(t, b) for t in tops for b in bottoms if W.compatible(t, b)]
         for i in range(12):
@@ -325,11 +326,11 @@ def main():
             figure(canvas, 200 + j * 400, 250, 15, t, b, h, pal, hairs[a.color]["ramp"], yaw=yw, pose=ps)
         save(canvas, [], Path(a.out or SCRATCH / f"one_{a.top}.png"))
     elif a.mode == "palettes":
-        img = Image.new("RGB", (900, 40 * len(palettes) + 40 * len(hairs)), (241, 228, 203))
+        img = Image.new("RGB", (1020, 40 * len(palettes) + 40 * len(hairs)), (241, 228, 203))
         d = ImageDraw.Draw(img)
         for i, (pid, p) in enumerate(palettes.items()):
             d.text((6, i * 40 + 14), p["name"], fill=(60, 40, 30))
-            for r, role in enumerate("PSALMK"):
+            for r, role in enumerate(W.PALETTE_ROLES):
                 for s, c in enumerate(p["ramps"][role]):
                     d.rectangle([170 + r * 120 + s * 22, i * 40 + 6, 170 + r * 120 + s * 22 + 20, i * 40 + 34], fill=c)
         off = 40 * len(palettes)

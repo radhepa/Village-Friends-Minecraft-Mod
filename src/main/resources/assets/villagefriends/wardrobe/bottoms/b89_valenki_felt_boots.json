@@ -1,0 +1,133 @@
+{
+  "id": "b89_valenki_felt_boots",
+  "kind": "bottom",
+  "name": "Valenki Felt Boots",
+  "gender": "male",
+  "texture": "bottoms/b89_valenki_felt_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_felt_top",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_felt_top",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "right_felt_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_felt_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Wool trousers stuffed into thick, seamless pale felt boots reaching the knee, with a stitched band round the ankle."
+}

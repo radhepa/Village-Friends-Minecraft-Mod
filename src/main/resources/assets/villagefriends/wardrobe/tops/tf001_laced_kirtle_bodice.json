@@ -1,0 +1,18 @@
+{
+  "id": "tf001_laced_kirtle_bodice",
+  "kind": "top",
+  "name": "Laced Kirtle Bodice",
+  "gender": "female",
+  "texture": "tops/tf001_laced_kirtle_bodice.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "The everyday village bodice: criss-cross lacing over a cream chemise with full gathered sleeves."
+}

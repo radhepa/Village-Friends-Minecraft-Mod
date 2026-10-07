@@ -1,0 +1,49 @@
+{
+  "id": "tf057_heraldic_gown_bodice",
+  "kind": "top",
+  "name": "Heraldic Gown Bodice",
+  "gender": "female",
+  "texture": "tops/tf057_heraldic_gown_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "gown"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "lockedTo": "bf057_heraldic_gown_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A lady's mi-parti gown bodice bearing her arms: one half sown with stars, the other barred, edged with ermine."
+}

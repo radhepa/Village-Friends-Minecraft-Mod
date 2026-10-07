@@ -1,0 +1,462 @@
+{
+  "id": "h80_frizzy_elder_tufts",
+  "kind": "hair",
+  "name": "Frizzy Elder Tufts",
+  "gender": "male",
+  "texture": "hair/h80_frizzy_elder_tufts.png",
+  "extrasHeight": 16,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_puff_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.1,
+        -6.8,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        20
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_puff_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.1,
+        -7.6,
+        1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -3,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "right_puff_2",
+      "bone": "HEAD",
+      "pivot": [
+        -4.1,
+        -5.0,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -2,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        2,
+        3
+      ],
+      "uv": [
+        24,
+        0
+      ]
+    },
+    {
+      "id": "right_puff_3",
+      "bone": "HEAD",
+      "pivot": [
+        -4.1,
+        -6.2,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        24
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "left_puff_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.1,
+        -6.8,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "origin": [
+        0,
+        -1.5,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        3
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "left_puff_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.1,
+        -7.6,
+        1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        0,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        3,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "left_puff_2",
+      "bone": "HEAD",
+      "pivot": [
+        4.1,
+        -5.0,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        0,
+        -1.0,
+        -1.5
+      ],
+      "size": [
+        2,
+        2,
+        3
+      ],
+      "uv": [
+        13,
+        7
+      ]
+    },
+    {
+      "id": "left_puff_3",
+      "bone": "HEAD",
+      "pivot": [
+        4.1,
+        -6.2,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -24
+      ],
+      "origin": [
+        0,
+        -1.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        24,
+        7
+      ]
+    },
+    {
+      "id": "back_puff_0",
+      "bone": "HEAD",
+      "pivot": [
+        -2.2,
+        -5.4,
+        4.1
+      ],
+      "rotation": [
+        -12,
+        0,
+        -11.0
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        0
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        33,
+        7
+      ]
+    },
+    {
+      "id": "back_puff_1",
+      "bone": "HEAD",
+      "pivot": [
+        2.2,
+        -5.4,
+        4.1
+      ],
+      "rotation": [
+        -12,
+        0,
+        11.0
+      ],
+      "origin": [
+        -2,
+        -1.5,
+        0
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        46,
+        7
+      ]
+    },
+    {
+      "id": "stray_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.0,
+        -0.6
+      ],
+      "rotation": [
+        -30,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        59,
+        7
+      ]
+    },
+    {
+      "id": "stray_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -0.8,
+        -8.0,
+        -0.6
+      ],
+      "rotation": [
+        -30,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "stray_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.0,
+        0.2
+      ],
+      "rotation": [
+        34,
+        0,
+        -46
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        13
+      ]
+    },
+    {
+      "id": "stray_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        0.6,
+        -8.0,
+        0.2
+      ],
+      "rotation": [
+        34,
+        0,
+        -46
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        13
+      ]
+    },
+    {
+      "id": "stray_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.0,
+        1.8
+      ],
+      "rotation": [
+        50,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        13
+      ]
+    },
+    {
+      "id": "stray_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -8.0,
+        1.8
+      ],
+      "rotation": [
+        50,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        13
+      ]
+    }
+  ],
+  "description": "A bald crown with stray hairs and big frizzy puffs springing out over the ears."
+}

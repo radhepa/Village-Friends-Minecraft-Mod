@@ -1,0 +1,75 @@
+{
+  "id": "b98_chain_garter_hose",
+  "kind": "bottom",
+  "name": "Chain-Garter Hose",
+  "gender": "male",
+  "texture": "bottoms/b98_chain_garter_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_chain_garter",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_chain_garter",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "description": "Fine velvet hose held below the knee by garters of linked metal, over slender shoes with bright buckles."
+}

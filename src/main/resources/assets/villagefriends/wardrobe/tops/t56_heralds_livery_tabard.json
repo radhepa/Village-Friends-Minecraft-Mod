@@ -1,0 +1,165 @@
+{
+  "id": "t56_heralds_livery_tabard",
+  "kind": "top",
+  "name": "Herald's Livery Tabard",
+  "gender": "male",
+  "texture": "tops/t56_heralds_livery_tabard.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_tabard_wing",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_tabard_wing",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "chain_of_office",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -0.4,
+        -2.7
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        19,
+        10
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "lockedTo": "b56_heralds_parti_hose",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A herald's quartered tabard with flat winged sleeves, charged with gold bezants, worn with a chain of office."
+}

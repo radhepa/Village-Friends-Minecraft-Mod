@@ -1,0 +1,129 @@
+{
+  "id": "b60_key_chain_trousers",
+  "kind": "bottom",
+  "name": "Key-Chain Trousers",
+  "gender": "male",
+  "texture": "bottoms/b60_key_chain_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "key_chain",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.45,
+        -0.2,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "key_ring",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.45,
+        3.8,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        2
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "key_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.45,
+        5.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "key_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.45,
+        5.6,
+        -0.19999999999999996
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    }
+  ],
+  "description": "Sturdy twill trousers with a steward's long chain of iron keys swinging at the right thigh, and plain ankle boots."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "b48_stirrup_trews",
+  "kind": "bottom",
+  "name": "Stirrup Trews",
+  "gender": "male",
+  "texture": "bottoms/b48_stirrup_trews.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Close twill trews cut with a strap under each instep and a seam down the shin, worn over low turnshoes."
+}

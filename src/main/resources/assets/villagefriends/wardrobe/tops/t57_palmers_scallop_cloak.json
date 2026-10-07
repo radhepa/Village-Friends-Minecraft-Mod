@@ -1,0 +1,190 @@
+{
+  "id": "t57_palmers_scallop_cloak",
+  "kind": "top",
+  "name": "Palmer's Scallop Cloak",
+  "gender": "male",
+  "texture": "tops/t57_palmers_scallop_cloak.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cloak_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        12,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -1.0,
+        3.1
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "cloak_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        3.1
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "cloak_hem",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        12.2,
+        3.4
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        23,
+        11
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "scrip",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        9.0,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        46,
+        11
+      ]
+    },
+    {
+      "id": "ampulla",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        11
+      ]
+    }
+  ],
+  "lockedTo": "b57_palmers_road_worn_hose",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A palmer's calf-length travelling cloak with a hood, a scallop-shell badge on the cape, a scrip on a strap and a holy-water ampulla."
+}

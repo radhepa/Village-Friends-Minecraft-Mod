@@ -1,0 +1,46 @@
+{
+  "id": "bf041_forge_breeches_hobnail_boots",
+  "kind": "bottom",
+  "name": "Forge Breeches & Hobnail Boots",
+  "gender": "female",
+  "texture": "bottoms/bf041_forge_breeches_hobnail_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.4,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Hard-wearing twill breeches patched with leather at the knee, over hobnailed boots with steel toe caps."
+}

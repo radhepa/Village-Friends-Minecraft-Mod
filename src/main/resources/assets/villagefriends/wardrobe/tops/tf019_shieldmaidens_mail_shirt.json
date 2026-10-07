@@ -1,0 +1,191 @@
+{
+  "id": "tf019_shieldmaidens_mail_shirt",
+  "kind": "top",
+  "name": "Shieldmaiden's Mail Shirt",
+  "gender": "female",
+  "texture": "tops/tf019_shieldmaidens_mail_shirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "martial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "fur_mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -1.0,
+        -2.8
+      ],
+      "size": [
+        17,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "shield",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        5.0,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -3.5,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "shield_boss",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        5.0,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        7,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "mail_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mail_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A ring-mail shirt over a wool tunic, a fur mantle over the shoulders and a painted round shield slung behind."
+}

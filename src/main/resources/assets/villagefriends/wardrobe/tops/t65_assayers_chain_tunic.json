@@ -1,0 +1,160 @@
+{
+  "id": "t65_assayers_chain_tunic",
+  "kind": "top",
+  "name": "Assayer's Chain Tunic",
+  "gender": "male",
+  "texture": "tops/t65_assayers_chain_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "loupe",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        7.6,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "balance_beam",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.6,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "balance_pan_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        11.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "balance_pan_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.6,
+        11.8,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A goldsmith-assayer's velvet tunic draped with fine chains, leather wristlets, a loupe on a cord and a small balance."
+}

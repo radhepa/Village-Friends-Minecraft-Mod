@@ -1,0 +1,19 @@
+{
+  "id": "t104_black_tee",
+  "kind": "top",
+  "name": "Black Tee",
+  "gender": "male",
+  "texture": "tops/t104_black_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain crew-neck tee in near-black ink."
+}

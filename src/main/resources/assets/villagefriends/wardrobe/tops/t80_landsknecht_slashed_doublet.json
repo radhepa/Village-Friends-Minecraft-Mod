@@ -1,0 +1,165 @@
+{
+  "id": "t80_landsknecht_slashed_doublet",
+  "kind": "top",
+  "name": "Landsknecht Slashed Doublet",
+  "gender": "male",
+  "texture": "tops/t80_landsknecht_slashed_doublet.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "martial",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_upper_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "left_upper_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "right_elbow_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_elbow_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "sword_girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        10.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        11
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A swaggering mercenary's doublet slashed across the chest to show the lining, with huge puffed and slashed upper sleeves."
+}

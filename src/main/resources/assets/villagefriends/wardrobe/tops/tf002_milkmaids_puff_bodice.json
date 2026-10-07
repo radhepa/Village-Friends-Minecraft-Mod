@@ -1,0 +1,77 @@
+{
+  "id": "tf002_milkmaids_puff_bodice",
+  "kind": "top",
+  "name": "Milkmaid's Puff Bodice",
+  "gender": "female",
+  "texture": "tops/tf002_milkmaids_puff_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_puff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_puff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "Ribbon-laced bodice over puffed short chemise sleeves, with a white fichu crossed and tucked in."
+}

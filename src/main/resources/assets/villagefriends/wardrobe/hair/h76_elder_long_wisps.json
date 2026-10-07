@@ -1,0 +1,752 @@
+{
+  "id": "h76_elder_long_wisps",
+  "kind": "hair",
+  "name": "Elder's Long Wisps",
+  "gender": "male",
+  "texture": "hair/h76_elder_long_wisps.png",
+  "extrasHeight": 32,
+  "tags": [],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_front_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -5.4,
+        -3.2
+      ],
+      "rotation": [
+        -4,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_front_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.45,
+        -5.4,
+        -3.2
+      ],
+      "rotation": [
+        -4,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        0.8
+      ],
+      "rotation": [
+        4,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        0.8
+      ],
+      "rotation": [
+        4,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        3.0
+      ],
+      "rotation": [
+        8,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "right_wisp_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        -4.5,
+        -5.6,
+        3.0
+      ],
+      "rotation": [
+        8,
+        0,
+        4
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "left_front_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -5.4,
+        -3.2
+      ],
+      "rotation": [
+        -4,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": "left_front_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.45,
+        -5.4,
+        -3.2
+      ],
+      "rotation": [
+        -4,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "left_wisp_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "left_wisp_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "left_wisp_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        0.8
+      ],
+      "rotation": [
+        4,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        60,
+        0
+      ]
+    },
+    {
+      "id": "left_wisp_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        0.8
+      ],
+      "rotation": [
+        4,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "left_wisp_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        3.0
+      ],
+      "rotation": [
+        8,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "left_wisp_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        4.5,
+        -5.6,
+        3.0
+      ],
+      "rotation": [
+        8,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "back_0_0",
+      "bone": "HEAD",
+      "pivot": [
+        -3.2,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        15,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_0_1",
+      "bone": "HEAD",
+      "pivot": [
+        -3.2,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        20,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_1_0",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        25,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_1_1",
+      "bone": "HEAD",
+      "pivot": [
+        -1.6,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        3
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        30,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_2_0",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        35,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_2_1",
+      "bone": "HEAD",
+      "pivot": [
+        0,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_3_0",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        45,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_3_1",
+      "bone": "HEAD",
+      "pivot": [
+        1.6,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -3
+      ],
+      "origin": [
+        -0.5,
+        9.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_4_0",
+      "bone": "HEAD",
+      "pivot": [
+        3.2,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        55,
+        10
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_4_1",
+      "bone": "HEAD",
+      "pivot": [
+        3.2,
+        -6.2,
+        4.5
+      ],
+      "rotation": [
+        6,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        8.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        60,
+        10
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "A high bald crown with long thin wisps falling from the sides and back to the shoulders."
+}

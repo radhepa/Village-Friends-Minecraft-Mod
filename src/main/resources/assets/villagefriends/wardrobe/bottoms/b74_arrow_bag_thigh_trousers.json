@@ -1,0 +1,101 @@
+{
+  "id": "b74_arrow_bag_thigh_trousers",
+  "kind": "bottom",
+  "name": "Arrow-Bag Thigh Trousers",
+  "gender": "male",
+  "texture": "bottoms/b74_arrow_bag_thigh_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "arrow_bag",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        6,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "arrow_fletch_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        0.6,
+        -0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    },
+    {
+      "id": "arrow_fletch_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        0.6,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        16,
+        0
+      ]
+    }
+  ],
+  "description": "Twill field trousers with a linen arrow bag strapped to the right thigh, its fletchings showing, over laced boots."
+}

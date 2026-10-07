@@ -1,0 +1,19 @@
+{
+  "id": "t88_summer_openwork_tunic",
+  "kind": "top",
+  "name": "Summer Openwork Tunic",
+  "gender": "male",
+  "texture": "tops/t88_summer_openwork_tunic.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A light summer linen tunic with bands of drawn-thread openwork at chest, sleeves and hem, short wide sleeves and side vents."
+}

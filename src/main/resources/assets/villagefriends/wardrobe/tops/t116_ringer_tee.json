@@ -1,0 +1,19 @@
+{
+  "id": "t116_ringer_tee",
+  "kind": "top",
+  "name": "Ringer Tee",
+  "gender": "male",
+  "texture": "tops/t116_ringer_tee.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "modern",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pale crew-neck tee with a contrast ring at the neck and around both sleeve hems."
+}

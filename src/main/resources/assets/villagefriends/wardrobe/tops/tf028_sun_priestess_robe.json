@@ -1,0 +1,253 @@
+{
+  "id": "tf028_sun_priestess_robe",
+  "kind": "top",
+  "name": "Sun Priestess's Robe",
+  "gender": "female",
+  "texture": "tops/tf028_sun_priestess_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_armband",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_armband",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_bracelet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_bracelet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "rayed_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -1.0,
+        -2.8
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sash_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        29,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "sash_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        34,
+        16
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "lockedTo": "bf028_sun_priestess_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sleeveless temple robe with a great embroidered sun, a gilded rayed collar, gold armbands and a sash."
+}

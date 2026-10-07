@@ -4,15 +4,16 @@ import java.util.Objects;
 
 /**
  * One master palette: five-shade ramps for primary (60%), secondary (30%), accent (10%),
- * leather, metal and ink. Colors exist only here; garments carry role/shade keys.
+ * and the materials leather, metal, ink and denim. Colors exist only here; garments carry
+ * role/shade keys.
  */
 public record ColorPalette(PaletteID id, String name, int[][] ramps) {
-    public static final int PRIMARY = 0, SECONDARY = 1, ACCENT = 2, LEATHER = 3, METAL = 4, INK = 5, ROLES = 6;
+    public static final int PRIMARY = 0, SECONDARY = 1, ACCENT = 2, LEATHER = 3, METAL = 4, INK = 5, DENIM = 6, ROLES = 7;
 
     public ColorPalette {
         Objects.requireNonNull(id, "id");
         if (name == null || name.isBlank()) throw new IllegalArgumentException("Missing palette name");
-        if (ramps == null || ramps.length != ROLES) throw new IllegalArgumentException("Palettes have six role ramps");
+        if (ramps == null || ramps.length != ROLES) throw new IllegalArgumentException("Palettes have seven role ramps");
         var copy = new int[ROLES][];
         for (int role = 0; role < ROLES; role++) {
             if (ramps[role] == null || ramps[role].length != 5) throw new IllegalArgumentException("Ramps have five shades");

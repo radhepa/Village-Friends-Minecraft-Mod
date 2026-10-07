@@ -13,8 +13,9 @@ import java.util.*;
  * Loaded once from the mod's own resources so client and server agree on every choice.
  */
 public final class Wardrobe {
-    public static final String ROLE_LETTERS = "PSALMKH";
-    public static final int HAIR_ROLE = 6, SHADES = 5, TRANSPARENT = -1, SHADOW_LIGHT = 40, SHADOW_DEEP = 41;
+    /** Palette roles in {@link ColorPalette} order, then natural hair. */
+    public static final String ROLE_LETTERS = "PSALMKDH";
+    public static final int HAIR_ROLE = 7, SHADES = 5, TRANSPARENT = -1, SHADOW_LIGHT = 40, SHADOW_DEEP = 41;
     private static final String ROOT = "/assets/villagefriends/wardrobe/";
 
     public record OutfitTemplate(String id, String name, Garment top, Garment bottom) {

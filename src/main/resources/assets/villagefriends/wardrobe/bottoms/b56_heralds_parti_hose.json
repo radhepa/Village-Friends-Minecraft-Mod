@@ -1,0 +1,74 @@
+{
+  "id": "b56_heralds_parti_hose",
+  "kind": "bottom",
+  "name": "Herald's Parti Hose",
+  "gender": "male",
+  "texture": "bottoms/b56_heralds_parti_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_long_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_long_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t56_heralds_livery_tabard",
+  "description": "Mi-parti livery hose, one leg in each of the tabard's colours, with pale garters and long-toed black shoes."
+}

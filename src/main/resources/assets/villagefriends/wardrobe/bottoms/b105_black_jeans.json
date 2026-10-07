@@ -1,0 +1,17 @@
+{
+  "id": "b105_black_jeans",
+  "kind": "bottom",
+  "name": "Black Jeans",
+  "gender": "male",
+  "texture": "bottoms/b105_black_jeans.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "denim",
+    "modern"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Five-pocket jeans in washed black, tonal stitching and dark shoes."
+}

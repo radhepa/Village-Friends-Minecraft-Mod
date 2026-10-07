@@ -1,0 +1,192 @@
+{
+  "id": "tf052_tippet_cotehardie",
+  "kind": "top",
+  "name": "Tippet Cotehardie",
+  "gender": "female",
+  "texture": "tops/tf052_tippet_cotehardie.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "slim",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_tippet",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        3.6,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_tippet",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        3.6,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        10,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "hip_belt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        1.4,
+        0
+      ],
+      "size": [
+        10,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hip_belt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        1.4,
+        0
+      ],
+      "size": [
+        10,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hip_belt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.9,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.9
+      ],
+      "size": [
+        1,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "hip_belt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.9,
+        10.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.9
+      ],
+      "size": [
+        1,
+        1,
+        6
+      ],
+      "uv": [
+        15,
+        12
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A close-fitting cotehardie buttoned from throat to hip, long white tippets at the elbows and a low jeweled belt."
+}

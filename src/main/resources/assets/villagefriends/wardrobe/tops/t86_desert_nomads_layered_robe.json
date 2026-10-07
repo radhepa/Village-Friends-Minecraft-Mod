@@ -1,0 +1,277 @@
+{
+  "id": "t86_desert_nomads_layered_robe",
+  "kind": "top",
+  "name": "Desert Nomad's Layered Robe",
+  "gender": "male",
+  "texture": "tops/t86_desert_nomads_layered_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shoulder_scarf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.9,
+        -2.9
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "scarf_tail",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        1.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        7,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "waist_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "waist_sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        10.4,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "dagger_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        8.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ]
+    },
+    {
+      "id": "dagger_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        9
+      ]
+    },
+    {
+      "id": "dagger_curl",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        11.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        44,
+        9
+      ]
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        21,
+        17
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "lockedTo": "b86_nomads_sirwal",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A pale under-robe beneath an open, accent-edged outer robe, a long scarf wound over the shoulders and a curved dagger in the sash."
+}

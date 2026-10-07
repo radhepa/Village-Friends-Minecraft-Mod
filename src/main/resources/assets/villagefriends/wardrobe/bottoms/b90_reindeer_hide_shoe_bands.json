@@ -1,0 +1,73 @@
+{
+  "id": "b90_reindeer_hide_shoe_bands",
+  "kind": "bottom",
+  "name": "Reindeer-Hide Shoe Bands",
+  "gender": "male",
+  "texture": "bottoms/b90_reindeer_hide_shoe_bands.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_fur_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "description": "Pale reindeer-hide trousers worn in fur shoes, bright woven shoe bands wound round and round each ankle to keep out the snow."
+}
