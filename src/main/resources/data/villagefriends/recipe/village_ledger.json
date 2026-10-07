@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:village_ledger",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:book",
+    "minecraft:ink_sac",
+    "minecraft:paper"
+  ]
+}

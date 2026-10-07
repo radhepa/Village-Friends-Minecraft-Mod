@@ -53,7 +53,15 @@ public final class VillageFriends implements ModInitializer {
     public static final AttachmentType<GuardProgress> GUARD_PROGRESS = AttachmentRegistry.create(id("guard_progress"), b -> b.persistent(GuardProgress.CODEC));
     public static final AttachmentType<Boolean> GUARD_OBSERVED = AttachmentRegistry.create(id("guard_observed"), b -> b.persistent(Codec.BOOL));
     public static final AttachmentType<Integer> GUARD_ARROW_LEVEL = AttachmentRegistry.create(id("guard_arrow_level"), b -> b.persistent(Codec.INT));
-    private static final Set<String> TOPICS = Set.of("chat", "work", "adventure", "joke");
+    /** Every village's residents, families and relationships, kept on the level that records the village. */
+    public static final AttachmentType<dev.villagefriends.social.SocietyBook> SOCIETIES = AttachmentRegistry.create(id("societies"),
+            b -> b.initializer(() -> dev.villagefriends.social.SocietyBook.EMPTY).persistent(dev.villagefriends.social.SocietyBook.CODEC));
+    /** "parentId|parentId" for a baby until it joins its village. */
+    public static final AttachmentType<String> PARENTS = AttachmentRegistry.create(id("parents"), b -> b.persistent(Codec.STRING));
+    /** A player's last known friendship level with each resident they have talked to, for the Village Ledger. */
+    public static final AttachmentType<java.util.Map<String, Integer>> ACQUAINTANCES = AttachmentRegistry.create(id("acquaintances"),
+            b -> b.initializer(java.util.Map::<String, Integer>of).persistent(Codec.unboundedMap(Codec.STRING, Codec.INT)).copyOnDeath());
+    private static final Set<String> TOPICS = Set.of("chat", "work", "adventure", "joke", "news", "heart");
     public static AttachmentTarget target(Entity entity) { return (AttachmentTarget) entity; }
 
     @Override public void onInitialize() {
@@ -69,18 +77,24 @@ public final class VillageFriends implements ModInitializer {
         ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
+        ServerTickEvents.END_SERVER_TICK.register(VillageSocieties::tick);
         ServerLivingEntityEvents.MOB_CONVERSION.register((before, after, params) -> transferIdentity(before, after));
         ServerLivingEntityEvents.ALLOW_DAMAGE.register(GuardController::allowDamage);
         ServerLivingEntityEvents.AFTER_DAMAGE.register(GuardController::afterDamage);
         ServerLivingEntityEvents.ALLOW_DEATH.register(GuardController::allowDeath);
         ServerLivingEntityEvents.AFTER_DEATH.register(GuardController::afterDeath);
+        ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> { if (entity instanceof Villager v) VillageSocieties.died(v); });
         PayloadTypeRegistry.clientboundPlay().register(FriendshipPayload.TYPE, FriendshipPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(EmotePayload.TYPE, EmotePayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(LedgerPayload.TYPE, LedgerPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(ActionPayload.TYPE, ActionPayload.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(LedgerRequestPayload.TYPE, LedgerRequestPayload.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(ActionPayload.TYPE, (payload, context) -> handleAction(context.player(), payload));
+        ServerPlayNetworking.registerGlobalReceiver(LedgerRequestPayload.TYPE, (payload, context) -> VillageLedger.request(context.player(), payload));
         UseEntityCallback.EVENT.register((player, world, hand, entity, hit) -> {
             if (!(entity instanceof Villager villager) || hand != InteractionHand.MAIN_HAND || player.isSpectator() || player.isShiftKeyDown()) return InteractionResult.PASS;
             var held = player.getMainHandItem();
@@ -93,6 +107,13 @@ public final class VillageFriends implements ModInitializer {
             villager.getLookControl().setLookAt(player, 30, 30);
             show(sp, villager, "talk", NarrativeEngine.greeting(villager, sp), "Welcome, neighbor!", true);
             return InteractionResult.SUCCESS_SERVER;
+        });
+        // A notice board reads out its village's ledger.
+        net.fabricmc.fabric.api.event.player.UseBlockCallback.EVENT.register((player, world, hand, hit) -> {
+            if (hand != InteractionHand.MAIN_HAND || player.isShiftKeyDown() || player.isSpectator()
+                    || !world.getBlockState(hit.getBlockPos()).is(VillageBlocks.get("notice_board"))) return InteractionResult.PASS;
+            if (player instanceof ServerPlayer sp && ServerPlayNetworking.canSend(sp, LedgerPayload.TYPE)) VillageLedger.openAt(sp, hit.getBlockPos());
+            return InteractionResult.SUCCESS;
         });
         LOGGER.info("Village Friends ready: persistent residents, written stories, adventures, and modular appearances.");
     }
@@ -135,6 +156,7 @@ public final class VillageFriends implements ModInitializer {
         copy(before, after, GUARD_EQUIPPED);
         copy(before, after, GUARD_PROGRESS); copy(before, after, GUARD_OBSERVED);
         GuardProgression.converted(after);
+        VillageSocieties.converted(before, after);
         target(after).setAttached(COMPANION, CompanionState.NONE);
         if (before.hasCustomName()) after.setCustomName(before.getCustomName());
         after.setCustomNameVisible(true);
@@ -161,12 +183,23 @@ public final class VillageFriends implements ModInitializer {
         String a = action.action();
         if (a.equals("trade")) { if (!v.isBaby() && !v.isTrading() && !CompanionController.state(v).downed()) v.mobInteract(player, InteractionHand.MAIN_HAND); return; }
         if (TOPICS.contains(a)) {
-            var old = state(v, player); var next = old.talk(day(v.level())); save(v, player, next);
-            saveBond(v, player, bond(v, player).visit(day(v.level())));
+            int friendLevel = FriendshipLevels.level(state(v, player), bond(v, player));
+            if (a.equals("news") && friendLevel < FriendshipLevels.NEWS || a.equals("heart") && friendLevel < FriendshipLevels.HEART_TO_HEART) {
+                show(player, v, "talk", NarrativeEngine.greeting(v, player), "Get to know each other a little better first.", false); return;
+            }
+            var old = state(v, player); long today = day(v.level()); var next = old.talk(today); save(v, player, next);
+            saveBond(v, player, bond(v, player).visit(today));
             String reply = NarrativeEngine.conversation(v, player, a);
             celebrate(v, old, next);
-            show(player, v, "talk", reply, old.canTalk(day(v.level())) ? "+4 friendship - thanks for visiting!" : "Happy to keep talking. Friendship rewards return tomorrow.", false); return;
+            String status = old.canTalk(today) ? "+4 friendship - thanks for visiting!" : "Happy to keep talking. Friendship rewards return tomorrow.";
+            if (old.canTalk(today) && friendLevel >= FriendshipLevels.DAILY_GIFT && !v.isBaby()) {
+                var gift = dailyGift(profile(v).personality());
+                giveItem(player, gift, 2);
+                status = "+4 friendship. They slipped you " + itemName(gift) + ", just because.";
+            }
+            show(player, v, "talk", reply, status, false, NarrativeEngine.mood(v, player, a)); return;
         }
+        if (a.equals("ledger")) { VillageLedger.open(player, v); return; }
         if (a.equals("gift")) { giveGift(player, v); return; }
         if (!NarrativeEngine.handle(player, v, a) && !CompanionController.handle(player, v, a))
             show(player, v, "talk", NarrativeEngine.greeting(v, player), "That choice is no longer available.", false);
@@ -178,15 +211,16 @@ public final class VillageFriends implements ModInitializer {
         var profile = profile(v); var b = bond(v, p);
         if (stack.isEmpty() || item.equals(profile.dislike())) {
             String reply = stack.isEmpty() ? "Hold something in your main hand before offering it." : "Thank you for thinking of me, but " + itemName(item) + " isn't something I enjoy. I'd rather you keep it.";
-            show(p, v, "talk", reply, "Gift declined. Your item and gift allowance were kept.", false); return;
+            show(p, v, "talk", reply, "Gift declined. Your item and gift allowance were kept.", false, stack.isEmpty() ? Emote.QUESTION : Emote.SWEAT); return;
         }
         int value = item.equals(profile.love()) ? 14 : GiftPreferences.value(profession(v), v.isBaby(), item);
-        if (value == 0) { show(p, v, "talk", "That's thoughtful, but perhaps a flower, treat, or something for my hobby?", "Your item was kept.", false); return; }
+        if (value == 0) { show(p, v, "talk", "That's thoughtful, but perhaps a flower, treat, or something for my hobby?", "Your item was kept.", false, Emote.QUESTION); return; }
         var next = old.gift(today, item, value); if (!p.getAbilities().instabuild) stack.shrink(1); save(v, p, next);
         saveBond(v, p, b.trust(item.equals(profile.love()) ? 2 : 1).remember(today, "You gave me " + itemName(item) + "."));
         celebrate(v, old, next);
         show(p, v, "talk", item.equals(profile.love()) ? "You remembered! " + itemName(item) + " is one of my favorites. Thank you for paying attention."
-                : "What a lovely surprise. Thank you for thinking of me!", "+" + (next.points() - old.points()) + " friendship. Gifts help; shared experiences deepen our bond.", false);
+                : "What a lovely surprise. Thank you for thinking of me!", "+" + (next.points() - old.points()) + " friendship. Gifts help; shared experiences deepen our bond.", false,
+                item.equals(profile.love()) ? Emote.HEART : Emote.NOTE);
     }
     public static void giveItem(ServerPlayer p, String id, int count) {
         var item = BuiltInRegistries.ITEM.getValue(Identifier.parse(id));
@@ -207,16 +241,51 @@ public final class VillageFriends implements ModInitializer {
     public static String name(Villager v) { return v.hasCustomName() ? v.getCustomName().getString() : Dialogue.name(v.getUUID(),profile(v).look()); }
     public static long day(net.minecraft.world.level.Level level) { return Math.floorDiv(level.getOverworldClockTime(), 24000L); }
     public static void show(ServerPlayer p, Villager v, String tab, String dialogue, String status, boolean opening) {
+        show(p, v, tab, dialogue, status, opening, opening ? NarrativeEngine.greetingMood(v, p) : null);
+    }
+    public static void show(ServerPlayer p, Villager v, String tab, String dialogue, String status, boolean opening, Emote emote) {
         if (p.connection == null || !ServerPlayNetworking.canSend(p, FriendshipPayload.TYPE)) return;
         var affinity = state(v, p); var b = bond(v, p); var profile = profile(v); String job = profession(v);
         String label = v.isBaby() ? "Young Villager" : job.equals("none") ? "Neighbor" : job.equals("nitwit") ? "Free Spirit" : VillageProfessions.label(job);
         if (GuardController.isGuard(v) && GuardProgression.progress(v) != null) label += " · Level " + GuardProgression.progress(v).level();
         String personality = NarrativeContent.current().personality(profile.personality()).label();
         String journal = GuardProgression.journal(v) + NarrativeEngine.journal(v, p);
+        // Friendship levels: remember the last level this player saw, so a rise is celebrated once.
+        int friendLevel = FriendshipLevels.level(affinity, b);
+        int seen = b.flags().stream().filter(f -> f.startsWith("seen_level:")).mapToInt(f -> Integer.parseInt(f.substring(11))).findFirst().orElse(-1);
+        boolean levelUp = seen >= 0 && friendLevel > seen;
+        if (seen != friendLevel) { b = b.unflag("seen_level:" + seen).flag("seen_level:" + friendLevel); saveBond(v, p, b); }
+        if (levelUp) { status = "Friendship Lv. " + friendLevel + "! " + FriendshipLevels.perk(friendLevel); emote = Emote.SPARKLE; }
+        var known = target(p).getAttachedOrCreate(ACQUAINTANCES);
+        if (known.getOrDefault(profile.id(), -1) != friendLevel) {
+            var next = new java.util.HashMap<>(known); next.put(profile.id(), friendLevel); target(p).setAttached(ACQUAINTANCES, java.util.Map.copyOf(next));
+        }
+        var town = VillageSettlements.home(v); var society = VillageSocieties.of(v);
+        String family = society == null || !society.has(profile.id()) ? "" : String.join(" · ", dev.villagefriends.social.Gossip.about(society, profile.id(), day(v.level())).stream().limit(2).toList());
+        if (emote != null) VillageSocieties.emote(v, emote, 0);
         ServerPlayNetworking.send(p, new FriendshipPayload(v.getId(), v.getUUID(), name(v), label, personality,
-                affinity.points(), b.level(affinity), affinity.nextThreshold(), affinity.giftsLeft(day(v.level())), affinity.canTalk(day(v.level())),
+                affinity.points(), b.level(affinity), FriendshipLevels.threshold(Math.min(FriendshipLevels.MAX, friendLevel + 1)), affinity.giftsLeft(day(v.level())), affinity.canTalk(day(v.level())),
                 !v.isBaby() && !job.equals("none") && !job.equals("nitwit"), dialogue, status,
                 "Hobby: " + profile.hobby() + ". Loves " + itemName(profile.love()) + "; dislikes " + itemName(profile.dislike()) + ". " + GiftPreferences.hint(job, v.isBaby()),
-                opening, tab, journal, NarrativeEngine.choices(v, p, tab), b.trustLabel()));
+                opening, tab, journal, NarrativeEngine.choices(v, p, tab), b.trustLabel(),
+                friendLevel, FriendshipLevels.name(friendLevel), FriendshipLevels.threshold(friendLevel), FriendshipLevels.goal(affinity, b), levelUp,
+                emote == null ? "" : emote.name(), town == null ? "" : town.name(), family));
+    }
+    /** A small present a Kindred Spirit saves for you, matching their hobby. */
+    static String dailyGift(String personality) {
+        return switch (personality) {
+            case "warmhearted" -> "minecraft:cookie";
+            case "thoughtful" -> "minecraft:paper";
+            case "playful" -> "minecraft:sweet_berries";
+            case "adventurous" -> "minecraft:apple";
+            case "meticulous" -> "minecraft:honeycomb";
+            case "steadfast" -> "minecraft:bone_meal";
+            case "reserved" -> "minecraft:cooked_cod";
+            case "imaginative" -> "minecraft:pink_dye";
+            case "pragmatic" -> "minecraft:candle";
+            case "curious" -> "minecraft:glowstone_dust";
+            case "protective" -> "minecraft:bread";
+            default -> "minecraft:allium";
+        };
     }
 }

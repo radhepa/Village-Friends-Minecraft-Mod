@@ -75,6 +75,14 @@ public final class VillageSettlements {
         if(!actual.equals(label))v.setCustomName(Component.literal(label));
         if(!previous.equals(label))target(v).setAttached(HOME_LABEL,label);
         v.setCustomNameVisible(true);
+        VillageSocieties.register(v);
+    }
+    /** Gives a resident a new personal name (such as their family's surname), keeping their hometown suffix. */
+    public static void rename(Villager v,String base) {
+        var membership=target(v).getAttached(HOME); if(membership==null)return;
+        target(v).setAttached(HOME,new ResidentHome(membership.village(),base,membership.dimension()));
+        var village=home(v); String label=village==null?base:VillageNames.label(base,village.name());
+        v.setCustomName(Component.literal(label)); target(v).setAttached(HOME_LABEL,label);
     }
     public static void updateResidents(ServerLevel level) {
         for(var v:List.copyOf(CompanionController.loaded))if(v.isAlive()&&v.level()==level)identify(v,false);

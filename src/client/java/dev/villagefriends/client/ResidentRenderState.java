@@ -13,4 +13,7 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public final AnimationLayer[] layers = {new AnimationLayer(), new AnimationLayer()};
     /** Degrees to turn the head toward the player while greeting or talking, and how strongly. */
     public float turnYaw, turnPitch, turnWeight;
+    /** The emote bubble above their head this frame, or null. */
+    public EmoteBubbles.Bubble bubble;
+    public float bubbleAge;
 }

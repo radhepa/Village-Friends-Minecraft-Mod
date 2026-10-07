@@ -6,6 +6,7 @@ import java.util.UUID;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.npc.villager.Villager;
+import dev.villagefriends.social.Gossip;
 import static dev.villagefriends.VillageFriends.*;
 
 public final class NarrativeEngine {
@@ -18,13 +19,45 @@ public final class NarrativeEngine {
         if (b.has("adventure_return")) return "It's good to see you safely home. I still think about our adventure together.";
         if (b.has("activity:picnic")) return "I was remembering our picnic. It was nice having time just to be together.";
         String greeting = Dialogue.greeting(name(v), b.level(state(v, p)), v.isBaby(), day(v.level()));
-        String village = VillageSettlements.reference(v,"chat",day(v.level()));
+        var society = VillageSocieties.of(v); long today = day(v.level());
+        String news = society == null ? "" : Gossip.greeting(society, profile(v).id(), today, salt(v, p, today));
+        if (!news.isEmpty()) return greeting + " " + news;
+        String village = VillageSettlements.reference(v,"chat",today);
         return village.isEmpty()?greeting:greeting+" "+village;
+    }
+    private static int salt(Villager v, ServerPlayer p, long day) { return Math.floorMod(Long.hashCode(day * 31 + p.getUUID().hashCode()) ^ v.getUUID().hashCode(), 9973); }
+    /** The bubble a resident greets you with: a heart for dear friends, a sweat drop when they're shaken. */
+    public static Emote greetingMood(Villager v, ServerPlayer p) {
+        var b = bond(v, p);
+        if (CompanionController.state(v).downed()) return Emote.SWEAT;
+        if (b.has("hurt")) return Emote.GLOOM;
+        int level = FriendshipLevels.level(state(v, p), b);
+        return level >= FriendshipLevels.HEART_GREETING ? Emote.HEART : level >= 4 ? Emote.NOTE : Emote.EXCLAIM;
+    }
+    /** The bubble that goes with a reply on a talk topic. */
+    public static Emote mood(Villager v, ServerPlayer p, String topic) {
+        if (bond(v, p).has("hurt")) return Emote.DOTS;
+        return switch (topic) {
+            case "joke" -> Emote.NOTE;
+            case "news" -> Emote.IDEA;
+            case "adventure" -> Emote.SPARKLE;
+            case "heart" -> {
+                var society = VillageSocieties.of(v); String id = profile(v).id();
+                var self = society == null ? null : society.get(id);
+                yield self != null && (!self.partner().isEmpty() || !society.crush(id, day(v.level())).isEmpty()) ? Emote.BLUSH : Emote.DOTS;
+            }
+            default -> Emote.DOTS;
+        };
     }
     public static String conversation(Villager v, ServerPlayer p, String topic) {
         var profile = profile(v); var b = bond(v, p); long today = day(v.level());
         if (v.isBaby()) return Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))) + " " + VillageSettlements.reference(v,topic,today);
         if (b.has("hurt")) return "I'd like to talk about what happened before we pretend everything is fine. An apology would be a beginning.";
+        var society = VillageSocieties.of(v); int salt = salt(v, p, today);
+        if (topic.equals("news")) return society == null || !society.has(profile.id()) ? "I haven't settled anywhere yet, so I don't hear much news. Ask me again once I have a hometown."
+                : Gossip.news(society, profile.id(), today, salt, FriendshipLevels.level(state(v, p), b) >= FriendshipLevels.SECRETS);
+        if (topic.equals("heart")) return society == null || !society.has(profile.id()) ? "My heart? It's still looking for a place to call home, let alone a person."
+                : Gossip.heart(society, profile.id(), today, salt);
         var personality = NarrativeContent.current().personality(profile.personality());
         var lines = personality.lines().get(topic);
         int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + b.recentLines().size(), lines.size());
@@ -50,7 +83,9 @@ public final class NarrativeEngine {
         String text = lines.get(index);
         if(!villageLine.isEmpty() && (topic.equals("chat") || topic.equals("work") || topic.equals("adventure")) && (index%2==0 || today%3==1))text=villageLine+" "+text;
         var neighbors = shared(v).neighbors();
-        if (topic.equals("chat") && !neighbors.isEmpty() && today % 3 == 0) text += " I've also been keeping " + neighbors.getFirst() + " company around the village.";
+        String mention = society == null || !society.has(profile.id()) ? "" : Gossip.mention(society, profile.id(), topic, today, salt);
+        if (!mention.isEmpty() && (topic.equals("chat") ? salt % 3 != 2 : salt % 2 == 0)) text += " " + mention;
+        else if (topic.equals("chat") && !neighbors.isEmpty() && today % 3 == 0) text += " I've also been keeping " + neighbors.getFirst() + " company around the village.";
         if (topic.equals("work") && today % 2 == 0) text += " " + Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), false, today, b.level(state(v, p)));
         return text;
     }
@@ -70,8 +105,11 @@ public final class NarrativeEngine {
                 default -> List.of(choice("request", "Anything else you need?", true), choice("together", "Let's spend time together", true), choice("companion", "Come on an adventure?", !v.isBaby()));
             };
         }
+        int level = FriendshipLevels.level(state(v, p), b);
         return List.of(choice("chat", "How's your day?", true), choice("work", "Tell me about work", true),
-                choice("adventure", "Talk about adventures", true), choice(b.has("hurt") || b.has("broken_promise") ? "apologize" : "joke", b.has("hurt") || b.has("broken_promise") ? "I'm sorry" : "Share a joke", true));
+                choice("adventure", "Talk about adventures", true), choice(b.has("hurt") || b.has("broken_promise") ? "apologize" : "joke", b.has("hurt") || b.has("broken_promise") ? "I'm sorry" : "Share a joke", true),
+                new FriendshipPayload.Choice("news", "Any village news?", level >= FriendshipLevels.NEWS, "Unlocks at friendship Lv. " + FriendshipLevels.NEWS),
+                new FriendshipPayload.Choice("heart", "Anyone special?", level >= FriendshipLevels.HEART_TO_HEART, "Unlocks at friendship Lv. " + FriendshipLevels.HEART_TO_HEART));
     }
     private static String storyText(Villager v, ServerPlayer p) {
         var s = arc(v); var b = bond(v, p);
@@ -182,8 +220,14 @@ public final class NarrativeEngine {
                 + "\nHome village: " + (VillageSettlements.home(v)==null?"Not yet settled":VillageSettlements.home(v).name())
                 + "\nValues: " + profile.value() + "\nLoves: " + itemName(profile.love()) + "\nDislikes: " + itemName(profile.dislike())
                 + "\nTrust: " + b.trustLabel() + "\nVisits on different days: " + b.visits()
-                + "\nResident friendships: " + shared(v).residentFriends().values().stream().filter(score -> score >= 3).count()
+                + "\nFriendship: Lv. " + FriendshipLevels.level(state(v, p), b) + " " + FriendshipLevels.name(FriendshipLevels.level(state(v, p), b))
+                + village(v)
                 + "\nNeighbors: " + (shared(v).neighbors().isEmpty() ? "Still getting acquainted" : String.join(", ", shared(v).neighbors()));
+    }
+    private static String village(Villager v) {
+        var society = VillageSocieties.of(v); String id = profile(v).id();
+        if (society == null || !society.has(id)) return "\nResident friendships: " + shared(v).residentFriends().values().stream().filter(score -> score >= 3).count();
+        return "\n" + String.join("\n", Gossip.about(society, id, day(v.level())));
     }
     private static String notes(Villager v, ServerPlayer p) {
         var s = arc(v); var b = bond(v, p);

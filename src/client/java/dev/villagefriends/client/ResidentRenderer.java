@@ -13,6 +13,10 @@ import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.util.Mth;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 
 /** Vanilla villagers retain their trades and AI, but use the actual player mesh and skin layout. */
 public final class ResidentRenderer extends HumanoidMobRenderer<Villager, ResidentRenderState, HumanoidModel<ResidentRenderState>> {
@@ -67,5 +71,48 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         state.outfit = ResidentSkins.outfit(look, job);
         state.texture = ResidentSkins.texture(look, job);
         ResidentLife.of(villager).extract(villager, state, portrait);
+        var bubble = portrait ? null : EmoteBubbles.get(villager.getId());
+        state.bubble = bubble;
+        state.bubbleAge = bubble == null ? 0 : bubble.age(delta);
+    }
+
+    @Override public void submit(ResidentRenderState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
+        super.submit(state, pose, collector, camera);
+        if (state.bubble != null && state.distanceToCameraSq < 40 * 40) submitBubble(state, pose, collector, camera);
+    }
+    /** Draws the emote bubble as a camera-facing card above the head (and above the name, when shown). */
+    private static void submitBubble(ResidentRenderState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
+        var bubble = state.bubble; float age = state.bubbleAge;
+        float scale = EmoteBubbles.scale(bubble, age);
+        if (scale <= .01F) return;
+        var anchor = state.nameTagAttachment;
+        double y = state.nameTag != null && anchor != null ? anchor.y + .78 : state.boundingBoxHeight + .32;
+        pose.pushPose();
+        pose.translate(anchor == null ? 0 : anchor.x, y, anchor == null ? 0 : anchor.z);
+        pose.rotate(camera.orientation);
+        float pixel = .019F * scale;
+        pose.scale(pixel, -pixel, pixel);
+        float bob = EmoteBubbles.bob(age);
+        int shape = EmoteBubbles.shape(bubble.emote()), symbol = EmoteBubbles.symbol(bubble.emote(), age);
+        float[] motion = EmoteBubbles.symbolMotion(bubble.emote(), age);
+        collector.submitCustomGeometry(pose, RenderTypes.text(EmoteBubbles.SHEET), (p, vc) -> {
+            quad(p, vc, -16, -32 + bob, 32, 32, 0, shape * 32, 0, 0, 1, 0);
+            // The symbol sits in the middle of the bubble's body, a hair closer to the camera (+z faces the viewer here).
+            float cx = motion[0], cy = -19 + bob + motion[1], half = 7.5F * motion[2];
+            quad(p, vc, cx - half, cy - half, half * 2, half * 2, 32 + symbol / 8 * 16, symbol % 8 * 16, 16, .3F, 1, motion[3]);
+        });
+        pose.popPose();
+    }
+    /** One textured square in sheet pixels (u = row y, v = column x, as cells are laid out), optionally rotated. */
+    private static void quad(PoseStack.Pose p, VertexConsumer vc, float x, float y, float w, float h, int row, int column, int size, float z, float alpha, float degrees) {
+        int cell = size == 0 ? 32 : size;
+        float u0 = column / 128F, v0 = row / 128F, u1 = (column + cell) / 128F, v1 = (row + cell) / 128F;
+        float cx = x + w / 2, cy = y + h / 2, cos = Mth.cos(degrees * Mth.DEG_TO_RAD), sin = Mth.sin(degrees * Mth.DEG_TO_RAD);
+        float[][] corners = {{x, y, u0, v0}, {x, y + h, u0, v1}, {x + w, y + h, u1, v1}, {x + w, y, u1, v0}};
+        int color = ((int) (alpha * 255) << 24) | 0xFFFFFF;
+        for (var c : corners) {
+            float dx = c[0] - cx, dy = c[1] - cy;
+            vc.addVertex(p, cx + dx * cos - dy * sin, cy + dx * sin + dy * cos, z).setColor(color).setUv(c[2], c[3]).setLight(0xF000F0);
+        }
     }
 }
