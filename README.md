@@ -1,4 +1,4 @@
-# Village Friends 2.11.0
+# Village Friends 2.12.0
 
 A Fabric mod for Minecraft Java Edition 26.3. Your villagers have names, individual preferences, persistent memories, written personal stories, and player-shaped appearances. Build trust, spend time together, and invite a friend on an Overworld adventure. Conversations work offline, with no AI account or service fees.
 
@@ -20,7 +20,7 @@ For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creativ
 
 ## Play on this computer
 
-For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.11.0.jar`. Building alone does not replace the installed mod.
+For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.12.0.jar`. Building alone does not replace the installed mod.
 
 Open the Minecraft Launcher, choose **Village Friends - 26.3**, and press Play. Under Installations, enable Modded if the profile is hidden. Right-click an awake villager to meet them.
 
@@ -28,7 +28,7 @@ The existing profile uses `%APPDATA%\.minecraft\instances\VillageFriends`. The u
 
 ## Your friendship journey
 
-The conversation window keeps its wood-and-parchment design and a live portrait of the resident, including their equipment. Use these tabs:
+The conversation window keeps its wood-and-parchment design and a live portrait of the resident, including their equipment. Dialogue types out with soft blips (Space finishes a line), and residents speak in wordless, human-like hums instead of vanilla villager sounds. Use these tabs:
 
 | Tab | What you can do |
 |---|---|
@@ -141,7 +141,7 @@ Requirements: **Minecraft 26.3, Fabric Loader 0.19.5+, Fabric API 0.161.0+26.3, 
 - Run `powershell -ExecutionPolicy Bypass -File .\build.ps1`, or `gradlew.bat build` with JDK 25 as JAVA_HOME. Gradle installs its own build runtime.
 - `gradlew.bat runClient` starts a separate development client.
 - `gradlew.bat runClientGameTest` runs real client/server interaction tests, screenshot checks, and save/reload tests. The test mod is excluded from the release JAR.
-- Release output: `build/libs/village-friends-2.5.0.jar`. Install this file, not the sources JAR.
+- Release output: `build/libs/village-friends-2.12.0.jar`. Install this file, not the sources JAR.
 - The art generator needs Python and Pillow only when regenerating assets.
 
 Read VERIFICATION.md for test coverage and its limits. Romance and family remain milestone 7, after the friendship systems have been used in real worlds.

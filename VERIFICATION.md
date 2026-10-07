@@ -1,4 +1,4 @@
-# Village Life animation pack verification (unreleased, on 2.11.0)
+# Village Life animation pack verification (2.12.0)
 
 Verified October 6, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, first on the 2.10.1 base and again after merging the 2.11.0 wardrobes.
 
@@ -7,6 +7,7 @@ Verified October 6, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 
 - `runClientGameTest -PanimationPack` passed. For every clip at three moments, armor matched the resident model and the feet stayed under the resident. Bows leave the legs planted; right- and left-handed waves raise the correct arm; carried items keep their pose except in work clips; reactions leave a stride alone; prayer closes the eyes and reading keeps irises in the eye whites; children hop at their own scale; twirls end facing forward; posing bakes no textures.
 - The same run drove real residents: idles (four different clips from one resident), a face-to-face neighbor chat, a greeting when the player walked up, the conversation window (greeting, talking gestures, laughing at a joke, delight at a loved gift, refusing a disliked one), happy/heart/angry/raid-sweat events, harm, a refused trade, and `/tick freeze` holding residents mid-motion while `/tick step` advances them one tick at a time. The resident's personality reached the client.
 - `-PanimationsOnly`, `-PcompanionsOnly` (friendship and roadmap), and `-PoutfitsOnly` passed on both bases; on 2.11.0 the wardrobe check covered 180 outfits, 130 hairstyles, 180 tops and 180 bottoms.
+- After merging the wordless voices and typed dialogue, `-PanimationPack`, `-PcompanionsOnly` and `-PanimationsOnly` passed again, including residents listening once their line has typed out and gesturing while a new reply types.
 - `-PanimationVideo` captured 1,275 gallery and 1,456 village frames at 30 fps; `tools/animations/film.py` assembled a 1:42 showcase. The first 54 village frames rendered dark while the renderer settled after the freeze and are trimmed.
 - Evidence: `build/run/clientGameTest/screenshots/*animation-pack-*.png` (a still of every clip), `*animation-portrait-*.png`, and `build/film/village-life-animation-pack.mp4`.
 
