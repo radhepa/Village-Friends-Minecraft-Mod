@@ -1,0 +1,130 @@
+{
+ "format": 1,
+ "size": [5, 6, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "C": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "D": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "F": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAA",
+    "AAAAA",
+    "ACCCA",
+    "ACCCA",
+    "ACCCA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..F..",
+    ".....",
+    ".BBB.",
+    ".BBBE",
+    ".BBB."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    "..B..",
+    ".BBB.",
+    "..B.."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "..B..",
+    "....."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "..D..",
+    "....."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "....."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/decor.py",
+  "checksum": "2d0aba4df0fa51a9"
+ }
+}

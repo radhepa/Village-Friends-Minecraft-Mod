@@ -1,0 +1,153 @@
+{
+ "format": 1,
+ "size": [5, 4, 7],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:acacia_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "D": {
+   "id": "minecraft:acacia_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:acacia_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "F": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "G": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "north",
+    "waterlogged": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAA",
+    "AAAAA",
+    "AAAAA",
+    "AAAAA",
+    "AAAAA",
+    "AAAAA",
+    "AAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..I..",
+    "..F..",
+    ".BBB.",
+    "EBBBD",
+    "EBBBD",
+    ".BBB.",
+    "....."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "...H.",
+    ".CC..",
+    ".C.G.",
+    "....."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "....."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [3, 2, 3],
+   "nbt": {
+    "id": "minecraft:decorated_pot"
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/decor.py",
+  "checksum": "ac6c3ba13cd7e744"
+ }
+}
