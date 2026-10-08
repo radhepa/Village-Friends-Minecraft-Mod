@@ -1,0 +1,506 @@
+# What residents say about the part of the day they're in (see Routine.java).
+# greet.routine.<block> opens a conversation; routine.<block> answers "How's your day?".
+
+## greet.routine.sleep
+Mm? Oh, hello. I was just about to turn in.
+Hello. It's my bedtime, but I can spare a minute.
+Yawn... sorry. Hello! I should really be asleep.
+Oh, you caught me in my nightcap. Hello.
+Hello. Keep it short, my pillow's calling my name.
+Hello! I'm officially off duty. Unofficially, I'm still nosy.
+
+## greet.routine.nap
+Wha? Oh! I wasn't napping. Hello.
+Hello... I was resting my eyes. Both of them. Very thoroughly.
+Mm. Five more minutes. Oh, it's you. Hello!
+Hello! You woke me from a very important nap.
+Shh. I'm napping. Officially. But hello.
+Hello. My afternoon nap is sacred, but you're allowed.
+
+## greet.routine.wake
+Mmh. Morning. I'm still finding my feet.
+Hello! I just got up. My hair's still deciding which way to go.
+Oh, hello. Give me a moment, my eyes are only half open.
+Good morning! I'm awake. Mostly. In theory.
+Hello! I just washed my face in the cold water bucket. I'm VERY awake now.
+Morning. Don't mind the yawning; it's not you, it's the hour.
+
+## greet.routine.breakfast
+Hello! You caught me mid-breakfast. Want a crust?
+Morning! I'm just finishing my porridge.
+Hello! Breakfast first, then the world. Sit down.
+Ah, hello. Mind the crumbs, I'm a messy eater before noon.
+Hello! The eggs were good today. The chickens outdid themselves.
+Hello! I always say nothing good happens before breakfast. Then you showed up.
+
+## greet.routine.prayer
+Peace be with you. I was just finishing my morning prayers.
+Hello, friend. The quiet hours are the best for reflection.
+Ah, hello. I asked for a good day. Maybe you're the answer.
+Hello. Forgive the incense smell; it gets in everything.
+Good morning. I lit a candle for everyone in {village} today.
+Hello. My prayers are said, my mind is clear. How can I help?
+
+## greet.routine.work
+Hello! I'm at work, but I can talk while I do this.
+Oh, hello! Don't mind me, my hands are busy but my ears are free.
+Hello! Busy, busy. What can I do for you?
+Ah, a visitor at the workstation. Hello!
+Hello! You've caught me in the middle of something. That's always the way.
+Hello, {player}. Mind your elbows, there are sharp things about.
+Hello! It's a working day, but a chat never hurt anyone.
+Hello! My workstation and I were just having a disagreement.
+
+## greet.routine.lunch
+Hello! Lunchtime! Sit down, I'll share.
+Ah, hello! I'm on my lunch break. Best part of the day.
+Hello! The bell rang for lunch and I ran.
+Hello, {player}! Want a bite? It's only a little squashed.
+Hello! Everybody comes out to the bell at lunch. It's like a small festival every day.
+Hello! I'm eating, so if I talk with my mouth full, forgive me.
+
+## greet.routine.lunch_home
+Hello! I popped home for lunch. Nobody steals my soup here.
+Oh, hello. I'm having lunch at home today. Quiet's nice sometimes.
+Hello! Back home for a bite. Come in, come in.
+Hello! My own kitchen, my own chair, my own sandwich. Bliss.
+Hello! I always eat better at home. Fewer people asking for some.
+Hello! I came home to eat and accidentally started cleaning.
+
+## greet.routine.lunch_tavern
+Hello! I'm lunching at the tavern. The stew's good today.
+Oh, hello! Pull up a chair. The tavern's busy but there's room.
+Hello! I treat myself to a tavern lunch now and then.
+Hello! You can smell the tavern kitchen from here, can't you?
+Hello! Tavern lunch, best lunch. Don't tell my mother.
+Ah, hello. Mind the bench, it wobbles.
+
+## greet.routine.hobby
+Hello! It's my free time, so I'm doing what I love: {hobby}.
+Oh, hello! You caught me enjoying a little {hobby}.
+Hello! Work's done and now it's time for {hobby}.
+Hello, {player}! This is my favorite part of the day.
+Hello! I lose track of time completely when I'm {hobby}.
+Hello! Don't mind the mess; hobbies are supposed to be messy.
+
+## greet.routine.social
+Hello! Come join us, we're catching up by the bell.
+Hello! This is when the whole village comes out to chat.
+Oh, hello! You've arrived at the best hour for gossip.
+Hello, {player}! Everyone's out, everyone's talking.
+Hello! The bell's the heart of {village}, and this is its busiest beat.
+Hello! I just heard the most interesting thing. I'll tell you if you're nice.
+
+## greet.routine.market
+Hello! The market's in full swing. Have you seen the stalls?
+Happy Market Day! I'm out browsing.
+Hello! I'm only here for the honey cakes. And the people. Mostly the cakes.
+Hello! Market Day! The busiest, happiest day of the week.
+Hello! Everyone's selling something, and I'm buying everything.
+Hello! I've been haggling all morning. I lost.
+
+## greet.routine.supper
+Hello! Supper's on the table. Join us?
+Ah, hello. It's suppertime. Smell that?
+Hello! I'm just sitting down to eat. You're welcome to the bread.
+Hello! Supper's the best meal. It means the day's work is done.
+Hello! Come in, there's enough stew for one more.
+Oh, hello! I was just washing up the bowls.
+
+## greet.routine.evening
+Hello! Just relaxing at home. Come in a moment.
+Ah, hello. My feet are up and my day is done.
+Hello! A quiet evening at home is the finest thing.
+Hello, {player}. I was just reading by the lamp.
+Hello! Evenings are for slippers and slow talks.
+Oh, hello! I wasn't expecting company, but I'm glad of it.
+
+## greet.routine.tavern
+Hello! Come in, come in, the tavern's warm and loud tonight.
+Hello! Pull up a stool, {player}! The cider's good.
+Ah, hello! Evening at the tavern. Best part of the week.
+Hello! Shh, the bard's about to start. Or he's tuning. Hard to tell.
+Hello! You'll want to try the cider here, it's pressed fresh.
+Hello! Everyone in {village} ends up at the tavern eventually.
+
+## greet.routine.perform
+Hello! I'm about to go on. Wish me luck!
+Ah, an audience member! Hello! Any requests?
+Hello! I'm warming up my fingers. And my nerves.
+Hello! Tonight's the night. Every night's the night, really.
+Hello! Sit close to the front. I sing better when I can see faces.
+Hello! Don't clap yet, I haven't played anything.
+
+## greet.routine.night_watch
+Halt! Oh, it's you. Hello.
+Hello. I'm on watch, so I'll keep my eyes on the dark while we talk.
+Evening, {player}. All quiet so far. Let's keep it that way.
+Hello. You're out late. Stay close to the torches.
+Hello. Night watch. Long hours, cold hands, good stars.
+Hello. Heard any groaning out by the fields? No? Good.
+
+## greet.routine.play
+Hi! We're playing! Want to play?
+Hello! I'm hiding! Don't tell anyone where I am.
+Hi hi hi! I'm being a dragon! Rawr!
+Hello! I've been playing since forever!
+Hi! We're having a race! Are you fast?
+Hello! I found a really good stick!
+
+## greet.routine.lessons
+Hello! We're at lessons. Shh, the teacher's watching.
+Hi! I'm learning my letters. Want to hear the alphabet?
+Hello! Lessons are boring but don't tell anyone I said that.
+Hi! We're learning about the stars today!
+Hello! I already know all the answers. Mostly.
+Hi! I'm supposed to be paying attention. Hello!
+
+## greet.routine.shelter
+Hello! Come in out of the rain!
+Oh, you're drenched! Come stand under the roof.
+Hello! I ran home the moment it started pouring.
+Hello! Rainy afternoon. Perfect for staying in.
+Hello! I got caught halfway across the square. My shoes are full of water.
+Hello! Inside's where all the sensible people are today.
+
+## greet.routine.storm
+Hello! Quick, inside! That lightning's close!
+You're out in this? Come in, come in!
+Hello! I'm staying put until the sky calms down.
+Hello! Every clap of thunder makes me jump. Don't laugh.
+Hello! Shut the door, quick! The wind's fierce.
+Hello. I'm counting between the flashes and the booms. It's getting closer.
+
+## greet.routine.snowed_in
+Hello! Come warm your hands by the fire.
+Oh, you're covered in snow! Stamp your feet before you come in.
+Hello! I'm not going out in that. Not for all the emeralds in the world.
+Hello! Cozy day by the hearth for me.
+Hello! The snow's piling up against the door.
+Hello! I've got a blanket and a warm drink and I'm not moving.
+
+## greet.routine.rain_walk
+Hello! Isn't the rain wonderful?
+Hello! I love walking in the rain. Everyone thinks I'm odd.
+Hello! Don't hide from it, the rain's lovely!
+Hello! I'm soaked and happy about it!
+Hello! Listen to it pattering on the leaves.
+Hello! Puddle-jumping is very serious business.
+
+## greet.routine.snow_play
+Hello! Snowball fight! Want to join?
+Hi! I'm building a snow golem! It doesn't move yet.
+Hello! Look how deep the snow is! It's up to my knees!
+Hi! Catch a snowflake on your tongue! Like this!
+Hello! My nose is frozen and I don't care!
+Hi! I made a snow angel! It's a bit square.
+
+## routine.sleep
+I really should be in bed by now. I'll say goodnight soon.
+My eyelids are getting heavy. It's been a long day.
+Bedtime, I'm afraid. Even the chickens have turned in.
+I'm just about to blow out my lamp. The dark's coming down quick.
+My bed's calling me. It's very persuasive.
+I'll be dreaming soon. Hopefully about pie again.
+I keep my bed by the window so the morning light wakes me. Bit of a trick, that.
+Sleep's the best medicine. That, and soup.
+I always sleep better after a good day. And today was a good one.
+If you hear snoring, it's my neighbor. Definitely not me.
+I count sheep to fall asleep. Real ones. There are eleven.
+Goodnight soon, {player}. Don't wander too far in the dark.
+
+## routine.nap
+A nap after lunch is the secret to a long life. Or at least a good mood.
+I was in the middle of a lovely nap. I dreamed I was a cloud.
+Napping is an art, and I'm a master.
+Everyone works so hard. I nap so they don't have to. Balance.
+A little rest and I'll be good as new. Or as good as I ever am.
+Don't tell anyone I nap every day. It's my secret talent.
+The hay in the barn makes the best nap spot. Itchy, but cozy.
+I'll be up and about in a bit. Probably. Possibly.
+Naps are like little holidays you take every afternoon.
+I could nap anywhere. I once napped standing up.
+My cat taught me how to nap properly. Find the sunbeam, curl up, ignore everyone.
+Shh. The afternoon's for resting. That's the rule.
+
+## routine.wake
+I just woke up. The world's a bit fuzzy around the edges.
+I always wake up hungry. Is that normal? Don't answer.
+I had the strangest dream about a flying pig wearing a saddle.
+The roosters did their job. Unfortunately.
+I like to lie still for a minute when I wake up and listen to the village.
+First thing every morning I open the shutters and say hello to the day.
+Morning stiffness. My back sounds like a creaky door.
+I woke up before the bell today. A personal triumph.
+My bed was so warm. Leaving it is the bravest thing I do all day.
+The light comes through my window at just the right angle at dawn. That's my alarm.
+I splash cold water on my face every morning. It's horrible. It works.
+New day, clean slate. Let's see what happens.
+
+## routine.breakfast
+Breakfast is the most important meal. Lunch is a close second. Supper's third. Snacks are fourth.
+Bread, honey and an apple. Perfect start.
+I eat breakfast slowly. The rest of the day goes too fast as it is.
+My breakfast is cold because I've been talking. Worth it.
+I fry an egg every morning. The chickens pretend not to notice.
+Porridge again. It's always porridge. I love porridge.
+I like to plan my day over breakfast. Then I ignore the plan.
+Good bread and good company. That's the whole recipe for a good morning.
+Breakfast tastes better when the window's open.
+I always save a crust for the birds.
+My neighbor makes the best jam. I have to trade for it. It's worth every emerald.
+Toast is just bread with ambition, really.
+
+## routine.prayer
+I start every day with a little quiet. It helps me hear what matters.
+I pray for good harvests, safe travelers and fewer zombies.
+The temple's peaceful at dawn. Just me, the candles and the brewing stand bubbling.
+I always say a word for travelers. That includes you.
+A few quiet minutes make a whole day gentler.
+Some people say prayers. Some people say thank you. I say both.
+The incense makes me sneeze, but I like the smell.
+I keep a list of everyone in {village} and think of each of them. It takes a while.
+Even the golem stands still while the morning bell rings. Respectful.
+There's a stillness at dawn I can't find any other time.
+
+## routine.work
+I'm right in the thick of it. Busy hands, happy heart.
+Work's going well. Don't jinx it.
+A good day's work is its own reward. Emeralds help too.
+I'm halfway through today's tasks and all the way out of patience. Hello, though!
+I love the rhythm of work. Thump, thump, thump. Like a heartbeat.
+Work's work. It gets done because I do it.
+Today's going smoothly. Suspiciously smoothly.
+I've been at it since morning. Can't stop now, I'm on a roll.
+There's always one more thing to do. That's how you know it's honest work.
+My workstation and I understand each other. Mostly.
+Busy day. The whole village needs something from me.
+I'll stop for lunch when the bell rings and not a moment before.
+Hard work's easier when someone stops by to say hello.
+I take pride in my work. Even the boring bits.
+
+## routine.lunch
+Lunch by the bell is the best tradition {village} has.
+I'm sharing lunch with everyone today. Pass the bread.
+My lunch is mostly bread. My friend's lunch is mostly my bread.
+Lunch is short, so I eat fast and talk faster.
+The whole village comes to the bell at noon. It's like a family picnic every day.
+I traded half a carrot for half a pie. Excellent deal.
+I like eating outside. Food tastes better with sky above it.
+Sit down! There's room on the bench.
+Lunch is when all the real news gets shared.
+I eat lunch with {friend} most days. We always end up laughing.
+Midday sun, cold apple, good company. Perfect.
+After lunch, I always want a nap. Don't let me.
+
+## routine.lunch_home
+I like a quiet lunch at home. The bell gets loud at noon.
+I came home for lunch. My own chair's comfier than any bench.
+Lunch at home means I don't have to share my cheese.
+Sometimes you just want your own kitchen, you know?
+I made soup this morning. It's even better at lunch.
+Home for lunch, back to work after. That's the rhythm.
+I eat at home so I can take my boots off for an hour.
+Quiet lunch, quiet mind.
+My kitchen's small, but it's mine.
+I had lunch with my cat. She ate most of it.
+
+## routine.lunch_tavern
+The tavern does a lovely midday stew. I'm a regular.
+Lunch at the tavern! I've earned it this week.
+The tavern's busy at noon. Everyone's swapping stories over soup.
+I come here for the bread. The bread is a work of art.
+Tavern lunches make me feel like a traveler, even though I live two doors away.
+The tavern keeper knows exactly how I like my soup. That's friendship.
+There's always someone new at the tavern at lunchtime.
+I had the special. I don't know what it was. It was delicious.
+Tavern food and tavern gossip. Both very filling.
+I'm just having a quick bite. And a quick chat. And maybe a slow cider.
+
+## routine.hobby
+Free time! I'm spending it on {hobby}, as usual.
+This is the hour I live for. Work's done, the day's still bright.
+I've been at my hobby since the end of work. I've lost track of time.
+Everyone needs something they do just because they love it. Mine's {hobby}.
+I'm not very good at {hobby}, but I'm very happy doing it.
+My favorite spot for {hobby} is just past the houses, where it's quiet.
+I've been trying something new with my {hobby} today. It's going... interestingly.
+They say {hobby} is good for the soul. My soul's in great shape.
+When I'm {hobby}, the world goes quiet. In a good way.
+I could talk about {hobby} for hours. Should I? You look like you'd let me.
+Afternoons are made for hobbies. That's my philosophy.
+I lose myself in {hobby}. Then someone has to come and find me for supper.
+
+## routine.social
+This is the best hour. Everybody's out and everyone's talking.
+I came to the bell to catch up. You hear everything here eventually.
+Neighbors, gossip and the last of the sunshine. Lovely.
+I love this time of day. The whole village is one big conversation.
+{friend} and I were just chatting about the weather. Riveting stuff.
+Come sit with us! The bench is warm from the sun.
+There's always someone to talk to by the bell.
+I've had six conversations in the last hour. I'm exhausted. Happily.
+The children run around, the grown-ups talk, the golem watches. Village life!
+This is when you find out who's sweet on whom.
+I like to stand by the bell and say hello to everyone who passes.
+Gossip is just news with feelings in it.
+
+## routine.market
+Market Day! I've bought a scarf, three apples and a wooden duck I don't need.
+The stalls are full. Have you tried the honey?
+I love haggling. I'm terrible at it, but I love it.
+Everyone brings their best for Market Day. The bakers outdo themselves.
+I saved up all week for Market Day. All gone now. Worth it.
+The cartographer's selling maps. I don't go anywhere, but I like looking at them.
+Market Day's the only day I see everyone in one place.
+I sold two baskets of eggs. The chickens deserve a cut.
+I could walk around the market all day. I probably will.
+No work on Market Day. Just browsing, chatting and nibbling.
+The children are running between the stalls. Somebody's going to knock over the pies.
+I traded a song for a sweet bun. The baker has terrible taste in music, but I'm not complaining.
+
+## routine.supper
+Supper's my favorite meal. Everyone's home and the day's done.
+I made stew. It's always stew. Stew is a lifestyle.
+Supper smells drifting through {village}... my stomach's growling.
+We eat together as a family. Even when it's chaos.
+Supper's simple tonight. Bread, cheese and good company.
+I burned the carrots. Don't tell anyone.
+After supper I'll do the dishes. Probably. Eventually.
+The best part of supper is the talking, not the eating.
+I always cook too much. Leftovers for breakfast!
+Supper by the window. I can watch the sunset while I eat.
+
+## routine.evening
+Just winding down for the night. Feet up, thoughts slow.
+I like the evenings. Everything's soft and golden and quiet.
+I'm sitting by the lamp, mending a sock. Exciting stuff.
+Evenings are for small things. A good chair, a warm drink.
+I watch the stars come out from my window most nights.
+My house creaks in the evenings, like it's stretching after a long day.
+I read a little every evening. Just a page or two before bed.
+Quiet evenings are the reward for busy days.
+I can hear the tavern from here. Sometimes I sing along. Badly.
+I tidy up a little before bed. It makes the morning nicer.
+
+## routine.tavern
+The tavern's the warmest place in {village} after dark.
+I come here most evenings. The cider's good and the stories are better.
+Someone's always telling a tall tale at the tavern. Tonight it's about a talking cow.
+I've been here an hour and I've heard three songs and two arguments.
+The tavern keeper knows everyone's business. And everyone's favorite drink.
+I'm only staying for one cider. That was two ciders ago.
+Tavern nights are when the village really relaxes.
+The fire's crackling, the bard's singing, the mugs are full. What more could you want?
+I lost at dice. Again. I always lose at dice.
+Sit with us! There's always room at the tavern.
+I come for the company. The cider's a bonus.
+The tavern smells of woodsmoke and apples. I could live here.
+
+## routine.perform
+I'm performing tonight! The tavern's packed.
+I've been practicing a new song all week. Tonight's the debut.
+My fingers are nervous. My heart's excited. My voice is undecided.
+There's nothing like playing for a room full of friends.
+I'll play the old favorites first, then something new.
+Music brings the whole village together. Even the people who can't dance.
+If they throw tomatoes, I'll make soup. Silver linings.
+Every performance is different. That's the magic.
+I wrote a song about {village}. I hope they like it.
+The tavern goes quiet when I start. That's my favorite sound.
+
+## routine.night_watch
+All quiet on the watch. The best kind of night.
+I walk the edge of the village every hour. Torches lit, eyes open.
+Night watch is lonely, but someone has to keep the zombies honest.
+I've seen two skeletons and a very confused spider tonight.
+The stars are bright. Good for spotting things in the dark.
+I sleep in the day so I can guard at night. My schedule's upside down.
+You get to know the night sounds on watch. Every creak and groan.
+If you hear the bell ring at night, run indoors. That's my signal.
+My lantern, my sword and my wits. All I need.
+Nothing gets past me. Except bats. Bats get past everyone.
+The golem and I have an understanding. It takes the north side, I take the south.
+Long night ahead. Good thing I like the quiet.
+
+## routine.play
+We're playing tag! I'm winning!
+I'm a knight and this stick is my sword!
+We built a fort out of hay bales. It's the best fort ever.
+I'm hiding from my friends. They'll never find me here. Oops, you found me.
+We're racing to the bell and back! Want to race?
+I'm pretending to be a creeper. Hssss! Boom!
+I found a frog! His name is Admiral Hop.
+We're playing village. I'm the bell.
+
+## routine.lessons
+We're learning about the stars! Did you know there's one shaped like a pickaxe?
+The teacher says I'm very bright. Like a torch.
+I'm learning my numbers. I can count all the way to sixty-four! That's a whole stack!
+We're learning the names of every block. There are SO many.
+Lessons are fun when there's drawing. Today there's drawing!
+I wrote my name! It's a bit wobbly.
+The teacher says if I pay attention I'll be a scholar someday.
+We learned that creepers are afraid of cats. Is that true?
+
+## routine.shelter
+I came inside the moment the rain started. My hat's still dripping.
+Rainy days are for staying in, sipping something warm.
+I don't mind the rain, as long as I'm watching it from inside.
+Listen to it drumming on the roof. Lovely.
+I got halfway to the bell and the sky opened up. So here I am.
+The fields need the rain. My shoes don't.
+I'll wait it out. The village will still be there when it stops.
+Everyone's indoors. {village} looks like a ghost town from my window.
+I'm using the rain as an excuse to do nothing. Highly recommended.
+The rain smells so fresh. I'll go out the second it stops.
+My roof only leaks in one spot. I put a bucket there. It's practically a fountain.
+Rain makes the house cozy. Candles, blankets, the works.
+
+## routine.storm
+Did you see that flash? I nearly dropped my mug.
+The storm's right overhead. Stay away from the windows.
+I don't like thunder. There, I said it.
+The animals are all huddled up. Smart animals.
+Every flash lights up the whole village like daytime for a blink.
+Lightning hit a tree by the river once. It was never the same.
+I'm staying inside until this blows over. You should too.
+Listen to that wind! The shutters are rattling.
+Storms remind me how small we are. And how cozy a roof is.
+If lightning strikes a pig, you get something awful. I'm not going near the pens.
+The golem stands out there in the storm like it's nothing. Brave thing.
+Thunder rolls on and on. Like a giant's stomach.
+
+## routine.snowed_in
+I've got the fire roaring and I'm not leaving it.
+The snow's piled up against the door. I'm snowed in. Perfect excuse.
+Warm socks, hot stew, a good book. That's how you beat winter.
+I can see my breath, even inside. The fire needs more wood.
+The cold gets into my bones. Into my soul, a little.
+The children are out playing in it. They're tougher than me.
+I'm knitting a scarf. It's mostly holes, but it's warm holes.
+Snowy days are for staying in and telling stories.
+My fingers are just starting to thaw.
+Everything outside is white and silent. It's beautiful. From in here.
+
+## routine.rain_walk
+I love the rain! Everyone hides, so I have the whole village to myself.
+Rain on my face feels like the sky saying hello.
+The puddles are perfect for jumping in. I'm a grown resident and I don't care.
+The flowers drink it up. You can almost hear them saying thank you.
+Most people run inside. I always stay out. It feels like an adventure.
+The rain makes everything sparkle. Even the dirt.
+I'm completely soaked and I've never been happier.
+There's a little stream running down the path. I'm following it to see where it goes.
+Rain smells like the earth waking up.
+Why stay dry? Dry is boring.
+
+## routine.snow_play
+I'm building a snow golem! I've named it Sir Frosty.
+Snowball fight! I've already hit three people. And one cow.
+I made a snow angel. It looks more like a snow potato.
+Catch a snowflake! They taste like nothing, but it's fun!
+The snow's perfect for sledding down the hill. No sled, though.
+My toes are cold but my heart is warm!
+I'm making a snow fort. Nobody's getting in.
+I love snow! Everything's new and white and quiet.

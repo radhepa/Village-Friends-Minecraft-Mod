@@ -1,0 +1,390 @@
+# What residents notice about you: held.<what you hold>, player.<how you look>.
+
+## held.sword
+Careful with that sword! Point it somewhere that isn't me.
+That's a fine blade. Use it to protect, not to bully.
+You can put the sword away, {player}. Nobody here's going to bite you.
+Is that {item}? Looks like it's seen a few fights.
+Swords make me nervous. Even friendly ones.
+A sword like that could keep a whole village safe. Keep it sharp.
+Mind your swing near the chickens, please.
+Our knights would admire a blade like that.
+
+## held.axe
+Chopping trees? Leave a few for the birds.
+An axe! The carpenter would love to borrow that.
+That's a sharp-looking axe. Careful near my fence.
+Plant a sapling for every tree you cut. That's the rule round here.
+You look like you've been cutting wood all day. Smell of sap and everything.
+Axes make good shields-breakers, I hear. Not that I'd know.
+Going lumberjacking? The birch grove's to the north.
+
+## held.pickaxe
+Off to the mines? Watch out for lava.
+A pickaxe! Find any diamonds lately?
+Is that {item}? Looks like it's been chewing through stone.
+Never dig straight down. My grandfather's rule.
+You've got stone dust all over you. Been mining?
+Bring a torch for every pickaxe swing. Caves are dark.
+If you find iron, the smiths will buy it.
+Miners always come back with the best stories. And the worst dust.
+
+## held.shovel
+Digging something up? Or burying something? I won't ask.
+A shovel! Want to help with my garden?
+Gravel, sand, dirt. The shovel's for the honest work.
+Careful you don't dig up the path again.
+Is that for making paths? The village could use a few more.
+I once dug a hole so deep I had to call for help.
+Shovels are underrated. Everyone loves a pickaxe, nobody thanks the shovel.
+
+## held.hoe
+A hoe! Are you a farmer now too?
+Come help with the harvest, if you're handy with that.
+Till the dirt near water and it'll stay farmland.
+Nice hoe. The farmer would approve.
+Planting something? Carrots grow fast here.
+Don't swing that near my flowers, please.
+Farming's honest work. Glad to see you trying it.
+
+## held.bow
+A bow! Our archers would like a look at that.
+Careful with that string. It bites.
+Hunting? Or target practice?
+Is that {item}? Looks well cared for.
+Shoot the archery target sometime. It'll tell you your score.
+Bows are quiet. That's why the archers love them.
+Mind you don't shoot the chickens. Or me.
+
+## held.trident
+A trident! Did you take that from a drowned? Brave.
+That's a strange weapon. It looks like it wants to swim.
+Throw that in the rain and they say lightning follows. Don't, please.
+Ooh, is that from the ocean? It smells of salt.
+I've never seen one up close. Can I... no. I won't touch it.
+A trident's a sailor's weapon. Are you a sailor now?
+
+## held.shield
+A shield! Smart. Shields save lives.
+That's a sturdy shield. Did the armorer make it?
+Crouch behind that when the skeletons start shooting.
+I like a person who carries a shield. Shows sense.
+Is that your banner on the front? Very fancy.
+Our knights swear by shields. So should you.
+
+## held.fishing_rod
+Going fishing? The river's best in the morning.
+A fishing rod! The fisherman would want to compare notes.
+Catch me a salmon while you're at it?
+Patience, a good rod and a quiet spot. That's all you need.
+If you catch a boot, keep it. You never know.
+The fish bite better in the rain, they say.
+Fishing's my favorite way to waste an afternoon.
+
+## held.map
+Is that a map? Can I see? Where have you been?
+Maps are wonderful. Every corner a promise.
+The cartographer would love to see your map.
+Show me where {village} is on that. Is it there? We're famous!
+That map's well worn. You've been places.
+If you get lost, follow the river downhill. Rivers always find people.
+Are you marking us on your map? Put a little bell where the village is.
+
+## held.compass
+A compass! Which way's north? I always forget.
+Does your compass point home, or somewhere else?
+Clever little thing, a compass. Never lies.
+I'd get lost in my own garden without one of those.
+Is that a clock? Or a compass? I can never tell them apart from here.
+Keep that close on your travels. It'll bring you back.
+
+## held.book
+A book! What are you reading?
+Ooh, is that enchanted? It's glowing a little.
+The librarian would want to borrow that.
+Books are the best company. Except you, of course.
+What's the story about? Tell me without spoiling the ending.
+Is that a journal? Do you write about us?
+Reading's my favorite way to travel without moving.
+Bring that to the archives if you want a copy of the village chronicle.
+
+## held.flower
+Oh, a flower! Is that for me? No? Still lovely.
+That's a pretty flower. Did you pick it in the meadow?
+The bees would love that.
+Flowers make everything better. Even swords. Maybe not swords.
+A flower in hand is worth two in the garden. Or something like that.
+The golem likes flowers. Did you know? It gives them to the children.
+That color's beautiful. You could make a lovely dye from it.
+
+## held.emerald
+Emeralds! Looking to trade?
+That's a nice shiny emerald. Spend it wisely.
+Emeralds make the village go round.
+Careful flashing emeralds around. Not everyone's as honest as us.
+Oh, I could do a lot with one of those. A new hat, for a start.
+Are you rich, {player}? You look rich today.
+The wandering trader's prices would make your emeralds weep.
+
+## held.diamond
+Is that a diamond? A real one? Goodness!
+Diamonds! Where did you find that?
+Put that away before someone faints.
+A diamond like that could buy half the village. Well, not the bell.
+I've only seen a diamond once before. It was in a sword.
+Shiny. Very, very shiny.
+Make something strong with that. A pickaxe, maybe.
+
+## held.gold
+Gold! The piglins would love you.
+Gold's pretty, but it's soft. Don't make tools with it.
+Is that real gold? It's so bright.
+A golden apple needs a lot of gold. Just saying.
+Gold armor looks lovely and breaks in a breeze.
+Careful, the wandering trader's eyes just lit up.
+
+## held.torch
+Good thinking, carrying a torch. Monsters hate the light.
+A torch! The path's dark after sunset. Put one by the well?
+Mind you don't set the hay on fire.
+Light the way, {player}. Somebody has to.
+Torches keep the zombies away. Mostly.
+The more torches, the safer the village. That's my motto.
+
+## held.bucket
+A bucket? Fetching water? The well's that way.
+Is that lava? Please tell me that's not lava.
+Milk! Is that milk? Fresh milk cures all sorts of nasty potions.
+Water bucket! Very useful if you fall from somewhere high.
+Careful not to spill that on my doorstep.
+Buckets are the unsung heroes of the village.
+
+## held.crops
+Seeds! Planting something? The farmer would be thrilled.
+Carrots, potatoes, wheat. The good stuff.
+Are you helping with the harvest? Bless you.
+That's a lot of crops. Making bread? Stew? Both?
+Plant them near water and they'll grow fast.
+A sapling! Plant it somewhere it can grow tall.
+You smell like a field. A nice field.
+
+## held.egg
+An egg! Are you going to throw it? Please don't throw it.
+Throw an egg and sometimes a chicken pops out. Strange, but true.
+Eggs for cake! Do you bake?
+Careful, that's fragile.
+Is that a turtle egg? Put it back on the beach!
+Chickens lay eggs everywhere here. You're welcome to them.
+
+## held.totem
+Is that a totem of undying? Hold onto that. Literally.
+That totem looks ancient. Where did you get it?
+They say a totem can cheat death once. Don't test it.
+Evokers carry those. You fought an evoker? Goodness.
+A totem! You must have been somewhere dangerous.
+Keep that close. Very close.
+
+## held.elytra
+Wings! You can fly with those? Truly?
+Is that an elytra? From the End cities? I've only read about them!
+Fly over {village} sometime. I'll wave.
+Fireworks and wings. What a way to travel.
+Don't crash into the bell tower, please.
+I'd be terrified to fly. And also thrilled.
+
+## held.tnt
+Is that TNT? Put it down. Gently. Very gently.
+Please don't light that near my house.
+Explosives in the village? The golem won't like that.
+I hope that's for mining. Far away from here.
+That makes me more nervous than a creeper.
+TNT and flint? You're a walking disaster, {player}.
+
+## held.potion
+A potion! What does it do? Does it glow?
+The cleric would want to know what's in that bottle.
+Be careful what you drink, {player}. Not everything bubbling is friendly.
+Is that a healing potion? Smart to carry one.
+That color's interesting. Smells like nether wart.
+Potions make me nervous. Last one I drank turned me invisible for a day.
+
+## held.treat
+Is that cake? Are you sharing? You should be sharing.
+Cookies! My weakness.
+That smells sweet. Honey? Berries?
+A treat for me? No? A treat for you, then. Fair.
+Pumpkin pie! The baker's best.
+Sweet berries are lovely. Prickly to pick, though.
+
+## held.food
+Hungry? You should eat that before it gets cold.
+That smells delicious. Did you cook it?
+Food's for sharing, they say. I'm just saying they say it.
+Eat up! Adventurers need their strength.
+Is that bread? Good bread? Let me see.
+You've got a good meal there. The cook would approve.
+Bring some of that to the tavern and you'll make friends fast.
+
+## held.raw_food
+That's raw! You'll want to cook that first.
+The cook's stove would have that sizzling in no time.
+Raw meat? Smoker, furnace or campfire. Not your mouth.
+That'll cook twice as fast on our kitchen stove.
+Fresh catch? Or fresh from the field? Either way, cook it.
+Don't eat that raw. I'm begging you.
+
+## held.music
+Music! Will you play something?
+The bard would love to hear you play.
+Is that a lute? Play the music stand with it and listen to the sound.
+A bell! Don't ring it, it'll start a panic.
+Music makes the village feel alive.
+Play us a tune, {player}!
+
+## held.pet
+A name tag! Are you naming someone?
+A lead? Do you have a pet? Is it a llama?
+I'd name a pet something grand. Lord Fluffington.
+Saddles are for horses, pigs and the very brave.
+Tame a wolf and you'll never walk alone.
+Every pet deserves a good name.
+
+## held.wool
+Wool! The tailor could make something lovely from that.
+Shears? Shearing sheep? Be gentle with them.
+That wool's soft. Is it from our flock?
+You could make a bed from that. Or a banner.
+Bring wool to the sewing table and it'll unravel into string.
+Colored wool brightens up any house.
+
+## held.wood
+Logs! Bring them to the sawmill for extra planks.
+Building something? I love building things.
+Fresh wood. Smells wonderful.
+The carpenter would get you six planks a log.
+Is that oak? Or birch? I can never tell when it's not on a tree.
+Good timber makes good houses.
+
+## held.ore
+Iron! The smiths will be glad to see that.
+Raw ore? Smelt it before you trade it.
+Coal! Keep the fires burning.
+Copper's pretty when it's new. Goes green when it's old. Like me.
+Mining's paying off, I see.
+Bring that to the blast furnace. Twice as fast.
+
+## held.paint
+A paintbrush! Are you an artist?
+Dyes! You could finish the painting on the easel with those.
+Paint something beautiful, {player}.
+Colors in your hands. I like that.
+Blue dye makes the sea, red makes flowers. On our easel, anyway.
+Are you planning to paint the village? Paint my door blue.
+
+## player.hurt
+You're hurt! Sit down a moment. Let me look at you.
+Goodness, you're bleeding! Have you got any bandages?
+You look like you lost a fight with a skeleton. Did you?
+Rest before you go anywhere. Please.
+The apothecary can patch you up. Or eat something. Food helps.
+You're limping. What happened?
+I don't like seeing you hurt, {player}.
+Bandages, potions, a warm bed. You need all three.
+
+## player.hungry
+You look hungry. When did you last eat?
+Your stomach's growling louder than the bell.
+Get something to eat, {player}. You can't adventure on an empty belly.
+The cook's stove has a dish of the day, if they've been working.
+Have some bread. You look peaky.
+Hungry adventurers make mistakes. Eat something.
+I can hear your stomach from here.
+You need a good meal. The tavern does a lovely stew.
+
+## player.wet
+You're soaked to the bone! Come out of the rain.
+Look at you, dripping on my doorstep.
+Did you swim here? You look like you swam here.
+Stand by a fire and dry off before you catch a cold.
+Your boots are squelching. I can hear them.
+Rain got you, did it? It gets everyone eventually.
+A hooded poncho would keep that off. The tailor makes lovely ones.
+You smell like wet wool. No offense.
+
+## player.fire
+You're on fire! Water! Somebody get water!
+Stop, drop and roll! Or jump in the well!
+Why are you smoking? Literally smoking!
+Fire! You're on fire! Why are you so calm?!
+Please don't stand near the hay.
+Did you fall in lava? Get to water, quick!
+
+## player.riding
+Look at you up there! What a fine steed.
+Mind your animal doesn't eat my flowers.
+Riding into the village like a hero. Very dramatic.
+Is that comfortable? It looks comfortable.
+Don't let it trample the crops, please.
+Lovely animal. What's its name?
+
+## player.pumpkin
+Why are you wearing a pumpkin on your head?
+Is that a pumpkin? Are you hiding from the endermen?
+You look like a scarecrow with ambitions.
+I can't tell if you're smiling under there.
+The endermen won't stare at you, at least. Very sensible. Very silly.
+Nice hat. Very orange. Very round.
+Can you even see out of that thing?
+You smell like pie, {player}. Is it the pumpkin?
+
+## player.elytra
+You've got wings! Where did you get wings?
+Is that an elytra on your back? Can you really fly?
+Fly over the bell tower! Please! I want to see!
+Wings and all. You really are an adventurer.
+I've only read about elytras. Is it as wonderful as it sounds?
+You must have been to the End. Nobody comes back with wings otherwise.
+
+## player.diamond
+Look at that armor! You sparkle like a geode.
+Diamond armor! You must be very brave. Or very rich.
+I can see my reflection in your chestplate.
+You look like a hero from a story.
+That armor must have cost a fortune.
+Nobody's going to mess with you in that.
+Shiny! You'll scare the zombies just by glinting at them.
+Is that netherite? It's so dark. Very serious-looking.
+
+## player.golden
+Golden armor! Very fancy. Very soft.
+You look like a king. Or a very confident piglin.
+That gold's going to dent if you sneeze.
+The piglins would love you right now.
+Shiny! Not practical, but shiny.
+Golden armor? Going to a party?
+
+## player.leather
+Leather armor? Simple and sturdy. Good choice for a start.
+You look like a proper traveler in that leather.
+The leatherworker would be proud.
+Leather's light. Easy to run in. Smart.
+Did you dye that? It's a lovely color.
+You've got the look of a hunter.
+
+## player.unarmored
+No armor? Out in the wilds? You're braver than I am.
+Where's your armor, {player}? The skeletons won't be gentle.
+You should get some armor. The armorer can help.
+Out and about with no armor. Bold.
+Even a leather cap would help, you know.
+I worry when I see you without armor.
+
+## player.dark
+It's dark out. You should be inside, or at least near a torch.
+Walking around at night? Stay near the lamps.
+The night's full of things you don't want to meet.
+Don't stay out too long, {player}. The zombies are about.
+It's black as pitch out there. Mind your step.
+Have you got a torch? You should have a torch.
+Night walks are lovely until something groans at you.
+The golem's on patrol, but you should still be careful.

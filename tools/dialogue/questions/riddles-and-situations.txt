@@ -1,0 +1,327 @@
+# Riddles (a right answer earns more friendship), and questions that depend on the moment, the
+# resident's personality or their job.
+
+? riddle_bell
+Q: Riddle time! I have a tongue but cannot taste, I call everyone but cannot speak. What am I?
+- A bell :: The bell! Of course. Clever you. {points:2} [SPARKLE]
+- A creeper :: A creeper? No! Creepers don't call anyone. They just... hiss. It's the bell! {points:1} [DOTS]
+- A parrot :: A parrot can speak! It's the bell. Good guess, though. {points:1} [NOTE]
+
+? riddle_torch
+Q: Here's a riddle: the more I burn, the more I keep the monsters away. What am I?
+- A torch :: A torch! Right! Never leave home without one. {points:2} [SPARKLE]
+- A furnace :: A furnace keeps you warm, not safe. It's a torch! {points:1} [NOTE]
+- Lava :: Lava? That burns, but it brings more trouble than it stops. It's a torch. {points:1} [SWEAT]
+
+? riddle_map
+Q: Riddle! I have mountains but no stone, rivers but no water, villages but no people. What am I?
+- A map :: A map! Brilliant. The cartographer would hire you. {points:2} [SPARKLE]
+- A painting :: Close! But it's a map. Paintings have everything, at least in color. {points:1} [NOTE]
+- A dream :: A dream? That's lovely. The answer's a map, but I like yours better. {points:1} [HEART]
+
+? riddle_egg
+Q: Riddle: what has to be broken before you can use it?
+- An egg :: An egg! Correct. Breakfast was the real winner. {points:2} [SPARKLE]
+- A promise :: A promise? That's sad and clever. It's an egg, though. {points:1} [GLOOM]
+- A pickaxe :: A pickaxe breaks other things. The answer's an egg! {points:1} [NOTE]
+
+? riddle_shadow
+Q: A riddle for you: I follow you all day, but disappear at night. What am I?
+- My shadow :: Your shadow! Right. Unless you're near a torch, then it sneaks back. {points:2} [SPARKLE]
+- A wolf :: A wolf would follow you at night too! It's your shadow. {points:1} [NOTE]
+- A zombie :: A zombie follows you at night, not the day! It's your shadow. {points:1} [SWEAT]
+
+? riddle_river
+Q: Try this one: I run but never walk, have a mouth but never talk. What am I?
+- A river :: A river! Yes! Running all day and never tired. {points:2} [SPARKLE]
+- A horse :: A horse walks too! It's a river. {points:1} [NOTE]
+- The bard :: Ha! The bard never stops talking. It's a river. {points:1} [NOTE]
+
+? riddle_echo
+Q: Riddle: I speak without a mouth and hear without ears. Shout into the well and you'll meet me.
+- An echo :: An echo! You got it. Hello, hello, hello. {points:2} [SPARKLE]
+- A ghost :: A ghost? Spooky! No, it's an echo. {points:1} [SWEAT]
+- The well itself :: Close! It's the echo inside the well. {points:1} [NOTE]
+
+? riddle_candle
+Q: Riddle! I'm tall when I'm young and short when I'm old. What am I?
+- A candle :: A candle! Right! Sounds a bit like my grandfather, too. {points:2} [SPARKLE]
+- A tree :: A tree grows taller when it's old! It's a candle. {points:1} [NOTE]
+- A villager :: Ha! Some of us shrink, but it's a candle. {points:1} [NOTE]
+
+? riddle_footsteps
+Q: The more you take, the more you leave behind. What are they?
+- Footsteps :: Footsteps! Correct. You've left a lot of them in {village}. {points:2} [SPARKLE]
+- Emeralds :: Emeralds? The more you take, the fewer you leave! It's footsteps. {points:1} [NOTE]
+- Memories :: Memories... that's beautiful. The answer's footsteps, but I like yours. {points:1} [HEART]
+
+? riddle_secret
+Q: Riddle: if you have me, you want to share me. If you share me, you don't have me. What am I?
+- A secret :: A secret! Clever! Don't share the answer. {points:2} [SPARKLE]
+- A cookie :: A cookie? You still have half if you share. It's a secret! {points:1} [NOTE]
+- A cold :: Ha! A cold you'd rather not share. It's a secret, though. {points:1} [NOTE]
+
+? riddle_towel
+Q: What gets wetter the more it dries?
+- A towel :: A towel! Right. Very sensible riddle, that one. {points:2} [SPARKLE]
+- The rain :: The rain? No, the rain's already wet. It's a towel! {points:1} [NOTE]
+- A fish :: A fish? It never dries! It's a towel. {points:1} [NOTE]
+
+? riddle_keyboard
+Q: Riddle: what has keys but opens no doors, and makes music when you press it?
+- A note block :: A note block! Close enough. Clever. {points:2} [SPARKLE]
+- A chest :: A chest opens! It's a note block. {points:1} [NOTE]
+- A lute :: A lute has strings, not keys. It's a note block! {points:1} [NOTE]
+
+? riddle_age
+Q: Riddle: what goes up and never comes down?
+- Your age :: Your age! Right. Don't remind me. {points:2} [SPARKLE]
+- A firework :: A firework comes back down in pieces! It's your age. {points:1} [NOTE]
+- A balloon :: Balloons come down eventually. It's your age! {points:1} [NOTE]
+
+? riddle_needle
+Q: What has an eye but cannot see? The tailor told me this one.
+- A needle :: A needle! Correct. The tailor will be proud. {points:2} [SPARKLE]
+- A potato :: A potato! Ha! That's actually right too. Potatoes have eyes. I'll allow it. {points:2} [NOTE]
+- An enderman :: Endermen can see! That's the whole problem with them. It's a needle. {points:1} [SWEAT]
+
+? riddle_stars
+Q: Riddle: you can see me every night, but you can never count me. What am I?
+- The stars :: The stars! Right. People have tried. People have failed. {points:2} [SPARKLE]
+- The sheep :: You can count sheep! That's how you fall asleep. It's the stars. {points:1} [NOTE]
+- My worries :: Your worries? Oh. Come talk to me about them sometime. It's the stars, though. {points:1} [HEART]
+
+? riddle_hole
+Q: The more of me you dig out, the bigger I get. What am I?
+- A hole :: A hole! Yes! Every miner knows that one. {points:2} [SPARKLE]
+- A mine :: A mine is a hole, so I'll allow it. Clever. {points:2} [NOTE]
+- A garden :: A garden grows when you plant, not dig. It's a hole! {points:1} [NOTE]
+
+? riddle_silence
+Q: Last riddle, a tricky one: what breaks if you say its name?
+- Silence :: Silence! Clever, clever. Shh. {points:2} [SPARKLE]
+- A promise :: A promise breaks, but not from saying it! It's silence. {points:1} [NOTE]
+- A golem :: A golem? No, golems don't break that easily. It's silence. {points:1} [NOTE]
+
+? riddle_coal
+Q: I'm black when you buy me, red when you use me, and grey when you throw me away. What am I?
+- Coal :: Coal! Right! Into the furnace with you. {points:2} [SPARKLE]
+- A creeper :: A creeper's green! It's coal. {points:1} [NOTE]
+- Redstone :: Redstone's red all the time. It's coal! {points:1} [NOTE]
+
+? rain_question | when: rain
+Q: Listen to that rain. Do you mind getting caught in it?
+- I love it :: You love it? Then you're one of us rain-walkers. Puddles are the best part. @likes:rain {points:1} [SPARKLE]
+- I hate being wet :: Hate it? Then stay under the eaves with me a while. No rush. {points:1} [NOTE]
+- It helps the crops :: It helps the crops. Spoken like a true farmer. The fields thank you. {points:1} [NOTE]
+
+? thunder_question | when: thunder
+Q: Are you scared of storms? Be honest. I am.
+- A little, yes :: A little? Me too. Sit with me until it passes. {points:2} [HEART]
+- Not at all :: Not at all? Then I'll hide behind you. {points:1} [SWEAT]
+- I love storms :: You love storms? The lightning, the noise? You're a strange and wonderful person. {points:1} [EXCLAIM]
+
+? snow_question | when: snow
+Q: Snowball fight later, when the snow's deep enough? Yes or no?
+- Absolutely yes :: Yes! I've been practicing my aim on the barn. You've been warned. @plays:snowball {points:1} [SPARKLE]
+- Too cold for me :: Too cold! Then hot cider by the fire instead. Equally good. {points:1} [NOTE]
+- Only if I win :: Only if you win? Ha! We'll see about that. {points:1} [EXCLAIM]
+
+? night_question | when: night
+Q: What do you think about when you look at the stars?
+- Home :: Home. Even when you're right here? I hope {village} feels like a little bit of it. {points:2} [HEART]
+- How small we are :: How small we are. Small, but not unimportant. I think about that too. {points:1} [DOTS]
+- Where to go next :: Where to go next. Always looking forward. Don't forget to come back. {points:1} [SPARKLE]
+
+? morning_question | when: morning
+Q: Did you have breakfast? Tell me you had breakfast.
+- I did, a big one :: Good! A big breakfast makes a brave adventurer. {points:1} [NOTE]
+- Just an apple :: Just an apple? That's not breakfast, that's a snack. Eat more. {points:1} [SWEAT]
+- I forgot :: You forgot?! How can you forget breakfast? Go to the tavern this instant. {points:1} [ANGER]
+
+? market_question | when: market
+Q: It's Market Day! What are you hoping to find at the stalls?
+- Something sweet :: Something sweet! The honey cakes go fast. Hurry. {points:1} [NOTE]
+- A good trade :: A good trade. The fletcher's been generous today, I hear. {points:1} [IDEA]
+- Just the company :: Just the company. That's what Market Day's really for. {points:2} [HEART]
+
+? evening_question | when: evening
+Q: The sun's going down. Do you have somewhere safe to sleep tonight?
+- Yes, I'm fine :: Good. I worry otherwise. Sleep well, wherever it is. {points:1} [NOTE]
+- Not really :: Not really? Find a bed in {village} if you need one. Nobody will mind. {points:1} [SWEAT]
+- I'll keep exploring :: Explore at night? Be careful. Torches, armor, a lot of courage. {points:1} [EXCLAIM]
+
+? warm_question | when: personality:warmhearted
+Q: Are you eating enough out there? Really? Tell me the truth.
+- Yes, I promise :: You promise? I'll take your word for it. This time. {points:1} [NOTE]
+- Not really :: I knew it! Come by at supper. I'm feeding you. No arguments. @cared:fed {points:2} [HEART]
+- Mostly mushroom stew :: Mushroom stew every day? You poor thing. I'll make you something with bread. {points:1} [SWEAT]
+
+? thoughtful_question | when: personality:thoughtful
+Q: Do you think the world was made, or did it just happen?
+- Someone made it :: Someone made it. Then I'd love to know what they were thinking. {points:1} [IDEA]
+- It just happened :: It just happened. Then everything's a happy accident. Even you. Especially you. {points:1} [HEART]
+- Does it matter? :: Does it matter? Perhaps not. We're here now. That's the interesting part. {points:1} [DOTS]
+
+? playful_question | when: personality:playful
+Q: Quick! If you were a block, which block would you be?
+- A bouncy slime block :: A slime block! Bouncy and fun. I knew it. {points:1} [NOTE]
+- A cozy wool block :: Wool! Soft and warm. Aw. {points:1} [HEART]
+- TNT :: TNT?! Explosive personality. I respect it. Stand back, everyone. {points:1} [EXCLAIM]
+- A diamond block :: A diamond block! Fancy! A bit full of yourself, maybe. Ha! {points:1} [NOTE]
+
+? adventurous_question | when: personality:adventurous
+Q: Would you take me on an adventure someday? A small one. Maybe a big one.
+- Of course I would :: You would? I'm packing tonight! Well, I'm thinking about packing. @promise:adventure {points:2} [SPARKLE]
+- When you're ready :: When I'm ready. I'm ready now! Mostly. Nearly. Soon. {points:1} [NOTE]
+- It's too dangerous :: Too dangerous? That's what makes it an adventure! ...I'll wait. {points:1} [GLOOM]
+
+? meticulous_question | when: personality:meticulous
+Q: How do you organize your chests? This matters to me more than it should.
+- Sorted by type :: Sorted by type. A person after my own heart. @trait:tidy {points:2} [HEART]
+- One big chaos chest :: One chaos chest?! I need to sit down. {points:1} [SWEAT]
+- By color :: By color! Unusual, but beautiful. I approve. {points:1} [SPARKLE]
+
+? steadfast_question | when: personality:steadfast
+Q: What do you do when things go wrong? Me, I go to the garden.
+- Keep going :: Keep going. Yes. One step, then another. That's how we get through. {points:2} [NOTE]
+- Rest first :: Rest first. Sensible. You can't fix a fence with tired hands. {points:1} [NOTE]
+- Find a friend :: Find a friend. Come find me, then. I'll be in the garden. {points:2} [HEART]
+
+? reserved_question | when: personality:reserved
+Q: ...Do you ever like being alone?
+- Yes, sometimes :: ...Me too. It's nice to hear someone say it. {points:2} [HEART]
+- Not really :: ...That's all right. Then I'm glad you come to talk. {points:1} [DOTS]
+- With you, I don't mind :: ...With me? ...That's kind. Thank you. {points:2} [BLUSH]
+
+? imaginative_question | when: personality:imaginative
+Q: If the moon was something else, what would it be?
+- A giant pearl :: A pearl! That's what I think too! A giant forgot to pick it up. {points:2} [SPARKLE]
+- A lamp for the sky :: A lamp for the sky. Lovely. Who turns it on, though? {points:1} [IDEA]
+- Cheese :: Cheese! The classics never die. {points:1} [NOTE]
+
+? pragmatic_question | when: personality:pragmatic
+Q: How many torches do you carry, on a normal trip?
+- A full stack :: A full stack. Good. Sixty-four's the right number. {points:2} [NOTE]
+- A handful :: A handful? Not enough. Never enough. Take more. {points:1} [ANGER]
+- I make them as I go :: Make them as you go. Efficient. Assuming you find coal. {points:1} [NOTE]
+
+? curious_question | when: personality:curious
+Q: Have you ever seen something that couldn't be explained? Anything at all?
+- A glowing cave :: A glowing cave? Was it glow lichen? Glow berries? Something else? I need to know. {points:1} [EXCLAIM]
+- A villager in a boat :: A villager in a boat? How did they get there? Where were they going? Fascinating. {points:1} [QUESTION]
+- A golem dancing :: A golem dancing?! No! I'd give anything to see that. {points:1} [SPARKLE]
+
+? protective_question | when: personality:protective
+Q: If trouble ever came to {village}, would you help us?
+- Without a doubt :: Without a doubt. I knew it. You're one of us. @promise:defend {points:2} [HEART]
+- If I'm nearby :: If you're nearby. Fair. We'll ring the bell loud. {points:1} [NOTE]
+- I'd bring friends :: You'd bring friends! Even better. An army of friends. {points:2} [EXCLAIM]
+
+? gentle_question | when: personality:gentle
+Q: Would you like to plant something with me someday? A flower, maybe?
+- I'd love that :: You would? I'll save the best seeds for us. @promise:garden {points:2} [HEART]
+- I'm bad with plants :: Nobody's bad with plants. Plants just need patience. So do we. {points:1} [NOTE]
+- What's your favorite? :: My favorite? Blue orchids. Or poppies. Or cornflowers. All of them. {points:1} [BLUSH]
+
+? farmer_question | when: job:farmer
+Q: Which crop should I plant next season? I can't decide.
+- More pumpkins :: More pumpkins! For pies and lanterns. Good thinking. {points:1} [NOTE]
+- Melons for summer :: Melons! The children will be thrilled. {points:1} [NOTE]
+- Sweet berries :: Sweet berries! Prickly, but worth it. The foxes will be furious. {points:1} [EXCLAIM]
+
+? librarian_question | when: job:librarian
+Q: If you could only read one book again and again, what would it be about?
+- Faraway places :: Faraway places. Of course. You'd never tire of it. {points:1} [SPARKLE]
+- A love story :: A love story! Oh, I've got just the one. Sort of. {points:1} [BLUSH]
+- How to build things :: How to build things. A practical reader. My favorite kind. {points:1} [NOTE]
+
+? fisherman_question | when: job:fisherman
+Q: ...Do you fish? It's a good way to think.
+- All the time :: All the time? Then we'll fish together someday. The spot upstream is the best. @likes:fishing {points:2} [HEART]
+- I never catch anything :: You never catch anything? Patience. And a lure. Mostly patience. {points:1} [NOTE]
+- I prefer swimming :: Swimming scares the fish. ...But it's fine. {points:1} [DOTS]
+
+? cleric_question | when: job:cleric
+Q: Do you have someone you pray for, or think of, when you're far away?
+- My family :: Your family. I'll light a candle for them too. {points:2} [HEART]
+- Everyone here :: Everyone here? In {village}? That's... that's lovely. {points:2} [SPARKLE]
+- No one in particular :: No one in particular. Then I'll think of you instead. {points:1} [NOTE]
+
+? smith_question | when: job:armorer|job:toolsmith|job:weaponsmith
+Q: What's the toughest thing you've ever broken a tool on?
+- Obsidian :: Obsidian! Only diamond touches it. I've seen grown smiths cry. {points:1} [EXCLAIM]
+- A creeper's surprise :: A creeper blew up your gear? That's not breaking, that's tragedy. {points:1} [SWEAT]
+- I never break tools :: Never? You must have Unbreaking. Or you never work. Ha! {points:1} [NOTE]
+
+? cook_question | when: job:cook
+Q: If I made you one dish, right now, what would it be?
+- Hearty stew :: Hearty stew. Good choice. It's on the stove already. {points:1} [HEART]
+- Fresh bread :: Fresh bread! Coming right up. Well, in an hour. Bread takes time. {points:1} [NOTE]
+- Surprise me :: Surprise you? Oh, now you've done it. Pumpkin and mushroom pie. Brace yourself. {points:1} [EXCLAIM]
+
+? tavern_question | when: job:tavern_keeper
+Q: What's your drink, traveler? Cider, coffee, or a mug of the well's finest?
+- Cider :: Cider! Pressed fresh. Bring a mug and I'll fill it. @drink:cider {points:1} [NOTE]
+- Coffee :: Coffee! The tap's always ready. @drink:coffee {points:1} [NOTE]
+- Just water :: Water? Wise. Cheap, too. My worst customer. Ha! {points:1} [DOTS]
+
+? painter_question | when: job:painter
+Q: If I painted you, how would you like to be shown?
+- As a hero :: As a hero! Sword raised, cape blowing. I'll make you taller. {points:1} [SPARKLE]
+- Just as I am :: Just as you are. That's the best portrait of all. {points:2} [HEART]
+- Fishing by a lake :: Fishing by a lake. Peaceful. I'll use a lot of blue. {points:1} [NOTE]
+
+? bard_question | when: job:bard
+Q: I'm writing a song about you. Should it be a ballad or a jig?
+- A grand ballad :: A grand ballad! Thirty verses at least. You'll be famous. @song:ballad {points:1} [SPARKLE]
+- A silly jig :: A silly jig! Everyone will dance. Even the golem. Maybe. @song:jig {points:1} [NOTE]
+- Please don't :: Please don't? Too late. I've already rhymed your name with "pickaxe." {points:1} [EXCLAIM]
+
+? tailor_question | when: job:tailor
+Q: If I made you something to wear, what would it be?
+- A warm cloak :: A warm cloak. For the cold nights out there. I'll make it blue. {points:1} [HEART]
+- A fancy hat :: A fancy hat! With a feather. You'll be the talk of the market. {points:1} [SPARKLE]
+- Sturdy boots :: Sturdy boots. Practical. Your feet will thank me. {points:1} [NOTE]
+
+? carpenter_question | when: job:carpenter
+Q: What's the most important thing in a house, if you ask me? No, wait, I'm asking you.
+- A good door :: A good door! Keeps the zombies out and the warmth in. Correct. {points:1} [NOTE]
+- A big window :: A big window. Light's everything. I'll allow it. {points:1} [NOTE]
+- The people inside :: The people inside. Hm. You're right. That's the best answer. {points:2} [HEART]
+
+? scholar_question | when: job:scholar
+Q: Should I write down your visits in the village chronicle?
+- Yes, please :: Yes? Then you're in the archives forever. I'll be kind. @chronicle:yes {points:2} [SPARKLE]
+- Only the brave bits :: Only the brave bits. I'll leave out the time you fell in the river. {points:1} [NOTE]
+- Leave me out :: Leave you out? A humble one. All right. A footnote, then. {points:1} [DOTS]
+
+? guard_question | when: job:knight|job:archer
+Q: You've seen fighting out there. Any advice for a guard?
+- Never fight alone :: Never fight alone. The golem and I will remember that. {points:1} [NOTE]
+- Light everything :: Light everything. Monsters hate torches. We'll put more up. {points:1} [IDEA]
+- Run when you should :: Run when you should. That's the hardest advice to follow. And the wisest. {points:1} [DOTS]
+
+? nitwit_question | when: job:nitwit
+Q: Want to join me for a nap later? I've found the perfect haystack.
+- Absolutely :: Absolutely! A fellow napper. I'll save you the soft side. @plays:nap {points:1} [HEART]
+- I'm too busy :: Too busy? Busy's overrated. The haystack will wait for you. {points:1} [DOTS]
+- Only a short one :: A short one! Twenty minutes. Or two hours. We'll see. {points:1} [NOTE]
+
+? child_question | when: child
+Q: Will you play with me? Please? Just one game?
+- Of course! :: Yay! You're it! Run! @plays:tag {points:2} [SPARKLE]
+- Maybe later :: Later? Promise? You have to pinky promise. {points:1} [QUESTION]
+- What game? :: Hide and seek! I'll hide. Count to a hundred. No peeking! {points:1} [NOTE]
+
+? child_question_grow | when: child
+Q: What did you want to be when you were little like me?
+- An adventurer :: An adventurer! And now you are one! That means I can be one too! {points:2} [SPARKLE]
+- A farmer :: A farmer? But you're an adventurer now. Did you change your mind? Can I change mine? {points:1} [QUESTION]
+- I still don't know :: You still don't know? Grown-ups don't know either? That's a relief! {points:1} [NOTE]
+
+? child_question_monster | when: child
+Q: Are there monsters under beds? My sister says there are. Tell me the truth!
+- No, never :: Never? Promise? Okay. I believe you. Mostly. {points:2} [HEART]
+- Only dust bunnies :: Dust bunnies! Are they cute? Can I keep one? {points:1} [QUESTION]
+- The golem protects you :: The golem protects me! Even under my bed? It's very big. It won't fit. {points:1} [NOTE]

@@ -1,0 +1,416 @@
+# The sky, the clock, the moon and the village week.
+# weather.<clear|clearing|rain|thunder|snow|hot>, time.<period>, moon.<phase>, day.market, day.week
+
+## weather.clear
+Not a cloud in the sky. The kind of day that makes you want to go somewhere.
+Clear skies today. Even the golem looks cheerful.
+Fine weather! I hung my washing out and it dried in an hour.
+Days like this, I almost forgive winter.
+Beautiful day. The sort the old songs are about.
+Clear and bright. You can see all the way to the mountains.
+Sunshine's good for the crops and better for the mood.
+The sky's so blue it looks painted on.
+A gentle breeze, a warm sun. You couldn't order better.
+Perfect drying weather. Everyone in {village} has their sheets out.
+I love a clear day. The whole village seems to stand up straighter.
+No rain, no wind, no trouble. Just a good, plain day.
+The kind of day that smells like cut grass and warm stone.
+Lovely out. Even the cows look like they're smiling.
+A day this nice feels like a gift.
+I opened every window in the house. Let the sunshine in.
+Clear skies mean clear stars tonight. I'll be up late looking.
+On days like this, everyone moves a little slower. In a good way.
+Fair weather for working, fair weather for wandering.
+Warm sun on my face and nowhere to hurry to. Lovely.
+Good weather makes good neighbors. Everyone's out and friendly.
+The bees are busy, the birds are loud and I'm happy.
+A clear sky like this makes the whole world feel bigger.
+There's a sort of hum in the air on a sunny day. Can you hear it?
+Lovely weather for a walk. Or a nap in the sun.
+I can see a hawk circling way up high. It's that clear.
+Days like these, I'm glad I live in {village}.
+Nothing but blue overhead. I'll take it.
+The sun's out and so is the laundry. Watch your head.
+Such a bright day. I keep squinting at everything like it owes me money.
+
+## weather.clearing
+The rain's stopped! Everything's dripping and sparkling.
+Smell that air! Nothing smells better than right after rain.
+Did you see the rainbow? It ended right behind the barn. No pot of gold, though. I checked.
+The clouds are breaking up. Blue sky's peeking through.
+The puddles are full of sky now. I like that.
+Everything's washed clean. Even the path looks new.
+The rain's gone and the frogs are celebrating.
+The whole village is coming back outside, blinking like owls.
+After the rain, the flowers stand up a little taller.
+I love how the stone shines after rain.
+The gutters are still gurgling. Like the village is humming.
+Everyone's shaking out their coats and hats. Very damp chorus.
+The fields look greener already. Plants are quick learners.
+The air's cool and fresh. Breathe it in.
+The children are out puddle-jumping already. Their mothers are not pleased.
+The sun's back, a little shy, but back.
+Wet leaves, warm light. My favorite combination.
+Now the mushrooms will pop up everywhere. Mind where you step.
+I can hear the river from here. It's swollen with rain.
+Clearing up nicely. Perfect for a walk, if you don't mind wet boots.
+
+## weather.rain
+Rain again. The farmers are happy, at least.
+I like the sound of rain on the roof. Very soothing.
+My boots are soaked through. Every step goes squish.
+The rain's good for the crops. Less good for my hair.
+Everyone's indoors. The village sounds like it's holding its breath.
+Rainy days are for stories and warm drinks.
+The ducks are thrilled. Everyone else is grumbling.
+Water's running down the path like a little river.
+The rain makes the whole village smell like wet hay.
+My cat's furious about the rain. She blames me personally.
+I love watching rain from a window. Less so from under it.
+Don't forget your hood if you're heading out. You'll be wet to the bone.
+The bell sounds different in the rain. Muffled. Sleepy.
+Rain, rain. It'll stop eventually. Probably.
+The well's filling up nicely, at least.
+Puddles everywhere! The children will be ecstatic.
+I put a bucket under the leak in my roof. It's playing a little tune.
+Wet weather means mud, and mud means everyone's tracking it in.
+The sky's been weeping all day. Wonder what's upset it.
+I don't mind a bit of rain. It makes the sunny days feel earned.
+Rain drums on the leaves like a hundred tiny fingers.
+The fishermen say fish bite better in the rain. They also say a lot of things.
+Everything's grey and silver today. Pretty, in its way.
+The sheep look twice their size when they're wet. And twice as grumpy.
+If it rains much longer, the river will flood the low fields.
+I had plans today. The rain had other plans.
+Rainy days make bread rise slower. Or so the baker says.
+There's something cozy about a whole village sheltering together.
+The drip from the eaves is driving me mad. Drip. Drip. Drip.
+My garden needed this. My laundry didn't.
+I saw the golem standing in the rain like it didn't even notice.
+The chickens all crammed into one corner of the coop. Sensible birds.
+Rain hides all the noise. You can hear yourself think.
+Somebody left their door open and now their hallway's a pond.
+It's the kind of rain that can't decide if it's drizzle or a downpour.
+Wet weather makes my knees ache. That's how I know it's coming.
+I tried to dash between houses and got soaked anyway. Never works.
+The roofs are all shiny. The village looks polished.
+I like rainy evenings. Lamp lit, kettle on, rain outside.
+Even the zombies hate the rain. Well, they don't burn in it, so maybe they like it.
+
+## weather.thunder
+That thunder made me jump right out of my seat!
+The storm's right on top of us. Stay away from tall things.
+Every flash, I count. One, two... boom! It's close.
+I've never liked storms. They feel personal.
+The animals are all spooked. The cows are huddled like gossiping aunties.
+Lightning lit up the whole village a moment ago. Bright as noon.
+The wind's howling down the chimney. Sounds like a ghost choir.
+Stay inside until it passes, {player}. Promise me.
+Storms bring out strange things. Skeletons in daylight. Worse things.
+I heard lightning can turn a creeper into something much worse. Charged, they call it.
+The rain's coming sideways. Sideways! That's just rude.
+I'm keeping my distance from the bell tower. Metal and lightning don't mix.
+The sky's angry today. I hope it's not at me.
+There's a crackle in the air. Makes my hair stand on end.
+The bigger the flash, the more I want my bed.
+When the thunder rolls, I always think of giants bowling.
+Lightning hit the old oak by the river once. Split it right down the middle.
+The candle keeps flickering. The house is trembling with every boom.
+A storm like this, I'm glad of every stone in my walls.
+They say lightning never strikes the same place twice. Lightning hasn't heard that.
+The children are hiding under the table. I'm hiding behind the children.
+Thunder makes the windows rattle. And my teeth.
+Even the golem flinched at that last one. Or I imagined it.
+I'm making tea to calm my nerves. And my neighbors' nerves.
+What a racket. The sky's doing its spring cleaning.
+Storms clear the air. That's what my grandmother said, every single storm.
+If you have to go out, keep low and move fast.
+Somewhere a farmer's watching his wheat flatten and crying.
+I love the smell after a storm. Not the storm itself, though.
+Booming, flashing, pouring. The sky's showing off today.
+
+## weather.snow
+Snow! Everything's gone quiet and white.
+I love the first snow. The world looks brand new.
+My nose is so cold I can't feel it. Is it still there?
+The snow's piling up on the roofs. Hope they hold.
+Everything's muffled in the snow. Even footsteps.
+The children have been building snow golems all day. None of them move, thankfully.
+Snow on the fields, smoke from every chimney. Pretty as a painting.
+I've got three scarves on and I'm still cold.
+The path's slippery. I've fallen twice. Gracefully, both times.
+Snowy days are for soup. Lots of soup.
+I can see every animal's tracks in the snow. Rabbits, foxes, something big.
+The well's frozen over. We have to break the ice every morning.
+Snowflakes are all different, they say. I've looked. They look the same to me.
+My breath makes little clouds. I pretend I'm a dragon.
+Snow makes the nights brighter, did you notice?
+The trees look like they've been dusted with sugar.
+I spent the morning shoveling. My arms have filed a complaint.
+Polar bears would love it here today. Please don't bring any.
+The snow's too deep for the chickens. They refuse to go out.
+A snowy village at dusk, lamps glowing. Nothing prettier.
+I wear my thickest socks on snow days. Two pairs, actually.
+The river's still running under the ice. You can hear it if you listen.
+Snow makes everyone a little kinder. Everyone's cold together.
+I made hot cider. Want some? It warms you right to the toes.
+Watch out for powder snow. Step in it and you'll sink like a stone.
+The goats are the only ones enjoying this. Goats are strange.
+Every footstep crunches. I love that crunch.
+The snow's lovely to look at and miserable to walk in.
+My fingers are icicles. Ten little icicles.
+Snow means the year's turning. Time for long nights and stories.
+
+## weather.hot
+It's scorching! I've moved my work into the shade.
+The heat's shimmering off the sand. Makes everything wobble.
+Hot enough to bake bread on the doorstep. Somebody tried.
+I'm drinking water like a sponge today.
+Even the cactus looks thirsty.
+The sun's merciless today. Wear a hat, {player}.
+On days like this, I dream of snow. Then I remember snow and stop.
+I sleep on the roof on hot nights. The breeze is better up there.
+The camels don't seem to mind the heat. Show-offs.
+The well water's warm. That's how you know it's a hot one.
+Too hot to work, too hot to rest, too hot to complain. Almost.
+I keep my clay jugs in the shade so the water stays cool.
+Everyone's slow in the heat. Even the gossip moves slowly.
+The husks shamble about in this heat like it's nothing. Creepy things.
+Sunburn's no joke out here. My nose peels every summer.
+When the sun goes down, the whole village comes back to life.
+The shade of a palm tree is worth more than gold today.
+It's so hot my sandals stuck to the path.
+The air tastes like dust and sunshine.
+Hot days, cool nights. That's the way out here.
+
+## time.dawn
+Dawn's the quietest hour. Even the chickens are still deciding whether to bother.
+The light's all pink and gold. It won't last, so look now.
+I like being up before everyone else. The village feels like mine for a moment.
+Dawn smells of dew and woodsmoke.
+The roosters are warming up. Brace yourself.
+The mist's lifting off the fields like a curtain going up.
+Early hours are honest hours. Nobody's pretending yet.
+I watched the sun come up over the hills. Same sun, new day.
+The first bread's in the oven somewhere. I can smell it.
+Dawn's when the zombies give up and the birds take over.
+The world's still soft at the edges this early.
+Even the golem looks peaceful at dawn.
+I always feel hopeful at this hour. Silly, maybe.
+The dew soaks my boots every morning. I keep forgetting.
+At dawn you can hear the river all the way from here.
+The stars are fading one by one. Goodnight, stars.
+Early bird gets the worm. I'd rather get the bread.
+This is the hour for quiet thoughts and warm hands.
+
+## time.morning
+Mornings are for getting things done. Or at least starting them.
+The village has a busy hum in the mornings. I like it.
+Everyone's off to work. Hammers, hoes and hellos.
+The morning light makes the whole place look freshly washed.
+I like mornings. I've had my breakfast and I haven't made any mistakes yet.
+There's a line at the well every morning. Best place for gossip.
+The baker's already sold out of the good loaves.
+Morning's when the smiths start banging away. You get used to it.
+The children are dragging their feet to lessons.
+I always plan to do a lot in the morning. Then I talk to people.
+A good morning sets the tone for the day. This one's not bad.
+The sun's climbing and so's my energy.
+The morning air's cool and sharp. Wakes you right up.
+Everyone moves with purpose in the morning. By afternoon, less so.
+Morning is when the village decides what kind of day it'll be.
+I love the clatter of shutters opening all over {village}.
+The cats sit in the morning sun like little loaves.
+Already {time}. The morning's flying by.
+
+## time.noon
+The sun's straight overhead. No shadows to hide in.
+Noon! My stomach rings louder than the bell.
+Midday's the laziest hour. Everyone's either eating or wishing they were.
+The heat's settled in. Even the flies are slow.
+It's lunchtime somewhere. Specifically, here.
+Halfway through the day already. Where does it go?
+At noon the whole village goes quiet for a moment, then everyone starts chewing.
+The shadows are tucked right under our feet.
+I always want a nap after lunch. Every single day.
+Noon's when the market stalls do their best trade.
+The bees are busiest at midday. They don't take lunch breaks, poor things.
+High noon. Sounds dramatic. It's mostly sandwiches.
+The well's crowded at noon. Everyone's thirsty.
+Middle of the day, middle of the week. Feels like it, anyway.
+I'm hungry. Are you hungry? Everyone's hungry at noon.
+The sun at midday makes the bell shine like gold.
+
+## time.afternoon
+Afternoons are slow and golden. My favorite.
+The work's mostly done and the evening's not here yet. Perfect in-between.
+Long afternoon shadows make everything look important.
+The bees are drowsy, the cats are drowsy, I'm drowsy.
+Afternoon's when the village slows down and starts chatting.
+The children are out of lessons and running riot.
+I do my best thinking in the afternoon. Or my best daydreaming.
+The light gets honey-colored this time of day.
+Everyone's got that "nearly done" look.
+A cup of something warm and an afternoon off. Bliss.
+The afternoon's when you notice the little things. The birdsong. The breeze.
+It's {time}. The day's starting to stretch its legs toward evening.
+Afternoon sun's the warmest. Find a wall to lean on.
+I always lose track of time in the afternoon.
+The fields look gold from here. The wheat's nearly ready.
+The quiet part of the day. Everyone's busy or napping.
+
+## time.evening
+The sun's setting. Look at those colors!
+Evening's coming in. Lanterns going up all over {village}.
+Everyone's heading home. Supper smoke from every chimney.
+The cows are coming in from the fields, mooing about it.
+I love the evening. The day's work is behind me.
+The sky's turning purple. Night's not far off.
+Evenings are short, so I savor them.
+The crickets are starting up. Their evening concert.
+When the sun goes down, the tavern lights up.
+Golden hour. Everything looks like it's made of honey.
+I should head in soon. The dark comes quick out here.
+The swallows are swooping for their supper.
+Evening is the village taking a deep breath.
+Everyone's a little softer in the evening. Tired and kind.
+The last light on the bell tower. Lovely.
+Soon the zombies will be out. Let's enjoy the last of the light.
+
+## time.night
+It's dark out. Stay near the torches, {player}.
+The stars are out. So are the skeletons.
+I don't go out after dark if I can help it. Too many groaning noises.
+Night's peaceful, as long as you stay inside.
+The village feels different at night. Smaller. Closer together.
+The golem patrols at night. I sleep better knowing it's out there.
+Listen to the frogs! They're louder than the tavern.
+Night is for sleeping and for stories. Mostly sleeping.
+I can see the glow of the torches all down the path. Like a necklace.
+The moon makes everything silver tonight.
+Strange how the whole world shrinks to the circle of your lamplight.
+If you hear a hiss in the dark, run. Don't wait to see what it is.
+Every night I check the door twice. Zombies can't open doors. Probably.
+The night sky's full of stars. You'd never count them all.
+Owls are out tonight. Hooting their little questions.
+The dark makes small noises sound enormous.
+
+## time.late
+It's the middle of the night. Everyone sensible is asleep.
+The world's so quiet now you can hear your own heartbeat.
+I couldn't sleep. Too many thoughts rattling around.
+At this hour, even the zombies seem tired.
+Midnight's a strange time. It belongs to nobody.
+If you haven't slept in days, watch the sky. Phantoms.
+The fire's down to embers. I should add a log. Or go to bed.
+Late nights make for groggy mornings. I never learn.
+Shh. Listen. That's the sound of a whole village dreaming.
+The stars have moved since I last looked. They never stay put.
+Only owls and night watchmen are up at this hour.
+I like the night's silence. It's like the world's holding its breath.
+Middle of the night thoughts are always the strangest thoughts.
+The moon's high and the shadows are long.
+
+## moon.full
+A full moon tonight. Everything's bright as a silver coin.
+Full moon! They say slimes come up from the swamps on nights like this.
+The full moon makes the whole village glow. Very romantic. For some.
+I always sleep badly under a full moon. Too much light.
+Full moon tonight. The monsters seem bolder. Stay close.
+Look at that moon! Round as a wheel of cheese.
+On full moon nights my grandmother said you could see the man in the moon. He's very square.
+The full moon makes the river shine like a road.
+
+## moon.waning_gibbous
+The moon's a little lopsided tonight. Like it's been nibbled.
+Not quite full anymore. The moon's shrinking back.
+The moon's still bright, but it's on its way out.
+A fat moon, slowly slimming down.
+The moon's half-hiding tonight. Shy, maybe.
+Still plenty of moonlight to walk home by.
+
+## moon.last_quarter
+Half a moon tonight. Like someone sliced it.
+The moon's a half-circle. Cut neat as a pie.
+Half moon. Half light. Half asleep, me.
+The moon's in its quiet half tonight.
+Only half a moon to see by. Bring a torch.
+A half moon always looks a bit like a smile from the side.
+
+## moon.waning_crescent
+Just a sliver of moon tonight. A fingernail in the sky.
+The moon's nearly gone. Dark nights coming.
+A thin little moon. Like a smile someone's trying to hide.
+Crescent moon. Pretty, but it doesn't light much.
+The moon's fading away. It'll be back. It always comes back.
+Barely any moonlight tonight. Mind your step.
+
+## moon.new
+No moon tonight. It's dark as the inside of a cave.
+New moon. The stars get all the attention tonight.
+You can't see your hand in front of your face out there. No moon at all.
+New moon nights are the darkest. The monsters love them.
+Without the moon, the stars look twice as bright.
+The moon's hiding tonight. Taking a night off.
+New moon. A good night for stargazing and a bad night for walking.
+Pitch dark. Keep a torch in your hand tonight.
+
+## moon.waxing_crescent
+A new sliver of moon tonight. It's growing back!
+A thin crescent, low in the sky. Like a hook for hanging stars.
+The moon's coming back, a little at a time.
+Look, the moon's peeking out again.
+A baby moon. It'll be big and round soon enough.
+Just a curl of moon tonight. Pretty.
+
+## moon.first_quarter
+Half a moon, growing fatter every night.
+Half moon tonight. Halfway to full.
+The moon's filling up like a bucket at the well.
+A half moon, bright and sharp.
+Half moon. Enough light to walk by, not enough to read.
+The moon's halfway there. So am I, with everything.
+
+## moon.waxing_gibbous
+The moon's almost full. One more night, maybe two.
+Nearly a full moon. Can you feel the monsters getting restless?
+The moon's swelling up. Full moon's coming.
+Bright moon tonight. Almost round.
+The moon's plump tonight. Like a well-fed cat.
+Almost full. The whole sky's getting brighter.
+
+## day.market
+It's Market Day! Everyone's out trading and gossiping.
+Market Day's the best day. No work, just stalls and treats.
+I've been saving up all week for Market Day.
+Have you seen the stalls by the bell? The cartographer has new maps!
+Market Day always smells like fresh pies and new wool.
+Everyone wears their good clothes on Market Day. Even the nitwit.
+I traded six eggs for a ribbon. Bargain.
+The children get a copper each on Market Day. They spend it on sweets in about a minute.
+Market Day's when the village feels most like a village.
+There's music by the bell. The bard plays for coins on Market Day.
+I bought more than I meant to. I always do on Market Day.
+The whole of {village} turns out on Market Day. You'll meet everyone.
+Market Day rule: no talking about work. Only gossip and prices.
+I'm going back for another honey cake. Don't judge me.
+Somebody's selling knitted hats. I'm tempted. It's not even cold.
+Market Day means the wandering traders sometimes stop by. Sometimes with llamas.
+I love the noise of Market Day. Everyone haggling at once.
+Market Day's a little holiday every week. Clever, whoever thought of it.
+
+## day.week
+It's {weekday}. Market Day's {market}.
+Another {weekday}. They do come round, don't they?
+{weekday} already. The week's flying.
+Happy {weekday}! Not that anything special happens on {weekday}s.
+It's day {day} by my count. I count every one.
+I always forget what day it is. It's {weekday}, someone told me.
+Market Day's {market}. I'm already planning what to buy.
+{weekday}s are for honest work and early nights.
+Is it {weekday}? It feels more like a Hearthday to me.
+Market Day's {market}, and I've got nothing to sell. Again.
+The week goes Moonday, Bellday, Hearthday, Wellday, Lanternday, Hayday and then Market Day. I sing it to remember.
+It's {weekday}. My favorite day is always tomorrow.
+Day {day} in {village}. Feels like I've been counting forever.
+Market Day is {market}. I can hold out until then.

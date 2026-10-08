@@ -1,0 +1,480 @@
+# "Share a joke": joke.general, joke.<personality>, joke.job.<job>, joke.weather
+
+## joke.general
+Why don't skeletons fight each other? They don't have the guts.
+What did the zombie say to the villager? Nothing. It just groaned. Zombies aren't great at conversation.
+Why did the creeper go to the party? It heard it was going to be a blast.
+What do you call a pig that knows karate? A pork chop.
+Why did the chicken cross the road? To prove to the creeper it wasn't chicken.
+How does a skeleton call its friends? On the tele-bone.
+Why was the enderman so good at hide and seek? It kept teleporting before you finished counting.
+What's a ghast's favorite food? Ghastly stew.
+Why do cows wear bells? Because their horns don't work.
+What did the iron golem say to the zombie? "Iron out your differences." Then it threw it.
+Why did the sheep say "moo"? It was learning a second language.
+How do you make a skeleton laugh? Tickle its funny bone.
+What kind of music do mummies like? Wrap music. We don't have mummies, but I still like that one.
+Why don't zombies ever get lost? They follow their noses. Mostly the smell of villagers.
+What do you call a creeper that's always grumpy? A sour-puss. Hiss.
+Why was the furnace so popular? It was always smelting with laughter.
+What's a skeleton's least favorite room? The living room.
+Why did the slime refuse to leave the swamp? It was too attached.
+What did one ore say to the other? "Let's get mined."
+Why did the miner bring a ladder? To reach new depths. Wait, no.
+How do you know a spider is good at building? It's a natural webmaster.
+Why did the bread never get lonely? It was always with its loaf-ed ones.
+What's a librarian's favorite vegetable? Quiet peas.
+Why did the bee get married? It found its honey.
+What do you call a sleeping bull? A bulldozer.
+Why don't villagers play cards in the jungle? Too many cheetahs. Well, ocelots.
+What's the best way to talk to a creeper? From very far away.
+Why did the cow go to space? To see the moooon.
+What did the fish say when it hit a wall? Dam.
+Why couldn't the enderman find a date? Every time it looked at someone, they screamed.
+What do you call an iron golem with no flowers? Grumpy.
+What's a zombie's favorite bean? A human bean. Oh dear.
+Why are spiders such good web designers? Years of practice.
+Why did the potato cry? It was baked too long and felt crusty.
+What did the bell say to the villager? "Ring me sometime."
+Why did the pumpkin go to the party alone? It had no body to go with.
+How does a villager fix a broken pumpkin? With a pumpkin patch.
+What's a ghost's favorite dessert? Boo-berry pie.
+Why don't creepers get invited to parties? They always blow it.
+What does a cow use to do math? A cow-culator.
+Why was the bed always tired? It never got any sleep. People kept sleeping on it.
+What did the wheat say to the farmer? "Stop stalking me."
+Why did the villager stare at the orange juice? The label said concentrate.
+What's an emerald's favorite saying? "Trade you for it."
+Why did the arrow go to school? To get a little sharper.
+What did the left eye say to the right eye? Between you and me, something smells. That's the nose.
+Why do bees have sticky hair? They use honeycombs.
+What do you call a dinosaur that's asleep? A dino-snore.
+Why are fish so smart? They live in schools.
+Why did the cookie go to the doctor? It was feeling crummy.
+What do you call a bear with no teeth? A gummy bear.
+Why don't eggs tell jokes? They'd crack each other up.
+What do you get when you cross a sheep with a kangaroo? A woolly jumper.
+Why was the math book sad? It had too many problems.
+What did the ocean say to the beach? Nothing, it just waved.
+Why can't a bicycle stand up by itself? It's two-tired. I don't know what a bicycle is, but the joke's still good.
+What's brown and sticky? A stick.
+Why did the scarecrow win an award? He was outstanding in his field.
+What do you call a fake noodle? An impasta.
+Why did the golem cross the village? To get to the other side. And to throw a zombie on the way.
+What do you call a sheep covered in chocolate? A candy baa.
+How do trees get online? They log in.
+What did the cobblestone say to the lava? "You're too hot to handle."
+Why do witches fly on brooms? Vacuums are too heavy.
+What's a skeleton's favorite instrument? The trom-bone.
+What do you call a parrot that won't shut up? A villager.
+Why did the torch go to therapy? It was burned out.
+Why did the cat sit on the creeper? To make it purr-suade itself to leave.
+How do you organize a party in space? You planet.
+What did the sheep say to the other sheep? "You're looking baa-utiful today."
+Why did the zombie go to school? To improve its dead-ucation.
+Why did the villager plant light bulbs? To grow a power plant.
+What has a bottom at the top? A leg.
+Why did the musician get locked out? He couldn't find the right key.
+Why don't you ever see elephants hiding in trees? Because they're really good at it.
+What did the stone say to the pickaxe? "Leave me a lone."
+Why don't mountains get cold? They wear snow caps.
+What do you call a witch at the beach? A sand-witch.
+Why was the chicken team bad at baseball? Too many fowls.
+What do you call a deer with no eyes? No idea.
+Why did the pig take a bath? The farmer said "hogwash."
+What kind of shoes do ninjas wear? Sneakers.
+Why did the cow cross the road? To get to the udder side.
+What's the best day to go to the beach? Sunday, of course.
+What did the triangle say to the circle? You're pointless.
+Why do bees hum? They forgot the words.
+What's orange and sounds like a parrot? A carrot.
+Why did the tomato blush? It saw the salad dressing.
+What did the big flower say to the little flower? Hi, bud!
+Why did the student eat his homework? The teacher said it was a piece of cake.
+What has four legs but can't walk? A table. Or a very lazy cow.
+Why don't skeletons ever go trick or treating? They have no body to go with.
+What's a pirate's favorite letter? You'd think it's R, but it's the C.
+What do you call a snowman with a six-pack? An abdominal snowman.
+Why did the coffee file a police report? It got mugged.
+What did the zero say to the eight? Nice belt.
+Why did the cleric's potion go to the party? To get bottled up with friends.
+What do you call a nervous javelin thrower? Shakespeare.
+Why don't oysters share? They're shellfish.
+What did the grape do when it got stepped on? It let out a little wine.
+Why did the gardener plant his money? He wanted his emeralds to grow.
+What do you call an angry carrot? A steamed vegetable.
+Why do we tell actors to break a leg? Because every play has a cast.
+What kind of tree fits in your hand? A palm tree.
+What did the nose say to the finger? Quit picking on me.
+Why can't you hear a pterodactyl going to the bathroom? Because the P is silent.
+What's a cat's favorite color? Purr-ple.
+What do you call a sleepy brewing stand? Well rested. It's been stewing all night.
+Why did the bell get detention? It kept ringing in class.
+What do you call cheese that isn't yours? Nacho cheese.
+How does the moon cut its hair? Eclipse it.
+Why did the zombie villager refuse the golden apple? It wasn't feeling weak enough.
+Why don't you ever see a llama tell a joke? Because they spit out the punchline.
+What do you call a well-dressed wolf? Dapper dog.
+Why did the miner get fired? He took too many breaks. Stone breaks.
+Why was the dirt block depressed? Everyone walked all over it.
+What's an axolotl's favorite game? Axolotl questions.
+What do you call a sheep with no legs? A cloud.
+Why did the redstone get promoted? It was a real live wire.
+What's a creeper's favorite subject at school? Hiss-tory.
+How did the farmer find his wife? He tractor down.
+What did one wall say to the other? I'll meet you at the corner.
+Why don't villagers trust stairs? They're always up to something.
+What did the baby corn say to the mama corn? Where's pop corn?
+Why do cows lie down when it rains? To keep a dry spot.
+What's a frog's favorite drink? Croak-a-cola.
+What did the pumpkin say to its carver? Cut it out.
+What's a tree's favorite drink? Root beer.
+Why did the golem bring a flower to the meeting? Just in case anyone needed cheering up.
+What do you call a bee that can't make up its mind? A maybe.
+What do you call an alligator in a vest? An investigator.
+Why was the computer cold? It left its windows open. I don't know what a computer is either.
+Why did the chicken join a band? It had the drumsticks.
+What's a ghast's favorite game? Hide and shriek.
+What did the slime say to the other slime? "Let's stick together."
+Why was the broom late? It over-swept.
+What do you call a can opener that doesn't work? A can't opener.
+Why are ghosts bad at lying? You can see right through them.
+What's a mushroom's favorite party? A fungi gathering. Because they're fun guys.
+Why did the boat go to the doctor? It was feeling a little dinghy.
+What do you call a guard with a sword and no armor? Brave. And soon, sore.
+Why did the shepherd's dog go to school? To get a little more paws-itive.
+What do you call a lazy kangaroo? A pouch potato.
+Why did the stew go to school? To get a little more seasoned.
+Why do pigs make terrible secret keepers? They squeal.
+What do you get if you cross a cow and a duck? Milk and quackers.
+Why are skeletons so calm? Nothing gets under their skin.
+Why did the trader leave his llamas at home? They kept spitting out his prices.
+What's the difference between a guitar and a fish? You can't tuna fish.
+What did the hat say to the scarf? You hang around, I'll go on ahead.
+Why don't eggs go to parties? They might get beaten.
+What do you call a fish wearing a crown? A king cod.
+Why did the sun go to school? To get brighter.
+What do you call a dog magician? A labracadabrador.
+What did one candle say to the other? Want to go out tonight?
+Why was the tavern so cold? Too many draughts.
+What do you call a bear in the rain? A drizzly bear.
+What do you call a sleeping pizza? A piZZZa.
+Why did the honey bee go to the doctor? It had hives.
+Why was the nitwit holding a bucket of water? He heard the trade was liquid.
+Why did the bread go to the doctor? It felt crumby. No wait, that was the cookie.
+How do bees get to school? On the school buzz.
+What do lawyers wear to court? Lawsuits.
+Why did the lamp go to the party? It wanted to lighten up.
+What did one plate say to the other? Lunch is on me.
+What do you call a cow with no legs? Ground beef.
+Why did the goat get kicked out of the library? It kept butting in.
+Why did the baker stop making donuts? She got tired of the hole business.
+What do you call a sad strawberry? A blueberry.
+Why did the golden apple go to school? To get enchanted with learning.
+What do you call a bear without ears? B.
+Why don't skeletons play music in church? They have no organs.
+How does a penguin build its house? Igloos it together.
+What do you call a pile of cats? A meowntain.
+Why did the guardian go to art school? It wanted to draw a laser line.
+Why are mountains so funny? They're hill-arious.
+Why did the hoe get an award? It was outstanding in its field. Like the scarecrow.
+What do you call a dancing sheep? A baaa-llerina.
+What did the drowned say to the fisherman? "Water you looking at?"
+Why did the pickaxe go to the party? To break the ice.
+How do you catch a squirrel? Climb a tree and act like a nut.
+What's the friendliest building in the village? The library. It has the most stories.
+Why did the anvil apologize? It was a little heavy-handed.
+
+## joke.warmhearted
+Why did the bread go to the party? Because it was well-bred! Oh, I love that one.
+What did the cookie say to the milk? "I'm crumbling without you."
+Why did the soup always win at cards? It had a good stock. Ha!
+What's the kindest vegetable? A sweet potato, of course.
+Why did the oven get a compliment? It was really warm-hearted. Like me!
+Why did the honey love everyone? It couldn't help being sweet.
+What did the pie say to the plate? "Let's get together and be crust friends."
+Why did I bake so many rolls? Because I'm on a roll! Ho ho.
+What do you call a hug from a bear? A warm welcome. Very fuzzy.
+
+## joke.thoughtful
+If a tree falls in a forest and nobody hears it, does the iron golem still pick up the flower?
+Why did the philosopher refuse the bread? He didn't want to be in-loaf-ed in any arguments. Hmm. Workshop it.
+I told a joke about paper once. It was tearable.
+What's the hardest thing about learning to read? Turning the page on your old habits.
+I wrote a book about anti-gravity. I couldn't put it down.
+Why are books so cozy? They're full of covers.
+I tried to write a joke about time travel. You didn't like it.
+A sentence walks into a tavern. It's long and full of clauses.
+I've been reading a book about glue. I can't stop.
+
+## joke.playful
+Knock knock! Who's there? Lettuce. Lettuce who? Lettuce in, it's raining!
+Knock knock! Who's there? Cow says. Cow says who? No, cow says moo!
+Knock knock! Who's there? Creeper. Creeper who? Hssssss. BOOM. Okay, that one's not funny.
+Why did the frog take a taxi? He was too tired to hop. Ribbit!
+I tried to catch fog this morning. I mist. Ha!
+What do you call a nervous chicken? A chicken. All chickens are nervous.
+Knock knock! Who's there? Boo. Boo who? Don't cry, it's just a joke!
+I tickled a ghast once. Kidding! Imagine, though.
+Why did I bring a ladder to the tavern? I heard the drinks were on the house!
+
+## joke.adventurous
+Why did the explorer bring two pickaxes? In case he struck out with the first one.
+What's an adventurer's favorite letter? The one that says "treasure map inside."
+Why did the map refuse to fold? It wanted to see the world.
+What do you call an adventurer who stays home? Me. Ha. Ha. Ha.
+Why did the boat get lost? It didn't have a sense of porpoise.
+What does a mountain say when it's proud? "I peaked."
+Why do explorers carry torches? Because they're in the dark about everything else.
+What did the compass say to the explorer? "I'm pointing you in the right direction, stop arguing."
+Why don't explorers ever get bored? Every day's a new horizon.
+
+## joke.meticulous
+Why did the organizer break up with the calendar? Its days were numbered. Precisely.
+What's my favorite shape? A perfect square. Like this world.
+I told a joke about a ruler once. It was measured and well received.
+Why was the chest so neat? It had its stacks together.
+What do you call a perfectly sorted inventory? A dream come true.
+Why did the clock get a promotion? It was very punctual.
+How many librarians does it take to sort a shelf? One. If they're me.
+Why are labels so confident? They know exactly what they are.
+I'd tell you a joke about the alphabet, but I'd have to start at the beginning.
+
+## joke.steadfast
+Why did the gardener plant a bell? He wanted a ringing endorsement. Hrm. Good one.
+What do you call a reliable vegetable? A steady-bean.
+Why don't oak trees panic? They've got deep roots.
+What's a farmer's favorite month? Hay.
+Why was the old fence so wise? It had seen a lot of things come and go.
+I tell the same joke every year. It's a perennial.
+What did the seed say when it finally sprouted? "Took long enough."
+Why do I never rush? Because the carrots don't either.
+How do you keep a promise? Same as a garden. Water it every day.
+
+## joke.reserved
+...Why did the fish blush? It saw the ocean's bottom. ...Sorry.
+...I know one joke. What's a fish with no eyes? A fsh.
+...Why do seagulls fly over the sea? If they flew over the bay, they'd be bagels. ...Never mind.
+...What lies at the bottom of the ocean and twitches? A nervous wreck.
+...Why was the river rich? It had two banks.
+...I'm not funny. But the heron is. You should see it walk.
+...What did the pond say to the frog? Nothing. Ponds don't talk.
+...Why don't fish play tennis? Afraid of the net. ...Heh.
+...What's a fish's favorite instrument? The bass. ...I like that one.
+
+## joke.imaginative
+Why did the painter go to jail? She was framed!
+What did the yellow paint say to the blue paint? "Let's mix things up and go green."
+Why was the artist always calm? She knew how to draw the line.
+What's a cloud's favorite painting style? Water-color, naturally.
+Why did the moon skip dinner? It was already full.
+What do rainbows do when they're bored? They take a bow.
+Why did the easel go to school? To be a little more upright.
+How does a painter say goodbye? "Brush you later!"
+Why was the sunset so dramatic? It wanted to make a scene.
+
+## joke.pragmatic
+Why did the carpenter refuse the job? It was too boring. ...Get it? Boring.
+What's a hammer's favorite story? One with a lot of nail-biting moments.
+Why did the plank feel lonely? It was board.
+Want to hear a construction joke? I'm still working on it.
+Why do I only tell short jokes? Time's money.
+What do you call a nail that won't go in? A failure. Bend it straight, try again.
+Why did the axe get promoted? It made the cut.
+Here's a practical joke: wear a helmet in caves. Not funny, but smart.
+Why did the saw get bored? Same old cut, every day.
+
+## joke.curious
+Why do bees buzz? Nobody knows! Isn't that funny? Isn't it? I need to find out.
+What did the scientist say when he found two isotopes of helium? "HeHe."
+Why can't you trust atoms? They make up everything!
+How does the moon stay up? It has a lot of support from its fans. I don't actually know how. Do you?
+What's a star's favorite question? "Why do I shine?"
+Why did the owl go to school? It had too many questions. Like me!
+What's the most curious animal? A cat. Curiosity... well. Never mind that part.
+Why do cows have hooves instead of feet? Because they lactose. I'm not sure that's how it works.
+Why does the sun rise? To see what we're up to.
+
+## joke.protective
+Why did the guard bring a pillow on patrol? In case he had to cushion a blow.
+What's a knight's favorite fish? A swordfish, naturally.
+Why did the shield go to the party? To block out the bad vibes.
+What did the wall say to the zombie? "You shall not pass."
+Why did the golem never get scared? It had nerves of iron.
+How does a guard sleep? With one eye open. Very uncomfortable.
+Why do I check the locks twice? Because once is a guess and twice is a guarantee.
+What's the safest building in the village? The one I just checked.
+Why was the fence so popular? It always kept everyone together.
+
+## joke.gentle
+Why did the flower ride a bicycle? Its pedals were tired.
+What did the bee say to the flower? "Hello, honey."
+Why are daisies so happy? They're always in a good bloom.
+What do you call a flower that runs on electricity? A power plant. Hehe.
+Why did the rose blush? It saw the garden hose.
+What did the little sprout say? "Leaf me alone, I'm growing."
+Why are sunflowers so cheerful? They always look on the bright side.
+What do you give a sad tulip? A little bud-dy.
+Why did the bunny plant flowers? It wanted a hare-raising garden.
+
+## joke.job.farmer
+Why did the farmer win an award? He was outstanding in his field.
+What did the farmer say when he lost his tractor? "Where's my tractor?" We don't have tractors. Still funny.
+Why don't carrots ever lie? They always get to the root of things.
+What do you call a farmer who tells jokes? A corn-edian.
+
+## joke.job.librarian
+Why did the librarian slip? She was in the non-friction section.
+Where do books sleep? Under their covers.
+What's a librarian's favorite sport? Shush-ball.
+Why was the library so tall? It had a lot of stories.
+
+## joke.job.fisherman
+What do you call a fish that wears a bowtie? So-fish-ticated.
+Why did the fisherman put peanut butter in the sea? To go with the jellyfish.
+Which fish can perform surgery? A sturgeon.
+What did the fisherman say to the magic trick? "Pick a cod, any cod."
+
+## joke.job.fletcher
+Why did the arrow fall in love? It was struck by cupid.
+What's a fletcher's favorite saying? "Feather together, flock together."
+Why are arrows good at relationships? They always get to the point.
+I'd tell an arrow joke, but you'd see it coming a mile away.
+
+## joke.job.cleric
+Why did the potion go to church? It needed a little brew-tiful blessing.
+What do you call a nervous brewing stand? Bubbly.
+Why did I light so many candles? I wanted a holy-day.
+What's a cleric's favorite dance? The redstone shuffle.
+
+## joke.job.cartographer
+Why did the map go to school? It wanted to be well-read.
+What did the cartographer say to the mountain? "You're looking great from this angle."
+Why are maps great listeners? They know where you're coming from.
+What do you call a lost cartographer? Ironic.
+
+## joke.job.armorer
+Why was the chestplate so confident? It had nothing to hide behind except itself.
+What did the helmet say to the head? "I've got you covered."
+Why did the knight go to the armorer? He needed to get suited up.
+What's an armorer's favorite game? Chain tag.
+
+## joke.job.toolsmith
+Why did the pickaxe get promoted? It always hit rock bottom first.
+What did the shovel say to the dirt? "I dig you."
+Why are hammers great friends? They always nail it.
+What's a toolsmith's favorite music? Heavy metal.
+
+## joke.job.weaponsmith
+Why did the sword break up with the shield? It needed space to swing.
+What did the grindstone say to the blade? "Stay sharp."
+Why are axes great at parties? They break the ice.
+What's a weaponsmith's least favorite word? Rust.
+
+## joke.job.leatherworker
+Why did the cow go to the leatherworker? To get its hide back.
+What did one boot say to the other? "Let's step out together."
+Why are belts so reliable? They hold everything together.
+What's a leatherworker's favorite song? "Hide and Seek."
+
+## joke.job.mason
+Why are masons so good at relationships? They know how to build a solid foundation.
+What did one brick say to the other? "Let's stick together."
+Why did the stone go to school? To get a little more polished.
+What's a mason's favorite dessert? Rocky road.
+
+## joke.job.shepherd
+What do you call a sheep that's good at karate? A lamb-chop.
+Why did the sheep get a ticket? It made a ewe-turn.
+What's a shepherd's favorite bedtime story? Counting sheep, obviously.
+Why are sheep so good at parties? They know how to get woolly wild.
+
+## joke.job.butcher
+Why did the sausage go to school? To be a little more well-done.
+What did the steak say to the smoker? "You're making me blush."
+Why are butchers great at tennis? They have a great chop shot.
+What did the ham say to the smoker? "Cure me of my troubles."
+
+## joke.job.nitwit
+Why do I never work? Because work's a four-letter word. So is "nap," which I prefer.
+What's my favorite exercise? Lying down and then standing up. Occasionally.
+Why did I go to the library? I heard they had a lot of shelves to lean on.
+What do you call a nap after a nap? A good day.
+
+## joke.job.none
+Why am I always looking for a job? I'm a professional job-hunter. Ha. Sort of.
+What did the unemployed villager say to the workstation? "Is this seat taken?"
+Why don't I have a job? The job didn't have me first.
+What's my job? Telling jokes about not having a job.
+
+## joke.job.knight
+Why did the knight take so long to get dressed? He had a lot of armor to put on.
+What's a knight's favorite fish? A swordfish. I've said that before. It's still good.
+Why did the training dummy get promoted? It always took a hit for the team.
+What did the dummy say to the knight? "Is that all you've got?" Then I hit it harder.
+
+## joke.job.archer
+Why did the archer break up with the bow? It was too high-strung.
+What's an archer's favorite month? Arch. Arch-uary.
+Why are targets so patient? They're used to people missing them.
+How do archers say hello? "Arrow there!"
+
+## joke.job.cook
+Why did the tomato turn red? It saw the salad dressing. A classic in the kitchen.
+What do you call a cook who's always calm? Unflappable. Like a pancake that's done right.
+Why did the stew win the contest? It was a hearty competitor.
+What's a cook's favorite exercise? Whisking.
+
+## joke.job.tavern_keeper
+Why did the cider barrel go to therapy? It was feeling a little empty.
+What do you call a tavern with no customers? A bar-gain.
+Why are mugs so friendly? They're always up for a cup.
+What did the coffee say to the tavern keeper? "You mean a latte to me."
+
+## joke.job.apothecary
+Why did the herb go to the apothecary? It was feeling a bit thyme-worn.
+What do you call a nervous tonic? A bit shaken.
+Why did the mint win the argument? It was very cool about it.
+What's an apothecary's favorite flower? Mari-gold. Expensive and soothing.
+
+## joke.job.painter
+Why was the paint so tired? It had too many coats.
+What did the canvas say to the brush? "Stroke of luck you came along."
+Why do painters make great friends? They always help you see the bigger picture.
+What's a painter's favorite cake? Marble, obviously.
+
+## joke.job.bard
+Why did the bard sit on the ladder? To reach the high notes.
+What do you call a musician with problems? A trebled artist.
+Why are lutes so friendly? They're always in a good tune.
+What's a bard's favorite vegetable? Beets. Get it? Beats.
+
+## joke.job.tailor
+Why did the tailor get an award? She was sew good at her job.
+What did the needle say to the thread? "Let's get to the point."
+Why are buttons so dependable? They always hold things together.
+What's a tailor's favorite movie? Pants-ing Through Time.
+
+## joke.job.carpenter
+Why did the carpenter refuse to work? It was too boring.
+What did the saw say to the log? "I've got a bone to pick with you." Wait, wrong job.
+Why are carpenters great at parties? They know how to raise the roof.
+What's a carpenter's favorite game? Plank-ball.
+
+## joke.job.scholar
+Why did the scholar bring a ladder to class? To reach higher education.
+What do you call an old history book? A blast from the past.
+Why are historians great at parties? They know how to make an old story new.
+I'd tell you a history joke, but it's in the past.
+
+## joke.weather
+What did the cloud say to the rain? "You're dripping with talent."
+Why did the snowman call his dog Frost? Because frost bites.
+What's a tornado's favorite game? Twister.
+Why did the sun go to school? To get brighter. I tell that one every sunny day.
+What did one raindrop say to the other? "Two's company, three's a cloud."
+Why don't storms ever win arguments? They always end up blowing over.
+What does a cloud wear under its raincoat? Thunderwear.
+How do snowmen get around? They ride an icicle.
+What's the weather like for a skeleton? Bone dry.
+Why did the lightning bolt get grounded? It was acting out.

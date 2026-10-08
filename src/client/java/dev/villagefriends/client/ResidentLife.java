@@ -194,6 +194,9 @@ public final class ResidentLife {
         if (!v.isBaby()) ResidentBehavior.jobTags(VillageFriends.profession(v), tags);
         String personality = personality(v);
         if (personality != null) tags.add("personality:" + personality);
+        // What they're doing in their day: at work they practice their trade, on their hobby time their hobby.
+        String routine = ((AttachmentTarget) v).getAttached(VillageFriends.ROUTINE);
+        if (routine != null) tags.add("routine:" + routine);
         var level = v.level();
         tags.add(ResidentBehavior.timeTag(level.getOverworldClockTime()));
         var pos = v.blockPosition();

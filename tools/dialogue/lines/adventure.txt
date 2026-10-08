@@ -1,0 +1,330 @@
+# "Talk about adventures": adventure.<personality>, adventure.general, adventure.place, adventure.night
+
+## adventure.warmhearted
+Wherever you go, promise me you'll eat properly. Adventures run on bread.
+I'd pack you a basket for every trip if you'd let me. Cheese, apples, a good loaf.
+I worry when you go off exploring. Come back with all your fingers, please.
+The best part of any adventure is coming home to someone who missed you.
+I traveled once, when I was young. I came home with a cold and a recipe. Best trip ever.
+If you meet anyone lonely on the road, tell them about {village}. We've always got room.
+Take a blanket. The nights are colder out there than you think.
+I don't need to see the world. I like hearing about it from you over a warm bowl.
+Bring me back a seed from somewhere far away. I'll plant it and think of you.
+Adventures are wonderful, but don't forget to rest. Even heroes need naps.
+Mind the deserts. The wells are few and the husks are mean.
+I sewed a little pocket into my traveling cloak just for snacks. Very important.
+If you find a village that's struggling, help them. That's the best kind of adventure.
+I'd love to see the cherry groves. Everything pink and soft. Like a cake.
+Don't fight anything you don't have to. Some monsters just want to be left alone.
+You always come back a little thinner. I'll fix that.
+I knitted a scarf for an adventurer once. They wore it to the Nether. It didn't survive. They did.
+Every traveler needs someone waiting for them. Consider me waiting.
+
+## adventure.thoughtful
+I've read about the strongholds. Libraries buried deep, full of books no one's read in centuries.
+Do you think the end portal was built, or did it grow? The books disagree.
+The ancient cities in the deep dark fascinate me. Who sculked so quietly that they built them there?
+Every ruin is a question someone forgot to answer.
+I'd like to see the trail ruins. Pottery shards, half buried, telling half a story.
+Exploring isn't just going places. It's learning how small you are, and how lucky.
+I wonder if the desert temples were built by the same people who built the jungle ones.
+The Nether fortresses are strange. Who would build a castle in a sea of lava?
+If you ever find a book in a ruin, bring it home. Even if it's just a recipe.
+The best adventurers I've read about were curious first and brave second.
+I imagine the End is very quiet. Just the dragon, the endermen and the sound of nothing.
+Maps show where things are. Journals show what they meant.
+I read that the guardians in the ocean monuments have been guarding them for thousands of years. Guarding what, though?
+Do you keep notes on your travels? You'd be surprised what you forget.
+I'd like to visit the mushroom islands. No monsters, they say. Just mooshrooms and quiet.
+Somewhere out there is a place nobody's ever seen. Strange to think about.
+Ancient debris lies deep in the Nether. Older than the bedrock, maybe.
+I think the real treasure is the stories you bring back. And actual treasure, sometimes.
+
+## adventure.playful
+Did you find any treasure? Real treasure? With a chest and everything?
+If I went adventuring, I'd ride a pig. With a saddle. Into battle.
+I bet you've fought a hundred zombies. Or two. Or one very persistent one.
+Next time you go exploring, bring me back something weird. The weirder the better.
+I'd want to tame a parrot and teach it to tell jokes.
+Have you ever ridden a strider across lava? That sounds like the most fun ever.
+If I found a dungeon, I'd decorate it. Put some flowers in. Cheer the skeletons up.
+I want to slide down a mountain of snow on a boat. Is that possible? I've heard it's possible.
+Tell me the funniest thing that happened on your last adventure.
+I'd explore just to find a llama to spit at me. For the story.
+Do the endermen really hate being stared at? I want to try. From very far away.
+If you meet a panda, give it a hug from me.
+I'd go to the ocean just to see a dolphin. And race it. And lose.
+Imagine finding a cake in a dungeon chest. Best day ever.
+I'd be terrible at adventuring. I'd stop to look at every flower.
+You should name your sword. Something silly. Like "Sir Pokes-a-Lot."
+I dared {friend} to touch a slime. They did. They're still sticky.
+If you ever fight the dragon, wave at it for me first. It's only polite.
+
+## adventure.adventurous
+I've charted every hill within a day's walk. I need new hills.
+Tell me everything. What did you see? What did you fight? What did you eat?
+I'm planning a trip to the badlands. Mesas, mineshafts, gold everywhere, they say.
+The jungle's next on my list. Temples, ocelots, vines thick as your arm.
+I want to stand at the top of a mountain so high the clouds are below me.
+Someday I'll sail across the ocean just to see what's on the other side.
+I followed a river for two days once. It led to a frozen lake full of salmon.
+I've been saving for an elytra. I'd fly over the whole world.
+The best feeling is cresting a hill and seeing a valley you've never seen before.
+I'd go to the Nether if I had the gear. Fire resistance, a good sword, a lot of courage.
+Have you seen the lush caves? Moss, glow berries, axolotls. A whole world under the world.
+I once spent a night in a ravine with only three torches. Never again. Also, I'd do it again.
+What's the deepest you've ever dug? I mean really deep.
+I want to find a woodland mansion. Just to say I did.
+Every road out of {village} leads somewhere I haven't been. That's exciting.
+I'm going to map the coastline someday. All of it.
+I envy you. You live the life I dream about.
+If you need a traveling companion, I'm ready. Pack's by the door.
+
+## adventure.meticulous
+If you're going exploring, make a checklist. Torches, food, pickaxe, spare pickaxe.
+Always mark your path. Torches on the right going in, so you can find your way out.
+I'd catalogue every ore in a cave if I went. Coal, iron, copper, the lot.
+The most important adventuring tool is a well-organized inventory.
+I read that you should always carry a water bucket. For falls, for fires, for lava.
+I'd want to measure the height of every mountain I climbed.
+Keep a log of your coordinates. You'll thank yourself later.
+If you find a mineshaft, count the chests. Some have very good maps.
+Label your chests at home. A labeled chest is a happy chest.
+I'd collect one of every flower in every biome I visited.
+Never go into a cave without a plan. And a backup plan. And snacks.
+Explorer maps from cartographers are wonderfully precise. I approve.
+Sort your loot before you head home. Saves time at the chest.
+I'd want a sample of every kind of sand. There are more than you think.
+Wear a helmet in caves. Falling gravel is no joke.
+When you find something rare, write down exactly where. Exactly.
+Count your arrows before a fight. Running out is a beginner's mistake.
+I organized the cartographer's maps by distance from {village}. She was delighted. Mostly.
+
+## adventure.steadfast
+I've never been far from {village}. Never needed to.
+Adventures are for the young. I'll keep the home fires burning.
+Go see the world, then come home and tell me about it. I'll be right here.
+The bravest thing I've ever done is plant a garden and wait.
+I walked to the next village once. That was plenty.
+Every traveler needs a place to come back to. That's what I am.
+Mind the weather on the road. It turns faster out there.
+I'd rather hear about mountains than climb them.
+Bring me a sapling from somewhere far. I'll plant it by the well.
+There's adventure in staying, too. It's just slower.
+My grandfather sailed the seas. My father farmed this land. I know which I'd choose.
+You'll always find me here, same spot, same garden.
+Out there's wild. In here's home. Both have their place.
+Come back safe. That's all I ask.
+I've seen the seasons change fifty times from this very spot. That's a journey too.
+Long roads make for good stories and sore feet.
+I'll water your plants while you're away, if you have any.
+When you're tired of the world, {village} will be waiting.
+
+## adventure.reserved
+...I went to the coast once. The waves were loud. I liked them anyway.
+I'd like to see the ocean at night. Quietly.
+...Be careful out there.
+There's a lake past the hills. Very still. Nobody goes there. I go there.
+...I don't need far places. A quiet one's enough.
+I fished in a frozen ocean once. The fish were slow. So was I.
+...Tell me about somewhere peaceful you've been.
+I'd like a little boat and a long river. That's my adventure.
+...The mountains look nice from here.
+I saw an iceberg once. Blue inside. I didn't tell anyone.
+...You come back changed every time. In good ways.
+I'd go to the mushroom islands. Nobody there to talk to. Perfect.
+...Take care of yourself.
+The swamp's quiet at night. Except for the frogs. I like the frogs.
+...I'm glad you go. I'm also glad I don't.
+I'd like to see a whale. Are there whales? I'd like there to be whales.
+...Bring back a shell? A small one.
+The best adventures are the quiet ones, I think.
+
+## adventure.imaginative
+Do you think there's a land where the grass is purple and the trees grow upside down? I do.
+I'd paint every place you've been, if you described them well enough.
+The End sounds like a dream. Pale stone, black sky, purple towers.
+I imagine the deep dark as a cathedral built by moths.
+If I explored, I'd look for a place where the sunsets last all night.
+The cherry groves must be like walking through a painting.
+Have you ever seen colors out there you couldn't name? Tell me. I'll invent names for them.
+I like to think the strongholds are dreaming, deep under the ground.
+The Nether must be all reds and oranges, like the inside of a fire's thoughts.
+I'd want to see the aurora over a snowy mountain. If there's an aurora. I'll paint one anyway.
+What's the most beautiful thing you've ever seen? Describe it slowly.
+Coral reefs! Pink and yellow and blue. Underwater gardens.
+I'd build a little house on a floating island in the End. With curtains.
+Maybe every portal leads to a different dream.
+I painted a map of the world as I imagine it. There are a lot of dragons.
+I'd love to see the end cities. Floating towers, shulkers like little boxes of secrets.
+Every cave is a story the earth tells itself in the dark.
+If you find a beautiful place, think of me there, painting it.
+
+## adventure.pragmatic
+If you're heading out, take more food than you think. And more torches.
+Iron pickaxe minimum. Stone won't get you far.
+Don't fight what you can avoid. Saves food, saves armor.
+Shield, bow, sword, bucket. In that order.
+Know your way home before you leave. Sounds obvious. Isn't.
+Sleep in a bed when you can. Phantoms are a nuisance.
+If you find diamonds, don't celebrate till you're home. Lava's patient.
+Pack a boat. You'll hit water eventually. You always do.
+Never dig straight down. Never.
+Carry a stack of dirt for emergencies. Pillar up, wall off. Simple.
+Trade with villages you pass. Emeralds are lighter than gold.
+Learn to cook on a campfire. Saves fuel.
+A good map saves more lives than a good sword.
+If it hisses, run. If it rattles, shield. If it moans, sword.
+Don't get greedy in a dungeon. Grab what you need, go.
+Mark your caves. Torches on one side. Every time.
+Repairs are cheaper than replacements. Bring materials.
+Adventures are just long jobs with worse pay.
+
+## adventure.curious
+What does the Nether smell like? Is it like burning? Or something stranger?
+Have you ever touched an end crystal? Don't. But have you?
+How deep have you dug? What's at the bottom? Is it hot?
+What do the endermen eat? Does anyone know? I've asked everyone.
+Have you seen an allay? They say they bring you things. What kind of things?
+How do the guardians know you're there? Do they have ears? They don't have ears.
+What's inside a shulker? Besides the shulker.
+Have you been to the deep dark? Did the warden notice you? How quiet were you?
+What's the strangest creature you've ever met?
+Do the sniffers really dig up ancient seeds? What grows from them?
+Is the void really endless? Has anyone dropped something to check?
+What does lightning look like up close? Don't answer that, actually.
+How did you find your way back the first time you got lost?
+Do you think there are more dimensions? Ones nobody's found?
+Have you seen a mooshroom change color in a storm? I've read that happens.
+How cold is the frozen peak? Colder than ice? How?
+I've got a hundred questions about the ocean. Can I ask ninety?
+What's the most surprising thing you've learned out there?
+
+## adventure.protective
+Promise me you'll be careful. Armor on, torches lit, eyes open.
+Don't go into the deep dark alone. Please.
+If you get into trouble out there, come straight back here. We'll look after you.
+Take a shield. I'm serious. Take a shield.
+The Nether's no place for the careless. Fire resistance, always.
+I worry about you every time you leave.
+If anyone gives you trouble on the road, you tell me.
+Rest when you're hurt. Don't push on. That's how people don't come back.
+Raids start with patrols. If you see banners on the horizon, warn us.
+I'd come with you if I could leave the village unguarded.
+Keep your food bar full. Hungry adventurers make mistakes.
+Never let a creeper get close. Never.
+I'll keep a torch lit at the gate for you.
+Being brave is good. Being alive is better.
+Watch your back in mineshafts. Cave spiders hide in the cobwebs.
+Don't trust lava lakes. They look calm. They're not.
+Write down where you are, so someone can find you.
+Come home. That's the only rule.
+
+## adventure.gentle
+I hope the road is kind to you.
+If you see wildflowers on your travels, think of me.
+Be gentle with the creatures you meet. Most of them are just frightened.
+I'd like to see a field of sunflowers someday. Whole fields, all facing the sun.
+The bees in the forests are wild and wonderful. Don't disturb their hives.
+I hope you find beautiful places, not just dangerous ones.
+Bring me a seed from somewhere far, and I'll grow it in my garden for you.
+I think the most beautiful adventure would be a quiet walk through a cherry grove.
+Don't forget to rest under a tree now and then.
+If you meet a lost wolf, be kind. It might become your friend.
+I'd love to see an axolotl. Pink and smiling, they say.
+I hope wherever you go, someone's kind to you.
+The meadows in the mountains have flowers I've never seen. I'd like to.
+Take a moment, on your travels, just to look around.
+I hope your adventures are more wonder than worry.
+Come home before you're too tired. Rest is part of the journey.
+I pressed a flower for you. Keep it in your pack for luck.
+May every path you take lead somewhere lovely.
+
+## adventure.general
+I heard there's a mansion in the dark forest full of illagers. Don't go there. Unless you have to.
+Someone found a buried treasure chest on the beach with nothing but a map in a shipwreck.
+A traveler told me about a temple in the desert with a trap of TNT under the floor. Mind the pressure plate.
+They say the strongholds lead to the End. And the End leads to a dragon.
+The ocean monuments are guarded by elder guardians. They'll make your arms tired just looking at you.
+Have you been to the lush caves? I hear they glow.
+The badlands have mineshafts right at the surface. Gold everywhere.
+I met a trader who'd been to the Nether. His eyebrows never grew back.
+They say there are ruins in the snowy mountains where the goats stand guard.
+Someone said they saw a village made entirely of sandstone. Imagine.
+If you find a pillager outpost, stay away. Or bring friends.
+The deep dark is the quietest place in the world. And the most dangerous.
+They say a warden can hear your heartbeat.
+I heard about a mountain so tall it pokes through the clouds.
+There's a story about a hero who killed the dragon with nothing but a bow and a bucket.
+A cartographer told me the world keeps going, forever, in every direction.
+Someone found a geode full of purple crystals in a cave.
+The swamps have witch huts. Don't knock.
+I've heard there's a village where everyone's a librarian. That sounds peaceful.
+Desert pyramids have four chests underneath. And a lot of TNT.
+They say if you fill an end portal frame with eyes, it opens.
+The mushroom islands have no hostile mobs at all. Strange, isn't it?
+I heard of a traveler who tamed a fox by feeding it berries. It follows them everywhere now.
+Some villages are abandoned, overgrown, full of zombie villagers. Sad places.
+Did you know you can ride a strider across a lava ocean with a warped fungus on a stick?
+They found an ancient city once, all grey stone and soul fire.
+Ancient debris is the strongest stuff there is. You'd need a lot of patience to find it.
+A sailor told me icebergs are bigger under the water than above.
+If you trade with a wandering trader, check the prices twice.
+Someone found a horse in a skeleton trap during a storm. Four skeletons on four horses.
+Somewhere out there is a waterfall that pours straight into the void. Or so I'm told.
+I've heard of coral reefs so colorful they make your eyes water.
+Shipwrecks often have maps to buried treasure. Hearts of the sea, they say.
+The frozen oceans have polar bears. Don't upset the cubs.
+A trial chamber was found under the hills, full of breezes and copper.
+They say goats can knock you right off a mountain. Respect the goats.
+Somewhere in the jungle there's a temple with a puzzle of levers.
+Every adventurer has one story they never tell. What's yours?
+I knew someone who found an enchanted golden apple in a dungeon. Ate it straight away. No regrets.
+The amethyst geodes ring like bells when you walk through them.
+There's a saying: the further you go, the stranger the world gets.
+I heard the sniffers came back from extinction. Big, sleepy, happy creatures.
+Rumor has it there's a bastion in the Nether full of piglins and gold.
+Someone saw a pink sheep in the wild once. Very rare. Very lucky.
+Long ago, they say, the bell of {village} was carried here from a ruined town.
+
+## adventure.place
+The jungle's so thick you can lose the sun completely.
+The badlands glow orange and red at sunset like the whole world's on fire.
+The cherry groves drop pink petals on everything. Even on the bees.
+The deserts go on forever. Nothing but sand, sky and the odd cactus.
+The taiga smells of pine and wet earth. Wolves howl at night.
+The savanna's flat and golden, with acacia trees like umbrellas.
+The swamps are murky and full of frogs. And witches.
+The frozen peaks are so cold your breath turns to ice.
+Mangrove swamps have roots that tangle like knots in a rope.
+The dark forest's so shady mushrooms grow tall as houses.
+The meadows in the mountains are full of flowers and bees.
+Birch forests are bright and white. Like a forest made of paper.
+Stony shores have waves that crash right up against the cliffs.
+Warm oceans are clear enough to see the coral from a boat.
+The deep dark is black and blue and silent. Silent like a held breath.
+The Nether wastes are red as rust and hot as an oven.
+Crimson forests have trees made of fungus. Hoglins roam there.
+Warped forests are blue and strange. Endermen like it there.
+The soul sand valley's full of blue fire and old bones.
+Basalt deltas are all grey pillars and falling ash.
+The End islands float in the dark, pale as old bones.
+Dripstone caves have stone teeth hanging from the ceiling.
+Lush caves have moss and glow berries and little pools.
+Snowy plains go white to the horizon. The igloos are cozy, they say.
+Bamboo jungles rustle in the wind. Pandas munch everywhere.
+Flower forests are a riot of color. Bees everywhere.
+Mushroom fields are purple and quiet. The mooshrooms just wander.
+Old growth taiga has spruce trees so tall they scrape the sky.
+Ice spikes stand up out of the snow like frozen spears.
+Windswept hills are full of emerald ore, they say. And goats.
+
+## adventure.night
+Adventuring at night? Brave. Or foolish. Probably both.
+The stars are the best map, if you know them.
+Night travel's dangerous. Every shadow has something in it.
+If you're out tonight, watch for spiders on the walls.
+Moonlight makes the whole world silver. Pretty, and full of skeletons.
+The phantoms come for those who don't sleep. Rest before you roam.
+Some caves are safer at night than the surface. Funny how that works.
+A torch in the dark is the best friend you'll ever have.

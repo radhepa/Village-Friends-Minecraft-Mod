@@ -17,7 +17,8 @@
       "dev.villagefriends.VillageLifeGameTest",
       "dev.villagefriends.CommunityGameTest",
       "dev.villagefriends.OutfitGameTest",
-      "dev.villagefriends.HairFaceGameTest"
+      "dev.villagefriends.HairFaceGameTest",
+      "dev.villagefriends.WorkstationGameTest"
     ]
   }
 }

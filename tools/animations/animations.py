@@ -37,13 +37,25 @@ PACKS = {
 MAX_ROT, MAX_POS = 400, 12
 
 
+# Residents follow a daily routine (Routine.java): during working hours they mostly practice their
+# trade, during their free hour their hobby. Clips from these modules are boosted for that part of the day.
+WORK_HOURS = {"routine:work": 3.0, "routine:prayer": 3.0, "routine:night_watch": 2.0}
+FREE_HOUR = {"routine:hobby": 4.0, "routine:rain_walk": 1.5}
+ROUTINE_BOOSTS = {"work": WORK_HOURS, "trades": WORK_HOURS, "crafts": WORK_HOURS, "hobbies": FREE_HOUR, "pastimes": FREE_HOUR}
+
+
 def load(pack: str):
     kit.CLIPS.clear()
     for name in PACKS[pack]["modules"]:
+        before = len(kit.CLIPS)
         path = TOOL / pack / f"{name}.py"
         spec = importlib.util.spec_from_file_location(f"{pack}.{name}", path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
+        for c in kit.CLIPS[before:]:
+            if c.trigger == "idle":
+                for tag, factor in ROUTINE_BOOSTS.get(name, {}).items():
+                    c.boost.setdefault(tag, factor)
     return list(kit.CLIPS)
 
 

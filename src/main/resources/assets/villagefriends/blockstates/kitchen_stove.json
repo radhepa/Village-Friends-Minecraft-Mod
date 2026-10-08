@@ -1,20 +1,36 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "villagefriends:block/kitchen_stove",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "villagefriends:block/kitchen_stove",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "villagefriends:block/kitchen_stove",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "villagefriends:block/kitchen_stove",
-      "y": 270
-    }
+ "variants": {
+  "facing=north,lit=false": {
+   "model": "villagefriends:block/kitchen_stove",
+   "y": 0
+  },
+  "facing=north,lit=true": {
+   "model": "villagefriends:block/kitchen_stove_lit",
+   "y": 0
+  },
+  "facing=east,lit=false": {
+   "model": "villagefriends:block/kitchen_stove",
+   "y": 90
+  },
+  "facing=east,lit=true": {
+   "model": "villagefriends:block/kitchen_stove_lit",
+   "y": 90
+  },
+  "facing=south,lit=false": {
+   "model": "villagefriends:block/kitchen_stove",
+   "y": 180
+  },
+  "facing=south,lit=true": {
+   "model": "villagefriends:block/kitchen_stove_lit",
+   "y": 180
+  },
+  "facing=west,lit=false": {
+   "model": "villagefriends:block/kitchen_stove",
+   "y": 270
+  },
+  "facing=west,lit=true": {
+   "model": "villagefriends:block/kitchen_stove_lit",
+   "y": 270
   }
+ }
 }

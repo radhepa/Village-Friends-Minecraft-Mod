@@ -2,6 +2,7 @@ package dev.villagefriends;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -35,19 +36,36 @@ public final class VillageBlocks {
                 new Item.Properties().setId(ResourceKey.create(Registries.ITEM, identifier)).useBlockDescriptionPrefix()));
     }
     private static void add(String name, boolean stone, double[][] boxes) { add(name, stone, boxes, null); }
+    /** A profession's workstation: it does something for players and for the resident who works there. */
+    private static void station(String name, boolean stone, double[][] boxes) {
+        var identifier = id(name);
+        var station = WorkstationBlock.Station.of(name);
+        var properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, identifier))
+                .strength(stone ? 3.0F : 2.0F).sound(stone ? SoundType.STONE : SoundType.WOOD).noOcclusion()
+                .lightLevel(state -> state.hasProperty(WorkstationBlock.LIT) && state.getValue(WorkstationBlock.LIT) ? 13 : 0);
+        Block block = switch (station) {
+            case KITCHEN_STOVE -> new WorkstationBlock.Lit(properties, boxes, station);
+            case EASEL_CANVAS -> new WorkstationBlock.Canvas(properties, boxes, station);
+            default -> new WorkstationBlock(properties, boxes, station);
+        };
+        BLOCKS.put(name, Registry.register(BuiltInRegistries.BLOCK, identifier, block));
+        Registry.register(BuiltInRegistries.ITEM, identifier, new BlockItem(block,
+                new Item.Properties().setId(ResourceKey.create(Registries.ITEM, identifier)).useBlockDescriptionPrefix()));
+    }
+    public static List<String> stations() { return java.util.Arrays.stream(WorkstationBlock.Station.values()).map(s -> s.block).toList(); }
 
     public static void register() {
-        add("training_dummy", false, new double[][]{{2,0,2,14,2,14},{7,2,7,9,16,9},{3,8,6,13,14,10},{5,14,5,11,16,11}});
-        add("archery_target", false, new double[][]{{2,0,3,14,2,13},{3,2,7,5,8,9},{11,2,7,13,8,9},{2,7,6,14,16,10}});
-        add("kitchen_stove", true, new double[][]{{0,0,0,16,12,16},{3,12,3,13,16,13}});
-        add("drinks_barrel", false, new double[][]{{1,0,1,15,16,15}});
-        add("tap_stand", false, new double[][]{{1,0,2,15,3,14},{3,3,5,13,12,13},{5,12,6,11,16,10},{7,10,2,9,12,6}});
-        add("alchemical_press", true, new double[][]{{1,0,1,15,3,15},{3,3,3,5,16,13},{11,3,3,13,16,13},{3,14,3,13,16,13},{5,4,5,11,8,11}});
-        add("easel_canvas", false, new double[][]{{2,0,3,4,14,5},{12,0,3,14,14,5},{7,0,11,9,14,13},{2,7,4,14,16,6}});
-        add("music_stand", false, new double[][]{{2,0,2,14,2,14},{7,2,7,9,11,9},{2,11,4,14,13,12}});
-        add("sewing_table", false, new double[][]{{1,10,1,15,12,15},{2,0,2,4,10,4},{12,0,2,14,10,4},{2,0,12,4,10,14},{12,0,12,14,10,14},{5,12,5,11,16,11}});
-        add("sawmill", false, new double[][]{{0,8,0,16,12,16},{1,0,1,4,8,15},{12,0,1,15,8,15},{7,12,4,9,16,12}});
-        add("archives", false, new double[][]{{0,0,0,16,16,16}});
+        station("training_dummy", false, new double[][]{{1,0,1,15,3,15},{6,3,6,10,16,10},{4,10,5,12,16,11}});
+        station("archery_target", false, new double[][]{{1,0,6,15,16,9},{2,0,9,14,3,11}});
+        station("kitchen_stove", true, new double[][]{{0,0,1,16,13,16},{2,13,4,8,16,10},{11,13,11,14,16,14}});
+        station("drinks_barrel", false, new double[][]{{1,0,1,15,15,15}});
+        station("tap_stand", false, new double[][]{{1,0,2,15,10,14},{4,10,5,12,16,13}});
+        station("alchemical_press", true, new double[][]{{0.5,0,0.5,15.5,2,15.5},{1.5,2,6,3.5,16,10},{12.5,2,6,14.5,16,10},{3.5,2,3.5,12.5,9,12.5}});
+        station("easel_canvas", false, new double[][]{{2,0,4,14,16,8.5},{7,0,9,9,3,13}});
+        station("music_stand", false, new double[][]{{6.5,0,6.5,9.5,16,9.5},{2,11,6,14,16,9}});
+        station("sewing_table", false, new double[][]{{0,11,0,16,13,16},{1,0,1,3,11,3},{13,0,1,15,11,3},{1,0,13,3,11,15},{13,0,13,15,11,15},{1,3,1,15,4,15}});
+        station("sawmill", false, new double[][]{{0,10,2,16,12,14},{1,0,3,3,10,5},{13,0,3,15,10,5},{1,0,11,3,10,13},{13,0,11,15,10,13}});
+        station("archives", false, new double[][]{{0,0,0,16,16,16}});
         double[][] bench = {{0,6,3,16,9,13},{1,0,4,4,6,12},{12,0,4,15,6,12},{0,9,11,16,16,13}};
         add("village_bench", false, bench);
         add("campfire_bench", false, bench);

@@ -6,7 +6,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 ## Village Life (pack 1)
 
-The pack grew in 2.14.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
+The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
 349 clips (340 distinct motions; a few serve two situations):
 

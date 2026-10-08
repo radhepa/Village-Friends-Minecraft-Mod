@@ -54,5 +54,6 @@
   "entity.villagefriends.villager.bard": "Bard",
   "entity.villagefriends.villager.tailor": "Tailor",
   "entity.villagefriends.villager.carpenter": "Carpenter",
-  "entity.villagefriends.villager.scholar": "Scholar"
+  "entity.villagefriends.villager.scholar": "Scholar",
+  "item.villagefriends.mug_of_cider": "Mug of Cider"
 }

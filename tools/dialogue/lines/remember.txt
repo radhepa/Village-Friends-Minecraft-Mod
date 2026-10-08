@@ -1,0 +1,393 @@
+# Callbacks to answers you gave before: remember.<flag> (flags come from the questions' @flags).
+
+## remember.likes_rain
+You told me you love the rain. I thought of you all through the last storm.
+Rain-lover! I saved a puddle for you. It's by the well.
+I walked in the rain yesterday because you said you liked it. You're right. It's lovely.
+
+## remember.fond_village
+You said {village} was your favorite. I've been telling everyone. You're famous now.
+I keep remembering what you said about {village}. It made us all a bit prouder.
+You love it here. I can tell. And we love having you.
+
+## remember.trait_generous
+You said you'd share your last loaf. I believe it. You've got a generous heart.
+I told {neighbor} how generous you are. They didn't seem surprised.
+Generous people like you make the world softer. Thank you.
+
+## remember.likes_fishing
+You like fishing, don't you? The salmon are running this week.
+I found a good spot by the river and thought of you. Bring your rod.
+Fancy a fishing trip soon? You said you liked it. I haven't forgotten.
+
+## remember.likes_cats
+You're a cat person! There's a new kitten by the bakery. You'd love her.
+The village cats have been asking about you. Well, one meowed at me. Same thing.
+I saw a cat sleeping on a pumpkin and thought of you.
+
+## remember.fond_bell
+You said the bell was the best. I gave it a little polish in your honor.
+Every time the bell rings now, I think of what you said.
+The bell rang at noon and I said "that one's for {player}." The cleric gave me a look.
+
+## remember.drink_coffee
+Strong coffee, you said! The tap's full this morning, if you've got a mug.
+I tried my coffee strong like you. My hands haven't stopped shaking.
+You're the coffee one! I remember. The tavern keeper does a lovely mug.
+
+## remember.drink_cider
+Warm cider, wasn't it? The barrel's been freshly pressed.
+You like cider. I'll save you a mug at the tavern.
+The apples this year are perfect for your cider.
+
+## remember.drink_milk
+Cold milk in the morning! You were right. I tried it. Very refreshing.
+Milk-drinker! The cows have been very productive this week.
+
+## remember.dream_cottage
+You dreamed of a cozy cottage. I saw a perfect spot by the stream. Just saying.
+Still dreaming of that little cottage? Build it near us, would you?
+I keep thinking about your cottage dream. It sounds like the nicest dream.
+
+## remember.dream_castle
+How's your castle in the clouds coming along? I want a tower room.
+You wanted to build a castle! Have you started? Do you need a bell for it?
+
+## remember.dream_farm
+A giant farm, you said! The farmer's got opinions on how you should start.
+You and your giant farm. You'd feed the whole Overworld.
+
+## remember.dream_redstone
+Have you built your redstone machine yet? What does it do? Never mind, I'll just be impressed.
+You and redstone! I still don't understand it. I still think it's wonderful.
+
+## remember.writes_journal
+Did you write about today in your journal? Write something nice about me.
+I've started a journal too, because of you. Mostly I draw cats in it.
+Your journal must be enormous by now.
+
+## remember.why_see
+You want to see everything. Have you seen something new since we last talked?
+Still seeing the world? Tell me the best new thing.
+
+## remember.why_people
+You said you travel for the people you meet. I hope I'm one of the good ones.
+You travel for people. I keep thinking about that. It's the nicest reason.
+I told {neighbor} why you travel. They said "for people? That's lovely." It is.
+
+## remember.why_build
+You said you want to build something great. I hope you'll show us when it's done.
+How's the great building project? Bigger than the church yet?
+
+## remember.wants_swim
+You'd rather breathe underwater. I saw a turtle today and thought of you.
+Still wishing you could swim like a fish? There's a potion for that, I've heard.
+
+## remember.wants_fly
+You wanted to fly! Have you found wings yet? Elytra, they call them.
+I watched the birds today and thought of you. You'd love it up there.
+
+## remember.wants_animals
+You'd talk to animals if you could. The goat has been very chatty lately. Try him.
+I'm sure the cats would tell you everything. You'd hear so much gossip.
+
+## remember.travels_wolf
+How's your wolf? You said you travel with one. Give it a scratch from me.
+Bring your wolf by sometime! The village dogs would love a new friend.
+
+## remember.travels_friends
+Still traveling with friends? Bring them here sometime.
+Adventures with friends are the best kind. You told me that.
+
+## remember.travels_alone
+You said you travel alone. Take care of yourself out there. Someone here worries.
+Lonely roads are long. Come back to us often.
+
+## remember.trait_trusty
+You said you'd never tell a secret. So here's one: I'm glad we're friends.
+I trust you. You keep secrets. That's rare.
+
+## remember.trait_tidy
+You sort your chests by type! I still think about that. Wonderful.
+Your chests must be the tidiest in the Overworld.
+
+## remember.trait_miner
+Found any diamonds lately, miner?
+You're a miner at heart. The old mineshaft east of here might interest you.
+
+## remember.trait_honest
+You'd ask around about a lost emerald. That's why I trust you.
+Honest folk are rare. You're one of them.
+
+## remember.trait_healer
+You said you'd cure a zombie neighbor. That stays with me. Thank you.
+I feel safer knowing you'd try to cure one of us. You know how. Weakness and gold.
+
+## remember.trait_farmer
+How are your crops coming along, farmer?
+A farmer at heart! The wheat's high this year. You'd be proud.
+
+## remember.trait_explorer
+Where's the explorer been this time? Tell me everything.
+You're always off somewhere new. Explorer through and through.
+
+## remember.trait_careful
+You said you're careful. Good. Stay that way out there.
+Careful as always, I hope?
+
+## remember.trait_builder
+How's the building going, builder? Need any planks? The sawmill's busy.
+You're a builder. The carpenter's been asking about you.
+
+## remember.trait_brave
+Brave as ever, I see. Just don't be too brave.
+You told me you're brave. I believe it now. I've seen your armor dents.
+
+## remember.talent_cooking
+You can cook! When are you cooking for me? I'm waiting.
+I still want to taste your cooking. Bring something next time.
+
+## remember.song_jig
+The bard's been working on your jig. It's very bouncy. You'll love it.
+Your jig is nearly ready! The bard's been humming it all week.
+
+## remember.song_ballad
+Your ballad's up to forty verses. The bard can't stop.
+The bard sang a bit of your ballad at the tavern. Everyone cried. In a good way.
+
+## remember.sleeps_stars
+Still sleeping under the stars? Watch for spiders.
+I slept outside last night because you made it sound nice. A spider walked on my face.
+
+## remember.sleeps_bed
+Still carrying your bed around? Very wise. Very heavy, I'd imagine.
+A bed in your pack. I still think that's clever.
+
+## remember.season_winter
+Winter's your season! I'll save you a spot by the fire when the snow comes.
+You love winter. The first frost made me think of you.
+
+## remember.season_summer
+Summer's your favorite! The river's warm enough to swim in now.
+You love summer. Long days, warm nights. Enjoy them.
+
+## remember.season_spring
+Spring's your time. The blossoms are coming out by the church.
+You love spring. Everything new. Like you, every time you visit.
+
+## remember.season_autumn
+Autumn, you said! The pumpkins are coming in nicely.
+You love the harvest. You'd love our harvest festival. If we had one. We should.
+
+## remember.promise_garden
+You said you'd plant something with me. I've saved the seeds. Whenever you're ready.
+Our garden plan! I've marked out a little spot. It's waiting for us.
+
+## remember.promise_defend
+You said you'd help if trouble came. I've told the guards. They're glad.
+I sleep better knowing you'd come if the bell rang.
+
+## remember.promise_adventure
+You said you'd take me on an adventure someday. I've packed. Twice.
+Is today the day? For our adventure? No? Tomorrow, then.
+I've been training for our adventure. I walked to the river and back. Twice.
+
+## remember.plays_tag
+You played tag with me! You're it! Still! Forever!
+Will you play again? You promised! Sort of!
+
+## remember.plays_snowball
+I've been saving snowballs for our fight. Well, they melted. I'll make more.
+Snowball rematch when the snow comes back! You're not getting away.
+
+## remember.plays_nap
+The haystack's ready for our nap. Same time as usual?
+Napping together was the best idea you've ever agreed to.
+
+## remember.pet_sir
+How's Sir Barks-a-Lot? Have you found him yet? I keep imagining him.
+If you ever get a wolf, I'm holding you to the name Sir Barks-a-Lot.
+
+## remember.pet_biscuit
+Did you name a wolf Biscuit yet? I need to know.
+Biscuit! I still think that's the cutest name ever.
+
+## remember.number_64
+Sixty-four! A full stack. I see your lucky number everywhere now.
+I counted sixty-four seeds today and thought of you.
+
+## remember.loves_ocean
+You love the ocean. I hope you get to see it again soon.
+I painted the sea after you told me about it. It's very blue. Mostly blue.
+
+## remember.loves_mountains
+The snowy mountains, you said. I looked at the hills and imagined them taller.
+Have you been back to the mountains? Tell me about the snow up there.
+
+## remember.loves_cherry
+The cherry groves! I dreamt about them after you told me. Everything pink.
+You love the cherry groves. I'd love to see one with you someday.
+
+## remember.likes_sweet
+Something sweet for the sweet-tooth! The baker's got honey cakes today.
+You're the cake person. I'll let you know when there's cake. There's always cake somewhere.
+
+## remember.likes_sunset
+The sunset last night made me think of you. All orange and gold.
+You're a sunset person. There's a good one coming tonight, I can feel it.
+
+## remember.likes_sunrise
+I watched the sunrise this morning because you said you love them. You're right.
+Sunrise person! You'd have loved this morning's. Pink everywhere.
+
+## remember.likes_sun
+A fine sunny day, just how you like it.
+Sunshine for the sunshine person! Enjoy it.
+
+## remember.likes_snow
+You love snow! I'll make a snow golem for you when it comes.
+I thought of you when the first flakes fell. You'd have been out in it.
+
+## remember.likes_savory
+The stew-lover! The cook's made a big pot today.
+You'd rather have stew than cake. I'll never understand it. I respect it.
+
+## remember.likes_parrots
+Seen any parrots lately? I still want one that says my name.
+You and your parrots! The jungle traders have one, I think.
+
+## remember.likes_music
+You love a good jig. The bard's playing tonight. Come by.
+The bard asked if the jig-lover was in town. That's you!
+
+## remember.likes_dogs
+A dog person! The village dogs have been extra waggy since you visited.
+I saw a puppy today and thought of you.
+
+## remember.likes_bread
+The bread-lover! The bakery smells amazing this morning.
+Bread, just bread. You were right. I had some plain bread today. Perfect.
+
+## remember.idea_wall
+I told the guards your idea about the wall. They're considering it. Slowly.
+Your wall idea came up at the meeting. Very heated debate.
+
+## remember.idea_tavern
+Your bigger tavern idea is very popular. The bard's started a petition.
+Everyone agrees with you about the tavern. The tavern keeper agrees the loudest.
+
+## remember.idea_snow
+A first snow festival! I keep thinking about your idea. Lanterns in the snow.
+Your snow festival idea! We'll do it this winter. I've decided.
+
+## remember.idea_lanterns
+I mentioned your lantern idea. A few more lanterns went up by the well. Your doing.
+More lanterns, you said. The path by the church has two new ones now.
+
+## remember.idea_harvest
+A harvest festival! I've started planning. Pies. So many pies.
+Your harvest festival idea has everyone excited. The farmer most of all.
+
+## remember.idea_golem
+A festival for the golem! I gave it a poppy and told it your idea. It seemed pleased.
+The golem doesn't know about its festival yet. Let's keep it a surprise.
+
+## remember.hours_late
+Night owl! Make sure you sleep sometimes. The phantoms are watching.
+Up late again? I could tell. You've got that night-owl glow.
+
+## remember.hours_early
+An early riser like you would love the morning mist we had today.
+Up with the sun, as always? Good for you.
+
+## remember.home_wanderer
+Still wandering? You've always got a bed in {village}, you know.
+Every wanderer needs somewhere to come back to. Let it be here.
+
+## remember.home_village
+You said {village} was your home. I haven't stopped smiling about it.
+Welcome home, {player}. You said it was home, so I'm saying it.
+
+## remember.home_built
+How's the house you built? Any new rooms?
+You built your own home. I'd love to see it someday. Or a painting of it.
+
+## remember.food_steak
+The butcher's got good steak today. I thought of you.
+A steak person! Well cooked, you said. I remember.
+
+## remember.food_pie
+The baker made pumpkin pie this morning. I asked her to save a slice for you.
+Pumpkin pie for the pie lover. It's in season.
+
+## remember.food_carrots
+Golden carrots! Fancy as ever, I'm sure.
+I saw a golden carrot at the market and thought, that's {player}'s favorite.
+
+## remember.fears_warden
+You faced the warden. I still can't believe it. Brave, brave {player}.
+I told the children you met the warden. They hid under the table for an hour.
+
+## remember.fears_endermen
+Don't look any endermen in the eye this week, all right?
+I wear a pumpkin in the garden now, because of what you said about endermen.
+
+## remember.fears_creepers
+Seen any creepers lately? Watch your back, they're sneaky.
+I got a cat because of your creeper stories. She's fierce.
+
+## remember.enchant_unbreaking
+Hard to break, you said. That's you, I think.
+Unbreaking. I keep thinking about your answer. It suits you.
+
+## remember.enchant_mending
+Mending, you said. Healing as you grow. I think about that a lot.
+Learning and mending. That's the best kind of life.
+
+## remember.color_red
+Red, your favorite color! The poppies are blooming.
+I painted my door red because of you. Well, partly because of you.
+
+## remember.color_purple
+Purple! I found an amethyst shard and kept it for you.
+Your favorite color's all over the sky at dusk tonight.
+
+## remember.color_green
+Green, your color. The hills are so green this week.
+Green, like the hills. And like creepers, unfortunately.
+
+## remember.color_blue
+The sky's your color today. Lovely and blue.
+I used so much blue in my last painting. For you.
+
+## remember.collects_gems
+How's your gem collection? Anything new and sparkly?
+I found a shiny pebble for your collection. It's not a gem. It's very shiny though.
+
+## remember.collects_friends
+You collect friends, you said. I'm proud to be one.
+How many friends in your collection now? I hope I'm near the top.
+
+## remember.collects_flowers
+I pressed a flower for your collection. A cornflower. Very blue.
+How's your flower collection? I saw a rare one by the river.
+
+## remember.collects_discs
+Found any new music discs? I've never heard one play.
+Your music disc collection must be wonderful.
+
+## remember.chronicle_yes
+You're in the chronicle now! Right after the bit about the goat on the roof.
+I've written about your last visit. It's a very flattering entry.
+
+## remember.cared_fed
+Have you been eating properly since we talked? Truly?
+I've got food for you again. I haven't forgotten my promise.
+
+## remember.birthday_today
+Happy belated birthday! I've been thinking about it since you told me.
+Birthday person! Did you do anything special? You should have.
+
+## remember.birthday_market
+It's nearly your birthday! Market Day, remember? We agreed!
+Every Market Day's your birthday now. That's the rule.

@@ -90,7 +90,7 @@ public final class FoundationGameTest implements FabricClientGameTest {
             w.getConnection().waitForChunksRender();w.getServer().runCommand("time set 2000");w.getServer().runCommand("gamemode creative @a");
             w.getServer().runOnServer(server->{
                 var level=w.getConnection().getServerLevel();var player=w.getConnection().getServerPlayer();
-                check(VillageProfessions.JOBS.size()==10&&VillageBlocks.all().size()==17&&VillageItems.all().size()==27,"Full registry includes the two guard spawn eggs and the Village Ledger");
+                check(VillageProfessions.JOBS.size()==10&&VillageBlocks.all().size()==17&&VillageItems.all().size()==28,"Full registry includes the two guard spawn eggs and the Village Ledger");
                 for (String job:VillageProfessions.JOBS) {
                     var profession=BuiltInRegistries.VILLAGER_PROFESSION.getOrThrow(VillageProfessions.key(job)).value();
                     for (String workstation:VillageProfessions.workstations(job)) for (var state:VillageBlocks.get(workstation).getStateDefinition().getPossibleStates()) {
@@ -199,6 +199,6 @@ public final class FoundationGameTest implements FabricClientGameTest {
                 }
             });
         }
-        VillageFriends.LOGGER.info("FOUNDATION GAMEPLAY PASSED: 10 natural profession acquisitions, 17 block placements/loot, 27 items, 41 craft recipes, exact awkward potion ingredient, 100 trade offers, meals/coffee/equipment, rendered asset gallery and block entity/profession save/reload.");
+        VillageFriends.LOGGER.info("FOUNDATION GAMEPLAY PASSED: 10 natural profession acquisitions, 17 block placements/loot, 28 items, 41 craft recipes, exact awkward potion ingredient, 100 trade offers, meals/coffee/equipment, rendered asset gallery and block entity/profession save/reload.");
     }
 }

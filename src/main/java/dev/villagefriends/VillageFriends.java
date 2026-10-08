@@ -61,6 +61,9 @@ public final class VillageFriends implements ModInitializer {
     /** A player's last known friendship level with each resident they have talked to, for the Village Ledger. */
     public static final AttachmentType<java.util.Map<String, Integer>> ACQUAINTANCES = AttachmentRegistry.create(id("acquaintances"),
             b -> b.initializer(java.util.Map::<String, Integer>of).persistent(Codec.unboundedMap(Codec.STRING, Codec.INT)).copyOnDeath());
+    /** What a resident is doing in their day ("work", "lunch", "shelter"...), shared with clients for body language. */
+    public static final AttachmentType<String> ROUTINE = AttachmentRegistry.create(id("routine"),
+            b -> b.syncWith(ByteBufCodecs.STRING_UTF8, AttachmentSyncPredicate.all()));
     private static final Set<String> TOPICS = Set.of("chat", "work", "adventure", "joke", "news", "heart");
     public static AttachmentTarget target(Entity entity) { return (AttachmentTarget) entity; }
 
@@ -68,20 +71,25 @@ public final class VillageFriends implements ModInitializer {
         VillageMarkerBlock.register();
         VillageFoundation.register();
         NarrativeContent.register();
+        dev.villagefriends.talk.DialogueBank.register();
         ResidentNames.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
             if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSocieties::tick);
+        ServerTickEvents.END_SERVER_TICK.register(ResidentRoutines::tick);
+        ServerTickEvents.END_SERVER_TICK.register(Workstations::tick);
+        // Striking the training dummy measures the hit instead of breaking it.
+        net.fabricmc.fabric.api.event.player.AttackBlockCallback.EVENT.register(Workstations::attack);
         ServerLivingEntityEvents.MOB_CONVERSION.register((before, after, params) -> transferIdentity(before, after));
         ServerLivingEntityEvents.ALLOW_DAMAGE.register(GuardController::allowDamage);
         ServerLivingEntityEvents.AFTER_DAMAGE.register(GuardController::afterDamage);
@@ -105,7 +113,8 @@ public final class VillageFriends implements ModInitializer {
             VillageSettlements.identify(villager,true);
             saveBond(villager, sp, bond(villager, sp).visit(day(world)));
             villager.getLookControl().setLookAt(player, 30, 30);
-            show(sp, villager, "talk", NarrativeEngine.greeting(villager, sp), "Welcome, neighbor!", true);
+            show(sp, villager, "talk", NarrativeEngine.greeting(villager, sp), ResidentRoutines.doing(villager) + " · " + dev.villagefriends.routine.Routine.clock(ResidentRoutines.timeOfDay(world))
+                    + (dev.villagefriends.routine.Routine.marketDay(day(world)) ? " · Market Day" : ""), true);
             return InteractionResult.SUCCESS_SERVER;
         });
         // A notice board reads out its village's ledger.
@@ -189,7 +198,9 @@ public final class VillageFriends implements ModInitializer {
             }
             var old = state(v, player); long today = day(v.level()); var next = old.talk(today); save(v, player, next);
             saveBond(v, player, bond(v, player).visit(today));
-            String reply = NarrativeEngine.conversation(v, player, a);
+            // Sometimes "How's your day?" turns into a question for you, or an offer to help.
+            var question = a.equals("chat") && !bond(v, player).has("hurt") ? TalkWorld.ask(v, player) : null;
+            String reply = question != null ? TalkWorld.askText(v, player, question) : NarrativeEngine.conversation(v, player, a);
             celebrate(v, old, next);
             String status = old.canTalk(today) ? "+4 friendship - thanks for visiting!" : "Happy to keep talking. Friendship rewards return tomorrow.";
             if (old.canTalk(today) && friendLevel >= FriendshipLevels.DAILY_GIFT && !v.isBaby()) {
@@ -197,6 +208,7 @@ public final class VillageFriends implements ModInitializer {
                 giveItem(player, gift, 2);
                 status = "+4 friendship. They slipped you " + itemName(gift) + ", just because.";
             }
+            if (question != null) { show(player, v, "question", reply, question.offer() ? status : "They're asking you. " + status, false, question.offer() ? Emote.IDEA : Emote.QUESTION); return; }
             show(player, v, "talk", reply, status, false, NarrativeEngine.mood(v, player, a)); return;
         }
         if (a.equals("ledger")) { VillageLedger.open(player, v); return; }

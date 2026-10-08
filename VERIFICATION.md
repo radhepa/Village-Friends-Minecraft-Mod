@@ -1,4 +1,4 @@
-# Village Life animation pack, 349 clips (2.14.0)
+# Village Life animation pack, 349 clips (2.15.0)
 
 Verified October 7, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
 
@@ -9,6 +9,23 @@ Verified October 7, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 
 - In-game stills reviewed for the trades, conversation gestures and children's games pages.
 - The release JAR contains the 349-clip pack and no gametest classes.
 - Evidence: `build/run/clientGameTest/screenshots/*animation-pack-*.png`.
+
+# Village days verification (2.14.0)
+
+Verified October 7, 2026 on Windows 11 with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `gradlew test` passed with 102 unit tests, including the new `RoutineTest` (10), `DialogueBankTest` (6) and `TalkTest` (6).
+- `python tools/workstations/workstations.py --check`, `python tools/dialogue/dialogue.py --check` (5,898 pieces of dialogue) and `python tools/animations/animations.py --check` passed.
+- `runClientGameTest -Ptests=WorkstationGameTest` passed:
+  - all eleven workstations placed and photographed;
+  - each one used by a player: the stove (beef cooked in half the campfire time), the barrel and tap, the press (Herbal Tonic), the easel (sketch, painting, taken home), the sawmill (6 planks a log, 3 sticks a plank, 16 at a click), the sewing table (wool unravelled, boots mended), the archives (chronicle book), the music stand (Haste), the dummy (a strike is measured; holding attack never mines it) and the target's scoring;
+  - a cook, painter, tavern keeper and knight at work: dish of the day once per visitor, a finished painting, restocking, training experience;
+  - a librarian asleep at midnight, sheltering awake from a thunderstorm, and back out to the bell when it clears;
+  - written dialogue on every topic, a remembered answer, and an apothecary's offer that heals a hurt player through the real conversation window.
+- `-Ptests=GuardSpawnEggGameTest,GuardGameTest,GuardProgressGameTest`, `FriendshipGameTest`, `CommunityGameTest`, `FoundationGameTest` (28 items), `VillageLifeGameTest`, `RoadmapGameTest`, `AnimationGameTest`, `StructuresGameTest`, `OutfitGameTest` and `HairFaceGameTest` passed: every registered gameplay test. Run in small groups: this PC was short of memory, and a full-suite run hung once and later stopped with a native out-of-memory error, not a test failure.
+- Two regressions were found and fixed along the way. Questions on a first visit could replace the topic buttons the Friendship test clicks next, so residents now only quiz you from your second visiting day; offers to help still come on first meeting. Village references had dropped out of work talk and children's lines, so the earlier rule was restored, as the Community test expects.
+- Evidence: `build/run/clientGameTest/screenshots/*workstations-*.png`; `python tools/workstations/workstations.py --preview` writes `build/previews/workstations.png`.
+
 
 # Village life verification (2.13.0)
 

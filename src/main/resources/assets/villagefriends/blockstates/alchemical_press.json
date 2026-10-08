@@ -1,20 +1,20 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "villagefriends:block/alchemical_press",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "villagefriends:block/alchemical_press",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "villagefriends:block/alchemical_press",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "villagefriends:block/alchemical_press",
-      "y": 270
-    }
+ "variants": {
+  "facing=north": {
+   "model": "villagefriends:block/alchemical_press",
+   "y": 0
+  },
+  "facing=east": {
+   "model": "villagefriends:block/alchemical_press",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "villagefriends:block/alchemical_press",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "villagefriends:block/alchemical_press",
+   "y": 270
   }
+ }
 }
