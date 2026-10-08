@@ -1,0 +1,27 @@
+{
+  "outfits": [
+    {"id": "f_pedlar_woman", "name": "Pedlar Woman", "top": "tf211_pedlar_womans_tray_pack_bodice", "bottom": "bf211_pedlar_womans_dusty_skirt"},
+    {"id": "f_tinker_woman", "name": "Tinker Woman", "top": "tf212_tinker_womans_pot_hung_jerkin", "bottom": "bf212_tinker_womans_patched_breeches"},
+    {"id": "f_road_wanderer", "name": "Wanderer", "top": "tf213_wanderers_bedroll_mantle", "bottom": "bf213_wanderers_road_skirt_and_boots"},
+    {"id": "f_bramble_forager", "name": "Forager", "top": "tf214_foragers_basket_harness", "bottom": "bf214_foragers_bramble_torn_skirt"},
+    {"id": "f_mushroom_gatherer", "name": "Mushroom Gatherer", "top": "tf215_mushroom_gatherers_moss_green_shawl", "bottom": "bf215_mushroom_gatherers_leaf_litter_skirt"},
+    {"id": "f_wood_gatherer", "name": "Wood Gatherer", "top": "tf216_wood_gatherers_faggot_bundle", "bottom": "bf216_wood_gatherers_kilted_skirt"},
+    {"id": "f_charcoal_burner", "name": "Charcoal Burner", "top": "tf217_charcoal_burners_sooty_bodice", "bottom": "bf217_charcoal_burners_smoke_grey_breeches"},
+    {"id": "f_candle_miner", "name": "Miner", "top": "tf218_miners_candle_jerkin", "bottom": "bf218_miners_leather_knee_breeches"},
+    {"id": "f_creek_prospector", "name": "Prospector", "top": "tf219_prospectors_pan_bodice", "bottom": "bf219_prospectors_creek_skirt"},
+    {"id": "f_mountain_herder", "name": "Mountain Herder", "top": "tf220_mountain_herders_goat_hair_vest", "bottom": "bf220_mountain_herders_felt_leggings_and_skirt"}
+  ],
+  "professions": {
+    "NITWIT": ["f_pedlar_woman"],
+    "NONE": ["f_pedlar_woman", "f_tinker_woman", "f_road_wanderer", "f_wood_gatherer", "f_charcoal_burner"],
+    "MERCHANT": ["f_pedlar_woman"],
+    "TOOLSMITH": ["f_tinker_woman", "f_charcoal_burner", "f_candle_miner", "f_creek_prospector"],
+    "ADVENTURER": ["f_road_wanderer", "f_creek_prospector"],
+    "APOTHECARY": ["f_bramble_forager", "f_mushroom_gatherer"],
+    "FARMER": ["f_bramble_forager"],
+    "COOK": ["f_mushroom_gatherer"],
+    "CARPENTER": ["f_wood_gatherer"],
+    "MASON": ["f_candle_miner"],
+    "SHEPHERD": ["f_mountain_herder"]
+  }
+}
