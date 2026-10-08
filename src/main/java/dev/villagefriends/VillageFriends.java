@@ -105,6 +105,7 @@ public final class VillageFriends implements ModInitializer {
         PayloadTypeRegistry.clientboundPlay().register(FriendshipPayload.TYPE, FriendshipPayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(EmotePayload.TYPE, EmotePayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(LedgerPayload.TYPE, LedgerPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(VillageArrivalPayload.TYPE, VillageArrivalPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(ActionPayload.TYPE, ActionPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(LedgerRequestPayload.TYPE, LedgerRequestPayload.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(ActionPayload.TYPE, (payload, context) -> handleAction(context.player(), payload));
@@ -163,6 +164,11 @@ public final class VillageFriends implements ModInitializer {
         }
         String look = profile.look();
         if (!v.hasCustomName()) v.setCustomName(Component.literal(Dialogue.name(v.getUUID(),look)));
+        else if (!t.hasAttached(HOME)) {
+            // Names generated before 2.18.0 could ignore gender; settled residents are fixed in identify().
+            String fixed = ResidentNames.corrected(v.getUUID(), look, v.getCustomName().getString());
+            if (fixed != null) v.setCustomName(Component.literal(fixed));
+        }
         v.setCustomNameVisible(true);
         if (!look.equals(t.getAttached(LOOK))) t.setAttached(LOOK, look);
         if (!profile.personality().equals(t.getAttached(TEMPERAMENT))) t.setAttached(TEMPERAMENT, profile.personality());
