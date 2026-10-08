@@ -1,0 +1,649 @@
+{
+ "format": 1,
+ "size": [11, 15, 15],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:spruce_planks"
+  },
+  "B": {
+   "id": "minecraft:structure_void"
+  },
+  "C": {
+   "id": "minecraft:cobblestone"
+  },
+  "D": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "E": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "F": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "2"
+   }
+  },
+  "G": {
+   "id": "minecraft:dirt"
+  },
+  "H": {
+   "id": "minecraft:stone_bricks"
+  },
+  "I": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "J": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "K": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "3"
+   }
+  },
+  "L": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "1"
+   }
+  },
+  "M": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "N": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "O": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "P": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "Q": {
+   "id": "minecraft:target",
+   "properties": {
+    "power": "0"
+   }
+  },
+  "R": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:dirt_path"
+  },
+  "T": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "U": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:campfire",
+   "properties": {
+    "facing": "east",
+    "lit": "true",
+    "signal_fire": "false",
+    "waterlogged": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:campfire",
+   "properties": {
+    "facing": "north",
+    "lit": "true",
+    "signal_fire": "false",
+    "waterlogged": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:chiseled_stone_bricks"
+  },
+  "Y": {
+   "id": "minecraft:cobblestone_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "Z": {
+   "id": "minecraft:crafting_table"
+  },
+  "a": {
+   "id": "minecraft:fletching_table"
+  },
+  "b": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "c": {
+   "id": "minecraft:gravel"
+  },
+  "d": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "e": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "f": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "g": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "lower",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "h": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "upper",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "i": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "j": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "k": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "l": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "m": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "n": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "o": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "open": "false",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "p": {
+   "id": "minecraft:stone_brick_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "q": {
+   "id": "minecraft:stone_brick_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "inner_right"
+   }
+  },
+  "r": {
+   "id": "minecraft:stone_brick_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "inner_left"
+   }
+  },
+  "s": {
+   "id": "minecraft:white_carpet"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BBBBBSBBBBB",
+    "BBBBBSBBBBB",
+    "BBBBBcBBBBB",
+    "BBCCCCCCCBB",
+    "BBCGGGGGCBB",
+    "BCCGGGGGCBB",
+    "BCCGGGGGCBB",
+    "BCCGGGGGCBB",
+    "BBCCCCCCCBB",
+    "BBBBBBBBBBB",
+    "BBBBBBBBBBB",
+    "BBBBBBBBBBB",
+    "BBBBBBBBBBB",
+    "BBBBBBBBBBB",
+    "BBBBBBBBBBB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....d.....",
+    "........R..",
+    ".....Y.....",
+    "..CCCCCCC..",
+    "..CAAAAAC..",
+    ".CCAAAAAC..",
+    ".CCHAAAAC..",
+    ".CCAAAAAC..",
+    "..CCCCCCC..",
+    "...........",
+    ".........i.",
+    "...........",
+    "...........",
+    "..M..M..M..",
+    ".kPNNPNNPj."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "........M..",
+    "...........",
+    ".DDDDgDDDD.",
+    "..E....ZE..",
+    ".CH....lE..",
+    ".CV.....E..",
+    ".CH.as.RE..",
+    ".DDDDDDDDD.",
+    "...........",
+    ".........e.",
+    "...........",
+    "...........",
+    "..Q..Q..Q..",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "..E.n...E..",
+    "..ETDhDDE..",
+    "..E.....E..",
+    ".CH....oEU.",
+    ".CX.....b..",
+    ".CH.....EU.",
+    "..EDDDDDE..",
+    "..E.....E..",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    ".DDDDDDDDD.",
+    "..E.....E..",
+    ".CH..f..E..",
+    ".CHp....E..",
+    ".CH.....E..",
+    ".DDDDDDDDD.",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    ".I.......J.",
+    ".IODDDDDOJ.",
+    ".IEAAAAAEJ.",
+    ".rEAAAAAEJ.",
+    ".HEAAAAAEJ.",
+    ".qEAAAAAEJ.",
+    ".IODDDDDOJ.",
+    ".I.......J.",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "..A.....A..",
+    "..AAAAAAA..",
+    "..A.....A..",
+    "..A.....A..",
+    ".HA.....A..",
+    "..A.....A..",
+    "..AAAAAAA..",
+    "..A.....A..",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    "...........",
+    "..A.....A..",
+    "..AAAAAAA..",
+    "..A.....A..",
+    "..A.....A..",
+    ".HI.....J..",
+    "..A.....A..",
+    "..IAAAAAA..",
+    "..I.....A..",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...........",
+    "...........",
+    "..FA...AF..",
+    "..FAAAAAL..",
+    "..FA...AF..",
+    "..LA...AF..",
+    ".H.A...A...",
+    "..FA...AF..",
+    "...AAAAAL..",
+    "...A...AL..",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...........",
+    "...........",
+    "...A...A...",
+    "...AAAAA...",
+    "...A...A...",
+    "...I...J...",
+    ".H.A...A...",
+    "...A...J...",
+    "...AATAA...",
+    "...A...J...",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    "...........",
+    "...........",
+    "...KA.AK...",
+    "...FAAAF...",
+    "...FA.AK...",
+    "....A.A....",
+    ".H.KA.AF...",
+    "...FA.A....",
+    "...FAAAL...",
+    "...LA.A....",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 11,
+   "rows": [
+    "...........",
+    "...........",
+    "....A.J....",
+    "....AAA....",
+    "....I.A....",
+    "....I.A....",
+    ".H..A.A....",
+    "....A.A....",
+    "....IAA....",
+    "....I.A....",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 12,
+   "rows": [
+    "...........",
+    "...........",
+    "....KA.....",
+    "....LAK....",
+    ".....AF....",
+    ".....AF....",
+    ".H..FAL....",
+    "....FAF....",
+    ".....AL....",
+    ".....AK....",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 13,
+   "rows": [
+    "...........",
+    "...........",
+    ".....A.....",
+    ".....A.....",
+    ".....A.....",
+    ".....A.....",
+    ".W...A.....",
+    ".....m.....",
+    ".....A.....",
+    ".....A.....",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 14,
+   "rows": [
+    "...........",
+    "...........",
+    ".....K.....",
+    ".....F.....",
+    ".....K.....",
+    ".....F.....",
+    ".....F.....",
+    "...........",
+    ".....K.....",
+    ".....K.....",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 2, 7],
+   "nbt": {
+    "id": "minecraft:barrel",
+    "LootTable": "minecraft:chests/village/village_fletcher"
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/trades.py",
+  "checksum": "794cc7fd3be9ce73"
+ }
+}

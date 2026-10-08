@@ -1,0 +1,341 @@
+{
+ "format": 1,
+ "size": [12, 9, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:gravel"
+  },
+  "C": {
+   "id": "minecraft:cobbled_deepslate"
+  },
+  "D": {
+   "id": "minecraft:deepslate_tiles"
+  },
+  "E": {
+   "id": "minecraft:andesite"
+  },
+  "F": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "2"
+   }
+  },
+  "G": {
+   "id": "minecraft:cobblestone"
+  },
+  "H": {
+   "id": "minecraft:deepslate_tile_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "J": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "1"
+   }
+  },
+  "K": {
+   "id": "minecraft:stone_bricks"
+  },
+  "L": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "3"
+   }
+  },
+  "M": {
+   "id": "minecraft:deepslate_bricks"
+  },
+  "N": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "O": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "P": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:chest",
+   "properties": {
+    "facing": "north",
+    "type": "single",
+    "waterlogged": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "T": {
+   "id": "minecraft:cobblestone_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "U": {
+   "id": "minecraft:dirt_path"
+  },
+  "V": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "W": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "Y": {
+   "id": "minecraft:spruce_planks"
+  },
+  "Z": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "a": {
+   "id": "minecraft:stonecutter",
+   "properties": {
+    "facing": "north"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAASAAAAAA",
+    "AAAAAUAAAAAA",
+    "ACEGBCEECCGA",
+    "ACBCBCGBBCBA",
+    "ACBCGBBBCBBA",
+    "AEBBBEEBECBA",
+    "ABEBCBBBBBCA",
+    "ACBBEBBEBCEA",
+    "ACGBGBBGBCCA",
+    "AGBCEBBGBGBA",
+    "AECEEEEEBCEA",
+    "AAAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....V......",
+    "............",
+    "............",
+    "..T....CK...",
+    ".......C.K..",
+    ".........Z..",
+    ".I...I...P..",
+    ".........P..",
+    "...a.....Y..",
+    "..R.Q..MKMM.",
+    ".I...I......",
+    "............"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "..W....KK...",
+    "............",
+    "............",
+    ".I...I...K..",
+    ".........G..",
+    ".........F..",
+    ".......KGGK.",
+    ".I...I......",
+    "............"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "........J...",
+    "............",
+    "............",
+    ".I...I...J..",
+    "............",
+    "...X........",
+    "..........J.",
+    ".I...I......",
+    "............"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "OODDDDO.....",
+    "HDDDHHD.....",
+    "DDHHDHH.....",
+    "HHDDDDD.....",
+    "HHHDDDD.....",
+    "DNDNDND....."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "..FFFF......",
+    ".LLF..F.....",
+    "FL..J.......",
+    "..JFJFL.....",
+    "...FFFL.....",
+    "J.J.J.F....."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 9],
+   "nbt": {
+    "id": "minecraft:chest",
+    "LootTable": "minecraft:chests/village/village_mason"
+   }
+  },
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/trades.py",
+  "checksum": "b2d1d88a4d019190"
+ }
+}

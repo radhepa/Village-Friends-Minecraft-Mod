@@ -7,8 +7,123 @@
       "fallback": "snowy/lots_outer",
       "elements": [
         {
+          "template": "snowy/log_cabin",
+          "weight": 4,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/igloo",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/stone_cottage",
+          "weight": 4,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/a_frame",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/longhouse",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/family_house",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/townhouse",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/trapper_cabin",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/smithy",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/smokehouse",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/fletcher",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/shepherd",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_fishing",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/cartographer",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/mason",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/furrier",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/herbalist",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/greenhouse",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/tree_spruce",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/lamp_bench",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/snowman",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/sledge",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_sculpture",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 12
         }
       ]
     },
@@ -16,10 +131,126 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
+          "template": "snowy/greenhouse",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/root_cellar",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/frost_field",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/goat_pen",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/rabbit_hutch",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/kennel",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/shepherd",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_fishing",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/tree_spruce",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/spruce_grove",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/firewood",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/sledge",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/snowman",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/lamp_bench",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/igloo",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/log_cabin",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/trapper_cabin",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 6
         }
       ]
     }
+  },
+  "processor_lists": {
+    "snowy_lots_frost": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:cracked_stone_bricks"
+          }
+        ]
+      }
+    ]
   }
 }
