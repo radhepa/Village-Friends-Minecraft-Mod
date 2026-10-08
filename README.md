@@ -42,6 +42,10 @@ For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creativ
 
 Some residents long for a cat or a dog. In their free time they befriend a stray (one wanders into the village if there isn't one about), name it, and from then on it follows them everywhere, naps by their bed and keeps watch if they're hurt. Now and then they stop to play: fetch, belly rubs, shaking paws and chase with dogs; string, strokes, chin scratches and a feather with cats. Right-click a resident's pet to see their card (owner, age, breed, nature and favorite things), pat them and give them treats. See [PETS.md](PETS.md).
 
+## Village Friends RPG (optional add-on)
+
+A separate mod that lives in this repository's `rpg/` folder and builds its own jar. It turns the game into a slow-burn RPG: you start weak and grow over 100 levels, with 10 attributes, 15 skills that level by use, kill milestones and Legend abilities for 22 monster families, and jobs from residents ("Any work for me?" in their conversation window). It needs Village Friends; Village Friends never needs it. Build it with `gradlew.bat :rpg:build` (output `rpg/build/libs/villagefriends-rpg-<version>.jar`) and see [rpg/README.md](rpg/README.md).
+
 ## Play on this computer
 
 For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.14.0.jar`. Building alone does not replace the installed mod.

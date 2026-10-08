@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "villagefriends_rpg",
+  "version": "${version}",
+  "name": "Village Friends RPG",
+  "description": "A slow-burn RPG for Village Friends: levels, attributes, skills, monster masteries and villager quests.",
+  "authors": ["minal"],
+  "license": "MIT",
+  "environment": "*",
+  "mixins": ["villagefriends_rpg.mixins.json"],
+  "entrypoints": {
+    "main": ["dev.villagefriends.rpg.Rpg"],
+    "client": ["dev.villagefriends.rpg.client.RpgClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "villagefriends": ">=2.23.0"
+  }
+}

@@ -1,0 +1,50 @@
+plugins {
+    id 'net.fabricmc.fabric-loom'
+}
+
+// Village Friends RPG is its own mod and jar; it needs Village Friends (the root project) to run.
+version = '1.0.0'
+group = 'dev.villagefriends'
+base { archivesName = 'villagefriends-rpg' }
+evaluationDependsOn(':')
+
+loom {
+    splitEnvironmentSourceSets()
+    mods {
+        villagefriends_rpg {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+        villagefriends {
+            sourceSet rootProject.sourceSets.main
+            sourceSet rootProject.sourceSets.client
+        }
+    }
+}
+
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation rootProject.sourceSets.main.output
+    clientImplementation rootProject.sourceSets.client.output
+    testImplementation platform('org.junit:junit-bom:5.14.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
+tasks.withType(JavaCompile).configureEach { options.release = 25 }
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+test { useJUnitPlatform() }
+loom.runs {
+    client { programArgs '--username', 'VillageTester' }
+    server { programArgs 'nogui'; vmArg '-Xmx1024m'; vmArg '-Dvillagefriends_rpg.audit=' + providers.gradleProperty('audit').getOrElse('false') }
+}

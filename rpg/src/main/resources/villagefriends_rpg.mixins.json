@@ -1,0 +1,1 @@
+{"required":true,"package":"dev.villagefriends.rpg.mixin","compatibilityLevel":"JAVA_25","mixins":["LivingEntityHurtMixin","PlayerMixin","EndermanGazeMixin","PiglinGoldMixin","ConversationChoicesMixin","ConversationActionMixin"],"injectors":{"defaultRequire":1}}
