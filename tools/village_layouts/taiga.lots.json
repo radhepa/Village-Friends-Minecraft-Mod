@@ -1,0 +1,25 @@
+{
+  "format": 3,
+  "type": "taiga",
+  "part": "lots",
+  "pools": {
+    "taiga/lots": {
+      "fallback": "taiga/lots_outer",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    "taiga/lots_outer": {
+      "fallback": "minecraft:empty",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

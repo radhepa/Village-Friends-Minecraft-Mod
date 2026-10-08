@@ -88,12 +88,15 @@ tasks.named('processGametestResources') {
 tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     systemProperty 'villagefriends.gallery', providers.gradleProperty('gallery').getOrElse('')
     systemProperty 'villagefriends.galleryVillages', providers.gradleProperty('galleryVillages').getOrElse('2')
+    systemProperty 'villagefriends.galleryStructures', providers.gradleProperty('galleryStructures').getOrElse('village')
     systemProperty 'villagefriends.sampleSeed', providers.gradleProperty('sampleSeed').getOrElse('')
     systemProperty 'villagefriends.surveySeed', providers.gradleProperty('surveySeed').getOrElse('1')
     systemProperty 'villagefriends.surveyCount', providers.gradleProperty('surveyCount').getOrElse('4')
     systemProperty 'villagefriends.surveyTypes', providers.gradleProperty('surveyTypes').getOrElse('')
     systemProperty 'villagefriends.surveyShots', providers.gradleProperty('surveyShots').getOrElse('true')
     systemProperty 'villagefriends.galleryWait', providers.gradleProperty('galleryWait').getOrElse('160')
+    // -PtestHeap=2560m caps the game's heap on machines that are short of memory.
+    if (providers.gradleProperty('testHeap').isPresent()) maxHeapSize = providers.gradleProperty('testHeap').get()
 }
 
 // Development runs use a separate world folder and a recognizable player name.

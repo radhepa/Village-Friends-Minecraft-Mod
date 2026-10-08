@@ -1,12 +1,12 @@
 # Village Friends handoff
 
-Plains villages are procedural and art-directed: a random town centre ringed by the six guaranteed civic buildings, terrain-following streets, and lots filled with homes, vanilla-trade workshops, farms and small decorations. Keep every building an independent template with its own blueprint; improve one without touching the others.
+Villages replace every vanilla village and are procedural and art-directed: a random town centre ringed by the six guaranteed civic buildings, terrain-following streets, and lots filled with homes, vanilla-trade workshops, farms and small decorations. Each type (plains, desert, savanna, snowy, taiga) is its own structure that surveys its ground before it grows. Keep every building an independent template with its own blueprint; improve one without touching the others.
 
 Read [BUILDING_EDITING.md](BUILDING_EDITING.md) before changing structures. It documents the village graph, design kit, lot contract, simulation and gallery.
 
 - Design programs: `tools/village_design/buildings/*.py` (shared helpers in `kit.py`, `parts.py`, `roads.py`). `python tools/design_village.py <name>` writes the blueprint; it never overwrites a hand-edited blueprint without `--force`.
 - Building source for the compiler: one layered JSON file per template in `tools/village_blueprints/`.
-- Village graph, pools, weights, processors, depth and distance: `tools/village_layout.json` (format 2).
+- Village graph, pools, weights, processors, depth, distance, terrain survey and pruning: `tools/village_layouts/<type>.json` (format 3), shared placement in `tools/village_world.json`.
 - Compiler: `tools/create_village_structures.py`. Keep geometry in the designs/blueprints, not in this compiler.
 - Runtime templates: `src/main/resources/data/villagefriends/structure/village/*.nbt`; pools under `worldgen/template_pool/village/`.
 

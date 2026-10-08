@@ -43,8 +43,16 @@ def stone(x, z, seed):
     return 'gravel'
 
 
-def base(name, roles, seed, ring=9.5, height=14):
-    """Paving, lawns, slots and exits shared by every town centre."""
+def base(name, roles, seed, ring=9.5, height=14, prefix='', paving=None, lawn='grass_block',
+         ring_block='polished_andesite', plants=True):
+    """Paving, lawns, slots and exits shared by every town centre.
+
+    Other village types pass their pool ``prefix`` ('desert/' makes the slots
+    ``desert/buildings/<role>`` and the exits ``desert/avenues``), a ``paving``
+    function ``(x, z, seed) -> block``, the ``lawn`` block and whether to sow
+    grass and flowers on it.
+    """
+    paving = paving or stone
     b = Build(name, (SIZE, height, SIZE))
     rng = random.Random(seed)
     for x in range(SIZE):
@@ -59,34 +67,37 @@ def base(name, roles, seed, ring=9.5, height=14):
                     if (side in ('north', 'west') and v <= C) or (side in ('south', 'east') and v >= C):
                         road = True
             if r <= ring + .5 or edge <= 2 or road:
-                block = stone(x, z, seed)
+                block = paving(x, z, seed)
                 if abs(r - ring) < .55:
-                    block = 'polished_andesite'
+                    block = ring_block
                 b.set(x, 0, z, block)
             else:
-                b.set(x, 0, z, 'grass_block')
+                b.set(x, 0, z, lawn)
                 roll = rng.random()
+                if not plants:
+                    continue
                 if roll < .16:
                     b.set(x, 1, z, 'short_grass')
                 elif roll < .22:
                     b.set(x, 1, z, parts.flowers(rng))
     for side, (big, exit_, small) in SIDES.items():
         b.jigsaw(big[0], 1, big[1], f'{side}_up', 'slot', target='building_entrance',
-                 pool=f'buildings/{roles[side][0]}', selection=5)
+                 pool=f'{prefix}buildings/{roles[side][0]}', selection=5)
         b.jigsaw(small[0], 1, small[1], f'{side}_up', 'slot', target='building_entrance',
-                 pool=f'buildings/{roles[side][1]}', selection=5)
-        b.jigsaw(exit_[0], 1, exit_[1], f'{side}_up', 'plaza_exit', target='street_in', pool='plains/avenues')
+                 pool=f'{prefix}buildings/{roles[side][1]}', selection=5)
+        b.jigsaw(exit_[0], 1, exit_[1], f'{side}_up', 'plaza_exit', target='street_in',
+                 pool=f'{prefix}avenues' if prefix else 'plains/avenues')
     return b, rng
 
 
-def lamp_ring(b, radius, count, offset=0.0, skip=()):
+def lamp_ring(b, radius, count, offset=0.0, skip=(), base='stone_bricks', fence='spruce_fence'):
     for i in range(count):
         a = offset + i * 2 * math.pi / count
         x, z = round(C + radius * math.cos(a)), round(C + radius * math.sin(a))
         if (x, z) in skip:
             continue
-        b.set(x, 1, z, 'stone_bricks')
-        parts.lamp_post(b, x, 2, z, height=2, fence='spruce_fence')
+        b.set(x, 1, z, base)
+        parts.lamp_post(b, x, 2, z, height=2, fence=fence)
 
 
 def stall(b, x0, z0, facing, wool, goods, wood='spruce'):
@@ -111,18 +122,18 @@ def stall(b, x0, z0, facing, wool, goods, wood='spruce'):
     b.set(bx, 1, bz, 'barrel', facing='up', open=False)
 
 
-def bell_frame(b, x, z, along='x'):
+def bell_frame(b, x, z, along='x', log='stripped_spruce_log', stone='cobblestone', slab='spruce_slab'):
     dx, dz = (1, 0) if along == 'x' else (0, 1)
     for s in (-1, 1):
         px, pz = x + dx * s, z + dz * s
-        b.set(px, 1, pz, 'cobblestone')
+        b.set(px, 1, pz, stone)
         for y in (2, 3, 4):
-            b.set(px, y, pz, 'stripped_spruce_log', axis='y')
+            b.set(px, y, pz, log, axis='y')
     for s in (-1, 0, 1):
-        b.set(x + dx * s, 5, z + dz * s, 'stripped_spruce_log', axis=along)
-    b.set(x, 6, z, 'spruce_slab', type='bottom')
+        b.set(x + dx * s, 5, z + dz * s, log, axis=along)
+    b.set(x, 6, z, slab, type='bottom')
     b.set(x, 4, z, 'bell', attachment='ceiling', facing='north' if along == 'x' else 'east', powered=False)
-    b.set(x, 1, z, 'cobblestone')
+    b.set(x, 1, z, stone)
 
 
 def fountain(b, cx=C, cz=C):

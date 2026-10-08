@@ -1,0 +1,25 @@
+{
+  "format": 3,
+  "type": "savanna",
+  "part": "lots",
+  "pools": {
+    "savanna/lots": {
+      "fallback": "savanna/lots_outer",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    "savanna/lots_outer": {
+      "fallback": "minecraft:empty",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

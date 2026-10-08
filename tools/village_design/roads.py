@@ -161,7 +161,11 @@ class Street:
         """A bush on its own patch of soil."""
         b, t = self.b, self.theme
         b.set(x, 0, z, t.planter)
-        b.set(x, 1, z, t.bush_alt if alt else t.bush, persistent=True, distance=1, waterlogged=False)
+        plant = t.bush_alt if alt else t.bush
+        if plant.endswith('_leaves'):
+            b.set(x, 1, z, plant, persistent=True, distance=1, waterlogged=False)
+        else:
+            b.set(x, 1, z, plant)
 
     def bench(self, x, z, facing):
         b, t = self.b, self.theme

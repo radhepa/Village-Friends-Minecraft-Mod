@@ -1,0 +1,25 @@
+{
+  "format": 3,
+  "type": "desert",
+  "part": "lots",
+  "pools": {
+    "desert/lots": {
+      "fallback": "desert/lots_outer",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    "desert/lots_outer": {
+      "fallback": "minecraft:empty",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

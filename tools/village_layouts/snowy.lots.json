@@ -1,0 +1,25 @@
+{
+  "format": 3,
+  "type": "snowy",
+  "part": "lots",
+  "pools": {
+    "snowy/lots": {
+      "fallback": "snowy/lots_outer",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    "snowy/lots_outer": {
+      "fallback": "minecraft:empty",
+      "elements": [
+        {
+          "template": "empty",
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

@@ -17,7 +17,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlac
  * Development gallery for village art direction; not part of the regression suite.
  *
  * <p>Run {@code gradlew runClientGameTest -PvillageGallery} (optionally
- * {@code -Pgallery=tavern,cottage_oak} and {@code -PgalleryVillages=3}). It places
+ * {@code -Pgallery=tavern,cottage_oak}, {@code -PgalleryVillages=3} and
+ * {@code -PgalleryStructures=village,village_desert}). It places
  * templates on a superflat world and generates whole villages with
  * {@code /place structure}, then saves screenshots under
  * {@code build/run/clientGameTest/screenshots}.
@@ -96,17 +97,20 @@ public final class VillageGalleryGameTest implements FabricClientGameTest {
                 view(c, w, cx - d * 0.55, GROUND + 3 + s[2] * 0.45, cz - d * 0.85, -33f, 18f, templates.get(i) + "-front");
                 view(c, w, cx + d * 0.7, GROUND + 4 + s[2] * 0.6, cz + d * 0.8, 139f, 24f, templates.get(i) + "-back");
             }
-            for (int v = 0; v < villages; v++) {
+            List<String> structures = new ArrayList<>();
+            for (String name : System.getProperty("villagefriends.galleryStructures", "village").split(",")) if (!name.isBlank()) structures.add(name.trim());
+            for (int v = 0; v < villages * structures.size(); v++) {
                 int vx = 2000 + v * 600, vz = 2000;
+                String structure = structures.get(v / villages);
                 w.getServer().runOnServer(server -> {
                     var level = server.overworld();
                     for (int cx = (vx - 128) >> 4; cx <= (vx + 128) >> 4; cx++)
                         for (int cz = (vz - 128) >> 4; cz <= (vz + 128) >> 4; cz++) level.getChunk(cx, cz);
                 });
-                w.getServer().runCommand("place structure villagefriends:village " + vx + " " + (GROUND + 1) + " " + vz);
-                view(c, w, vx - 72, GROUND + 58, vz - 72, -45f, 32f, "village" + v + "-aerial");
-                view(c, w, vx - 12, GROUND + 11, vz - 12, -45f, 24f, "village" + v + "-square");
-                view(c, w, vx + 72, GROUND + 58, vz + 72, 135f, 32f, "village" + v + "-aerial2");
+                w.getServer().runCommand("place structure villagefriends:" + structure + " " + vx + " " + (GROUND + 1) + " " + vz);
+                view(c, w, vx - 72, GROUND + 58, vz - 72, -45f, 32f, structure + v + "-aerial");
+                view(c, w, vx - 12, GROUND + 11, vz - 12, -45f, 24f, structure + v + "-square");
+                view(c, w, vx + 72, GROUND + 58, vz + 72, 135f, 32f, structure + v + "-aerial2");
             }
         }
         VillageFriends.LOGGER.info("VILLAGE GALLERY CAPTURED: {} templates, {} villages.", templates.size(), villages);
