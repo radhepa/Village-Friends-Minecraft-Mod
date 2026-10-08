@@ -4,11 +4,20 @@
     {"id": "f_haymaker", "name": "Haymaker", "top": "tf062_haymakers_rolled_sleeve_bodice", "bottom": "bf062_haymakers_kilted_skirt_breeches"},
     {"id": "f_gleaner", "name": "Gleaner", "top": "tf063_gleaners_gathered_apron_top", "bottom": "bf063_gleaners_short_field_skirt"},
     {"id": "f_sheaf_binder", "name": "Sheaf Binder", "top": "tf064_sheaf_binders_arm_guarded_blouse", "bottom": "bf064_sheaf_binders_straw_tied_skirt"},
-    {"id": "f_vintner", "name": "Vintner", "top": "tf065_vintners_grape_basket_bodice", "bottom": "bf065_grape_treaders_kilted_skirt"}
+    {"id": "f_vintner", "name": "Vintner", "top": "tf065_vintners_grape_basket_bodice", "bottom": "bf065_grape_treaders_kilted_skirt"},
+    {"id": "f_dairymaid_churner", "name": "Dairymaid", "top": "tf066_dairymaids_churn_apron_bodice", "bottom": "bf066_dairymaids_pattens_petticoat"},
+    {"id": "f_egg_wife", "name": "Egg Wife", "top": "tf067_egg_wifes_basket_strap_blouse", "bottom": "bf067_egg_wifes_pocketed_skirt"},
+    {"id": "f_poultry_girl", "name": "Poultry Girl", "top": "tf068_poultry_girls_feather_flecked_kirtle", "bottom": "bf068_poultry_yard_clogs_skirt"},
+    {"id": "f_flax_puller", "name": "Flax Puller", "top": "tf069_flax_pullers_linen_smock", "bottom": "bf069_flax_field_short_skirt_wraps"},
+    {"id": "f_wool_carder", "name": "Wool Carder", "top": "tf070_wool_carders_fleece_dusted_bodice", "bottom": "bf070_carders_lap_cloth_skirt"}
   ],
   "professions": {
-    "FARMER": ["f_goose_girl", "f_haymaker", "f_gleaner", "f_sheaf_binder", "f_vintner"],
+    "FARMER": ["f_goose_girl", "f_haymaker", "f_gleaner", "f_sheaf_binder", "f_vintner", "f_dairymaid_churner", "f_egg_wife", "f_poultry_girl", "f_flax_puller"],
     "NONE": ["f_goose_girl", "f_gleaner"],
-    "TAVERN_KEEPER": ["f_vintner"]
+    "TAVERN_KEEPER": ["f_vintner"],
+    "COOK": ["f_dairymaid_churner"],
+    "MERCHANT": ["f_egg_wife"],
+    "TAILOR": ["f_flax_puller", "f_wool_carder"],
+    "SHEPHERD": ["f_wool_carder"]
   }
 }
