@@ -47,6 +47,51 @@
           "processors": "snowy_lots_frost"
         },
         {
+          "template": "snowy/smithy",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/smokehouse",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/fletcher",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/shepherd",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_fishing",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/cartographer",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/mason",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/furrier",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/herbalist",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
           "weight": 12
         }
@@ -58,6 +103,16 @@
         {
           "template": "snowy/igloo",
           "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/shepherd",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_fishing",
+          "weight": 2,
           "processors": "snowy_lots_frost"
         },
         {
