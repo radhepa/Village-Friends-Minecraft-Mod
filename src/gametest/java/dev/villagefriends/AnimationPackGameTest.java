@@ -231,7 +231,7 @@ public final class AnimationPackGameTest implements FabricClientGameTest {
                 var role = AnimationCast.role(clips.get(i), i);
                 var id = AnimationCast.identity(random, role.personality());
                 ids.add(id);
-                AnimationCast.spawn(s.overworld(), id, role, p.getX() - 12 + i % 12 * 2, p.getY(), p.getZ() - 10 - i / 12 * 2, 0, false);
+                AnimationCast.spawn(s.overworld(), id, role, p.getX() - 20 + i % 20 * 2, p.getY(), p.getZ() - 10 - i / 20 * 2, 0, false);
             }
         });
         w.getConnection().waitForClientboundEntityUpdates(EntityTypes.VILLAGER);

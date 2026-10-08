@@ -1,3 +1,15 @@
+# Village Life animation pack, 349 clips (2.14.0)
+
+Verified October 7, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `python tools/animations/animations.py --check` validated all 349 clips (340 distinct motions) and confirmed the compiled pack is current. `tools/animations/vlcheck.py` passed every one of the 16 authoring modules (feet kept under the resident, known tags only, an age on every greeting, no commas in names).
+- Every new clip was reviewed in offline contact sheets (`preview.py` poses) from at least one angle while it was authored.
+- Release build passed with 80 unit tests. `AnimationPackTest` now requires at least 349 clips, four work motions for every profession, three hobbies per personality, six or more clips for each reaction trigger, 20 children's games, seven rain clips and a thunder clip. Weighted picking still shows the cleric praying and the gentle hobby often among 200+ idles.
+- `runClientGameTest -PanimationPack` passed twice (before and after a clip-name cleanup): every clip at three moments kept armor matched to the resident model and the feet under the resident; held items, mirroring, eyes, children, idles, neighbor chats, greetings, the conversation window and event reactions all passed. The gallery now lays residents out 20 wide and captured 18 pages.
+- In-game stills reviewed for the trades, conversation gestures and children's games pages.
+- The release JAR contains the 349-clip pack and no gametest classes.
+- Evidence: `build/run/clientGameTest/screenshots/*animation-pack-*.png`.
+
 # Village life verification (2.13.0)
 
 Verified October 7, 2026 on Linux with Minecraft 26.3, Fabric 0.19.5 and Java 25 (Temurin 25.0.4), in a headless X server with Mesa llvmpipe (OpenGL 4.5 through EGL; no sound device).

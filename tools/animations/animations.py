@@ -30,7 +30,8 @@ PACKS = {
         "name": "Village Life",
         "description": "The first resident animation pack: everyday idles, hobbies for every personality, "
                        "work for every profession, greetings, conversations, reactions, weather and children's play.",
-        "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children"],
+        "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
+                    "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime"],
     },
 }
 MAX_ROT, MAX_POS = 400, 12

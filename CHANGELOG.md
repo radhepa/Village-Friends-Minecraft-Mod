@@ -1,3 +1,17 @@
+# Village Friends 2.14.0 — Village Life grows to 349 clips
+
+- Add 250 clips to the Village Life animation pack (99 → 349 clips, 340 distinct motions), all chosen by the existing director with no new triggers:
+  - **Work (75):** three new motions for every vanilla and Village Friends profession, the unemployed and nitwits, such as a smith quenching a blade, a farmer broadcasting seed, a fisherman mending a net, a cleric swinging a censer, a librarian shelving a book up high, a cook tasting the stew, a bard strumming a lute and a scholar's eureka.
+  - **Hobbies (24):** two more pastimes for each personality, from knitting and juggling to splitting firewood, sipping tea, tinkering with a gadget and petting a cat.
+  - **Everyday moments (30):** cracking knuckles, swatting a bee, hiccups, touching toes, catching a falling leaf, balancing on one leg and more.
+  - **Weather and time of day (14):** sheltering from rain, splashing puddles, jumping at thunder, stamping feet in the cold, rubbing sleepy eyes at dawn, nodding off at night, wishing on a star and watching fireflies.
+  - **Greetings and conversation (48):** 14 greetings (a curtsy, a hat tip, a fist-to-chest salute, children who jump and wave), 14 talking gestures, and 20 ways for neighbors to speak and listen.
+  - **Reactions (43):** six to eight reactions for every conversation outcome and vanilla event, plus three new ways to get hurt.
+  - **Children (16):** skipping rope, hopscotch, hobby horses, sandcastles, hide-and-seek, tantrums and marching like a soldier.
+- Keep trades and hobbies visible among the new everyday idles: a resident now spends roughly 10–25% of their idle time on work and about a tenth on hobbies.
+- Add `tools/animations/vlcheck.py` to check and preview one authoring module on its own, and point the offline previewer at the merged outfit templates.
+- Raise `AnimationPackTest`'s coverage bars (four work motions per profession, three hobbies per personality, six or more of each reaction) and lay the `-PanimationPack` gallery out 20 residents wide.
+
 # Village Friends 2.13.0 — Village life and new faces
 
 - Give every village a census (`villagefriends:societies`): everyone knows everyone, with a relationship meter from -100 to 100 for every pair. Meters grow over the days two residents have known each other toward a target set by their chemistry (a stable spark, shared personality and a personality matrix), rise with days spent near each other and dip after quarrels. Family starts close.
