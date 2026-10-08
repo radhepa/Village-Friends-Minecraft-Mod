@@ -875,6 +875,132 @@ def library():
     return b
 
 
+# ----------------------------------------------------------------------------- market
+def _yard(b, rng, x0=0, z0=0, x1=10, z1=10, chance=.85):
+    for x in range(x0, x1 + 1):
+        for z in range(z0, z1 + 1):
+            if (x, 0, z) not in b.grid and rng.random() < chance:
+                b.set(x, 0, z, rng.choice(['cobblestone', 'gravel', 'snow_block', 'snow_block', 'stone_bricks']))
+
+
+def market_hall():
+    """Fur and fish market: an open-sided timber hall under a steep roof, counters toward the square,
+    a cold store of packed ice and a brazier to warm the traders."""
+    rng = random.Random(3307)
+    b = Build('snowy/market_hall', (11, 15, 11))
+    for x in range(1, 10):
+        for z in range(2, 10):
+            b.set(x, 0, z, 'spruce_planks' if (x + z) % 3 else 'stripped_spruce_log', axis='x')
+    for x in (1, 5, 9):
+        for z in (2, 9):
+            b.set(x, 0, z, 'cobblestone')
+            for y in range(1, 5):
+                b.set(x, y, z, 'stripped_spruce_log', axis='y')
+    for x in (1, 9):
+        b.set(x, 0, 5, 'cobblestone')
+        for y in range(1, 5):
+            b.set(x, y, 5, 'stripped_spruce_log', axis='y')
+    parts.beam_ring(b, 1, 2, 9, 9, 5, 'spruce_log')
+    cp.steep_roof(b, 1, 2, 9, 9, 5, R['dark_oak'], axis='x', gable='spruce_planks', trim=R['spruce'])
+    # Counters facing the square, goods on top.
+    for x, top in ((2, 'white_wool'), (3, 'brown_wool'), (4, 'barrel'), (6, 'light_gray_wool'), (7, 'barrel'),
+                   (8, 'white_wool')):
+        b.set(x, 1, 3, 'spruce_planks')
+        if top == 'barrel':
+            b.set(x, 2, 3, 'barrel', facing='up', open=False)
+        else:
+            b.set(x, 2, 3, top)
+    # Cold store of packed ice at the back with barrels of salted fish.
+    for x in (2, 3, 7, 8):
+        b.set(x, 1, 8, 'packed_ice')
+    b.set(2, 2, 8, 'packed_ice')
+    b.set(8, 2, 8, 'blue_ice')
+    for x in (4, 6):
+        b.barrel(x, 1, 8, 'up')
+    b.barrel(4, 2, 8, 'north')
+    b.set(5, 1, 8, 'smoker', facing='north', lit=True)
+    # Brazier in the middle.
+    b.set(5, 0, 6, 'cobblestone')
+    b.set(5, 1, 6, 'campfire', lit=True, signal_fire=False, facing='north', waterlogged=False)
+    b.custom(4, 1, 6, 'campfire_bench', facing='east')
+    b.custom(6, 1, 6, 'campfire_bench', facing='west')
+    for x in (3, 7):
+        cp.hang(b, x, 4, 5)
+    cp.hang(b, 5, 4, 3)
+    _yard(b, rng, 0, 0, 10, 1)
+    for z in range(0, 3):
+        b.set(5, 0, z, 'cobblestone')
+    cp.sledge(b, 1, 0, 'west', load=('barrel', 'spruce_slab'))
+    b.entrance(5)
+    b.natural_ground()
+    return b
+
+
+def market_warming_hut():
+    """Warming hut: a three-sided log shelter with benches, a fire pit before it and hot cider on tap."""
+    rng = random.Random(3308)
+    b = Build('snowy/market_warming_hut', (11, 13, 11))
+    x0, z0, x1, z1 = 2, 6, 8, 9
+    cp.plinth(b, x0, z0, x1, z1, top=1, skirt=None)
+    cp.log_walls(b, x0, z0, x1, z1, 2, 4, notch=True, skip={(x, z0) for x in range(x0 + 1, x1)})
+    for x in range(x0 + 1, x1):
+        b.set(x, 2, z0, 'air')
+    parts.beam_ring(b, x0, z0, x1, z1, 5, 'stripped_spruce_log')
+    b.fill(x0 + 1, 5, z0 + 1, x1 - 1, 5, z1 - 1, 'spruce_planks')
+    cp.steep_roof(b, x0, z0, x1, z1, 5, R['slate'], axis='x', gable='spruce_planks', trim=R['dark_oak'])
+    for x in range(x0 + 1, x1):
+        for y in (2, 3, 4):
+            b.set(x, y, z0, 'air')
+    for x in (3, 4, 6, 7):
+        b.custom(x, 2, z1 - 1, 'village_bench', facing='north')
+    b.barrel(5, 2, z1 - 1, 'north')
+    cp.hang(b, 5, 4, 7)
+    cp.chimney(b, [(x1, 8)], 2, 9)
+    # Fire pit with benches around it.
+    for x in range(3, 8):
+        for z in range(1, 5):
+            b.set(x, 0, z, 'cobblestone' if abs(x - 5) + abs(z - 3) > 1 else 'stone_bricks')
+    b.set(5, 1, 3, 'campfire', lit=True, signal_fire=False, facing='north', waterlogged=False)
+    for x, z, f in ((4, 3, 'east'), (6, 3, 'west'), (5, 4, 'north')):
+        b.custom(x, 1, z, 'campfire_bench', facing=f)
+    for x in (1, 9):
+        cp.lamp_post(b, x, 2, height=3)
+    parts.woodpile(b, 0, 1, 6, 'z', length=4, height=2)
+    parts.woodpile(b, 10, 1, 6, 'z', length=4, height=2)
+    _yard(b, rng, 0, 0, 10, 5, chance=.6)
+    b.set(5, 0, 0, 'gravel')
+    b.entrance(5)
+    b.natural_ground()
+    return b
+
+
+def market_sledges():
+    """Sledge market: traders' sledges drawn up round an ice carving, a blue-awninged stall and a lamp."""
+    rng = random.Random(3309)
+    b = Build('snowy/market_sledges', (11, 9, 11))
+    _yard(b, rng)
+    from ..plazas import stall
+    stall(b, 1, 9, 'north', 'light_blue', ['white_wool', 'barrel[facing=up]', 'brown_wool'])
+    cp.sledge(b, 1, 3, 'north', load=('hay_block', 'barrel'))
+    cp.sledge(b, 9, 7, 'south', load=('barrel', 'white_wool'))
+    cp.sledge(b, 8, 2, 'east', load=('pumpkin', 'spruce_slab'))
+    # Ice carving on a stone plinth.
+    b.set(5, 0, 5, 'stone_bricks')
+    b.set(5, 1, 5, 'chiseled_stone_bricks')
+    b.set(5, 2, 5, 'packed_ice')
+    b.set(5, 3, 5, 'blue_ice')
+    b.set(5, 4, 5, 'packed_ice')
+    for x, z in ((4, 5), (6, 5), (5, 4), (5, 6)):
+        b.set(x, 1, z, 'stone_brick_slab', type='bottom', waterlogged=False)
+    cp.lamp_post(b, 7, 5, height=3)
+    b.custom(3, 1, 6, 'village_bench', facing='east')
+    for z in range(0, 4):
+        b.set(5, 0, z, 'cobblestone')
+    b.entrance(5)
+    b.natural_ground()
+    return b
+
+
 DESIGNS = {
     'snowy/tavern': tavern,
     'snowy/garrison': garrison,
@@ -882,4 +1008,7 @@ DESIGNS = {
     'snowy/chapel': chapel,
     'snowy/apothecary': apothecary,
     'snowy/library': library,
+    'snowy/market_hall': market_hall,
+    'snowy/market_warming_hut': market_warming_hut,
+    'snowy/market_sledges': market_sledges,
 }
