@@ -1,0 +1,14 @@
+{
+  "outfits": [
+    {"id": "f_wool_kirtle_goodwife", "name": "Goodwife", "top": "tf286_front_laced_wool_kirtle", "bottom": "bf286_ankle_length_wool_skirt"},
+    {"id": "f_short_sleeve_villager", "name": "Summer Villager", "top": "tf287_short_sleeved_summer_kirtle", "bottom": "bf287_summer_calf_skirt"},
+    {"id": "f_knit_shawl_villager", "name": "Shawled Villager", "top": "tf288_knitted_shawl_over_chemise", "bottom": "bf288_everyday_wool_petticoat"},
+    {"id": "f_quilted_kitchen_maid", "name": "Kitchen Maid", "top": "tf289_quilted_waistcoat_bodice", "bottom": "bf289_quilted_hem_skirt"},
+    {"id": "f_overjacket_townswoman", "name": "Townswoman", "top": "tf290_short_wool_overjacket", "bottom": "bf290_plain_gathered_skirt"}
+  ],
+  "professions": {
+    "NONE": ["f_wool_kirtle_goodwife", "f_short_sleeve_villager", "f_knit_shawl_villager", "f_quilted_kitchen_maid", "f_overjacket_townswoman"],
+    "SHEPHERD": ["f_knit_shawl_villager"],
+    "COOK": ["f_quilted_kitchen_maid"]
+  }
+}
