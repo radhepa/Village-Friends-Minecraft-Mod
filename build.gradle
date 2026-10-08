@@ -88,6 +88,8 @@ tasks.named('processGametestResources') {
 tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     systemProperty 'villagefriends.gallery', providers.gradleProperty('gallery').getOrElse('')
     systemProperty 'villagefriends.galleryVillages', providers.gradleProperty('galleryVillages').getOrElse('2')
+    systemProperty 'villagefriends.tavernStructure', providers.gradleProperty('tavernStructure').getOrElse('village')
+    systemProperty 'villagefriends.tavernX', providers.gradleProperty('tavernX').getOrElse('2000')
     systemProperty 'villagefriends.galleryStructures', providers.gradleProperty('galleryStructures').getOrElse('village')
     systemProperty 'villagefriends.sampleSeed', providers.gradleProperty('sampleSeed').getOrElse('')
     systemProperty 'villagefriends.surveySeed', providers.gradleProperty('surveySeed').getOrElse('1')

@@ -30,7 +30,7 @@ import net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement;
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class TavernVillageGameTest implements FabricClientGameTest {
-    private static final int GROUND = -61, X = 2000, Z = 2000;
+    private static final int GROUND = -61, X = Integer.getInteger("villagefriends.tavernX", 2000), Z = 2000;
     private static void check(boolean ok, String why) { if (!ok) throw new AssertionError(why); }
 
     private static int seatedAt(TestSingleplayerContext w, AABB area) {
@@ -40,7 +40,7 @@ public final class TavernVillageGameTest implements FabricClientGameTest {
         w.getServer().runCommand(String.format(java.util.Locale.ROOT, "tp @a %.2f %.2f %.2f %.1f %.1f", x, y, z, yaw, pitch));
         c.waitTicks(60);
         c.runOnClient(client -> client.gui.toastManager().clear());
-        c.takeScreenshot("tavern-village-" + name);
+        c.takeScreenshot("tavern-village-" + System.getProperty("villagefriends.tavernStructure", "village") + "-" + name);
     }
 
     @Override public void runTest(ClientGameTestContext c) {
@@ -59,7 +59,7 @@ public final class TavernVillageGameTest implements FabricClientGameTest {
                 var level = w.getConnection().getServerLevel();
                 for (int cx = (X - 112) >> 4; cx <= (X + 112) >> 4; cx++) for (int cz = (Z - 112) >> 4; cz <= (Z + 112) >> 4; cz++) level.getChunk(cx, cz);
             });
-            w.getServer().runCommand("place structure villagefriends:village " + X + " " + (GROUND + 1) + " " + Z);
+            w.getServer().runCommand("place structure villagefriends:" + System.getProperty("villagefriends.tavernStructure", "village") + " " + X + " " + (GROUND + 1) + " " + Z);
             w.getServer().runCommand("tp @a " + X + " " + (GROUND + 30) + " " + Z);
             c.waitTicks(100);
             BlockPos station = w.getServer().computeOnServer(s -> {
