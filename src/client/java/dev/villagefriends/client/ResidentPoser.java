@@ -66,6 +66,8 @@ public final class ResidentPoser {
             if (rotation == null && position == null) continue;
             Bone target = layer.mirror ? bone.mirrored() : bone;
             if (!clip.overrideItems() && holding(target, s)) continue;
+            // Sitting residents keep their legs where the seat puts them.
+            if (s.seated && (target == Bone.RIGHT_LEG || target == Bone.LEFT_LEG || target == Bone.ROOT)) continue;
             float w = layer.weight * (lower(target) ? layer.lowerBody : 1);
             if (w <= 0) continue;
             int i = target.ordinal() * 3; float side = layer.mirror ? -1 : 1;

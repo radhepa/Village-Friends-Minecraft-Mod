@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "villagefriends:block/tavern_chair",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "villagefriends:block/tavern_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "villagefriends:block/tavern_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "villagefriends:block/tavern_chair",
+      "y": 270
+    }
+  }
+}

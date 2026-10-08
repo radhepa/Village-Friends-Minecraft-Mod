@@ -15,9 +15,10 @@ public final class VillageFriendsClient implements ClientModInitializer {
         ResidentSkins.register();
         AnimationPacks.register();
         ArrivalBanner.register();
+        TavernClient.register();
         net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(ResidentLife::tickAll);
         net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(EmoteBubbles::tick);
-        net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> client.execute(() -> { ResidentLife.clear(); EmoteBubbles.clear(); ArrivalBanner.clear(); }));
+        net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> client.execute(() -> { ResidentLife.clear(); EmoteBubbles.clear(); ArrivalBanner.clear(); TavernClient.clear(); }));
         ClientPlayNetworking.registerGlobalReceiver(EmotePayload.TYPE, (payload, context) ->
                 EmoteBubbles.show(payload.entityId(), Emote.parse(payload.emote()), payload.delay()));
         ClientPlayNetworking.registerGlobalReceiver(LedgerPayload.TYPE, (payload, context) -> {

@@ -19,8 +19,9 @@ class AnimationPackTest {
     }
 
     @Test void villageLifeIsALargeVariedFirstPack() {
-        assertEquals(1, PACK.packs().size());
+        assertEquals(2, PACK.packs().size());
         assertEquals("Village Life", PACK.packs().getFirst().name());
+        assertEquals("Tavern", PACK.packs().get(1).name());
         assertTrue(PACK.clips().size() >= 349, "a large first pack: " + PACK.clips().size());
         for (String trigger : AnimationPack.TRIGGERS) assertFalse(PACK.clips(trigger).isEmpty(), "clips for " + trigger);
         assertTrue(PACK.clips("idle").size() >= 210);

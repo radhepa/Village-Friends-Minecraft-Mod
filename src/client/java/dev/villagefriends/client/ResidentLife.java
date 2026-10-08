@@ -138,7 +138,9 @@ public final class ResidentLife {
         if (talking) trigger = speaking ? "talk" : "chat_listen";
         else if (stillTicks > 20) {
             int partner = partner(v, now);
-            trigger = partner >= 0 && random.nextFloat() < .8F ? (speaker(v, partner) ? "chat_speak" : "chat_listen") : "idle";
+            // Diners mostly eat while the food is in front of them, and talk between courses.
+            float chatty = dining(v) ? .35F : .8F;
+            trigger = partner >= 0 && random.nextFloat() < chatty ? (speaker(v, partner) ? "chat_speak" : "chat_listen") : "idle";
         }
         if (trigger == null) return;
         var library = AnimationLibrary.current();
@@ -170,9 +172,11 @@ public final class ResidentLife {
         partnerCheck = now + 10;
         partnerId = -1;
         double best = Double.MAX_VALUE;
+        // Around a table people talk to whoever sits beside them as well as across from them.
+        boolean seated = dev.villagefriends.tavern.Seat.seated(v);
         for (var other : v.level().getEntitiesOfClass(Villager.class, v.getBoundingBox().inflate(3.2, 1, 3.2))) {
             if (other == v || !other.isAlive() || other.isSleeping() || other.walkAnimation.speed() > .06F) continue;
-            if (!facing(v, other.getX(), other.getZ(), 70)) continue;
+            if (!facing(v, other.getX(), other.getZ(), seated ? 115 : 70)) continue;
             double d = v.distanceToSqr(other);
             if (d < best) { best = d; partnerId = other.getId(); }
         }
@@ -205,9 +209,14 @@ public final class ResidentLife {
         if (level.getBiome(pos).value().getPrecipitationAt(pos, level.getSeaLevel()) == Biome.Precipitation.SNOW) tags.add("cold");
         if (!v.getMainHandItem().isEmpty()) tags.add("holding");
         if (partner >= 0) tags.add("social");
+        TavernClient.tags(v, tags);
         return tags;
     }
     private static String personality(Villager v) { return ((AttachmentTarget) v).getAttached(VillageFriends.TEMPERAMENT); }
+    private static boolean dining(Villager v) {
+        String state = ((AttachmentTarget) v).getAttached(dev.villagefriends.tavern.Taverns.STATE);
+        return state != null && state.startsWith("eat");
+    }
 
     private void start(Playing slot, AnimationClip clip, float now, String trigger) {
         slot.clip = clip; slot.start = now; slot.fadeFrom = -1; slot.trigger = trigger;
@@ -224,7 +233,7 @@ public final class ResidentLife {
         return ResidentBehavior.pause(ResidentBehavior.energy(personality(v), v.isBaby()), random.nextFloat());
     }
     private static boolean canAct(Villager v) {
-        return v.isAlive() && !v.isSleeping() && v.getPose() == Pose.STANDING && !v.isPassenger()
+        return v.isAlive() && !v.isSleeping() && v.getPose() == Pose.STANDING && (!v.isPassenger() || dev.villagefriends.tavern.Seat.seated(v))
                 && !v.isInWater() && !v.isUsingItem() && !v.isSwinging();
     }
 
@@ -241,6 +250,13 @@ public final class ResidentLife {
         if (act > 0) s.layers[0].set(activity.clip, activity.time(age), act, activity.mirror, 1);
         else s.layers[0].clear();
         s.turnWeight = 0;
+        // Seated neighbors turn their heads to each other while they talk.
+        if (!portrait && v.isPassenger() && partnerId >= 0 && activity.active() && activity.trigger != null && activity.trigger.startsWith("chat")
+                && v.level().getEntity(partnerId) instanceof Villager other) {
+            float yaw = (float) Math.toDegrees(Math.atan2(-(other.getX() - v.getX()), other.getZ() - v.getZ()));
+            float relative = Mth.wrapDegrees(yaw - v.getYHeadRot());
+            if (Math.abs(relative) < 120) { s.turnYaw = Mth.clamp(relative, -60, 60); s.turnPitch = 0; s.turnWeight = act * .85F; }
+        }
         boolean attentive = talking || reaction.active() && "greet".equals(reaction.trigger);
         var camera = Minecraft.getInstance().getCameraEntity();
         if (!portrait && attentive && camera != null) {

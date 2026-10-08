@@ -55,5 +55,13 @@
   "entity.villagefriends.villager.tailor": "Tailor",
   "entity.villagefriends.villager.carpenter": "Carpenter",
   "entity.villagefriends.villager.scholar": "Scholar",
-  "item.villagefriends.mug_of_cider": "Mug of Cider"
+  "item.villagefriends.mug_of_cider": "Mug of Cider",
+  "block.villagefriends.tavern_table": "Tavern Table",
+  "block.villagefriends.tavern_chair": "Tavern Chair",
+  "block.villagefriends.bar_stool": "Bar Stool",
+  "block.villagefriends.fireside_armchair": "Fireside Armchair",
+  "item.villagefriends.ploughmans_lunch": "Ploughman's Lunch",
+  "item.villagefriends.shepherds_pie": "Shepherd's Pie",
+  "item.villagefriends.apple_tart": "Apple Tart",
+  "entity.villagefriends.seat": "Seat"
 }
