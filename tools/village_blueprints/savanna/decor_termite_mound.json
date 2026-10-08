@@ -1,0 +1,190 @@
+{
+ "format": 1,
+ "size": [7, 9, 7],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:terracotta"
+  },
+  "C": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "D": {
+   "id": "minecraft:red_sand"
+  },
+  "E": {
+   "id": "minecraft:granite"
+  },
+  "F": {
+   "id": "minecraft:dead_bush"
+  },
+  "G": {
+   "id": "minecraft:packed_mud"
+  },
+  "H": {
+   "id": "minecraft:short_grass"
+  },
+  "I": {
+   "id": "minecraft:short_dry_grass"
+  },
+  "J": {
+   "id": "minecraft:tall_dry_grass"
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "L": {
+   "id": "minecraft:mud_brick_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "M": {
+   "id": "minecraft:polished_granite"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAAA",
+    "AAAAAAA",
+    "AAAAEEA",
+    "AABDAEA",
+    "ABCDDAA",
+    "AADBAAA",
+    "AAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "...K...",
+    "HI...J.",
+    ".F..EE.",
+    "HFGB.M.",
+    "FBBDDJI",
+    "..CCFH.",
+    "...IFH."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".......",
+    ".......",
+    ".....E.",
+    "..CG...",
+    "..GB...",
+    "..DC...",
+    "......."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..CC...",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..BB...",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..BB...",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..BG...",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..L....",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "......."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/decor.py",
+  "checksum": "15165f6d4111d565"
+ }
+}

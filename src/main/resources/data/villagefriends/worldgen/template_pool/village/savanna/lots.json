@@ -2,7 +2,205 @@
   "fallback": "villagefriends:village/savanna/lots_outer",
   "elements": [
     {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/hut_round",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/homestead",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/hut_family",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/bungalow_verandah",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/bungalow_clay",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/lodge",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/compound",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/longhouse",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/smithy",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/butcher",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/fletcher",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/shepherd",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/fisher",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/mason",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/tannery",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/cartographer",
+        "processors": "villagefriends:savanna_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/farm_wheat",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/kraal",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/decor_tree_acacia",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/decor_tree_acacia_twin",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/decor_termite_mound",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/decor_trough",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 12,
       "element": {
         "element_type": "minecraft:empty_pool_element"
       }
