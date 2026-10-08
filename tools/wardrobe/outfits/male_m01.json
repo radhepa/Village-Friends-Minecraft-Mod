@@ -4,12 +4,20 @@
     {"id": "m_haymaker", "name": "Haymaker", "top": "t122_haymakers_open_neck_shirt", "bottom": "b122_hay_rope_tied_trousers"},
     {"id": "m_flail_thresher", "name": "Thresher", "top": "t123_threshers_flail_strap_jerkin", "bottom": "b123_chaff_dusted_breeches"},
     {"id": "m_vine_dresser", "name": "Vine Dresser", "top": "t124_vine_dressers_pruning_tunic", "bottom": "b124_grape_stained_rolled_trousers"},
-    {"id": "m_hedge_layer", "name": "Hedge-Layer", "top": "t125_hedge_layers_arm_guard_shirt", "bottom": "b125_thorn_proof_leather_leggings"}
+    {"id": "m_hedge_layer", "name": "Hedge-Layer", "top": "t125_hedge_layers_arm_guard_shirt", "bottom": "b125_thorn_proof_leather_leggings"},
+    {"id": "m_field_ditcher", "name": "Ditcher", "top": "t126_ditchers_mud_smock", "bottom": "b126_turned_down_mud_boots"},
+    {"id": "m_mole_catcher", "name": "Mole Catcher", "top": "t127_mole_catchers_trap_hung_coat", "bottom": "b127_moleskin_breeches"},
+    {"id": "m_cowherd", "name": "Cowherd", "top": "t128_cowherds_horn_slung_tunic", "bottom": "b128_calf_hide_leggings"},
+    {"id": "m_oxherd", "name": "Oxherd", "top": "t129_oxherds_goad_strap_jerkin", "bottom": "b129_yoke_worn_trousers"},
+    {"id": "m_goose_boy", "name": "Goose Boy", "top": "t130_goose_boys_short_tunic", "bottom": "b130_bare_shin_rolled_slops"}
   ],
   "professions": {
-    "FARMER": ["m_sickle_reaper", "m_haymaker", "m_flail_thresher", "m_vine_dresser", "m_hedge_layer"],
-    "NONE": ["m_sickle_reaper", "m_flail_thresher"],
+    "FARMER": ["m_sickle_reaper", "m_haymaker", "m_flail_thresher", "m_vine_dresser", "m_hedge_layer", "m_field_ditcher", "m_mole_catcher", "m_cowherd", "m_oxherd", "m_goose_boy"],
+    "NONE": ["m_sickle_reaper", "m_flail_thresher", "m_goose_boy"],
     "TAVERN_KEEPER": ["m_vine_dresser"],
-    "CARPENTER": ["m_hedge_layer"]
+    "CARPENTER": ["m_hedge_layer"],
+    "MASON": ["m_field_ditcher"],
+    "NITWIT": ["m_mole_catcher", "m_goose_boy"],
+    "SHEPHERD": ["m_cowherd"]
   }
 }

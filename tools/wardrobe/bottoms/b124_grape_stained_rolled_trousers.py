@@ -20,7 +20,7 @@ def build(g):
         leg = g.part(f"{side}_leg")
         for face in leg.sides:
             face.vline(1, 0, 5, "S2")
-        mud(leg.strip, 31323 + i, 5, role="K", base=3, rows=range(0, 7), splash=.12)          # wine-dark tide line from the vat
+        mud(leg.strip, 31323 + i, 5, role="K", base=2, rows=range(0, 7), splash=.12)          # wine-dark tide line from the vat
         # The thick double roll at mid-calf.
         for j, (y, base) in enumerate(((6.0, 3), (7.0, 2))):
             roll = leg_blk(g, f"{side}_trouser_roll_{j}", side, y, (5, 1, 5), "S", base, "weave", 31327 + 2 * i + j,
