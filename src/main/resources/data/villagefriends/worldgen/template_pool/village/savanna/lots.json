@@ -1,0 +1,11 @@
+{
+  "fallback": "villagefriends:village/savanna/lots_outer",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      }
+    }
+  ]
+}

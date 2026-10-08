@@ -238,7 +238,7 @@ public final class VillageSurveyGameTest implements FabricClientGameTest {
                         }
                     }
                 }
-                VillageFriends.LOGGER.info("SURVEY found {} villages: {}", result.size(), counts);
+                VillageFriends.LOGGER.info("SURVEY found {} villages: {}; site verdicts {}", result.size(), counts, new java.util.TreeMap<>(VillageStructure.VERDICTS));
                 return result;
             });
             var report = new JsonArray();

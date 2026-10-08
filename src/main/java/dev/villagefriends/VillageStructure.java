@@ -38,14 +38,15 @@ import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
  */
 public final class VillageStructure extends Structure {
     /** Start-site survey: a square grid of samples {@code step} apart out to {@code radius}. */
-    public record Terrain(int radius, int step, int coreRadius, int maxHeightRange, float maxWater, float minBiome) {
-        public static final Terrain DEFAULT = new Terrain(64, 16, 32, 10, 0.1f, 0.6f);
+    public record Terrain(int radius, int step, int coreRadius, int maxHeightRange, float maxWater, float maxCoreWater, float minBiome) {
+        public static final Terrain DEFAULT = new Terrain(64, 16, 32, 14, 0.2f, 0.25f, 0.4f);
         public static final Codec<Terrain> CODEC = RecordCodecBuilder.create(i -> i.group(
             Codec.intRange(8, 128).optionalFieldOf("radius", DEFAULT.radius).forGetter(Terrain::radius),
             Codec.intRange(4, 64).optionalFieldOf("step", DEFAULT.step).forGetter(Terrain::step),
             Codec.intRange(8, 128).optionalFieldOf("core_radius", DEFAULT.coreRadius).forGetter(Terrain::coreRadius),
             Codec.intRange(1, 384).optionalFieldOf("max_height_range", DEFAULT.maxHeightRange).forGetter(Terrain::maxHeightRange),
             Codec.floatRange(0, 1).optionalFieldOf("max_water", DEFAULT.maxWater).forGetter(Terrain::maxWater),
+            Codec.floatRange(0, 1).optionalFieldOf("max_core_water", DEFAULT.maxCoreWater).forGetter(Terrain::maxCoreWater),
             Codec.floatRange(0, 1).optionalFieldOf("min_biome", DEFAULT.minBiome).forGetter(Terrain::minBiome)
         ).apply(i, Terrain::new));
     }
@@ -71,6 +72,14 @@ public final class VillageStructure extends Structure {
         Prune.CODEC.optionalFieldOf("prune", Prune.DEFAULT).forGetter(s -> s.prune)
     ).apply(i, VillageStructure::new));
     public static final StructureType<VillageStructure> TYPE = () -> CODEC;
+
+    /** Why sites were turned down, for the development survey. */
+    public static final java.util.Map<String, java.util.concurrent.atomic.AtomicInteger> VERDICTS = new java.util.concurrent.ConcurrentHashMap<>();
+
+    private static Optional<Integer> verdict(String reason, Optional<Integer> result) {
+        VERDICTS.computeIfAbsent(reason, k -> new java.util.concurrent.atomic.AtomicInteger()).incrementAndGet();
+        return result;
+    }
 
     private final Holder<StructureTemplatePool> startPool;
     private final Identifier startJigsaw;
@@ -106,7 +115,10 @@ public final class VillageStructure extends Structure {
 
     /** The square's ground height, or empty when the site is too steep, wet or foreign. */
     private Optional<Integer> survey(GenerationContext c, int cx, int cz) {
-        int samples = 0, water = 0, biome = 0, low = Integer.MAX_VALUE, high = Integer.MIN_VALUE;
+        // Vanilla only checks the biome at the start; do that first so foreign sites stay cheap.
+        int centre = surface(c, cx, cz);
+        if (!biomeAt(c, cx, centre, cz)) return verdict("foreign start", Optional.empty());
+        int samples = 0, water = 0, biome = 0, core = 0, coreWater = 0, low = Integer.MAX_VALUE, high = Integer.MIN_VALUE;
         var square = new ArrayList<Integer>();
         int r = terrain.radius(), step = terrain.step();
         for (int dx = -r; dx <= r; dx += step) for (int dz = -r; dz <= r; dz += step) {
@@ -117,18 +129,26 @@ public final class VillageStructure extends Structure {
             if (wet) water++;
             int distance = Math.max(Math.abs(dx), Math.abs(dz));
             if (distance <= terrain.coreRadius()) {
-                // Water anywhere in the core would put the square or the civic ring on stilts.
-                if (wet) return Optional.empty();
+                // The square itself must be dry; a river past the civic ring gets bridges.
+                if (wet && distance <= 16) return verdict("square water", Optional.empty());
+                core++;
+                if (wet) { coreWater++; continue; }
                 low = Math.min(low, top);
                 high = Math.max(high, top);
                 if (distance <= 16) square.add(top);
             }
-            if (c.validBiome().test(c.biomeResolver().getNoiseBiome(QuartPos.fromBlock(x), QuartPos.fromBlock(top), QuartPos.fromBlock(z)))) biome++;
+            if (biomeAt(c, x, top, z)) biome++;
         }
-        if (high - low > terrain.maxHeightRange() || water > samples * terrain.maxWater() || biome < samples * terrain.minBiome() || square.isEmpty())
-            return Optional.empty();
+        if (coreWater > core * terrain.maxCoreWater()) return verdict("core water", Optional.empty());
+        if (biome < samples * terrain.minBiome()) return verdict("biome " + biome * 10 / samples * 10 + "%", Optional.empty());
+        if (high - low > terrain.maxHeightRange()) return verdict("slope " + Math.min(high - low, 40) / 4 * 4, Optional.empty());
+        if (water > samples * terrain.maxWater()) return verdict("water", Optional.empty());
         int[] heights = square.stream().mapToInt(Integer::intValue).sorted().toArray();
-        return Optional.of(heights[heights.length / 2]);
+        return verdict("accepted", Optional.of(heights[heights.length / 2]));
+    }
+
+    private static boolean biomeAt(GenerationContext c, int x, int y, int z) {
+        return c.validBiome().test(c.biomeResolver().getNoiseBiome(QuartPos.fromBlock(x), QuartPos.fromBlock(y), QuartPos.fromBlock(z)));
     }
 
     @Override
