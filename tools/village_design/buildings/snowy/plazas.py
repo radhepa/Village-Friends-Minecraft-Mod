@@ -42,7 +42,8 @@ def frame(name, roles, seed, ring=9.5, height=14):
     # Frost-bitten grass shows through the snow here and there.
     for x in range(SIZE):
         for z in range(SIZE):
-            if b.get(x, 0, z)[0] == 'minecraft:snow_block' and smooth(x, z, seed + 9, 3) < .25:
+            edge = min(x, z, SIZE - 1 - x, SIZE - 1 - z)
+            if edge > 2 and (x, 1, z) not in b.grid and b.get(x, 0, z)[0] == 'minecraft:snow_block'                     and smooth(x, z, seed + 9, 3) < .25:
                 b.set(x, 0, z, 'grass_block', snowy=True)
                 b.set(x, 1, z, 'snow', layers=1)
     return b, rng

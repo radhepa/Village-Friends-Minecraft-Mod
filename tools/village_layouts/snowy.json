@@ -1,0 +1,482 @@
+{
+  "format": 3,
+  "type": "snowy",
+  "structure": "village_snowy",
+  "villager_type": "minecraft:snow",
+  "weight": 1,
+  "biomes": [
+    "minecraft:snowy_plains"
+  ],
+  "start_pool": "snowy/town_centers",
+  "start_jigsaw": "town_start",
+  "depth": 6,
+  "max_distance": {
+    "horizontal": 100,
+    "vertical": 20
+  },
+  "terrain": {
+    "radius": 64,
+    "step": 16,
+    "core_radius": 32,
+    "max_height_range": 14,
+    "max_water": 0.2,
+    "max_core_water": 0.25,
+    "min_biome": 0.4
+  },
+  "prune": {
+    "max_buried": 5,
+    "max_floating": 5,
+    "tolerance": 0.25
+  },
+  "min_pieces": 20,
+  "pools": {
+    "snowy/town_centers": [
+      {
+        "template": "snowy/plaza_hearth",
+        "weight": 2,
+        "processors": "snowy_weathered"
+      },
+      {
+        "template": "snowy/plaza_rink",
+        "weight": 2,
+        "processors": "snowy_weathered"
+      },
+      {
+        "template": "snowy/plaza_midwinter",
+        "weight": 2,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/buildings/tavern": [
+      {
+        "template": "snowy/tavern",
+        "weight": 1
+      }
+    ],
+    "snowy/buildings/garrison": [
+      {
+        "template": "snowy/garrison",
+        "weight": 1,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/buildings/workshop": [
+      {
+        "template": "snowy/workshop",
+        "weight": 1
+      }
+    ],
+    "snowy/buildings/chapel": [
+      {
+        "template": "snowy/chapel",
+        "weight": 1,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/buildings/apothecary": [
+      {
+        "template": "snowy/apothecary",
+        "weight": 1,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/buildings/library": [
+      {
+        "template": "snowy/library",
+        "weight": 1,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/buildings/market": [
+      {
+        "template": "snowy/market_hall",
+        "weight": 3,
+        "processors": "snowy_weathered"
+      },
+      {
+        "template": "snowy/market_warming_hut",
+        "weight": 2,
+        "processors": "snowy_weathered"
+      },
+      {
+        "template": "snowy/market_sledges",
+        "weight": 2,
+        "processors": "snowy_weathered"
+      }
+    ],
+    "snowy/avenues": [
+      {
+        "template": "snowy/avenue",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "snowy_street"
+      },
+      {
+        "template": "snowy/avenue_bend",
+        "weight": 2,
+        "projection": "terrain_matching",
+        "processors": "snowy_street"
+      }
+    ],
+    "snowy/streets": {
+      "fallback": "snowy/street_ends",
+      "elements": [
+        {
+          "template": "snowy/street_straight_short",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_straight_long",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_straight_lamp",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_bend_right",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_bend_left",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_turn_right",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_turn_left",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_tee_right",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_tee_left",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_fork",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_crossroads",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "snowy_street"
+        },
+        {
+          "template": "snowy/street_square",
+          "weight": 1,
+          "processors": "snowy_street"
+        }
+      ]
+    },
+    "snowy/street_ends": [
+      {
+        "template": "snowy/end_gate",
+        "weight": 3,
+        "processors": "snowy_weathered"
+      },
+      {
+        "template": "snowy/end_lamp",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "snowy_street"
+      },
+      {
+        "template": "snowy/end_fade",
+        "weight": 4,
+        "projection": "terrain_matching",
+        "processors": "snowy_street"
+      }
+    ]
+  },
+  "required_pools": [
+    "snowy/town_centers",
+    "snowy/buildings/tavern",
+    "snowy/buildings/garrison",
+    "snowy/buildings/workshop",
+    "snowy/buildings/chapel",
+    "snowy/buildings/apothecary",
+    "snowy/buildings/library"
+  ],
+  "slot_widths": {
+    "snowy/buildings/tavern": 17,
+    "snowy/buildings/garrison": 17,
+    "snowy/buildings/workshop": 17,
+    "snowy/buildings/chapel": 17,
+    "snowy/buildings/apothecary": 11,
+    "snowy/buildings/library": 11,
+    "snowy/buildings/market": 11
+  },
+  "processor_lists": {
+    "snowy_street": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:dirt_path"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:snow_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:packed_ice"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:mossy_cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:grass_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:ice"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:dirt_path"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:snow_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:packed_ice"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:mossy_cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:spruce_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:grass_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:ice"
+            },
+            "output_state": "minecraft:ice"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:gravel"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:snow_block"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.03
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:coarse_dirt"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          }
+        ]
+      }
+    ],
+    "snowy_weathered": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:cracked_stone_bricks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_stone_bricks"
+          }
+        ]
+      }
+    ]
+  }
+}

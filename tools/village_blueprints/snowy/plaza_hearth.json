@@ -427,10 +427,10 @@
     "BCCCCCCBBEHEAAHHEEEEBBCCCCCCCBEEH",
     "CCBBCBCBCBHHBBEEBBBBHBCCBCCCCEABB",
     "BEBBCCCCBHHEBCCCBEEBAHCBCBBBCBHBC",
-    "EEBAAAAAAAAAGGGGABEHHBAAGGGGGGGHC",
+    "EEBAAAAAAAAAGGGGABEHHBAAGGGGGGAHC",
     "CBBAAAAAAAAAAAGGABBEEBAAAAAAGGEEB",
-    "AAEAAAAAAAAAAAAGAHBCCEAAAAAAAGGAH",
-    "BHBAAAAAAAAAAAAAFFCBCHAAAAAAAAGAE",
+    "AAEAAAAAAAAAAAAGAHBCCEAAAAAAAGAAH",
+    "BHBAAAAAAAAAAAAAFFCBCHAAAAAAAAAAE",
     "BCCAAAAAAAAAFFFFFFFFFHAAAAAAAAAHC",
     "CBCAAAAAAAFFCCCCCCCHHFFAAAAAAAHHC",
     "CCCAAAAAAFFBBCBBCCEHBEFFAAAAAAABC",
@@ -465,10 +465,10 @@
     "........a..........a.......a.....",
     ".................................",
     ".................................",
-    "............IIII........IIIIIII..",
+    "............IIII........IIIIII...",
     ".............9II............II...",
-    "c.....w...J....I.......Lp..T.II..",
-    ".......................WW..T..I..",
+    "c.....w...J....I.......Lp..T.I...",
+    ".......................WW..T.....",
     ".......7...............Lq..T.....",
     "...........................T....Z",
     ".....J.......B..g..B...Lp........",
@@ -1166,6 +1166,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/snowy/plazas.py",
-  "checksum": "12619abadb0ab73b"
+  "checksum": "7e8b540bc88aa34e"
  }
 }
