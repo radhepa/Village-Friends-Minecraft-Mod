@@ -1,0 +1,14 @@
+{
+  "outfits": [
+    {"id": "f_goose_girl", "name": "Goose Girl", "top": "tf061_goose_girls_pinafore_bodice", "bottom": "bf061_goose_girls_hitched_hem_skirt"},
+    {"id": "f_haymaker", "name": "Haymaker", "top": "tf062_haymakers_rolled_sleeve_bodice", "bottom": "bf062_haymakers_kilted_skirt_breeches"},
+    {"id": "f_gleaner", "name": "Gleaner", "top": "tf063_gleaners_gathered_apron_top", "bottom": "bf063_gleaners_short_field_skirt"},
+    {"id": "f_sheaf_binder", "name": "Sheaf Binder", "top": "tf064_sheaf_binders_arm_guarded_blouse", "bottom": "bf064_sheaf_binders_straw_tied_skirt"},
+    {"id": "f_vintner", "name": "Vintner", "top": "tf065_vintners_grape_basket_bodice", "bottom": "bf065_grape_treaders_kilted_skirt"}
+  ],
+  "professions": {
+    "FARMER": ["f_goose_girl", "f_haymaker", "f_gleaner", "f_sheaf_binder", "f_vintner"],
+    "NONE": ["f_goose_girl", "f_gleaner"],
+    "TAVERN_KEEPER": ["f_vintner"]
+  }
+}
