@@ -380,6 +380,10 @@ def main():
         keep = sorted({location(e['template']) for name in slot_pools | {start} for e in pools[name]['elements']
                        if e.get('template') != 'empty' and e.get('projection', 'rigid') == 'rigid'})
         horizontal = layout['max_distance'] if isinstance(layout['max_distance'], int) else layout['max_distance']['horizontal']
+        vertical = layout['max_distance'] if isinstance(layout['max_distance'], int) else layout['max_distance']['vertical']
+        # The vertical limit bounds whole pieces, so a steeple taller than it would never be placed.
+        tallest = max(by_name[t].size[1] for t in kind_of if kind_of[t] == kind)
+        assert vertical >= tallest + 8, f'{kind}: max_distance.vertical {vertical} must exceed the tallest template ({tallest}) by 8'
         villages.append({'type': kind, 'layout': layout, 'keep': keep, 'catalog': {
             'type': kind, 'structure': village_layouts.structure_id(layout), 'start_pool': pool_name(start),
             'start_jigsaw': start_jigsaw, 'min_pieces': layout['min_pieces'], 'depth': layout['depth'],

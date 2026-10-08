@@ -19,7 +19,7 @@ town centre (random of 3, random rotation)
 - **Lots** choose from homes, trade workshops, a few trees/decorations and `empty` gaps. Streets at the maximum depth only use `plains/lots_outer`, so fields, paddocks and orchards gather on the outskirts.
 - `structure_void` cells keep the world's own ground, so yards and verges keep their natural grass. Processors add worn road patches, plank bridges where a road crosses water, and mossy/cracked stone on buildings.
 
-`tools/village_layouts/plains.json` holds the pools, weights, fallbacks, processors, depth (6), maximum distance (100 across, 20 up or down), biomes, terrain survey and pruning. `tools/village_world.json` holds the shared placement (vanilla's spacing and salt).
+`tools/village_layouts/plains.json` holds the pools, weights, fallbacks, processors, depth (6), maximum distance (100 across, 40 up or down), biomes, terrain survey and pruning. `tools/village_world.json` holds the shared placement (vanilla's spacing and salt).
 
 ## Choosing good ground
 
@@ -27,7 +27,7 @@ The `villagefriends:village` structure type (`VillageStructure.java`) fixes what
 
 - **Terrain survey** (`terrain` in the layout): before a town starts it samples the raw ground on a grid (`step` blocks apart, out to `radius`). It gives up on the spot if any sample within `core_radius` is water, if the core's highest and lowest samples differ by more than `max_height_range`, if more than `max_water` of all samples are water, or if fewer than `min_biome` of them are the type's own biomes.
 - **Square height**: the square sits at the median ground height of its footprint, not on whatever single column is at its centre.
-- **Vertical limit**: `max_distance.vertical` stops pieces more than 20 blocks above or below the square.
+- **Vertical limit**: `max_distance.vertical` (40) keeps every piece, top to bottom, within that many blocks of the square. It bounds whole pieces, so it must clear the tallest building by 8; the compiler checks.
 - **Pruning** (`prune`): after assembly, a rigid lot with nothing attached to it is dropped when more than `tolerance` of its footprint samples are buried deeper than `max_buried`, hang more than `max_floating` over the ground, or are water, or when a street runs through its footprint. The square and everything in its slots (`keep`, filled in by the compiler) always stay.
 - **Wild vegetation**: trees, fallen logs, cacti, sugar cane, bamboo and boulders never generate inside a village piece or within two blocks of one (`VillageGrounds`).
 

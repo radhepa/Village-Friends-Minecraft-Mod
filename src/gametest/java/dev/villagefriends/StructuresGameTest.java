@@ -178,7 +178,8 @@ public final class StructuresGameTest implements FabricClientGameTest {
                     check(VillageFriends.name(v).endsWith(" of "+town.name()),"Generated residents join their hometown");
                     if(VillageProfessions.JOBS.contains(VillageFriends.profession(v)))check(v.getOffers().size()==2,"Generated profession has its native trades");
                 }
-                check(jobs.containsAll(VillageProfessions.JOBS),"Every new profession appears in the generated "+type+" village");
+                var missing=new ArrayList<>(VillageProfessions.JOBS);missing.removeAll(jobs);var templates=new TreeSet<String>();for(var piece:start.getPieces())templates.add(((SinglePoolElement)((PoolElementStructurePiece)piece).getElement()).getTemplateLocation().getPath());
+                check(missing.isEmpty(),"Every new profession appears in the generated "+type+" village; missing "+missing+" among "+locals.size()+" residents; pieces "+templates);
                 var player=w.getConnection().getServerPlayer();player.teleportTo(centerPos.getX(),bounds.maxY()+28,centerPos.getZ()+65);
                 VillageFriends.LOGGER.info("NATURAL {} VILLAGE GENERATED at {}: {} pieces, {} residents, all ten professions, town {}.",type.toUpperCase(Locale.ROOT),centerPos,start.getPieces().size(),locals.size(),town.name());
                 return centerPos;
@@ -201,9 +202,14 @@ public final class StructuresGameTest implements FabricClientGameTest {
             w.getConnection().waitForChunksDownload();
             w.getServer().runOnServer(server->{
                 server.getPlayerList().setViewDistance(8);
-                for(var p:residents.values())w.getConnection().getServerLevel().getChunkAt(p);
+                // Five villages lie far apart: keep their chunks loaded until the residents are back.
+                for(var p:residents.values())w.getConnection().getServerLevel().setChunkForced(p.getX()>>4,p.getZ()>>4,true);
             });
-            c.waitTicks(20);
+            for(int wait=0;wait<15;wait++){
+                c.waitTicks(20);
+                boolean loaded=w.getServer().computeOnServer(server->residents.keySet().stream().allMatch(id->w.getConnection().getServerLevel().getEntity(id)!=null));
+                if(loaded)break;
+            }
             w.getServer().runOnServer(server->{
                 var level=w.getConnection().getServerLevel();
                 for(var pos:fixtures){level.getChunkAt(pos);check(level.getBlockEntity(pos) instanceof HousePlaqueBlockEntity,"Generated house plaque survives world reload");}

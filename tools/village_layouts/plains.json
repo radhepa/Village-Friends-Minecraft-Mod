@@ -13,7 +13,7 @@
   "depth": 6,
   "max_distance": {
     "horizontal": 100,
-    "vertical": 20
+    "vertical": 40
   },
   "terrain": {
     "radius": 64,

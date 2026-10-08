@@ -76,8 +76,9 @@ public final class VillageStructure extends Structure {
     /** Why sites were turned down, for the development survey. */
     public static final java.util.Map<String, java.util.concurrent.atomic.AtomicInteger> VERDICTS = new java.util.concurrent.ConcurrentHashMap<>();
 
-    private static Optional<Integer> verdict(String reason, Optional<Integer> result) {
-        VERDICTS.computeIfAbsent(reason, k -> new java.util.concurrent.atomic.AtomicInteger()).incrementAndGet();
+    private Optional<Integer> verdict(String reason, Optional<Integer> result) {
+        String type = startPool.unwrapKey().map(k -> k.identifier().getPath().replace("village/", "").replace("/town_centers", "").replace("town_centers", "plains")).orElse("?");
+        VERDICTS.computeIfAbsent(type + ": " + reason, k -> new java.util.concurrent.atomic.AtomicInteger()).incrementAndGet();
         return result;
     }
 

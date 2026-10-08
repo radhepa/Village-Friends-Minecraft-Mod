@@ -9,7 +9,7 @@
   "size": 6,
   "max_distance_from_center": {
     "horizontal": 100,
-    "vertical": 20
+    "vertical": 40
   },
   "prune": {
     "max_buried": 4,
