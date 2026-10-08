@@ -92,6 +92,36 @@
           "processors": "snowy_lots_frost"
         },
         {
+          "template": "snowy/greenhouse",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/tree_spruce",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/lamp_bench",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/snowman",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/sledge",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/ice_sculpture",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
           "weight": 12
         }
@@ -101,8 +131,33 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
-          "template": "snowy/igloo",
-          "weight": 1,
+          "template": "snowy/greenhouse",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/root_cellar",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/frost_field",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/goat_pen",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/rabbit_hutch",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/kennel",
+          "weight": 2,
           "processors": "snowy_lots_frost"
         },
         {
@@ -112,6 +167,51 @@
         },
         {
           "template": "snowy/ice_fishing",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/tree_spruce",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/spruce_grove",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/firewood",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/sledge",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/snowman",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/lamp_bench",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/igloo",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/log_cabin",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/trapper_cabin",
           "weight": 2,
           "processors": "snowy_lots_frost"
         },

@@ -2,7 +2,214 @@
   "fallback": "villagefriends:village/snowy/lots_outer",
   "elements": [
     {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/log_cabin",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/igloo",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/stone_cottage",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/a_frame",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/longhouse",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/family_house",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/townhouse",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/trapper_cabin",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/smithy",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/smokehouse",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/fletcher",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/shepherd",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/ice_fishing",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/cartographer",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/mason",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/furrier",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/herbalist",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/greenhouse",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/tree_spruce",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/lamp_bench",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/snowman",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/sledge",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/snowy/ice_sculpture",
+        "processors": "villagefriends:snowy_lots_frost",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 12,
       "element": {
         "element_type": "minecraft:empty_pool_element"
       }
