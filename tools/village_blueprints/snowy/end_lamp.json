@@ -1,0 +1,147 @@
+{
+ "format": 1,
+ "size": [7, 6, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:dirt_path"
+  },
+  "C": {
+   "id": "minecraft:snow_block"
+  },
+  "D": {
+   "id": "minecraft:grass_block"
+  },
+  "E": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "F": {
+   "id": "minecraft:gravel"
+  },
+  "G": {
+   "id": "minecraft:spruce_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "H": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "I": {
+   "id": "minecraft:cobblestone"
+  },
+  "J": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "K": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "CABBBDA",
+    "CABBBAC",
+    "ACBBBCA",
+    "ACBFBAA",
+    "FDAIDDA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".A.J..A",
+    ".A...A.",
+    "A.....A",
+    "A.H.HAA",
+    ".GAE.GA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".A....A",
+    ".A...A.",
+    "A.....A",
+    "A....AA",
+    ".AAE..A"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".A....A",
+    ".A...A.",
+    "A.....A",
+    "A....AA",
+    ".AAE..A"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".A....A",
+    ".A...A.",
+    "A.....A",
+    "A....AA",
+    ".AAK..A"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".A....A",
+    ".A...A.",
+    "A.....A",
+    "A....AA",
+    ".AAA..A"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/streets.py",
+  "checksum": "8aea12677ab4e0e7"
+ }
+}
