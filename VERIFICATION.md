@@ -1,3 +1,16 @@
+# Wardrobe expansion verification (2.16.0)
+
+Verified October 8, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `python tools/wardrobe/wardrobe.py` compiled all 832 pieces with no errors, and `--check` reports them current:
+  - men: 80 hairstyles, 219 tops and 219 bottoms;
+  - women: 50 hairstyles, 132 tops and 132 bottoms;
+  - 351 outfit templates, every one worn by a real profession.
+- Mixing coverage: 37,077 of 38,416 men's and 14,449 of 14,884 women's free pairs are allowed. There are 23 men's and 10 women's locked sets.
+- Release build passed with 102 unit tests and no failures. `WardrobeTest` checks the new per-set counts, locked sets, coverage and palette lock under all ten palettes.
+- `-PoutfitsOnly` passed inside Minecraft: 351 outfits, 130 hairstyles, 351 tops and 351 bottoms, with palette lock on every baked atlas texel, armor hiding and resource reload. Posing a resident took 8.8 µs, the same as with the smaller wardrobe.
+- Evidence: `build/outfits-2.16.log` and `build/run/clientGameTest/screenshots/` (gallery, back and mid-stride pages for all 36 pages of outfits, and an in-world scene per page).
+
 # Village Life animation pack, 349 clips (2.15.0)
 
 Verified October 7, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
