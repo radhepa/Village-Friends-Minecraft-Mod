@@ -270,16 +270,9 @@
    }
   },
   "q": {
-   "id": "minecraft:chain",
-   "properties": {
-    "axis": "y",
-    "waterlogged": "false"
-   }
-  },
-  "r": {
    "id": "minecraft:chiseled_stone_bricks"
   },
-  "s": {
+  "r": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "low",
@@ -288,6 +281,13 @@
     "up": "true",
     "waterlogged": "false",
     "west": "none"
+   }
+  },
+  "s": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y",
+    "waterlogged": "false"
    }
   },
   "t": {
@@ -477,18 +477,12 @@
    }
   },
   ",": {
-   "id": "minecraft:chain",
-   "properties": {
-    "axis": "y"
-   }
-  },
-  "-": {
    "id": "minecraft:chiseled_stone_bricks",
    "properties": {
     "type": "top"
    }
   },
-  "/": {
+  "-": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -499,7 +493,7 @@
     "west": "low"
    }
   },
-  ":": {
+  "/": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -510,7 +504,7 @@
     "west": "none"
    }
   },
-  ";": {
+  ":": {
    "id": "minecraft:deepslate_tile_wall",
    "properties": {
     "east": "none",
@@ -519,6 +513,12 @@
     "up": "true",
     "waterlogged": "false",
     "west": "none"
+   }
+  },
+  ";": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y"
    }
   },
   "<": {
@@ -600,13 +600,13 @@
     "Xu.AADDDDDDDAA.@X",
     "N>..ADDDDDDDA.e7N",
     "N.u.ADDDDDDDA...N",
-    "s$.AADDDDDDDAA.rw",
+    "r$.AADDDDDDDAA.qw",
     "X8..ADDDDDDDA..&X",
     "N...ADDDDDDDA...N",
-    "s$.AADDDDDDDAA.uN",
+    "r$.AADDDDDDDAA.uN",
     "Ng..ADDDDDDDA...N",
-    "X...AKKKKKKKA.:.X",
-    "s/.AAKKKKKKKAAjrw",
+    "X...AKKKKKKKA./.X",
+    "r-.AAKKKKKKKAAjqw",
     "N6[.AAAAAAAAA...N",
     "N...............N",
     "XQQQXQQQXQQQXQQQX"
@@ -632,7 +632,7 @@
     "...BAMMMdMMMAB...",
     "....A...d...A....",
     "....A.......A....",
-    "...BA..#-#..AB.%.",
+    "...BA..#,#..AB.%.",
     "....BAAAAAAAB....",
     ".................",
     "................."
@@ -670,7 +670,7 @@
     ".................",
     ".................",
     ".................",
-    "......DBrBD......",
+    "......DBqBD......",
     "......B...B......",
     "......B...B......",
     "......B...B......",
@@ -806,14 +806,14 @@
     "....O.B...B.P....",
     "....FBDBBBDBG....",
     "....F.......G....",
-    "....F...q...G....",
+    "....F...s...G....",
     "....F.......G....",
     "....F.......G....",
     "....F.......G....",
-    "....F...q...G....",
+    "....F...s...G....",
     "....F.......G....",
     "....F.......G....",
-    "....F...q...G....",
+    "....F...s...G....",
     "....F.......G....",
     "....FBBBBBBBG....",
     "....O.......P....",
@@ -906,7 +906,7 @@
     ".................",
     "......DYYYD......",
     "......c...b......",
-    "......c.,.b......",
+    "......c.;.b......",
     "......c.!.b......",
     "......DZZZD......",
     "........W........",
@@ -1140,7 +1140,7 @@
     ".................",
     ".................",
     ".................",
-    "........;........",
+    "........:........",
     ".................",
     ".................",
     ".................",
@@ -1256,6 +1256,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/civic.py",
-  "checksum": "53b74cb87f52dd38"
+  "checksum": "f4500d584e8d1af4"
  }
 }

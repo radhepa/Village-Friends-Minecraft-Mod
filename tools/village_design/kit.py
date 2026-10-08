@@ -26,7 +26,12 @@ AXIS = {'north': 'z', 'south': 'z', 'east': 'x', 'west': 'x'}
 AIR = ('minecraft:air', ())
 
 
+# Blocks Minecraft renamed; designs may keep the familiar name.
+RENAMED = {'chain': 'iron_chain'}
+
+
 def full_id(name):
+    name = RENAMED.get(name, name)
     return name if ':' in name else 'minecraft:' + name
 
 
@@ -126,7 +131,7 @@ def sturdy(state, face):
 
 
 POST_OVERRIDES = ('torch', 'lantern', 'sign', 'banner', 'redstone_wall_torch', 'end_rod', 'campfire',
-                  'flower_pot', 'potted_', 'skull', 'head', 'candle', 'chain')
+                  'flower_pot', 'potted_', 'skull', 'head', 'candle', 'chain', 'iron_chain')
 
 
 def gate_connects(gate, direction):
@@ -371,7 +376,7 @@ class Build:
         name = bid(state)
         if state[0].startswith(NS + ':'):
             return name != 'house_plaque'
-        return name in ('lantern', 'wall_torch', 'torch', 'ladder', 'flower_pot', 'short_grass', 'chain') \
+        return name in ('lantern', 'wall_torch', 'torch', 'ladder', 'flower_pot', 'short_grass', 'chain', 'iron_chain') \
             or name.startswith('potted_') or name.endswith(('_pressure_plate', '_button', '_sign', '_banner')) \
             or name in ('poppy', 'dandelion', 'cornflower', 'azure_bluet', 'oxeye_daisy', 'allium')
 
@@ -413,7 +418,7 @@ class Build:
         if name.endswith('_door'):
             return False
         return name in ('lantern', 'ladder', 'torch', 'wall_torch', 'short_grass', 'tall_grass', 'fern', 'vine',
-                        'sugar_cane', 'redstone_wire', 'rail', 'chain') \
+                        'sugar_cane', 'redstone_wire', 'rail', 'chain', 'iron_chain') \
             or name.endswith(('_pressure_plate', '_button', '_sign', '_banner', '_sapling', '_tulip')) \
             or name in ('poppy', 'dandelion', 'cornflower', 'azure_bluet', 'oxeye_daisy', 'allium',
                         'lily_of_the_valley', 'wheat', 'carrots', 'potatoes', 'beetroots')
@@ -427,7 +432,8 @@ class Build:
                 for h in (0, 1):
                     cell = (sx, y + h, sz)
                     if self.inside(*cell):
-                        assert self._passable(self.get(*cell)), \
+                        # Lanterns and chains have collision boxes: fine in a room, not in a doorway.
+                        assert self._passable(self.get(*cell)) and bid(self.get(*cell)) not in ('lantern', 'chain', 'iron_chain'), \
                             f'{self.name}: door at {(x, y, z)} needs two clear blocks on both sides; {cell} is {self.get(*cell)[0]}'
 
     def finish(self):

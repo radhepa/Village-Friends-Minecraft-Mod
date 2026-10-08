@@ -146,15 +146,9 @@
    }
   },
   "X": {
-   "id": "minecraft:chain",
-   "properties": {
-    "axis": "y"
-   }
-  },
-  "Y": {
    "id": "minecraft:crafting_table"
   },
-  "Z": {
+  "Y": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -164,7 +158,7 @@
     "powered": "false"
    }
   },
-  "a": {
+  "Z": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -174,7 +168,7 @@
     "powered": "false"
    }
   },
-  "b": {
+  "a": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "false",
@@ -182,6 +176,12 @@
     "south": "true",
     "waterlogged": "false",
     "west": "false"
+   }
+  },
+  "b": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y"
    }
   },
   "c": {
@@ -287,8 +287,8 @@
     "...........",
     "..d........",
     "..NN...NN..",
-    ".HBBBZBBBH.",
-    ".BY......B.",
+    ".HBBBYBBBH.",
+    ".BX......B.",
     ".B.......B.",
     ".B....QQQB.",
     ".Bfg....RB.",
@@ -304,9 +304,9 @@
     "...........",
     "...........",
     ".P..k.P..P.",
-    ".HOOBaBOOH.",
+    ".HOOBZBOOH.",
     ".B.......BS",
-    ".B.......b.",
+    ".B.......a.",
     ".B.......BS",
     ".B.......B.",
     ".HBBBHBBBH.",
@@ -324,7 +324,7 @@
     ".HBBBHBBBH.",
     ".B.......B.",
     ".B...e...B.",
-    ".B..X....B.",
+    ".B..b....B.",
     ".B.......B.",
     ".HBBBHBBBH.",
     "...........",
@@ -528,6 +528,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/trades.py",
-  "checksum": "b06eefa98225049b"
+  "checksum": "da76859b74cec77d"
  }
 }

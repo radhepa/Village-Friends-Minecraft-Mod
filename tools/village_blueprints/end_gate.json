@@ -184,13 +184,13 @@
    }
   },
   "b": {
-   "id": "minecraft:chain",
+   "id": "minecraft:coarse_dirt"
+  },
+  "c": {
+   "id": "minecraft:iron_chain",
    "properties": {
     "axis": "y"
    }
-  },
-  "c": {
-   "id": "minecraft:coarse_dirt"
   },
   "d": {
    "id": "minecraft:jigsaw",
@@ -232,7 +232,7 @@
   {
    "y": 0,
    "rows": [
-    "AAAAAFFFFcFAAAAAA",
+    "AAAAAFFFFbFAAAAAA",
     "AAAAACFFFFFCAAAAA",
     "AAACCCFFFFFCCCAAA",
     "CCCCCCFFOCFCCCCCC",
@@ -295,7 +295,7 @@
     "AAAAA......AAAAAA",
     "AAAAW.......WAAAA",
     "AAADBD.....DBDAAA",
-    "EaEB.B..b..B.BEaE",
+    "EaEB.B..c..B.BEaE",
     "AAADBD.....DBDAAA",
     "AAAAX.......XAAAA",
     "AAAAAA......AAAAA"
@@ -393,6 +393,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/streets.py",
-  "checksum": "ca932e45d81d44cd"
+  "checksum": "ffebdaa67d36474b"
  }
 }

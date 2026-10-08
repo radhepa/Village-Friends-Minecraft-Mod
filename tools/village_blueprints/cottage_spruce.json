@@ -125,16 +125,6 @@
   "T": {
    "id": "minecraft:spruce_trapdoor",
    "properties": {
-    "facing": "north",
-    "half": "bottom",
-    "open": "true",
-    "powered": "false",
-    "waterlogged": "false"
-   }
-  },
-  "U": {
-   "id": "minecraft:spruce_trapdoor",
-   "properties": {
     "facing": "south",
     "half": "bottom",
     "open": "true",
@@ -142,7 +132,7 @@
     "waterlogged": "false"
    }
   },
-  "V": {
+  "U": {
    "id": "minecraft:azalea_leaves",
    "properties": {
     "distance": "1",
@@ -150,10 +140,20 @@
     "waterlogged": "false"
    }
   },
-  "W": {
+  "V": {
    "id": "minecraft:spruce_trapdoor",
    "properties": {
     "facing": "east",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
     "half": "bottom",
     "open": "true",
     "powered": "false",
@@ -416,10 +416,10 @@
     "..SS...SS..",
     ".HBBHuHBBH.",
     ".Bl...A..B.",
-    "CB.y..A.fBV",
-    "CB.Px.s.gBV",
+    "CB.y..A.fBU",
+    "CB.Px.s.gBU",
     "CH....A..H.",
-    ".Br...A.eBV",
+    ".Br...A.eBU",
     ".Bmc.qAidB.",
     ".HBBHBHBBH.",
     "...........",
@@ -432,16 +432,16 @@
     "...........",
     "...........",
     "...P...P...",
-    ".T..TpT..T.",
+    ".W..W.p..W.",
     ".HMMHvHMMH.",
-    ".B....A..BW",
+    ".B....A..BV",
     "XB....A..R.",
     "Xn.w..t..R.",
-    "XH....A..HW",
+    "XH....A..HV",
     ".B....A..R.",
-    ".B....A..BW",
+    ".B....A..BV",
     ".HMMHBHMMH.",
-    ".U..U.U..U.",
+    ".T..T.T..T.",
     "..........."
    ]
   },
@@ -810,6 +810,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/homes.py",
-  "checksum": "bf8f15107ccecb75"
+  "checksum": "9e8a3ae0f4ec0915"
  }
 }

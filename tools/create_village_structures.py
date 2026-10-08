@@ -310,6 +310,11 @@ def main():
     assert 'plains' in layouts and not layouts['plains'].get('_detached'), 'The plains layout is required'
     templates = [Template.from_blueprint(p, p.relative_to(BLUEPRINTS).with_suffix('').as_posix())
                  for p in sorted(BLUEPRINTS.rglob('*.json'))]
+    # Every vanilla block must exist in this Minecraft version (26.3 renamed chain to iron_chain, for one).
+    vanilla = set((Path(__file__).resolve().parent / 'village_design/block_ids.txt').read_text().split()) | {'air'}
+    for t in templates:
+        unknown = sorted({b['Name'] for b in t.blocks.values() if b['Name'].startswith('minecraft:') and b['Name'][10:] not in vanilla})
+        assert not unknown, f'{t.name}: not blocks in this Minecraft version: {unknown}' 
     names = {t.name for t in templates}
     by_name = {t.name: t for t in templates}
     if args.only and args.only not in names: parser.error(f'Unknown blueprint: {args.only}')

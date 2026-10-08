@@ -12,9 +12,9 @@
     "vertical": 20
   },
   "prune": {
-    "max_buried": 5,
-    "max_floating": 5,
-    "tolerance": 0.25,
+    "max_buried": 4,
+    "max_floating": 4,
+    "tolerance": 0.15,
     "keep": [
       "villagefriends:village/apothecary",
       "villagefriends:village/central_plaza",

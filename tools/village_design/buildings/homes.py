@@ -149,7 +149,8 @@ def cottage(name, palette, seed, axis='x', pitch=1, chimney='west', beds=('red',
         for x in range(2, 9):
             b.set(x, 4, 2, f'{st.trim}_stairs', facing='south', half='bottom')
             b.set(x, 4, 3, f'{st.trim}_planks')
-        b.set(5, 3, 3, 'lantern', hanging=True)
+        # Beside the doorway, not in front of it: a hanging lantern at head height blocks the door.
+        b.set(6, 3, 3, 'lantern', hanging=True)
         for x in range(3, 8):
             b.set(x, 0, 3, f'{st.trim}_planks')
         b.custom(3, 1, 3, 'village_bench', facing='north')

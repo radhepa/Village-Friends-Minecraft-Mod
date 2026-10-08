@@ -115,12 +115,6 @@
    }
   },
   "T": {
-   "id": "minecraft:chain",
-   "properties": {
-    "axis": "y"
-   }
-  },
-  "U": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "low",
@@ -131,7 +125,7 @@
     "west": "low"
    }
   },
-  "V": {
+  "U": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -140,6 +134,12 @@
     "up": "false",
     "waterlogged": "false",
     "west": "none"
+   }
+  },
+  "V": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y"
    }
   },
   "W": {
@@ -197,8 +197,8 @@
     "AAAY.......AQAM",
     "AA...........AA",
     "AA............A",
-    "......CUC......",
-    "P.....VXI.....M",
+    "......CTC......",
+    "P.....UXI.....M",
     "......CIC......",
     "A.A.........AAA",
     "AA..........AAA",
@@ -258,7 +258,7 @@
     "AA...........AA",
     "AA............A",
     ".....GGGGG.....",
-    ".......T.......",
+    ".......V.......",
     ".....FFFFF.....",
     "A.A.........AAA",
     "AA..........AAA",
@@ -491,6 +491,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/streets.py",
-  "checksum": "ff3db09a5f36c346"
+  "checksum": "2b3448fb3c1d4a87"
  }
 }

@@ -75,7 +75,7 @@
    "id": "minecraft:spruce_planks"
   },
   "K": {
-   "id": "minecraft:chain",
+   "id": "minecraft:iron_chain",
    "properties": {
     "axis": "y"
    }
@@ -186,6 +186,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/decor.py",
-  "checksum": "bfd97b666a0d709a"
+  "checksum": "8e68d4b803e703e2"
  }
 }

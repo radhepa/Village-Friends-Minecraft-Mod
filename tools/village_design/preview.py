@@ -31,7 +31,7 @@ def _lookup(*names):
 def color(name, face, props):
     special = {'water': (63, 118, 228), 'lava': (207, 92, 20), 'air': None, 'jigsaw': None,
                'structure_void': None, 'lantern': (200, 150, 70), 'campfire': (210, 120, 40),
-               'bell': (230, 190, 60), 'chain': (60, 60, 70), 'composter': (110, 80, 40)}
+               'bell': (230, 190, 60), 'chain': (60, 60, 70), 'iron_chain': (60, 60, 70), 'composter': (110, 80, 40)}
     if name in special:
         return special[name]
     base = name
@@ -123,7 +123,7 @@ def boxes(name, p, below_name=None):
         return [(5, 1, 5, 11, 10, 11)] if p.get('hanging') == 'true' else [(5, 0, 5, 11, 9, 11)]
     if name in ('torch', 'wall_torch', 'end_rod', 'lightning_rod'):
         return [(7, 0, 7, 9, 11, 9)]
-    if name == 'chain':
+    if name in ('chain', 'iron_chain'):
         return [(7, 0, 7, 9, 16, 9)]
     if name in ('campfire', 'soul_campfire'):
         return [(0, 0, 0, 16, 7, 16)]
