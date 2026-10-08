@@ -1,0 +1,15 @@
+{
+  "outfits": [
+    {"id": "m_pikeman", "name": "Pikeman", "top": "t196_pikemans_buff_coat", "bottom": "b196_pikemans_tassets"},
+    {"id": "m_crossbowman", "name": "Crossbowman", "top": "t197_crossbowmans_windlass_jack", "bottom": "b197_crossbowmans_quilted_leggings"},
+    {"id": "m_halberdier", "name": "Halberdier", "top": "t198_halberdiers_livery_doublet", "bottom": "b198_halberdiers_striped_hose"},
+    {"id": "m_hobelar", "name": "Hobelar", "top": "t199_hobelars_light_riding_jack", "bottom": "b199_hobelars_riding_boots"},
+    {"id": "m_sergeant_at_arms", "name": "Sergeant-at-Arms", "top": "t200_sergeant_at_arms_mace_baldric_coat", "bottom": "b200_sergeants_splinted_boots"}
+  ],
+  "professions": {
+    "GUARD": ["m_pikeman", "m_crossbowman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms"],
+    "KNIGHT": ["m_pikeman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms"],
+    "WEAPONSMITH": ["m_pikeman"],
+    "ARCHER": ["m_crossbowman"]
+  }
+}
