@@ -57,7 +57,9 @@ public final class Routine {
         RAIN_WALK("Enjoying the rain", Place.VILLAGE, false),
         SNOW_PLAY("Playing in the snow", Place.VILLAGE, false),
         /** Guards during a raid: mustered at the bell and out after the raiders instead of hiding. */
-        DEFEND("Defending the village", Place.VILLAGE, false);
+        DEFEND("Defending the village", Place.VILLAGE, false),
+        /** A neighbor's birthday party by the bell, or their own. */
+        PARTY("At a birthday party", Place.BELL, false);
 
         public final String label; public final Place place; public final boolean sleep;
         Block(String label, Place place, boolean sleep) { this.label = label; this.place = place; this.sleep = sleep; }
@@ -294,6 +296,21 @@ public final class Routine {
         return new Plan(block, scheduled, weather, day);
     }
 
+    /** Birthday parties gather by the bell from 16:30 to 18:30. */
+    public static final int PARTY_START = at(16, 30), PARTY_END = at(18, 30);
+    public static boolean partyTime(int time) { int t = Math.floorMod(time, 24000); return t >= PARTY_START && t < PARTY_END; }
+    /**
+     * A birthday party in the evening: the guest of honor ({@code host}) takes the evening off work and their
+     * family and friends join them by the bell. Rain and storms keep everyone indoors; nobody leaves their bed,
+     * the night watch or a raid for it.
+     */
+    public static Plan party(Plan plan, int time, boolean host) {
+        var scheduled = plan.block();
+        if (!partyTime(time) || plan.weather() == Weather.RAIN || plan.weather() == Weather.THUNDER) return plan;
+        if (scheduled.sleep || scheduled == Block.NIGHT_WATCH || scheduled == Block.DEFEND || scheduled == Block.WORK && !host) return plan;
+        return new Plan(Block.PARTY, plan.scheduled(), plan.weather(), plan.day());
+    }
+
     /** "6:00 wake · 8:00 work · 11:30 lunch at the bell · ... · 20:30 bed" for the Village Ledger. */
     public static String summary(Day day) {
         var parts = new ArrayList<String>();
@@ -311,6 +328,7 @@ public final class Routine {
             case WORK -> "work"; case LUNCH -> "lunch at the bell"; case LUNCH_HOME -> "lunch at home"; case LUNCH_TAVERN -> "lunch at the tavern";
             case HOBBY -> "hobby"; case SOCIAL -> "neighbors"; case MARKET -> "market"; case SUPPER -> "supper"; case SUPPER_TAVERN -> "supper at the tavern"; case EVENING -> "home";
             case TAVERN -> "tavern"; case PERFORM -> "performs"; case NIGHT_WATCH -> "night watch"; case PLAY -> "play"; case LESSONS -> "lessons";
+            case PARTY -> "party";
             default -> block.label.toLowerCase(Locale.ROOT);
         };
     }

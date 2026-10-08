@@ -1,20 +1,68 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "villagefriends:block/notice_board",
-      "y": 0
-    },
-    "facing=east": {
-      "model": "villagefriends:block/notice_board",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "villagefriends:block/notice_board",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "villagefriends:block/notice_board",
-      "y": 270
-    }
+ "variants": {
+  "facing=north,notes=0": {
+   "model": "villagefriends:block/notice_board_0",
+   "y": 0
+  },
+  "facing=north,notes=1": {
+   "model": "villagefriends:block/notice_board_1",
+   "y": 0
+  },
+  "facing=north,notes=2": {
+   "model": "villagefriends:block/notice_board_2",
+   "y": 0
+  },
+  "facing=north,notes=3": {
+   "model": "villagefriends:block/notice_board_3",
+   "y": 0
+  },
+  "facing=east,notes=0": {
+   "model": "villagefriends:block/notice_board_0",
+   "y": 90
+  },
+  "facing=east,notes=1": {
+   "model": "villagefriends:block/notice_board_1",
+   "y": 90
+  },
+  "facing=east,notes=2": {
+   "model": "villagefriends:block/notice_board_2",
+   "y": 90
+  },
+  "facing=east,notes=3": {
+   "model": "villagefriends:block/notice_board_3",
+   "y": 90
+  },
+  "facing=south,notes=0": {
+   "model": "villagefriends:block/notice_board_0",
+   "y": 180
+  },
+  "facing=south,notes=1": {
+   "model": "villagefriends:block/notice_board_1",
+   "y": 180
+  },
+  "facing=south,notes=2": {
+   "model": "villagefriends:block/notice_board_2",
+   "y": 180
+  },
+  "facing=south,notes=3": {
+   "model": "villagefriends:block/notice_board_3",
+   "y": 180
+  },
+  "facing=west,notes=0": {
+   "model": "villagefriends:block/notice_board_0",
+   "y": 270
+  },
+  "facing=west,notes=1": {
+   "model": "villagefriends:block/notice_board_1",
+   "y": 270
+  },
+  "facing=west,notes=2": {
+   "model": "villagefriends:block/notice_board_2",
+   "y": 270
+  },
+  "facing=west,notes=3": {
+   "model": "villagefriends:block/notice_board_3",
+   "y": 270
   }
+ }
 }

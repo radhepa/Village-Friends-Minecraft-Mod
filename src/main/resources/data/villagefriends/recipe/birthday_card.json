@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:birthday_card",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:paper",
+    "#minecraft:dyes"
+  ]
+}

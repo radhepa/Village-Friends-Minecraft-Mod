@@ -74,7 +74,7 @@ Games aren't saved. A game in progress simply stops when the world closes.
 
 ## Animations
 
-37 clips in `tools/animations/village_life/games.py` (Village Life now has 396), using the new `play` trigger. Tags are `play:<game>`, `play:<game>:<role>`, the full state for leader moves, and `moving` while the child is on the move:
+37 clips in `tools/animations/village_life/games.py` (Village Life now has 431), using the new `play` trigger. Tags are `game:<game>`, `game:<game>:<role>`, the full state for leader moves, and `moving` while the child is on the move:
 
 | Game | Clips |
 |---|---|

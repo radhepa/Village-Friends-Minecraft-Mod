@@ -21,8 +21,8 @@ sys.path.insert(0, str(TOOL))
 import kit  # noqa: E402
 import animations  # noqa: E402
 
-TAG = re.compile(r"(adult|child|smith|guard|social|holding|rain|thunder|cold|morning|day|evening|night|"
-                 r"moving|play:[a-z_]+(:[a-z_]+){0,2}|job:[a-z_]+|personality:[a-z]+|routine:[a-z_]+)")
+TAG = re.compile(r"(adult|child|smith|guard|social|holding|rain|thunder|cold|morning|day|evening|night|birthday|"
+                 r"moving|game:[a-z_]+(:[a-z_]+){0,2}|play:[a-z_]+|pet:[a-z]+|job:[a-z_]+|personality:[a-z]+|routine:[a-z_]+)")
 
 
 def run(path: Path):

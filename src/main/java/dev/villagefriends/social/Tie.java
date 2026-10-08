@@ -17,4 +17,6 @@ public record Tie(int together, long lastTogether, long quarrel) {
     /** Counts at most one shared day, however long they stood together. */
     public Tie together(long day) { return lastTogether == day ? this : new Tie(together + 1, day, quarrel); }
     public Tie quarrel(long day) { return new Tie(together, lastTogether, day); }
+    /** A quarrel forgiven: it stops counting against them. */
+    public Tie reconciled() { return quarrel < 0 ? this : new Tie(together, lastTogether, -1); }
 }

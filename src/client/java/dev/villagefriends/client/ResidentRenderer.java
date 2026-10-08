@@ -27,6 +27,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         // dispatched to the player renderer even when it originated from a villager.
         super(context, new ResidentModel(false), new ResidentModel(true), 0.45F);
         this.addLayer(new WardrobeLayer(this));
+        this.addLayer(new PartyHatLayer(this));
         this.addLayer(new net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer<>(this,
                 ModelLayers.PLAYER_ARMOR.map(layer -> new ResidentArmorModel(context.bakeLayer(layer))),
                 net.minecraft.client.model.player.PlayerModel.createArmorMeshSet(new net.minecraft.client.model.geom.builders.CubeDeformation(.5F),new net.minecraft.client.model.geom.builders.CubeDeformation(1F))
@@ -59,6 +60,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         // The pose and the injured flag arrive separately; the lying hitbox needs both, so refit it once both are here.
         if(state.injured && villager.getBbWidth()<.5F && !villager.isBaby()) villager.refreshDimensions();
         state.onGround=villager.onGround();
+        state.partyHat=!state.injured && dev.villagefriends.Birthdays.wearingHat(villager);
         state.eyeLookX=state.eyeLookY=state.attention=0;
         var camera=Minecraft.getInstance().getCameraEntity();
         if(camera!=null && villager.isAlive() && !villager.isSleeping()) {

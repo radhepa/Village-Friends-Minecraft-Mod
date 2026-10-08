@@ -130,6 +130,16 @@ public record Society(String village, Map<String, Townsfolk> folk, Map<String, T
                 .filter(e -> !e.getValue().isEmpty()).sorted(Comparator.comparingInt((Map.Entry<String, String> e) -> order.indexOf(e.getValue())).thenComparing(e -> nameOf(e.getKey())))
                 .map(Map.Entry::getKey).toList();
     }
+    /** Residents at home whose birthday is {@code today}, by name. */
+    public List<Townsfolk> celebrants(long today) {
+        return living().stream().filter(t -> t.home() && Calendar.isBirthday(t.birthday(), today)).toList();
+    }
+    /** The next birthdays of residents at home, soonest first (today's included). */
+    public List<Townsfolk> birthdays(long today, int limit) {
+        return living().stream().filter(Townsfolk::home)
+                .sorted(Comparator.comparingInt((Townsfolk t) -> Calendar.daysUntil(t.birthday(), today)).thenComparing(Townsfolk::name))
+                .limit(limit).toList();
+    }
     /** News from the last {@code window} days, newest first. */
     public List<News> recent(long today, long window) {
         var list = new ArrayList<News>();
@@ -165,6 +175,24 @@ public record Society(String village, Map<String, Townsfolk> folk, Map<String, T
         var nextTies = new HashMap<>(ties); nextTies.put(key, next);
         return new Society(village, folk, nextTies, news, day);
     }
+    /**
+     * A letter carried from {@code from} to {@code to}: it counts as a day spent together, and an apology
+     * forgives their last quarrel.
+     */
+    public Society letter(String from, String to, long today, boolean apology) {
+        if (from.equals(to) || !folk.containsKey(from) || !folk.containsKey(to)) return this;
+        String key = Chemistry.pair(from, to); var tie = ties.getOrDefault(key, Tie.NONE); var next = tie.together(today);
+        if (apology) next = next.reconciled();
+        if (next.equals(tie)) return this;
+        var nextTies = new HashMap<>(ties); nextTies.put(key, next);
+        return new Society(village, folk, nextTies, news, day);
+    }
+    /** A player ({@code helper}, by name) answered a resident's notice on the village board. */
+    public Society helped(String poster, String helper, long today) {
+        if (!folk.containsKey(poster)) return this;
+        var nextNews = new ArrayList<>(news); nextNews.add(new News(today, "helped", poster, "", helper));
+        return new Society(village, folk, ties, nextNews, day);
+    }
     public Society passed(String id, long today) {
         var t = folk.get(id); if (t == null || !t.living()) return this;
         var work = new Work(this);
@@ -196,7 +224,8 @@ public record Society(String village, Map<String, Townsfolk> folk, Map<String, T
             work.link(baby, p, "parent");
         }
         var first = work.folk.get(parents.getFirst());
-        work.folk.put(baby, work.folk.get(baby).household(first.household().isEmpty() ? first.id() : first.household()));
+        // Their birthday is the day they were born.
+        work.folk.put(baby, work.folk.get(baby).household(first.household().isEmpty() ? first.id() : first.household()).born(today));
         work.news.add(new News(today, "born", baby, parents.getFirst(), parents.size() > 1 ? parents.get(1) : ""));
         return work.freeze(day);
     }
@@ -341,6 +370,8 @@ public record Society(String village, Map<String, Townsfolk> folk, Map<String, T
         void live(long d) {
             var people = folk.values().stream().filter(Townsfolk::home)
                     .sorted(Comparator.comparingLong(Townsfolk::joined).thenComparing(Townsfolk::id)).limit(WEB).toList();
+            // Birthdays: everyone at home who was already here before today.
+            for (var x : people) if (x.joined() < d && Calendar.isBirthday(x.birthday(), d)) news.add(new News(d, "birthday", x.id(), "", ""));
             int milestones = 0; boolean quarreled = false;
             String loveA = null, loveB = null; long loveScore = Long.MIN_VALUE;
             for (int i = 0; i < people.size(); i++) for (int j = i + 1; j < people.size(); j++) {

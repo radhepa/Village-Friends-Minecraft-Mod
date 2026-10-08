@@ -20,7 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 
 /**
- * Children's games on the client: the tags that pick game animations ({@code play:tag:it}, {@code moving}), which
+ * Children's games on the client: the tags that pick game animations ({@code game:tag:it}, {@code moving}), which
  * parts of a game play their clip once and which keep repeating it, and the leather ball in a game of catch, held
  * in the hand and then flying in an arc from thrower to catcher (or past them, when they fumble it).
  */
@@ -43,9 +43,9 @@ public final class PlaytimeClient {
         String state = state(v);
         if (state == null) return;
         String game = Games.game(state), role = Games.role(state);
-        tags.add("play:" + game);
-        if (role != null) tags.add("play:" + game + ":" + role);
-        if ("do".equals(role)) tags.add("play:" + state);
+        tags.add("game:" + game);
+        if (role != null) tags.add("game:" + game + ":" + role);
+        if ("do".equals(role)) tags.add("game:" + state);
         if (v.walkAnimation.speed() > .08F) tags.add("moving");
     }
 

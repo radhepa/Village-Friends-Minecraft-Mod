@@ -104,14 +104,14 @@ class PlayTest {
             for (int i = 0; i < 20; i++) assertEquals(clip.id(), PACK.pick("play", tags("follow_the_leader:do:" + move.id, false), random).id(), "only one clip per move");
         }
         // Adults never play.
-        assertNull(PACK.pick("play", Set.of("adult", "play:tag", "play:tag:run"), random), "grown-ups don't play tag");
+        assertNull(PACK.pick("play", Set.of("adult", "game:tag", "game:tag:run"), random), "grown-ups don't play tag");
     }
     private static Set<String> tags(String state, boolean moving) {
         var tags = new HashSet<String>(Set.of("child", "day", "personality:playful", "routine:play"));
         String game = Games.game(state), role = Games.role(state);
-        tags.add("play:" + game);
-        if (role != null) tags.add("play:" + game + ":" + role);
-        if ("do".equals(role)) tags.add("play:" + state);
+        tags.add("game:" + game);
+        if (role != null) tags.add("game:" + game + ":" + role);
+        if ("do".equals(role)) tags.add("game:" + state);
         if (moving) tags.add("moving");
         return tags;
     }

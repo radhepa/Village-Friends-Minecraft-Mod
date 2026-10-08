@@ -30,7 +30,7 @@ TRUNK = {"head": "head", "body": "body", "waist": "waist", "root": "root"}
 POSITIONS = {"root_pos": "root", "head_pos": "head", "body_pos": "body",
              "ra_pos": "right_arm", "la_pos": "left_arm", "rl_pos": "right_leg", "ll_pos": "left_leg"}
 TRIGGERS = {"idle", "greet", "talk", "chat_speak", "chat_listen", "laugh", "delighted", "thanks",
-            "decline", "happy", "love", "angry", "nervous", "hurt", "play"}
+            "decline", "happy", "love", "angry", "nervous", "hurt", "pet", "play"}
 
 
 def _channel_value(name, value):

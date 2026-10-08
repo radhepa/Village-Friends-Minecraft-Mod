@@ -80,15 +80,19 @@ public final class VillageFriends implements ModInitializer {
         NarrativeContent.register();
         dev.villagefriends.talk.DialogueBank.register();
         ResidentNames.register();
+        Birthdays.register();
+        VillageQuests.register();
+        dev.villagefriends.pet.VillagerPets.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
+        ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> dev.villagefriends.pet.VillagerPets.loaded(entity));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
             if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); if (Knockouts.knockedOut(villager)) Knockouts.lieDown(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); GuardPatrols.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); GuardPatrols.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
@@ -96,6 +100,7 @@ public final class VillageFriends implements ModInitializer {
         ServerTickEvents.END_SERVER_TICK.register(ResidentRoutines::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardPatrols::tick);
         ServerTickEvents.END_SERVER_TICK.register(Workstations::tick);
+        ServerTickEvents.END_SERVER_TICK.register(dev.villagefriends.pet.VillagerPets::tick);
         // Striking the training dummy measures the hit instead of breaking it.
         net.fabricmc.fabric.api.event.player.AttackBlockCallback.EVENT.register(Workstations::attack);
         ServerLivingEntityEvents.MOB_CONVERSION.register((before, after, params) -> transferIdentity(before, after));
@@ -104,14 +109,20 @@ public final class VillageFriends implements ModInitializer {
         ServerLivingEntityEvents.ALLOW_DEATH.register(GuardController::allowDeath);
         ServerLivingEntityEvents.AFTER_DEATH.register(GuardController::afterDeath);
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> { if (entity instanceof Villager v) VillageSocieties.died(v); });
+        ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> dev.villagefriends.pet.VillagerPets.died(entity));
         PayloadTypeRegistry.clientboundPlay().register(FriendshipPayload.TYPE, FriendshipPayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(EmotePayload.TYPE, EmotePayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(LedgerPayload.TYPE, LedgerPayload.CODEC);
         PayloadTypeRegistry.clientboundPlay().register(VillageArrivalPayload.TYPE, VillageArrivalPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(ActionPayload.TYPE, ActionPayload.CODEC);
         PayloadTypeRegistry.serverboundPlay().register(LedgerRequestPayload.TYPE, LedgerRequestPayload.CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(dev.villagefriends.pet.PetPayload.TYPE, dev.villagefriends.pet.PetPayload.CODEC);
+        PayloadTypeRegistry.serverboundPlay().register(dev.villagefriends.pet.PetActionPayload.TYPE, dev.villagefriends.pet.PetActionPayload.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(dev.villagefriends.pet.PetActionPayload.TYPE, (payload, context) -> dev.villagefriends.pet.VillagerPets.handleAction(context.player(), payload));
         ServerPlayNetworking.registerGlobalReceiver(ActionPayload.TYPE, (payload, context) -> handleAction(context.player(), payload));
         ServerPlayNetworking.registerGlobalReceiver(LedgerRequestPayload.TYPE, (payload, context) -> VillageLedger.request(context.player(), payload));
+        // A resident's cat or dog opens their pet card.
+        UseEntityCallback.EVENT.register((player, world, hand, entity, hit) -> dev.villagefriends.pet.VillagerPets.interact(player, world, hand, entity));
         UseEntityCallback.EVENT.register((player, world, hand, entity, hit) -> {
             if (!(entity instanceof Villager villager) || hand != InteractionHand.MAIN_HAND || player.isSpectator()) return InteractionResult.PASS;
             var held = player.getMainHandItem();
@@ -131,14 +142,14 @@ public final class VillageFriends implements ModInitializer {
             saveBond(villager, sp, bond(villager, sp).visit(day(world)));
             villager.getLookControl().setLookAt(player, 30, 30);
             show(sp, villager, "talk", NarrativeEngine.greeting(villager, sp), ResidentRoutines.doing(villager) + " · " + dev.villagefriends.routine.Routine.clock(ResidentRoutines.timeOfDay(world))
-                    + (dev.villagefriends.routine.Routine.marketDay(day(world)) ? " · Market Day" : ""), true);
+                    + (dev.villagefriends.routine.Routine.marketDay(day(world)) ? " · Market Day" : "") + Birthdays.status(villager), true);
             return InteractionResult.SUCCESS_SERVER;
         });
-        // A notice board reads out its village's ledger.
+        // A notice board shows its village's notices, birthdays and a way into the ledger.
         net.fabricmc.fabric.api.event.player.UseBlockCallback.EVENT.register((player, world, hand, hit) -> {
             if (hand != InteractionHand.MAIN_HAND || player.isShiftKeyDown() || player.isSpectator()
                     || !world.getBlockState(hit.getBlockPos()).is(VillageBlocks.get("notice_board"))) return InteractionResult.PASS;
-            if (player instanceof ServerPlayer sp && ServerPlayNetworking.canSend(sp, LedgerPayload.TYPE)) VillageLedger.openAt(sp, hit.getBlockPos());
+            if (player instanceof ServerPlayer sp) VillageQuests.open(sp, hit.getBlockPos());
             return InteractionResult.SUCCESS;
         });
         LOGGER.info("Village Friends ready: persistent residents, written stories, adventures, and modular appearances.");
@@ -185,7 +196,7 @@ public final class VillageFriends implements ModInitializer {
         copy(before, after, FRIENDSHIPS); copy(before, after, BONDS); copy(before, after, SHARED);
         copy(before, after, HOME); copy(before, after, HOME_LABEL);
         copy(before, after, GUARD_EQUIPPED);
-        copy(before, after, GUARD_PROGRESS); copy(before, after, GUARD_OBSERVED);
+        copy(before, after, GUARD_PROGRESS); copy(before, after, GUARD_OBSERVED); copy(before, after, dev.villagefriends.pet.VillagerPets.LINK);
         GuardProgression.converted(after);
         VillageSocieties.converted(before, after);
         target(after).setAttached(COMPANION, CompanionState.NONE);
@@ -248,10 +259,14 @@ public final class VillageFriends implements ModInitializer {
             show(p, v, "talk", reply, "Gift declined. Your item and gift allowance were kept.", false, stack.isEmpty() ? Emote.QUESTION : Emote.SWEAT); return;
         }
         int value = item.equals(profile.love()) ? 14 : GiftPreferences.value(profession(v), v.isBaby(), item);
+        // Birthdays: presents count double, and cake or a birthday card are everyone's favorite.
+        var birthday = Birthdays.gift(v, p, item, value, item.equals(profile.love()));
+        if (birthday != null) value = birthday.value();
         if (value == 0) { show(p, v, "talk", "That's thoughtful, but perhaps a flower, treat, or something for my hobby?", "Your item was kept.", false, Emote.QUESTION); return; }
         var next = old.gift(today, item, value); if (!p.getAbilities().instabuild) stack.shrink(1); save(v, p, next);
-        saveBond(v, p, b.trust(item.equals(profile.love()) ? 2 : 1).remember(today, "You gave me " + itemName(item) + "."));
+        saveBond(v, p, bond(v, p).trust(item.equals(profile.love()) || birthday != null ? 2 : 1).remember(today, birthday != null ? birthday.memory() : "You gave me " + itemName(item) + "."));
         celebrate(v, old, next);
+        if (birthday != null) { show(p, v, "talk", birthday.reply(), "+" + (next.points() - old.points()) + " friendship. " + birthday.status(), false, birthday.mood()); return; }
         show(p, v, "talk", item.equals(profile.love()) ? "You remembered! " + itemName(item) + " is one of my favorites. Thank you for paying attention."
                 : "What a lovely surprise. Thank you for thinking of me!", "+" + (next.points() - old.points()) + " friendship. Gifts help; shared experiences deepen our bond.", false,
                 item.equals(profile.love()) ? Emote.HEART : Emote.NOTE);
@@ -296,6 +311,8 @@ public final class VillageFriends implements ModInitializer {
         }
         var town = VillageSettlements.home(v); var society = VillageSocieties.of(v);
         String family = society == null || !society.has(profile.id()) ? "" : String.join(" · ", dev.villagefriends.social.Gossip.about(society, profile.id(), day(v.level())).stream().limit(2).toList());
+        String pet = dev.villagefriends.pet.VillagerPets.petLine(v);
+        if (!pet.isEmpty()) family = family.isEmpty() ? pet : family + " · " + pet;
         if (emote != null) VillageSocieties.emote(v, emote, 0);
         ServerPlayNetworking.send(p, new FriendshipPayload(v.getId(), v.getUUID(), name(v), label, personality,
                 affinity.points(), b.level(affinity), FriendshipLevels.threshold(Math.min(FriendshipLevels.MAX, friendLevel + 1)), affinity.giftsLeft(day(v.level())), affinity.canTalk(day(v.level())),

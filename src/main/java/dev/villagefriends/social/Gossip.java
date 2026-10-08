@@ -113,6 +113,10 @@ public final class Gossip {
             case "grew_up" -> n.a().equals(me) ? "I'm all grown up now! Everyone keeps saying so, anyway." : "Can you believe " + a + " is all grown up? It feels like yesterday " + a + " was playing tag by the bell.";
             case "arrived" -> n.a().equals(me) ? "Me! I'm the news. I only just settled here." : "There's a new face in town: " + a + ". Say hello if you pass by.";
             case "family" -> mine ? "I came here with family. It's good to start somewhere new together." : a + " and " + b + " moved here together. Family is a good thing to bring along.";
+            case "birthday" -> n.a().equals(me) ? "Well... it was my birthday! Everyone sang by the bell. Badly, but with feeling."
+                    : "It was " + a + "'s birthday! There was cake by the bell and somebody tried to juggle. Ask " + a + " about it.";
+            case "helped" -> n.a().equals(me) ? n.c() + " answered my notice on the board. I didn't even have to ask twice!"
+                    : n.c() + " took care of " + a + "'s notice on the board. Good people are worth gossiping about.";
             default -> "Oh, the usual comings and goings.";
         };
     }
@@ -148,6 +152,10 @@ public final class Gossip {
     /** A breathless "did you hear?" for the first hello after something big happened, or "". */
     public static String greeting(Society s, String me, long day, int salt) {
         for (var n : s.recent(day, 1)) {
+            if (n.kind().equals("birthday")) {
+                if (n.a().equals(me) || n.day() != day || salt % 3 != 0) continue;
+                return "Oh! Did you know it's " + first(s.nameOf(n.a())) + "'s birthday today? Party by the bell this evening!";
+            }
             if (!List.of("sweethearts", "married", "born", "cured").contains(n.kind()) || salt % 2 != 0) continue;
             return "Oh! Did you hear? " + tell(s, me, n);
         }
@@ -170,6 +178,10 @@ public final class Gossip {
         String friend = s.bestFriend(me, day), rival = s.rival(me, day);
         if (!friend.isEmpty()) lines.add("Closest friend: " + s.nameOf(friend) + " (" + Relations.feeling(s.affinity(me, friend, day)).toLowerCase(Locale.ROOT) + ")");
         if (!rival.isEmpty()) lines.add("Not fond of: " + s.nameOf(rival));
+        if (self.living()) {
+            int until = Calendar.daysUntil(self.birthday(), day);
+            lines.add("Birthday: " + Calendar.birthdayDate(self.birthday()) + (until == 0 ? " (today!)" : until <= 14 ? " (" + Calendar.when(until) + ")" : ""));
+        }
         return lines;
     }
     private static String join(List<String> parts) {
