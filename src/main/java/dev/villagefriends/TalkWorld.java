@@ -173,8 +173,6 @@ public final class TalkWorld {
     /** Sometimes, on "How's your day?", a resident asks you something or offers to help instead. */
     public static DialogueBank.Question ask(Villager v, ServerPlayer p) {
         var bank = DialogueBank.current(); var b = bond(v, p);
-        // Residents warm up before they start quizzing you: not on the day you first meet.
-        if (b.visits() < 2) return null;
         var c = context(v, p, "chat");
         long today = day(v.level());
         var done = new HashSet<String>();
@@ -185,7 +183,8 @@ public final class TalkWorld {
         DialogueBank.Question q = null;
         // Children ask questions, but only grown-ups make offers.
         if (!v.isBaby() && RANDOM.nextFloat() < .7F) q = Talk.question(bank, c, done, true, RANDOM);
-        if (q == null && RANDOM.nextFloat() < .24F) q = Talk.question(bank, c, done, false, RANDOM);
+        // They'll help a stranger, but they warm up before quizzing you: not on the day you first meet.
+        if (q == null && b.visits() >= 2 && RANDOM.nextFloat() < .24F) q = Talk.question(bank, c, done, false, RANDOM);
         if (q == null) return null;
         var next = b;
         for (var flag : b.flags()) if (flag.startsWith("asking:")) next = next.unflag(flag);
