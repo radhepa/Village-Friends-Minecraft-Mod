@@ -1,0 +1,150 @@
+{
+ "format": 1,
+ "size": [7, 6, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:dirt_path"
+  },
+  "C": {
+   "id": "minecraft:grass_block"
+  },
+  "D": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "E": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "F": {
+   "id": "minecraft:gravel"
+  },
+  "G": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "H": {
+   "id": "minecraft:acacia_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "J": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:packed_mud"
+  },
+  "L": {
+   "id": "minecraft:tall_grass"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "CABBBAA",
+    "DABBBCC",
+    "AABFBCC",
+    "DDBFBDA",
+    "DCAKACA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".A.I.AA",
+    ".A.....",
+    "AA.....",
+    "..G.G.A",
+    ".LAEAHA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".A...AA",
+    ".A.....",
+    "AA.....",
+    "......A",
+    ".AAEAAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".A...AA",
+    ".A.....",
+    "AA.....",
+    "......A",
+    ".AAEAAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".A...AA",
+    ".A.....",
+    "AA.....",
+    "......A",
+    ".AAJAAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".A...AA",
+    ".A.....",
+    "AA.....",
+    "......A",
+    ".AA.AAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/streets.py",
+  "checksum": "89753d33f7e16e53"
+ }
+}

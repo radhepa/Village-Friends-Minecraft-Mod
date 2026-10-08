@@ -3,6 +3,10 @@
     {
       "structure": "villagefriends:village",
       "weight": 1
+    },
+    {
+      "structure": "villagefriends:village_savanna",
+      "weight": 1
     }
   ],
   "placement": {

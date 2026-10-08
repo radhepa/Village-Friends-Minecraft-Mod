@@ -2726,6 +2726,3552 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/savanna/apothecary",
+      "size": [
+        11,
+        14,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "apothecary_bedroom",
+          "min": [
+            3,
+            2,
+            12
+          ],
+          "max": [
+            7,
+            5,
+            13
+          ],
+          "probe": [
+            5,
+            2,
+            13
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          6
+        ],
+        [
+          5,
+          2,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          12
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            7,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:alchemical_press",
+          "pos": [
+            2,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            8,
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/avenue",
+      "size": [
+        5,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            16
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            18
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            20
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            22
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/avenue_bend",
+      "size": [
+        8,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            11
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            14
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            17
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            19
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            20
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            22
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            23
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/chapel",
+      "size": [
+        17,
+        22,
+        24
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          2,
+          3
+        ],
+        [
+          8,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/end_fade",
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/end_gate",
+      "size": [
+        17,
+        11,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/end_lamp",
+      "size": [
+        7,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/garrison",
+      "size": [
+        17,
+        16,
+        23
+      ],
+      "rooms": [
+        {
+          "name": "bunk_room",
+          "min": [
+            9,
+            2,
+            15
+          ],
+          "max": [
+            14,
+            5,
+            20
+          ],
+          "probe": [
+            11,
+            2,
+            17
+          ],
+          "beds": 4
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          14
+        ],
+        [
+          8,
+          2,
+          17
+        ]
+      ],
+      "bed_feet": [
+        [
+          13,
+          2,
+          16
+        ],
+        [
+          10,
+          2,
+          19
+        ],
+        [
+          12,
+          2,
+          19
+        ],
+        [
+          14,
+          2,
+          19
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            6,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:command_desk",
+          "pos": [
+            3,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            5,
+            2,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/library",
+      "size": [
+        11,
+        15,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "scholar_bedroom",
+          "min": [
+            2,
+            2,
+            11
+          ],
+          "max": [
+            8,
+            5,
+            13
+          ],
+          "probe": [
+            5,
+            2,
+            12
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          5,
+          2,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          12
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:archives",
+          "pos": [
+            3,
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/market_kraal",
+      "size": [
+        11,
+        8,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/market_shade",
+      "size": [
+        11,
+        10,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/market_stalls",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/plaza_market",
+      "size": [
+        33,
+        20,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/workshop"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/apothecary"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/chapel"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/garrison"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/library"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/tavern"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            6,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            28,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            10,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            22,
+            1,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            22
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            25,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            26
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            19,
+            1,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/plaza_meeting_tree",
+      "size": [
+        33,
+        20,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/garrison"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/library"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/tavern"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/workshop"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/apothecary"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/chapel"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            19,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            6,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            28,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            6,
+            1,
+            22
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            24,
+            1,
+            22
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            26,
+            1,
+            22
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            4,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            8,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            6,
+            1,
+            26
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            28
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            25,
+            2,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/plaza_waterhole",
+      "size": [
+        33,
+        16,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/tavern"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/apothecary"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/garrison"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/chapel"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/library"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/buildings/workshop"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            25,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            7,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            25,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            22,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            24,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            23,
+            1,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/street_bend_left",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            9
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_bend_right",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_crossroads",
+      "size": [
+        13,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_fork",
+      "size": [
+        15,
+        6,
+        8
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_square",
+      "size": [
+        15,
+        8,
+        15
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/street_straight_lamp",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_straight_long",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_straight_short",
+      "size": [
+        5,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_tee_left",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_tee_right",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_turn_left",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            5
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/street_turn_right",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/savanna/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/tavern",
+      "size": [
+        17,
+        22,
+        29
+      ],
+      "rooms": [
+        {
+          "name": "guest_room_north",
+          "min": [
+            2,
+            7,
+            8
+          ],
+          "max": [
+            7,
+            9,
+            14
+          ],
+          "probe": [
+            5,
+            7,
+            11
+          ],
+          "beds": 2
+        },
+        {
+          "name": "guest_room_south",
+          "min": [
+            2,
+            7,
+            16
+          ],
+          "max": [
+            7,
+            9,
+            21
+          ],
+          "probe": [
+            5,
+            7,
+            19
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          7
+        ],
+        [
+          13,
+          2,
+          22
+        ],
+        [
+          7,
+          2,
+          25
+        ],
+        [
+          8,
+          7,
+          11
+        ],
+        [
+          8,
+          7,
+          18
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          9
+        ],
+        [
+          3,
+          7,
+          12
+        ],
+        [
+          3,
+          7,
+          17
+        ],
+        [
+          3,
+          7,
+          20
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            14,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            12,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            13,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            14,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            12,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            14,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tap_stand",
+          "pos": [
+            14,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:drinks_barrel",
+          "pos": [
+            14,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            2,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            3,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            4,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            2,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:kitchen_stove",
+          "pos": [
+            11,
+            2,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/workshop",
+      "size": [
+        17,
+        14,
+        20
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            2,
+            13
+          ],
+          "max": [
+            8,
+            5,
+            15
+          ],
+          "probe": [
+            5,
+            2,
+            14
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          7
+        ],
+        [
+          5,
+          2,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          14
+        ],
+        [
+          7,
+          2,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:sawmill",
+          "pos": [
+            13,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            8,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:sewing_table",
+          "pos": [
+            3,
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/shepherd",
       "size": [
         15,
@@ -4985,6 +8531,65 @@
           "pool": "villagefriends:village/buildings/library",
           "templates": [
             "villagefriends:village/library"
+          ]
+        }
+      ],
+      "resident_minimum": 10
+    },
+    {
+      "type": "savanna",
+      "structure": "villagefriends:village_savanna",
+      "start_pool": "villagefriends:village/savanna/town_centers",
+      "start_jigsaw": "villagefriends:town_start",
+      "min_pieces": 20,
+      "depth": 6,
+      "max_distance": 100,
+      "biomes": [
+        "minecraft:savanna"
+      ],
+      "required_modules": [
+        {
+          "pool": "villagefriends:village/savanna/town_centers",
+          "templates": [
+            "villagefriends:village/savanna/plaza_meeting_tree",
+            "villagefriends:village/savanna/plaza_market",
+            "villagefriends:village/savanna/plaza_waterhole"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/tavern",
+          "templates": [
+            "villagefriends:village/savanna/tavern"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/garrison",
+          "templates": [
+            "villagefriends:village/savanna/garrison"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/workshop",
+          "templates": [
+            "villagefriends:village/savanna/workshop"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/chapel",
+          "templates": [
+            "villagefriends:village/savanna/chapel"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/apothecary",
+          "templates": [
+            "villagefriends:village/savanna/apothecary"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/savanna/buildings/library",
+          "templates": [
+            "villagefriends:village/savanna/library"
           ]
         }
       ],

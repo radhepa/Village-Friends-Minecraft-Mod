@@ -1,0 +1,32 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/plaza_meeting_tree",
+        "processors": "villagefriends:savanna_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/plaza_market",
+        "processors": "villagefriends:savanna_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/plaza_waterhole",
+        "processors": "villagefriends:savanna_weathered",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
