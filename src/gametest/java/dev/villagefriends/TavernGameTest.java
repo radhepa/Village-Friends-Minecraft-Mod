@@ -126,7 +126,7 @@ public final class TavernGameTest implements FabricClientGameTest {
             });
             check(expected >= 5, "Plenty of residents spend Market Day evening at the tavern: " + expected);
             boolean carried = false; int[] now = {0, 0, 0, 0};
-            for (int i = 0; i < 90; i++) {
+            for (int i = 0; i < 120; i++) {
                 c.waitTicks(20);
                 if (!carried) carried = w.getServer().computeOnServer(s -> { var k = villager(w, keeper); return k != null && state(k) != null && state(k).startsWith("carry"); });
                 now = census(w, patrons);
@@ -173,10 +173,12 @@ public final class TavernGameTest implements FabricClientGameTest {
             w.getServer().runCommand("gamemode spectator @a");
             c.runOnClient(client -> { if (!client.gui.hud.isHidden()) client.gui.hud.toggle(); });
             double cx = size[0] / 2.0, cz = size[2] / 2.0;
-            view(c, w, cx, GROUND + size[1] * .55, -7, 0, 28, "front");
-            view(c, w, 2.6, GROUND + 3.4, 6.2, -50, 22, "hall");
-            view(c, w, size[0] - 2.4, GROUND + 3.4, cz + 3, 135, 24, "hall-back");
-            view(c, w, cx, GROUND + 5.5, cz, 0, 70, "overhead");
+            view(c, w, cx + 9, GROUND + size[1] * .6, -9, 30, 26, "front");
+            view(c, w, 8.5, GROUND + 3.7, 8.2, 0, 16, "hall-from-door");
+            view(c, w, 9.5, GROUND + 4.4, 19.6, 160, 22, "hall-from-back");
+            view(c, w, 7.5, GROUND + 3.9, 14.5, 90, 20, "hearth");
+            view(c, w, 8.5, GROUND + 3.9, 12.5, -90, 18, "bar");
+            view(c, w, 8.5, GROUND + 3.4, 1.0, 0, 18, "terrace");
             // Close-ups of two diners from beside their table, served ones first.
             for (int i = 0; i < 30 && w.getServer().computeOnServer(s -> patrons.stream().noneMatch(id -> Seat.seated(villager(w, id)) && state(villager(w, id)) != null
                     && (state(villager(w, id)).startsWith("eat") || state(villager(w, id)).startsWith("drink")))); i++) c.waitTicks(20);
@@ -248,6 +250,8 @@ public final class TavernGameTest implements FabricClientGameTest {
                 if (eatingLunch >= Math.min(2, lunchers)) break;
             }
             LOGGER.info("TAVERN LUNCH: {} lunching at the tavern, {} eating", lunchers, eatingLunch);
+            String lunchState = w.getServer().computeOnServer(s -> Taverns.describe(level(w)));
+            LOGGER.info("TAVERN LUNCH STATE: {}", lunchState);
             if (lunchers > 0) {
                 check(eatingLunch >= 1, "Tavern lunchers get their lunch");
                 w.getServer().runOnServer(s -> {
@@ -260,7 +264,7 @@ public final class TavernGameTest implements FabricClientGameTest {
                 });
                 w.getServer().runCommand("gamemode spectator @a");
                 c.runOnClient(client -> { if (!client.gui.hud.isHidden()) client.gui.hud.toggle(); });
-                view(c, w, 2.6, GROUND + 3.4, 6.2, -50, 22, "lunch");
+                view(c, w, 8.5, GROUND + 3.7, 8.2, 0, 16, "lunch");
                 c.runOnClient(client -> { if (client.gui.hud.isHidden()) client.gui.hud.toggle(); });
             }
             check(w.getServer().computeOnServer(s -> villager(w, cook) != null), "The cook is still about");

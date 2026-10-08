@@ -162,7 +162,7 @@ public final class StructuresGameTest implements FabricClientGameTest {
                     // Terrain-matching streets follow the ground column by column, so their decor has no fixed template height.
                     if(poolPiece.getElement().getProjection()!=net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool.Projection.TERRAIN_MATCHING)
                         rooms(level,info,poolPiece.getPosition(),poolPiece.getRotation());
-                    if(id.getPath().equals("village/tavern"))views.add(new View(at(new BlockPos(8,2,6),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"tavern"));
+                    if(id.getPath().equals("village/tavern"))views.add(new View(at(new BlockPos(8,2,7),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"tavern"));
                     if(id.getPath().equals("village/family_house"))views.add(new View(at(new BlockPos(6,6,6),poolPiece.getPosition(),poolPiece.getRotation()),poolPiece.getRotation().rotate(Direction.SOUTH).toYRot(),"bedroom"));
                     for(var anchor:info.getAsJsonArray("anchors"))if(anchor.getAsJsonObject().get("id").getAsString().equals("villagefriends:house_plaque"))
                         fixtures.add(at(pos(anchor.getAsJsonObject().getAsJsonArray("pos")),poolPiece.getPosition(),poolPiece.getRotation()));

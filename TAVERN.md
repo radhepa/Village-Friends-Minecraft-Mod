@@ -1,111 +1,127 @@
 # The tavern: lunch, supper and evenings at The Hearth
 
-Status: **plan** (2026-10-08). Branch `tavern`, worktree `.claude/worktrees/tavern`. This file becomes the feature's documentation once it ships, like VILLAGE_DAYS.md.
+Version 2.19 makes the tavern a place residents actually use. Their day takes them there for lunch, for supper and for an evening out; they find a seat with the people they like, sit down, are served by the tavern keeper (and the cook, at mealtimes), eat and drink course by course, talk across the table, warm their hands at the fire, listen to the bard, and get up again when their hour is over. The plains tavern, The Hearth, was rebuilt for it.
 
-## Where we are today
+Before 2.19, residents with a tavern part of their day walked to within five blocks of the keeper's barrel and stood there; nobody sat, ate or drank.
 
-Mapped with the knowledge graph (`graphify query "tavern inn meals"`, `graphify path "Routine" "ResidentRoutines"`) and by reading the code:
+## Where things live
 
-- `Routine` already has three tavern parts of the day: `LUNCH_TAVERN` (a third of adults, fixed per person), `TAVERN` evenings (a third of nights, everyone on Market Day) and the bard's `PERFORM`. The tavern keeper works 11:00–19:45 and is a night owl.
-- `ResidentRoutines.steer` walks those residents to within five blocks of the nearest tavern keeper station (drinks barrel or tap stand) and then they **just stand there**. Nobody sits, eats, drinks or talks at a table. DEVELOPMENT.md lists seating as future work.
-- The plains tavern ("The Hearth", `tavern()` in `buildings/civic.py`) is 17×21 with nine seats: stair chairs at fence-and-pressure-plate tables, two benches on the terrace, a bar at the back, a fireplace, the cook's kitchen wing and two guest rooms. A typical village has 28–54 residents (median 38), so it is far too small for a lunch crowd, let alone Market Day.
-- The unmerged `village-biomes` worktrees have desert, savanna, snowy and taiga taverns built the same way (stair chairs, fence tables, a tap stand and drinks barrel).
-- Food and drink already exist: Mug of Cider and Steaming Coffee Mug (poured at the barrel and tap stand, whose stock the keeper refills), Fresh Village Bread and Hearty Stew (the cook's dish of the day at the kitchen stove).
-- Residents can't play animations while riding anything (`ResidentLife.canAct`, `ResidentAnimation.canAnimate`), and the routine stops for passengers.
-
-## What residents will do
-
-1. **Go at the right times.** Lunch at the tavern on some days (habit plus a daily roll), **supper at the tavern** (new), evenings for a drink, the odd afternoon pint on their hobby time, and most of the village on Market Day evening. Social personalities go more, reserved ones less. Rain drives the bell's lunch crowd into the tavern.
-2. **Find a seat with their people.** Each arrival picks a seat by who is already sitting at each table: partners, family and best friends pull them in, rivals push them away, reserved residents like a quiet corner, the cold-blooded like the hearth, and fair weather fills the terrace. When every seat is taken they stand at the bar, and when that is full they mingle in the room.
-3. **Sit down for real.** A resident at their seat sits on it (an invisible seat entity they ride, so vanilla handles the pose, pushing and saving), facing the table.
-4. **Order and be served.** Diners wait (rubbing their hands, craning for the keeper). The tavern keeper picks the order up at the bar and carries it to the table, plate in hand. Lunch and supper are the cook's dish of the day when the cook is working (stew, bread, and the new **Ploughman's Lunch**, **Shepherd's Pie** and **Apple Tart**), drinks come from the barrel and tap stand **and use up their stock**, which the keeper refills. With no keeper on duty, patrons help themselves after a moment.
-5. **Eat and drink.** The dish sits on the table in front of them (whatever table it is: stair-chair taverns too) and moves to their hand for each bite or sip. Spoonfuls of stew, tearing bread, a forkful of pie, blowing on hot coffee, a toast, clinking mugs, patting a full belly, peering into an empty mug.
-6. **Talk to friends.** Tablemates take turns speaking and listening with seated gestures, turn their heads to each other, laugh and slap the table. Sharing a meal counts as extra time together in the village's relationship model, and the usual chat bubbles show how they feel about each other.
-7. **Enjoy the place.** Warm their hands at the hearth, look up at the beams, lean back, doze off late in the evening, and when the bard performs on the tavern's little stage, sway, clap and tap along.
-8. **Leave when the hour is up**, stand up and head back to work or home.
-
-The tavern keeper works the bar, serves, and wipes the tables between customers; the cook gets an evening shift for supper. Players can sit on the new chairs, stools and benches too.
-
-## How it fits into the code
-
-New package `dev.villagefriends.tavern` keeps almost everything out of files the other sessions are editing.
-
-| Piece | Kind | Job |
-|---|---|---|
-| `Patronage` | pure, unit-tested | Who goes to the tavern when (lunch, supper, evening, afternoon pint), seat scoring from relationships and personality, meal timings, the menu |
-| `TavernSurvey` | world | Finds a tavern's building (its structure piece from `StructureManager.getStructureWithPieceAt`, so it works for every village type; a 10-block box around the keeper's station for player-built taverns) and lists its seats, tables, bar, hearth, stage and standing room. Cached per tavern, refreshed every minute |
-| `Taverns` | world, server tick | Seat claims, the order queue, table service by the keeper, each patron's visit (arrive, sit, wait, eat, linger, leave), self-service when no keeper is on duty |
-| `Seat` | entity `villagefriends:seat` | Invisible, saved with its rider, discarded when empty; ejects a rider who panics, is hurt, knocked out, recruited or trading |
-| `TavernBlocks`, `TavernItems` | registry | Furniture and meals, registered from one `Taverns.register()` call |
-| `TavernClient` (client) | renderer hooks | Seat renderer, the dish on the table or in hand, seated animation tags |
-
-Attachments: `villagefriends:tavern` (synced string, e.g. `eat:villagefriends:hearty_stew`, `drink:villagefriends:mug_of_cider`, `wait`, `done:…`, `carry:…` for the keeper) drives animation tags and props. Whether someone is seated comes from their vehicle.
-
-Hooks in shared files are one or two lines each: `Taverns.register()` in `VillageFriends`, `TavernClient.register()` in `VillageFriendsClient`, the tavern case of `ResidentRoutines.steer`, the passenger check in `ResidentRoutines.update`, the prop hook in `ResidentRenderer`, and seated support in `ResidentLife`, `ResidentAnimation` and `ResidentPoser`.
-
-### The day (Routine)
-
-| Who | Change |
+| Piece | Code |
 |---|---|
-| Adults | Lunch at the tavern by habit and a daily roll (tavern regulars about 70% of days, others about 15%), from 11:15 to grab a table. New block **`SUPPER_TAVERN`** "Supper at the tavern" (17:15–18:30) about one evening in five, more for warmhearted and playful residents, nearly half on Market Day. Evenings at the tavern stay about one in three. Market Day evening goes from everyone to about two in three (the rest stay home), because no building holds a whole village. |
-| Rain | Lunch at the bell becomes lunch at the tavern. |
-| Tavern keeper | Works 11:00–21:00 (was 19:45) for the evening crowd. |
-| Cook | A supper shift 16:00–19:00 at the kitchen stove. |
+| Who goes when (pure, unit-tested) | `routine/Routine.java`: `tavernLunch`, `tavernSupper`, `tavernNight`, `afternoonPint`, `sociable`, the `SUPPER_TAVERN` block, `atTavern` |
+| Seat choice, the menu, meal timings (pure, unit-tested) | `tavern/Patronage.java` |
+| Reading a tavern's building | `tavern/TavernSurvey.java` |
+| Running the tavern: seats, orders, table service, leaving | `tavern/Taverns.java` (one `Taverns.register()` call from `VillageFriends`) |
+| Sitting | `tavern/Seat.java` (entity `villagefriends:seat`) |
+| Furniture and meals | `tavern/TavernBlocks.java`, `tavern/TavernItems.java`; models from `tools/tavern/furniture.py`, sprites from `tools/tavern/sprites.py` |
+| Client: dishes on tables and in hands, animation tags | `client/TavernClient.java`, hooks in `ResidentRenderer`, `ResidentLife`, `ResidentAnimation`, `ResidentPoser` |
+| Animations | `tools/animations/tavern/*.py` compiled to `resident_animations/tavern.json`; seated previews with `tools/animations/tavern_preview.py` |
+| The building | `tavern()` in `tools/village_design/buildings/civic.py` |
+| Supper dialogue | `tools/dialogue/lines/tavern.txt` |
 
-### Seats and tables
+`ResidentRoutines` calls `Taverns.update` once a second for every resident; while their part of the day is at the tavern it takes over from the old "walk to the barrel" steering, and when it isn't it stands them up and gives their seat back.
 
-Recognized seats: the new Tavern Chair, Bar Stool and Fireside Armchair, the existing Village Bench and Campfire Bench, and bottom straight stairs with a table in front of them (the way every existing tavern builds chairs). Tables: the new Tavern Table, any fence topped with a pressure plate or carpet, and the bar counter for stools. Seats next to a lit fire are hearth seats; seats under open sky are terrace seats (skipped in rain).
+## The day
 
-### Animations: a new "Tavern" pack
+| Who | When |
+|---|---|
+| Lunch | A third of adults are tavern regulars who lunch there about 70% of days; the rest go about one day in eight. Sociable personalities go more often, reserved and meticulous ones less, and Market Day adds 15 points. Tavern lunches start at 11:15, a quarter of an hour early, to get a table. |
+| Supper | **New part of the day, "Supper at the tavern"** (`SUPPER_TAVERN`, 17:15–18:30): about one evening in five, nearly half on Market Day. |
+| Evenings | About one evening in three (two in three on Market Day; it used to be everyone, which no building could hold). Night owls stay latest. |
+| Afternoons | Now and then a free afternoon becomes a drink at the tavern. |
+| Rain | Lunch at the bell moves into the tavern, and the warmest-hearted neighbors wait out a wet afternoon there instead of at home. |
+| Tavern keeper | Works 11:00–21:00 (was 19:45). |
+| Cook | Comes back to the kitchen at 16:00 for the supper service and eats late at home. |
+| Bard | Plays the tavern's stage 18:00–20:15, then stays for a drink. |
 
-`tools/animations/tavern/*.py`, compiled by the same `animations.py` to `resident_animations/tavern.json` (separate from village_life.json, so the two packs never conflict). New tags: `seated`, `tavern`, `dining:wait|eat|drink|done|carry`, `food:stew|bread|pie|platter|tart`, `drink:cider|coffee`, `music` (a bard performing nearby), `hearth`. While seated only clips that require `seated` play for idles and chats; reactions use seated versions where they exist, and legs and root never move.
+Children don't go to the tavern.
 
-About fifty clips:
+## A visit
+
+1. **A seat.** On arrival a resident scores every free seat (`Patronage.score`). Partners, family and best friends at a table pull them in; rivals push them away; friendly residents like a busy table and reserved ones a quiet one; the hearth draws people on cold nights and in the evening; the terrace fills on fine lunch hours and is closed in rain and snow; diners would rather have a table than a bar stool, while a quiet drinker likes the bar. With every seat taken they stand at the bar, and in a packed house they find a bit of floor. Someone who can't find a way to their chair within fifteen seconds picks another.
+2. **Sitting down.** At their chair they ride an invisible `Seat`, so vanilla gives them the sitting pose, keeps them from being pushed around and saves them with it. They perch a little forward, square to the table; their head is free to look around. A seat stands its resident up if they are hurt, frightened (panic, raids, hiding), knocked out, recruited as a companion, or their hour is over.
+3. **Ordering.** A moment after sitting down they order (`Patronage.order`): at lunch the cook's dish of the day, then a drink; at supper the next dish in the rotation, a drink, and sometimes an apple tart; in the evening drinks, now and then with a tart. With nobody at the stove, lunch is a cold ploughman's.
+4. **Service.** The tavern keeper goes to the bar (the drinks barrel for cider, the tap stand for coffee), serves anyone waiting at the counter straight away, then carries a tray of up to three orders out to tables close together, nearest first. While the stove is lit, the cook brings food out from the kitchen the same way. Drinks come out of the barrel's and tap stand's own stock, which players see go down; a keeper taps a fresh barrel when one runs dry. With no staff on duty, patrons help themselves after a few seconds; anyone kept waiting by a busy keeper (20 seconds at lunch, 30 at supper, 45 in the evening) fetches it themselves.
+5. **Eating and drinking.** The dish sits on the table in front of them (whatever table it is: a Tavern Table, a fence with a pressure plate, a bar counter) and moves to their hand for each bite or sip. A meal takes 18–28 seconds, a mug 25–45; between courses they talk. You hear the odd bite and sip, and see crumbs.
+6. **Afterwards.** An empty bowl or mug stays on the table until they order again or leave. When a table empties, the keeper comes over and wipes it down when nobody is waiting.
+
+The bard performs from the stage (a note block or jukebox in the tavern; otherwise by the bar), one song after another; patrons nearby get the `music` tag and sway, clap and tap along.
+
+What each patron is doing is shared with clients as the synced attachment `villagefriends:tavern` (`wait`, `eat:<item>`, `drink:<item>`, `done[:<leftover>]`, `carry:<item>` for staff, `wipe`). The conversation window's status line shows it ("Supper at the tavern · eating shepherds pie"). Everything else is kept in memory; a resident who was seated when the world was saved keeps their seat and simply orders again.
+
+## Which buildings count
+
+`TavernSurvey` reads the building around the keeper's station: the village structure piece it stands in (so taverns of every village type, including the desert, savanna, snowy and taiga taverns on the `village-biomes` branch, work without changes), or a box 14 blocks around the station for a tavern players built themselves. It is surveyed when first visited and again every minute.
+
+- **Seats:** Tavern Chair, Bar Stool, Fireside Armchair, Village Bench, Campfire Bench, and any bottom straight stair with a table in front of it (the stair chairs every village building has). A seat needs open space above it.
+- **Tables:** Tavern Tables and fences topped with a pressure plate or carpet; adjacent ones make one long table. A stool's table is the bar counter in front of it: anything solid to about waist height with nothing (or a slab) on top.
+- **Hearth seats:** within four blocks of a lit campfire or fire. **Terrace seats:** under open sky.
+- **Standing room:** free floor under a roof within seven blocks of a keeper's station, beside a counter, a little apart.
+- **The stage:** the first note block or jukebox in the building.
+
+Players can sit on every seat too: use one with an empty hand (sneak to get up). Ordinary staircases are left alone, since a stair only counts with a table in front of it.
+
+## The Hearth, rebuilt
+
+17 wide and 29 deep (was 21), facing the town square:
+
+- **Beer garden** (front): a plank deck under a pergola with lanterns and azalea, two trestle tables with benches (8 seats).
+- **Common room:** the fireplace on the west wall with two Fireside Armchairs and a settle (4 hearth seats), two long tables of three Tavern Tables with chairs down both sides (12), a square Tavern Table and an old fence table (8), the bar along the east side with five Bar Stools and room to stand between them, and the bard's dais by the door with its note block. Lanterns, a chandelier, rugs, banners, kegs and hanging herbs.
+- **Behind the bar:** the keeper's well with the tap stand and drinks barrel, kegs, shelves and a serving hatch to the kitchen.
+- **Kitchen wing:** the cook's stove, smoker, prep table, pantry and a back door to the yard.
+- **Upstairs:** two guest rooms with two beds each.
+
+37 seats in all, 10 of them by the fire. The village simulation over 300 seeds still never misses a required building.
+
+## Furniture and food
+
+| Block | |
+|---|---|
+| Tavern Table | Dark oak trestle table on a centre post; a row of them makes one long board. Dishes sit on its top (14/16). |
+| Tavern Chair | Spruce, spindle-backed. |
+| Bar Stool | Round seat on a post with an iron foot ring; turns to the counter beside it. |
+| Fireside Armchair | Deep red, buttoned and brass-tacked, for the hearth. |
+
+`facing` is the way the sitter faces, like the Village Bench. Recipes: tables (slabs, fence, planks; makes 2), chairs (planks and sticks; makes 2), stools (a slab and sticks), armchairs (wool, red dye or red wool, planks).
+
+| Meal | |
+|---|---|
+| Ploughman's Lunch | Bread, cheese, an apple and a pickle on a board (7 hunger). Bread, an apple and a beetroot. |
+| Shepherd's Pie | Lamb and mash in a terracotta dish (9). Cooked mutton, a baked potato and a carrot. |
+| Apple Tart | A lattice-top tart (5). An apple, sugar, wheat and an egg. |
+
+The cook's dish of the day at the kitchen stove now rotates through hearty stew, shepherd's pie, fresh bread and a ploughman's lunch, the same dish the tavern serves for lunch that day.
+
+## Animations: the Tavern pack
+
+A second bundled pack, 67 clips, authored in `tools/animations/tavern/` (`seated.py`, `dining.py`, `chat.py`, `bar.py`) and compiled by `python tools/animations/animations.py` beside Village Life.
 
 | Group | Clips |
 |---|---|
-| Seated idles | settle in, look around the room, admire the beams, lean back and stretch, hands behind the head, chin in hand, drum fingers on the table, arms folded, yawn, doze off (late), warm hands at the hearth |
-| Waiting | rub hands, crane for the keeper, tap a spoon |
-| Eating | spoon stew (and blow on it), tear and bite bread, fork of pie, ploughman's bites, nibble a tart, savor with eyes closed, wipe mouth, pat a full belly |
-| Drinking | sip, big gulp, blow on coffee, raise a toast, clink mugs with a tablemate, swirl and peer in, peer into an empty mug |
-| Seated chat | lean in to tell it, story with the mug, point across the room, count on fingers; nod, laugh and slap the table, chin in hand, lean back skeptical |
-| Seated reactions | wave from the seat, raise the mug to you, belly laugh, clap |
-| Music | sway, clap along, tap the table (seated and standing) |
-| At the bar | lean on the counter, wave for the keeper, drink and toast standing |
-| Staff | keeper wipes a table, rings last orders; bard bows to the room |
+| Seated idles | settles into the seat, looks around the room, admires the beams, leans back and stretches, hands behind the head, chin in hand, drums fingers on the table, arms folded, yawns, dozes off, warms hands at the fire |
+| Waiting | rubs hands hungrily, cranes over the shoulder for the keeper, taps a spoon |
+| Eating | spoons up stew and blows on it, tears and bites bread, a forkful of pie, picks at a ploughman's, nibbles a tart, a hearty mouthful, savors a bite with eyes closed, wipes the mouth |
+| Drinking | sips, a big gulp, blows on hot coffee, raises a toast, clinks mugs with a tablemate, swirls and peers in |
+| Afterwards | pats a full belly, peers into an empty mug, pushes the plate away |
+| Seated chat | leans in to tell it, tells a story with both hands or waving the mug, points across the room, counts on fingers, whispers across the table; nods along, laughs and slaps the table, chin in hand, leans back skeptical, gasps, listens over the mug |
+| Seated talk and reactions | explains, nods, shrugs, taps the table for emphasis; waves, nods hello, raises the mug to you; belly laughs, giggles, claps, bows with a hand on the heart |
+| Music | sways, claps along, taps the table in rhythm (seated and at the bar) |
+| At the bar | leans on the counter, waves for the keeper, sips, toasts |
+| Staff | the keeper wipes down a table and rings last orders; the bard bows to the room |
 
-### Blocks and items
+New tags: `seated`, `tavern`, `dining:wait|eat|drink|done|carry|wipe`, `food:stew|pie|bread|platter|tart`, `drink:cider|coffee`, `music`, `hearth`; a drink in hand at the bar counts as `holding`.
 
-- **Tavern Table** (trestle style, joins up into long tables), **Tavern Chair** (spindle back), **Bar Stool**, **Fireside Armchair** (upholstered, by the hearth). Models from a design program `tools/tavern/furniture.py` built on the workstation `Model` kit, vanilla wood textures plus painted cloth; players can sit on every one of them.
-- **Ploughman's Lunch**, **Shepherd's Pie**, **Apple Tart**: food items with authored 16px sprites (`tools/tavern/sprites.py` on `item_sprites.raster`). They join the cook's dish-of-the-day rotation at the stove.
+How seated clips play:
 
-### The Hearth, rebuilt
-
-`tavern()` becomes 17×29: a pergola beer garden at the front (three tables), a common room with a big hearth and two armchairs, two long tables and two square tables, a bar with five stools along the east wall, a bard's stage corner, the kitchen wing behind with a serving hatch, guest rooms upstairs, and a yard. About 30 seats plus bar standing room. The lot contract (entrance at `[8,1,0]`, ≤ 8 either side) and the profession stations and residents stay. The biome taverns keep their designs and work through the survey.
-
-### Dialogue
-
-`tools/dialogue/lines/tavern.txt` (a new file): greetings for `supper_tavern`, lines about the food, the keeper's and cook's work at the tavern, and a tavern offer from the keeper ("This one's on the house").
+- Sitting residents keep vanilla's riding pose for their legs; clips add to the arms, body, waist, head and eyes, and leg and root tracks are ignored.
+- While `seated`, idles, chats and talk only use clips that require `seated`; reactions use a seated clip when one fits and otherwise play upper body only.
+- Clips that require `dining:eat` or `dining:drink` take the dish into the hand (the left one for left-handed residents) and must use `items: override`.
+- Seated neighbors talk to whoever sits beside them as well as across, and turn their heads to each other.
+- Diners chat less while their food is in front of them.
 
 ## Verification
 
-- `RoutineTest` (supper at the tavern, lunch rolls, the cook's and keeper's new hours, rain moving lunch indoors), `PatronageTest` (seat choice, attendance rates, menus).
-- Client game test `TavernGameTest` (`-Ptests=TavernGameTest`): builds The Hearth on a superflat world with a keeper, cook and a dozen residents, runs lunch and an evening, checks that residents sit, are served and eat, that seats are released when they leave, and takes screenshots. Small test groups and `-PtestHeap=2560m`, since memory is tight.
-- `-PvillageGallery -Pgallery=tavern` for the building, `python tools/village_design/simulate.py` to make sure the bigger lot never knocks a required building out.
-
-## Order of work
-
-1. Core: `Seat`, `TavernSurvey`, seating and leaving, Routine attendance. Residents sit down at the existing tavern.
-2. Meals: the `tavern` attachment, menu, table service, drink stock, props on tables and in hands.
-3. The Tavern animation pack and seated support in the director and poser.
-4. Furniture, meal items and sprites, the rebuilt Hearth.
-5. Dialogue, docs, tests, graph refresh.
-
-## Not touched
-
-- The quest and notice board (being built in another session).
-- The biome villages' tavern designs (on the unmerged `village-biomes` branch).
-
-## Merge notes
-
-`birthdays-and-quests` also edits `Routine.java` (adds `PARTY` at the end of `Block`), `ResidentRoutines.java`, `VillageFriends.java`, `animations.py`, the dialogue compiler and the compiled `village_life.json` and `dialogue.json`. This branch adds `SUPPER_TAVERN` beside `SUPPER` rather than at the end, keeps its animations in a separate pack and its lines in a separate file, and recompiles the dialogue bank after merging.
+- `gradlew test`: `RoutineTest` (tavern lunches, suppers and evenings at sensible rates, sociable versus reserved, the keeper's, cook's and bard's hours, rain moving lunch indoors, no children), `PatronageTest` (seat choice, the menu course by course, leftovers and timings), `TavernPackTest` (seated filtering, no leg tracks, diners mostly eat) and `AnimationPackTest` (both bundled packs).
+- `gradlew runClientGameTest -Ptests=TavernGameTest` places The Hearth on a flat world with a keeper, a cook and eighteen residents. On a Market Day evening they find seats and are served; the client draws them seated with their dish. A player sits on a chair and gets up. At bedtime every seat is given back; the next lunch is the dish of the day. Screenshots are named `tavern-*`.
+- `gradlew runClientGameTest -Ptests=TavernVillageGameTest` generates a whole village and checks its residents fill the tavern on Market Day evening, inside a building found through its structure piece (`tavern-village-*`).
+- `python tools/tavern/furniture.py --check`, `python tools/tavern/sprites.py --check`, `python tools/animations/animations.py --check`, `python tools/dialogue/dialogue.py --check`, `python tools/create_village_structures.py --check`.

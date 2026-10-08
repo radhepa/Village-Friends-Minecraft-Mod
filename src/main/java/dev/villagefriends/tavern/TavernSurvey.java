@@ -49,7 +49,7 @@ public final class TavernSurvey {
         public boolean contains(BlockPos pos) { return box.inflatedBy(2).isInside(pos); }
     }
 
-    private static final int FALLBACK_REACH = 10, HEARTH_REACH = 4;
+    private static final int FALLBACK_REACH = 14, HEARTH_REACH = 4;
 
     /** The tavern whose keeper's station is at {@code station}, looked over fresh. */
     public static Tavern survey(ServerLevel level, BlockPos station) {
@@ -245,7 +245,7 @@ public final class TavernSurvey {
             if (found.size() >= 10) break;
             if (taken.contains(p) || !floor(level, p) || level.canSeeSky(p)) continue;
             Direction lean = null;
-            for (var d : Direction.Plane.HORIZONTAL) if (counter(level, p.relative(d)) && !stations.contains(p.relative(d))) { lean = d; break; }
+            for (var d : Direction.Plane.HORIZONTAL) if (counter(level, p.relative(d)) && !table(level, p.relative(d)) && !stations.contains(p.relative(d))) { lean = d; break; }
             if (lean == null) continue;
             boolean apart = true;
             for (var s : found) if (s.pos().distSqr(p) < 2.1) { apart = false; break; }

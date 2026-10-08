@@ -94,7 +94,7 @@ def _(c):
 
 
 @clip("wipe_down_a_table", "Wipes down a table", weight=5, require=["adult", "job:tavern_keeper", "routine:work"],
-      avoid=STANDING + ["dining:carry"], boost={"evening": 1.5}, length=5.6)
+      avoid=STANDING + ["dining:carry"], boost={"evening": 1.5, "dining:wipe": 40}, length=5.6)
 def _(c):
     c.key(0.5, la=(-96, -12, 0), ra=(-100, -30, 0), waist=(24, 0, 0), head=(16, 0, 0), rl=(-10, 0, 0), look=(0, .6))
     loop = [(-100, -30, 0), (-96, -10, 8), (-102, 10, 12), (-108, -10, 4)]

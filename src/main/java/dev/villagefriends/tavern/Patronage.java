@@ -14,7 +14,9 @@ public final class Patronage {
     public enum Kind { CHAIR, STOOL, BENCH, ARMCHAIR }
     /** What a resident is doing at the tavern, shared with clients as {@code <phase>:<item>}. */
     public enum Phase {
-        WAIT, EAT, DRINK, DONE, CARRY;
+        WAIT, EAT, DRINK, DONE, CARRY,
+        /** The keeper wiping down a table someone just left. */
+        WIPE;
         public String id() { return name().toLowerCase(Locale.ROOT); }
     }
     /** Someone already sitting at a table, as the newcomer sees them. */

@@ -96,12 +96,20 @@ public final class Taverns {
         Patron(UUID id, String tavern, Block block) { this.id = id; this.tavern = tavern; this.block = block; }
     }
     private record Order(UUID patron, String item, long placed, int roll) {}
+    /** One of the staff on the floor: what's on their tray, and the table they're wiping. */
+    private static final class Runner {
+        final UUID id; final boolean cook; final List<Order> tray = new ArrayList<>();
+        boolean carrying; long since; BlockPos wiping; long wipedAt;
+        Runner(UUID id, boolean cook) { this.id = id; this.cook = cook; }
+    }
     /** One tavern: its survey, who has which seat, the orders waiting at the bar and the one being carried out. */
     private static final class House {
         final ResourceKey<Level> dimension; Tavern tavern; long surveyed, used;
         final Map<BlockPos, UUID> claims = new HashMap<>();
         final ArrayDeque<Order> orders = new ArrayDeque<>();
-        final List<Order> tray = new ArrayList<>(); UUID server; boolean carrying; long servingSince;
+        final Map<UUID, Runner> runners = new HashMap<>();
+        /** Seats whose diners have just left, waiting for the keeper's cloth. */
+        final ArrayDeque<BlockPos> dirty = new ArrayDeque<>();
         House(ResourceKey<Level> dimension) { this.dimension = dimension; }
     }
     private static final Map<String, House> houses = new HashMap<>();
@@ -266,7 +274,7 @@ public final class Taverns {
     private static void dine(Villager v, ServerLevel level, House house, Patron p, long now) {
         if (p.phase == null) { if (now >= p.until) order(v, level, house, p, now); return; }
         switch (p.phase) {
-            case WAIT, CARRY -> {}
+            case WAIT, CARRY, WIPE -> {}
             case EAT, DRINK -> { if (now >= p.until) finish(v, p, now); else savor(v, level, p); }
             case DONE -> { if (now >= p.until && p.course < Patronage.maxCourses(p.block)) order(v, level, house, p, now); }
         }
@@ -320,7 +328,7 @@ public final class Taverns {
             var level = server.getLevel(house.dimension);
             if (level == null) { it.remove(); continue; }
             long now = level.getGameTime();
-            if (house.claims.isEmpty() && house.orders.isEmpty() && house.tray.isEmpty() && now - house.used > FORGET) {
+            if (house.claims.isEmpty() && house.orders.isEmpty() && house.runners.values().stream().allMatch(r -> r.tray.isEmpty()) && now - house.used > FORGET) {
                 stationKeys.values().removeIf(k -> k.equals(house.tavern.key())); it.remove(); continue;
             }
             if (now - house.surveyed > RESURVEY) resurvey(level, house, now);
@@ -343,69 +351,116 @@ public final class Taverns {
         for (var s : fresh.stations()) stationKeys.put(GlobalPos.of(level.dimension(), s), fresh.key());
     }
     /**
-     * The keeper works through the orders: to the bar, where anyone waiting at the counter is served straight
-     * away, then out with a tray of up to three orders for tables close together, nearest first. Anyone kept
-     * waiting too long in a packed house helps themselves.
+     * The staff work through the orders. The keeper goes to the bar, serves anyone waiting at the counter
+     * straight away, then carries a tray of up to three orders out to tables close together, nearest first,
+     * and wipes down tables people have left when nobody is waiting. The cook, while the stove is going,
+     * brings dishes out from the kitchen the same way. Anyone kept waiting too long helps themselves.
      */
     private static void serve(ServerLevel level, House house, long now) {
         house.orders.removeIf(o -> !waiting(o.patron()));
-        house.tray.removeIf(o -> !waiting(o.patron()));
-        var keeper = keeper(level, house);
-        if (house.server != null && (keeper == null || !keeper.getUUID().equals(house.server) || house.tray.isEmpty())) stopCarrying(level, house);
+        var staff = staff(level, house);
+        // Staff who went off duty put their trays back on the order book.
+        for (var it = house.runners.values().iterator(); it.hasNext(); ) {
+            var r = it.next();
+            if (staff.stream().noneMatch(v -> v.getUUID().equals(r.id))) { stopCarrying(level, house, r); stopWiping(level, r); it.remove(); }
+        }
+        Villager keeper = null;
+        for (var v : staff) if (!cook(v)) { keeper = v; break; }
         for (var it = house.orders.iterator(); it.hasNext(); ) {
             var o = it.next();
-            long waited = now - o.placed();
-            if (keeper == null ? waited >= Patronage.selfService(o.roll()) : waited >= LONG_WAIT) { it.remove(); served(level, house, o, keeper, now); }
+            if (now - o.placed() >= (staff.isEmpty() ? Patronage.selfService(o.roll()) : patience(o))) { it.remove(); served(level, house, o, keeper, now); }
         }
-        if (keeper == null) return;
-        if (house.tray.isEmpty()) {
-            if (house.orders.isEmpty()) return;
-            house.server = keeper.getUUID(); house.carrying = false; house.servingSince = now;
-            house.tray.add(house.orders.poll());
+        for (var v : staff) run(level, house, house.runners.computeIfAbsent(v.getUUID(), id -> new Runner(id, cook(v))), v, now);
+    }
+    /** How long someone waits for a busy keeper before fetching it themselves: not long in the lunch hour. */
+    private static int patience(Order o) {
+        var p = patrons.get(o.patron());
+        return p == null ? LONG_WAIT : p.block == Block.LUNCH_TAVERN ? LONG_WAIT / 2 : p.block == Block.SUPPER_TAVERN ? LONG_WAIT * 2 / 3 : LONG_WAIT;
+    }
+    private static void run(ServerLevel level, House house, Runner r, Villager v, long now) {
+        r.tray.removeIf(o -> !waiting(o.patron()));
+        if (r.tray.isEmpty()) {
+            if (r.carrying) stopCarrying(level, house, r);
+            Order first = null;
+            for (var o : house.orders) if (!r.cook || !Patronage.drink(o.item())) { first = o; break; }
+            if (first == null) {
+                if (r.cook) return;
+                tidy(level, house, r, v, now);
+                // A keeper with nothing to do minds the bar instead of wandering the house.
+                var bar = house.tavern.stations().getFirst();
+                if (r.wiping == null && !v.position().closerThan(Vec3.atCenterOf(bar), 5)) ResidentRoutines.walk(v, bar, .5F, 1);
+                return;
+            }
+            stopWiping(level, r);
+            house.orders.remove(first);
+            r.tray.add(first); r.carrying = false; r.since = now;
         }
-        if (now - house.servingSince > CARRY_TIMEOUT) {
-            for (var o : List.copyOf(house.tray)) served(level, house, o, keeper, now);
-            stopCarrying(level, house);
+        if (now - r.since > CARRY_TIMEOUT) {
+            for (var o : List.copyOf(r.tray)) served(level, house, o, v, now);
+            r.tray.clear(); stopCarrying(level, house, r);
             return;
         }
-        if (!house.carrying) {
-            var bar = station(level, house, house.tray.getFirst().item());
-            if (!keeper.position().closerThan(Vec3.atCenterOf(bar), 2.4)) { ResidentRoutines.walk(keeper, bar, .6F, 1); return; }
+        if (!r.carrying) {
+            var pickup = r.cook ? stove(house, v) : station(level, house, r.tray.getFirst().item());
+            if (!v.position().closerThan(Vec3.atCenterOf(pickup), 2.4)) { ResidentRoutines.walk(v, pickup, .6F, 1); return; }
             // Over the counter to whoever is waiting right there.
-            for (var it = house.orders.iterator(); it.hasNext(); ) {
+            if (!r.cook) for (var it = house.orders.iterator(); it.hasNext(); ) {
                 var o = it.next();
-                if (level.getEntity(o.patron()) instanceof Villager v && !Seat.seated(v) && v.distanceTo(keeper) < 3.5) { it.remove(); served(level, house, o, keeper, now); }
+                if (level.getEntity(o.patron()) instanceof Villager w && !Seat.seated(w) && w.distanceTo(v) < 3.5) { it.remove(); served(level, house, o, v, now); }
             }
-            var first = house.tray.getFirst();
-            if (level.getEntity(first.patron()) instanceof Villager v && v.distanceTo(keeper) < 3.5) { served(level, house, first, keeper, now); stopCarrying(level, house); return; }
+            var first = r.tray.getFirst();
+            if (level.getEntity(first.patron()) instanceof Villager w && w.distanceTo(v) < 3.5) { served(level, house, first, v, now); r.tray.clear(); stopCarrying(level, house, r); return; }
             // Load the tray with orders for tables near the first one.
             var near = level.getEntity(first.patron());
-            for (var it = house.orders.iterator(); it.hasNext() && house.tray.size() < TRAY; ) {
+            for (var it = house.orders.iterator(); it.hasNext() && r.tray.size() < TRAY; ) {
                 var o = it.next();
-                if (near != null && level.getEntity(o.patron()) instanceof Villager v && v.distanceTo(near) < 6) { it.remove(); house.tray.add(o); }
+                if (r.cook && Patronage.drink(o.item())) continue;
+                if (near != null && level.getEntity(o.patron()) instanceof Villager w && w.distanceTo(near) < 6) { it.remove(); r.tray.add(o); }
             }
-            house.carrying = true;
-            target(keeper).setAttached(STATE, Patronage.state(Phase.CARRY, first.item()));
-            level.playSound(null, bar, Patronage.drink(first.item()) ? SoundEvents.BOTTLE_FILL : SoundEvents.BUNDLE_INSERT, SoundSource.BLOCKS, .6F, 1.1F);
+            r.carrying = true;
+            target(v).setAttached(STATE, Patronage.state(Phase.CARRY, first.item()));
+            level.playSound(null, pickup, Patronage.drink(first.item()) ? SoundEvents.BOTTLE_FILL : SoundEvents.BUNDLE_INSERT, SoundSource.BLOCKS, .6F, 1.1F);
             return;
         }
         // Out to the tables, nearest first.
         Order next = null; Villager patron = null; double best = Double.MAX_VALUE;
-        for (var o : house.tray) if (level.getEntity(o.patron()) instanceof Villager v && v.distanceToSqr(keeper) < best) { best = v.distanceToSqr(keeper); next = o; patron = v; }
-        if (next == null) { stopCarrying(level, house); return; }
-        if (keeper.distanceTo(patron) < 2.3) {
-            keeper.getLookControl().setLookAt(patron);
-            served(level, house, next, keeper, now);
-            house.tray.remove(next);
-            if (house.tray.isEmpty()) stopCarrying(level, house);
-            else target(keeper).setAttached(STATE, Patronage.state(Phase.CARRY, house.tray.getFirst().item()));
-        } else ResidentRoutines.walk(keeper, patron.blockPosition(), .6F, 1);
+        for (var o : r.tray) if (level.getEntity(o.patron()) instanceof Villager w && w.distanceToSqr(v) < best) { best = w.distanceToSqr(v); next = o; patron = w; }
+        if (next == null) { r.tray.clear(); stopCarrying(level, house, r); return; }
+        if (v.distanceTo(patron) < 2.3) {
+            v.getLookControl().setLookAt(patron);
+            served(level, house, next, v, now);
+            r.tray.remove(next);
+            if (r.tray.isEmpty()) stopCarrying(level, house, r);
+            else target(v).setAttached(STATE, Patronage.state(Phase.CARRY, r.tray.getFirst().item()));
+        } else ResidentRoutines.walk(v, patron.blockPosition(), .6F, 1);
     }
-    private static void stopCarrying(ServerLevel level, House house) {
-        if (house.server != null && level.getEntity(house.server) instanceof Villager keeper) target(keeper).removeAttached(STATE);
+    /** With nobody waiting, the keeper wipes down the places people have just left. */
+    private static void tidy(ServerLevel level, House house, Runner r, Villager keeper, long now) {
+        if (r.wiping == null) {
+            while (!house.dirty.isEmpty() && house.claims.containsKey(house.dirty.peekFirst())) house.dirty.pollFirst();
+            r.wiping = house.dirty.pollFirst();
+            if (r.wiping == null) return;
+            r.wipedAt = 0;
+        }
+        if (r.wipedAt == 0) {
+            if (keeper.position().closerThan(Vec3.atCenterOf(r.wiping), 2.2)) {
+                r.wipedAt = now + 100;
+                keeper.getLookControl().setLookAt(Vec3.atCenterOf(r.wiping.relative(Direction.fromYRot(seatYaw(house, r.wiping)))));
+                target(keeper).setAttached(STATE, Patronage.state(Phase.WIPE, null));
+            } else ResidentRoutines.walk(keeper, r.wiping, .5F, 1);
+        } else if (now >= r.wipedAt) stopWiping(level, r);
+    }
+    private static float seatYaw(House house, BlockPos seat) { var s = house.tavern.seat(seat); return s == null ? 0 : s.yaw(); }
+    private static void stopWiping(ServerLevel level, Runner r) {
+        if (r.wiping == null) return;
+        if (level.getEntity(r.id) instanceof Villager keeper && Patronage.phase(target(keeper).getAttached(STATE)) == Phase.WIPE) target(keeper).removeAttached(STATE);
+        r.wiping = null; r.wipedAt = 0;
+    }
+    private static void stopCarrying(ServerLevel level, House house, Runner r) {
+        if (level.getEntity(r.id) instanceof Villager v && Patronage.phase(target(v).getAttached(STATE)) == Phase.CARRY) target(v).removeAttached(STATE);
         // Anything still on the tray goes back on the order book.
-        for (var o : house.tray) if (waiting(o.patron())) house.orders.addFirst(o);
-        house.tray.clear(); house.server = null; house.carrying = false;
+        for (var o : r.tray) if (waiting(o.patron())) house.orders.addFirst(o);
+        r.tray.clear(); r.carrying = false;
     }
     /** The order arrives: a dish set down in front of them, or a mug of cider or coffee drawn from the bar's own stock. */
     private static void served(ServerLevel level, House house, Order order, Villager keeper, long now) {
@@ -432,22 +487,36 @@ public final class Taverns {
         if (keeper != null && v.getRandom().nextInt(3) == 0) VillageSocieties.emote(v, v.getRandom().nextBoolean() ? Emote.NOTE : Emote.SPARKLE, 6);
     }
     private static boolean waiting(UUID id) { var p = patrons.get(id); return p != null && p.phase == Phase.WAIT; }
-    /** The tavern keeper on duty here: at work, awake, not sitting down, and keeping one of this tavern's stations. */
-    private static Villager keeper(ServerLevel level, House house) {
+    /**
+     * The staff on duty here: tavern keepers keeping one of this tavern's stations (or between job sites, inside
+     * it), then the cook while the kitchen stove is going. At work, awake and not sitting down.
+     */
+    private static List<Villager> staff(ServerLevel level, House house) {
         var box = house.tavern.box();
         var area = new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1).inflate(8);
-        Villager found = null;
+        var keepers = new ArrayList<Villager>(); Villager cook = null;
+        boolean kitchen = cooking(level, house);
         for (var v : level.getEntitiesOfClass(Villager.class, area, Taverns::onDuty)) {
-            var site = v.getBrain().getMemory(MemoryModuleType.JOB_SITE).orElse(null);
-            // Their own station first; a keeper between job sites (vanilla re-validates them now and then) will do.
-            if (site != null && site.dimension() == level.dimension() && house.tavern.stations().contains(site.pos())) return v;
-            if (site == null && found == null && house.tavern.contains(v.blockPosition())) found = v;
+            var site = v.getBrain().getMemory(MemoryModuleType.JOB_SITE).filter(g -> g.dimension() == level.dimension()).map(GlobalPos::pos).orElse(null);
+            boolean here = site == null ? house.tavern.contains(v.blockPosition()) : cook(v) ? house.tavern.stoves().contains(site) : house.tavern.stations().contains(site);
+            if (!here) continue;
+            if (!cook(v)) keepers.add(v);
+            else if (kitchen && cook == null) cook = v;
         }
-        return found;
+        if (cook != null) keepers.add(cook);
+        return keepers;
     }
+    private static boolean cook(Villager v) { return profession(v).equals("cook"); }
     private static boolean onDuty(Villager v) {
-        return profession(v).equals("tavern_keeper") && v.isAlive() && !v.isSleeping() && !Seat.seated(v) && !Knockouts.injured(v)
+        String job = profession(v);
+        return (job.equals("tavern_keeper") || job.equals("cook")) && v.isAlive() && !v.isSleeping() && !Seat.seated(v) && !Knockouts.injured(v)
                 && Block.WORK.id().equals(target(v).getAttached(ROUTINE)) && !CompanionController.state(v).active();
+    }
+    /** The kitchen stove nearest the cook. */
+    private static BlockPos stove(House house, Villager cook) {
+        BlockPos best = house.tavern.stations().getFirst(); double distance = Double.MAX_VALUE;
+        for (var s : house.tavern.stoves()) if (s.distSqr(cook.blockPosition()) < distance) { distance = s.distSqr(cook.blockPosition()); best = s; }
+        return best;
     }
     /** Where the keeper fetches an order: the drinks barrel for cider, the tap stand for coffee, the nearest station for food. */
     private static BlockPos station(ServerLevel level, House house, String item) {
@@ -459,12 +528,12 @@ public final class Taverns {
         for (var s : house.tavern.stations()) if (level.getBlockState(s).is(block)) return s;
         return null;
     }
-    /** Whether this resident is the keeper carrying an order out right now. */
+    /** Whether this resident is one of the staff carrying an order out or wiping a table right now. */
     public static boolean serving(Villager v) {
-        for (var house : houses.values()) if (!house.tray.isEmpty() && v.getUUID().equals(house.server)) return true;
+        for (var house : houses.values()) { var r = house.runners.get(v.getUUID()); if (r != null && (!r.tray.isEmpty() || r.wiping != null)) return true; }
         return false;
     }
-    /** The vanilla activity a resident should be in: a keeper carrying an order walks freely instead of working at the bar. */
+    /** The vanilla activity a resident should be in: staff carrying an order walk freely instead of working at their station. */
     public static Activity activity(Villager v, Activity planned) { return serving(v) ? Activity.IDLE : planned; }
 
     // -- the stage ---------------------------------------------------------------------------------
@@ -533,6 +602,7 @@ public final class Taverns {
         if (p == null) return;
         var house = houses.get(p.tavern);
         if (house == null) return;
+        if (p.seat != null && p.course > 0 && house.dirty.size() < 12) house.dirty.add(p.seat);
         release(house, p);
         house.orders.removeIf(o -> o.patron().equals(v.getUUID()));
     }
@@ -588,10 +658,10 @@ public final class Taverns {
             var t = house.tavern;
             out.append("tavern ").append(t.key()).append(": ").append(t.seats().size()).append(" seats, ").append(t.standing().size()).append(" standing, stations ")
                     .append(t.stations()).append(", stoves ").append(t.stoves()).append(", ").append(house.orders.size()).append(" orders, serving ")
-                    .append(house.tray.isEmpty() ? "-" : house.tray.size() + " on the tray" + (house.carrying ? " (carrying)" : " (to the bar)")).append(System.lineSeparator());
+                    .append(house.runners.values().stream().map(r -> r.tray.size() + (r.cook ? " (cook" : " (keeper") + (r.carrying ? ", carrying)" : ")")).toList()).append(System.lineSeparator());
             var box = t.box();
             for (var v : level.getEntitiesOfClass(Villager.class, new AABB(box.minX(), box.minY(), box.minZ(), box.maxX() + 1, box.maxY() + 1, box.maxZ() + 1).inflate(8),
-                    v -> profession(v).equals("tavern_keeper")))
+                    v -> profession(v).equals("tavern_keeper") || cook(v)))
                 out.append("  keeper ").append(name(v)).append(" routine=").append(target(v).getAttached(ROUTINE)).append(" site=")
                         .append(v.getBrain().getMemory(MemoryModuleType.JOB_SITE).map(g -> g.pos().toShortString()).orElse("none"))
                         .append(" activity=").append(v.getBrain().getActiveNonCoreActivity().map(Object::toString).orElse("-"))
@@ -618,6 +688,7 @@ public final class Taverns {
             case EAT -> label + " · eating " + name;
             case DRINK -> label + " · drinking " + name.replace("mug of ", "").replace("steaming ", "").replace(" mug", "");
             case CARRY -> label + " · serving " + name;
+            case WIPE -> label + " · wiping a table";
             case DONE -> label;
         };
     }
