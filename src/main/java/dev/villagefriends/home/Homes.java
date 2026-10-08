@@ -211,11 +211,14 @@ public final class Homes {
     /** Where a resident far from home should walk back to for breakfast, supper or the evening; null when they're close enough already. */
     public static BlockPos homeward(Villager v, ServerLevel level) {
         var h = houseOf(v);
-        if (h == null || origin(v) != level) return null;
+        if (h == null || origin(v) != level || !far(v, h)) return null;
+        return hearth(level, h);
+    }
+    /** More than {@value #HOME_REACH} blocks (across the ground) from their house. */
+    private static boolean far(Villager v, House h) {
         var box = h.box();
         double dx = Math.max(0, Math.max(box.minX() - v.getX(), v.getX() - box.maxX() - 1)), dz = Math.max(0, Math.max(box.minZ() - v.getZ(), v.getZ() - box.maxZ() - 1));
-        if (dx * dx + dz * dz <= HOME_REACH * HOME_REACH) return null;
-        return hearth(level, h);
+        return dx * dx + dz * dz > HOME_REACH * HOME_REACH;
     }
     /** Where a pet curls up while its resident sleeps: the open floor beside their bed's foot. */
     public static Optional<BlockPos> bedside(Villager owner) {
@@ -264,13 +267,16 @@ public final class Homes {
         var h = index.houseOf(id); long today = day(origin);
         var need = index.needOf(id);
         if (h == null) { fill.put("home_talk", "homeless"); return; }
-        // Children only notice when the house is too small.
-        if (v.isBaby()) { if (need != null) fill.put("home_talk", "crowded"); return; }
+        boolean fresh = today - index.moved().getOrDefault(id, -100L) <= 2;
+        // Children notice when the house is too small, and talk about their own bed (a new one most of all).
+        if (v.isBaby()) { fill.put("home_talk", need != null ? "crowded" : fresh ? "new" : "mine"); return; }
         fill.put("house", name(origin, index, h));
+        // Out late, far from home: "I'm off home" (home.bedtime).
+        if (v.level() == origin && far(v, h)) fill.put("home_far", "true");
         var housemates = index.residents(h.id());
         String talk;
         if (need != null && !need.kind().equals(HousingIndex.NEWBORN)) talk = "crowded";
-        else if (today - index.moved().getOrDefault(id, -100L) <= 2) talk = "new";
+        else if (fresh) talk = h.player() ? "new.player" : "new";
         else if (housemates.stream().anyMatch(o -> !o.equals(id) && today - index.moved().getOrDefault(o, -100L) <= 2 && partnerOf(origin, home.village(), id).equals(o))) talk = "partner_moved";
         else if (housemates.stream().anyMatch(o -> !o.equals(id) && today - index.moved().getOrDefault(o, -100L) <= 3 && isBaby(origin, home.village(), o))) talk = "newborn_bed";
         else if (index.vacated().stream().anyMatch(x -> x.house().equals(h.id()) && x.why().equals("passed") && today - x.day() <= 7)) talk = "vacant";
@@ -540,7 +546,8 @@ public final class Homes {
                 var index = index(level, village[0]);
                 var bed = h.bedAt(pos);
                 if (bed != null) { String owner = index.owner(bed.head()); return owner == null ? List.of() : List.of(owner); }
-                boolean door = h.doors().contains(pos) || HouseSurvey.door(level.getBlockState(pos));
+                // Either half of a door (the index may list only one), or a door the index hasn't seen yet.
+                boolean door = h.doors().contains(pos) || h.doors().contains(pos.below()) || h.doors().contains(pos.above()) || HouseSurvey.door(level.getBlockState(pos));
                 boolean station = h.workstations().stream().anyMatch(w -> w.pos().equals(pos));
                 return door || station ? index.residents(h.id()) : List.of();
             }
@@ -617,7 +624,18 @@ public final class Homes {
             if (h == null) return;
         }
         for (var line : readout(level, index, h)) player.sendSystemMessage(line, false);
+        String flavor = flavor(index, h, level.getRandom().nextInt(64));
+        if (flavor != null) player.sendSystemMessage(Component.literal(flavor).withStyle(ChatFormatting.ITALIC, ChatFormatting.DARK_GRAY), false);
         player.sendSystemMessage(Component.literal("✦ " + name(level, index, h)).withStyle(ChatFormatting.GOLD), true);
+    }
+    /** A line of how the house looks from the door ({@code home.plaque.lived}, {@code .empty} or {@code .private}), or null. */
+    private static String flavor(HousingIndex index, House h, int roll) {
+        var lines = dev.villagefriends.talk.DialogueBank.current().pool("home.plaque." + (h.privateHome() ? "private" : index.residents(h.id()).isEmpty() ? "empty" : "lived"));
+        for (int n = 0; n < lines.size(); n++) {
+            String text = dev.villagefriends.talk.Talk.fill(lines.get((roll + n) % lines.size()), Map.of());
+            if (text != null) return text;
+        }
+        return null;
     }
     private static House plaqueHouse(HousingIndex index, BlockPos pos) {
         for (var h : index.houses()) if (h.plaque().isPresent() && h.plaque().get().equals(pos)) return h;

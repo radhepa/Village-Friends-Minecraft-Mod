@@ -763,6 +763,36 @@ Ow. That was mean. I told my mum.
 You're supposed to be nice to kids! You hit me!
 I'm scared of you now. Please don't do that again.
 
+## baby.deed.knocked_out_resident.self
+Everything went dark and I woke up on the ground. Mum says it was you.
+My head still hurts. I don't want to talk to you.
+You knocked me over and I couldn't get up. I was really scared.
+I had to have bandages because of you. Lots of them.
+
+## baby.deed.hurt_pet.self
+You hurt my pet! It's hiding under my bed and it won't come out.
+Why did you hurt my pet? It never did anything to you!
+My pet is scared of you now. So am I.
+I had to give my pet extra cuddles because of you. That's not fair.
+
+## baby.deed.killed_pet.self
+My pet's gone. I don't want to talk to you.
+I keep looking for my pet by the door. It isn't coming back, is it?
+I cried all night about my pet. You did that.
+Go away. I miss my pet.
+
+## baby.deed.broke_home.self
+You broke our house! Now the wind comes in at night.
+That was my bed you broke! Where am I supposed to sleep?
+Dad had to mend our house because of you. He said words I'm not allowed to say.
+Our house was nice before you broke it.
+
+## baby.deed.stole.self
+You took our things! That's stealing! Everybody knows that's stealing!
+Somebody took things from our chest and it was you. I saw the empty bits.
+Give our things back! Mum needed those.
+Stealing is the worst thing. Even worse than pulling hair.
+
 # Apologies: "I'm sorry about what happened". accept and cool are the reply; remembered comes up later.
 
 ## deed.apology.accept

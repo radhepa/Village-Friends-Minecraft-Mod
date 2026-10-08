@@ -158,11 +158,18 @@ public final class Knockouts {
             p.sendSystemMessage(Component.literal("You bandage " + name(v) + "'s wounds · " + KnockoutState.duration(next.left(now)) + " left"), true);
             return;
         }
+        // Where they were helped to lie, if anywhere: they come to in their own bed or on the apothecary's cot.
+        var bed = s.bed().orElse(null);
+        boolean cot = bed != null && level.getBlockState(bed).getBlock() == VillageBlocks.get("apothecary_cot");
         if (!p.getAbilities().instabuild) held.shrink(1);
         revive(v, treatment.restoredHealthFraction());
         saveBond(v, p, bond(v, p).trust(10).remember(day(level), "You revived me after I was knocked out."));
         dev.villagefriends.deed.Deeds.revived(p, v);
         p.sendSystemMessage(Component.literal(name(v) + " comes to. " + (treatment == MedicalSupplyItem.Treatment.REVIVAL_TONIC ? "Fully restored." : "Still weak: let them rest.")), true);
+        if (bed != null) {
+            String said = TalkWorld.say(v, p, cot ? "home.carried.cot" : "home.carried", Map.of());
+            if (said != null) p.sendSystemMessage(Component.literal(name(v) + ": \"" + said + "\""), false);
+        }
     }
     public static void revive(Villager v, float healthFraction) {
         var level = (ServerLevel) v.level();

@@ -318,7 +318,7 @@ public final class Postings {
                 case "homeless" -> "I have no home of my own here. If someone could build a little house with a bed, I'd be so grateful.";
                 default -> "We need a bigger house! There are " + need.people() + " of us and only " + need.beds() + (need.beds() == 1 ? " bed" : " beds") + ". Could someone build us one?";
             };
-            String text = write(writer, random, "notice.house", null, fill, fallback);
+            String text = write(writer, random, "notice.house." + need.kind(), "notice.house", fill, fallback);
             int emeralds = 6 + Math.min(6, beds);
             var gifts = GIFTS.get("carpenter");
             var gift = gifts.get(random.nextInt(gifts.size()));

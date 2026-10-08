@@ -74,6 +74,7 @@ public final class Talk {
                 // A child whose family is short of room talks about the bigger house they asked for.
                 String home = c.fill.get("home_talk");
                 if ("crowded".equals(home) || "homeless".equals(home)) w.put("baby.notice.house", 2);
+                else if (home != null) w.put("baby.home." + home, "new".equals(home) ? 3 : 1);
                 held(w, c, 1);
             }
             return w;
@@ -120,7 +121,11 @@ public final class Talk {
         return w;
     }
     /** Their own house: "home.mine", "home.crowded", "home.new"... (TalkWorld puts which one fits into {@code home_talk}). */
-    private static void home(Map<String, Integer> w, Context c) { if (c.fill.containsKey("home_talk")) w.put("home." + c.fill.get("home_talk"), 2); }
+    private static void home(Map<String, Integer> w, Context c) {
+        if (c.fill.containsKey("home_talk")) w.put("home." + c.fill.get("home_talk"), 2);
+        // Supper or the evening, and still far from their own house: off home they go.
+        if (c.fill.containsKey("home_far") && (c.routine.equals("supper") || c.routine.equals("evening"))) w.put("home.bedtime", 4);
+    }
     private static void held(Map<String, Integer> w, Context c, int weight) { if (!c.held.isEmpty()) w.put("held." + c.held, weight); }
     private static void states(Map<String, Integer> w, Context c, int weight) { for (var s : c.states) w.put("player." + s, weight); }
 

@@ -454,7 +454,7 @@ public final class Deeds {
                     "Apology accepted. What you did will fade faster.", false, Emote.SPARKLE);
         } else {
             saveBond(v, p, b.flag("apology_tried:" + d.serial() + ":" + today));
-            String line = TalkWorld.say(v, p, "deed.apology.cool", Map.of());
+            String line = TalkWorld.say(v, p, v.isBaby() ? "deed.apology.cool.child" : "deed.apology.cool", Map.of());
             show(p, v, "talk", line != null ? line : "Words are easy. Give it some time.", "Not yet. Try again tomorrow, or with a gift they like.", false, Emote.DOTS);
         }
         return true;
@@ -638,6 +638,8 @@ public final class Deeds {
         if (items != null && house.isPresent()) stole(p, level, house.get(), pos, items);
         if (!state.is(BlockTags.BEDS) && !state.is(BlockTags.DOORS) && !PoiTypes.hasPoi(state)) return;
         var owners = HouseBounds.current().owners(level, pos);
+        // A door belongs to the whole household, even one the index doesn't list (it is gone from the world by now).
+        if (owners.isEmpty() && state.is(BlockTags.DOORS)) owners = house.map(HouseBounds.HouseRef::residents).orElse(List.of());
         if (owners.isEmpty()) return;
         var ref = HouseBounds.current().houseAt(level, pos);
         var place = ref.map(h -> place(level, h, pos)).orElse(place(level, pos));

@@ -39,8 +39,8 @@ import net.minecraft.world.phys.Vec3;
  * surviving save and reload. Screenshots are named {@code deeds-*}. Run with
  * {@code gradlew runClientGameTest -Ptests=DeedsGameTest -PtestHeap=2560m}.
  *
- * <p>Theft from a resident's chest and breaking a resident's bed, door or workstation need the housing
- * index; {@link #theftAndBrokenHomes} is skipped until Homes installs {@link HouseBounds} (integration pass).
+ * <p>Theft from a resident's chest and breaking a resident's bed or door use the housing index through
+ * {@link HouseBounds} ({@link #theftAndBrokenHomes}: a cottage the player builds, which homeless residents move into).
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class DeedsGameTest implements FabricClientGameTest {
@@ -419,7 +419,7 @@ public final class DeedsGameTest implements FabricClientGameTest {
             c.getInput().lookAt(0, 20); c.waitTicks(10);
             c.takeScreenshot("deeds-raid-won");
 
-            theftAndBrokenHomes(c, w);
+            theftAndBrokenHomes(c, w, base);
             saved = w.getWorldSave();
         }
         // The deed log is saved with the world.
@@ -441,8 +441,80 @@ public final class DeedsGameTest implements FabricClientGameTest {
      * Stealing from a chest in a resident's house and breaking a resident's bed or door. Skipped until
      * Homes installs {@link HouseBounds}; the integration pass fills this in against a real house.
      */
-    private static void theftAndBrokenHomes(ClientGameTestContext c, TestSingleplayerContext w) {
-        if (HouseBounds.current() == HouseBounds.NONE) { LOGGER.info("DEEDS: theft and broken-home cases skipped (no housing index yet)"); return; }
-        LOGGER.info("DEEDS: theft and broken-home cases are covered by the integration pass");
+    /**
+     * Theft and breaking things in a resident's house: a cottage the player builds, with a plaque, two beds and a
+     * chest; homeless residents move in; the player empties the chest (STOLE, counted by the items taken) and breaks
+     * a bed and the top half of the door (BROKE_HOME, the bed's owner and the household).
+     */
+    private static void theftAndBrokenHomes(ClientGameTestContext c, TestSingleplayerContext w, Vec3 base) {
+        check(HouseBounds.current() != HouseBounds.NONE, "Homes installs the house bounds");
+        int x0 = (int) Math.floor(base.x) + 10, y0 = (int) Math.floor(base.y) - 1, z0 = (int) Math.floor(base.z) + 12;
+        for (var cmd : List.of(
+                String.format(Locale.ROOT, "fill %d %d %d %d %d %d minecraft:oak_planks hollow", x0, y0, z0, x0 + 6, y0 + 5, z0 + 6),
+                String.format(Locale.ROOT, "setblock %d %d %d minecraft:oak_door[facing=south,half=lower]", x0 + 3, y0 + 1, z0 + 6),
+                String.format(Locale.ROOT, "setblock %d %d %d minecraft:oak_door[facing=south,half=upper]", x0 + 3, y0 + 2, z0 + 6),
+                String.format(Locale.ROOT, "setblock %d %d %d minecraft:chest[facing=west]", x0 + 5, y0 + 1, z0 + 4),
+                String.format(Locale.ROOT, "setblock %d %d %d villagefriends:house_plaque[facing=east,mount=wall]", x0 + 1, y0 + 2, z0 + 4)))
+            w.getServer().runCommand(cmd);
+        for (int dx : new int[]{1, 2}) {
+            w.getServer().runCommand(String.format(Locale.ROOT, "setblock %d %d %d minecraft:red_bed[facing=north,part=head]", x0 + dx, y0 + 1, z0 + 1));
+            w.getServer().runCommand(String.format(Locale.ROOT, "setblock %d %d %d minecraft:red_bed[facing=north,part=foot]", x0 + dx, y0 + 1, z0 + 2));
+        }
+        var chest = new BlockPos(x0 + 5, y0 + 1, z0 + 4); var plaque = new BlockPos(x0 + 1, y0 + 2, z0 + 4);
+        String placed = w.getServer().computeOnServer(s -> ((HousePlaqueBlockEntity) level(w).getBlockEntity(plaque)).scanForBeds());
+        check(placed.startsWith("★") && placed.contains("2 beds"), "The cottage is a house: " + placed);
+        w.getServer().runOnServer(s -> dev.villagefriends.home.Homes.changed(level(w), VILLAGE[0]));
+        // Homeless residents move in.
+        List<String> residents = List.of();
+        for (int t = 0; t < 800 && residents.isEmpty(); t += 10) {
+            c.waitTicks(10);
+            residents = w.getServer().computeOnServer(s -> HouseBounds.current().houseAt(level(w), chest).map(HouseBounds.HouseRef::residents).orElse(List.of()));
+        }
+        check(!residents.isEmpty(), "Homeless residents move into the cottage");
+        var household = residents;
+        LOGGER.info("DEEDS: the cottage's household " + household);
+
+        // Taking ten loaves from their chest is theft.
+        w.getServer().runOnServer(s -> {
+            if (level(w).getBlockEntity(chest) instanceof net.minecraft.world.Container box) box.setItem(0, new ItemStack(net.minecraft.world.item.Items.BREAD, 10));
+            var p = player(w); p.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+            p.teleportTo(x0 + 3.5, y0 + 1, z0 + 4.5); p.setYRot(-90); p.setXRot(20);
+        });
+        flush(w); c.waitTicks(5);
+        c.runOnClient(client -> { client.gui.setScreen(null); client.gameMode.useItemOn(client.player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(chest), Direction.WEST, chest, false)); });
+        c.waitForScreen(net.minecraft.client.gui.screens.inventory.ContainerScreen.class); flush(w); c.waitTicks(5);
+        c.runOnClient(client -> client.gameMode.handleContainerInput(client.player.containerMenu.containerId, 0, 0, net.minecraft.world.inventory.ContainerInput.QUICK_MOVE, client.player));
+        flush(w); c.waitTicks(5);
+        c.takeScreenshot("deeds-theft");
+        c.runOnClient(client -> client.player.closeContainer());
+        flush(w); c.waitForScreen(null); c.waitTicks(5);
+        w.getServer().runOnServer(s -> {
+            var d = deed(w, DeedKind.STOLE);
+            check(d != null && d.count() == 10, "Taking from a resident's chest is theft, counted by the items: " + d);
+            check(d.involved().containsAll(household) && d.label().contains("House"), "The household was stolen from: " + d);
+            check(d.points10() == DeedKind.STOLE.points10(10, false), "Ten items are worth " + DeedKind.STOLE.points10(10, false));
+        });
+
+        // Breaking an owned bed and the door: one deed for the house, merged within the day.
+        var owned = w.getServer().computeOnServer(s -> {
+            for (int dx : new int[]{1, 2}) {
+                var foot = new BlockPos(x0 + dx, y0 + 1, z0 + 2);
+                var owners = HouseBounds.current().owners(level(w), foot);
+                if (!owners.isEmpty()) return Map.entry(foot, owners.getFirst());
+            }
+            return null;
+        });
+        check(owned != null, "One of the cottage's beds has an owner");
+        w.getServer().runOnServer(s -> {
+            var p = player(w);
+            check(p.gameMode.destroyBlock(owned.getKey()), "The player breaks the bed");
+            var d = deed(w, DeedKind.BROKE_HOME);
+            check(d != null && d.involved().contains(owned.getValue()), "Breaking a resident's bed: its owner is wronged: " + d);
+            // The top half of the door: the index may list either half; the door is the household's.
+            check(p.gameMode.destroyBlock(new BlockPos(x0 + 3, y0 + 2, z0 + 6)), "The player breaks the door");
+            var again = deed(w, DeedKind.BROKE_HOME);
+            check(again.serial() == d.serial() && again.count() == 2 && again.involved().containsAll(household), "The door counts too, as one deed for the house: " + again);
+        });
+        LOGGER.info("DEEDS: theft and broken-home cases passed");
     }
 }
