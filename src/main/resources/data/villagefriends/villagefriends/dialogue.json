@@ -3708,6 +3708,14 @@
 "Hello. Night watch. Long hours, cold hands, good stars.",
 "Hello. Heard any groaning out by the fields? No? Good."
 ],
+"greet.routine.defend":[
+"Raiders! Get behind me, {player}!",
+"Not now! They're coming. Stay close to the bell.",
+"Hello, quickly! Have you got a weapon? We could use it.",
+"Eyes on the treeline, {player}. They'll come from there.",
+"Stand with us or get indoors. Either way, be quick!",
+"Hold steady. We've got this village covered."
+],
 "greet.routine.play":[
 "Hi! We're playing! Want to play?",
 "Hello! I'm hiding! Don't tell anyone where I am.",
@@ -3990,7 +3998,18 @@
 "My lantern, my sword and my wits. All I need.",
 "Nothing gets past me. Except bats. Bats get past everyone.",
 "The golem and I have an understanding. It takes the north side, I take the south.",
-"Long night ahead. Good thing I like the quiet."
+"Long night ahead. Good thing I like the quiet.",
+"We walk the watch in pairs now. Nobody walks the dark alone.",
+"My partner takes the left side of the road, I take the right. We meet at every lamp."
+],
+"routine.defend":[
+"Everyone else is hiding. That's how it should be. This part is our job.",
+"We muster at the bell, then we go out to meet them.",
+"Pillagers hit hard. Stay out of their crossbow range if you can.",
+"If anyone falls, get them salts or a tonic. We don't leave our people on the ground.",
+"The bell's rung. Swords out, bows strung.",
+"I've drilled for this every morning. Let's see if it pays off.",
+"Watch for the big beasts. Ravagers don't stop for anything."
 ],
 "routine.play":[
 "We're playing tag! I'm winning!",

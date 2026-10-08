@@ -31,6 +31,8 @@ import static dev.villagefriends.VillageFriends.*;
  * that carries out the current part of their day (work, the bell, home, bed, play), walks them to the
  * tavern or their hobby spot, hurries them indoors when rain or a storm starts, keeps them awake at
  * home until bedtime, and shares what they are doing with clients for animation and conversation.
+ * Guards on night watch walk in squads and guards in a raid muster to fight ({@link GuardPatrols});
+ * the apothecary leaves whatever they were doing to dress a knocked-out neighbor's wounds ({@link Knockouts}).
  */
 public final class ResidentRoutines {
     /** Rain counts as "just stopped" for this long. */
@@ -38,10 +40,9 @@ public final class ResidentRoutines {
     private static final Map<ResourceKey<Level>, Long> lastRain = new HashMap<>();
     private record Spot(long day, BlockPos pos) {}
     private static final Map<UUID, Spot> hobbySpots = new HashMap<>();
-    private static final Map<UUID, Long> patrolled = new HashMap<>();
 
-    public static void clear() { lastRain.clear(); hobbySpots.clear(); patrolled.clear(); }
-    public static void unload(Villager v) { hobbySpots.remove(v.getUUID()); patrolled.remove(v.getUUID()); }
+    public static void clear() { lastRain.clear(); hobbySpots.clear(); }
+    public static void unload(Villager v) { hobbySpots.remove(v.getUUID()); }
 
     public static void tick(MinecraftServer server) {
         for (var level : server.getAllLevels()) if (level.isRaining()) lastRain.put(level.dimension(), level.getGameTime());
@@ -75,29 +76,44 @@ public final class ResidentRoutines {
         var brain = v.getBrain();
         var job = brain.getMemory(MemoryModuleType.JOB_SITE).map(GlobalPos::pos).orElse(null);
         boolean indoors = job == null || !level.canSeeSky(job.above());
-        return Routine.plan(day(v), timeOfDay(level), weather(level, v.blockPosition()), seed(v), profession(v), profile(v).personality(), v.isBaby(), indoors);
+        var plan = Routine.plan(day(v), timeOfDay(level), weather(level, v.blockPosition()), seed(v), profession(v), profile(v).personality(), v.isBaby(), indoors);
+        // Guard duty outranks the schedule: a raid calls every guard out, and a short-handed watch calls up the next guard.
+        if (GuardPatrols.defending(v)) return new Routine.Plan(Block.DEFEND, plan.scheduled(), plan.weather(), plan.day());
+        if (GuardPatrols.drafted(v, timeOfDay(level)) && plan.block() != Block.NIGHT_WATCH) return new Routine.Plan(Block.NIGHT_WATCH, plan.scheduled(), plan.weather(), plan.day());
+        return plan;
     }
     /** What a resident is doing, as shown to players: "At work", "Sheltering from the rain"... */
-    public static String doing(Villager v) { return v.isSleeping() ? "Asleep" : plan(v).label(); }
+    public static String doing(Villager v) {
+        if (Knockouts.knockedOut(v)) return Knockouts.status(v);
+        return v.isSleeping() ? "Asleep" : plan(v).label();
+    }
 
     // -- applying it -------------------------------------------------------------------------------
 
     static void update(Villager v) {
-        if (!(v.level() instanceof ServerLevel level) || !v.isAlive() || v.isRemoved()) return;
+        if (!(v.level() instanceof ServerLevel level) || !v.isAlive() || v.isRemoved() || Knockouts.knockedOut(v)) return;
         var plan = plan(v);
         String id = plan.block().id(), old = target(v).getAttached(ROUTINE);
         if (!id.equals(old)) { target(v).setAttached(ROUTINE, id); changed(v, Block.byId(old), plan); }
         var brain = v.getBrain();
         if (!(brain instanceof RoutineBrain routine)) return;
+        boolean duty = plan.block() == Block.DEFEND;
+        routine.villagefriends$duty(duty);
         // Companions on an outing, guards in a fight and trading residents follow other rules.
         if (v.isNoAi() || v.isPassenger() || CompanionController.state(v).active() || CompanionController.hasActivity(v)
                 || GuardController.fighting(v) || v.isTrading()) { routine.villagefriends$routine(null, true); return; }
         var activity = activity(v, level, plan.block());
         routine.villagefriends$routine(activity, plan.block().sleep);
         var current = brain.getActiveNonCoreActivity().orElse(Activity.IDLE);
-        if (current != activity && (current == Activity.IDLE || current == Activity.WORK || current == Activity.MEET || current == Activity.REST || current == Activity.PLAY))
+        if (duty) {
+            // Guards called out by a raid ignore the alarm bell and the urge to hide.
+            brain.eraseMemory(MemoryModuleType.HEARD_BELL_TIME); brain.eraseMemory(MemoryModuleType.HIDING_PLACE);
+            if (current == Activity.RAID || current == Activity.PRE_RAID || current == Activity.HIDE || current == Activity.PANIC) current = null;
+        }
+        if (current != activity && (current == null || current == Activity.IDLE || current == Activity.WORK || current == Activity.MEET || current == Activity.REST || current == Activity.PLAY))
             brain.setActiveActivityIfPossible(activity);
         if (v.isSleeping() && !plan.block().sleep) v.stopSleeping();
+        if (Knockouts.tend(v, level)) return;
         steer(v, level, plan);
     }
     private static Activity activity(Villager v, ServerLevel level, Block block) {
@@ -110,7 +126,7 @@ public final class ResidentRoutines {
             case TAVERN, PERFORM, LUNCH_TAVERN -> tavern(v, level) != null || !bell ? Activity.IDLE : Activity.MEET;
             case PLAY, SNOW_PLAY -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
             case RAIN_WALK -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
-            case HOBBY, NIGHT_WATCH -> Activity.IDLE;
+            case HOBBY, NIGHT_WATCH, DEFEND -> Activity.IDLE;
         };
     }
     /** Walks a resident to places vanilla activities don't know about: the tavern, a hobby spot, shelter, a patrol route. */
@@ -131,19 +147,12 @@ public final class ResidentRoutines {
                         .filter(h -> h.closerToCenterThan(v.position(), 48)).orElseGet(() -> cover(v, level));
                 if (home != null) walk(v, home, .7F, 1);
             }
-            case NIGHT_WATCH -> {
-                long now = level.getGameTime();
-                if (now < patrolled.getOrDefault(v.getUUID(), 0L)) break;
-                patrolled.put(v.getUUID(), now + 300 + v.getRandom().nextInt(200));
-                var anchor = brain.getMemory(MemoryModuleType.MEETING_POINT).filter(h -> h.dimension() == level.dimension()).map(GlobalPos::pos).orElse(v.blockPosition());
-                var random = v.getRandom();
-                int x = anchor.getX() + random.nextInt(41) - 20, z = anchor.getZ() + random.nextInt(41) - 20;
-                walk(v, new BlockPos(x, level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z), z), .5F, 2);
-            }
+            case NIGHT_WATCH -> GuardPatrols.patrol(v, level);
+            case DEFEND -> GuardPatrols.muster(v, level);
             default -> {}
         }
     }
-    private static void walk(Villager v, BlockPos pos, float speed, int closeEnough) {
+    static void walk(Villager v, BlockPos pos, float speed, int closeEnough) {
         var brain = v.getBrain();
         var existing = brain.getMemory(MemoryModuleType.WALK_TARGET);
         if (existing.isPresent() && existing.get().getTarget().currentBlockPosition().closerThan(pos, closeEnough + 1)) return;
@@ -155,6 +164,7 @@ public final class ResidentRoutines {
         switch (plan.block()) {
             case SHELTER, SNOWED_IN -> { if (!old.outdoors() && old != Block.WORK) return; VillageSocieties.emote(v, Emote.SWEAT, v.getRandom().nextInt(20)); }
             case STORM -> VillageSocieties.emote(v, v.isBaby() ? Emote.SWEAT : Emote.EXCLAIM, v.getRandom().nextInt(20));
+            case DEFEND -> VillageSocieties.emote(v, Emote.EXCLAIM, v.getRandom().nextInt(10));
             case RAIN_WALK -> VillageSocieties.emote(v, Emote.NOTE, v.getRandom().nextInt(30));
             case SNOW_PLAY -> VillageSocieties.emote(v, Emote.SPARKLE, v.getRandom().nextInt(30));
             default -> {

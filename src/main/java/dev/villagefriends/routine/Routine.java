@@ -50,7 +50,9 @@ public final class Routine {
         STORM("Waiting out the storm", Place.HOME, false),
         SNOWED_IN("Keeping warm indoors", Place.HOME, false),
         RAIN_WALK("Enjoying the rain", Place.VILLAGE, false),
-        SNOW_PLAY("Playing in the snow", Place.VILLAGE, false);
+        SNOW_PLAY("Playing in the snow", Place.VILLAGE, false),
+        /** Guards during a raid: mustered at the bell and out after the raiders instead of hiding. */
+        DEFEND("Defending the village", Place.VILLAGE, false);
 
         public final String label; public final Place place; public final boolean sleep;
         Block(String label, Place place, boolean sleep) { this.label = label; this.place = place; this.sleep = sleep; }

@@ -505,7 +505,7 @@ public final class Workstations {
     }
     /** The apothecary looks after anyone hurt nearby: neighbors heal, visitors get a soothing salve. */
     private static void tend(ServerLevel level, Villager apothecary, BlockPos site) {
-        for (var other : level.getEntitiesOfClass(Villager.class, apothecary.getBoundingBox().inflate(8), o -> o.isAlive() && o.getHealth() < o.getMaxHealth())) {
+        for (var other : level.getEntitiesOfClass(Villager.class, apothecary.getBoundingBox().inflate(8), o -> o.isAlive() && o.getHealth() < o.getMaxHealth() && !Knockouts.injured(o))) {
             other.heal(4);
             level.sendParticles(ParticleTypes.HEART, other.getX(), other.getY() + 2, other.getZ(), 1, .1, .1, .1, 0);
         }

@@ -16,4 +16,6 @@ public final class ResidentRenderState extends HumanoidRenderState {
     /** The emote bubble above their head this frame, or null. */
     public EmoteBubbles.Bubble bubble;
     public float bubbleAge;
+    /** Lying hurt on the ground: knocked out, or a downed companion. */
+    public boolean injured;
 }

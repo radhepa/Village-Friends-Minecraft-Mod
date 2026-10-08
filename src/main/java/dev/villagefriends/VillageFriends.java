@@ -64,6 +64,11 @@ public final class VillageFriends implements ModInitializer {
     /** What a resident is doing in their day ("work", "lunch", "shelter"...), shared with clients for body language. */
     public static final AttachmentType<String> ROUTINE = AttachmentRegistry.create(id("routine"),
             b -> b.syncWith(ByteBufCodecs.STRING_UTF8, AttachmentSyncPredicate.all()));
+    /** A knocked-out resident's clock: revive them before {@code until} (game time) or they die. Absent while conscious. */
+    public static final AttachmentType<KnockoutState> KNOCKOUT = AttachmentRegistry.create(id("knockout"), b -> b.persistent(KnockoutState.CODEC));
+    /** Lying hurt on the ground (knocked out, or a downed companion): shared with clients for the pose and hitbox. */
+    public static final AttachmentType<Boolean> INJURED = AttachmentRegistry.create(id("injured"),
+            b -> b.syncWith(ByteBufCodecs.BOOL, AttachmentSyncPredicate.all()));
     private static final Set<String> TOPICS = Set.of("chat", "work", "adventure", "joke", "news", "heart");
     public static AttachmentTarget target(Entity entity) { return (AttachmentTarget) entity; }
 
@@ -76,17 +81,18 @@ public final class VillageFriends implements ModInitializer {
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
-            if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); }
+            if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); if (Knockouts.knockedOut(villager)) Knockouts.lieDown(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); GuardPatrols.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSocieties::tick);
         ServerTickEvents.END_SERVER_TICK.register(ResidentRoutines::tick);
+        ServerTickEvents.END_SERVER_TICK.register(GuardPatrols::tick);
         ServerTickEvents.END_SERVER_TICK.register(Workstations::tick);
         // Striking the training dummy measures the hit instead of breaking it.
         net.fabricmc.fabric.api.event.player.AttackBlockCallback.EVENT.register(Workstations::attack);
@@ -104,8 +110,16 @@ public final class VillageFriends implements ModInitializer {
         ServerPlayNetworking.registerGlobalReceiver(ActionPayload.TYPE, (payload, context) -> handleAction(context.player(), payload));
         ServerPlayNetworking.registerGlobalReceiver(LedgerRequestPayload.TYPE, (payload, context) -> VillageLedger.request(context.player(), payload));
         UseEntityCallback.EVENT.register((player, world, hand, entity, hit) -> {
-            if (!(entity instanceof Villager villager) || hand != InteractionHand.MAIN_HAND || player.isSpectator() || player.isShiftKeyDown()) return InteractionResult.PASS;
+            if (!(entity instanceof Villager villager) || hand != InteractionHand.MAIN_HAND || player.isSpectator()) return InteractionResult.PASS;
             var held = player.getMainHandItem();
+            // Someone knocked out can be treated or checked on, but not traded with or talked to.
+            if (Knockouts.injured(villager) && !CompanionController.state(villager).downed()) {
+                if (held.is(Items.NAME_TAG)) return InteractionResult.PASS;
+                if (world.isClientSide()) return InteractionResult.SUCCESS;
+                if (player instanceof ServerPlayer sp && Knockouts.knockedOut(villager)) Knockouts.interact(sp, villager);
+                return InteractionResult.SUCCESS_SERVER;
+            }
+            if (player.isShiftKeyDown()) return InteractionResult.PASS;
             if (held.is(Items.NAME_TAG) || held.getItem() instanceof SpawnEggItem) return InteractionResult.PASS;
             if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !validTarget(sp, villager)) return InteractionResult.PASS;
             if (villager.isSleeping()) { sp.sendSystemMessage(Component.literal("Your neighbor is sleeping. Visit again in the morning!"), true); return InteractionResult.SUCCESS_SERVER; }

@@ -41,11 +41,23 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         return super.getArmPose(villager, arm);
     }
     @Override public Identifier getTextureLocation(ResidentRenderState state) { return state.texture; }
+    /** Someone lying hurt: flat on their back, slumped a little to one side, centered over their hitbox. */
+    @Override protected void setupRotations(ResidentRenderState state, PoseStack pose, float bodyRot, float scale) {
+        if(!state.injured) { super.setupRotations(state, pose, bodyRot, scale); return; }
+        float side=(state.motionSeed&1)==0?1:-1;
+        pose.rotateDegrees(com.mojang.math.Axis.YP, 180-bodyRot);
+        pose.translate(0, state.isBaby?.08F:.16F, state.isBaby?-.45F:-.9F);
+        pose.rotateDegrees(com.mojang.math.Axis.XP, 90);
+        pose.rotateDegrees(com.mojang.math.Axis.YP, 14*side);
+    }
     @Override protected float getShadowRadius(ResidentRenderState state) { return super.getShadowRadius(state)*(state.isBaby?.6F:1F); }
 
     @Override public void extractRenderState(Villager villager, ResidentRenderState state, float delta) {
         super.extractRenderState(villager, state, delta);
         state.motionSeed=ResidentMotion.seed(villager.getUUID());
+        state.injured=villager.hasPose(net.minecraft.world.entity.Pose.SLEEPING) && dev.villagefriends.Knockouts.injured(villager);
+        // The pose and the injured flag arrive separately; the lying hitbox needs both, so refit it once both are here.
+        if(state.injured && villager.getBbWidth()<.5F && !villager.isBaby()) villager.refreshDimensions();
         state.onGround=villager.onGround();
         state.eyeLookX=state.eyeLookY=state.attention=0;
         var camera=Minecraft.getInstance().getCameraEntity();
