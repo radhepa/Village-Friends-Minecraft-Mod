@@ -1,0 +1,16 @@
+{
+  "outfits": [
+    {"id": "m_physic_doctor", "name": "Physician", "top": "t221_physicians_flask_case_gown", "bottom": "b221_physicians_long_robe_skirt"},
+    {"id": "m_barber_surgeon", "name": "Barber-Surgeon", "top": "t222_barber_surgeons_striped_apron", "bottom": "b222_barber_surgeons_strapped_trousers"},
+    {"id": "m_chantry_priest", "name": "Chantry Priest", "top": "t223_chantry_priests_stole_and_alb", "bottom": "b223_chantry_alb_skirt_and_soft_shoes"},
+    {"id": "m_deacon", "name": "Deacon", "top": "t224_deacons_dalmatic", "bottom": "b224_deacons_alb_hem"},
+    {"id": "m_choir_cantor", "name": "Cantor", "top": "t225_cantors_choir_surplice", "bottom": "b225_cantors_cassock_skirt"}
+  ],
+  "professions": {
+    "APOTHECARY": ["m_physic_doctor", "m_barber_surgeon"],
+    "SCHOLAR": ["m_physic_doctor"],
+    "BUTCHER": ["m_barber_surgeon"],
+    "CLERIC": ["m_chantry_priest", "m_deacon", "m_choir_cantor"],
+    "BARD": ["m_choir_cantor"]
+  }
+}
