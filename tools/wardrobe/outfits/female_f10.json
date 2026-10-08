@@ -4,11 +4,18 @@
     {"id": "f_short_sleeve_villager", "name": "Summer Villager", "top": "tf287_short_sleeved_summer_kirtle", "bottom": "bf287_summer_calf_skirt"},
     {"id": "f_knit_shawl_villager", "name": "Shawled Villager", "top": "tf288_knitted_shawl_over_chemise", "bottom": "bf288_everyday_wool_petticoat"},
     {"id": "f_quilted_kitchen_maid", "name": "Kitchen Maid", "top": "tf289_quilted_waistcoat_bodice", "bottom": "bf289_quilted_hem_skirt"},
-    {"id": "f_overjacket_townswoman", "name": "Townswoman", "top": "tf290_short_wool_overjacket", "bottom": "bf290_plain_gathered_skirt"}
+    {"id": "f_overjacket_townswoman", "name": "Townswoman", "top": "tf290_short_wool_overjacket", "bottom": "bf290_plain_gathered_skirt"},
+    {"id": "f_linen_wrap_villager", "name": "Linen Wrap Villager", "top": "tf291_wrap_front_linen_bodice", "bottom": "bf291_wrap_over_linen_skirt"},
+    {"id": "f_patched_field_hand", "name": "Field Hand", "top": "tf292_patched_elbow_kirtle", "bottom": "bf292_patched_knee_work_breeches"},
+    {"id": "f_capelet_villager", "name": "Capeleted Villager", "top": "tf293_hooded_capelet_over_kirtle", "bottom": "bf293_belted_everyday_skirt"},
+    {"id": "f_overdress_housewife", "name": "Housewife", "top": "tf294_laced_sleeveless_overdress", "bottom": "bf294_plain_underdress_skirt"},
+    {"id": "f_buttoned_seamstress", "name": "Seamstress", "top": "tf295_button_front_wool_bodice", "bottom": "bf295_button_hem_wool_skirt"}
   ],
   "professions": {
-    "NONE": ["f_wool_kirtle_goodwife", "f_short_sleeve_villager", "f_knit_shawl_villager", "f_quilted_kitchen_maid", "f_overjacket_townswoman"],
+    "NONE": ["f_wool_kirtle_goodwife", "f_short_sleeve_villager", "f_knit_shawl_villager", "f_quilted_kitchen_maid", "f_overjacket_townswoman", "f_linen_wrap_villager", "f_patched_field_hand", "f_capelet_villager", "f_overdress_housewife", "f_buttoned_seamstress"],
     "SHEPHERD": ["f_knit_shawl_villager"],
-    "COOK": ["f_quilted_kitchen_maid"]
+    "COOK": ["f_quilted_kitchen_maid"],
+    "FARMER": ["f_patched_field_hand"],
+    "TAILOR": ["f_buttoned_seamstress"]
   }
 }
