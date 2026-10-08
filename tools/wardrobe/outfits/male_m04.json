@@ -9,15 +9,21 @@
     {"id": "m_war_drummer", "name": "War Drummer", "top": "t202_war_drummers_drum_slung_tunic", "bottom": "b202_drummers_gaitered_trousers"},
     {"id": "m_castellan", "name": "Castellan", "top": "t203_castellans_key_chain_surcoat", "bottom": "b203_castellans_mail_leggings"},
     {"id": "m_gate_warden", "name": "Gate Warden", "top": "t204_gate_wardens_lamellar_vest", "bottom": "b204_gate_wardens_hobnail_gaiters"},
-    {"id": "m_outrider", "name": "Outrider", "top": "t205_outriders_dust_coat", "bottom": "b205_outriders_spurred_boots"}
+    {"id": "m_outrider", "name": "Outrider", "top": "t205_outriders_dust_coat", "bottom": "b205_outriders_spurred_boots"},
+    {"id": "m_plackart_lancer", "name": "Lancer", "top": "t206_lancers_plackart_breastplate", "bottom": "b206_lancers_steel_cuisses_and_sabatons"},
+    {"id": "m_siege_sapper", "name": "Sapper", "top": "t207_sappers_shoring_belt_jerkin", "bottom": "b207_sappers_muddy_kneecops"},
+    {"id": "m_siege_engineer", "name": "Siege Engineer", "top": "t208_siege_engineers_plumb_line_coat", "bottom": "b208_engineers_measuring_rod_trousers"}
   ],
   "professions": {
-    "GUARD": ["m_pikeman", "m_crossbowman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_war_drummer", "m_castellan", "m_gate_warden"],
-    "KNIGHT": ["m_pikeman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_standard_bearer", "m_castellan", "m_outrider"],
-    "WEAPONSMITH": ["m_pikeman"],
+    "GUARD": ["m_pikeman", "m_crossbowman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_war_drummer", "m_castellan", "m_gate_warden", "m_siege_sapper"],
+    "KNIGHT": ["m_pikeman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_standard_bearer", "m_castellan", "m_outrider", "m_plackart_lancer"],
+    "WEAPONSMITH": ["m_pikeman", "m_gate_warden"],
     "ARCHER": ["m_crossbowman"],
     "BARD": ["m_standard_bearer", "m_war_drummer"],
     "ADVENTURER": ["m_outrider"],
-    "CARTOGRAPHER": ["m_outrider"]
+    "CARTOGRAPHER": ["m_outrider"],
+    "MASON": ["m_siege_sapper", "m_siege_engineer"],
+    "CARPENTER": ["m_siege_engineer"],
+    "SCHOLAR": ["m_siege_engineer"]
   }
 }
