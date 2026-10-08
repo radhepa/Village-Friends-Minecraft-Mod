@@ -1,0 +1,191 @@
+{
+  "id": "bf167_prioress_fine_habit_skirt",
+  "kind": "bottom",
+  "name": "Prioress's Fine Habit Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf167_prioress_fine_habit_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "holy",
+    "long_skirt",
+    "robe",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        14,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "right_shoe_point",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        13,
+        18
+      ]
+    },
+    {
+      "id": "left_shoe_point",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        22,
+        18
+      ]
+    }
+  ],
+  "lockedTo": "tf167_prioress_rosary_girdle_habit",
+  "description": "The habit's skirt in fine dark wool, laid in crisp wide box pleats with a short train, over soft pointed shoes."
+}

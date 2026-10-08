@@ -1,0 +1,163 @@
+{
+  "id": "t306_alpine_herdsmans_loden_jacket",
+  "kind": "top",
+  "name": "Alpine Herdsman's Loden Jacket",
+  "gender": "male",
+  "texture": "tops/t306_alpine_herdsmans_loden_jacket.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "lapel_sprig",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        0.8,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "salt_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        8.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "jacket_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jacket_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A thick fulled loden jacket with piped edges, a stand collar and pale horn buttons, a herdsman's salt pouch on a strap across the chest and a mountain sprig at the lapel."
+}

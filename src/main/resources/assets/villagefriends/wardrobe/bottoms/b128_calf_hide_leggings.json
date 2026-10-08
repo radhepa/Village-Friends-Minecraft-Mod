@@ -1,0 +1,192 @@
+{
+  "id": "b128_calf_hide_leggings",
+  "kind": "bottom",
+  "name": "Calf-Hide Leggings",
+  "gender": "male",
+  "texture": "bottoms/b128_calf_hide_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hide_point_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -1.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_hide_point_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        1.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_hide_point_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        -1.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_hide_point_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        1.0,
+        1.4,
+        -2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_hide_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        20,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_hide_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "inflate": 0.08
+    }
+  ],
+  "description": "Hair-on piebald calf-hide leggings laced up the outer leg with thongs and tied by points to short linen braies, over soft hide shoes."
+}

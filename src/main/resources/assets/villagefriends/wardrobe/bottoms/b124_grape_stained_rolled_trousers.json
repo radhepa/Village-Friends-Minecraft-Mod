@@ -1,0 +1,310 @@
+{
+  "id": "b124_grape_stained_rolled_trousers",
+  "kind": "bottom",
+  "name": "Grape-Stained Rolled Trousers",
+  "gender": "male",
+  "texture": "bottoms/b124_grape_stained_rolled_trousers.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_trouser_roll_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "right_trouser_roll_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "right_sandal_sole",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        11.1,
+        -2.9
+      ],
+      "size": [
+        4,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_sandal_toe_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.4,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "right_sandal_ankle_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        11,
+        7
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "left_trouser_roll_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        32,
+        7
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_trouser_roll_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "left_sandal_sole",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        11.1,
+        -2.9
+      ],
+      "size": [
+        4,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        14
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_sandal_toe_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.4,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        14
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "left_sandal_ankle_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Linen trousers rolled thick to mid-calf for the treading vat, wine-dark stains climbing up to the knee, bare shins and wooden-soled sandals."
+}

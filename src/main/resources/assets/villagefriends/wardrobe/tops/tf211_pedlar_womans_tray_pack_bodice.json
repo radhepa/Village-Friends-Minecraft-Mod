@@ -1,0 +1,215 @@
+{
+  "id": "tf211_pedlar_womans_tray_pack_bodice",
+  "kind": "top",
+  "name": "Pedlar Woman's Tray-Pack Bodice",
+  "gender": "female",
+  "texture": "tops/tf211_pedlar_womans_tray_pack_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tray",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.4,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        -4
+      ],
+      "size": [
+        7,
+        2,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ribbon_roll_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.1,
+        5.4,
+        -6.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "ribbon_roll_1",
+      "bone": "TORSO",
+      "pivot": [
+        -3.1,
+        5.4,
+        -4.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "ware_pot",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        4.4,
+        -5.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "ware_comb",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        5.4,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "pack",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        6,
+        3
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "pack_roll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.0,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        2,
+        2
+      ],
+      "uv": [
+        19,
+        7
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A laced bodice with a wooden pedlar's tray of ribbons, pots and combs slung from the neck, and a strapped canvas pack on her back."
+}

@@ -1,0 +1,250 @@
+{
+  "id": "t226_hospitallers_eight_point_cross_mantle",
+  "kind": "top",
+  "name": "Hospitaller's Eight-Point Cross Mantle",
+  "gender": "male",
+  "texture": "tops/t226_hospitallers_eight_point_cross_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "martial",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "mantle_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        3.0
+      ],
+      "rotation": [
+        3,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "mantle_hem",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        12.3,
+        3.3
+      ],
+      "rotation": [
+        3,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "mantle_front_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mantle_front_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        23
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "neck_cord_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        0.3,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        23,
+        23
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neck_cord_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        0.3,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        28,
+        23
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neck_cord_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        -0.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        23
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A brother hospitaller's closed black mantle reaching the calf, a white eight-pointed cross on the breast and a great one across the back, fastened at the throat by a tasselled cord over a coloured tunic."
+}

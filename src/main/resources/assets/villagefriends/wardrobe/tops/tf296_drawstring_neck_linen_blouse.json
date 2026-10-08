@@ -1,0 +1,163 @@
+{
+  "id": "tf296_drawstring_neck_linen_blouse",
+  "kind": "top",
+  "name": "Drawstring-Neck Linen Blouse",
+  "gender": "female",
+  "texture": "tops/tf296_drawstring_neck_linen_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "neck_frill",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0.05,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "drawstring_right",
+      "bone": "TORSO",
+      "pivot": [
+        -0.5,
+        1.1,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "drawstring_left",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        1.1,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "right_wrist_frill",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        8.1,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_wrist_frill",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        8.1,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A full linen blouse drawn up on a cord into a frilled neckline, its bead-tipped ends hanging free, with long gathered sleeves frilled at the wrist."
+}

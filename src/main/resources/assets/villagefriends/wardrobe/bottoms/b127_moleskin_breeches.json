@@ -1,0 +1,133 @@
+{
+  "id": "b127_moleskin_breeches",
+  "kind": "bottom",
+  "name": "Moleskin Breeches",
+  "gender": "male",
+  "texture": "bottoms/b127_moleskin_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_thong",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.4,
+        5.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_knee_thong",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.4,
+        5.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_kneel_pad",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        3.4,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "right_kneel_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        4.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Soft napped moleskin breeches tied below the knee with leather thongs, a worn kneeling pad strapped to the right knee, ribbed wool stockings and laced ankle boots."
+}

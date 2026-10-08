@@ -1,0 +1,307 @@
+{
+  "id": "t131_cider_pressers_bib_smock",
+  "kind": "top",
+  "name": "Cider Presser's Bib Smock",
+  "gender": "male",
+  "texture": "tops/t131_cider_pressers_bib_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "bib_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "pocket_apple_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        5.2,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "pocket_apple_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        5.2,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "bib_apron_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        15,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "pomace_scoop_handle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.9,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        57,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "pomace_scoop_bowl",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.4,
+        3,
+        -2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A rolled-sleeve smock under a canvas bib tied round the neck, blotched with apple juice and pulp, two apples riding in its pocket and a wooden pomace scoop hooked at the hip."
+}

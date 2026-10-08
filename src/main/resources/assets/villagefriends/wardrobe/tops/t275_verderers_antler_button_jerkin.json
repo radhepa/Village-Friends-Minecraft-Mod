@@ -1,0 +1,394 @@
+{
+  "id": "t275_verderers_antler_button_jerkin",
+  "kind": "top",
+  "name": "Verderer's Antler-Button Jerkin",
+  "gender": "male",
+  "texture": "tops/t275_verderers_antler_button_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "antler_toggle_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.1,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "antler_toggle_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.1,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "antler_toggle_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.1,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "right_wing",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -1.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        27,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "left_wing",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gauge_strap",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.0,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dog_gauge_top",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dog_gauge_bottom",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dog_gauge_right",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dog_gauge_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        11.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jerkin_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        19,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jerkin_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        40,
+        16
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A forest-court officer's winged jerkin over a full shirt, closed with three antler toggles on leather loops, an oak-leaf badge on the breast and the iron dog-gauge stirrup hung at his belt."
+}

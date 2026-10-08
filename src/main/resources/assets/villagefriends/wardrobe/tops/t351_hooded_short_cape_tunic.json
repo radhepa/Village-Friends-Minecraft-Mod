@@ -1,0 +1,220 @@
+{
+  "id": "t351_hooded_short_cape_tunic",
+  "kind": "top",
+  "name": "Hooded Short Cape over Tunic",
+  "gender": "male",
+  "texture": "tops/t351_hooded_short_cape_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "tunic_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "short_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.0,
+        -0.8,
+        -3.4
+      ],
+      "size": [
+        16,
+        5,
+        7
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "throat_toggle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.3,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        12
+      ]
+    },
+    {
+      "id": "throat_loop",
+      "bone": "TORSO",
+      "pivot": [
+        0.9,
+        0.1,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        12
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        3.25
+      ],
+      "rotation": [
+        18,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        25
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain belted tunic under a short wool cape reaching the elbows, its hood thrown back, the edge blanket-stitched in a bright yarn and a wooden toggle at the throat."
+}

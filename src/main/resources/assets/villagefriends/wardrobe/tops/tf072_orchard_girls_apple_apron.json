@@ -1,0 +1,282 @@
+{
+  "id": "tf072_orchard_girls_apple_apron",
+  "kind": "top",
+  "name": "Orchard Girl's Apple Apron",
+  "gender": "female",
+  "texture": "tops/tf072_orchard_girls_apple_apron.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.0,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        1.4,
+        -1.6
+      ],
+      "size": [
+        8,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.08,
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        0.2,
+        -2.3
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -0.1,
+        -1.9
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        30,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        0.2,
+        -2.4
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        39,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_3",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.0,
+        0.4,
+        -1.7
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        48,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_4",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.6,
+        0.7,
+        -3.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apple_leaf",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -25
+      ],
+      "origin": [
+        -0.4,
+        -0.2,
+        -1.6
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        14
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A bodice with sleeves pushed up and a picking apron buttoned up at the hem into a deep pouch heaped with apples."
+}

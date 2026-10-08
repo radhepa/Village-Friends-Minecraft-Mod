@@ -1,0 +1,16 @@
+{
+  "id": "b307_bohemian_felt_leggings",
+  "kind": "bottom",
+  "name": "Bohemian Felt Leggings",
+  "gender": "male",
+  "texture": "bottoms/b307_bohemian_felt_leggings.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Close felted wool leggings with cut-felt tulips stitched on the thighs and a scalloped braid down each outer seam, worn in soft leather shoes strapped round the ankle."
+}

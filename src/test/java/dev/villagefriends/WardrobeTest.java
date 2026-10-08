@@ -25,8 +25,8 @@ class WardrobeTest {
 
     @Test void menAndWomenEachHaveTheirOwnWardrobe() {
         assertEquals(80, count(Wardrobe.HAIR, Garment.Fit.MALE)); assertEquals(50, count(Wardrobe.HAIR, Garment.Fit.FEMALE));
-        assertEquals(120, count(Wardrobe.TOPS, Garment.Fit.MALE)); assertEquals(60, count(Wardrobe.TOPS, Garment.Fit.FEMALE));
-        assertEquals(120, count(Wardrobe.BOTTOMS, Garment.Fit.MALE)); assertEquals(60, count(Wardrobe.BOTTOMS, Garment.Fit.FEMALE));
+        assertEquals(219, count(Wardrobe.TOPS, Garment.Fit.MALE)); assertEquals(132, count(Wardrobe.TOPS, Garment.Fit.FEMALE));
+        assertEquals(219, count(Wardrobe.BOTTOMS, Garment.Fit.MALE)); assertEquals(132, count(Wardrobe.BOTTOMS, Garment.Fit.FEMALE));
         assertEquals(10, MasterPalettes.ALL.size()); assertEquals(10, Wardrobe.HAIR_COLORS.size());
         assertEquals(Wardrobe.ALL.size(), Wardrobe.ALL.stream().map(Garment::id).distinct().count());
         assertEquals(Wardrobe.OUTFITS.size(), Wardrobe.OUTFITS.stream().map(Wardrobe.OutfitTemplate::id).distinct().count());

@@ -1,0 +1,221 @@
+{
+  "id": "t356_belted_sleeveless_overtunic",
+  "kind": "top",
+  "name": "Belted Sleeveless Overtunic",
+  "gender": "male",
+  "texture": "tops/t356_belted_sleeveless_overtunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "belt_tongue",
+      "bone": "TORSO",
+      "pivot": [
+        1.3,
+        10.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -4
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "belt_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        10.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "undertunic_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "undertunic_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "overtunic_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "overtunic_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A square-necked sleeveless overtunic cut away deep at the armholes, girt with a broad buckled belt and a small pouch, its front-slit hem stopping short to show a longer undertunic."
+}

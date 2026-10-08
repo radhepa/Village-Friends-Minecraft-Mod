@@ -1,0 +1,335 @@
+{
+  "id": "tf141_trackers_fur_lined_hood_jerkin",
+  "kind": "top",
+  "name": "Tracker's Fur-Lined Hood Jerkin",
+  "gender": "female",
+  "texture": "tops/tf141_trackers_fur_lined_hood_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_armhole_fur",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "left_armhole_fur",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.4
+      ],
+      "rotation": [
+        18,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        5,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "hood_ruff",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        2.9
+      ],
+      "rotation": [
+        18,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        9,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        25,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "knife_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0.8,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        54,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "knife_hilt",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        -1.2,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        59,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shaft_bundle_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4000000000000004,
+        9.0,
+        2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        0
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "shaft_bundle_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.0,
+        2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        0
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        5,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "shaft_bundle_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.8,
+        9.0,
+        2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        -3.0,
+        0
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        10,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "shaft_bundle_tie",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.0,
+        2.4
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -1.5,
+        1.6,
+        0
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        15,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sleeveless laced jerkin with fur-trimmed armholes, a deep hood thrown back with a shaggy fur ruff, a skinning knife and a bundle of arrow shafts at the hip."
+}

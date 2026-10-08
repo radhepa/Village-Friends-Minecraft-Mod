@@ -1,0 +1,104 @@
+{
+  "id": "bf114_ferrywomans_waxed_breeches",
+  "kind": "bottom",
+  "name": "Ferrywoman's Waxed Breeches",
+  "gender": "female",
+  "texture": "bottoms/bf114_ferrywomans_waxed_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sea",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_rope",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        0,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "waist_rope_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.0,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "waist_rope_end",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        10.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "Wax-rubbed knee breeches with a glossy sheen, buckled knee straps over ribbed stockings, low shoes and a knotted rope belt."
+}

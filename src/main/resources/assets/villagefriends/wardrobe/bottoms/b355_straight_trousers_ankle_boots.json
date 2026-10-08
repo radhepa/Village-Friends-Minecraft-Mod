@@ -1,0 +1,159 @@
+{
+  "id": "b355_straight_trousers_ankle_boots",
+  "kind": "bottom",
+  "name": "Straight Wool Trousers and Ankle Boots",
+  "gender": "male",
+  "texture": "bottoms/b355_straight_trousers_ankle_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_buckle",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.4,
+        9.5,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_heel_tab",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        7.4,
+        2.15
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_buckle",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.4,
+        9.5,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "left_heel_tab",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        7.4,
+        2.15
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        20,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Dark wool trousers pressed with a sharp crease and falling straight onto stout ankle boots, each closed by a buckled strap round the ankle, with a pull-tab at the heel."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "t361_leather_shoulder_yoke_shirt",
+  "kind": "top",
+  "name": "Leather Shoulder-Yoke Shirt",
+  "gender": "male",
+  "texture": "tops/t361_leather_shoulder_yoke_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "yoke_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A tucked linen work shirt with a yoke of stitched suede sewn across both shoulders and dipping to a point front and back, a leather collar band and leather-faced cuffs."
+}

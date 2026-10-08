@@ -1,0 +1,162 @@
+{
+  "id": "bf173_illuminators_ink_splashed_skirt",
+  "kind": "bottom",
+  "name": "Illuminator's Ink-Splashed Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf173_illuminators_ink_splashed_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "long_skirt",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "waist_rag",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.2
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        13,
+        17
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A pale linen skirt with thin ink drips running down from the lap, and an ink-stained wiping rag tucked at the hip."
+}

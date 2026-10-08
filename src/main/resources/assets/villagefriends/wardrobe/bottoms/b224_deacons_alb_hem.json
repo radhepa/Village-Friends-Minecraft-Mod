@@ -1,0 +1,132 @@
+{
+  "id": "b224_deacons_alb_hem",
+  "kind": "bottom",
+  "name": "Deacon's Alb Hem",
+  "gender": "male",
+  "texture": "bottoms/b224_deacons_alb_hem.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "alb_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "alb_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        12,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "alb_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "alb_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        11,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t224_deacons_dalmatic",
+  "description": "The white alb falling below the dalmatic to the ankle, its deep hem worked in pale openwork lace, over soft black slippers."
+}

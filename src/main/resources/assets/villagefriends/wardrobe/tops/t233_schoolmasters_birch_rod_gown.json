@@ -1,0 +1,363 @@
+{
+  "id": "t233_schoolmasters_birch_rod_gown",
+  "kind": "top",
+  "name": "Schoolmaster's Birch-Rod Gown",
+  "gender": "male",
+  "texture": "tops/t233_schoolmasters_birch_rod_gown.png",
+  "extrasHeight": 32,
+  "tags": [
+    "scholarly",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "birch_rod",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "birch_twig_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "birch_twig_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "birch_twig_2",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        4.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ]
+    },
+    {
+      "id": "hornbook",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hornbook_handle",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        4,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hornbook_cord",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_hem",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        16,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        8,
+        1
+      ],
+      "uv": [
+        25,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A village schoolmaster's threadbare open gown, patched at both elbows, over a plain tunic, a bundle of birch twigs thrust through his belt and a hornbook of letters swinging at his hip."
+}

@@ -1,0 +1,254 @@
+{
+  "id": "tf063_gleaners_gathered_apron_top",
+  "kind": "top",
+  "name": "Gleaner's Gathered-Apron Top",
+  "gender": "female",
+  "texture": "tops/tf063_gleaners_gathered_apron_top.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.0,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_bag",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.6,
+        1.4,
+        -2.0
+      ],
+      "size": [
+        4,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.9,
+        0.6,
+        -1.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        13,
+        8
+      ],
+      "inflate": 0.08,
+      "motion": "flap_front"
+    },
+    {
+      "id": "wheat_ear_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.7,
+        -2.0,
+        -2.0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        20,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wheat_ear_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        -3.0,
+        -1.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        25,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wheat_ear_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.7000000000000002,
+        -2.4,
+        -2.2
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        30,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wheat_ear_3",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        -1.4,
+        -1.7
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        35,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain kirtle with turned cuffs and a linen apron gathered up by its corners into a bulging bag of gleaned wheat ears at the hip."
+}

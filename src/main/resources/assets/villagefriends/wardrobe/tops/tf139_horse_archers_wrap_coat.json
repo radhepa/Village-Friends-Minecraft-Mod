@@ -1,0 +1,251 @@
+{
+  "id": "tf139_horse_archers_wrap_coat",
+  "kind": "top",
+  "name": "Horse Archer's Wrap Coat",
+  "gender": "female",
+  "texture": "tops/tf139_horse_archers_wrap_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "plaque_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "bow_case",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -1.5,
+        0.6,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        23,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "bow_limb",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        -2.4,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        32,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "bow_ear",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -1.0,
+        -3.4,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "quiver",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.0,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.0,
+        0.8,
+        0
+      ],
+      "size": [
+        2,
+        6,
+        2
+      ],
+      "uv": [
+        44,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "quiver_fletchings",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.0,
+        3.7
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.0,
+        -1.2,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        53,
+        9
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A riding coat wrapped across to the right with a broad trimmed edge and turned-back cuffs, a plaque belt, and a bow case and quiver slung at the hips."
+}

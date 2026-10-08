@@ -1,0 +1,194 @@
+{
+  "id": "tf070_wool_carders_fleece_dusted_bodice",
+  "kind": "top",
+  "name": "Wool Carder's Fleece-Dusted Bodice",
+  "gender": "female",
+  "texture": "tops/tf070_wool_carders_fleece_dusted_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "wool_card_back",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        8.2,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.5,
+        1.2,
+        -0.4
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wool_card_back_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        8.2,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        -0.4,
+        -0.4
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wool_card_front",
+      "bone": "TORSO",
+      "pivot": [
+        1.1,
+        8.2,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -1.5,
+        1.2,
+        -1.0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wool_card_front_handle",
+      "bone": "TORSO",
+      "pivot": [
+        1.1,
+        8.2,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        -0.4,
+        -1.0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "rolag",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        8.6,
+        -3.4499999999999997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.2,
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A bodice and chemise dusted with clinging tufts of fleece, a pair of toothed wooden wool cards hung at the girdle and a soft rolag beside them."
+}

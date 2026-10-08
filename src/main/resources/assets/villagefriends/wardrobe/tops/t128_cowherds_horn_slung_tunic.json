@@ -1,0 +1,305 @@
+{
+  "id": "t128_cowherds_horn_slung_tunic",
+  "kind": "top",
+  "name": "Cowherd's Horn-Slung Tunic",
+  "gender": "male",
+  "texture": "tops/t128_cowherds_horn_slung_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "woven_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "belt_knot",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        9.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "horn_mouth",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        6.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "horn_mid",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        6.9,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "horn_bend",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        6.4,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "horn_tip",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        5.5,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "cowbell",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.8,
+        -0.3000000000000007,
+        -2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cowbell_clapper",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.3,
+        1.6999999999999993,
+        -1.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        35,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A split-front wool tunic with patched elbows and a tablet-woven belt hung with a little cowbell, a big curved cow horn with a brass mouthpiece slung across the chest on a cord."
+}

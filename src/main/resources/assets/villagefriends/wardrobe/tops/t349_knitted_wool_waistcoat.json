@@ -1,0 +1,49 @@
+{
+  "id": "t349_knitted_wool_waistcoat",
+  "kind": "top",
+  "name": "Knitted Wool Waistcoat",
+  "gender": "male",
+  "texture": "tops/t349_knitted_wool_waistcoat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "knit",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "knit_hem",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A snug hand-knitted wool waistcoat with a deep ribbed V neck, a twisting cable either side, wooden buttons and a thick ribbed hem, over a full linen shirt."
+}

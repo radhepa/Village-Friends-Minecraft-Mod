@@ -1,0 +1,134 @@
+{
+  "id": "b126_turned_down_mud_boots",
+  "kind": "bottom",
+  "name": "Turned-Down Mud Boots",
+  "gender": "male",
+  "texture": "bottoms/b126_turned_down_mud_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_fold",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "left_boot_fold",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "right_mud_clump",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_mud_clump",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Hemp trousers bloused into calf boots whose floppy tops are turned down to show the rough flesh-side lining, the feet caked to the ankle in wet ditch mud."
+}

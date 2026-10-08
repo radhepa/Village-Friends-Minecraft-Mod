@@ -1,0 +1,74 @@
+{
+  "id": "b123_chaff_dusted_breeches",
+  "kind": "bottom",
+  "name": "Chaff-Dusted Breeches",
+  "gender": "male",
+  "texture": "bottoms/b123_chaff_dusted_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Full woollen knee breeches powdered pale with chaff from the threshing floor, buttoned knee bands, ribbed hose and plain shoes."
+}

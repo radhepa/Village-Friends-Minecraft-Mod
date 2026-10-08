@@ -1,0 +1,188 @@
+{
+  "id": "bf140_scouts_soft_hunting_boots",
+  "kind": "bottom",
+  "name": "Scout's Soft Hunting Boots",
+  "gender": "female",
+  "texture": "bottoms/bf140_scouts_soft_hunting_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_fold",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_boot_fold",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_boot_flap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.3,
+        5.6,
+        0.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        5,
+        3
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_flap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.3,
+        5.6,
+        0.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        5,
+        3
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.4,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.4,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        35,
+        9
+      ]
+    }
+  ],
+  "description": "Close breeches over knee-high suede boots slouching in soft folds, with fringed turned-down tops and side flaps tied with thongs."
+}

@@ -1,0 +1,276 @@
+{
+  "id": "tf115_sailor_lass_striped_slop_blouse",
+  "kind": "top",
+  "name": "Sailor Lass's Striped Slop Blouse",
+  "gender": "female",
+  "texture": "tops/tf115_sailor_lass_striped_slop_blouse.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sash_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        8.0,
+        -2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "sash_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.9,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        41,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "neckerchief",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "neckerchief_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        2.3
+      ],
+      "rotation": [
+        8,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.5,
+        2.5,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        2.5,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A loose boat-necked blouse in broad deck stripes, bloused over a knotted sash, with a dark neckerchief tied at the throat."
+}

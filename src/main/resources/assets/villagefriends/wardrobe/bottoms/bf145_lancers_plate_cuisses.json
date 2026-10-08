@@ -1,0 +1,332 @@
+{
+  "id": "bf145_lancers_plate_cuisses",
+  "kind": "bottom",
+  "name": "Lancer's Plate Cuisses",
+  "gender": "female",
+  "texture": "bottoms/bf145_lancers_plate_cuisses.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "martial",
+    "sturdy"
+  ],
+  "requires": [
+    "martial",
+    "rugged"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_cuisse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_cuisse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_poleyn",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        4.2,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "right_poleyn_fan",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        4.2,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.1,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "right_spur",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.6,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "right_spur_prick",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.1,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "left_poleyn",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        4.2,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        3,
+        2
+      ],
+      "uv": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "left_poleyn_fan",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        4.2,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.1,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        23,
+        10
+      ]
+    },
+    {
+      "id": "left_spur",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.6,
+        2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        10
+      ]
+    },
+    {
+      "id": "left_spur_prick",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.1,
+        3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        10
+      ]
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.4,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Riding hose under lamed steel cuisses, fanned poleyns at the knees, greaves and riding boots with prick spurs at the heels."
+}

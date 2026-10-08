@@ -1,0 +1,248 @@
+{
+  "id": "tf113_cockle_gatherers_rake_strap_bodice",
+  "kind": "top",
+  "name": "Cockle Gatherer's Rake-Strap Bodice",
+  "gender": "female",
+  "texture": "tops/tf113_cockle_gatherers_rake_strap_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "rake_handle",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "rake_head",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -2.5,
+        5.5,
+        -0.3
+      ],
+      "size": [
+        5,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "rake_tooth_0",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -2.5,
+        6.5,
+        -0.2
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "rake_tooth_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -0.5,
+        6.5,
+        -0.2
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    },
+    {
+      "id": "rake_tooth_2",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        1.5,
+        6.5,
+        -0.2
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "rake_loop",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        1.9,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1.4
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cockle_sack",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.6,
+        -1.2
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cockle_sack_neck",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.4,
+        -0.2
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A yoked wool bodice crossed by a broad leather strap that carries a toothed cockle rake on her back, a sack of cockles at the hip."
+}

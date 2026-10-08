@@ -1,0 +1,17 @@
+{
+  "id": "b129_yoke_worn_trousers",
+  "kind": "bottom",
+  "name": "Yoke-Worn Trousers",
+  "gender": "male",
+  "texture": "bottoms/b129_yoke_worn_trousers.png",
+  "extrasHeight": 0,
+  "tags": [
+    "rugged",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Heavy hemp trousers worn thin from long days walking beside the team: faded thighs, criss-cross darning over both knees, a shiny worn seat and frayed hems over low turnshoes."
+}

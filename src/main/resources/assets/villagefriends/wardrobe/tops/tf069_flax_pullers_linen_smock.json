@@ -1,0 +1,106 @@
+{
+  "id": "tf069_flax_pullers_linen_smock",
+  "kind": "top",
+  "name": "Flax Puller's Linen Smock",
+  "gender": "female",
+  "texture": "tops/tf069_flax_pullers_linen_smock.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "drawstring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        0.9,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "drawstring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        0.9,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "flax_bundle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "origin": [
+        -1.0,
+        -6.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        12,
+        2
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A loose undyed linen smock with a pin-tucked yoke, drawstring neck and tied cuffs, a bundle of pulled flax with blue flowers slung across her back."
+}

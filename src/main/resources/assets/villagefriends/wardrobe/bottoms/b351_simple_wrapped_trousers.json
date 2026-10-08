@@ -1,0 +1,218 @@
+{
+  "id": "b351_simple_wrapped_trousers",
+  "kind": "bottom",
+  "name": "Simple Wrapped Trousers",
+  "gender": "male",
+  "texture": "bottoms/b351_simple_wrapped_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_ankle_tie",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        9.2,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_ankle_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "left_ankle_tie",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.6,
+        9.2,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_wrap_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.4,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "waist_wrap_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_wrap_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0999999999999996,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Roomy wool trousers cut to wrap over, the front panels crossing each thigh in a long diagonal fold, knotted at the hip and gathered into a tied band at the ankle above soft turnshoes."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "bf115_sailor_lass_wide_slops",
+  "kind": "bottom",
+  "name": "Sailor Lass's Wide Slops",
+  "gender": "female",
+  "texture": "bottoms/bf115_sailor_lass_wide_slops.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "rugged",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_slop",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_slop",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -0.3,
+        -2.38
+      ],
+      "size": [
+        5,
+        8,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.2
+    }
+  ],
+  "description": "Loose sailcloth slops cut wide and open below the knee, patched and tar-stained, with bare shins and feet for the deck."
+}

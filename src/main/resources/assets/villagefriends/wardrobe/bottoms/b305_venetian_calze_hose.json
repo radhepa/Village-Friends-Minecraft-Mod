@@ -1,0 +1,18 @@
+{
+  "id": "b305_venetian_calze_hose",
+  "kind": "bottom",
+  "name": "Venetian Calze Hose",
+  "gender": "male",
+  "texture": "bottoms/b305_venetian_calze_hose.png",
+  "extrasHeight": 0,
+  "tags": [
+    "fancy",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [],
+  "description": "Close soled hose with jewelled garters, the left calza striped down the thigh and badged at the knee with the woven device of a young men's company."
+}

@@ -1,0 +1,391 @@
+{
+  "id": "tf145_mounted_lancers_breastplate",
+  "kind": "top",
+  "name": "Mounted Lancer's Breastplate",
+  "gender": "female",
+  "texture": "tops/tf145_mounted_lancers_breastplate.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "martial"
+  ],
+  "requires": [
+    "sturdy"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "breastplate",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.6,
+        -2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -1
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "breastplate_ridge",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "backplate",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.6,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lance_rest",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        5.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "lance_rest_hook",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        5.0,
+        -5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -2,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ]
+    },
+    {
+      "id": "lance_rest_bolt_r",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        4.0,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "lance_rest_bolt_l",
+      "bone": "TORSO",
+      "pivot": [
+        -1.8,
+        4.0,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "faulds_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        8.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        10,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "faulds_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        8.6,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "right_couter",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_couter",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_couter_fan",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.4,
+        3.6,
+        -1
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        42,
+        16
+      ]
+    },
+    {
+      "id": "left_couter_fan",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.4,
+        3.6,
+        -1
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        49,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A ridged steel breastplate with a lance rest bolted to the right breast, plate faulds, a backplate, round couters at the elbows and mail at the shoulders."
+}

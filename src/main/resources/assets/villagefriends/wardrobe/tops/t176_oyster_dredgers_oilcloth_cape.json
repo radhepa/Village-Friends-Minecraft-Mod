@@ -1,0 +1,278 @@
+{
+  "id": "t176_oyster_dredgers_oilcloth_cape",
+  "kind": "top",
+  "name": "Oyster Dredger's Oilcloth Cape",
+  "gender": "male",
+  "texture": "tops/t176_oyster_dredgers_oilcloth_cape.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "oilcloth_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.0,
+        -0.9,
+        -3.4
+      ],
+      "size": [
+        16,
+        4,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "cape_throat_tab",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        -3.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "oyster_knife_sheath",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        9.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        12
+      ]
+    },
+    {
+      "id": "oyster_knife_grip",
+      "bone": "TORSO",
+      "pivot": [
+        -2.3,
+        8.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        12
+      ]
+    },
+    {
+      "id": "oyster_bag",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.8,
+        -1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        39,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "oyster_bag_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        50,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shirt_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        19
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shirt_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        19
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A thick wool shirt under a short, stiff oilcloth cape buttoned at the throat, an oyster knife at the belt and a net bag of grey oysters swinging at the hip."
+}

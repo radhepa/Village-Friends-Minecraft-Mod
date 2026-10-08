@@ -1,0 +1,248 @@
+{
+  "id": "b353_linen_calf_braies",
+  "kind": "bottom",
+  "name": "Linen Calf Braies",
+  "gender": "male",
+  "texture": "bottoms/b353_linen_calf_braies.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_braies_blouse",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "right_calf_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_calf_tie",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.65,
+        8.8,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_braies_blouse",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_calf_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        8
+      ]
+    },
+    {
+      "id": "left_calf_tie",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.65,
+        8.8,
+        0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_drawstring_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.5,
+        10.0,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_drawstring_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        10.0,
+        -2.5
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Very loose linen braies that blouse over a narrow band wound round each mid-calf, a drawstring at the waist, bare ankles and soft turnshoes."
+}

@@ -1,0 +1,367 @@
+{
+  "id": "t232_notarys_seal_hung_gown",
+  "kind": "top",
+  "name": "Notary's Seal-Hung Gown",
+  "gender": "male",
+  "texture": "tops/t232_notarys_seal_hung_gown.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "scholarly",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "signet",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        3.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "charter",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "seal_ribbon_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        13,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wax_seal_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        4,
+        -0.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        18,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "seal_ribbon_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        25,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wax_seal_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        -0.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        30,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "seal_ribbon_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        37,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "wax_seal_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        10.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1,
+        4,
+        -0.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        21,
+        12
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A notary's sober calf-length gown hooked down the front, slit oversleeves showing the lining, his signet on a chain, and a folded charter tucked at the girdle trailing three ribbons, each weighted with a round wax seal."
+}

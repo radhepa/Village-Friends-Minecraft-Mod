@@ -1,0 +1,220 @@
+{
+  "id": "t172_bargemans_tow_rope_jerkin",
+  "kind": "top",
+  "name": "Bargeman's Tow-Rope Jerkin",
+  "gender": "male",
+  "texture": "tops/t172_bargemans_tow_rope_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "jerkin_tabs_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jerkin_tabs_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tow_rope_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        -0.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -3.0
+      ],
+      "size": [
+        2,
+        1,
+        6
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "tow_rope_front",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        -0.1,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        27
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        13,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "tow_rope_back",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        -0.1,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        27
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        13,
+        1
+      ],
+      "uv": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "tow_rope_coil",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        9.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        3,
+        4,
+        2
+      ],
+      "uv": [
+        14,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tow_rope_tail",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        11.6,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        25,
+        8
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A laced leather jerkin over a linen shirt, a thick tow rope looped over the shoulder and across chest and back, its spare length coiled at the hip."
+}

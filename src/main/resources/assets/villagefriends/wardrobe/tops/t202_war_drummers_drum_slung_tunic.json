@@ -1,0 +1,220 @@
+{
+  "id": "t202_war_drummers_drum_slung_tunic",
+  "kind": "top",
+  "name": "War Drummer's Drum-Slung Tunic",
+  "gender": "male",
+  "texture": "tops/t202_war_drummers_drum_slung_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.07
+    },
+    {
+      "id": "drumstick_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        3.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "drumstick_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        3.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ]
+    },
+    {
+      "id": "tabor_shell",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.19999999999999996,
+        -0.3999999999999986,
+        -3.0
+      ],
+      "size": [
+        4,
+        4,
+        3
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabor_hook",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.3,
+        -1.0,
+        -2.0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short marching tunic with chevrons down the sleeves and a dagged hem, a rope-tensioned tabor slung on a broad strap at the left hip and a pair of drumsticks thrust through the strap across the chest."
+}

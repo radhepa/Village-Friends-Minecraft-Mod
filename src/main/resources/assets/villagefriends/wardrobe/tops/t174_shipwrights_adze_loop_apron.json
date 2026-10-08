@@ -1,0 +1,309 @@
+{
+  "id": "t174_shipwrights_adze_loop_apron",
+  "kind": "top",
+  "name": "Shipwright's Adze-Loop Apron",
+  "gender": "male",
+  "texture": "tops/t174_shipwrights_adze_loop_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "apron_skirt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "treenail_pocket",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.2,
+        1.0,
+        -1.0
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "treenail_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.8,
+        0,
+        -0.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "treenail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "adze_loop",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        9.4,
+        -3.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        9
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "adze_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        9.4,
+        -3.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        26,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "adze_head",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        9.4,
+        -3.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "adze_blade",
+      "bone": "TORSO",
+      "pivot": [
+        2.3,
+        9.4,
+        -3.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        -1.0,
+        -0.7
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        40,
+        9
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A heavy leather bib apron over a rolled-sleeve linen shirt, an adze hung head-up in a loop at the hip and a pocket bristling with wooden treenails."
+}

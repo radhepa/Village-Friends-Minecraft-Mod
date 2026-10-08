@@ -1,0 +1,101 @@
+{
+  "id": "b302_welsh_archers_one_shoe_leggings",
+  "kind": "bottom",
+  "name": "Welsh Archer's One-Shoe Leggings",
+  "gender": "male",
+  "texture": "bottoms/b302_welsh_archers_one_shoe_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_garter_knot",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.9,
+        4.4,
+        -2.8
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_knot",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.8999999999999999,
+        4.4,
+        -2.8
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "left_brogue_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        11.0,
+        -2.8
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    }
+  ],
+  "description": "Close wool leggings thonged below the knee, the hose rolled at the right ankle with that foot bare for a sure stance, the left foot in a single rawhide brogue."
+}

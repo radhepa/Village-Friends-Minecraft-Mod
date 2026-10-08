@@ -1,0 +1,76 @@
+{
+  "id": "b306_alpine_herdsmans_leather_breeches",
+  "kind": "bottom",
+  "name": "Alpine Herdsman's Leather Breeches",
+  "gender": "male",
+  "texture": "bottoms/b306_alpine_herdsmans_leather_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_stocking_turn",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_stocking_turn",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "description": "Buckskin knee breeches with an embroidered fall-front flap and horn-buttoned knee bands, thick knitted stockings turned down at the top, and stout shoes."
+}

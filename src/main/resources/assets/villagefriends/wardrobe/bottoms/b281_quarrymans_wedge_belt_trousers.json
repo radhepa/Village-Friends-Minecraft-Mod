@@ -1,0 +1,192 @@
+{
+  "id": "b281_quarrymans_wedge_belt_trousers",
+  "kind": "bottom",
+  "name": "Quarryman's Wedge-Belt Trousers",
+  "gender": "male",
+  "texture": "bottoms/b281_quarrymans_wedge_belt_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_wedge_0",
+      "bone": "TORSO",
+      "pivot": [
+        -4.1,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_wedge_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_wedge_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.7,
+        11.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_hammer_handle",
+      "bone": "TORSO",
+      "pivot": [
+        4.7,
+        10.6,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "waist_hammer_head",
+      "bone": "TORSO",
+      "pivot": [
+        4.7,
+        10.6,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Heavy twill trousers whitened with stone dust from the knee down, leather patches on the knees, and a broad belt hung with iron splitting wedges and a short stone hammer."
+}

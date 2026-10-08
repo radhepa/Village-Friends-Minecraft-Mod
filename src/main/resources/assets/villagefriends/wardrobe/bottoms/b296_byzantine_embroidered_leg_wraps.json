@@ -1,0 +1,129 @@
+{
+  "id": "b296_byzantine_embroidered_leg_wraps",
+  "kind": "bottom",
+  "name": "Byzantine Embroidered Leg Wraps",
+  "gender": "male",
+  "texture": "bottoms/b296_byzantine_embroidered_leg_wraps.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_garter_jewel",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        3.7,
+        -2.85
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_jewel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.0,
+        3.7,
+        -2.85
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "right_shoe_point",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "left_shoe_point",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    }
+  ],
+  "description": "Close hose bound from knee to ankle in spiralling embroidered bands studded with bright stitches, jewelled garters and low pointed shoes."
+}

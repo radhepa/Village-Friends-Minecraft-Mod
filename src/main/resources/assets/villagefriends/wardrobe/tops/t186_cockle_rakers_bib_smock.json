@@ -1,0 +1,306 @@
+{
+  "id": "t186_cockle_rakers_bib_smock",
+  "kind": "top",
+  "name": "Cockle Raker's Bib Smock",
+  "gender": "male",
+  "texture": "tops/t186_cockle_rakers_bib_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "sea",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.4,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cockle_rake_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cockle_rake_head",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        4.0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cockle_rake_teeth",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.6,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cockle_bag",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        4.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "cockle_bag_neck",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        4.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1.0,
+        0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        13,
+        15
+      ]
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        20,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short smock with a square canvas bib stitched across the chest, sleeves pushed up, a short-toothed cockle rake hung at the hip and a dripping net bag of cockles slung on the back."
+}

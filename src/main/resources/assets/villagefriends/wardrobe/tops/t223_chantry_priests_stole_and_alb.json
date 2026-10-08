@@ -1,0 +1,165 @@
+{
+  "id": "t223_chantry_priests_stole_and_alb",
+  "kind": "top",
+  "name": "Chantry Priest's Stole and Alb",
+  "gender": "male",
+  "texture": "tops/t223_chantry_priests_stole_and_alb.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "amice",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "cincture",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cincture_tail",
+      "bone": "TORSO",
+      "pivot": [
+        2.9,
+        10.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "stole_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "stole_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        7,
+        1
+      ],
+      "uv": [
+        9,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "lockedTo": "b223_chantry_alb_skirt_and_soft_shoes",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A chantry priest's plain linen alb with an amice at the throat, the coloured stole crossed on his breast beneath the cincture and its fringed, cross-marked ends hanging to the knee."
+}

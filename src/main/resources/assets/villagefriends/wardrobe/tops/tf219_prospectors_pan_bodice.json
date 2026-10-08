@@ -1,0 +1,305 @@
+{
+  "id": "tf219_prospectors_pan_bodice",
+  "kind": "top",
+  "name": "Prospector's Pan Bodice",
+  "gender": "female",
+  "texture": "tops/tf219_prospectors_pan_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.8,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gold_pan_0",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        -3.0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "gold_pan_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        4.6,
+        2.47
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -4.0,
+        0
+      ],
+      "size": [
+        6,
+        8,
+        1
+      ],
+      "uv": [
+        48,
+        8
+      ]
+    },
+    {
+      "id": "nugget_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1.5
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "nugget_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.8,
+        -1,
+        -1.2
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "nugget_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.2,
+        -1,
+        -0.7999999999999999
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dust_vial",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        19,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dust_vial_cork",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        18
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A leather-edged laced bodice over a rolled-sleeve shirt, a wide round washing pan slung on her back, a pouch of nuggets and a stoppered vial of gold dust on the belt."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "b277_poachers_quiet_soft_boots",
+  "kind": "bottom",
+  "name": "Poacher's Quiet Soft Boots",
+  "gender": "male",
+  "texture": "bottoms/b277_poachers_quiet_soft_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle_flap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.3,
+        8.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_ankle_flap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.3,
+        8.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        3
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "description": "Dark close trousers tucked into soft-soled moccasin boots that make no sound on a leaf, thong-bound round the calf, a puckered seam over each toe and folded ankle flaps."
+}

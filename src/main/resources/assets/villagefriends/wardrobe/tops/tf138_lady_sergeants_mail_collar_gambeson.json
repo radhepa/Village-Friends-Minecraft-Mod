@@ -1,0 +1,193 @@
+{
+  "id": "tf138_lady_sergeants_mail_collar_gambeson",
+  "kind": "top",
+  "name": "Lady Sergeant's Mail-Collar Gambeson",
+  "gender": "female",
+  "texture": "tops/tf138_lady_sergeants_mail_collar_gambeson.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mail_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -1.0,
+        -2.8
+      ],
+      "size": [
+        17,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gambeson_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gambeson_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "mace_haft",
+      "bone": "TORSO",
+      "pivot": [
+        -3.3,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0.2,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        23,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mace_head",
+      "bone": "TORSO",
+      "pivot": [
+        -3.3,
+        9.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        5.0,
+        -2
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        28,
+        17
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A row-quilted gambeson buttoned off-centre, a ring-mail cape over the shoulders, a sergeant's sash and a flanged mace hung at the hip."
+}

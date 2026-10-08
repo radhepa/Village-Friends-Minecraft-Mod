@@ -1,0 +1,77 @@
+{
+  "id": "b183_mudlarks_rolled_rags",
+  "kind": "bottom",
+  "name": "Mudlark's Rolled Rags",
+  "gender": "male",
+  "texture": "bottoms/b183_mudlarks_rolled_rags.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_rag_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_rag_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Patched, outgrown trousers rolled unevenly, one leg to the knee and one to the shin, frayed at the turn-ups, over bare feet black with river mud."
+}

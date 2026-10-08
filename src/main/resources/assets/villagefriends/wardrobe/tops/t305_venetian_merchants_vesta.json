@@ -1,0 +1,363 @@
+{
+  "id": "t305_venetian_merchants_vesta",
+  "kind": "top",
+  "name": "Venetian Merchant's Vesta",
+  "gender": "male",
+  "texture": "tops/t305_venetian_merchants_vesta.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "robe",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_comeo_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.4,
+        -3.0
+      ],
+      "size": [
+        5,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_comeo_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.4,
+        -3.0
+      ],
+      "size": [
+        5,
+        6,
+        6
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "scarsella",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        9.8,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        13
+      ]
+    },
+    {
+      "id": "vesta_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        36,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "vesta_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        26
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "vesta_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.8,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        21,
+        26
+      ]
+    },
+    {
+      "id": "vesta_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        10.8,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        32,
+        26
+      ]
+    },
+    {
+      "id": "stola_front",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        0.0,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        11,
+        1
+      ],
+      "uv": [
+        43,
+        26
+      ]
+    },
+    {
+      "id": "stola_front_low",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.8,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        50,
+        26
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "stola_back",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        0.0,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        11,
+        1
+      ],
+      "uv": [
+        57,
+        26
+      ]
+    },
+    {
+      "id": "stola_back_low",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.8,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        41
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sober ankle-length vesta with full sleeves gathered at the elbow, a narrow stola thrown over the left shoulder to hang front and back, and a leather purse at the belt."
+}

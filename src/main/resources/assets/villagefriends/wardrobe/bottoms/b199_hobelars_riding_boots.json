@@ -1,0 +1,190 @@
+{
+  "id": "b199_hobelars_riding_boots",
+  "kind": "bottom",
+  "name": "Hobelar's Riding Boots",
+  "gender": "male",
+  "texture": "bottoms/b199_hobelars_riding_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_top",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_boot_top",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "right_spur",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "right_spur_rowel",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        1.6
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "left_spur",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        54,
+        0
+      ]
+    },
+    {
+      "id": "left_spur_rowel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        2.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        1.6
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.02
+    }
+  ],
+  "description": "Riding breeches with leather saddle patches on the inner thighs, in soft knee boots cinched by two buckled straps, with rowel spurs at the heels."
+}

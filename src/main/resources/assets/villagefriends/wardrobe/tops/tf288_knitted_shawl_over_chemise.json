@@ -1,0 +1,193 @@
+{
+  "id": "tf288_knitted_shawl_over_chemise",
+  "kind": "top",
+  "name": "Knitted Shawl over Chemise",
+  "gender": "female",
+  "texture": "tops/tf288_knitted_shawl_over_chemise.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "knit",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shawl_right_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        -0.7,
+        -2.7
+      ],
+      "size": [
+        3,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "shawl_left_shoulder",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.6,
+        -0.7,
+        -2.7
+      ],
+      "size": [
+        3,
+        2,
+        5
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "shawl_neck_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.7,
+        1.7
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "shawl_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.4,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "shawl_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.7,
+        8.8,
+        2.1999999999999997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "shawl_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.7,
+        8.8,
+        2.1999999999999997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A hand-knitted triangle shawl over a plain linen chemise, its ends crossed over the chest and knotted at the small of the back."
+}

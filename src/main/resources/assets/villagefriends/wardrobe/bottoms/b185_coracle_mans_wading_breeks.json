@@ -1,0 +1,78 @@
+{
+  "id": "b185_coracle_mans_wading_breeks",
+  "kind": "bottom",
+  "name": "Coracle Man's Wading Breeks",
+  "gender": "male",
+  "texture": "bottoms/b185_coracle_mans_wading_breeks.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "sea",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_breek_hem",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_breek_hem",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Heavy wool breeks to the knee, laced open at the outer knee and soaked dark at the hem, over bare calves and soft rawhide shoes with thongs crossed round the ankle."
+}

@@ -1,0 +1,332 @@
+{
+  "id": "tf112_oyster_sellers_shell_basket_bodice",
+  "kind": "top",
+  "name": "Oyster Seller's Shell-Basket Bodice",
+  "gender": "female",
+  "texture": "tops/tf112_oyster_sellers_shell_basket_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "neckerchief",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "neckerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        0.4,
+        -1.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        2.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.1,
+        2.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ]
+    },
+    {
+      "id": "oyster_knife",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        4.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -0.5,
+        -1.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        46,
+        8
+      ]
+    },
+    {
+      "id": "oyster_basket",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.0,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        5,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "oyster_heap",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.0,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -1,
+        -1
+      ],
+      "size": [
+        4,
+        1,
+        2
+      ],
+      "uv": [
+        17,
+        15
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "oyster_heap_top",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        9.0,
+        -4.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        15
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "open_oyster",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        8.4,
+        -5.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.4,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        15
+      ],
+      "inflate": 0.15
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A horn-buttoned work bodice, a knotted neckerchief and a shallow basket heaped with oysters slung on the hip."
+}

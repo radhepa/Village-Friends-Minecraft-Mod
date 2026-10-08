@@ -1,0 +1,251 @@
+{
+  "id": "t231_geometers_compass_belt_gown",
+  "kind": "top",
+  "name": "Geometer's Compass-Belt Gown",
+  "gender": "male",
+  "texture": "tops/t231_geometers_compass_belt_gown.png",
+  "extrasHeight": 16,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "compass_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "divider_hinge",
+      "bone": "TORSO",
+      "pivot": [
+        -2.7,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "divider_leg_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.7,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "divider_leg_1",
+      "bone": "TORSO",
+      "pivot": [
+        -2.7,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "set_square_upright",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "set_square_foot",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        10.6,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        3,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        49,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A geometer's wrap-over gown edged with a stepped border, a pair of great brass dividers swinging open at one hip and a wooden set square marked in measures at the other."
+}

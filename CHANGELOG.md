@@ -1,3 +1,24 @@
+# Village Friends 2.16.0 — 171 new outfits
+
+- Add 99 men's outfits (each a top and a bottom), 219 tops and 219 bottoms in all:
+  - **Field and orchard:** reapers, haymakers, threshers, vine dressers, hedge layers, mole catchers, cowherds, cider pressers, seed sowers, gleaners and dairymen.
+  - **River and sea:** ferrymen, bargemen, sailors, shipwrights, caulkers, oyster dredgers, salt boilers, a harbour master, a beacon keeper, a pilot, a sea captain, eel trappers, mudlarks, lock keepers, a coracle man and cockle rakers.
+  - **Soldiers and the watch:** pikemen, crossbowmen, halberdiers, hobelars, a sergeant-at-arms, a standard bearer, a war drummer, a castellan, a gate warden, an outrider, a plate-armored lancer, sappers and a siege engineer.
+  - **Clergy, learning and healing:** a physician, a barber-surgeon, a chantry priest, a deacon, a cantor, a hospitaller, an almoner, a pardoner, novices and lay brothers, a geometer, a notary, a schoolmaster, an interpreter and a herbalist monk.
+  - **Road, forest and mountain:** tinkers, carriers, a royal courier, foresters, a verderer, a gamekeeper, poachers, outlaws, a mountain guide, miners and quarrymen.
+  - **The wider medieval world:** Byzantine, Andalusian, Persian, Polish, Hungarian, Basque, Welsh, Breton, Sicilian, Venetian, Alpine, Bohemian, Novgorod and Song Chinese dress.
+  - **Everyday village basics:** sixteen plain, mixable shirts, tunics, coats, vests, jackets and trousers for everyday wear.
+- Add 72 women's outfits, 132 tops and 132 bottoms in all:
+  - **Farm and dairy:** goose girls, haymakers, gleaners, sheaf binders, vintners, dairymaids, egg wives, poultry girls, flax pullers, wool carders, cowherds and orchard girls.
+  - **Coast and market:** net menders, oyster sellers, cockle gatherers, ferrywomen, sailors, harbour traders, salt girls, seaweed gatherers and market stallholders.
+  - **Warriors and hunters:** crossbowwomen, spearmaidens, a lady sergeant, horse archers, scouts, trackers, militia, a watchwoman, a gate warden and a lancer.
+  - **Healers, faith and learning:** a physician, a wise woman, an anchoress, beguines, a canoness, novices, a prioress, lay sisters, an almoner, a governess, an astrolabe reader, an alchemist, an illuminator, a scribe and a seer.
+  - **Road and wilderness:** pedlars, tinkers, wanderers, foragers, mushroom gatherers, wood gatherers, charcoal burners, miners, prospectors and mountain herders.
+  - **Everyday village basics:** fifteen plain, mixable kirtles, bodices, blouses, jackets and skirts.
+- Add six locked one-piece sets (chantry priest, deacon, herbalist monk, Song scholar, anchoress and prioress); everything else mixes freely. 37,077 men's and 14,449 women's free top-and-bottom pairs are allowed.
+- Give every new outfit its professions, so new villages dress the new trades. Each batch has its own template file in `tools/wardrobe/outfits/`.
+- Save seven planned but unbuilt batches (craft guilds, nobles and the court, and festivals for men; crafts, the court, the wider world and festivals for women) in `tools/wardrobe/backlog/` with their reserved numbers, concepts and helper kits.
+
 # Village Friends 2.15.0 — Village Life grows to 349 clips
 
 - Add 250 clips to the Village Life animation pack (99 → 349 clips, 340 distinct motions), all chosen by the existing director with no new triggers:

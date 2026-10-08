@@ -1,0 +1,18 @@
+{
+  "id": "tf300_two_tone_panelled_kirtle",
+  "kind": "top",
+  "name": "Two-Tone Panelled Kirtle",
+  "gender": "female",
+  "texture": "tops/tf300_two_tone_panelled_kirtle.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A kirtle pieced from a broad centre panel in one color and side panels in another, every seam piped in a bright cord, with sleeves in the side color and cuffs in the centre color."
+}

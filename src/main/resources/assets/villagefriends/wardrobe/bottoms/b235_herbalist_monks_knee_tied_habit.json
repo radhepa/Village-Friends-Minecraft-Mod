@@ -1,0 +1,249 @@
+{
+  "id": "b235_herbalist_monks_knee_tied_habit",
+  "kind": "bottom",
+  "name": "Herbalist Monk's Knee-Tied Habit",
+  "gender": "male",
+  "texture": "bottoms/b235_herbalist_monks_knee_tied_habit.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "robe",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "habit_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "habit_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "habit_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "habit_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        53,
+        0
+      ]
+    },
+    {
+      "id": "habit_knot_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        16.6,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "habit_knot_right_end",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        16.6,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "habit_knot_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        16.6,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        14,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "habit_knot_left_end",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        16.6,
+        -2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        11
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "lockedTo": "t235_herbalist_monks_garden_habit",
+  "description": "The habit's skirts gathered up and knotted at the knee so he can kneel in the herb beds, undyed hose stained with earth at both knees, and wooden garden clogs clotted with soil."
+}

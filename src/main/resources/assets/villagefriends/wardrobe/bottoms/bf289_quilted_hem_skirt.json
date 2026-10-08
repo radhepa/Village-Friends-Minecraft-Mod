@@ -1,0 +1,251 @@
+{
+  "id": "bf289_quilted_hem_skirt",
+  "kind": "bottom",
+  "name": "Quilted-Hem Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf289_quilted_hem_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "long_skirt",
+    "skirt",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        11,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "padded_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        7,
+        -0.08
+      ],
+      "size": [
+        12,
+        4,
+        1
+      ],
+      "uv": [
+        13,
+        17
+      ],
+      "inflate": 0.04,
+      "motion": "flap_front"
+    },
+    {
+      "id": "padded_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        7,
+        0.08
+      ],
+      "size": [
+        12,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        34
+      ],
+      "inflate": 0.04,
+      "motion": "flap_back"
+    },
+    {
+      "id": "padded_hem_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        -0.4,
+        7,
+        -2.7
+      ],
+      "size": [
+        1,
+        4,
+        5
+      ],
+      "uv": [
+        27,
+        34
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "padded_hem_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -0.6,
+        7,
+        -2.7
+      ],
+      "size": [
+        1,
+        4,
+        5
+      ],
+      "uv": [
+        40,
+        34
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "A plain wool skirt finished with a deep padded hem roll, quilted in rows of waves to weight it against the wind, over low shoes."
+}

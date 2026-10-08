@@ -1,0 +1,74 @@
+{
+  "id": "b174_shipwrights_tar_spotted_trousers",
+  "kind": "bottom",
+  "name": "Shipwright's Tar-Spotted Trousers",
+  "gender": "male",
+  "texture": "bottoms/b174_shipwrights_tar_spotted_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sea",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_rule_pocket",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.55,
+        2.5,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_folding_rule",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.45,
+        2.5,
+        -0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "description": "Loose sailcloth trousers spattered with shiny black tar, a long rule pocket down the right thigh holding a boxwood folding rule, over plain shoes."
+}

@@ -1,0 +1,421 @@
+{
+  "id": "t126_ditchers_mud_smock",
+  "kind": "top",
+  "name": "Ditcher's Mud Smock",
+  "gender": "male",
+  "texture": "tops/t126_ditchers_mud_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "smock_front_r",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_front_l",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hitched_corner",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.1,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ]
+    },
+    {
+      "id": "clay_clod_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        4.0,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        16
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "clay_clod_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        4.6,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        16
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "clay_clod_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.1,
+        4.3,
+        1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        42,
+        16
+      ],
+      "inflate": 0.1,
+      "motion": "flap_back"
+    },
+    {
+      "id": "spade_grip",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        0.6,
+        3.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        16
+      ]
+    },
+    {
+      "id": "spade_shaft",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        1.6,
+        3.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        56,
+        16
+      ]
+    },
+    {
+      "id": "spade_blade",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        6.6,
+        3.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        24
+      ]
+    },
+    {
+      "id": "spade_iron_shoe",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        9.6,
+        3.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        24
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A heavy hemp smock caked thick with clay from the hem up, one front corner hitched into the belt to keep it out of the ditch, and an iron-shod spade slung down the back."
+}

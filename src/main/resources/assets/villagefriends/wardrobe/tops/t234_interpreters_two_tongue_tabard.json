@@ -1,0 +1,252 @@
+{
+  "id": "t234_interpreters_two_tongue_tabard",
+  "kind": "top",
+  "name": "Interpreter's Two-Tongue Tabard",
+  "gender": "male",
+  "texture": "tops/t234_interpreters_two_tongue_tabard.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "scholarly",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tongue_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tongue_tip_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        11,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tongue_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tongue_tip_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        11.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tongue_back_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        36,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tongue_tip_back_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tongue_back_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "tongue_tip_back_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        11.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        5,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A go-between's tabard parted down the middle in two colours, each half edged in the other's, a book worked on one breast and a scroll on the other, laced open at the sides and cut below into two pointed tongues before and behind."
+}

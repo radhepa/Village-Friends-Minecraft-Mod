@@ -1,0 +1,192 @@
+{
+  "id": "b132_furrow_walkers_knee_wraps",
+  "kind": "bottom",
+  "name": "Furrow-Walker's Knee Wraps",
+  "gender": "male",
+  "texture": "bottoms/b132_furrow_walkers_knee_wraps.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_wrap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "right_ankle_tie",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_knee_wrap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "left_ankle_tie",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_soil_clod",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_soil_clod",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.9,
+        -2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        9
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Loose trousers bound round each knee with spiralled linen bands for long days striding the soft ploughland, bloused above and below, and low boots clotted with furrow soil."
+}

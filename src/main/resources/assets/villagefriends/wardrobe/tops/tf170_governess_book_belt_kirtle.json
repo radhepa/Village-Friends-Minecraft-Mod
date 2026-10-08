@@ -1,0 +1,252 @@
+{
+  "id": "tf170_governess_book_belt_kirtle",
+  "kind": "top",
+  "name": "Governess's Book-Belt Kirtle",
+  "gender": "female",
+  "texture": "tops/tf170_governess_book_belt_kirtle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "simple",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "standing_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.3,
+        -1.2,
+        -2.3
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "book_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "book_strap",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lesson_book_upper",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.4,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lesson_book_lower",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.4,
+        -1.1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        11,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hornbook_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        22,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hornbook",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.4,
+        -0.1
+      ],
+      "size": [
+        3,
+        4,
+        1
+      ],
+      "uv": [
+        27,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hornbook_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.8,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        5.4,
+        -0.1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A high-necked sober kirtle with a white collar, buttoned sleeves and a book-belt hung with two lesson books and a hornbook."
+}

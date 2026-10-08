@@ -1,0 +1,75 @@
+{
+  "id": "tf292_patched_elbow_kirtle",
+  "kind": "top",
+  "name": "Patched-Elbow Kirtle",
+  "gender": "female",
+  "texture": "tops/tf292_patched_elbow_kirtle.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_elbow_pad",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.4,
+        2.6,
+        -1.2
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_elbow_pad",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.4,
+        2.6,
+        -1.2
+      ],
+      "size": [
+        1,
+        3,
+        3
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A long-sleeved twill work kirtle with stitched leather pads over the elbows, leather-bound cuffs, and a thong-tied slit neck."
+}

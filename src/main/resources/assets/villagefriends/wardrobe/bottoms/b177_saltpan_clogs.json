@@ -1,0 +1,194 @@
+{
+  "id": "b177_saltpan_clogs",
+  "kind": "bottom",
+  "name": "Saltpan Clogs",
+  "gender": "male",
+  "texture": "bottoms/b177_saltpan_clogs.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_trouser_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_trouser_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "right_clog",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.0,
+        -3.6
+      ],
+      "size": [
+        5,
+        3,
+        6
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "right_clog_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_clog",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.0,
+        -3.6
+      ],
+      "size": [
+        5,
+        3,
+        6
+      ],
+      "uv": [
+        19,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_clog_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        5,
+        1,
+        4
+      ],
+      "uv": [
+        42,
+        10
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Linen trousers rolled to mid-calf and ringed with white salt tide-marks, bare shins, and chunky carved wooden clogs with a leather instep strap for standing in the brine."
+}

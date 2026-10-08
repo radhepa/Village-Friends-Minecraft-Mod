@@ -7,14 +7,15 @@ Every hairstyle, top and bottom is one Python module that paints pixel art and d
 | Hairstyles | `tools/wardrobe/hair/hNN_name.py` (male), `hfNN_name.py` (female) |
 | Tops | `tools/wardrobe/tops/tNN_name.py` (male), `tfNNN_name.py` (female) |
 | Bottoms | `tools/wardrobe/bottoms/bNN_name.py` (male), `bfNNN_name.py` (female) |
-| Outfit templates and profession mapping, one file per wardrobe set | `tools/wardrobe/outfits/male.json`, `outfits/female.json` |
+| Outfit templates and profession mapping | `tools/wardrobe/outfits/male.json` and `female.json`, plus one file per batch, such as `male_m01.json` |
 | Master palettes (base colors or explicit ramps) | `tools/wardrobe/palettes.json` |
 | Natural hair colors (five-shade ramps) | `tools/wardrobe/hair_colors.json` |
 | Shared brushes (cloth, hems, hair strands, curls, scalp) | `tools/wardrobe/paint.py` |
-| Garment building blocks (bodies, necklines, sleeves, belts, skirt flaps, legs, footwear) | `tools/wardrobe/kit.py`; set-specific extras in `kit_male.py`, `kit_female.py` and `kit_casual.py` (tees, shirts, trousers, jeans) |
+| Garment building blocks (bodies, necklines, sleeves, belts, skirt flaps, legs, footwear) | `tools/wardrobe/kit.py`; set-specific extras in `kit_male.py`, `kit_female.py` and `kit_casual.py` (tees, shirts, trousers, jeans); batch helpers in `kit_m01.py`, `kit_f05.py` and the like |
 | Anime hair building blocks (cel shading, sheen ring, pointed locks, bangs, sidelocks) | `tools/wardrobe/anime.py`; extras in `anime_male.py` and `anime_female.py` (braids, buns, coils, locs) |
 | Compiler, key colors, validation | `tools/wardrobe/wardrobe.py` |
 | Offline 3D previews | `tools/wardrobe/preview.py` |
+| Planned batches that are not built yet, with their reserved numbers | `tools/wardrobe/backlog/README.md` |
 | Compiled runtime assets (do not hand-edit) | `src/main/resources/assets/villagefriends/wardrobe/` |
 
 ## Workflow
@@ -63,4 +64,4 @@ The wardrobe's style targets:
 - Pieces attach to the bones their kind may dress, and their nets fit the extras area.
 - Every outfit template is compatible and worn by at least one profession, every top and bottom pairs with something, and all ten palette ids exist.
 
-To add a variant, add a module with the next number, give it a gender and tags, and add its top to a template in its set's `outfits/*.json`. Then run the full compiler. The catalog and tests derive their lists from the compiled output, so no Java changes are needed.
+To add a variant, add a module with the next free number, give it a gender and tags, and add its top to a template in an `outfits/*.json` file. Number ranges listed in the backlog are reserved for their batches. Then run the full compiler. The catalog and tests derive their lists from the compiled output, so no Java changes are needed.

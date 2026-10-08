@@ -1,0 +1,505 @@
+{
+  "id": "tf136_crossbowwomans_windlass_jerkin",
+  "kind": "top",
+  "name": "Crossbowwoman's Windlass Jerkin",
+  "gender": "female",
+  "texture": "tops/tf136_crossbowwomans_windlass_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "windlass_drum",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.0,
+        -2
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "windlass_crank",
+      "bone": "TORSO",
+      "pivot": [
+        -0.9,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "windlass_handle",
+      "bone": "TORSO",
+      "pivot": [
+        -0.4,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.0,
+        -1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bolt_case",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.2,
+        -2
+      ],
+      "size": [
+        3,
+        5,
+        2
+      ],
+      "uv": [
+        52,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bolt_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.7,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.8,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bolt_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.8,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bolt_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.8,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "crossbow_stock",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -0.5,
+        -10,
+        -0.5
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        15,
+        8
+      ]
+    },
+    {
+      "id": "crossbow_butt",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -1.0,
+        -3,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        20,
+        8
+      ]
+    },
+    {
+      "id": "crossbow_lever",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -1.5,
+        -6,
+        -0.7
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        27,
+        8
+      ]
+    },
+    {
+      "id": "crossbow_prod",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -4.0,
+        -9.4,
+        -0.5
+      ],
+      "size": [
+        8,
+        1,
+        1
+      ],
+      "uv": [
+        32,
+        8
+      ]
+    },
+    {
+      "id": "crossbow_binding",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -1.0,
+        -10.1,
+        -0.6
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        51,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "crossbow_stirrup",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -1.0,
+        -11.4,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        58,
+        8
+      ]
+    },
+    {
+      "id": "crossbow_string_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0293085475043457,
+        4.728844385376906,
+        2.85
+      ],
+      "rotation": [
+        0.0,
+        0,
+        121.87
+      ],
+      "origin": [
+        -0.5,
+        -6,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        20
+      ]
+    },
+    {
+      "id": "crossbow_string_left",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0293085475043457,
+        4.728844385376906,
+        2.85
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -166.63
+      ],
+      "origin": [
+        -0.5,
+        -6,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        5,
+        20
+      ]
+    },
+    {
+      "id": "crossbow_sling_loop",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        1.4,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        157.62
+      ],
+      "origin": [
+        -1.0,
+        -6.5,
+        -1.2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        10,
+        20
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A buff jerkin with a stitched leather yoke, a spanned crossbow slung across her back, a windlass on the right hip and a case of bolts on the left."
+}

@@ -1,0 +1,185 @@
+{
+  "id": "b350_quilted_knee_breeches",
+  "kind": "bottom",
+  "name": "Quilted Knee Breeches",
+  "gender": "male",
+  "texture": "bottoms/b350_quilted_knee_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_knee_button_4",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.15,
+        4.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_knee_button_3",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.15,
+        3.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_button_4",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.15,
+        4.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "left_knee_button_3",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.15,
+        3.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    }
+  ],
+  "description": "Warm breeches stitched in a square box quilt, closed at the knee by a band with three bone buttons, over plain knitted stockings and low strapped shoes."
+}

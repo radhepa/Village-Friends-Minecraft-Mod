@@ -1,0 +1,74 @@
+{
+  "id": "b231_geometers_chalk_dusted_hose",
+  "kind": "bottom",
+  "name": "Geometer's Chalk-Dusted Hose",
+  "gender": "male",
+  "texture": "bottoms/b231_geometers_chalk_dusted_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "scholarly",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "chalk_line_reel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.6,
+        0.4,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.0
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "chalk_line_end",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.6,
+        3.4,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "description": "Dark hose whitened at both knees from kneeling over setting-out drawings on the floor, chalky finger-wipes down one thigh and a snapped chalk-line reel tied at the hip, in buckled shoes."
+}

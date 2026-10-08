@@ -1,0 +1,129 @@
+{
+  "id": "b298_persian_tapered_trousers_and_boots",
+  "kind": "bottom",
+  "name": "Persian Tapered Trousers and Boots",
+  "gender": "male",
+  "texture": "bottoms/b298_persian_tapered_trousers_and_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_heel",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        10.9,
+        1.6
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_heel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        10.9,
+        1.6
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "right_boot_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Fine pin-striped silk trousers full at the hip and tapering into soft knee boots, each boot top rising to a peak over the shin with an embroidered band."
+}

@@ -1,0 +1,332 @@
+{
+  "id": "t304_sicilian_striped_market_tunic",
+  "kind": "top",
+  "name": "Sicilian Striped Market Tunic",
+  "gender": "male",
+  "texture": "tops/t304_sicilian_striped_market_tunic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        3.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        3.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "kerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_tail_right",
+      "bone": "TORSO",
+      "pivot": [
+        -0.7,
+        1.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_tail_left",
+      "bone": "TORSO",
+      "pivot": [
+        0.7,
+        1.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -18
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ]
+    },
+    {
+      "id": "rope_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "rope_knot",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.2,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        15
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "coin_purse",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.9,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        15
+      ]
+    },
+    {
+      "id": "tunic_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        41,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A boldly striped cotton market tunic with its sleeves rolled to the elbow, a neckerchief knotted at the throat, a twisted rope belt and a coin purse."
+}

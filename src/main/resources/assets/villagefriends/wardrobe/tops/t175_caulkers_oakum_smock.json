@@ -1,0 +1,308 @@
+{
+  "id": "t175_caulkers_oakum_smock",
+  "kind": "top",
+  "name": "Caulker's Oakum Smock",
+  "gender": "male",
+  "texture": "tops/t175_caulkers_oakum_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "sea",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "oakum_ring",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -0.9,
+        -2.5
+      ],
+      "size": [
+        7,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.14
+    },
+    {
+      "id": "oakum_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        0.1,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "oakum_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        0.1,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        59,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "caulking_iron",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        8.0,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "caulking_iron_bit",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        7.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "pitch_pot",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        12,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "pitch_pot_bail",
+      "bone": "TORSO",
+      "pivot": [
+        2.4,
+        10.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        28,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short canvas smock blackened with pitch at cuffs and hem, a twisted skein of pale oakum round the neck, a caulking iron through the belt and a pitch pot swinging at the hip."
+}

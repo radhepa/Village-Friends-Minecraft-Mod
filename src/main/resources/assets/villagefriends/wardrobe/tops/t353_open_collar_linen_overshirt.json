@@ -1,0 +1,218 @@
+{
+  "id": "t353_open_collar_linen_overshirt",
+  "kind": "top",
+  "name": "Open-Collar Linen Overshirt",
+  "gender": "male",
+  "texture": "tops/t353_open_collar_linen_overshirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_open_collar",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        -0.2,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_open_collar",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        -0.2,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -32
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "collar_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.05
+      ],
+      "rotation": [
+        -10,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        2,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "right_open_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.6,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "left_open_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.4,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "shirt_tail_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shirt_tail_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A loose dyed-linen overshirt worn untucked, its broad flat collar spread wide over an open throat, roomy sleeves ending in unbuttoned cuffs and curved shirt tails."
+}

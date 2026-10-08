@@ -1,0 +1,162 @@
+{
+  "id": "bf143_watchwomans_night_boots",
+  "kind": "bottom",
+  "name": "Watchwoman's Night Boots",
+  "gender": "female",
+  "texture": "bottoms/bf143_watchwomans_night_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_fold",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_boot_fold",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_felt_sole",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_felt_sole",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.4,
+        -3.05
+      ],
+      "size": [
+        11,
+        1,
+        6
+      ],
+      "uv": [
+        17,
+        8
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Dark wool breeches and tall boots buttoned up the outer side and folded at the top, on thick felted soles that keep her rounds quiet."
+}

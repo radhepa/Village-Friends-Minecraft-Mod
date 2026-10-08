@@ -1,0 +1,281 @@
+{
+  "id": "t208_siege_engineers_plumb_line_coat",
+  "kind": "top",
+  "name": "Siege Engineer's Plumb-Line Coat",
+  "gender": "male",
+  "texture": "tops/t208_siege_engineers_plumb_line_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "scholarly",
+    "tailored",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.9,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.07
+    },
+    {
+      "id": "rolled_plan_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.8000000000000007,
+        -1.2
+      ],
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "rolled_plan_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -2.200000000000001,
+        -1.6
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "plumb_cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.1,
+        0.1999999999999993,
+        -0.7
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        5,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "plumb_bob",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.6,
+        4.199999999999999,
+        -1.2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        10,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "plumb_tip",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.1,
+        6.200000000000001,
+        -0.7
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        24,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sober, piped working coat with a stand collar, brass dividers poking from the breast pocket, rolled siege plans thrust through the belt and a brass plumb bob swinging from a cord at the hip."
+}

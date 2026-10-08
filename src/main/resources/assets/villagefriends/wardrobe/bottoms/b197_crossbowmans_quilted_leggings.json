@@ -1,0 +1,75 @@
+{
+  "id": "b197_crossbowmans_quilted_leggings",
+  "kind": "bottom",
+  "name": "Crossbowman's Quilted Leggings",
+  "gender": "male",
+  "texture": "bottoms/b197_crossbowmans_quilted_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_knee_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Padded leggings diamond-quilted down to a fat tied roll at the knee, laced up the outer thigh, over dark knitted hose and buckled ankle shoes."
+}

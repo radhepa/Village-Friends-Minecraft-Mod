@@ -1,0 +1,335 @@
+{
+  "id": "t171_ferrymans_pole_strapped_coat",
+  "kind": "top",
+  "name": "Ferryman's Pole-Strapped Coat",
+  "gender": "male",
+  "texture": "tops/t171_ferrymans_pole_strapped_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "pole_pad",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -2.4,
+        -2.0
+      ],
+      "size": [
+        4,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "standing_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.1,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        17,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "pole_socket",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        8.4,
+        -2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "coin_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.9,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        38,
+        8
+      ]
+    },
+    {
+      "id": "toll_token",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        11.9,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "toll_token_cord",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        12.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        6,
+        1
+      ],
+      "uv": [
+        21,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        12.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        42,
+        15
+      ]
+    },
+    {
+      "id": "coat_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        12.0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        5,
+        4
+      ],
+      "uv": [
+        53,
+        15
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A knee-length wool coat crossed by a leather pole strap ending in a pole socket at the hip, a padded bracing shoulder, a coin pouch and a brass toll token swinging from it."
+}

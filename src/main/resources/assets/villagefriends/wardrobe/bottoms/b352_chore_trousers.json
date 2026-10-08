@@ -1,0 +1,76 @@
+{
+  "id": "b352_chore_trousers",
+  "kind": "bottom",
+  "name": "Chore Trousers",
+  "gender": "male",
+  "texture": "bottoms/b352_chore_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "right_pocket_rag",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.75,
+        1.4,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        4,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    }
+  ],
+  "description": "Hard-wearing undyed canvas trousers with a second layer stitched over each knee, a work rag hanging from the side pocket and laced ankle boots."
+}

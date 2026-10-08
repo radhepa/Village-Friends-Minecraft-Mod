@@ -1,0 +1,249 @@
+{
+  "id": "t299_polish_zupan_long_coat",
+  "kind": "top",
+  "name": "Polish Zupan Long Coat",
+  "gender": "male",
+  "texture": "tops/t299_polish_zupan_long_coat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -0.5,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "pas_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        3,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "pas_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        10.6,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -3
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "pas_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.3,
+        10.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "zupan_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        7,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "zupan_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        28,
+        9
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "zupan_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.6,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        49,
+        9
+      ]
+    },
+    {
+      "id": "zupan_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        10.6,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        9,
+        4
+      ],
+      "uv": [
+        0,
+        23
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A close-fitting zupan reaching to the shin, a long row of small buttons from collar to waist, pointed cuffs and a broad striped silk sash whose figured ends hang at the hip."
+}

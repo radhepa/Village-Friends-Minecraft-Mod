@@ -1,0 +1,47 @@
+{
+  "id": "b348_patched_knee_trousers",
+  "kind": "bottom",
+  "name": "Patched-Knee Trousers",
+  "gender": "male",
+  "texture": "bottoms/b348_patched_knee_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Old wool trousers mended with mismatched cloth patches at both knees and the back of one thigh, frayed hems falling over scuffed ankle boots."
+}

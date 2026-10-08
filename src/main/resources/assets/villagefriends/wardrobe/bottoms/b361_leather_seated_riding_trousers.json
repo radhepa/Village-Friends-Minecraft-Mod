@@ -1,0 +1,47 @@
+{
+  "id": "b361_leather_seated_riding_trousers",
+  "kind": "bottom",
+  "name": "Leather-Seated Riding Trousers",
+  "gender": "male",
+  "texture": "bottoms/b361_leather_seated_riding_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "Close twill riding trousers faced with smooth leather over the seat and all down the inner legs where they grip the saddle, buttoned up the outside of the calf, in plain ankle boots."
+}

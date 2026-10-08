@@ -1,0 +1,278 @@
+{
+  "id": "tf166_novices_undyed_habit",
+  "kind": "top",
+  "name": "Novice's Undyed Habit",
+  "gender": "female",
+  "texture": "tops/tf166_novices_undyed_habit.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_folded_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_folded_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.6,
+        -3
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "collar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        9
+      ]
+    },
+    {
+      "id": "veil",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.5
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ]
+    },
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        19,
+        17
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "cord_bow",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        8.5,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        17
+      ]
+    },
+    {
+      "id": "cord_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.8,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        57,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cord_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        26
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A roomy habit of undyed wool with deep folded-back cuffs, a white collar and veil, and a hempen cord tied in a bow."
+}

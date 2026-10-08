@@ -1,0 +1,18 @@
+{
+  "id": "t303_breton_embroidered_chupenn_vest",
+  "kind": "top",
+  "name": "Breton Embroidered Chupenn Vest",
+  "gender": "male",
+  "texture": "tops/t303_breton_embroidered_chupenn_vest.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "fancy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A short open chupenn faced with black velvet bands and bright embroidery, worn over a waistcoat closed with two close rows of buttons, a fan of embroidered plumes across the back."
+}

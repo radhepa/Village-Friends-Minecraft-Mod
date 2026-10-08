@@ -1,0 +1,191 @@
+{
+  "id": "bf113_cockle_gatherers_tucked_petticoat",
+  "kind": "bottom",
+  "name": "Cockle Gatherer's Tucked Petticoat",
+  "gender": "female",
+  "texture": "bottoms/bf113_cockle_gatherers_tucked_petticoat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "sea",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        10.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "waist_skirt_roll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.7,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -3.1
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        13,
+        11
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "waist_skirt_bunch",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        46,
+        11
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "description": "A wool skirt rolled up all round into a fat roll at the hips over a short tucked petticoat, bare knees and bare feet for the sands."
+}

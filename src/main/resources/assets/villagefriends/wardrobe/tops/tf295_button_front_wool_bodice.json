@@ -1,0 +1,107 @@
+{
+  "id": "tf295_button_front_wool_bodice",
+  "kind": "top",
+  "name": "Button-Front Wool Bodice",
+  "gender": "female",
+  "texture": "tops/tf295_button_front_wool_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "standing_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "needle_ribbon",
+      "bone": "TORSO",
+      "pivot": [
+        3.3,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "needle_case",
+      "bone": "TORSO",
+      "pivot": [
+        3.3,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A neat fitted wool bodice with princess seams, buttoned from a narrow standing collar to the hip, button-cuffed sleeves and a needle case on a ribbon."
+}

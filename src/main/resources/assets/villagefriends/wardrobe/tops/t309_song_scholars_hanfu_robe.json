@@ -1,0 +1,309 @@
+{
+  "id": "t309_song_scholars_hanfu_robe",
+  "kind": "top",
+  "name": "Song Scholar's Hanfu Robe",
+  "gender": "male",
+  "texture": "tops/t309_song_scholars_hanfu_robe.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hanging_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -3.5
+      ],
+      "size": [
+        5,
+        9,
+        7
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_hanging_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -3.5
+      ],
+      "size": [
+        5,
+        9,
+        7
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "dai_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "dai_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        10.4,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        29,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dai_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        10.4,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        34,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jade_pendant",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        10.4,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        39,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hanfu_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        44,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hanfu_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hanfu_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.8,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        21,
+        30
+      ]
+    },
+    {
+      "id": "hanfu_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        10.8,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        32,
+        30
+      ]
+    }
+  ],
+  "lockedTo": "b309_hanfu_wide_trousers_and_cloth_shoes",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long scholar's robe with a crossed collar closing to the right, every edge bordered in black, deep hanging sleeves, a silk sash with long ends and a jade pendant."
+}

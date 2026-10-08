@@ -1,0 +1,309 @@
+{
+  "id": "tf167_prioress_rosary_girdle_habit",
+  "kind": "top",
+  "name": "Prioress's Rosary-Girdle Habit",
+  "gender": "female",
+  "texture": "tops/tf167_prioress_rosary_girdle_habit.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_fur_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "left_fur_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "wimple",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "barbe",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "veil",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        2.45
+      ],
+      "rotation": [
+        5,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        10,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "brooch",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        16
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "rosary_girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        28,
+        16
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "rosary_loop_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        8,
+        1
+      ],
+      "uv": [
+        57,
+        16
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "rosary_loop_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        28
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "rosary_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        -1.1,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        8,
+        -0.2
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        28
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "lockedTo": "bf167_prioress_fine_habit_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A fine dark habit with a pleated white barbe, a long veil, fur cuffs, a gold brooch and a rosary worn as a girdle."
+}

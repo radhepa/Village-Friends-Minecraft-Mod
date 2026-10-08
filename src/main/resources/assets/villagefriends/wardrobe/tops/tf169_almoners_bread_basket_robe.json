@@ -1,0 +1,305 @@
+{
+  "id": "tf169_almoners_bread_basket_robe",
+  "kind": "top",
+  "name": "Almoner's Bread-Basket Robe",
+  "gender": "female",
+  "texture": "tops/tf169_almoners_bread_basket_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "linen_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.6,
+        -3
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "linen_collar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "bread_basket",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4.5,
+        -5.6
+      ],
+      "size": [
+        6,
+        3,
+        4
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "loaf_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.2,
+        3.5,
+        -5.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        50,
+        8
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "loaf_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.4,
+        3.5,
+        -5.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "loaf_2",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        3.0,
+        -4.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        16
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "basket_handle_r",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.5,
+        -3.1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        18,
+        16
+      ]
+    },
+    {
+      "id": "basket_handle_l",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        3.5,
+        1.5,
+        -3.1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        23,
+        16
+      ]
+    },
+    {
+      "id": "basket_handle_top",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.5,
+        -3.1
+      ],
+      "size": [
+        6,
+        1,
+        1
+      ],
+      "uv": [
+        28,
+        16
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A plain buttoned robe with a broad linen collar and cuffs, a wicker basket of round loaves on her arm."
+}

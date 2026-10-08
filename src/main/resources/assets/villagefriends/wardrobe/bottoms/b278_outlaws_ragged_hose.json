@@ -1,0 +1,75 @@
+{
+  "id": "b278_outlaws_ragged_hose",
+  "kind": "bottom",
+  "name": "Outlaw's Ragged Hose",
+  "gender": "male",
+  "texture": "bottoms/b278_outlaws_ragged_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "left_calf_rag",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_rag_knot",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.7,
+        7.6,
+        -0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Greenwood hose worn through at the left knee and torn off ragged above the right ankle, a rag knotted round one calf and battered turnshoes that have outrun the sheriff's men."
+}

@@ -1,0 +1,130 @@
+{
+  "id": "b198_halberdiers_striped_hose",
+  "kind": "bottom",
+  "name": "Halberdier's Striped Hose",
+  "gender": "male",
+  "texture": "bottoms/b198_halberdiers_striped_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "martial",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_garter_bow",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.8,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_bow",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.7999999999999998,
+        5.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "right_cow_mouth_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        10.0,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        2,
+        2
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "left_cow_mouth_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        10.0,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -2
+      ],
+      "size": [
+        4,
+        2,
+        2
+      ],
+      "uv": [
+        23,
+        0
+      ]
+    }
+  ],
+  "description": "Close hose striped from hip to ankle in the two house colours, tied below the knee with bowed garters, over broad square-toed 'cow-mouth' shoes slashed across the vamp."
+}

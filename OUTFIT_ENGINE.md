@@ -1,11 +1,18 @@
 # Wardrobe and outfit engine
 
-Residents dress like characters from a Sims-style wardrobe with a men's set and a women's set. Men pick from 80 hairstyles, 120 tops and 120 bottoms; women from 50 hairstyles, 60 tops and 60 bottoms; non-binary residents from both. Every outfit is colored by one of 10 master palettes, and hair by one of 10 natural hair colors.
+Residents dress like characters from a Sims-style wardrobe with a men's set and a women's set. Men pick from 80 hairstyles, 219 tops and 219 bottoms; women from 50 hairstyles, 132 tops and 132 bottoms; non-binary residents from both. Every outfit is colored by one of 10 master palettes, and hair by one of 10 natural hair colors.
 
 The first ten of each kind are the original set, drawn from the user's male reference. Version 2.8 added twenty casual-medieval tops and bottoms (tunics, smocks, jerkins, hoods, cloaks, braies, trews, kilts, chausses, clogs and boots) and twenty anime-inspired hairstyles. Version 2.11 made those ninety pieces the men's set and added:
 
 - **Men:** fifty hairstyles (crops, curls, coils, locs, cornrows, braids, buns, warrior tails, long manes, a tonsure and balding elder styles); seventy casual-medieval tops and bottoms for trades, clergy, nobles, soldiers, regions and festivals; and a twenty-piece *supreme casual* line of plain tees, tunics, polos, shirts, chinos, slacks and jeans.
 - **Women:** the first women's wardrobe: fifty hairstyles (long, braided, tailed, bunned, bobbed, curly, coily and locked) and sixty tops and bottoms such as kirtles, bodices, chemises, overgowns, aprons, skirts, breeches and armor, with an outfit for every profession.
+
+Version 2.16 added 171 outfits, each a matching top and bottom, built in themed batches of up to 25:
+
+- **Men (99):** field and orchard hands (t121–t134), river and sea trades (t171–t186), soldiers and the watch (t196–t208), clergy, learning and healing (t221–t235), road, forest and mountain trades (t271–t281), the wider medieval world from Byzantium and al-Andalus to Novgorod and Song China (t296–t309), and everyday village basics (t346–t361).
+- **Women (72):** farm and dairy work (tf061–tf072), coast and market (tf111–tf120), warriors and hunters (tf136–tf145), healers, faith and learning (tf161–tf175), road and wilderness (tf211–tf220), and everyday village basics (tf286–tf300).
+
+Each batch keeps a number range, so the gaps in the numbering belong to batches that are planned but not built yet. Their concepts are in [tools/wardrobe/backlog/README.md](tools/wardrobe/backlog/README.md).
 
 The hairstyles use clean cel shading, a sheen ring and tapered pointed locks, but stay grounded: no gravity-defying spikes. The supreme casual line is the one deliberate exception to the medieval cut; everything else avoids modern clothing. The previous voxel/role-mask wardrobe and its registries were removed and replaced at the user's request. To add or change clothing, read [WARDROBE_EDITING.md](WARDROBE_EDITING.md).
 
@@ -31,8 +38,8 @@ The PNGs contain no clothing color. Every opaque pixel is a *key color*: a role 
 The wardrobe is Sims-style: within a resident's set, any top pairs with any bottom unless a rule forbids it.
 
 - **Tag rules:** armor tops `require` sturdy legwear, plated legs require a martial or rugged top, and fancy hose, kilts and sandals `reject` armor.
-- **Locked sets:** a few outfits only work as one piece. Their top and bottom name each other (`locked_to`) and are always worn together, never mixed. The men's set has 19 (monk, friar, herald, jester, crusader, morris dancer, green man and others); the women's has 8 (court gown, nun, abbess, sun priestess, coin dancer, May dancer, houppelande and heraldic gown).
-- **Coverage:** every free top mixes with at least seven free bottoms of its set. 9,849 of the men's 10,201 free pairs and 2,665 of the women's 2,704 are allowed.
+- **Locked sets:** a few outfits only work as one piece. Their top and bottom name each other (`locked_to`) and are always worn together, never mixed. The men's set has 23 (monk, friar, herald, jester, crusader, morris dancer, green man, chantry priest, deacon, herbalist monk, Song scholar and others); the women's has 10 (court gown, nun, abbess, sun priestess, coin dancer, May dancer, houppelande, heraldic gown, anchoress and prioress).
+- **Coverage:** every free top mixes with at least seven free bottoms of its set. 37,077 of the men's 38,416 free pairs and 14,449 of the women's 14,884 are allowed.
 
 `Wardrobe.compatible` and `tools/wardrobe/wardrobe.py` apply the same rule.
 
@@ -40,14 +47,14 @@ Skin layers stack as: body, then the bottom, then the top, then hair. A `tucked`
 
 ## Professions
 
-Outfit templates (a top plus its matching bottom) live in one file per set, `tools/wardrobe/outfits/male.json` and `female.json`. The compiler merges them into `catalog.json`. Every top is in at least one template, and every profession has templates for both sets. `OutfitFactory.assembleOutfit` works in this order:
+Outfit templates (a top plus its matching bottom) live in `tools/wardrobe/outfits/`: `male.json` and `female.json` for the first sets, and one file per later batch, such as `male_m01.json` or `female_f05.json`. The compiler merges them into `catalog.json`. Every top is in at least one template, and every profession has templates for both sets. `OutfitFactory.assembleOutfit` works in this order:
 
 1. Everything comes from the resident's own set: men's, women's, or both for non-binary residents.
 2. Hair and hair color come from the resident's seed alone, so a new job never changes them.
 3. The profession's preferred template for that set is chosen 30% of the time; otherwise one of its alternatives is used.
 4. The template's bottom is kept 50% of the time; otherwise a random compatible bottom from the set is used. A locked set is always worn whole.
 
-The men's original templates are listed below. Bold professions prefer the template; the others use it as an alternative. The 90 newer men's templates (`m_` ids) and the 60 women's templates (`f_` ids) follow the same pattern in their files. Each women's profession prefers its own outfit, for example the Knight's lady-knight armor, the Cleric's nun's habit and the Farmer's farm wife.
+The men's original templates are listed below. Bold professions prefer the template; the others use it as an alternative. The 189 newer men's templates (`m_` ids) and the 132 women's templates (`f_` ids) follow the same pattern in their files. Each women's profession prefers its own outfit, for example the Knight's lady-knight armor, the Cleric's nun's habit and the Farmer's farm wife.
 
 | Template | Top | Bottom | Professions |
 |---|---|---|---|

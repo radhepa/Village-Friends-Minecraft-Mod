@@ -1,0 +1,191 @@
+{
+  "id": "tf140_scouts_leaf_mottled_mantle",
+  "kind": "top",
+  "name": "Scout's Leaf-Mottled Mantle",
+  "gender": "female",
+  "texture": "tops/tf140_scouts_leaf_mottled_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "leaf_mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.8,
+        -2.8
+      ],
+      "size": [
+        17,
+        5,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "mantle_clasp",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -9.2,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.6,
+        3.25
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "horn_body",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        -1.5,
+        2.2,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "horn_bell",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        2.4,
+        -2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        28,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "horn_tip",
+      "bone": "TORSO",
+      "pivot": [
+        0.2,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.7,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        37,
+        12
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A hooded shoulder mantle dyed in leaf-shaped blotches with a leaf-dagged edge, over a plain tunic, with a laced bracer and a signal horn on a baldric."
+}

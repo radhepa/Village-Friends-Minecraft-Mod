@@ -1,0 +1,76 @@
+{
+  "id": "b171_ferrymans_wet_hem_breeches",
+  "kind": "bottom",
+  "name": "Ferryman's Wet-Hem Breeches",
+  "gender": "male",
+  "texture": "bottoms/b171_ferrymans_wet_hem_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sea",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_knee_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        6.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    }
+  ],
+  "description": "Wool breeches soaked dark from the buttoned knee bands upward, dripping down knitted stockings onto low leather shoes."
+}

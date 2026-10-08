@@ -1,0 +1,17 @@
+{
+  "id": "bf218_miners_leather_knee_breeches",
+  "kind": "bottom",
+  "name": "Miner's Leather Knee Breeches",
+  "gender": "female",
+  "texture": "bottoms/bf218_miners_leather_knee_breeches.png",
+  "extrasHeight": 0,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "description": "Close leather breeches buttoned up the outside of each knee and worn pale where she kneels, over white wool stockings and laced ankle boots."
+}

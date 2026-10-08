@@ -1,0 +1,104 @@
+{
+  "id": "b303_breton_bragou_braz",
+  "kind": "bottom",
+  "name": "Breton Bragou Braz",
+  "gender": "male",
+  "texture": "bottoms/b303_breton_bragou_braz.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bragou",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_bragou",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        -0.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "Very wide bragou braz falling in fine pleats to a band at the knee, a broad leather belt with a big buckle, pale gaiters buttoned up the outer calf and buckled shoes."
+}
