@@ -1,0 +1,113 @@
+{
+  "fallback": "villagefriends:village/taiga/street_ends",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_straight_short",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_straight_long",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_straight_lamp",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_bend_right",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_bend_left",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_turn_right",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_turn_left",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_tee_right",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_tee_left",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_fork",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_crossroads",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/street_square",
+        "processors": "villagefriends:taiga_street",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/plaza_hearth",
+        "processors": "villagefriends:taiga_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/plaza_millpond",
+        "processors": "villagefriends:taiga_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/plaza_elder",
+        "processors": "villagefriends:taiga_weathered",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

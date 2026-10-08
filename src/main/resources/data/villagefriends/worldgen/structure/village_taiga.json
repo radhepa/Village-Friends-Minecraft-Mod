@@ -1,0 +1,42 @@
+{
+  "type": "villagefriends:village",
+  "biomes": "#villagefriends:has_structure/village_taiga",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "villagefriends:village/taiga/town_centers",
+  "start_jigsaw_name": "villagefriends:town_start",
+  "size": 6,
+  "max_distance_from_center": {
+    "horizontal": 100,
+    "vertical": 20
+  },
+  "prune": {
+    "max_buried": 5,
+    "max_floating": 5,
+    "tolerance": 0.25,
+    "keep": [
+      "villagefriends:village/taiga/apothecary",
+      "villagefriends:village/taiga/chapel",
+      "villagefriends:village/taiga/garrison",
+      "villagefriends:village/taiga/library",
+      "villagefriends:village/taiga/market_berries",
+      "villagefriends:village/taiga/market_furs",
+      "villagefriends:village/taiga/market_smokehouse",
+      "villagefriends:village/taiga/plaza_elder",
+      "villagefriends:village/taiga/plaza_hearth",
+      "villagefriends:village/taiga/plaza_millpond",
+      "villagefriends:village/taiga/tavern",
+      "villagefriends:village/taiga/workshop"
+    ]
+  },
+  "terrain": {
+    "radius": 64,
+    "step": 16,
+    "core_radius": 32,
+    "max_height_range": 14,
+    "max_water": 0.2,
+    "max_core_water": 0.25,
+    "min_biome": 0.4
+  }
+}
