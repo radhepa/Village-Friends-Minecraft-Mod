@@ -1,0 +1,18 @@
+{
+  "outfits": [
+    {"id": "f_flask_physician", "name": "Physician", "top": "tf161_physicians_flask_case_gown", "bottom": "bf161_physicians_long_robe_skirt"},
+    {"id": "f_charm_wise_woman", "name": "Wise Woman", "top": "tf162_wise_womans_charm_hung_shawl", "bottom": "bf162_wise_womans_herb_pocket_skirt"},
+    {"id": "f_anchoress", "name": "Anchoress", "top": "tf163_anchoress_cowled_robe", "bottom": "bf163_anchoress_plain_robe_skirt"},
+    {"id": "f_grey_beguine", "name": "Beguine", "top": "tf164_beguines_plain_kirtle_and_mantle", "bottom": "bf164_beguines_grey_skirt"},
+    {"id": "f_fur_canoness", "name": "Canoness", "top": "tf165_canoness_fur_almuce", "bottom": "bf165_canoness_linen_rochet_skirt"}
+  ],
+  "professions": {
+    "APOTHECARY": ["f_flask_physician", "f_charm_wise_woman"],
+    "SCHOLAR": ["f_flask_physician"],
+    "MAGE": ["f_charm_wise_woman"],
+    "NITWIT": ["f_charm_wise_woman"],
+    "CLERIC": ["f_anchoress", "f_grey_beguine", "f_fur_canoness"],
+    "TAILOR": ["f_grey_beguine"],
+    "LIBRARIAN": ["f_fur_canoness"]
+  }
+}
