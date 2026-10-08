@@ -7,8 +7,88 @@
       "fallback": "taiga/lots_outer",
       "elements": [
         {
+          "template": "taiga/trapper_hut",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/aframe_cabin",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/porch_cabin",
+          "weight": 4,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/log_lodge",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/longhouse",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/dogtrot_cabin",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/stone_cottage",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/cabin_ell",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/smithy",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/smokehouse",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/fletcher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/shepherd",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/fisher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/cartographer",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/mason",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/tannery",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 12
         }
       ]
     },
@@ -16,8 +96,28 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
+          "template": "taiga/trapper_hut",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/longhouse",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/shepherd",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/fisher",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 6
         }
       ]
     }
