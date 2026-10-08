@@ -83,7 +83,7 @@ public final class StructuresGameTest implements FabricClientGameTest {
         for(var json:definition.getAsJsonArray("anchors")) {
             var anchor=json.getAsJsonObject();var p=at(pos(anchor.getAsJsonArray("pos")),origin,rotation);
             String name=Identifier.parse(anchor.get("id").getAsString()).getPath();
-            check(level.getBlockState(p).is(VillageBlocks.get(name)),"Registered workstation/fixture survives rotation: "+name);
+            check(level.getBlockState(p).is(net.minecraft.core.registries.BuiltInRegistries.BLOCK.getValue(Identifier.parse(anchor.get("id").getAsString()))),"Registered workstation/fixture survives rotation: "+name);
             if(List.of("house_plaque","notice_board","command_desk","apothecary_cot").contains(name))
                 check(level.getBlockEntity(p)!=null&&level.getBlockEntity(p).getType().isValid(level.getBlockState(p)),"Template creates the correct block entity: "+name);
         }

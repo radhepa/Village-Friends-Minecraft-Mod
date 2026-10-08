@@ -16,6 +16,12 @@ import net.minecraft.world.entity.ai.village.poi.PoiManager;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraft.world.phys.AABB;
+import dev.villagefriends.tavern.TavernSurvey;
+import net.minecraft.core.HolderSet;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.structure.PoolElementStructurePiece;
+import net.minecraft.world.level.levelgen.structure.StructureStart;
+import net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement;
 
 /**
  * A whole generated village on a Market Day evening and at lunch: its residents walk from their homes and
@@ -85,13 +91,64 @@ public final class TavernVillageGameTest implements FabricClientGameTest {
             LOGGER.info("TAVERN VILLAGE EVENING: {} seated at most; tavern box {} (from the village piece: {})", best, box, structural);
             check(best >= 4, "A village's residents fill the tavern on Market Day evening: " + best);
             c.runOnClient(client -> { if (!client.gui.hud.isHidden()) client.gui.hud.toggle(); });
-            double cx = box.getCenter().x, cz = box.getCenter().z, floor = station.getY();
-            view(c, w, cx, floor + 2.6, cz, 0, 35, "evening-south");
-            view(c, w, cx, floor + 2.6, cz, 180, 35, "evening-north");
-            view(c, w, cx, floor + 2.6, cz, 90, 35, "evening-west");
-            view(c, w, cx, floor + 30, cz - 24, 0, 50, "evening-outside");
+            // Aim at the seated crowd from a little way off, above their heads.
+            double[] crowd = w.getServer().computeOnServer(s -> {
+                double x = 0, z = 0, y = 0; int n = 0;
+                for (var v : w.getConnection().getServerLevel().getEntitiesOfClass(Villager.class, box, Seat::seated)) { x += v.getX(); y += v.getY(); z += v.getZ(); n++; }
+                return n == 0 ? new double[]{box.getCenter().x, station.getY(), box.getCenter().z} : new double[]{x / n, y / n, z / n};
+            });
+            for (int i = 0; i < 3; i++) {
+                double angle = Math.toRadians(45 + i * 120), ex = crowd[0] + Math.sin(angle) * 3.2, ez = crowd[2] + Math.cos(angle) * 3.2;
+                float look = (float) Math.toDegrees(Math.atan2(-(crowd[0] - ex), crowd[2] - ez));
+                view(c, w, ex, crowd[1] + 2.4, ez, look, 30, "evening-" + i);
+            }
+            view(c, w, box.getCenter().x, station.getY() + 30, box.getCenter().z - 24, 0, 50, "evening-outside");
             c.runOnClient(client -> { if (client.gui.hud.isHidden()) client.gui.hud.toggle(); });
-            LOGGER.info("TAVERN VILLAGE PASSED: {} residents seated at the tavern of a generated village on Market Day evening.", best);
+            LOGGER.info("TAVERN VILLAGE EVENING PASSED: {} residents seated at the tavern of a placed village on Market Day evening.", best);
+        }
+        // A naturally generated village (placed villages record no structure start): its tavern is read from its own structure piece.
+        try (var w = c.worldBuilder().adjustSettings(ui -> {
+            var normal = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.NORMAL);
+            ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(normal));
+            ui.setGenerateStructures(true);
+            ui.setSeed("1");
+        }).create()) {
+            w.getConnection().waitForChunksDownload();
+            w.getServer().runCommand("gamemode spectator @a");
+            BlockPos hearthStation = w.getServer().computeOnServer(server -> {
+                var level = w.getConnection().getServerLevel();
+                var holder = level.registryAccess().lookupOrThrow(Registries.STRUCTURE).getOrThrow(ResourceKey.create(Registries.STRUCTURE, VillageBlocks.id("village")));
+                var located = level.getChunkSource().getGenerator().findNearestMapStructure(level, HolderSet.direct(holder), BlockPos.ZERO, 80, false);
+                check(located != null, "A normal world has a village");
+                var entrance = located.getFirst(); level.getChunkAt(entrance);
+                StructureStart start = StructureStart.INVALID_START;
+                for (int y = 32; y < 256 && !start.isValid(); y += 4) start = level.structureManager().getStructureAt(new BlockPos(entrance.getX(), y, entrance.getZ()), holder.value());
+                check(start.isValid(), "The village has a structure start");
+                PoolElementStructurePiece hearth = null;
+                for (var piece : start.getPieces())
+                    if (piece instanceof PoolElementStructurePiece pool && pool.getElement() instanceof SinglePoolElement single && single.getTemplateLocation().getPath().contains("tavern")) hearth = pool;
+                check(hearth != null, "The village has a tavern piece");
+                var box = hearth.getBoundingBox();
+                for (int x = box.minX() >> 4; x <= box.maxX() >> 4; x++) for (int z = box.minZ() >> 4; z <= box.maxZ() >> 4; z++) level.getChunk(x, z);
+                BlockPos station = null;
+                for (var pos : BlockPos.betweenClosed(box.minX(), box.minY(), box.minZ(), box.maxX(), box.maxY(), box.maxZ()))
+                    if (level.getBlockState(pos).is(VillageBlocks.get("tap_stand"))) { station = pos.immutable(); break; }
+                check(station != null, "The Hearth has its tap stand");
+                var tavern = TavernSurvey.survey(level, station);
+                check(tavern.box().equals(box), "The survey reads the tavern's own structure piece: " + tavern.box() + " vs " + box);
+                return station;
+            });
+            // Freshly generated chunks register their points of interest over the next few ticks; look again, as the tavern does every minute.
+            c.waitTicks(100);
+            String found = w.getServer().computeOnServer(server -> {
+                var level = w.getConnection().getServerLevel();
+                var tavern = TavernSurvey.survey(level, hearthStation);
+                check(tavern.seats().size() >= 30 && tavern.stations().size() >= 2 && tavern.stage() != null && !tavern.stoves().isEmpty(),
+                        "and finds its seats, stations, stage and stove: " + tavern.seats().size() + " seats, " + tavern.stations().size() + " stations");
+                return tavern.seats().size() + " seats (" + tavern.seats().stream().filter(x -> x.hearth()).count() + " by the hearth, "
+                        + tavern.seats().stream().filter(x -> x.outdoor()).count() + " outdoors), " + tavern.standing().size() + " standing, " + tavern.stations().size() + " stations, box " + tavern.box();
+            });
+            LOGGER.info("TAVERN VILLAGE PASSED: natural village tavern {}", found);
         }
     }
 }

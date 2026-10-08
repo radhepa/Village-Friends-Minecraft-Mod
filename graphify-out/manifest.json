@@ -1,1442 +1,1802 @@
 {
   "build.gradle": {
-    "mtime": 1791353729.0568604,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0145817,
+    "seen": 1791451403.178077,
     "ast_hash": "1cfd6cccccc686ebe363bb8963e547a5",
     "semantic_hash": ""
   },
   "build.ps1": {
-    "mtime": 1791353729.0588126,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0150893,
+    "seen": 1791451403.178077,
     "ast_hash": "8bddffa632867c7e0eead2d9f7e04885",
     "semantic_hash": ""
   },
   "gradlew": {
-    "mtime": 1791353729.0642662,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.019722,
+    "seen": 1791451403.178077,
     "ast_hash": "343bf72f71043b4da467584bfb1d13cc",
     "semantic_hash": ""
   },
   "settings.gradle": {
-    "mtime": 1791353729.1217191,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.081016,
+    "seen": 1791451403.178077,
     "ast_hash": "51eecaff4e3891bbc2bd848d0b01846e",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/AnimationLayer.java": {
-    "mtime": 1791353729.1260445,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0860121,
+    "seen": 1791451403.178077,
     "ast_hash": "e4491c11f264db81aa773ddc2cc33c15",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/AnimationPacks.java": {
-    "mtime": 1791353729.1270306,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0873992,
+    "seen": 1791451403.178077,
     "ast_hash": "a5adb04bb501489a7d1100874cf076f3",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ConversationButton.java": {
-    "mtime": 1791353729.1290348,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.089398,
+    "seen": 1791451403.178077,
     "ast_hash": "28491a072c5f8de3f920cae3f91fde16",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/FriendshipScreen.java": {
-    "mtime": 1791353729.1315475,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0922725,
+    "seen": 1791451403.178077,
     "ast_hash": "8468a0ea58e556868930782d1ae8c314",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/OutfitAtlas.java": {
-    "mtime": 1791353729.1325593,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0932782,
+    "seen": 1791451403.178077,
     "ast_hash": "3877aa01651bb4fd85dd26aebcda05bf",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentAnimation.java": {
-    "mtime": 1791353729.1345801,
-    "seen": 1791422578.595577,
-    "ast_hash": "d3eb8d3d609794e162a186e70561b571",
+    "mtime": 1791446842.2864306,
+    "seen": 1791451403.178077,
+    "ast_hash": "8509ab11f92f9ff36bdf914673c271bf",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentArmorModel.java": {
-    "mtime": 1791353729.135612,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0953934,
+    "seen": 1791451403.178077,
     "ast_hash": "c378de52bf9d8923f30a9d169efe1949",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentLife.java": {
-    "mtime": 1791354809.5588076,
-    "seen": 1791422578.595577,
-    "ast_hash": "1b6ebb76fa4cb320341d235b033fe11f",
+    "mtime": 1791446842.3116534,
+    "seen": 1791451403.178077,
+    "ast_hash": "c0626f89e357f050d714520468c69f4a",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentModel.java": {
-    "mtime": 1791353729.1366084,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0974102,
+    "seen": 1791451403.178077,
     "ast_hash": "1ef6b682b3ca1f773ca9785099b4eb86",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentPoser.java": {
-    "mtime": 1791353729.1380694,
-    "seen": 1791422578.595577,
-    "ast_hash": "74b8b59ea529a992cca1c3d542203aab",
+    "mtime": 1791446842.2874327,
+    "seen": 1791451403.178077,
+    "ast_hash": "7f347b57e6b5f581857ab4debd7f55da",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentRenderState.java": {
-    "mtime": 1791353729.1390939,
-    "seen": 1791422578.595577,
-    "ast_hash": "45ccd1d586f39610f1e291a615af804b",
+    "mtime": 1791446842.2639835,
+    "seen": 1791451403.178077,
+    "ast_hash": "f9cf015bb0599dd491d65ff5313c7a07",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentRenderer.java": {
-    "mtime": 1791353729.140105,
-    "seen": 1791422578.595577,
-    "ast_hash": "c46ce05641692e9337f69d842c3d69e1",
+    "mtime": 1791446857.5016305,
+    "seen": 1791451403.178077,
+    "ast_hash": "f68d7a37d8d67a87ed355a9886cc1622",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/ResidentSkins.java": {
-    "mtime": 1791353729.1411035,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.101433,
+    "seen": 1791451403.178077,
     "ast_hash": "1200812b4f215bfa11c79cc9efa0e4f9",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/VillageFriendsClient.java": {
-    "mtime": 1791353729.14161,
-    "seen": 1791422578.595577,
-    "ast_hash": "045dc77c10d1cc2887ed15e747f8d8fe",
+    "mtime": 1791446842.3018248,
+    "seen": 1791451403.178077,
+    "ast_hash": "519ec43ee3b7f98a39d61d11f3b807c3",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/WardrobeLayer.java": {
-    "mtime": 1791353729.1421413,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1035163,
+    "seen": 1791451403.178077,
     "ast_hash": "a62ba970756ecc14ff67edb682116840",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/mixin/VillagerEventMixin.java": {
-    "mtime": 1791353729.1452484,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.105021,
+    "seen": 1791451403.178077,
     "ast_hash": "6d149bca7fd817a7dc795c233f13b327",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationCast.java": {
-    "mtime": 1791353729.1518714,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.109759,
+    "seen": 1791451403.178077,
     "ast_hash": "0c13bd9d019d5ecc3b4d15e4431d7c1e",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationFilmGameTest.java": {
-    "mtime": 1791353729.1533754,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1111119,
+    "seen": 1791451403.178077,
     "ast_hash": "ade2f8aee049627f9e3adbd49db8bfc9",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationGameTest.java": {
-    "mtime": 1791353729.154385,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.112137,
+    "seen": 1791451403.178077,
     "ast_hash": "858b7346ac1e7a2aa050624100658220",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationPackGameTest.java": {
-    "mtime": 1791353729.1553986,
-    "seen": 1791422578.595577,
-    "ast_hash": "715772de335562af475f153cbf6426ce",
+    "mtime": 1791445058.1131356,
+    "seen": 1791451403.178077,
+    "ast_hash": "9bab2a906c061763be37828608babc6c",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationPreviewScreen.java": {
-    "mtime": 1791353729.1569154,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1142452,
+    "seen": 1791451403.178077,
     "ast_hash": "d732606b10fc1aef0582a4f8281bdfa9",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/AnimationShowcaseScreen.java": {
-    "mtime": 1791353729.1569154,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1152463,
+    "seen": 1791451403.178077,
     "ast_hash": "74c2be8a9aabdfa6b2d9b3e5a8db4dd5",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/CommunityGameTest.java": {
-    "mtime": 1791353729.1584277,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1172426,
+    "seen": 1791451403.178077,
     "ast_hash": "f2a8ff1e29beac3f34e7f4c71e887c7f",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/FoundationGameTest.java": {
-    "mtime": 1791356369.0478606,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1182458,
+    "seen": 1791451403.178077,
     "ast_hash": "9bdc8c48cddc41e407d5910d2fec9d5e",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/FoundationPreviewScreen.java": {
-    "mtime": 1791353729.1635225,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1192448,
+    "seen": 1791451403.178077,
     "ast_hash": "34b97d466d4f2a905ebf3fd5ec34c599",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/FriendshipGameTest.java": {
-    "mtime": 1791353729.165078,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1192448,
+    "seen": 1791451403.178077,
     "ast_hash": "3a1066300d6d4c06407b771b55245c87",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/GuardGameTest.java": {
-    "mtime": 1791353729.1672287,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.121077,
+    "seen": 1791451403.178077,
     "ast_hash": "35babb7812e8ecb7bc35908e07578489",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/GuardProgressGameTest.java": {
-    "mtime": 1791353729.169672,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1220841,
+    "seen": 1791451403.178077,
     "ast_hash": "a54297c2451888d455acd6da3ab4420f",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/GuardSpawnEggGameTest.java": {
-    "mtime": 1791353729.17091,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1220841,
+    "seen": 1791451403.178077,
     "ast_hash": "88cfd178eee0123e458837437c706254",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/HairFaceGameTest.java": {
-    "mtime": 1791353729.17091,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.123083,
+    "seen": 1791451403.178077,
     "ast_hash": "e206c98fd06e278d512b966a3a303946",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/OutfitGameTest.java": {
-    "mtime": 1791353729.172107,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.125083,
+    "seen": 1791451403.178077,
     "ast_hash": "f3953304f03e32ee1050e9229094d2a3",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/OutfitPreviewScreen.java": {
-    "mtime": 1791353729.172612,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1260858,
+    "seen": 1791451403.178077,
     "ast_hash": "c17faa0d0c6084f0b2d93d4779c04148",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/ResidentSampleGameTest.java": {
-    "mtime": 1791353729.1741588,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1270847,
+    "seen": 1791451403.178077,
     "ast_hash": "8d77bc8d46d36b8731bb3e68e981c7fb",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/RoadmapGameTest.java": {
-    "mtime": 1791353729.175742,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1280835,
+    "seen": 1791451403.178077,
     "ast_hash": "c8745d8947afd79704286f8341939beb",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/StructuresGameTest.java": {
-    "mtime": 1791353729.1772623,
-    "seen": 1791422578.595577,
-    "ast_hash": "63fac735fc25667619ab20f520d72952",
+    "mtime": 1791451041.5031037,
+    "seen": 1791451403.178077,
+    "ast_hash": "366e03b0170f46b2e49a9ada547114b8",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/VillageGalleryGameTest.java": {
-    "mtime": 1791353729.1782713,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1300836,
+    "seen": 1791451403.178077,
     "ast_hash": "3b5e41a833b8d55e6c5ab8e8374c02e0",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ActionPayload.java": {
-    "mtime": 1791353729.1821105,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1353703,
+    "seen": 1791451403.178077,
     "ast_hash": "b82dd089ff1915bd803dee2de93f4206",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ApothecaryCotBlockEntity.java": {
-    "mtime": 1791353729.1843185,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.13693,
+    "seen": 1791451403.178077,
     "ast_hash": "026a6a7eae98e9494b4fa134d01169ea",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/BondBook.java": {
-    "mtime": 1791353729.184865,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.137936,
+    "seen": 1791451403.178077,
     "ast_hash": "87f4b979724882535f4060815e76d936",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/BondState.java": {
-    "mtime": 1791353729.1858914,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1389353,
+    "seen": 1791451403.178077,
     "ast_hash": "61a34b62cfd74f8ba83db579e03df92a",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/CommandDeskBlockEntity.java": {
-    "mtime": 1791353729.1862104,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1389353,
+    "seen": 1791451403.178077,
     "ast_hash": "ca8429edb8ea39f501ea57c6cefe0329",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/CompanionController.java": {
-    "mtime": 1791353729.1872528,
-    "seen": 1791422578.595577,
-    "ast_hash": "360e7b631492f4bff577869650e0d312",
+    "mtime": 1791445058.1399355,
+    "seen": 1791451403.178077,
+    "ast_hash": "51d47ebd216d3e72549b280e53dbafa5",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/CompanionState.java": {
-    "mtime": 1791353729.188275,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1412382,
+    "seen": 1791451403.178077,
     "ast_hash": "9ffa94efb255f8b9fd3be44ad6990320",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/Dialogue.java": {
-    "mtime": 1791353729.188275,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1412382,
+    "seen": 1791451403.178077,
     "ast_hash": "968f06bb2674081a9cde0e91c54b311b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FoundationBlock.java": {
-    "mtime": 1791353729.1908677,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.143239,
+    "seen": 1791451403.178077,
     "ast_hash": "8c2bd3aa25aa8c082b266ac76c682503",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FoundationEntityBlock.java": {
-    "mtime": 1791353729.1908677,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.144237,
+    "seen": 1791451403.178077,
     "ast_hash": "942ad4f88963e2ddf0219bd63514ba3a",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FriendshipBook.java": {
-    "mtime": 1791353729.1923099,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.145236,
+    "seen": 1791451403.178077,
     "ast_hash": "14f01abd1dcf6ce005aee04d941ed9ca",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FriendshipPayload.java": {
-    "mtime": 1791353729.194289,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.146258,
+    "seen": 1791451403.178077,
     "ast_hash": "7b50bb197af3db9dc73016a2afde172d",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FriendshipState.java": {
-    "mtime": 1791353729.1952884,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1472583,
+    "seen": 1791451403.178077,
     "ast_hash": "792f688c4fe0f73ae2899c7afe62d4aa",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GiftPreferences.java": {
-    "mtime": 1791353729.1952884,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1482577,
+    "seen": 1791451403.178077,
     "ast_hash": "db9ac93173138efc04742dcbd0464ceb",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GuardController.java": {
-    "mtime": 1791353729.197121,
-    "seen": 1791422578.595577,
-    "ast_hash": "b3054c35722ed2a21c344705cb9bd849",
+    "mtime": 1791445058.1492648,
+    "seen": 1791451403.178077,
+    "ast_hash": "b1237170345d8704d953236ca7c3b3b6",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GuardDamageLedger.java": {
-    "mtime": 1791353729.1987152,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1504805,
+    "seen": 1791451403.178077,
     "ast_hash": "543651bdd94df12fc5b97c2c8503d050",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GuardPolicy.java": {
-    "mtime": 1791353729.1987152,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1524794,
+    "seen": 1791451403.178077,
     "ast_hash": "5774ee4bb27e423eb4cef2c564a569a1",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GuardProgress.java": {
-    "mtime": 1791353729.1997576,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1524794,
+    "seen": 1791451403.178077,
     "ast_hash": "9c3f0070bb52cf567374b5dc01d9bc72",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/GuardProgression.java": {
-    "mtime": 1791355398.197142,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1534796,
+    "seen": 1791451403.178077,
     "ast_hash": "f613e0509bc282a9deeaeebe78693815",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/HousePlaqueBlockEntity.java": {
-    "mtime": 1791353729.2012064,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1544788,
+    "seen": 1791451403.178077,
     "ast_hash": "e2c49afc17584c7f1ffd086825d7ef31",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/MedicalSupplyItem.java": {
-    "mtime": 1791353729.2037115,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1594949,
+    "seen": 1791451403.178077,
     "ast_hash": "e44a18c37c1ac1e200bc7e9a48910279",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/NarrativeContent.java": {
-    "mtime": 1791353729.204782,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1594949,
+    "seen": 1791451403.178077,
     "ast_hash": "05062a63a34dbf155519d029144e28fb",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/NarrativeEngine.java": {
-    "mtime": 1791356893.1869223,
-    "seen": 1791422578.5965858,
-    "ast_hash": "40f191e412b95a0582dcc88ebbc5febd",
+    "mtime": 1791445058.1604958,
+    "seen": 1791451403.178077,
+    "ast_hash": "abf249c18eb06d4deb32753aa4f56852",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/NoticeBoardBlockEntity.java": {
-    "mtime": 1791353729.206291,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.161495,
+    "seen": 1791451403.178077,
     "ast_hash": "1774d0a4ef2a9e7cb97fbca2961105f0",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentAppearance.java": {
-    "mtime": 1791353729.206291,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1625192,
+    "seen": 1791451403.178077,
     "ast_hash": "03af951548a9cfd65fd96cd4de312a8f",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentHome.java": {
-    "mtime": 1791353729.2073,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1625192,
+    "seen": 1791451403.178077,
     "ast_hash": "9069196b789e80e85939bee0a0868e73",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentMotion.java": {
-    "mtime": 1791353729.2073,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1640277,
+    "seen": 1791451403.178077,
     "ast_hash": "16a2e5ead01944893eabedc5e194e74c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentNames.java": {
-    "mtime": 1791353729.2088065,
-    "seen": 1791422578.5965858,
-    "ast_hash": "750017b6226a035e2e7e994d753588d4",
+    "mtime": 1791445058.165281,
+    "seen": 1791451403.178077,
+    "ast_hash": "0817dda944800ee2848543ca0d6896e1",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentProfile.java": {
-    "mtime": 1791353729.2088065,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1663034,
+    "seen": 1791451403.178077,
     "ast_hash": "0a32eac53f291b6af6ceab95e5b3fae0",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/SharedHistory.java": {
-    "mtime": 1791353729.2099123,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1683,
+    "seen": 1791451403.178077,
     "ast_hash": "8168eaee5f6171df04f2c7dcd48102a1",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageBlockEntities.java": {
-    "mtime": 1791355436.8170896,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1741405,
+    "seen": 1791451403.178077,
     "ast_hash": "28aec0c707ed461cb98a807c6e8d3430",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageBlocks.java": {
-    "mtime": 1791356170.8735318,
-    "seen": 1791422578.5965858,
-    "ast_hash": "b44a99605e597375b75f900af4a92e60",
+    "mtime": 1791445058.1751878,
+    "seen": 1791451403.178077,
+    "ast_hash": "f2c579a8a513c423f0ecf59755334218",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageBook.java": {
-    "mtime": 1791353729.2129135,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1751878,
+    "seen": 1791451403.178077,
     "ast_hash": "a2d21a5aad402515863f7a6f44df653f",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageFoundation.java": {
-    "mtime": 1791353729.2139287,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1762097,
+    "seen": 1791451403.178077,
     "ast_hash": "0fe8f30e802368377eb81338ccb51409",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageFriends.java": {
-    "mtime": 1791391116.142809,
-    "seen": 1791422578.5965858,
-    "ast_hash": "40cffae5ba8696137bf0ac7d74fff203",
+    "mtime": 1791446694.5343745,
+    "seen": 1791451403.178077,
+    "ast_hash": "70f64325f784fec52875b5ec3bf08cc1",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageItems.java": {
-    "mtime": 1791355436.8181214,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1782951,
+    "seen": 1791451403.178077,
     "ast_hash": "353e390b115dd7731e5b55ac50f5488d",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageMarkerBlock.java": {
-    "mtime": 1791353729.2187276,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1803153,
+    "seen": 1791451403.178077,
     "ast_hash": "863d8f9e5d98c3067e0532cc9dc6ac35",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageMealItem.java": {
-    "mtime": 1791353729.2199059,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1813154,
+    "seen": 1791451403.178077,
     "ast_hash": "5be721bc15b8899c72cd2c2d66c8757d",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageNames.java": {
-    "mtime": 1791353729.2199059,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1813154,
+    "seen": 1791451403.178077,
     "ast_hash": "c31414748b226f40922b2cec705e1877",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageProfessions.java": {
-    "mtime": 1791355436.8388684,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1827042,
+    "seen": 1791451403.178077,
     "ast_hash": "a22d17c1f2c5b9f1f779e9cbfd93abf3",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageRecord.java": {
-    "mtime": 1791353729.221907,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1839807,
+    "seen": 1791451403.178077,
     "ast_hash": "47a495f5bc19028eb768eafb63057430",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageSettlements.java": {
-    "mtime": 1791353729.221907,
-    "seen": 1791422578.5965858,
-    "ast_hash": "d714d68784c5ce5c9d04ae0c21cee94a",
+    "mtime": 1791445058.184978,
+    "seen": 1791451403.178077,
+    "ast_hash": "3e6420f43fac83a81893b5b265eba7fd",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/animation/AnimationClip.java": {
-    "mtime": 1791353729.225286,
-    "seen": 1791422578.5965858,
-    "ast_hash": "10da4520b80c8dfe407b74dd31ab0659",
+    "mtime": 1791446842.3139389,
+    "seen": 1791451403.178077,
+    "ast_hash": "66d298c4e117ffb78bbc0342a6750b08",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/animation/AnimationLibrary.java": {
-    "mtime": 1791353729.2257946,
-    "seen": 1791422578.5965858,
-    "ast_hash": "0e97a606aa3a737f05e202b87dc911ef",
+    "mtime": 1791448314.7623465,
+    "seen": 1791451403.178077,
+    "ast_hash": "e7fb01309723a185643e89401d5cf353",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/animation/AnimationPack.java": {
-    "mtime": 1791353729.2283568,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.194013,
+    "seen": 1791451403.178077,
     "ast_hash": "f7d9653c7ac0a6fa6f8627e07d9fbc48",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/animation/AnimationTrack.java": {
-    "mtime": 1791353729.2298703,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1950378,
+    "seen": 1791451403.178077,
     "ast_hash": "9a550ab7d6c91b4190b9a1590750685e",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/animation/ResidentBehavior.java": {
-    "mtime": 1791353729.231088,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1950378,
+    "seen": 1791451403.178077,
     "ast_hash": "907cf8a3d9f9ce6444fbb48ec6e02508",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/CompanionPortalMixin.java": {
-    "mtime": 1791353729.2320964,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1988983,
+    "seen": 1791451403.178077,
     "ast_hash": "700b72e38b29f83373b3e60a6ee308d6",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/GuardArmorMixin.java": {
-    "mtime": 1791353729.233604,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1988983,
+    "seen": 1791451403.178077,
     "ast_hash": "9359d8b264c753ef03edc1d092855f63",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/GuardArrowMixin.java": {
-    "mtime": 1791353729.233604,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1999009,
+    "seen": 1791451403.178077,
     "ast_hash": "c98e3eb358391fc180f089dd3e51c9e2",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/GuardMeleeMixin.java": {
-    "mtime": 1791353729.2350402,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2009027,
+    "seen": 1791451403.178077,
     "ast_hash": "16daf411f7f8c8626ca67c214b1bccff",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/GuardTradeDisplayMixin.java": {
-    "mtime": 1791353729.2360642,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2009027,
+    "seen": 1791451403.178077,
     "ast_hash": "30adf1405af5530bd4f33c4cf2677753",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/VillagerCompanionMixin.java": {
-    "mtime": 1791353729.2360642,
-    "seen": 1791422578.5965858,
-    "ast_hash": "a1cf7596486623be663786e338a40445",
+    "mtime": 1791445058.205057,
+    "seen": 1791451403.178077,
+    "ast_hash": "f7c1f8fa6426d20d08dba44b97325e1a",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/BodyPart.java": {
-    "mtime": 1791353729.238013,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2085872,
+    "seen": 1791451403.178077,
     "ast_hash": "a004d664cb9ea9a607d1ca8b8c0aee4b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/ColorPalette.java": {
-    "mtime": 1791353729.2395413,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2085872,
+    "seen": 1791451403.178077,
     "ast_hash": "a1397585d11507fe7608ff1373a73a22",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/FaceDetails.java": {
-    "mtime": 1791353729.2405505,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2101104,
+    "seen": 1791451403.178077,
     "ast_hash": "2ca10d58c25442bee41d6fe3aab9174b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Garment.java": {
-    "mtime": 1791353729.2415495,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2118776,
+    "seen": 1791451403.178077,
     "ast_hash": "d5629aa627fb5b3d1345c5f6c36c7bd9",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Gender.java": {
-    "mtime": 1791353729.242549,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2128868,
+    "seen": 1791451403.178077,
     "ast_hash": "37bb89de4c7f52234fbbbf60215e1ac9",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/HairColor.java": {
-    "mtime": 1791353729.242549,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2128868,
+    "seen": 1791451403.178077,
     "ast_hash": "fd4df535defab73d008d46dddb9f8005",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/MasterPalettes.java": {
-    "mtime": 1791353729.2445505,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2141485,
+    "seen": 1791451403.178077,
     "ast_hash": "dc0cf8238d75803f2c4e6e411fdd5c75",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Outfit.java": {
-    "mtime": 1791353729.2445505,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2151465,
+    "seen": 1791451403.178077,
     "ast_hash": "bb3818d9234d223a7bd7dac8b230a3a5",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/OutfitFactory.java": {
-    "mtime": 1791353729.246552,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2161467,
+    "seen": 1791451403.178077,
     "ast_hash": "87f36a2b69540d7b368c87d8ab5059f5",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/PaletteID.java": {
-    "mtime": 1791353729.2469213,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.217147,
+    "seen": 1791451403.178077,
     "ast_hash": "1240564d21ebacfe708f52783675cb0e",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Piece.java": {
-    "mtime": 1791353729.2479358,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2183142,
+    "seen": 1791451403.178077,
     "ast_hash": "6e30d44adce55e36f54a4385078d1a69",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Profession.java": {
-    "mtime": 1791353729.2484674,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.219316,
+    "seen": 1791451403.178077,
     "ast_hash": "b9f249cad21557b381bf6669fe23104d",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/ResidentLook.java": {
-    "mtime": 1791353729.248983,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.219316,
+    "seen": 1791451403.178077,
     "ast_hash": "f17c74bf4a8868cd7627e26fbb15f234",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/outfit/Wardrobe.java": {
-    "mtime": 1791353729.2503898,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2213795,
+    "seen": 1791451403.178077,
     "ast_hash": "ed64405bc99e11812bb1e22cf6e9e409",
     "semantic_hash": ""
   },
   "src/main/resources/fabric.mod.json": {
-    "mtime": 1791353731.0969143,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.425779,
+    "seen": 1791451403.178077,
     "ast_hash": "bacf45fae395c479cff19fbe9182b167",
     "semantic_hash": ""
   },
   "src/main/resources/villagefriends.mixins.json": {
-    "mtime": 1791354714.7838135,
-    "seen": 1791422578.5965858,
-    "ast_hash": "ee137de1700e6b415f026103cef66cee",
+    "mtime": 1791445060.4267805,
+    "seen": 1791451403.178077,
+    "ast_hash": "04b85e2aa3fee038e5e0093853460a2e",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/AnimationPackTest.java": {
-    "mtime": 1791353731.1009295,
-    "seen": 1791422578.5965858,
-    "ast_hash": "c80f49a9f1e6fcd195aeb1f1087abd8a",
+    "mtime": 1791448262.4471605,
+    "seen": 1791451403.178077,
+    "ast_hash": "1825fe383eccb75ea27da6857a2582ef",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/CommunityTest.java": {
-    "mtime": 1791353731.102449,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.43129,
+    "seen": 1791451403.178077,
     "ast_hash": "b9f13f0dd4a0f706a82a57f306a4a582",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/FriendshipTest.java": {
-    "mtime": 1791353731.1034636,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.432842,
+    "seen": 1791451403.178077,
     "ast_hash": "bce72d0a690ab6f62b979625052fcd00",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/GuardDamageLedgerTest.java": {
-    "mtime": 1791353731.10497,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.434317,
+    "seen": 1791451403.178077,
     "ast_hash": "593fca7af14b36ef2ced5b979e72eec9",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/GuardPolicyTest.java": {
-    "mtime": 1791353731.10497,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4371343,
+    "seen": 1791451403.178077,
     "ast_hash": "a4c1dd9fdff3c1c06e40d1ae443d9944",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/GuardProgressTest.java": {
-    "mtime": 1791353731.106397,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4371343,
+    "seen": 1791451403.178077,
     "ast_hash": "73cb079eeae656844816c0f45e24e271",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/HandcraftedFaceTest.java": {
-    "mtime": 1791353731.106397,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4382927,
+    "seen": 1791451403.178077,
     "ast_hash": "417d06d613d22b5b1f829e11bb97667e",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/OutfitEngineTest.java": {
-    "mtime": 1791353731.1079023,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4392984,
+    "seen": 1791451403.178077,
     "ast_hash": "a9c3e140b5c9bbda80f2a71d63adc24f",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/ResidentMotionTest.java": {
-    "mtime": 1791353731.1088946,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4392984,
+    "seen": 1791451403.178077,
     "ast_hash": "4759a8173baf15a76413190b31869872",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/RoadmapTest.java": {
-    "mtime": 1791353731.1099706,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.441299,
+    "seen": 1791451403.178077,
     "ast_hash": "83abd3a09fbde03198d72b598ecca7e0",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/WardrobeTest.java": {
-    "mtime": 1791353731.1126006,
-    "seen": 1791422578.5965858,
-    "ast_hash": "f072653b9fe4e24f3801bbef9ef36d4e",
+    "mtime": 1791445060.4444642,
+    "seen": 1791451403.178077,
+    "ast_hash": "b71017808d07be400ba7d4ce7df0a68b",
     "semantic_hash": ""
   },
   "tools/animations/animations.py": {
-    "mtime": 1791391288.8497314,
-    "seen": 1791422578.5965858,
-    "ast_hash": "c91b6bc2ee77543f2be64946d53af2ed",
+    "mtime": 1791446890.9365323,
+    "seen": 1791451403.178077,
+    "ast_hash": "eace0e5ab946e1609185287cb556ed2f",
     "semantic_hash": ""
   },
   "tools/animations/film.py": {
-    "mtime": 1791353731.1156616,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4503403,
+    "seen": 1791451403.178077,
     "ast_hash": "fb6e874efd78c30fb44773104f388a74",
     "semantic_hash": ""
   },
   "tools/animations/kit.py": {
-    "mtime": 1791353731.1167104,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4516404,
+    "seen": 1791451403.178077,
     "ast_hash": "8a2a329a85623ab4278c4d76634ec020",
     "semantic_hash": ""
   },
   "tools/animations/preview.py": {
-    "mtime": 1791353731.1182177,
-    "seen": 1791422578.5965858,
-    "ast_hash": "18e59cd9e0f70f72185a2d86867abfd0",
+    "mtime": 1791445060.4516404,
+    "seen": 1791451403.178077,
+    "ast_hash": "00792d0f4504596007b3e9729ab87a5c",
     "semantic_hash": ""
   },
   "tools/animations/village_life/children.py": {
-    "mtime": 1791353731.1197343,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4571824,
+    "seen": 1791451403.178077,
     "ast_hash": "82715cd65ba4c0010382c4d907e70f09",
     "semantic_hash": ""
   },
   "tools/animations/village_life/everyday.py": {
-    "mtime": 1791353731.1207266,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4611838,
+    "seen": 1791451403.178077,
     "ast_hash": "03b0e763c674ba2b13cbd0cb64007368",
     "semantic_hash": ""
   },
   "tools/animations/village_life/hobbies.py": {
-    "mtime": 1791353731.122167,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4641829,
+    "seen": 1791451403.178077,
     "ast_hash": "63ba4071e9c7a8b503413e6d00455572",
     "semantic_hash": ""
   },
   "tools/animations/village_life/reactions.py": {
-    "mtime": 1791353731.1231668,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4691827,
+    "seen": 1791451403.178077,
     "ast_hash": "fd8801c3a6b1e71ea34a923f55a74e17",
     "semantic_hash": ""
   },
   "tools/animations/village_life/social.py": {
-    "mtime": 1791353731.1251917,
-    "seen": 1791422578.5965858,
-    "ast_hash": "ab28f98363f5f13f80444d2ca3ab961b",
+    "mtime": 1791445060.47119,
+    "seen": 1791451403.178077,
+    "ast_hash": "326b7f6f00cd33b80a1885cc37e1cb03",
     "semantic_hash": ""
   },
   "tools/animations/village_life/weather.py": {
-    "mtime": 1791353731.1262019,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4741917,
+    "seen": 1791451403.178077,
     "ast_hash": "b7e182b87cea8b4a174899d6041d252e",
     "semantic_hash": ""
   },
   "tools/animations/village_life/work.py": {
-    "mtime": 1791353731.127571,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4741917,
+    "seen": 1791451403.178077,
     "ast_hash": "ed528d453fbab7cb50d3528838d67956",
     "semantic_hash": ""
   },
   "tools/create_foundation_assets.py": {
-    "mtime": 1791356242.421331,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4765153,
+    "seen": 1791451403.178077,
     "ast_hash": "18b4fce93b3cb42a66d71457640c2118",
     "semantic_hash": ""
   },
   "tools/create_village_marker.py": {
-    "mtime": 1791353731.1298268,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4775147,
+    "seen": 1791451403.178077,
     "ast_hash": "1cd415f052fbad9ed57a7f0fde46126a",
     "semantic_hash": ""
   },
   "tools/create_village_structures.py": {
-    "mtime": 1791353731.1308105,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4788177,
+    "seen": 1791451403.178077,
     "ast_hash": "6f5b50dcb24738bcb9018bbba4b26eff",
     "semantic_hash": ""
   },
   "tools/design_village.py": {
-    "mtime": 1791353731.1319752,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4788177,
+    "seen": 1791451403.178077,
     "ast_hash": "4008ef581e7d39661396fee82603091b",
     "semantic_hash": ""
   },
   "tools/import_resident_names.py": {
-    "mtime": 1791353731.1319752,
-    "seen": 1791422578.5965858,
-    "ast_hash": "5b41306cb29a4eee4f5c57ed6297796e",
+    "mtime": 1791445060.5032218,
+    "seen": 1791451403.178077,
+    "ast_hash": "7663f5909c7fbb7c14b741e68b9ed191",
     "semantic_hash": ""
   },
   "tools/item_sprites.py": {
-    "mtime": 1791356202.7883809,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5045319,
+    "seen": 1791451403.178077,
     "ast_hash": "99ec4e033b77bc96554bf2130a3ce117",
     "semantic_hash": ""
   },
   "tools/make_voice_sounds.py": {
-    "mtime": 1791353731.1342504,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.505531,
+    "seen": 1791451403.178077,
     "ast_hash": "b3eb35326f51627ff49cd28352b8b5ce",
     "semantic_hash": ""
   },
   "tools/village_design/__init__.py": {
-    "mtime": 1791353731.193614,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5478048,
+    "seen": 1791451403.178077,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "tools/village_design/buildings/__init__.py": {
-    "mtime": 1791353731.196506,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5491402,
+    "seen": 1791451403.178077,
     "ast_hash": "5438c71d907bfd67664030c7fc34edb6",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/civic.py": {
-    "mtime": 1791353731.1975293,
-    "seen": 1791422578.5965858,
-    "ast_hash": "9d4acc0b410d483b84b3d8cf6a7573df",
+    "mtime": 1791448232.1335404,
+    "seen": 1791451403.178077,
+    "ast_hash": "516b2f4129476f113a8554dc59ac4abd",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/decor.py": {
-    "mtime": 1791353731.1980536,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5501754,
+    "seen": 1791451403.178077,
     "ast_hash": "995cef3dc769e9984d36776226c9cded",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/farms.py": {
-    "mtime": 1791353731.1980536,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5511787,
+    "seen": 1791451403.178077,
     "ast_hash": "995495838a2dd7e6bb0f8f47168949a0",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/homes.py": {
-    "mtime": 1791353731.199414,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5521743,
+    "seen": 1791451403.178077,
     "ast_hash": "825e04f4747ce36fa5032337c9579b34",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/plazas.py": {
-    "mtime": 1791353731.2009666,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5531738,
+    "seen": 1791451403.178077,
     "ast_hash": "1cdc65f492b2b8e67e2a7442e47d8768",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/streets.py": {
-    "mtime": 1791353731.2009666,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5531738,
+    "seen": 1791451403.178077,
     "ast_hash": "2eff2adb620e437cf211ed9dd69f7d42",
     "semantic_hash": ""
   },
   "tools/village_design/buildings/trades.py": {
-    "mtime": 1791353731.2019863,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5541713,
+    "seen": 1791451403.178077,
     "ast_hash": "8733e80de485e2e73d2ee96c6de29573",
     "semantic_hash": ""
   },
   "tools/village_design/catalog.py": {
-    "mtime": 1791353731.2029755,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5541713,
+    "seen": 1791451403.178077,
     "ast_hash": "1d5e9088793d063daead5feadddcc32a",
     "semantic_hash": ""
   },
   "tools/village_design/kit.py": {
-    "mtime": 1791353731.204119,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5551722,
+    "seen": 1791451403.178077,
     "ast_hash": "beac4c732c7a1349a3ebad6f928f9a6c",
     "semantic_hash": ""
   },
   "tools/village_design/parts.py": {
-    "mtime": 1791353731.2052994,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5561945,
+    "seen": 1791451403.178077,
     "ast_hash": "5d6852b89b726939dbc5e4a817f9026d",
     "semantic_hash": ""
   },
   "tools/village_design/preview.py": {
-    "mtime": 1791353731.2052994,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5561945,
+    "seen": 1791451403.178077,
     "ast_hash": "c3f580d22fa6a8586af7d91b86524be2",
     "semantic_hash": ""
   },
   "tools/village_design/roads.py": {
-    "mtime": 1791353731.2071385,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5576222,
+    "seen": 1791451403.178077,
     "ast_hash": "a3c325cea93c4a19f0486f54e7666d95",
     "semantic_hash": ""
   },
   "tools/village_design/simulate.py": {
-    "mtime": 1791353731.2071385,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5586271,
+    "seen": 1791451403.178077,
     "ast_hash": "a92561add441370a054f4771da2cc384",
     "semantic_hash": ""
   },
   "tools/wardrobe/anime.py": {
-    "mtime": 1791353731.2130399,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5606306,
+    "seen": 1791451403.178077,
     "ast_hash": "77455b20e723d1b6116027f98f495492",
     "semantic_hash": ""
   },
   "tools/wardrobe/anime_female.py": {
-    "mtime": 1791353731.2150507,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5627842,
+    "seen": 1791451403.178077,
     "ast_hash": "4ae7d6a7d6476d18a5d41ad4d50abadc",
     "semantic_hash": ""
   },
   "tools/wardrobe/anime_male.py": {
-    "mtime": 1791353731.2160494,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5637841,
+    "seen": 1791451403.178077,
     "ast_hash": "3bbdff3c6a07369e2a65445926f37521",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit.py": {
-    "mtime": 1791353731.6325603,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0621092,
+    "seen": 1791451403.178077,
     "ast_hash": "f2ada8df49a389592ec54dc00f3b7e42",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_casual.py": {
-    "mtime": 1791353731.6335742,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0641026,
+    "seen": 1791451403.178077,
     "ast_hash": "e07015b27da1f27bc64c6ba79e3ddfea",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_female.py": {
-    "mtime": 1791353731.6349487,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0712597,
+    "seen": 1791451403.178077,
     "ast_hash": "b269a0304bcc5e8d8fb8c3866f964932",
     "semantic_hash": ""
   },
   "tools/wardrobe/kit_male.py": {
-    "mtime": 1791353731.637069,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0783865,
+    "seen": 1791451403.178077,
     "ast_hash": "d71f96c70cc96ca373248521ffe27c37",
     "semantic_hash": ""
   },
   "tools/wardrobe/paint.py": {
-    "mtime": 1791353731.6419718,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0946646,
+    "seen": 1791451403.178077,
     "ast_hash": "93e11703adf376f7b3d51c1c2967d0ef",
     "semantic_hash": ""
   },
   "tools/wardrobe/preview.py": {
-    "mtime": 1791353731.644981,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.0971541,
+    "seen": 1791451403.178077,
     "ast_hash": "847f137ca342b2eba6e70f2d7b50027a",
     "semantic_hash": ""
   },
   "tools/wardrobe/wardrobe.py": {
-    "mtime": 1791353731.887709,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.451658,
+    "seen": 1791451403.178077,
     "ast_hash": "2dfd12459f7e23d600ffa8ca233e4ae4",
     "semantic_hash": ""
   },
   "ANIMATION_EDITING.md": {
-    "mtime": 1791353729.0455565,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445057.9994967,
+    "seen": 1791451403.178077,
     "ast_hash": "9caa4797ec12d9976091dd0a4708ae27",
     "semantic_hash": ""
   },
   "ANIMATION_PACKS.md": {
-    "mtime": 1791353729.0471208,
-    "seen": 1791422578.5965858,
-    "ast_hash": "d4957236262ce3cd7a82e324d4fd3d4b",
+    "mtime": 1791445058.0004966,
+    "seen": 1791451403.178077,
+    "ast_hash": "26f465d4bfaeb7c08f0ad6382dc413a3",
     "semantic_hash": ""
   },
   "BUILDING_EDITING.md": {
-    "mtime": 1791353729.0481224,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.0004966,
+    "seen": 1791451403.178077,
     "ast_hash": "eb496f408796de0f58d72fad4d9f4bf3",
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1791391631.0489526,
-    "seen": 1791422578.5965858,
-    "ast_hash": "43d0a87bafed560a2b842903515677a2",
+    "mtime": 1791449344.9926848,
+    "seen": 1791451403.178077,
+    "ast_hash": "7c26295fcb6b6556c4e41af2d9c3e613",
     "semantic_hash": ""
   },
   "DEVELOPMENT.md": {
-    "mtime": 1791391631.0927525,
-    "seen": 1791422578.5965858,
-    "ast_hash": "00a9dd7f1d49ecba2a1b5b21ef9d0df4",
+    "mtime": 1791449344.977747,
+    "seen": 1791451403.178077,
+    "ast_hash": "d222e4881bda9ae1d392440f3dd2be5b",
     "semantic_hash": ""
   },
   "GUARDS.md": {
-    "mtime": 1791353729.051121,
-    "seen": 1791422578.5965858,
-    "ast_hash": "0aab4d5c15a54923baf8506a060e643f",
+    "mtime": 1791445058.0055714,
+    "seen": 1791451403.178077,
+    "ast_hash": "874680b2d61ecaf98c60d3a6dc3e9d0d",
     "semantic_hash": ""
   },
   "OUTFIT_ENGINE.md": {
-    "mtime": 1791353729.0523837,
-    "seen": 1791422578.5965858,
-    "ast_hash": "9eb861184dfbf94f6746fccd94d0cef0",
+    "mtime": 1791445058.006573,
+    "seen": 1791451403.178077,
+    "ast_hash": "879e67e0d85f4ec9c28ac2f3fc317a27",
     "semantic_hash": ""
   },
   "PHASE1.md": {
-    "mtime": 1791353729.0523837,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.00808,
+    "seen": 1791451403.178077,
     "ast_hash": "a44a4af05fa0ff77bb02941a0211ab6c",
     "semantic_hash": ""
   },
   "PHASE2.md": {
-    "mtime": 1791353729.0538702,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.00808,
+    "seen": 1791451403.178077,
     "ast_hash": "e99b68cc2cf28546d1bd4abb4786fdff",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791391631.0554752,
-    "seen": 1791422578.5965858,
-    "ast_hash": "07136743d1b546e3d3a0a8a83b46ecdb",
+    "mtime": 1791449344.9916768,
+    "seen": 1791451403.178077,
+    "ast_hash": "4a59301c60d8e580c4907194918e780a",
     "semantic_hash": ""
   },
   "VERIFICATION.md": {
-    "mtime": 1791353729.055862,
-    "seen": 1791422578.5965858,
-    "ast_hash": "cce70aa2c0992864636ba19c8b7c9628",
+    "mtime": 1791451159.041634,
+    "seen": 1791451403.178077,
+    "ast_hash": "8b10265759db94227520d4df527a7818",
     "semantic_hash": ""
   },
   "WARDROBE_EDITING.md": {
-    "mtime": 1791353729.0568604,
-    "seen": 1791422578.5965858,
-    "ast_hash": "ee09a450467dbc9d173f1c6ce13499db",
+    "mtime": 1791445058.0135813,
+    "seen": 1791451403.178077,
+    "ast_hash": "ea509d1d9cde61bab310a629748ad948",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/EmoteBubbles.java": {
-    "mtime": 1791353729.1300352,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0909636,
+    "seen": 1791451403.178077,
     "ast_hash": "a26503630b261161b27e2f418b3bde03",
     "semantic_hash": ""
   },
   "src/client/java/dev/villagefriends/client/LedgerScreen.java": {
-    "mtime": 1791353729.1315475,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.0932782,
+    "seen": 1791451403.178077,
     "ast_hash": "24bc1098ae7ed58c42ddca4913dadbf4",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/VillageLifeGameTest.java": {
-    "mtime": 1791353729.1787825,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1300836,
+    "seen": 1791451403.178077,
     "ast_hash": "3c0c743ebd197d0504657dc382418d7f",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/Emote.java": {
-    "mtime": 1791353729.1894825,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.1422384,
+    "seen": 1791451403.178077,
     "ast_hash": "3da9d718c8fed8c12ee37e3a9be6d363",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/EmotePayload.java": {
-    "mtime": 1791353729.1894825,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.143239,
+    "seen": 1791451403.178077,
     "ast_hash": "5cc085be83304d65188c6b8fa18a0a6c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/FriendshipLevels.java": {
-    "mtime": 1791353729.1932867,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.145236,
+    "seen": 1791451403.178077,
     "ast_hash": "eb4088d59b546f3820cdb76e0ddee4fa",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/LedgerPayload.java": {
-    "mtime": 1791353729.2022054,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.157495,
+    "seen": 1791451403.178077,
     "ast_hash": "adcee4c16005793148a64d0064d9f57e",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/LedgerRequestPayload.java": {
-    "mtime": 1791353729.2022054,
-    "seen": 1791422578.595577,
+    "mtime": 1791445058.158495,
+    "seen": 1791451403.178077,
     "ast_hash": "5461d9b861d93430f25aca55c1c63741",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageLedger.java": {
-    "mtime": 1791354828.9515743,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1793158,
+    "seen": 1791451403.178077,
     "ast_hash": "ce9a0f1348214857ca411f0a92db76bb",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageLedgerItem.java": {
-    "mtime": 1791353729.2187276,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1793158,
+    "seen": 1791451403.178077,
     "ast_hash": "91fba41bc8fd061ba3819856238cbb0b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/VillageSocieties.java": {
-    "mtime": 1791353729.2232878,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.184978,
+    "seen": 1791451403.178077,
     "ast_hash": "6aad4e8d66b820fe4596c8568068dd3c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/VillagerFamilyMixin.java": {
-    "mtime": 1791353729.2360642,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2060654,
+    "seen": 1791451403.178077,
     "ast_hash": "9fefb61a19437d91ed8dfbf9ff5c7d9c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/VillagerMakeLoveMixin.java": {
-    "mtime": 1791353729.238013,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2060654,
+    "seen": 1791451403.178077,
     "ast_hash": "8388be763056f7e91e39e336fc5f084b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Chemistry.java": {
-    "mtime": 1791353729.251397,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.225302,
+    "seen": 1791451403.178077,
     "ast_hash": "3b5e9c92e976021b15ed8fced10edb84",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Gossip.java": {
-    "mtime": 1791353729.2524009,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2263014,
+    "seen": 1791451403.178077,
     "ast_hash": "2bc22b3bf5fe9ac60b00d4a425ebd4ba",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/News.java": {
-    "mtime": 1791353729.2524009,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2263014,
+    "seen": 1791451403.178077,
     "ast_hash": "e0513e8002243e8655461da0e4996118",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Relations.java": {
-    "mtime": 1791353729.254385,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.2278054,
+    "seen": 1791451403.178077,
     "ast_hash": "c8d1a22a0d473b7569df2ccbaa6708fb",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Society.java": {
-    "mtime": 1791353729.254385,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.228595,
+    "seen": 1791451403.178077,
     "ast_hash": "2d3f5f16fc2dad1134695d221ffb7dcd",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/SocietyBook.java": {
-    "mtime": 1791353729.2553847,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.228595,
+    "seen": 1791451403.178077,
     "ast_hash": "506d5ec76ca1e2746074b79331ea3f17",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Tie.java": {
-    "mtime": 1791353729.2553847,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.229841,
+    "seen": 1791451403.178077,
     "ast_hash": "8275fba7698800bd304ad7a2e9bdef38",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/social/Townsfolk.java": {
-    "mtime": 1791353729.2563999,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.229841,
+    "seen": 1791451403.178077,
     "ast_hash": "02112a91b99c83168ab948884a2cbc94",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/FriendshipLevelsTest.java": {
-    "mtime": 1791353731.102449,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.432842,
+    "seen": 1791451403.178077,
     "ast_hash": "890283296e8b92e1bbfe8567900afd21",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/GossipTest.java": {
-    "mtime": 1791353731.1034636,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.434317,
+    "seen": 1791451403.178077,
     "ast_hash": "5ab4d575c80c9f685ab15934239122ef",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/SocietyTest.java": {
-    "mtime": 1791353731.110972,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4428053,
+    "seen": 1791451403.178077,
     "ast_hash": "dd7f5aed75ba3f84234d9aa5df64966c",
     "semantic_hash": ""
   },
   "tools/social_assets.py": {
-    "mtime": 1791353731.135251,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.5070384,
+    "seen": 1791451403.178077,
     "ast_hash": "04972a21b5cd2857204fc4ed96b0e7e3",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1791353729.0491204,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.0030658,
+    "seen": 1791451403.178077,
     "ast_hash": "29e60fca2cc57fc4ba80ab713c4ac34a",
     "semantic_hash": ""
   },
   "VILLAGE_LIFE.md": {
-    "mtime": 1791353729.055862,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.012581,
+    "seen": 1791451403.178077,
     "ast_hash": "28618568dbed8eeca73051df4fb96a43",
     "semantic_hash": ""
   },
   "src/gametest/java/dev/villagefriends/WorkstationGameTest.java": {
-    "mtime": 1791391384.4535933,
-    "seen": 1791422578.595577,
-    "ast_hash": "440f6c73d6e1f02853a90df268e86bcd",
+    "mtime": 1791447072.0976562,
+    "seen": 1791451403.178077,
+    "ast_hash": "30afc57888295dc5a170da42e39fc35b",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/ResidentRoutines.java": {
-    "mtime": 1791355503.8222203,
-    "seen": 1791422578.5965858,
-    "ast_hash": "9f93bba22395f81fca32df11c8c2c2b9",
+    "mtime": 1791446694.51627,
+    "seen": 1791451403.178077,
+    "ast_hash": "00682ade9f707923bcb522e48086dc51",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/Songbook.java": {
-    "mtime": 1791355411.8029733,
-    "seen": 1791422578.5965858,
-    "ast_hash": "ae4163b4be4c941a50b4017a7841f2fb",
+    "mtime": 1791445058.1693077,
+    "seen": 1791451403.178077,
+    "ast_hash": "1573870ed9be0b4465bf6abf6084bbdd",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/TalkWorld.java": {
-    "mtime": 1791391116.114735,
-    "seen": 1791422578.5965858,
-    "ast_hash": "cc525ecca5aa78e6fa4c98457cc18122",
+    "mtime": 1791445058.1693077,
+    "seen": 1791451403.178077,
+    "ast_hash": "25ce61775a1e2321973d1c2911fe4e56",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/WorkstationBlock.java": {
-    "mtime": 1791355114.4490752,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445058.1864812,
+    "seen": 1791451403.178077,
     "ast_hash": "df201b20202235e77f22e3cb045d06fc",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/WorkstationBlockEntity.java": {
-    "mtime": 1791355139.0693707,
-    "seen": 1791422578.5965858,
-    "ast_hash": "6b7ed50154ee05719d51ba691f0853e3",
+    "mtime": 1791445058.1875997,
+    "seen": 1791451403.178077,
+    "ast_hash": "38f168e921e2b6413edcfc6c58ddcd8c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/Workstations.java": {
-    "mtime": 1791357436.3838458,
-    "seen": 1791422578.5965858,
-    "ast_hash": "72107a2e862f841109424eb9840d9c4b",
+    "mtime": 1791446694.50481,
+    "seen": 1791451403.178077,
+    "ast_hash": "482af89181c9ad9ac2195d3dbb70133c",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/BrainRoutineMixin.java": {
-    "mtime": 1791354713.4718418,
-    "seen": 1791422578.5965858,
-    "ast_hash": "c8312643307b1cc72d270ad1fa766ba0",
+    "mtime": 1791445058.1978977,
+    "seen": 1791451403.178077,
+    "ast_hash": "9ed38f8fcb592dd1c8875a740234d448",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/SleepInBedRoutineMixin.java": {
-    "mtime": 1791354713.63334,
-    "seen": 1791422578.5965858,
-    "ast_hash": "ce8022844297538891c377e0cc928de7",
+    "mtime": 1791445058.203103,
+    "seen": 1791451403.178077,
+    "ast_hash": "931f29303b8b77a0fa03a0d8b0d1210f",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/mixin/WorkAtPoiMixin.java": {
-    "mtime": 1791354713.794767,
-    "seen": 1791422578.5965858,
-    "ast_hash": "5f4712106cf6204693c530931fc481eb",
+    "mtime": 1791445058.2070656,
+    "seen": 1791451403.178077,
+    "ast_hash": "eca7bcaeec67e403b2fd437bd1c62597",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/routine/Routine.java": {
-    "mtime": 1791356893.1849072,
-    "seen": 1791422578.5965858,
-    "ast_hash": "b63c41aa916c479ae3c49ece106ed503",
+    "mtime": 1791445937.9454737,
+    "seen": 1791451403.178077,
+    "ast_hash": "e4730ab6b706e6b6ec18ccef62933919",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/routine/RoutineBrain.java": {
-    "mtime": 1791354713.3408072,
-    "seen": 1791422578.5965858,
-    "ast_hash": "34f96a33a855497786192c5b22bec7a6",
+    "mtime": 1791445058.2227404,
+    "seen": 1791451403.178077,
+    "ast_hash": "02d524bce53c08133e3311e42959d5d7",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/talk/DialogueBank.java": {
-    "mtime": 1791356721.9920604,
-    "seen": 1791422578.5965858,
-    "ast_hash": "fbc47d30c24a1fc27afcfdac6026d175",
+    "mtime": 1791445058.2320287,
+    "seen": 1791451403.178077,
+    "ast_hash": "12d2f82105972b3ad106f5526ac1bc9e",
     "semantic_hash": ""
   },
   "src/main/java/dev/villagefriends/talk/Talk.java": {
-    "mtime": 1791356785.958147,
-    "seen": 1791422578.5965858,
-    "ast_hash": "482c7da6ffaf467487e13a5229565cce",
+    "mtime": 1791445058.233089,
+    "seen": 1791451403.178077,
+    "ast_hash": "2cc1e1f74fc1ce3d5fa7c002e43adf3c",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/RoutineTest.java": {
-    "mtime": 1791355582.846238,
-    "seen": 1791422578.5965858,
-    "ast_hash": "afd16a679e8d9ba0895ed7c9bb54beeb",
+    "mtime": 1791446963.5035093,
+    "seen": 1791451403.178077,
+    "ast_hash": "6ef367f4b4a36e909537861956358316",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/talk/DialogueBankTest.java": {
-    "mtime": 1791391173.7166665,
-    "seen": 1791422578.5965858,
-    "ast_hash": "d98f8e2886ceb27c7eea874354be84c9",
+    "mtime": 1791445060.4459417,
+    "seen": 1791451403.178077,
+    "ast_hash": "c60875af6133664f8c4902494185d344",
     "semantic_hash": ""
   },
   "src/test/java/dev/villagefriends/talk/TalkTest.java": {
-    "mtime": 1791391192.3405867,
-    "seen": 1791422578.5965858,
-    "ast_hash": "9b4401bcb644e82afe0d7455c5c6f754",
+    "mtime": 1791445060.4472265,
+    "seen": 1791451403.178077,
+    "ast_hash": "edd0bbb8030f485cbe06f366a37cc019",
     "semantic_hash": ""
   },
   "tools/dialogue/dialogue.py": {
-    "mtime": 1791391099.9517214,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4811683,
+    "seen": 1791451403.178077,
     "ast_hash": "9509dc77fb7344479c859723859ce3a7",
     "semantic_hash": ""
   },
   "tools/workstations/paint.py": {
-    "mtime": 1791356632.3203404,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445061.4536588,
+    "seen": 1791451403.178077,
     "ast_hash": "e45f7a4104d4f799669160cc69cf10b1",
     "semantic_hash": ""
   },
   "tools/workstations/workstations.py": {
-    "mtime": 1791391679.3487074,
-    "seen": 1791422578.5965858,
-    "ast_hash": "41f367de7abdfdd527787135d0b2fbb1",
+    "mtime": 1791445061.4549387,
+    "seen": 1791451403.178077,
+    "ast_hash": "0a18afdc7bd4acca4984d95e2b41fe4c",
     "semantic_hash": ""
   },
   "VILLAGE_DAYS.md": {
-    "mtime": 1791391601.0374599,
-    "seen": 1791422578.5965858,
-    "ast_hash": "0f08e2b7556968d77595bf6d2eebbe86",
+    "mtime": 1791445058.011582,
+    "seen": 1791451403.178077,
+    "ast_hash": "ebc1a42334434dd62d773eab4f723418",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/adventure.txt": {
-    "mtime": 1791384600.9932594,
-    "seen": 1791422578.5965858,
-    "ast_hash": "4e684d54f060d032af3047ea6cb3b614",
+    "mtime": 1791445060.4821708,
+    "seen": 1791451403.178077,
+    "ast_hash": "404cf16faf92dbc5da07caf2483d4475",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-general.txt": {
-    "mtime": 1791358216.372813,
-    "seen": 1791422578.5965858,
-    "ast_hash": "8b9ba5e73cd3849a961d3e93044c311e",
+    "mtime": 1791445060.4831698,
+    "seen": 1791451403.178077,
+    "ast_hash": "508331c1548267cb5f98663a840fb9ae",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/chat-personalities.txt": {
-    "mtime": 1791358125.648404,
-    "seen": 1791422578.5965858,
-    "ast_hash": "2b623cae42662bce2784c2ee286205b7",
+    "mtime": 1791445060.4844396,
+    "seen": 1791451403.178077,
+    "ast_hash": "175f71af8bd8d04152598518930d6ef0",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/children.txt": {
-    "mtime": 1791384943.2920415,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.4854398,
+    "seen": 1791451403.178077,
     "ast_hash": "175aca187e78612227bdfcfc50a8d7fa",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/greetings.txt": {
-    "mtime": 1791357064.7002528,
-    "seen": 1791422578.5965858,
-    "ast_hash": "c9a0c8cf5842d6845dab340f78f6cddc",
+    "mtime": 1791445060.4874017,
+    "seen": 1791451403.178077,
+    "ast_hash": "e36d196199a678d60ff5e99f707cb459",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/home-and-village.txt": {
-    "mtime": 1791385003.9249985,
-    "seen": 1791422578.5965858,
-    "ast_hash": "53e03ca3e306a64cdaf046c96f9e7cd4",
+    "mtime": 1791445060.487865,
+    "seen": 1791451403.178077,
+    "ast_hash": "e00dafda24b43154c603deb0cd517a9d",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/jokes.txt": {
-    "mtime": 1791384731.1474447,
-    "seen": 1791422578.5965858,
+    "mtime": 1791445060.490274,
+    "seen": 1791451403.178077,
     "ast_hash": "3a7d866e1ce76dbd12097bae91d38fac",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/player.txt": {
-    "mtime": 1791384807.367604,
-    "seen": 1791422578.5965858,
-    "ast_hash": "953c229ced26dd66b5a6237e12d3294b",
+    "mtime": 1791445060.4913454,
+    "seen": 1791451403.178077,
+    "ast_hash": "9271f40f71e7cbccb39c5848d1378c36",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/remember.txt": {
-    "mtime": 1791385563.5940547,
-    "seen": 1791422578.5965858,
-    "ast_hash": "18f42c5068f5ede651b045a0466e84be",
+    "mtime": 1791445060.4925234,
+    "seen": 1791451403.178077,
+    "ast_hash": "7566c9b6acfbfd1e05482d0fa7cd5a82",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/routine.txt": {
-    "mtime": 1791357249.1620362,
-    "seen": 1791422578.5965858,
-    "ast_hash": "e809bd53a0fa73f4d7ec6ad3b9bfc8da",
+    "mtime": 1791445060.4935226,
+    "seen": 1791451403.178077,
+    "ast_hash": "6c49bd433b1dbd61f478ada2d76db5eb",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/weather-and-time.txt": {
-    "mtime": 1791357464.099393,
-    "seen": 1791422578.5965858,
-    "ast_hash": "a751a52db0b33b0a9246096a35932688",
+    "mtime": 1791445060.4945226,
+    "seen": 1791451403.178077,
+    "ast_hash": "3a4a92bb44c22edd14e1dbddce76d8d2",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/work-vanilla.txt": {
-    "mtime": 1791358412.405576,
-    "seen": 1791422578.5965858,
-    "ast_hash": "72b491be0a32f72a183320ec84577f81",
+    "mtime": 1791445060.4955232,
+    "seen": 1791451403.178077,
+    "ast_hash": "b87855aabf2e7a7fdc35d756863f7469",
     "semantic_hash": ""
   },
   "tools/dialogue/lines/work-village.txt": {
-    "mtime": 1791358559.5366848,
-    "seen": 1791422578.5965858,
-    "ast_hash": "cc34b2829b977e9073c8806a475d37ec",
+    "mtime": 1791445060.4966216,
+    "seen": 1791451403.178077,
+    "ast_hash": "15d6fdebcd9c0e9525e1cf686d9e0716",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/about-you.txt": {
-    "mtime": 1791385100.3481145,
-    "seen": 1791422578.5965858,
-    "ast_hash": "310c46fc691fdaf96b9c99b2b83da8b7",
+    "mtime": 1791445060.498266,
+    "seen": 1791451403.178077,
+    "ast_hash": "6d479c5d9fef1a1111bf64115c3928fd",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/offers.txt": {
-    "mtime": 1791385297.2704618,
-    "seen": 1791422578.5965858,
-    "ast_hash": "e9d756e248478cff56af6b3b54eca32c",
+    "mtime": 1791445060.4998083,
+    "seen": 1791451403.178077,
+    "ast_hash": "bda3665e4e2bc849d28ce16308c02cf3",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/riddles-and-situations.txt": {
-    "mtime": 1791385249.0852945,
-    "seen": 1791422578.5965858,
-    "ast_hash": "a641c9c0d2c7832113d3531ec9cfde84",
+    "mtime": 1791445060.5012212,
+    "seen": 1791451403.178077,
+    "ast_hash": "5bbcd2e39d86294319ed3124f44c581c",
     "semantic_hash": ""
   },
   "tools/dialogue/questions/would-you-rather.txt": {
-    "mtime": 1791385160.231907,
-    "seen": 1791422578.5965858,
-    "ast_hash": "00462253c1f515bd9ab2806f256f7ab7",
+    "mtime": 1791445060.502223,
+    "seen": 1791451403.178077,
+    "ast_hash": "f1138ea57a6c8fc0bbf3505a6897ce33",
+    "semantic_hash": ""
+  },
+  "src/client/java/dev/villagefriends/client/ArrivalBanner.java": {
+    "mtime": 1791445058.089398,
+    "seen": 1791451403.178077,
+    "ast_hash": "71ef30b3412f52d9f765ad65a9f56ea0",
+    "semantic_hash": ""
+  },
+  "src/client/java/dev/villagefriends/client/TavernClient.java": {
+    "mtime": 1791448262.4481616,
+    "seen": 1791451403.178077,
+    "ast_hash": "624ea128ba1b5d8aa5b61a58e9a8fcb8",
+    "semantic_hash": ""
+  },
+  "src/gametest/java/dev/villagefriends/ArrivalGameTest.java": {
+    "mtime": 1791445058.116243,
+    "seen": 1791451403.178077,
+    "ast_hash": "6ec14247581d63b4f1e33d4b85b442ba",
+    "semantic_hash": ""
+  },
+  "src/gametest/java/dev/villagefriends/KnockoutGameTest.java": {
+    "mtime": 1791445058.124083,
+    "seen": 1791451403.178077,
+    "ast_hash": "f5a25d679596e7bb62e1455fc42c2b71",
+    "semantic_hash": ""
+  },
+  "src/gametest/java/dev/villagefriends/TavernGameTest.java": {
+    "mtime": 1791449292.4424212,
+    "seen": 1791451403.178077,
+    "ast_hash": "ab7ba6c33c33cb4db964e3bb6710b8e0",
+    "semantic_hash": ""
+  },
+  "src/gametest/java/dev/villagefriends/TavernVillageGameTest.java": {
+    "mtime": 1791450616.7329936,
+    "seen": 1791451403.178077,
+    "ast_hash": "c4e4cc66384c4b129f7e54bafa3ac093",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/GuardPatrols.java": {
+    "mtime": 1791445058.1514792,
+    "seen": 1791451403.178077,
+    "ast_hash": "6e97a66c1ecbb534cb39bdfd6adbf271",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/KnockoutState.java": {
+    "mtime": 1791445058.1554985,
+    "seen": 1791451403.178077,
+    "ast_hash": "1fc350745d5f3173713ffeb64b4ac168",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/Knockouts.java": {
+    "mtime": 1791445058.156498,
+    "seen": 1791451403.178077,
+    "ast_hash": "8a39035afbd61e0865cbdc042f7f8761",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/VillageArrival.java": {
+    "mtime": 1791445058.170808,
+    "seen": 1791451403.178077,
+    "ast_hash": "e3ca71ca5b4f87a4788f841ba1dfd89f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/VillageArrivalPayload.java": {
+    "mtime": 1791445058.1721141,
+    "seen": 1791451403.178077,
+    "ast_hash": "fe08bbe987b2ffa49382c1fc036b80fb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/mixin/InjuredBodyMixin.java": {
+    "mtime": 1791445058.2019026,
+    "seen": 1791451403.178077,
+    "ast_hash": "a97c76fd57b1899952e84d2837267709",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/Patronage.java": {
+    "mtime": 1791448465.9558496,
+    "seen": 1791451403.178077,
+    "ast_hash": "5a6b8e3f76eda23774650b49c32d9c76",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/Seat.java": {
+    "mtime": 1791448262.4471605,
+    "seen": 1791451403.178077,
+    "ast_hash": "b20f959de4d8f11948e75ece607a7ae8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/TavernBlocks.java": {
+    "mtime": 1791447262.2938917,
+    "seen": 1791451403.178077,
+    "ast_hash": "56a54bf10f19dc360d4fa6e04a8fb10c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/TavernItems.java": {
+    "mtime": 1791446310.6676793,
+    "seen": 1791451403.178077,
+    "ast_hash": "6d37674b1fd6ebe175a80556cce2951c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/TavernSurvey.java": {
+    "mtime": 1791448506.0273986,
+    "seen": 1791451403.178077,
+    "ast_hash": "47d0d278770ca58f65a7e0b8bef1345f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/villagefriends/tavern/Taverns.java": {
+    "mtime": 1791450931.9404335,
+    "seen": 1791451403.178077,
+    "ast_hash": "b5f9bd15f2d348907a37865961d945bd",
+    "semantic_hash": ""
+  },
+  "src/test/java/dev/villagefriends/GuardDutyTest.java": {
+    "mtime": 1791445060.4356425,
+    "seen": 1791451403.178077,
+    "ast_hash": "9540a20c9811f05ffe7437605fc7f4e2",
+    "semantic_hash": ""
+  },
+  "src/test/java/dev/villagefriends/PatronageTest.java": {
+    "mtime": 1791446988.40928,
+    "seen": 1791451403.178077,
+    "ast_hash": "9136036341b0847a932eec79374bf642",
+    "semantic_hash": ""
+  },
+  "src/test/java/dev/villagefriends/ResidentNamesTest.java": {
+    "mtime": 1791445060.4403,
+    "seen": 1791451403.178077,
+    "ast_hash": "dc042d554b4fb7be8d71921b07cfce59",
+    "semantic_hash": ""
+  },
+  "src/test/java/dev/villagefriends/TavernPackTest.java": {
+    "mtime": 1791448341.4550135,
+    "seen": 1791451403.178077,
+    "ast_hash": "93fec2b980157fa9e46c375114c88635",
+    "semantic_hash": ""
+  },
+  "tools/animations/tavern/bar.py": {
+    "mtime": 1791448465.9558496,
+    "seen": 1791451403.178077,
+    "ast_hash": "23f1b1b7cefb0b92f185e9e32a75e638",
+    "semantic_hash": ""
+  },
+  "tools/animations/tavern/chat.py": {
+    "mtime": 1791448070.9907925,
+    "seen": 1791451403.178077,
+    "ast_hash": "6348dd3bc153d2cf463fc3162f4bc1bc",
+    "semantic_hash": ""
+  },
+  "tools/animations/tavern/dining.py": {
+    "mtime": 1791447654.1076095,
+    "seen": 1791451403.178077,
+    "ast_hash": "7cc136dc9e3f64b9304fae109c197412",
+    "semantic_hash": ""
+  },
+  "tools/animations/tavern/seated.py": {
+    "mtime": 1791448070.9907925,
+    "seen": 1791451403.178077,
+    "ast_hash": "8f55a41a85c1d7ea2f6165b331df9569",
+    "semantic_hash": ""
+  },
+  "tools/animations/tavern_preview.py": {
+    "mtime": 1791447622.8907828,
+    "seen": 1791451403.178077,
+    "ast_hash": "4a463a656e21d8c5ae789e9d2f21494d",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/chatter.py": {
+    "mtime": 1791445060.456176,
+    "seen": 1791451403.178077,
+    "ast_hash": "add0ff9b28ce65dec209bc96e9601ebc",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/company.py": {
+    "mtime": 1791445060.458184,
+    "seen": 1791451403.178077,
+    "ast_hash": "9b06d283e7259a907de8c3793d0f4128",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/crafts.py": {
+    "mtime": 1791445060.4601834,
+    "seen": 1791451403.178077,
+    "ast_hash": "fb5fc4ca89d6b4db6e15880212969fbc",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/feelings.py": {
+    "mtime": 1791445060.462183,
+    "seen": 1791451403.178077,
+    "ast_hash": "f04207e570b769f38885d8d2823f7648",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/guards.py": {
+    "mtime": 1791445060.4631827,
+    "seen": 1791451403.178077,
+    "ast_hash": "e4967d9b1e4e914f102937bfe4b69596",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/moments.py": {
+    "mtime": 1791445060.4651823,
+    "seen": 1791451403.178077,
+    "ast_hash": "dc419a127adee17d0df64fb5119a0add",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/pastimes.py": {
+    "mtime": 1791445060.467182,
+    "seen": 1791451403.178077,
+    "ast_hash": "f2b3286cb1f57e6081972490558fad56",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/playtime.py": {
+    "mtime": 1791445060.4681852,
+    "seen": 1791451403.178077,
+    "ast_hash": "864fa91714c7d807159caee6ab401581",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/skies.py": {
+    "mtime": 1791445060.4701834,
+    "seen": 1791451403.178077,
+    "ast_hash": "f1b343283886892e54850bf578548a6a",
+    "semantic_hash": ""
+  },
+  "tools/animations/village_life/trades.py": {
+    "mtime": 1791445060.4721894,
+    "seen": 1791451403.178077,
+    "ast_hash": "ec398a91a67d0375fa99b49d4b1ca540",
+    "semantic_hash": ""
+  },
+  "tools/animations/vlcheck.py": {
+    "mtime": 1791445060.47552,
+    "seen": 1791451403.178077,
+    "ast_hash": "3fed9013939fffa5158ee5fd908707fd",
+    "semantic_hash": ""
+  },
+  "tools/tavern/furniture.py": {
+    "mtime": 1791447236.604079,
+    "seen": 1791451403.178077,
+    "ast_hash": "300be313bf5b72c0194d99ff2f0cd21b",
+    "semantic_hash": ""
+  },
+  "tools/tavern/sprites.py": {
+    "mtime": 1791447679.2645743,
+    "seen": 1791451403.178077,
+    "ast_hash": "cd9112f5814b4c4aed15f32c313e9d1b",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/backlog/kit_f02.py": {
+    "mtime": 1791445060.5671186,
+    "seen": 1791451403.178077,
+    "ast_hash": "08ff299912623a6e9098358342f9564c",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/backlog/kit_f06.py": {
+    "mtime": 1791445060.5681171,
+    "seen": 1791451403.178077,
+    "ast_hash": "24b80f7e1d55d1bf75740084d642a8a3",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/backlog/kit_m02.py": {
+    "mtime": 1791445060.5691166,
+    "seen": 1791451403.178077,
+    "ast_hash": "6db7830afefd8a364fb140e68e75c058",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/backlog/kit_m06.py": {
+    "mtime": 1791445060.5701168,
+    "seen": 1791451403.178077,
+    "ast_hash": "1b52ef626446c9eafc79a9ec442cf396",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f01.py": {
+    "mtime": 1791445061.0641026,
+    "seen": 1791451403.178077,
+    "ast_hash": "ab2ddef417e9d0c99b9424a1d88132ae",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f03.py": {
+    "mtime": 1791445061.0651023,
+    "seen": 1791451403.178077,
+    "ast_hash": "57b0078e8d489f18e3df610e209a07fb",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f04.py": {
+    "mtime": 1791445061.0662215,
+    "seen": 1791451403.178077,
+    "ast_hash": "444aeda19ffed19f6b63cb8a28c7cd2d",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f05.py": {
+    "mtime": 1791445061.0672402,
+    "seen": 1791451403.178077,
+    "ast_hash": "c6744c6eb7bce8c8e0857f1e8c50603f",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f07.py": {
+    "mtime": 1791445061.0682404,
+    "seen": 1791451403.178077,
+    "ast_hash": "d874ab0733de12340b1f2b11a7eda189",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_f10.py": {
+    "mtime": 1791445061.0692616,
+    "seen": 1791451403.178077,
+    "ast_hash": "fd3ba5d9b88e180da63ad41285202bd6",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m01.py": {
+    "mtime": 1791445061.0712597,
+    "seen": 1791451403.178077,
+    "ast_hash": "99759bf48b3c9d1db8d4040381fc103c",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m03.py": {
+    "mtime": 1791445061.0727198,
+    "seen": 1791451403.178077,
+    "ast_hash": "366665bc5a1047bc8371bbb0ed76e541",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m04.py": {
+    "mtime": 1791445061.073721,
+    "seen": 1791451403.178077,
+    "ast_hash": "932007971e10c6df82711f985271690d",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m05.py": {
+    "mtime": 1791445061.0754569,
+    "seen": 1791451403.178077,
+    "ast_hash": "ae8f77795d03abb2d0015533d267a8d6",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m07.py": {
+    "mtime": 1791445061.0754569,
+    "seen": 1791451403.178077,
+    "ast_hash": "0b6f5f87ec334c97922c5a31f9102338",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m08.py": {
+    "mtime": 1791445061.0768802,
+    "seen": 1791451403.178077,
+    "ast_hash": "c477a18d137d53cd65155b5893a6c5ee",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/kit_m10.py": {
+    "mtime": 1791445061.0768802,
+    "seen": 1791451403.178077,
+    "ast_hash": "51ce1e66f0df76d40d1e41f526093d07",
+    "semantic_hash": ""
+  },
+  "TAVERN.md": {
+    "mtime": 1791449149.7650728,
+    "seen": 1791451403.178077,
+    "ast_hash": "32f846bad54a9fd7b123370b0deea5d4",
+    "semantic_hash": ""
+  },
+  "tools/dialogue/lines/tavern.txt": {
+    "mtime": 1791446930.3068144,
+    "seen": 1791451403.178077,
+    "ast_hash": "11b2cb413d5c19af721d0ca3a13cae4c",
+    "semantic_hash": ""
+  },
+  "tools/wardrobe/backlog/README.md": {
+    "mtime": 1791445060.5657866,
+    "seen": 1791451403.178077,
+    "ast_hash": "98739398580a409945d2619a672a38c1",
     "semantic_hash": ""
   }
 }

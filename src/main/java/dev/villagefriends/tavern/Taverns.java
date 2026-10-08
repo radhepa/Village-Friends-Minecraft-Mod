@@ -142,6 +142,8 @@ public final class Taverns {
             if (p != null || Seat.seated(v) || target(v).hasAttached(STATE) && !serving(v)) leave(v);
             return false;
         }
+        // Frightened residents (panic, a raid, hiding) leave the tavern to vanilla until they calm down.
+        if (!calm(v)) { if (p != null || Seat.seated(v)) leave(v); return true; }
         var house = house(level, v, p);
         if (house == null) { if (p != null) leave(v); return false; }
         long now = level.getGameTime();
@@ -335,13 +337,19 @@ public final class Taverns {
             serve(level, house, now);
         }
         // Residents who wandered off, were unloaded or changed worlds give their seats back.
+        var leaving = new ArrayList<Villager>();
         for (var it = patrons.values().iterator(); it.hasNext(); ) {
             var p = it.next(); var house = houses.get(p.tavern);
             var level = house == null ? null : server.getLevel(house.dimension);
-            if (level != null && level.getEntity(p.id) instanceof Villager v && v.isAlive()) continue;
+            if (level != null && level.getEntity(p.id) instanceof Villager v && v.isAlive()) {
+                // Recruited for an adventure or knocked out: their routine stops running, so give the seat back here.
+                if (CompanionController.state(v).active() || Knockouts.injured(v)) leaving.add(v);
+                continue;
+            }
             if (house != null) { release(house, p); house.orders.removeIf(o -> o.patron().equals(p.id)); }
             it.remove();
         }
+        leaving.forEach(Taverns::leave);
     }
     private static void resurvey(ServerLevel level, House house, long now) {
         var fresh = TavernSurvey.survey(level, house.tavern.stations().getFirst());
@@ -564,11 +572,14 @@ public final class Taverns {
 
     // -- seats -------------------------------------------------------------------------------------
 
+    /** Not panicking, caught up in a raid or hiding from one. */
+    private static boolean calm(Villager v) {
+        var activity = v.getBrain().getActiveNonCoreActivity().orElse(null);
+        return activity != Activity.PANIC && activity != Activity.RAID && activity != Activity.PRE_RAID && activity != Activity.HIDE;
+    }
     /** Whether a resident sitting at the tavern should stay seated: not hurt, frightened, knocked out, recruited or off somewhere else. */
     public static boolean mayStaySeated(Villager v) {
-        if (!v.isAlive() || v.isSleeping() || Knockouts.injured(v) || v.hurtTime > 0 || CompanionController.state(v).active()) return false;
-        var activity = v.getBrain().getActiveNonCoreActivity().orElse(null);
-        if (activity == Activity.PANIC || activity == Activity.RAID || activity == Activity.PRE_RAID || activity == Activity.HIDE) return false;
+        if (!v.isAlive() || v.isSleeping() || Knockouts.injured(v) || v.hurtTime > 0 || CompanionController.state(v).active() || !calm(v)) return false;
         String routine = target(v).getAttached(ROUTINE);
         // Right after loading, before their day is worked out again, keep them where they are.
         return routine == null || Routine.atTavern(Block.byId(routine));
