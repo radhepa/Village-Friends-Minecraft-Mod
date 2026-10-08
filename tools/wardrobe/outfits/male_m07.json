@@ -1,0 +1,20 @@
+{
+  "outfits": [
+    {"id": "m_road_tinker", "name": "Tinker", "top": "t271_tinkers_pot_clanking_coat", "bottom": "b271_tinkers_patched_leggings"},
+    {"id": "m_common_carrier", "name": "Carrier", "top": "t272_carriers_parcel_strapped_jerkin", "bottom": "b272_carriers_road_gaiters"},
+    {"id": "m_royal_courier", "name": "Royal Courier", "top": "t273_royal_couriers_message_tube_jacket", "bottom": "b273_couriers_riding_leathers"},
+    {"id": "m_horn_forester", "name": "Forester", "top": "t274_foresters_horn_and_hatchet_coat", "bottom": "b274_foresters_leaf_green_hose"},
+    {"id": "m_verderer", "name": "Verderer", "top": "t275_verderers_antler_button_jerkin", "bottom": "b275_verderers_bracken_boots"}
+  ],
+  "professions": {
+    "NONE": ["m_road_tinker", "m_common_carrier"],
+    "NITWIT": ["m_road_tinker"],
+    "TOOLSMITH": ["m_road_tinker"],
+    "MERCHANT": ["m_common_carrier"],
+    "CARTOGRAPHER": ["m_royal_courier"],
+    "ADVENTURER": ["m_royal_courier"],
+    "CARPENTER": ["m_horn_forester"],
+    "ARCHER": ["m_horn_forester", "m_verderer"],
+    "FLETCHER": ["m_verderer"]
+  }
+}
