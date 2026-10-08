@@ -83,7 +83,7 @@ Placeholders: `{victim}` (the first name of whoever it happened to; for pets, th
 - **Rewards come once**: reaching a tier higher than ever before here (`peakTier`) gives what a notice always gave (a message, better prices from everyone loaded, 8 emeralds for Pillar, Hero of the Village for the hero). Falling is only a message ("folk are wary of you"); climbing back to a tier you held before says "here again".
 - The board's line adds "(they remember what you did)" while a bad deed still weighs on the score.
 
-**Apologies.** A resident who was hurt by an unapologized bad deed (or whose family member died of one) offers "I'm sorry about what happened". It is accepted when their trust is 40 or more, the player is holding something they like or love, or three days have passed since; the deed then counts half and they say a line from `deed.apology.accept` (children `.accept.child`). Otherwise they answer from `deed.apology.cool` and you can try again tomorrow. The existing "I'm sorry" after a fresh hurt also apologizes for that deed.
+**Apologies.** A resident who was hurt by an unapologized bad deed (or whose family member died of one) offers "I'm sorry about what happened". It is accepted when their trust is 40 or more, the player is holding something they like or love, or three days have passed since; the deed then counts half and they say a line from `deed.apology.accept` (children `.accept.child`). Otherwise they answer from `deed.apology.cool` (children `.cool.child`) and you can try again tomorrow. The existing "I'm sorry" after a fresh hurt also apologizes for that deed.
 
 ## Prices: one engine (the decision)
 
@@ -98,7 +98,12 @@ Placeholders: `{victim}` (the first name of whoever it happened to; for pets, th
 
 ## Houses (Homes)
 
-Breaking a resident's bed, door or workstation and stealing from their house ask `HouseBounds.current()` which house a block is in and who owns it. Until Homes installs its index (`HouseBounds.install(...)` in `Homes.register()`), every block belongs to no house and these two deeds never fire. `HouseRef.residents` and `owners(...)` are resident ids (the `ResidentProfile` id, as in the village census). `DeedsGameTest.theftAndBrokenHomes` is the place for those cases once a real house can be built in the test.
+Breaking a resident's bed, door or workstation and stealing from their house ask `HouseBounds.current()` which house a block is in and who owns it; Homes installs its housing index there in `Homes.register()`. Only lived-in houses count (a house nobody lives in, or a Private one, is fair game).
+
+- **Breaking:** a bed wrongs its owner; a workstation or either half of a door the index lists wrongs the household. Any other door in a lived-in house counts for the household too (by the time `PlayerBlockBreakEvents.AFTER` runs the door is gone, so the block that was broken decides). Everything broken in one house within a day is one deed.
+- **Theft:** opening any container in a lived-in house snapshots its item counts; closing the menu counts what is missing (`STOLE`, `count` = items taken). Breaking a container with items in it counts them too. A house a player built belongs to whoever moved into it: keep your own house Private (sneak-use its plaque) if you keep chests there.
+- `HouseRef.residents` and `owners(...)` are resident ids (the `ResidentProfile` id, as in the village census).
+- `DeedsGameTest.theftAndBrokenHomes` builds a cottage with a plaque, two beds and a chest, waits for homeless residents to move in, empties the chest (screenshot `deeds-theft`) and breaks an owned bed and the top half of the door.
 
 ## Changing it
 

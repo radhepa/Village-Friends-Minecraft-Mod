@@ -18,7 +18,7 @@ Before 2.24 the House Plaque's `scanForBeds()` and `scanForWorkstations()` were 
 | The plaque | `home/HousePlaqueBlock` (wall or standing mount), `HousePlaqueBlockEntity` (house id and anvil name); models from `tools/create_foundation_assets.py` |
 | Block changes | `mixin/HousingBlockChangeMixin` on `ServerLevel.updatePOIOnBlockStateChange` |
 | Hooks elsewhere | `ResidentRoutines.update` (`Homes.keep`) and `steer` (`Homes.homeward`); `VillagerPets.rest` (`Homes.bedside`); `Knockouts.tend` (`helpHome`), `lieDown`, `drive`, `revive`, `KnockoutState.bed`; `VillageLedger`; `NarrativeEngine.about`; `quest/Notice.HOUSE`, `quest/Postings.refresh(..., needs)`, `VillageQuests.board/ready/gather`; `talk/Talk.pools` and one line in `TalkWorld.context` (`Homes.talk`); `client/ResidentRenderer` (a patient in bed renders as a sleeper) |
-| Dialogue | `home.mine`, `home.shared`, `home.homeless`, `home.crowded`, `home.new`, `home.newborn_bed`, `home.partner_moved`, `home.vacant`, `notice.house`, `notice.thanks.house`, `baby.notice.house` in `tools/dialogue/lines/homes.txt`. Every key is optional: a missing pool is skipped and notices fall back to built-in text. |
+| Dialogue | `tools/dialogue/lines/homes.txt`: `home.mine`, `home.shared`, `home.homeless`, `home.crowded`, `home.new`, `home.new.player`, `home.newborn_bed`, `home.partner_moved`, `home.vacant`, `home.bedtime`, `home.carried`, `home.carried.cot`, `baby.home.mine`, `baby.home.new`, `home.plaque.lived`/`.empty`/`.private`, `notice.house` and `notice.house.<homeless\|crowded\|newborn>`, `notice.thanks.house`, `baby.notice.house`. Every key is optional: a missing pool is skipped and notices fall back to built-in text. |
 
 ## Houses
 
@@ -99,22 +99,23 @@ With `HOME` on their own bed, the rest package already walks residents home for 
 
 - **Ledger:** each resident's page says "Home: The Ashford House (with Tobin, Pip)", "No bed of their own yet", "Sleeping at the garrison" or "Lodging in the tavern's guest rooms"; the list says "Looking for a home"; the news starts with households short of room ("The Reed family needs a bigger house (4 people, 2 beds).").
 - **Journal:** the About page has "Home: <house>".
-- **Conversation:** greetings and chat draw on `home.*` pools by situation: just moved in (`new`), a partner just moved in (`partner_moved`), a new baby's bed (`newborn_bed`), a neighbor's bed empty after a death (`vacant`), too little room (`crowded`), no home (`homeless`), otherwise `mine` or `shared`. `{house}` is the house's name. Children of a crowded household use `baby.notice.house`.
-- **Notice board:** a household short of room posts at most one "We need a bigger house" notice (`Notice.HOUSE`, up 7 days; text from `notice.house` with `{name}`, `{job}`, `{count}` beds, `{people}`). It is ready to turn in, at the board or to the poster, once their household lives in a house a player built; the reward is emeralds and a carpenter's gift. A notice nobody took comes down when the household finds room.
+- **Conversation:** greetings and chat draw on `home.*` pools by situation (`Homes.talk` puts it in the `home_talk` fill value): just moved in (`new`, or `new.player` into a house a player built), a partner just moved in (`partner_moved`), a new baby's bed (`newborn_bed`), a neighbor's bed empty after a death (`vacant`), too little room (`crowded`), no home (`homeless`), otherwise `mine` or `shared`. At supper or in the evening, more than 24 blocks from home, they say they're off home (`home.bedtime`). `{house}` is the house's name. Children of a crowded household use `baby.notice.house`; other children talk about their own bed (`baby.home.mine`, or `baby.home.new` after a move).
+- **Plaque readout:** after the facts, one line of how the house looks from the door (`home.plaque.lived`, `.empty` or `.private`).
+- **Notice board:** a household short of room posts at most one "We need a bigger house" notice (`Notice.HOUSE`, up 7 days; text from `notice.house.<need>`, else `notice.house`, with `{name}`, `{job}`, `{count}` beds, `{people}`). It is ready to turn in, at the board or to the poster, once their household lives in a house a player built; the reward is emeralds and a carpenter's gift. A notice nobody took comes down when the household finds room.
 - **Pets:** while their resident sleeps, a cat or dog lies on the floor beside the foot of their bed (`Homes.bedside`), slipping past a closed door if it must.
-- **Knockouts:** once the apothecary has dressed a patient's wounds, they are helped to their own bed if it is within 48 blocks, loaded and free, otherwise onto the nearest free apothecary cot near the apothecary's workstation, otherwise they stay where they fell. `KnockoutState.bed` keeps them there across reloads; reviving them gets them out of bed.
+- **Knockouts:** once the apothecary has dressed a patient's wounds, they are helped to their own bed if it is within 48 blocks, loaded and free, otherwise onto the nearest free apothecary cot near the apothecary's workstation, otherwise they stay where they fell. `KnockoutState.bed` keeps them there across reloads; reviving them gets them out of bed, and they remark on where they woke up (`home.carried` or `home.carried.cot`, in chat).
 - **Deaths:** the bed is freed and a `Vacancy` recorded (see above).
 
 ## Extension points
 
-These exist and are documented for later features; nothing calls them yet.
+These exist for later features; apart from `HouseBounds` (used by deeds), nothing calls them yet.
 
 | For | API |
 |---|---|
 | Inviting the player to dinner at home | `Homes.houseOf(origin, village, resident)`, `Homes.hearth(level, house)`, `Homes.name(...)` |
 | A resident moving to another village | `Homes.vacate(origin, village, resident, name, "moved")`, `Homes.claim(fromLevel, fromVillage, toLevel, toVillage, resident, name)` |
 | Mourning or a memorial | `HousingIndex.vacated()` |
-| Deeds (theft, breaking someone's bed, door or workstation) | `HouseBounds.current().houseAt(level, pos)` and `owners(level, pos)` |
+| Deeds (theft, breaking someone's bed, door or workstation; in use since 2.24) | `HouseBounds.current().houseAt(level, pos)` and `owners(level, pos)`: a bed's owner; for either half of a listed door, or a workstation, the whole household |
 
 ## Saves
 
