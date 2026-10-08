@@ -1,0 +1,32 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/end_gate",
+        "processors": "villagefriends:taiga_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/end_lamp",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/end_fade",
+        "processors": "villagefriends:taiga_street",
+        "projection": "terrain_matching"
+      }
+    }
+  ]
+}

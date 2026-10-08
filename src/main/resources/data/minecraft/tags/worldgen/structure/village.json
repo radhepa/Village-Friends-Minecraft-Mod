@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "villagefriends:village"
+    "villagefriends:village",
+    "villagefriends:village_taiga"
   ]
 }
