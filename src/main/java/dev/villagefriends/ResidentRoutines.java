@@ -80,7 +80,7 @@ public final class ResidentRoutines {
         // Guard duty outranks the schedule: a raid calls every guard out, and a short-handed watch calls up the next guard.
         if (GuardPatrols.defending(v)) return new Routine.Plan(Block.DEFEND, plan.scheduled(), plan.weather(), plan.day());
         if (GuardPatrols.drafted(v, timeOfDay(level)) && plan.block() != Block.NIGHT_WATCH) return new Routine.Plan(Block.NIGHT_WATCH, plan.scheduled(), plan.weather(), plan.day());
-        return plan;
+        return Birthdays.party(v, plan, timeOfDay(level));
     }
     /** What a resident is doing, as shown to players: "At work", "Sheltering from the rain"... */
     public static String doing(Villager v) {
@@ -122,7 +122,7 @@ public final class ResidentRoutines {
         return switch (block) {
             case SLEEP, NAP, WAKE, BREAKFAST, LUNCH_HOME, SUPPER, EVENING, SHELTER, STORM, SNOWED_IN -> Activity.REST;
             case WORK, PRAYER -> !v.isBaby() && brain.hasMemoryValue(MemoryModuleType.JOB_SITE) ? Activity.WORK : Activity.IDLE;
-            case LUNCH, SOCIAL, MARKET, LESSONS -> bell ? Activity.MEET : Activity.IDLE;
+            case LUNCH, SOCIAL, MARKET, LESSONS, PARTY -> bell ? Activity.MEET : Activity.IDLE;
             case TAVERN, PERFORM, LUNCH_TAVERN -> tavern(v, level) != null || !bell ? Activity.IDLE : Activity.MEET;
             case PLAY, SNOW_PLAY -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
             case RAIN_WALK -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
@@ -167,6 +167,7 @@ public final class ResidentRoutines {
             case DEFEND -> VillageSocieties.emote(v, Emote.EXCLAIM, v.getRandom().nextInt(10));
             case RAIN_WALK -> VillageSocieties.emote(v, Emote.NOTE, v.getRandom().nextInt(30));
             case SNOW_PLAY -> VillageSocieties.emote(v, Emote.SPARKLE, v.getRandom().nextInt(30));
+            case PARTY -> VillageSocieties.emote(v, Birthdays.celebrating(v) ? Emote.SPARKLE : v.getRandom().nextBoolean() ? Emote.NOTE : Emote.EXCLAIM, v.getRandom().nextInt(30));
             default -> {
                 if ((old == Block.SHELTER || old == Block.STORM) && plan.weather() == Weather.CLEARING && v.getRandom().nextInt(3) == 0)
                     VillageSocieties.emote(v, Emote.SPARKLE, v.getRandom().nextInt(40));

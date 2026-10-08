@@ -55,5 +55,8 @@
   "entity.villagefriends.villager.tailor": "Tailor",
   "entity.villagefriends.villager.carpenter": "Carpenter",
   "entity.villagefriends.villager.scholar": "Scholar",
-  "item.villagefriends.mug_of_cider": "Mug of Cider"
+  "item.villagefriends.mug_of_cider": "Mug of Cider",
+  "item.villagefriends.birthday_card": "Birthday Card",
+  "item.villagefriends.sealed_letter": "Sealed Letter",
+  "item.villagefriends.birthday_cake_slice": "Slice of Birthday Cake"
 }

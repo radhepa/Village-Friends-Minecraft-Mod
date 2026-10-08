@@ -18,6 +18,10 @@ public final class NarrativeEngine {
         if (b.has("hurt")) return "I'm still shaken by what happened. I need to know you won't hurt me again.";
         if (b.has("adventure_return")) return "It's good to see you safely home. I still think about our adventure together.";
         if (b.has("activity:picnic")) return "I was remembering our picnic. It was nice having time just to be together.";
+        String thanks = VillageQuests.thanks(v, p);
+        if (thanks != null) return thanks;
+        String birthday = Birthdays.greeting(v, p);
+        if (birthday != null) return birthday;
         String written = TalkWorld.line(v, p, "greet");
         String greeting = written != null ? written : Dialogue.greeting(name(v), b.level(state(v, p)), v.isBaby(), day(v.level()));
         var society = VillageSocieties.of(v); long today = day(v.level());
@@ -52,6 +56,8 @@ public final class NarrativeEngine {
     }
     public static String conversation(Villager v, ServerPlayer p, String topic) {
         var profile = profile(v); var b = bond(v, p); long today = day(v.level());
+        String birthday = Birthdays.chat(v, p, topic);
+        if (birthday != null && !b.has("hurt")) return birthday;
         if (v.isBaby()) {
             String said = TalkWorld.line(v, p, topic);
             // Children always mention home, like before.
@@ -117,6 +123,14 @@ public final class NarrativeEngine {
             };
         }
         int level = FriendshipLevels.level(state(v, p), b);
+        // Birthday wishes, letters to hand over and notices to turn in come first.
+        var extras = new ArrayList<FriendshipPayload.Choice>();
+        if (!tab.equals("plain")) { extras.addAll(Birthdays.choices(v, p)); extras.addAll(VillageQuests.choices(v, p)); }
+        if (!extras.isEmpty()) {
+            var all = new ArrayList<>(extras.subList(0, Math.min(2, extras.size())));
+            all.addAll(choices(v, p, "plain"));
+            return List.copyOf(all);
+        }
         return List.of(choice("chat", "How's your day?", true), choice("work", "Tell me about work", true),
                 choice("adventure", "Talk about adventures", true), choice(b.has("hurt") || b.has("broken_promise") ? "apologize" : "joke", b.has("hurt") || b.has("broken_promise") ? "I'm sorry" : "Share a joke", true),
                 new FriendshipPayload.Choice("news", "Any village news?", level >= FriendshipLevels.NEWS, "Unlocks at friendship Lv. " + FriendshipLevels.NEWS),
@@ -194,7 +208,10 @@ public final class NarrativeEngine {
                 saveBond(v, p, next);
                 show(p, v, "talk", "I'm disappointed, but thank you for telling me. I'd rather know than keep wondering. We can try again when you're ready.", "Trust can be repaired. No deadline penalty.", false);
             }
-            default -> { return (action.startsWith("answer:") || action.equals("skip_question")) && TalkWorld.answer(p, v, action); }
+            default -> {
+                if (Birthdays.handle(p, v, action) || VillageQuests.handle(p, v, action)) return true;
+                return (action.startsWith("answer:") || action.equals("skip_question")) && TalkWorld.answer(p, v, action);
+            }
         }
         return true;
     }

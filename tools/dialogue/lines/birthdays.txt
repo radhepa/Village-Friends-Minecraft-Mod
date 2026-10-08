@@ -1,0 +1,413 @@
+# Birthdays: the village calendar gives every resident a birthday (Spring, Summer, Autumn, Winter; 28 days each).
+# On the day they wear a party hat, and everyone gathers at the bell in the evening for the party.
+# Keys: greet.birthday(.close), baby.greet.birthday, birthday.thanks, birthday.gift(.loved), birthday.card, birthday.cake,
+# birthday.soon, greet.party, chat.party, baby.party, greet.routine.party, routine.party, birthday.party.host, baby.birthday.*.
+# Placeholders: {celebrant} whose birthday it is, {birthday} a date like "Summer 12", {when} "today"/"tomorrow"/"in 3 days", {season}.
+# Party-routine lines (greet.routine.party, routine.party) never name the celebrant: the speaker may be the guest of honor.
+
+## greet.birthday
+It's my birthday! I've been awake since before the roosters, just in case it started without me.
+Hello! Notice anything different? The hat. It's my birthday hat. It's my birthday.
+Today's my birthday, so everything I say today is extra true. Hello!
+Good day to you! It's my birthday, and I've decided the weather is a present.
+Hello! There's a party at the bell this evening. For me! I still can't quite believe it.
+It's my birthday! I'm trying to act calm about it. Is it working?
+Hello! One year older and not a single grey hair more. I counted.
+Oh, hello! Mind the hat, it's a bit tall. It's my birthday, you see.
+It's my birthday today. Everyone keeps smiling at me and I keep smiling back. My cheeks are tired.
+Hello! I woke up to a knock at the door and a little bunch of flowers on the step. Birthdays are wonderful.
+My birthday! I'm allowed cake for breakfast today. I checked. There's no rule against it.
+Hello! I'm wearing a paper hat and I refuse to be embarrassed about it. Birthday rules.
+It's my birthday, {player}! I wanted an adventurer to know. Now one does.
+Hello! Another year in {village}, and what a year. I'd do it all again.
+It's my birthday today. I always feel about six years old on my birthday, no matter how many it's been.
+Good day! If you hear singing by the bell tonight, that's for me. Come and join in.
+Hello! Do I look older? Don't answer that. It's my birthday.
+It's my birthday! I've been walking very slowly past every house so nobody forgets.
+Hello! The whole village smells of baking today, and I'm almost certain it's for me.
+My birthday's finally here, and it's the finest day of {season} so far. I'm not biased at all.
+Hello! I'm one year wiser today. I don't feel any wiser. Perhaps it arrives later.
+It's my birthday, so I'm not doing a single chore today. Well, maybe one. Habit.
+Hello! Birthdays in {village} are the best birthdays. Everybody turns up at the bell.
+It's my birthday! I've been told to stay away from the bell until evening. Very suspicious.
+Hello! Someone's hiding something behind the well. I'm pretending not to notice. Birthday manners.
+Today's my birthday. I made a wish at the well this morning, but I'm not allowed to tell you what it was.
+Hello! It's my birthday, and the sun came out specially. I'm nearly sure of it.
+It's my birthday, {player}. I hope you'll come to the bell this evening. It wouldn't be the same without you.
+Hello! My birthday hat keeps slipping over one eye. I'm choosing to call it jaunty.
+Birthday greetings! Wait, that's what you're supposed to say to me. Hello!
+It's my birthday. I'm trying to be modest about it and failing completely.
+Hello! Three people have already sung to me today. All in different keys.
+It's my birthday! If anyone asks, I'm turning a very respectable age.
+Hello! I was born on this very day, a good number of years ago. I won't say how many.
+It's my birthday today! The chickens haven't noticed, but everybody else has.
+Hello! I'm the one in the hat. Birthday. Yes. Thank you, thank you.
+Good day! I'm going to be fussed over all evening, and for once I'm going to let it happen.
+It's my birthday, and I've already been given a hug, a pebble and a song. Excellent start.
+Hello! Today I'm the guest of honor. I've never been the guest of honor at anything else.
+It's my birthday! I've been practicing my surprised face for the party. How's this one?
+Hello! It's my birthday, so you have to be nice to me. You're always nice, though. Carry on.
+It's my birthday. My knees say I'm older. My heart says I'm younger. I'm listening to my heart.
+Hello! I put on my good shirt for my birthday. And the hat. The hat was not optional.
+It's my birthday, and the bell's going to ring just for me this evening. Well, for supper. But also for me.
+Hello! Another year older, another year of good neighbors. That's a fine trade.
+My birthday falls on {birthday} every year, and every year it still takes me by surprise. Hello!
+
+## greet.birthday.close
+{player}! It's my birthday, and the best part of the day just walked up to me.
+Oh, {player}, I was hoping you'd come by. It's my birthday, and it didn't feel finished until now.
+There you are! I've been watching the path for you. It's my birthday, and I wanted you here for it.
+It's my birthday, {player}. Of all the good things this year brought me, you're near the top.
+Hello, dear friend! It's my birthday. Will you stand next to me at the bell tonight?
+{player}! My birthday's today and you're here. I don't need anything else. Well, cake. But mostly you.
+It's my birthday, and I've saved you a spot by the bell. Right at the front, next to me.
+Oh, it's you! Now it really is a good birthday. Come here, you're getting a birthday hug. That's how it works today.
+Another year, {player}, and you were in most of the best bits of it. Thank you for that.
+It's my birthday! I told everyone you'd come. I'm so glad I was right.
+{player}, there you are. It's my birthday, and a birthday's only as good as the friends in it. Mine's very good.
+Happy my-birthday to you! That isn't how it goes. I'm too excited to care. Hello, {player}!
+It's my birthday, and I made a wish this morning. I won't tell you what it was, except that a certain adventurer was in it.
+My dear {player}! It's my birthday. You don't need to bring a thing. Just come to the bell tonight.
+Some years are better than others. This one had you in it, {player}. It's my birthday, by the way!
+There's my favorite adventurer! It's my birthday, and I've been grinning since dawn.
+{player}! Look, a hat! It's my birthday! I wanted you to see it on me. You're nearly the first.
+It's my birthday, {player}. Sit with me a while before the party. I like the quiet bit with good friends best.
+My birthday wouldn't feel right without a visit from you. And here you are. Perfect.
+
+## baby.greet.birthday
+It's my birthday! I'm a whole year bigger! Look how big!
+Guess what day it is! No, guess! It's my birthday!
+I'm wearing a party hat! Because it's my birthday! Mine!
+Hi! It's my birthday and I get to have cake and nobody can say no!
+It's my birthday! I'm going to blow out all the candles in one go. I've been practicing on dandelions.
+Hi! I'm older now! Do I look older? I feel taller.
+It's my birthday! There's going to be a party at the bell! With cake! And me!
+I woke up and it was my birthday! Best surprise ever! It happens every year!
+Hi! It's my birthday! Did you bring a present? You don't have to. But did you?
+My birthday! I'm going to stay up really late tonight. Maybe even till it's properly dark!
+Hi, {player}! It's my birthday! You have to sing to me. That's the rule.
+It's my birthday! I can count my years on my fingers. Almost all of them!
+Hi! Today I'm the birthday one! Everybody has to be nice to me. Even my brother!
+It's my birthday! I had a cookie for breakfast and nobody even told me off!
+Hi! My party hat is pointy! Feel the point! Careful!
+It's my birthday! I'm going to wish for a pony. Or a dragon. Probably a pony.
+Hi! I'm one more now! One more what? One more year! It's my birthday!
+It's my birthday! The cake has frosting on it! I saw! I wasn't supposed to see!
+Hi! It's my birthday, so I'm the boss of the whole village today. I think.
+It's my birthday! When I grow up I'm going to have a birthday every single day.
+Hi! Everybody keeps saying how big I'm getting! Because it's my birthday!
+It's my birthday! My tummy feels all fizzy. That's the excited feeling.
+
+## birthday.thanks
+Thank you! You remembered! Or someone told you. Either way, thank you!
+Thank you kindly! Hearing it from you makes it feel more official.
+Oh, thank you! I've heard that all day and I'm not tired of it yet.
+Thank you! I'll take every happy birthday I can get. I'm collecting them.
+Thank you, {player}. That's very sweet of you.
+Thank you! Will you come to the bell this evening? There'll be cake.
+Why, thank you! I'm a year older and, I'm told, no wiser. But very happy.
+Thank you! You've made my birthday a little brighter. A lot brighter, actually.
+Thank you! I'd bow, but the hat might fall off.
+Ah, thank you! That's the nicest thing anyone's said to me since breakfast.
+Thank you! Birthdays are better shared, and now I'm sharing mine with you.
+Thank you! I'd almost forgotten. No I hadn't. I've thought of nothing else for a week.
+Thank you, friend. You've no idea how happy that makes me.
+Thank you! I'll remember you said so, and I'll say it back on yours.
+Oh! Thank you! I'm blushing. It's the hat. The hat makes me blush.
+Thank you! I'm counting everyone who wishes me well. You're a very important number.
+Thank you! I keep pinching myself. A whole day just for me!
+That's kind of you. Thank you! The whole village has been so good to me today.
+Thank you! Another year, and still the best neighbors anyone could ask for.
+Thank you! I feel like I should give you something. Here, have a smile. It's all I've got on me.
+Thank you! You said it just right. Some people mumble it. You said it like you meant it.
+Thank you! If I cry a little, that's the good kind of crying.
+Thank you! You're very welcome at my party. More than welcome. Required, nearly.
+Ha! Thank you! I was wondering if you knew.
+Thank you! Do you want to know my wish? I can't tell you. But thank you!
+Thank you, {player}! Coming from an adventurer, that feels like it counts double.
+Thank you! Some birthdays are quiet. This one's turned out loud and lovely.
+Oh, you're sweet. Thank you. I'll save you the corner slice of cake.
+Thank you! Everyone's being so kind I hardly know where to put myself.
+Thank you! It's a good day to be me. I'm not often able to say that so plainly.
+Thank you! I'll write your name in my birthday book, with everyone else who's been kind today.
+Thank you! My grandmother used to say a birthday wish from a friend is worth three from a well.
+Thank you! I'll be grinning about that all evening.
+
+## baby.birthday.thanks
+Thank you! Thank you! You knew!
+Thank you! I'm bigger now! Did you notice?
+Thank you! Are you coming to my party? There's cake! You have to come!
+Hooray! You said it! Say it again!
+Thank you! That's the hundredth time today! Maybe the twelfth. Lots!
+Thank you! You get a hug! Birthday hugs are the best hugs.
+Thank you! I'm going to blow out the candles all by myself tonight!
+Thank you! Nobody's told me off once today. Birthdays are magic.
+Thank you! You can sit next to me at the party. That's a special honor.
+Yay! Thank you! Do you want to see my hat up close?
+Thank you! I'm so happy my feet won't stop jumping!
+Thank you! I'm going to be this happy forever. Or until bedtime.
+Thank you! When it's your birthday, I'll say it to you a hundred times.
+Thank you! I made my own hat, you know. A birthday hat! Do you like it?
+
+## birthday.gift
+A birthday present? For me? Oh, you shouldn't have. I'm so glad you did.
+Thank you! I'll keep this somewhere special, so every time I see it I'll remember today.
+For my birthday? That's so thoughtful. I'll treasure it.
+Oh! I wasn't expecting anything. Thank you. Truly.
+A present! I'm going to show it to everyone at the party.
+You brought me something! Now I feel terribly spoiled. In a good way.
+Thank you! It's lovely. You've chosen well.
+A birthday gift from an adventurer. Nobody else in {village} can say that. Well, today I can.
+Oh, how kind. I'll put it right on the mantel where everybody can see.
+Thank you! I'd hug you, but my arms are full of presents. Come here anyway.
+For me? On my birthday? You've made my whole day.
+Thank you! I'll think of you whenever I use it. Which will be often.
+You remembered! And you brought something! I don't know what to say. Thank you!
+Oh, it's perfect. Well, it's very good. Nearly perfect. I love it.
+A gift! I'm going to unwrap it slowly, to make it last. There's no wrapping. I'll pretend.
+Thank you so much. Presents are nice, but being thought of is nicer.
+Thank you! This is going straight to the top of my birthday pile.
+A present! I promised myself I wouldn't get teary today. That promise is going badly.
+How generous of you. I'll make sure you get the first slice of cake tonight.
+Thank you! I don't get many presents. This one's going to be well loved.
+Oh, you're a dear. Thank you. My birthday just got even better.
+For me! I'll keep it forever. Or until it's used up. Then I'll keep the memory.
+Thank you, {player}! That's going on my list of best birthday presents ever. Near the top.
+A gift on my birthday! I'll write about it in my diary tonight, with your name beside it.
+Oh! You really didn't have to. But I'm very, very glad you did.
+Thank you! Everybody's been so generous today. You most of all.
+I love it. I love that you thought of me. Thank you.
+A birthday present! I feel like a child again. A very grateful child.
+
+## birthday.gift.loved
+{love}! My favorite in all the world! On my birthday! How did you know?
+Oh! Oh, this is exactly what I wanted. Exactly! Have you been asking around?
+My very favorite thing, on my very own birthday. I might cry. I am crying. Happy crying.
+You've found me the one thing I love most. This is the best birthday I've ever had.
+{love}! You remembered! I can't believe you remembered!
+How did you know? I never tell anyone what I like best. I must tell everyone, apparently.
+This is perfect. Not nearly perfect, properly perfect. Thank you!
+My favorite! I'm going to save some for the party and keep the rest all to myself.
+Oh, you clever thing. You've given me exactly what I'd have chosen myself.
+My favorite thing, and on my birthday too. You've spoiled me rotten and I love it.
+I'm speechless. Nearly. This is my favorite. You know me better than I thought.
+Of all the presents in the world, you brought the one I love most. I'll never forget this.
+{love}, of all things! That's my favorite, you know. Oh, you do know. That's why.
+This is the one! The one I hoped for! Who told you? Never mind, I don't care. Thank you!
+You've made my birthday. Honestly, truly made it. Thank you, {player}.
+My heart's doing a little dance. This is exactly my favorite.
+A birthday present I love, from a friend I like. Life doesn't get much better.
+I've been hinting about this for weeks! To nobody in particular. And you heard anyway!
+You couldn't have chosen better if you'd read my mind. Did you read my mind?
+Oh! My favorite! I'm going to hold it all through the party so everyone asks about it.
+Nothing could top this. Not even the cake. Don't tell the baker I said that.
+My favorite, wrapped in kindness. Well, not wrapped. But kindness is better than paper.
+
+## birthday.card
+A card! You made this yourself? I'm going to stand it on the windowsill for a whole year.
+A birthday card! Look at the little drawing. Is that me? It's very flattering.
+You wrote me a card! Handmade things are the best things. Thank you.
+Oh, a card. I'll read it again tonight when it's quiet. Thank you, {player}.
+A card, with my name on it and everything! I'm keeping this forever.
+Did you fold this yourself? The corners are lovely and neat. Thank you!
+A birthday card! I've got a little box for cards. This one's going on top.
+Oh, how thoughtful. A present fades, but a card can be read again and again.
+A card! Now I've got something to remember this birthday by, long after the cake's gone.
+You made me a card! I'm going to pin it up by my bed so it's the first thing I see.
+What a lovely card. Did it take you long? It must have. Thank you.
+A card for me! I'll read it aloud at the party. Unless it's soppy. Is it soppy? Good.
+Oh, this is sweet. Words on paper from a friend. That's worth more than gold.
+A birthday card! I love it. The writing's a bit wobbly, which means you made it yourself.
+Thank you for the card! I'll show it to everyone who'll stand still long enough.
+A card! Paper, ink and a good heart. The best recipe there is.
+Oh! I'll press it in my favorite book so it keeps forever.
+
+## birthday.cake
+A whole cake! For me! There's enough here for everyone at the party. Or just me. Let's see.
+A cake! On my birthday! You've thought of everything.
+Oh, a cake! I was secretly hoping someone would bring one. Now I'm openly delighted.
+A whole cake, just for my birthday? I'll cut it at the bell this evening, and you get the first slice.
+Cake! The most important part of any birthday. Thank you!
+You brought cake! Now it's a proper birthday. Candles, anyone?
+A cake! Look at it! I almost don't want to eat it. Almost.
+A whole birthday cake! I'm going to have to share. I'll share. Mostly.
+Oh, my. A real cake. Did you bake it? Don't tell me if you didn't. I'll believe you did.
+Cake! I'll carry it to the bell myself. Very carefully. Mind out, everyone.
+A cake for my birthday. That's the finest present there is. Sweet, and made to be shared.
+Cake! The children are going to follow me around all evening now. Worth it.
+
+## baby.birthday.gift
+A present! For me! Can I open it now? I'm opening it now!
+Wow! Is this mine? To keep? Forever?
+A birthday present! I'm going to show everyone! Everyone!
+Thank you! I love it! I love it so much!
+For me? Really? You're the best grown-up in the whole village!
+A present! I'm going to sleep with it under my pillow!
+Ooh! Ooh! Thank you! It's the best present ever! So far!
+You got me a present! I'm going to put it with my special pebbles.
+Wow! I'm going to tell everybody you gave me this!
+It's my present! Mine! On my birthday! Thank you!
+Thank you! I'm going to call this my lucky birthday present!
+Thank you! I'm so happy I'm doing a dance! A birthday dance!
+A present! I didn't even have to ask! Well, I asked a little.
+Thank you! Now I have the best birthday of anybody ever!
+
+## birthday.soon
+My birthday's {when}. Not that I'm counting. I'm counting.
+Did you know my birthday's {when}? I'm only mentioning it. In passing. Casually.
+My birthday's on {birthday}. I like to tell people early, so nobody feels caught out.
+I'm a year older {when}. It's my birthday. I'm trying not to make a fuss. I'm going to make a fuss.
+Only a little while now till my birthday. It's {when}, if you're keeping track. Which you might be.
+My birthday's {when}, and I've already picked out what I'm wearing to the party.
+I've been dropping hints all over {village}. My birthday's {when}. That's the hint.
+Mark {birthday} down somewhere. That's my birthday. There's usually cake.
+My birthday's coming up on {birthday}. I'm told there'll be a party at the bell, if anyone remembers.
+Psst. My birthday's {when}. I'm only telling the people I like.
+{birthday} is my birthday. A good day to be born, I always think.
+My birthday's {when}. I keep catching people whispering, then stopping when I come near.
+Birthday's {when}! I'm trying to act grown-up about it and getting nowhere.
+My birthday falls on {birthday}. That's {when}, if my counting's right. It usually isn't.
+If you're passing the bell on {birthday}, stop by. It's my birthday, and there'll be a party.
+My birthday's {when}. I'm hoping for good weather and a slice of something sweet.
+Another year older {when}. I'd stop the calendar if I could, but I'd miss the cake.
+My birthday's nearly here. {birthday}. I've told the whole village twice, just to be safe.
+I won't say it's my birthday {when}. I'll just stand here looking hopeful.
+My birthday's {when}. If you're the gift-giving sort, I'm the gift-receiving sort.
+I always get a bit giddy before my birthday. It's {when}. I'm already giddy.
+A little bird told me there might be cake by the bell on {birthday}. That bird was me. It's my birthday.
+
+## baby.birthday.soon
+My birthday's {when}! Are you coming? You have to come!
+Guess what! My birthday's {when}! I'm going to be so big!
+It's my birthday {when}! I've been counting on my fingers!
+My birthday's on {birthday}! That's my special day! Write it down!
+My birthday's {when}! I want a cake as tall as me!
+I can't sleep because my birthday's {when}! Well, I can sleep. But not much!
+My birthday's {when}! I'm going to wear a party hat and everything!
+It's nearly my birthday! {birthday}! I'm hoping for a kite. Or a puppy. Or a kite with a puppy on it!
+When's my birthday? It's {when}! I asked my mum five times today.
+My birthday's {when}! I've been practicing my big candle blow. Whoooo!
+Everybody has to be nice to me {when}, because it's my birthday!
+My birthday's {when} and I'm going to be the oldest I've ever been!
+
+## greet.party
+Hello! It's {celebrant}'s birthday today. There's a party at the bell this evening. You'll come?
+Hello! Have you heard? It's {celebrant}'s birthday! The whole village is in on it.
+Oh, hello! I'm on my way to help with {celebrant}'s birthday. Busy, busy!
+Hello! Don't tell anyone I told you, but there's a very big cake for {celebrant}'s birthday.
+Hello! It's a birthday day! {celebrant}'s, to be exact. Party at the bell tonight.
+Hello! Have you wished {celebrant} a happy birthday yet? You should. It'll make the whole day.
+Hello! There's music at the bell this evening. It's {celebrant}'s birthday.
+Hello there! I'm practicing the birthday song for {celebrant}. Want to hear? Maybe later.
+Hello! Happy {celebrant}'s birthday! That's not quite how it goes, but you know what I mean.
+Good day! It's {celebrant}'s birthday. Everyone's being extra cheerful, me included.
+Hello! If you're looking for {celebrant}, follow the party hat.
+Hello! Big day in {village}. {celebrant}'s birthday! Bring your singing voice tonight.
+Hello! I've been baking since early on for {celebrant}'s birthday. My elbows are all flour.
+Hello! You're just in time for {celebrant}'s birthday. Party at the bell this evening!
+Hello! It's {celebrant}'s birthday, and I still haven't found a present. Any ideas?
+Hello! I wrapped {celebrant}'s present in an old map. It's either clever or lazy. I'm calling it clever.
+Oh, hello! Today's {celebrant}'s birthday. A cake's the safest gift, if you were wondering.
+
+## chat.party
+It's {celebrant}'s birthday today. We'll all meet at the bell this evening and sing. Badly, but warmly.
+I'm making a little something for {celebrant}'s birthday. Don't tell anyone. Especially not {celebrant}.
+{celebrant}'s birthday party is tonight by the bell. If you've got a cake, you'd be very popular.
+I asked {celebrant} what would make a good birthday present. The answer was "nothing at all". So I'm bringing cake.
+A birthday in the village means everyone gathers at the bell. It's {celebrant}'s turn today.
+I've been humming the birthday song all day, practicing for {celebrant}. My cat has left the house.
+Have you got a present for {celebrant}? A favorite thing goes a long way on a birthday.
+{celebrant} looks so pleased in that party hat. I'd wear one too, if anyone asked.
+If you give {celebrant} something today, on the birthday itself, it means twice as much. Everyone knows that.
+It's {celebrant}'s birthday. I've known {celebrant} for years, and that birthday grin never changes.
+The baker's oven has been busy since dawn. Something tells me it's for {celebrant}'s birthday.
+A handmade card is a lovely thing to give on a birthday. {celebrant} would treasure one.
+I'm going to stand right at the front for {celebrant}'s birthday song. I know all the words. There are only four.
+When the bell rings this evening, come and sing for {celebrant}. Everyone's welcome.
+{celebrant}'s birthday! I've drawn up a list of party games. Mostly involving cake.
+I'm on candle duty for {celebrant}'s cake. A great honor. A great fire risk.
+It's {celebrant}'s birthday, and the whole village feels a little lighter for it.
+Don't forget to say happy birthday to {celebrant}. It costs nothing and it's worth a lot.
+Some people pretend they don't care about birthdays. {celebrant} doesn't pretend. I love that.
+I gave {celebrant} a hug this morning and a very squashed flower. Both went down well.
+Party at the bell this evening for {celebrant}! I'm bringing my good spoon. For cake.
+I'm trying to work out how old {celebrant} is today. I'd better not ask out loud.
+We've a tradition in {village}: on your birthday, nobody lets you carry anything. {celebrant}'s arms are empty today.
+If you need a gift for {celebrant}, ask around. Somebody always knows a favorite thing.
+A birthday's a good reason to stop working early. {celebrant}'s birthday is an especially good reason.
+The children have been making paper streamers all day for {celebrant}'s party.
+I'll be at the bell this evening for {celebrant}. I wouldn't miss a birthday in {village} for anything.
+Every birthday in {village} has cake, a song and somebody crying. {celebrant}'s won't be any different.
+
+## baby.party
+It's {celebrant}'s birthday! There's a party! With cake!
+Are you going to {celebrant}'s party? I'm going! I'm going to dance!
+{celebrant}'s having a birthday! I made a card with a horse on it. It looks like a dog.
+There's a party at the bell for {celebrant}! I'm going to eat three pieces of cake!
+It's {celebrant}'s birthday! I'm going to sing the loudest!
+I've got a present for {celebrant}! It's a rock. A really good rock.
+{celebrant}'s birthday! There's going to be candles! Can I blow them out? No? Okay.
+Party! Party! It's {celebrant}'s birthday party tonight!
+Is it {celebrant}'s birthday? It is! I'm so excited! It's not even mine!
+I can't wait for {celebrant}'s party! I'm wearing my best socks!
+We're going to play games at {celebrant}'s party! I'm going to win them all!
+My mum says I can stay up for {celebrant}'s party! Really late! Maybe!
+{celebrant}'s party is at the bell! I know where it is! I'll show you!
+I hope there's honey cake at {celebrant}'s party. Or any cake. I'm not fussy.
+
+## greet.routine.party
+Hello! Come in close, the party's just getting going.
+Hello! There's cake, there's music, and there's room for one more.
+Ah, hello! You're just in time for the singing.
+Hello, {player}! Grab a slice of cake before the children find it.
+Hello! Mind the streamers, and the dancers, and the children under the table.
+Hello! Isn't this lovely? The whole village by the bell, all for a birthday.
+Hello! The candles are lit. Quick, before somebody blows them out!
+Oh, hello! I've had two slices of cake and I'm not stopping there.
+Hello! Listen to that music. Somebody's playing a lute by the bell.
+Hello! Come and join the party. Everyone's welcome at a birthday.
+Hello! We're playing party games. I'm losing gloriously.
+Hello! Pull up a seat by the bell. Or a barrel. Whatever's free.
+Hello! Party hats are optional. Smiles are not.
+Hello! The birthday song's about to start. Do you know the words? Hum along.
+Hello! It's a good night for a party. The lanterns look lovely.
+Hello! I've been dancing. I'm not a good dancer. That's never stopped me.
+
+## routine.party
+I love a birthday party at the bell. Everyone comes, even the ones who say they won't.
+Have you had cake yet? You must. It's practically the law at a birthday.
+The music's lovely tonight. My feet won't keep still.
+Somebody started a game of tag. Half the grown-ups are playing and pretending they aren't.
+Every birthday in {village} ends with sticky fingers and sore feet. The best kind of evening.
+I counted the candles. Then I lost count. Then somebody blew them out. Good party.
+I'm on my third slice of cake. Don't look at me like that. It's a party.
+The bell's never looked so festive. Who hung all those ribbons?
+I'll dance if you dance. No? I'll dance anyway.
+There's nothing like a village all singing together. Even when half of us are out of tune.
+Parties are the only time I see everyone in one place. I'm trying to talk to all of them.
+Look at the children. Too much cake, and now they're running in circles. I'd join them if my knees allowed it.
+Someone brought cider from the tavern. Now the singing's louder, if not better.
+A birthday party's the one evening nobody in {village} talks about work. Well, almost nobody.
+I've lost my party hat. Somebody's wearing two. I suspect a conspiracy.
+These are the evenings I'll remember when I'm old. Lanterns, cake and good people.
+Somebody's taking song requests. I asked for something slow and got something fast.
+We're playing pass-the-parcel with a loaf of bread. Nobody quite knows the rules.
+I was going to leave early, but then another cake came out.
+The best part of a party is near the end, when everyone's sitting down, full and happy.
+Pass me a napkin, would you? This frosting is everywhere.
+
+## birthday.party.host
+All these people, here for me. I don't quite know what to do with my hands.
+Thank you for coming to my party. It wouldn't be the same without you.
+I've been sung to, hugged and fed. That's everything a birthday needs.
+Look at everyone! I'm the luckiest person in {village} tonight.
+I blew out every candle in one breath. Well, two. Three. Nobody was counting.
+A fourth slice of cake is allowed on your own birthday. I made that rule up this morning, and I'm sticking to it.
+I keep looking around and seeing friends. Best birthday present there is.
+Everyone's had cake? Good. Have you had cake? Go on, there's plenty.
+I wasn't going to make a speech, but if I did, it would just say thank you, about forty times.
+My hat's crooked, my hands are sticky and I've never been happier.
+I'm going to remember tonight for a very long time.
+Somebody asked if I felt older. Tonight I feel about ten.
+Thank you for being here, {player}. You've made a good night even better.
+Everyone sang my name so loudly the chickens woke up. Best birthday song yet.

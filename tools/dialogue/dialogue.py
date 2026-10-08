@@ -23,6 +23,11 @@ something (see Talk.java), "{points:N}" adds friendship and "[MOOD]" picks the s
 level 4 or more). Placeholders like {name}, {player}, {village}, {friend}, {item} are filled from the
 world; a line whose placeholder can't be filled is skipped.
 
+Birthdays and the notice board add: {celebrant} (whose birthday it is), {birthday} (a calendar date such
+as "Summer 12"), {when} ("today", "tomorrow", "in 3 days"), {season} ("Summer"), {mobs} (a monster count
+such as "5 zombies"), {wanted} (an item request such as "12 wheat"), {recipient} (who a letter is for)
+and {sender} (who wrote it).
+
     python tools/dialogue/dialogue.py           # compile
     python tools/dialogue/dialogue.py --check   # validate and confirm the compiled file is current
     python tools/dialogue/dialogue.py --stats   # counts by pool family
@@ -36,7 +41,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT.parents[1]
 OUT = PROJECT / 'src/main/resources/data/villagefriends/villagefriends/dialogue.json'
-PLACEHOLDERS = {'name', 'player', 'village', 'job', 'hobby', 'love', 'friend', 'partner', 'rival', 'time', 'day', 'item', 'biome', 'moon', 'market', 'neighbor', 'weekday'}
+PLACEHOLDERS = {'name', 'player', 'village', 'job', 'hobby', 'love', 'friend', 'partner', 'rival', 'time', 'day', 'item', 'biome', 'moon', 'market', 'neighbor', 'weekday',
+                'celebrant', 'birthday', 'when', 'mobs', 'wanted', 'recipient', 'sender', 'season'}
 MOODS = {'EXCLAIM', 'QUESTION', 'HEART', 'NOTE', 'ANGER', 'SWEAT', 'DOTS', 'SLEEP', 'SPARKLE', 'IDEA', 'GLOOM', 'BLUSH'}
 EFFECTS = {'heal', 'meal', 'shelter', 'torch', 'cook_held', 'mend_held', 'directions', 'fish', 'study', 'flower', 'apple', 'bread', 'cookie', 'seeds', 'emerald_tip'}
 MAX_LINE, MAX_LABEL = 300, 30

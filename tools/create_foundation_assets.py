@@ -70,6 +70,9 @@ tools = ['broom', 'paintbrush', 'lute', 'carpenter_hammer', 'field_journal']
 wearables = ['rain_cloak', 'hooded_poncho'] + [job + '_uniform' for job in jobs]
 items = supplies + meals + tools + wearables
 language = {'itemGroup.villagefriends': 'Village Friends'}
+# Blocks whose model, blockstate, item definition and textures another tool writes (this one still
+# writes their loot table, name, tags and recipe). Workstations come from tools/workstations/workstations.py.
+MODELED_ELSEWHERE = {'notice_board': 'tools/notice_board/notice_board.py'}
 
 
 def block_art(name, stone):
@@ -117,8 +120,8 @@ def block_art(name, stone):
 for name, entry in blocks.items():
     language[f'block.{NS}.{name}'] = name.replace('_', ' ').title()
     save(f'data/{NS}/loot_table/blocks/{name}.json', {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
-    if entry['workstation']:
-        continue  # Workstation models and art come from tools/workstations/workstations.py.
+    if entry['workstation'] or name in MODELED_ELSEWHERE:
+        continue  # Models and art come from tools/workstations/workstations.py or the tool in MODELED_ELSEWHERE.
     png(f'assets/{NS}/textures/block/{name}.png', block_art(name, entry['stone']))
     model = {'parent': 'minecraft:block/block', 'textures': {'surface': f'{NS}:block/{name}', 'side': 'minecraft:block/polished_andesite' if entry['stone'] else 'minecraft:block/stripped_oak_log', 'particle': f'{NS}:block/{name}'},
              'elements': [{'from': b[:3], 'to': b[3:], 'faces': {face: {'texture': '#surface' if face in ('north','south','up') else '#side', 'uv': [0,0,16,16]} for face in ('down','up','north','south','east','west')}} for b in entry['boxes']]}

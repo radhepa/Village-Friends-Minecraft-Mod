@@ -88,7 +88,14 @@ public final class TalkWorld {
             if (!rival.isEmpty()) fill.put("rival", first(society.nameOf(rival)));
             var others = society.living().stream().filter(t -> !t.id().equals(profile.id())).toList();
             if (!others.isEmpty()) fill.put("neighbor", first(others.get(RANDOM.nextInt(others.size())).name()));
+            // Birthdays: their own, and whoever else is celebrating today.
+            int birthday = self.birthday();
+            fill.put("birthday", dev.villagefriends.social.Calendar.birthdayDate(birthday));
+            fill.put("when", dev.villagefriends.social.Calendar.when(dev.villagefriends.social.Calendar.daysUntil(birthday, today)));
+            var celebrants = society.celebrants(today).stream().filter(t -> !t.id().equals(profile.id())).toList();
+            if (!celebrants.isEmpty()) fill.put("celebrant", first(celebrants.getFirst().name()));
         }
+        fill.put("season", dev.villagefriends.social.Calendar.season(today));
         return new Talk.Context(topic, v.isBaby(), profile.personality(), job, friendLevel, Talk.period(time), weather,
                 plan.block().id(), Routine.marketDay(today), moon, home, held, states, extra, fill);
     }
@@ -169,6 +176,30 @@ public final class TalkWorld {
         saveBond(v, p, bond(v, p).line("t:" + line.id()));
         return line.text();
     }
+
+    /**
+     * A line from one pool ("greet.birthday", "notice.thanks.hunt"...) with this moment's placeholders and
+     * any {@code extra} ones filled, remembered so it isn't repeated soon; null if the pool has nothing fitting.
+     */
+    public static String say(Villager v, ServerPlayer p, String pool, java.util.Map<String, String> extra) {
+        var bank = DialogueBank.current(); var lines = bank.pool(pool);
+        if (lines.isEmpty()) return null;
+        var fill = new HashMap<>(context(v, p, "chat").fill()); fill.putAll(extra);
+        var recent = bond(v, p).recentLines();
+        int start = RANDOM.nextInt(lines.size());
+        String fallback = null; int fallbackIndex = -1;
+        for (int n = 0; n < lines.size(); n++) {
+            int index = (start + n) % lines.size();
+            String text = Talk.fill(lines.get(index), fill);
+            if (text == null) continue;
+            if (!recent.contains("t:" + pool + "#" + index)) { saveBond(v, p, bond(v, p).line("t:" + pool + "#" + index)); return text; }
+            if (fallback == null) { fallback = text; fallbackIndex = index; }
+        }
+        if (fallback != null) saveBond(v, p, bond(v, p).line("t:" + pool + "#" + fallbackIndex));
+        return fallback;
+    }
+    /** The first name in a full name ("Mira" from "Mira Ash"). */
+    public static String firstName(String name) { return first(name); }
 
     /** Sometimes, on "How's your day?", a resident asks you something or offers to help instead. */
     public static DialogueBank.Question ask(Villager v, ServerPlayer p) {

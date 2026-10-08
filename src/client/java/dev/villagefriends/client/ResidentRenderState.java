@@ -18,4 +18,6 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public float bubbleAge;
     /** Lying hurt on the ground: knocked out, or a downed companion. */
     public boolean injured;
+    /** Wearing a party hat: it's their birthday. */
+    public boolean partyHat;
 }

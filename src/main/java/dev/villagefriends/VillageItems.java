@@ -83,6 +83,11 @@ public final class VillageItems {
         for (String tool : List.of("broom", "paintbrush", "lute", "carpenter_hammer", "field_journal"))
             add(tool, p -> new Item(p.stacksTo(1)), SUPPLIES);
         add("village_ledger", p -> new VillageLedgerItem(p.stacksTo(1)), SUPPLIES);
+        // Birthdays and notice boards: a card to give, a letter to carry, and cake for the guests.
+        add("birthday_card", p -> new Item(p.stacksTo(16)), SUPPLIES);
+        add("sealed_letter", p -> new Item(p.stacksTo(1)), SUPPLIES);
+        add("birthday_cake_slice", p -> new Item(p.stacksTo(16).food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.4F).alwaysEdible().build(),
+                Consumable.builder().onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 400, 0))).build())), MEALS);
         guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}

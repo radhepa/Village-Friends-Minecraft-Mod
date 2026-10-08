@@ -197,6 +197,7 @@ public final class ResidentLife {
         // What they're doing in their day: at work they practice their trade, on their hobby time their hobby.
         String routine = ((AttachmentTarget) v).getAttached(VillageFriends.ROUTINE);
         if (routine != null) tags.add("routine:" + routine);
+        if (dev.villagefriends.Birthdays.wearingHat(v)) tags.add("birthday");
         var level = v.level();
         tags.add(ResidentBehavior.timeTag(level.getOverworldClockTime()));
         var pos = v.blockPosition();
