@@ -87,6 +87,21 @@
           "processors": "weathered"
         },
         {
+          "template": "taiga/decor_spruce",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_log_stack",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_campfire_ring",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
           "template": "empty",
           "weight": 12
         }
@@ -95,6 +110,71 @@
     "taiga/lots_outer": {
       "fallback": "minecraft:empty",
       "elements": [
+        {
+          "template": "taiga/pumpkin_field",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/potato_field",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/berry_patch",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/chicken_coop",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/goat_pen",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/apiary",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_spruce",
+          "weight": 3,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_spruce_pair",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_boulder",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_log_stack",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_drying_rack",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_totem",
+          "weight": 1,
+          "processors": "weathered"
+        },
+        {
+          "template": "taiga/decor_campfire_ring",
+          "weight": 1,
+          "processors": "weathered"
+        },
         {
           "template": "taiga/trapper_hut",
           "weight": 1,

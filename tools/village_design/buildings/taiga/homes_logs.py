@@ -317,7 +317,7 @@ def spruce(b, x, y, z, height=9, shape=None, clip=True):
             break
         for dx in range(-r, r + 1):
             for dz in range(-r, r + 1):
-                if dx * dx + dz * dz > r * r + (1 if r >= 2 else r):
+                if dx * dx + dz * dz > r * r + (1 if r >= 2 else 0):
                     continue
                 px, pz = x + dx, z + dz
                 if b.inside(px, yy, pz) and is_air(b.get(px, yy, pz)):

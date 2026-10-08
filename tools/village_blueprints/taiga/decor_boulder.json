@@ -1,0 +1,178 @@
+{
+ "format": 1,
+ "size": [7, 5, 7],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:podzol"
+  },
+  "C": {
+   "id": "minecraft:grass_block"
+  },
+  "D": {
+   "id": "minecraft:cobblestone"
+  },
+  "E": {
+   "id": "minecraft:moss_carpet"
+  },
+  "F": {
+   "id": "minecraft:short_grass"
+  },
+  "G": {
+   "id": "minecraft:stone"
+  },
+  "H": {
+   "id": "minecraft:andesite"
+  },
+  "I": {
+   "id": "minecraft:fern"
+  },
+  "J": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "K": {
+   "id": "minecraft:brown_mushroom"
+  },
+  "L": {
+   "id": "minecraft:large_fern",
+   "properties": {
+    "half": "lower"
+   }
+  },
+  "M": {
+   "id": "minecraft:large_fern",
+   "properties": {
+    "half": "upper"
+   }
+  },
+  "N": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "O": {
+   "id": "minecraft:mossy_cobblestone_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:mossy_cobblestone_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "Q": {
+   "id": "minecraft:mossy_cobblestone_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "R": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "1"
+   }
+  },
+  "S": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "3"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAAA",
+    "BCAAAAC",
+    "BBAAABA",
+    "AAAAAAA",
+    "BBAAAAB",
+    "AACAABA",
+    "CAAACAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "...N...",
+    "LR....F",
+    "IFDG.I.",
+    ".PDDJ..",
+    "IKGJDQL",
+    "..FH.K.",
+    "S...F.."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".......",
+    "M......",
+    ".......",
+    "..HGO..",
+    "...HG.M",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    "..EJ...",
+    "...EE..",
+    ".......",
+    "......."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    "...E...",
+    ".......",
+    ".......",
+    "......."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/decor.py",
+  "checksum": "c61b8f7323dc075f"
+ }
+}

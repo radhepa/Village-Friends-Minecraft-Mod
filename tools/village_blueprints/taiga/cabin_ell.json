@@ -27,14 +27,6 @@
    "id": "minecraft:dirt"
   },
   "F": {
-   "id": "minecraft:spruce_leaves",
-   "properties": {
-    "distance": "1",
-    "persistent": "true",
-    "waterlogged": "false"
-   }
-  },
-  "G": {
    "id": "minecraft:dark_oak_stairs",
    "properties": {
     "facing": "north",
@@ -42,7 +34,7 @@
     "shape": "straight"
    }
   },
-  "H": {
+  "G": {
    "id": "minecraft:dark_oak_stairs",
    "properties": {
     "facing": "south",
@@ -50,11 +42,19 @@
     "shape": "straight"
    }
   },
-  "I": {
+  "H": {
    "id": "minecraft:mossy_cobblestone"
   },
-  "J": {
+  "I": {
    "id": "minecraft:cobblestone"
+  },
+  "J": {
+   "id": "minecraft:spruce_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
   },
   "K": {
    "id": "minecraft:podzol"
@@ -487,18 +487,18 @@
     "AKAAAnAQAAAAQAKA",
     "KKKKA2AAKAKQAAAA",
     "AAAAAAAAAAAAAAAA",
-    "AAIJIIIIJIIPIAAA",
-    "AAJEEEEEEEEEJAAA",
-    "AAIEEEEEEEEEIAAK",
-    "AAIEEEEEEEEEJAKK",
-    "AANEEEEEEEEEIAAA",
-    "AAIJINNPPIJPIAKA",
-    "AAAAAAAJEEEEJAAA",
+    "AAHIHHHHIHHPHAAA",
+    "AAIEEEEEEEEEIAAA",
+    "AAHEEEEEEEEEHAAK",
+    "AAHEEEEEEEEEIAKK",
+    "AANEEEEEEEEEHAAA",
+    "AAHIHNNPPHIPHAKA",
     "AAAAAAAIEEEEIAAA",
-    "AAKQKAAJEEEEJAAA",
-    "AAKKQAAIEEEENAAK",
-    "AAAAAAAIEEEEJAAA",
-    "AAAAAAAJIPNPJAKA",
+    "AAAAAAAHEEEEHAAA",
+    "AAKQKAAIEEEEIAAA",
+    "AAKKQAAHEEEENAAK",
+    "AAAAAAAHEEEEIAAA",
+    "AAAAAAAIHPNPIAKA",
     "AAAAAKAKAAAAKQKA",
     "KQQAAAKQAAQAAAKK"
    ]
@@ -508,20 +508,20 @@
    "rows": [
     ".dRR.9u...R.....",
     ".R.....U....R.X.",
-    "dXWW....R.UX..I.",
+    "dXWW....R.UX..H.",
     ".....(..........",
-    "..NINNJPJNJJJ...",
-    ".IPBBBBBBBBBN...",
-    ".JJBBBBBBBBBI..X",
-    ".IPBBBBBBBBBJ.XU",
-    "..PBBBBBBBBBJ...",
-    "..JJNIPNNNPPI.R.",
-    ".......PBBBBI...",
-    ".DDDD*.NBBBBJ...",
-    "..WWW..IBBBBI...",
-    "..WWW..JBBBBI..u",
-    ".......IBBBBI...",
-    "...c...NIININ.U.",
+    "..NHNNIPINIII...",
+    ".HPBBBBBBBBBN...",
+    ".IIBBBBBBBBBH..X",
+    ".HPBBBBBBBBBI.XU",
+    "..PBBBBBBBBBI...",
+    "..IINHPNNNPPH.R.",
+    ".......PBBBBH...",
+    ".DDDD*.NBBBBI...",
+    "..WWW..HBBBBH...",
+    "..WWW..IBBBBH..u",
+    ".......HBBBBH...",
+    "...c...NHHNHN.U.",
     ".....R.R....UUX.",
     "UU+...dX..d...dR"
    ]
@@ -534,9 +534,9 @@
     "e.............k.",
     "................",
     ".CCCCpCCCCCCCC..",
-    ".If-..bbb..!D...",
-    ".Jz...bbb..5D...",
-    ".If...k$...mD...",
+    ".Hf-..bbb..!D...",
+    ".Iz...bbb..5D...",
+    ".Hf...k$...mD...",
     "..Dv1.&....6D...",
     ".CCCCCCCCpCCCC..",
     ".......D...oD...",
@@ -557,18 +557,18 @@
     "..............k.",
     "..D.l.,l..l.D...",
     "..DVSqSSVVSVD...",
-    ".If.........g...",
-    ".JJ.........g...",
-    ".Jf...#.....g...",
+    ".Hf.........g...",
+    ".II.........g...",
+    ".If...#.....g...",
     "..g.........g...",
     "..DVVSSSSqSSD...",
     "..D..s.Dy...D...",
     ".iiii.tD....Dr..",
     ".......h....h...",
     "......tD....Dr..",
-    "..FFF..D....D...",
-    "..FcF..DVVCCD...",
-    "..FFF..D..s.D...",
+    "...J...D....D...",
+    "..JcJ..DVVCCD...",
+    "...J...D..s.D...",
     "................"
    ]
   },
@@ -578,21 +578,21 @@
     "................",
     "................",
     "..............o.",
-    ".aHHHHHHHHHHHa..",
+    ".aGGGGGGGGGGGa..",
     ".CCCCCCCCCCCCC..",
     ".4f.........D...",
-    ".JI)..j..j..D...",
-    ".3J.........D...",
+    ".IH)..j..j..D...",
+    ".3I.........D...",
     "..D.........D...",
     ".CCCCCYCCCCCCT..",
-    ".ZGGGGGGGGGGG%..",
+    ".ZFFFFFFFFFFF%..",
     "......LD..j.DT..",
     "......LD....DT..",
-    "..FFF.LD....DM..",
-    ".FFFFFLD....DM..",
-    ".FFcFFLCCCCCCM..",
-    ".FFFFFY......T..",
-    "..FFF..........."
+    "..JJJ.LD....DM..",
+    ".JJJJJLD....DM..",
+    ".JJcJJLCCCCCCM..",
+    ".JJJJJY......T..",
+    "..JJJ..........."
    ]
   },
   {
@@ -602,19 +602,19 @@
     "................",
     "................",
     "................",
-    ".aHHHHHHHHHHHa..",
+    ".aGGGGGGGGGGGa..",
     "..DBBBBBBBBBD...",
-    ".JDBBBBBBBBBD...",
+    ".IDBBBBBBBBBD...",
     "..DBBBBBBBBBD...",
     "..DBBBBBBBBBD...",
-    ".ZGGGGGGGGGGGZ..",
+    ".ZFFFFFFFFFFFZ..",
     "......OLBBBBM...",
     ".......LBBBBM...",
     ".......LBBBBM...",
     ".......LBBBBM...",
-    "..FFF.OLBBBBM...",
-    "..FcF..LCCCCM...",
-    "..FFF..Y....T...",
+    "...J..OLBBBBM...",
+    "..JcJ..LCCCCM...",
+    "...J...Y....T...",
     "................"
    ]
   },
@@ -626,18 +626,18 @@
     "................",
     "................",
     ".............O..",
-    ".aHHHHHHHHHHHa..",
-    ".JD.........h...",
+    ".aGGGGGGGGGGGa..",
+    ".ID.........h...",
     "..D.........h...",
-    ".ZGGGGGGGGGGGZ..",
+    ".ZFFFFFFFFFFFZ..",
     "......O.YCCT....",
     "........L..M....",
     "........L..M....",
     "........L..M....",
     "........L..M....",
-    "..FFF...L..M....",
-    "..FcF..OLCCM....",
-    "..FFF...Y..T....",
+    "...J....L..M....",
+    "..JcJ..OLCCM....",
+    "...J....Y..T....",
     "................"
    ]
   },
@@ -650,8 +650,8 @@
     "................",
     "................",
     "..O.............",
-    ".JHHHHHHHHHHHa..",
-    ".ZGGGGGGGGGGGZ..",
+    ".IGGGGGGGGGGGa..",
+    ".ZFFFFFFFFFFFZ..",
     "..........O.OO..",
     ".........YTO....",
     ".........LM.....",
@@ -659,7 +659,7 @@
     "........OLM.....",
     ".........LM.....",
     ".........LM.....",
-    "...F.....LM.....",
+    "...J.....LM.....",
     ".........YTO....",
     "................"
    ]
@@ -673,7 +673,7 @@
     "................",
     "................",
     "................",
-    ".J....O.........",
+    ".I....O.........",
     "................",
     "................",
     "................",
@@ -682,7 +682,7 @@
     "................",
     "................",
     "................",
-    "...F......O.....",
+    "...J......O.....",
     "................",
     "................"
    ]
@@ -914,6 +914,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/taiga/homes.py",
-  "checksum": "78ba7d9d983b9bb3"
+  "checksum": "2bd5e714d546882e"
  }
 }

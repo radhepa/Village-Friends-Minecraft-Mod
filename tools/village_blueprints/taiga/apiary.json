@@ -1,0 +1,269 @@
+{
+ "format": 1,
+ "size": [11, 10, 10],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:spruce_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "B": {
+   "id": "minecraft:structure_void"
+  },
+  "C": {
+   "id": "minecraft:grass_block"
+  },
+  "D": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "E": {
+   "id": "minecraft:podzol"
+  },
+  "F": {
+   "id": "minecraft:cornflower"
+  },
+  "G": {
+   "id": "minecraft:oxeye_daisy"
+  },
+  "H": {
+   "id": "minecraft:fern"
+  },
+  "I": {
+   "id": "minecraft:allium"
+  },
+  "J": {
+   "id": "minecraft:dirt_path"
+  },
+  "K": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "3"
+   }
+  },
+  "L": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "1"
+   }
+  },
+  "M": {
+   "id": "minecraft:beehive",
+   "properties": {
+    "facing": "north",
+    "honey_level": "0"
+   }
+  },
+  "N": {
+   "id": "minecraft:beehive",
+   "properties": {
+    "facing": "north",
+    "honey_level": "3"
+   }
+  },
+  "O": {
+   "id": "minecraft:lily_of_the_valley"
+  },
+  "P": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BBBBBJBBBBB",
+    "EBECBJEBCCC",
+    "BEBBBJBBCBB",
+    "BBBBBJBBCBC",
+    "ECBCEBCBCBE",
+    "CBBCBECCBCB",
+    "CBBBBEBEBCC",
+    "BCBCBCBCCBC",
+    "BEBBCBBBBBB",
+    "BCEBCBBBECB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....R.....",
+    "G.HH..F.FFG",
+    ".I..Q...H..",
+    "........K.K",
+    "FH.FODF.G.G",
+    "G..F.OFI.G.",
+    "I.D..G.IDGI",
+    ".G.I.L.HF.F",
+    ".L..LD.....",
+    ".KH.H...KG."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".....M.....",
+    "..N.....N..",
+    "..D.....D..",
+    "...........",
+    ".....M.....",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".....P.....",
+    "..A.....A..",
+    ".ADA...ADA.",
+    "..A.....A..",
+    ".....P.....",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".AAA...AAA.",
+    "AAAAA.AAAAA",
+    "AADAA.AADAA",
+    "AAAAA.AAAAA",
+    ".AAA...AAA.",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..A.....A..",
+    ".ADA...ADA.",
+    "..A.....A..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..A.....A..",
+    ".ADA...ADA.",
+    "..A.....A..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..A.....A..",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..A.....A..",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/farms.py",
+  "checksum": "1b407c94f4f38a65"
+ }
+}

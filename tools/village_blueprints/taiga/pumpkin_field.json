@@ -1,0 +1,253 @@
+{
+ "format": 1,
+ "size": [11, 6, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:farmland",
+   "properties": {
+    "moisture": "7"
+   }
+  },
+  "B": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "C": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "D": {
+   "id": "minecraft:pumpkin"
+  },
+  "E": {
+   "id": "minecraft:attached_pumpkin_stem",
+   "properties": {
+    "facing": "south"
+   }
+  },
+  "F": {
+   "id": "minecraft:structure_void"
+  },
+  "G": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "H": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "I": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "6"
+   }
+  },
+  "J": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "3"
+   }
+  },
+  "K": {
+   "id": "minecraft:pumpkin_stem",
+   "properties": {
+    "age": "5"
+   }
+  },
+  "L": {
+   "id": "minecraft:carved_pumpkin",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "M": {
+   "id": "minecraft:dirt_path"
+  },
+  "N": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "Q": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "FFFFFMFFFFF",
+    "BCCCCMCCCCB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BAAAAGAAAAB",
+    "BCCCCCCCCCB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "OLD..P...N.",
+    "...........",
+    ".JEIHQIHIE.",
+    "..D......D.",
+    ".EIEE.EJEK.",
+    ".D.DD.D.D..",
+    ".KEIE.HEEE.",
+    "..D.D..DDD.",
+    ".KEEH.JHEH.",
+    "..DD....D..",
+    "..H.....H..",
+    "..........."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "........SNR",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".........L.",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/farms.py",
+  "checksum": "fb112e1a0cc240cb"
+ }
+}
