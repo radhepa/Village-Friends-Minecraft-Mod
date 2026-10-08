@@ -42,8 +42,13 @@ class ReputationTest {
         assertEquals(Standing.REP_MIN, Standing.reputation(bad, "r", 0));
         assertTrue(Standing.REP_MIN > -100, "vanilla golems turn hostile at -100");
         var good = List.of(deed(DeedKind.RAID_WON, 0, "r", Know.SEEN), deed(DeedKind.REVIVED, 0, "r", Know.INVOLVED), deed(DeedKind.RAID_DEFENDED, 0, "r", Know.SEEN),
-                deed(DeedKind.SAVED_FROM_MONSTER, 0, "r", Know.INVOLVED), deed(DeedKind.BANDAGED, 0, "r", Know.INVOLVED));
+                deed(DeedKind.SAVED_FROM_MONSTER, 0, "r", Know.INVOLVED), deed(DeedKind.BANDAGED, 0, "r", Know.INVOLVED),
+                deed(DeedKind.RESCUED_COMPANION, 0, "r", Know.INVOLVED), deed(DeedKind.BIRTHDAY_GIFT, 0, "r", Know.INVOLVED));
         assertEquals(Standing.REP_MAX, Standing.reputation(good, "r", 0));
+    }
+
+    @Test void aRaidWonIsPricedByVanillasHeroOfTheVillageAlone() {
+        assertEquals(0, Standing.reputation(List.of(deed(DeedKind.RAID_WON, 0, "r", Know.INVOLVED)), "r", 0), "no discount on top of the Hero effect");
     }
 
     @Test void pricesFadeWithTheDeedAndAnApologyHalvesThem() {

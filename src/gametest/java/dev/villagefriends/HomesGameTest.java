@@ -148,6 +148,16 @@ public final class HomesGameTest implements FabricClientGameTest {
                 var i = Homes.index(level(w), village);
                 check(i.bedOf(idA).orElseThrow().beside(i.bedOf(idB).orElseThrow()), "Partners sleep side by side");
                 check(i.needs().isEmpty() && i.homeless().isEmpty(), "Nobody is short of room now: " + i.needs());
+                // Opening the door and lying down in a bed change nothing about the house: it isn't looked over again.
+                var level = level(w); int waiting = Homes.waiting();
+                var door = new BlockPos(x0 + 3, y0 + 1, z0 + 6); var doorState = level.getBlockState(door);
+                var doorBlock = (net.minecraft.world.level.block.DoorBlock) doorState.getBlock();
+                doorBlock.setOpen(null, level, doorState, door, true);
+                var head = i.bedOf(idA).orElseThrow().head();
+                level.setBlock(head, level.getBlockState(head).setValue(AbstractBedBlock.OCCUPIED, true), 3);
+                level.setBlock(head, level.getBlockState(head).setValue(AbstractBedBlock.OCCUPIED, false), 3);
+                doorBlock.setOpen(null, level, level.getBlockState(door), door, false);
+                check(Homes.waiting() == waiting, "A door or a bed in use queues no rescan: " + Homes.waiting() + " vs " + waiting);
             });
 
             // --- The plaque's readout.
@@ -440,12 +450,13 @@ public final class HomesGameTest implements FabricClientGameTest {
                 check(own >= 3, "Sleepers are in their own beds: " + own + " of " + sleepers);
                 LOGGER.info("HOMES BEDTIME: {} asleep, {} in their own assigned bed", sleepers, own);
                 var bed = index.bedOf(profile(sample).id()).orElseThrow();
-                var eye = bed.head().relative(bed.facing().getOpposite(), 3).relative(bed.facing().getClockWise());
-                return new double[]{eye.getX() + .5, eye.getY() + 1.6, eye.getZ() + .5, bed.head().getX() + .5, bed.head().getZ() + .5};
+                // Stand on the open floor beside the bed (inside the room), or failing that a little way back from its foot.
+                var eye = Homes.bedside(sample).orElse(bed.head().relative(bed.facing().getOpposite(), 3).relative(bed.facing().getClockWise()));
+                return new double[]{eye.getX() + .5, eye.getY(), eye.getZ() + .5, bed.head().getX() + .5, bed.head().getZ() + .5};
             });
             float yaw = (float) Math.toDegrees(Math.atan2(-(shot[3] - shot[0]), shot[4] - shot[2]));
             c.runOnClient(client -> { if (!client.gui.hud.isHidden()) client.gui.hud.toggle(); });
-            view(c, w, shot[0], shot[1], shot[2], yaw, 30, "bedtime-plains");
+            view(c, w, shot[0], shot[1], shot[2], yaw, 35, "bedtime-plains");
             c.runOnClient(client -> { if (client.gui.hud.isHidden()) client.gui.hud.toggle(); });
             LOGGER.info("HOMES PASSED: player houses, plaques, beds, newborns, patients, pets, vacancies, notices, reloads, five village types and bedtime");
         }

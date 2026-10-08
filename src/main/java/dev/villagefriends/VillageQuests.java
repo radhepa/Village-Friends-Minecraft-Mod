@@ -258,7 +258,8 @@ public final class VillageQuests {
             case Notice.HUNT -> q.progress() + "/" + n.count() + " " + Words.plural(Words.mobs(1, n.target()).substring(Words.mobs(1, n.target()).indexOf(' ') + 1));
             case Notice.FETCH, Notice.BIRTHDAY -> "Have " + Math.min(n.count(), count(p, n.target())) + "/" + n.count() + " " + Words.plural(itemLabel(n.target()));
             case Notice.LETTER -> "Deliver to " + first(n.who());
-            case Notice.HOUSE -> ready(p, q) ? first(n.posterName()) + " has moved in!" : "A house with " + n.count() + " beds and a plaque";
+            case Notice.HOUSE -> !ready(p, q) ? "A house with " + n.count() + " beds and a plaque"
+                    : dev.villagefriends.home.Homes.inPlayerHouse(origin(p, q), q.village(), n.poster()) ? first(n.posterName()) + " has moved in!" : first(n.posterName()) + "'s family has found room";
             default -> "";
         };
     }
@@ -430,7 +431,7 @@ public final class VillageQuests {
                 String id = VillageSocieties.id(v);
                 var q = log(p).quests().stream().filter(x -> x.notice().poster().equals(id) && ready(p, x)).findFirst().orElse(null);
                 String missing = q == null ? "Nothing to turn in yet." : gather(p, q);
-                if (missing != null) { show(p, v, "talk", NarrativeEngine.greeting(v, p), missing, false); return true; }
+                if (missing != null) { show(p, v, "talk", NarrativeEngine.greeting(v, p, false), missing, false); return true; }
                 String status = complete(p, q, v);
                 String line = TalkWorld.say(v, p, v.isBaby() ? "baby.notice.thanks" : "notice.thanks." + q.notice().kind(), Map.of());
                 show(p, v, "talk", line != null ? line : "You did it! Thank you. I'll be telling everyone at the well.", status, false, Emote.HEART);

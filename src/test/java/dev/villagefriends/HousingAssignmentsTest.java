@@ -135,6 +135,42 @@ class HousingAssignmentsTest {
         assertEquals("p:5,64,5", asked.houseOf("y").id());
     }
 
+    @Test void housesNobodyHasCheckedYetStillTakeTheirFamilies() {
+        // Only the houses near the player are loaded and checked when beds are first handed out.
+        var near = home("near", 0, 2);
+        var far = home("far", 50, 2);
+        var unchecked = new House(far.id(), far.kind(), far.template(), far.use(), far.box(), far.rooms(), far.beds(), far.doors(), far.workstations(),
+                far.plaque(), "", false, false, 0);
+        var folk = new ArrayList<>(family("a", "b")); folk.addAll(family("c", "d"));
+        var result = assign(index(near, unchecked), folk);
+        assertTrue(result.needs().isEmpty(), "Both families have a whole house, the unchecked one from its catalog beds: " + result.needs());
+        assertEquals(result.houseOf("a").id(), result.houseOf("b").id());
+        assertEquals(result.houseOf("c").id(), result.houseOf("d").id());
+        assertNotEquals(result.houseOf("a").id(), result.houseOf("c").id(), "Nobody is crammed into the loaded house");
+        // A player's house is only lived in once its plaque has looked it over.
+        var p = player("p:5,64,5", 80, 2, false);
+        var unflooded = new House(p.id(), p.kind(), p.template(), p.use(), p.box(), p.rooms(), p.beds(), p.doors(), p.workstations(), p.plaque(), "", false, false, 0);
+        assertNull(assign(index(unflooded), family("a", "b")).houseOf("a"));
+    }
+
+    @Test void aLodgerGivesWayWhenTheFamilyItLodgesWithNeedsTheBed() {
+        // A single newcomer with nowhere else to go takes the spare bed in the Ashfords' home.
+        var folk = new ArrayList<>(family("a", "b")); folk.add(adult("s", "mason"));
+        var before = assign(index(home("ashford", 0, 3)), folk);
+        assertEquals("ashford", before.houseOf("s").id(), "The newcomer lodges in the spare bed");
+        var again = assign(before, folk, 11);
+        assertEquals(before.beds(), again.beds(), "Nothing changes while the family has room");
+        // The Ashfords have a baby: the bed goes to the baby, and the lodger has to find somewhere else.
+        var withBaby = new ArrayList<>(family("a", "b", "baby"));
+        withBaby.set(2, person("baby", "none", false, "", Map.of("a", "parent", "b", "parent"), "a", 100, 5));
+        withBaby.add(adult("s", "mason"));
+        var after = assign(again, withBaby, 12);
+        assertEquals("ashford", after.houseOf("baby").id(), "The baby gets the bed in their family's home");
+        assertEquals(before.beds().get("a"), after.beds().get("a"), "The parents keep their beds");
+        assertNull(after.needOf("a"), "The family has room");
+        assertNull(after.houseOf("s"), "The lodger moved out");
+    }
+
     // -- stability and determinism ------------------------------------------------------------------
 
     private static List<Townsfolk> village() {

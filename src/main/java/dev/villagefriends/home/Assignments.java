@@ -21,7 +21,8 @@ import net.minecraft.core.BlockPos;
  * beds, whatever order they come in, and a bed someone already has stays theirs while it still makes sense.
  *
  * <p>Residents are grouped into households: partners, their young children, and children who share a
- * household with them. Each household keeps the beds it has in the house that holds most of it; the rest
+ * household with them. Each household keeps the beds it has in the house that holds most of it (a smaller
+ * household lodging in a bigger family's home gives its beds up when that family needs them); the rest
  * are placed together in one house: the one they already live in, the house of the bed they used to sleep
  * in, their parents' house (a grown child living alone), their own quarters (the apothecary over the shop,
  * guards in the barracks, the tavern keeper and cook at the inn), then the smallest family home with room
@@ -81,8 +82,15 @@ public final class Assignments {
         for (var t : byId.values()) if (t.status().equals(Townsfolk.CURSED) && !cursed.containsKey(t.id())) cursed.put(t.id(), previous.cursed().getOrDefault(t.id(), today));
 
         var units = units(byId);
+        // The biggest household sleeping in each house, to tell a family from the lodgers in its home.
+        var biggest = new HashMap<String, Integer>();
+        for (var unit : units) for (var t : unit.members()) {
+            var key = previous.beds().get(t.id());
+            if (key != null && usable(houseById, key, false)) biggest.merge(key.house(), unit.size(), Math::max);
+        }
         // Keep what still makes sense: each household's beds in the house that holds most of it.
         var kept = new HashMap<String, String>(); // unit key -> house it keeps
+        var lodgers = new HashSet<String>();
         for (var unit : units) {
             var count = new TreeMap<String, Integer>();
             for (var t : unit.members()) {
@@ -93,6 +101,8 @@ public final class Assignments {
             String best = null;
             for (var e : count.entrySet()) if (best == null || e.getValue() > count.get(best)) best = e.getKey();
             kept.put(unit.key(), best);
+            // Lodging in a bigger family's home: they take their beds back below, once that family has what it needs.
+            if (houseById.get(best).use() == House.Use.HOME && biggest.getOrDefault(best, 0) > unit.size()) { lodgers.add(unit.key()); continue; }
             for (var t : unit.members()) {
                 var key = previous.beds().get(t.id());
                 if (key != null && key.house().equals(best) && usable(houseById, key, false) && !taken.containsKey(key)) { beds.put(t.id(), key); taken.put(key, t.id()); }
@@ -103,6 +113,7 @@ public final class Assignments {
         var unplaced = new ArrayList<Unit>();
         for (var unit : units) {
             if (settled(unit, beds, houseById)) continue;
+            if (lodgers.contains(unit.key()) && retake(unit, previous, houseById, beds, taken)) continue;
             var house = choose(unit, houses, houseById, kept.get(unit.key()), anchors, previous, beds, taken, false);
             if (house == null) { unplaced.add(unit); continue; }
             moveInto(unit, house, beds, taken);
@@ -208,13 +219,30 @@ public final class Assignments {
 
     // -- houses ------------------------------------------------------------------------------------
 
-    /** Whether a bed can be slept in: it is still there in a house that was checked (or not yet checked, for keeping it). */
+    /**
+     * Whether a house's beds can be given out: it was checked, or it is one the village built and nobody has checked
+     * yet (its beds are the catalog's, checked once its chunks load), so the first beds handed out cover the whole
+     * village and not only the houses that happened to be loaded.
+     */
+    static boolean trusted(House h) { return h.verified() || h.kind() == House.Kind.GENERATED; }
+    /** Whether a bed can be slept in: it is still there in a house that can be trusted (or not yet checked, for keeping it). */
     private static boolean usable(Map<String, House> houses, BedKey key, boolean placing) {
         var h = houses.get(key.house());
         if (h == null || h.privateHome()) return false;
         var bed = h.bed(key.head());
         if (bed == null) return false;
-        return h.verified() ? bed.present() : !placing;
+        return trusted(h) ? bed.present() : !placing;
+    }
+    /** A household lodging in a bigger family's home takes back the beds it had there, if they are all still free. */
+    private static boolean retake(Unit unit, HousingIndex previous, Map<String, House> houses, Map<String, BedKey> beds, Map<BedKey, String> taken) {
+        var keys = new LinkedHashMap<String, BedKey>(); String house = null;
+        for (var t : unit.members()) {
+            var key = previous.beds().get(t.id());
+            if (key == null || house != null && !house.equals(key.house()) || !usable(houses, key, false) || taken.containsKey(key)) return false;
+            house = key.house(); keys.put(t.id(), key);
+        }
+        keys.forEach((id, key) -> { beds.put(id, key); taken.put(key, id); });
+        return true;
     }
     /** Everyone in the household has a bed, all in one house, and it is their own (not someone else's barracks or the inn's guest rooms). */
     private static boolean settled(Unit unit, Map<String, BedKey> beds, Map<String, House> houses) {
@@ -234,7 +262,7 @@ public final class Assignments {
     }
     private static List<House.Bed> free(House h, Map<BedKey, String> taken) {
         var out = new ArrayList<House.Bed>();
-        if (!h.verified() || h.privateHome()) return out;
+        if (!trusted(h) || h.privateHome()) return out;
         for (var b : h.beds()) if (b.present() && !taken.containsKey(new BedKey(h.id(), b.head()))) out.add(b);
         return out;
     }

@@ -192,7 +192,7 @@ public final class Birthdays {
         long today = day(v.level()); int year = Calendar.year(today);
         var b = bond(v, p);
         if (!celebrating(v) || b.has("birthday_wish:" + year)) {
-            show(p, v, "talk", NarrativeEngine.greeting(v, p), "You already wished them a happy birthday.", false); return true;
+            show(p, v, "talk", NarrativeEngine.greeting(v, p, false), "You already wished them a happy birthday.", false); return true;
         }
         saveBond(v, p, b.flag("birthday_wish:" + year).trust(3).remember(today, "You wished me a happy birthday."));
         reward(v, p, 8);

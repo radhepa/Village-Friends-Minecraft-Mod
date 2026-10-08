@@ -12,7 +12,13 @@ import static dev.villagefriends.VillageFriends.*;
 public final class NarrativeEngine {
     private static FriendshipPayload.Choice choice(String id, String label, boolean enabled) { return new FriendshipPayload.Choice(id, label, enabled); }
     private static NarrativeContent.Story arc(Villager v) { return NarrativeContent.current().story(profile(v).story()); }
-    public static String greeting(Villager v, ServerPlayer p) {
+    public static String greeting(Villager v, ServerPlayer p) { return greeting(v, p, true); }
+    /**
+     * {@code opening}: the line a conversation opens with. A greeting shown again later (back on the Talk tab, or
+     * as the reply to a choice that didn't work out) leaves deed reactions and cold hellos for the next opening,
+     * so one is never used up where its bubble can't follow.
+     */
+    public static String greeting(Villager v, ServerPlayer p, boolean opening) {
         var b = bond(v, p);
         if (CompanionController.state(v).downed()) return "I can't get up. Could you help me?";
         if (b.has("hurt")) return "I'm still shaken by what happened. I need to know you won't hurt me again.";
@@ -21,9 +27,9 @@ public final class NarrativeEngine {
         String thanks = VillageQuests.thanks(v, p);
         if (thanks != null) return thanks;
         // The first hello after they learn what you did in their village: "I saw what you did to the golem."
-        String deed = dev.villagefriends.deed.Deeds.reaction(v, p);
+        String deed = opening ? dev.villagefriends.deed.Deeds.reaction(v, p) : null;
         if (deed != null) return deed;
-        String cold = dev.villagefriends.deed.Deeds.cold(v, p);
+        String cold = opening ? dev.villagefriends.deed.Deeds.cold(v, p) : null;
         if (cold != null) return cold;
         String birthday = Birthdays.greeting(v, p);
         if (birthday != null) return birthday;
@@ -161,7 +167,7 @@ public final class NarrativeEngine {
     public static boolean handle(ServerPlayer p, Villager v, String action) {
         var b = bond(v, p); var s = arc(v); long today = day(v.level());
         switch (action) {
-            case "talk_tab" -> show(p, v, "talk", greeting(v, p), "Take your time.", false);
+            case "talk_tab" -> show(p, v, "talk", greeting(v, p, false), "Take your time.", false);
             case "story" -> show(p, v, "story", storyText(v, p), s == null ? "Story unavailable" : s.title() + " / Chapter " + Math.min(4, b.chapter() + 1), false);
             case "journal", "about", "story_notes" -> {
                 String text = action.equals("about") ? about(v, p) : action.equals("story_notes") ? notes(v, p) : journal(v, p);

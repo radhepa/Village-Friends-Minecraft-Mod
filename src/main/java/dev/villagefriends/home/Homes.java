@@ -59,7 +59,7 @@ public final class Homes {
     private static final int HOME_REACH = 24;
     /** Knocked-out residents are carried to their own bed this close by. */
     public static final int CARRY_REACH = 48;
-    private static final int ASSIGN_EVERY = 100, CHECK_EVERY = 100, MAX_READS = 4096;
+    private static final int ASSIGN_EVERY = 100, CHECK_EVERY = 100, SURVEY_RETRY = 200, MAX_SKIPPED = 64;
 
     /** A queued look at one house (verify or re-flood), at a probe position for a survey, or at a loose bed. */
     private record Job(ResourceKey<Level> level, String village, String house, BlockPos pos, Kind kind) {
@@ -71,15 +71,17 @@ public final class Homes {
     /** Villages ("dimension|village") whose beds need handing out again, and when they last were. */
     private static final Set<String> dirty = new HashSet<>();
     private static final Map<String, Integer> lastAssigned = new HashMap<>();
-    /** Villages already surveyed this session (or asked to be). */
-    private static final Set<String> surveying = new HashSet<>();
+    /** When each village may next be surveyed (server tick): not while a survey is queued, and a while after one that couldn't tell yet. */
+    private static final Map<String, Integer> surveyAt = new HashMap<>();
     /** Each homeless resident's vanilla home bed, by village: where they already sleep. */
     private static final Map<String, Map<String, BlockPos>> anchors = new HashMap<>();
     /** Per level: chunk to the houses touching it, rebuilt whenever that level's housing changes. */
     private record Spatial(HousingBook book, Map<Long, List<String[]>> chunks) {}
     private static final Map<ResourceKey<Level>, Spatial> spatial = new HashMap<>();
-    /** A floor cell to walk to in each house, found once. */
-    private static final Map<String, BlockPos> hearths = new HashMap<>();
+    /** A floor cell to walk to in each house, found once (or found missing once), until the house is next looked at. */
+    private static final Map<String, Optional<BlockPos>> hearths = new HashMap<>();
+    /** Freed beds whose chunk wasn't loaded: their tickets are given back once it is, unless someone has the bed again by then. */
+    private static final Map<ResourceKey<Level>, Set<BlockPos>> unreleased = new HashMap<>();
 
     public static void register() {
         HouseBounds.install(bounds());
@@ -88,7 +90,7 @@ public final class Homes {
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> { if (entity instanceof Villager v) keep(v, level); });
     }
     public static void clear() {
-        jobs.clear(); queued.clear(); dirty.clear(); lastAssigned.clear(); surveying.clear(); anchors.clear(); spatial.clear(); hearths.clear();
+        jobs.clear(); queued.clear(); dirty.clear(); lastAssigned.clear(); surveyAt.clear(); anchors.clear(); spatial.clear(); hearths.clear(); unreleased.clear();
     }
 
     // -- the index ---------------------------------------------------------------------------------
@@ -123,7 +125,10 @@ public final class Homes {
         String village = home.village(), id = id(v);
         if (id.isEmpty()) return;
         var index = index(origin, village);
-        if (!index.surveyed() && surveying.add(key(origin, village))) enqueue(new Job(origin.dimension(), village, "", v.blockPosition().immutable(), Job.Kind.SURVEY));
+        if (!index.surveyed() && level.getServer().getTickCount() >= surveyAt.getOrDefault(key(origin, village), 0)) {
+            surveyAt.put(key(origin, village), Integer.MAX_VALUE);
+            enqueue(new Job(origin.dimension(), village, "", v.blockPosition().immutable(), Job.Kind.SURVEY));
+        }
         var brain = v.getBrain();
         var memory = brain.getMemory(MemoryModuleType.HOME).filter(g -> g.dimension() == level.dimension()).map(GlobalPos::pos).orElse(null);
         var mine = level == origin ? index.beds().get(id) : null;
@@ -131,7 +136,8 @@ public final class Homes {
         if (mine != null && index.house(mine.house()) != null) {
             var head = mine.head();
             if (!head.equals(memory)) {
-                if (memory != null) release(level, memory);
+                // Their old bed's ticket goes back only if nobody has that bed now; an assigned bed's ticket stays taken, for its owner.
+                if (memory != null && index.owner(memory) == null) release(level, memory);
                 if (level.isLoaded(head)) poi.take(h -> h.is(PoiTypes.HOME), (h, p) -> p.equals(head), head, 1);
                 brain.setMemory(MemoryModuleType.HOME, GlobalPos.of(level.dimension(), head));
                 var anchored = anchors.get(key(origin, village));
@@ -145,9 +151,8 @@ public final class Homes {
         if (memory == null) return;
         String owner = level == origin ? index.owner(memory) : null;
         if (owner != null && !owner.equals(id)) {
-            // Vanilla gave them someone else's bed: give it back.
+            // Vanilla gave them someone else's bed: they let it go. Its ticket stays taken, now held for its owner.
             brain.eraseMemory(MemoryModuleType.HOME);
-            release(level, memory);
             return;
         }
         if (level != origin) return;
@@ -156,9 +161,15 @@ public final class Homes {
         if (owner == null && index.surveyed() && houseWith(index, memory) == null && index.houses().stream().noneMatch(h -> h.kind() == House.Kind.GENERATED))
             enqueue(new Job(origin.dimension(), village, "", memory.immutable(), Job.Kind.FOUND));
     }
-    /** Gives a bed's ticket back, if the bed is still there and its chunk is loaded. */
+    /** Gives a bed's ticket back, if the bed is still there; a bed whose chunk isn't loaded gets it back once it is ({@link #check}). */
     private static void release(ServerLevel level, BlockPos head) {
-        if (level.isLoaded(head) && level.getPoiManager().existsAtPosition(PoiTypes.HOME, head)) level.getPoiManager().release(head);
+        if (!level.isLoaded(head)) { unreleased.computeIfAbsent(level.dimension(), k -> new HashSet<>()).add(head.immutable()); return; }
+        if (level.getPoiManager().existsAtPosition(PoiTypes.HOME, head)) level.getPoiManager().release(head);
+    }
+    /** Whether anyone in a village on this level has the bed whose head is at {@code head}. */
+    private static boolean owned(ServerLevel level, BlockPos head) {
+        for (var index : book(level).villages().values()) if (index.owner(head) != null) return true;
+        return false;
     }
     private static House houseWith(HousingIndex index, BlockPos pos) {
         for (var h : index.houses()) if (h.box().inflatedBy(1).isInside(pos)) return h;
@@ -197,7 +208,8 @@ public final class Homes {
      */
     public static BlockPos hearth(ServerLevel level, House h) {
         var cached = hearths.get(h.id());
-        if (cached != null || h.rooms().isEmpty() || !HouseSurvey.loaded(level, h.box())) return cached;
+        if (cached != null) return cached.orElse(null);
+        if (h.rooms().isEmpty() || !HouseSurvey.loaded(level, h.box())) return null;
         var room = h.rooms().getFirst().box(); var center = room.getCenter();
         BlockPos best = null; double distance = Double.MAX_VALUE;
         for (var p : BlockPos.betweenClosed(room.minX(), room.minY(), room.minZ(), room.maxX(), room.maxY(), room.maxZ())) {
@@ -205,7 +217,8 @@ public final class Homes {
             double d = p.distSqr(center);
             if (d < distance) { distance = d; best = p.immutable(); }
         }
-        if (best != null) hearths.put(h.id(), best);
+        // A room with no floor to stand on (a bed nook, a room full of furniture) isn't searched again until the house changes.
+        hearths.put(h.id(), Optional.ofNullable(best));
         return best;
     }
     /** Where a resident far from home should walk back to for breakfast, supper or the evening; null when they're close enough already. */
@@ -339,10 +352,18 @@ public final class Homes {
         }
         return out;
     }
-    /** Whether a resident who asked for a bigger house now lives in a house a player built, with room for their whole household. */
+    /**
+     * Whether a resident who asked for a bigger house now has room for their whole household: in a house a player
+     * built, or wherever room came free first (a notice someone took can always still be finished).
+     */
     public static boolean housed(ServerLevel origin, String village, String resident) {
-        var index = index(origin, village); var h = index.houseOf(resident);
-        return h != null && h.kind() == House.Kind.PLAYER && index.needOf(resident) == null;
+        var index = index(origin, village);
+        return index.houseOf(resident) != null && index.needOf(resident) == null;
+    }
+    /** Whether a resident sleeps in a house a player built. */
+    public static boolean inPlayerHouse(ServerLevel origin, String village, String resident) {
+        var h = index(origin, village).houseOf(resident);
+        return h != null && h.player();
     }
 
     // -- ticking -----------------------------------------------------------------------------------
@@ -350,17 +371,18 @@ public final class Homes {
     static void tick(MinecraftServer server) {
         int now = server.getTickCount();
         if (now % CHECK_EVERY == 17) check(server);
-        // One house (or survey, or loose bed) per tick, within a budget of block reads.
-        int reads = 0;
-        while (!jobs.isEmpty() && reads < MAX_READS) {
+        // One survey, house check, flood or loose bed per tick (jobs that turn out to have nothing to do don't count).
+        for (int skipped = 0; !jobs.isEmpty() && skipped < MAX_SKIPPED; skipped++) {
             var job = jobs.poll(); queued.remove(job.key());
             var level = server.getLevel(job.level());
-            if (level == null) continue;
-            reads += run(level, job);
-            if (job.kind() != Job.Kind.VERIFY) break;
+            if (level != null && run(level, job)) break;
         }
+        Set<String> busy = null;
         for (var key : List.copyOf(dirty)) {
             if (now - lastAssigned.getOrDefault(key, -ASSIGN_EVERY) < ASSIGN_EVERY) continue;
+            // Beds wait for the village's houses still being looked at (after a survey, every house whose chunks are loaded is checked first).
+            if (busy == null) { busy = new HashSet<>(); for (var job : jobs) busy.add(job.level().identifier() + "|" + job.village()); }
+            if (busy.contains(key)) continue;
             int bar = key.indexOf('|');
             var level = server.getLevel(ResourceKey.create(Registries.DIMENSION, Identifier.parse(key.substring(0, bar))));
             dirty.remove(key);
@@ -369,8 +391,17 @@ public final class Homes {
             assign(level, key.substring(bar + 1));
         }
     }
-    /** Every five seconds: villages whose families changed get their beds handed out again; newly loaded houses get checked. */
+    /** Every five seconds: villages whose families changed get their beds handed out again; newly loaded houses get checked; freed beds now loaded give their tickets back. */
     private static void check(MinecraftServer server) {
+        for (var e : unreleased.entrySet()) {
+            var level = server.getLevel(e.getKey());
+            if (level == null) continue;
+            e.getValue().removeIf(head -> {
+                if (!level.isLoaded(head)) return false;
+                if (!owned(level, head)) release(level, head);
+                return true;
+            });
+        }
         var villages = new HashMap<String, ServerLevel>();
         for (var v : List.copyOf(CompanionController.loaded)) {
             var home = target(v).getAttached(HOME); var origin = origin(v);
@@ -396,12 +427,21 @@ public final class Homes {
         return hash == 0 ? 1 : hash;
     }
     private static void enqueue(Job job) { if (queued.add(job.key())) jobs.add(job); }
+    /** How many surveys, house checks, floods and loose beds are waiting (for tests). */
+    public static int waiting() { return jobs.size(); }
 
-    private static int run(ServerLevel level, Job job) {
+    /** Runs one queued job; false when it turned out to have nothing to do (its house gone or not loaded). */
+    private static boolean run(ServerLevel level, Job job) {
         var index = index(level, job.village());
         switch (job.kind()) {
             case SURVEY -> {
-                var start = HouseSurvey.structureAt(level, job.pos());
+                var probe = HouseSurvey.structureFor(level, job.pos(), job.village());
+                if (probe.retry()) {
+                    // A village found by its structure has one: look again in a while (the next resident to come by asks).
+                    surveyAt.put(key(level, job.village()), level.getServer().getTickCount() + SURVEY_RETRY);
+                    return true;
+                }
+                var start = probe.start();
                 var found = start == null ? List.<House>of() : HouseSurvey.fromStructure(start);
                 put(level, index.surveyed(found));
                 if (start == null) {
@@ -411,37 +451,38 @@ public final class Homes {
                             .forEach(p -> enqueue(new Job(level.dimension(), job.village(), "", p.immutable(), Job.Kind.FOUND)));
                 }
                 for (var h : found) if (HouseSurvey.loaded(level, h.box())) enqueue(new Job(level.dimension(), job.village(), h.id(), BlockPos.ZERO, Job.Kind.VERIFY));
+                // Handed out once the houses just queued have been checked (see tick).
                 changed(level, job.village());
-                return 64;
+                return true;
             }
             case VERIFY -> {
                 var h = index.house(job.house());
-                if (h == null || !HouseSurvey.loaded(level, h.box())) return 0;
+                if (h == null || !HouseSurvey.loaded(level, h.box())) return false;
                 var next = HouseSurvey.verify(level, h, level.getGameTime());
-                put(level, index.withHouse(next));
-                hearths.remove(h.id());
-                if (!next.verified() || !h.verified() || !next.beds().equals(h.beds()) || !next.workstations().equals(h.workstations())) changed(level, job.village());
-                return 16 + h.beds().size();
+                // Nothing changed: the index, and everything worked out from it, stays as it is.
+                if (next.sameAs(h)) return true;
+                put(level, index.withHouse(next)); hearths.remove(h.id()); changed(level, job.village());
+                return true;
             }
             case FLOOD -> {
                 var h = index.house(job.house());
-                if (h == null || h.plaque().isEmpty() || !HouseSurvey.loaded(level, h.box().inflatedBy(4))) return 0;
+                if (h == null || h.plaque().isEmpty() || !HouseSurvey.loaded(level, h.box().inflatedBy(4))) return false;
                 var pos = h.plaque().get(); var state = level.getBlockState(pos);
                 if (!(state.getBlock() instanceof HousePlaqueBlock)) {
-                    put(level, index.withoutHouse(h.id())); changed(level, job.village()); return 1;
+                    put(level, index.withoutHouse(h.id())); changed(level, job.village()); return true;
                 }
                 rescan(level, index, h, pos, state);
-                return MAX_READS;
+                return true;
             }
             case FOUND -> {
-                if (index.owner(job.pos()) != null || houseWith(index, job.pos()) != null || !level.isLoaded(job.pos())) return 0;
+                if (index.owner(job.pos()) != null || houseWith(index, job.pos()) != null || !level.isLoaded(job.pos())) return false;
                 var h = HouseSurvey.found(level, job.pos(), level.getGameTime());
-                if (h == null || index.house(h.id()) != null) return 0;
+                if (h == null || index.house(h.id()) != null) return false;
                 put(level, index.withHouse(h)); changed(level, job.village());
-                return MAX_READS;
+                return true;
             }
         }
-        return 0;
+        return false;
     }
     /** Re-floods a player's house from its plaque; when it no longer closes, its beds are given up until it is fixed. */
     private static String rescan(ServerLevel level, HousingIndex index, House h, BlockPos pos, BlockState state) {
@@ -455,7 +496,7 @@ public final class Homes {
             return failure(flood, h.customName());
         }
         var next = HouseSurvey.fromFlood(level, h.id(), House.Kind.PLAYER, flood, pos, h.customName(), h.privateHome(), level.getGameTime());
-        if (!next.equals(h)) { put(level, index.withHouse(next)); changed(level, index.village()); hearths.remove(h.id()); }
+        if (!next.sameAs(h)) { put(level, index.withHouse(next)); changed(level, index.village()); hearths.remove(h.id()); }
         return null;
     }
 
@@ -489,6 +530,9 @@ public final class Homes {
     /** A block changed (main thread only): houses around it are looked at again; a new bed outside any house may be a new one. O(1). */
     public static void changed(ServerLevel level, BlockPos pos, BlockState old, BlockState now) {
         if (old == now || !HouseSurvey.relevant(old) && !HouseSurvey.relevant(now)) return;
+        // A door opening, someone lying down in a bed, a composter filling, a furnace lighting: the same block and the same
+        // point of interest, so nothing about the house changed.
+        if (old.getBlock() == now.getBlock() && PoiTypes.forState(old).equals(PoiTypes.forState(now))) return;
         var hits = spatial(level).get(net.minecraft.world.level.ChunkPos.pack(pos.getX() >> 4, pos.getZ() >> 4));
         boolean inHouse = false;
         if (hits != null) for (var hit : hits) {
@@ -585,7 +629,7 @@ public final class Homes {
             return failure(flood, name);
         }
         var house = HouseSurvey.fromFlood(level, id, House.Kind.PLAYER, flood, pos, name, mine != null && mine.privateHome(), level.getGameTime());
-        put(level, index.withHouse(house)); changed(level, record.id()); hearths.remove(id);
+        if (!house.sameAs(mine)) { put(level, index.withHouse(house)); changed(level, record.id()); hearths.remove(id); }
         return summary(level, index(level, record.id()), house);
     }
     private static String failure(FloodFill.Result flood, String name) {

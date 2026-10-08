@@ -110,6 +110,11 @@ public record House(String id, Kind kind, String template, Use use, BoundingBox 
     public List<String> jobs() { return workstations.stream().map(Workstation::job).distinct().sorted().toList(); }
     public boolean player() { return kind == Kind.PLAYER; }
 
+    /** The same house in every way but when it was last checked (null is never the same). */
+    public boolean sameAs(House o) {
+        return o != null && equals(new House(o.id, o.kind, o.template, o.use, o.box, o.rooms, o.beds, o.doors, o.workstations, o.plaque, o.customName,
+                o.privateHome, o.verified, verifiedTick));
+    }
     public House withBeds(List<Bed> next) { return new House(id, kind, template, use, box, rooms, next, doors, workstations, plaque, customName, privateHome, verified, verifiedTick); }
     public House verified(List<Bed> nextBeds, List<Workstation> nextStations, long tick) {
         return new House(id, kind, template, use, box, rooms, nextBeds, doors, nextStations, plaque, customName, privateHome, true, tick);

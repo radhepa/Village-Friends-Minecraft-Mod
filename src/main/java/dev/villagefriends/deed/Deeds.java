@@ -68,18 +68,18 @@ public final class Deeds {
     public static final int RANGE = 16, MAX_WITNESSES = 16, RAYCASTS = 6;
     /** How long one resident's price term for one player is reused. */
     private static final int PRICE_TICKS = 100;
+    /** A monster only chasing a resident saves nobody (zombies hunt villagers all night): it must be this close, or have hurt them. */
+    private static final double ON_THEM = 4;
 
     /** Where a deed belongs: the village and the level that keeps its records. */
     public record Place(ServerLevel origin, String village) {}
-    private record Tally(Place place, String key, Set<UUID> players) {}
-    private record Snapshot(ServerLevel level, BlockPos pos, HouseBounds.HouseRef house, Map<String, Integer> counts, long tick) {}
+    /** A resident's container a player opened: what was in it, and what the player carried, to tell what they took. */
+    private record Snapshot(ServerLevel level, BlockPos pos, HouseBounds.HouseRef house, Map<String, Integer> counts, Map<String, Integer> carried, long tick) {}
 
     /** "villager|player" to {price term, game time it was worked out}. */
     private static final Map<String, long[]> prices = new HashMap<>();
     /** "villager|player" to the bubble the next greeting opens with, after a reaction line. */
     private static final Map<String, Emote> moods = new HashMap<>();
-    /** Raids players have fought in, until they end. */
-    private static final Map<Raid, Tally> raids = new HashMap<>();
     /** Containers in residents' houses a player opened: what was in them. */
     private static final Map<UUID, Snapshot> opened = new HashMap<>();
     /** "player|pos" to how many items were in a resident's container the player is breaking. */
@@ -93,7 +93,7 @@ public final class Deeds {
         PlayerBlockBreakEvents.AFTER.register(Deeds::broke);
         UseBlockCallback.EVENT.register(Deeds::use);
     }
-    public static void clear() { prices.clear(); moods.clear(); raids.clear(); opened.clear(); breaking.clear(); }
+    public static void clear() { prices.clear(); moods.clear(); opened.clear(); breaking.clear(); }
 
     // -- the book ------------------------------------------------------------------------------------
 
@@ -443,10 +443,8 @@ public final class Deeds {
         if (!action.equals("deed_apology")) return false;
         var d = grievance(v, p);
         if (d == null) return false;
-        long today = day(v.level()); var b = bond(v, p); var profile = profile(v);
-        String held = BuiltInRegistries.ITEM.getKey(p.getMainHandItem().getItem()).toString();
-        boolean gift = !p.getMainHandItem().isEmpty() && (held.equals(profile.love()) || GiftPreferences.value(profession(v), v.isBaby(), held) > 0) && !held.equals(profile.dislike());
-        if (b.trust() >= 40 || gift || today - d.day() >= 3) {
+        long today = day(v.level()); var b = bond(v, p);
+        if (accepts(v, p, d)) {
             forgive(v, p, d);
             saveBond(v, p, bond(v, p).trust(3).remember(today, "You apologized for what happened, and I accepted."));
             String line = TalkWorld.say(v, p, v.isBaby() ? "deed.apology.accept.child" : "deed.apology.accept", Map.of());
@@ -459,6 +457,13 @@ public final class Deeds {
         }
         return true;
     }
+    /** Whether a resident accepts an apology for a deed: they trust the player (40+), are offered a gift they like, or three days have passed. */
+    private static boolean accepts(Villager v, ServerPlayer p, Deed d) {
+        var profile = profile(v);
+        String held = BuiltInRegistries.ITEM.getKey(p.getMainHandItem().getItem()).toString();
+        boolean gift = !p.getMainHandItem().isEmpty() && (held.equals(profile.love()) || GiftPreferences.value(profession(v), v.isBaby(), held) > 0) && !held.equals(profile.dislike());
+        return bond(v, p).trust() >= 40 || gift || day(v.level()) - d.day() >= 3;
+    }
     private static void forgive(Villager v, ServerPlayer p, Deed d) {
         var place = place(v); var log = log(place, p.getUUID());
         if (log == null || log.find(d.serial()) == null) return;
@@ -466,10 +471,13 @@ public final class Deeds {
         save(place.origin(), book(place.origin()).put(place.village(), log.with(log.find(d.serial()).apologize())));
         changed(place, p.getUUID(), before);
     }
-    /** The existing "I'm sorry" after a fresh hurt also apologizes for the deed that hurt them. */
+    /**
+     * The existing "I'm sorry" after a fresh hurt also apologizes for the deed that hurt them, on the same terms as
+     * "I'm sorry about what happened" (trust, a liked gift, or three days); otherwise that deed waits for its own apology.
+     */
     public static void apologized(Villager v, ServerPlayer p) {
         var d = grievance(v, p);
-        if (d != null) forgive(v, p, d);
+        if (d != null && accepts(v, p, d)) forgive(v, p, d);
     }
 
     // -- hooks from existing systems -----------------------------------------------------------------
@@ -546,15 +554,16 @@ public final class Deeds {
             var raid = level.getRaids().getNearbyRaid(raider.blockPosition(), Raid.VALID_RAID_RADIUS_SQR);
             var at = raid == null ? null : place(level, raid.getCenter()) != null ? place(level, raid.getCenter()) : place(level, raider.blockPosition());
             if (at != null) {
-                String key = "raid:" + level.dimension().identifier() + ":" + level.getRaids().getId(raid).orElse(System.identityHashCode(raid));
-                var tally = raids.computeIfAbsent(raid, r -> new Tally(at, key, new HashSet<>()));
-                tally.players().add(p.getUUID());
-                record(p, DeedKind.RAID_DEFENDED, tally.place(), key, "", List.of(), 1, false, raider);
+                // The raid's id is in the key: the deed itself is the tally of who fought (see tick), so it survives a restart.
+                var id = level.getRaids().getId(raid);
+                String key = "raid:" + level.dimension().identifier() + ":" + (id.isPresent() ? Integer.toString(id.getAsInt()) : "?" + System.identityHashCode(raid));
+                record(p, DeedKind.RAID_DEFENDED, at, key, "", List.of(), 1, false, raider);
                 return;
             }
         }
         if (entity instanceof Mob m && m instanceof Enemy) {
-            Villager victim = m.getTarget() instanceof Villager v && target(v).hasAttached(HOME) ? v : null;
+            // Hunting a resident from afar isn't attacking them (zombies chase villagers all night): it must be on them, or have hurt one.
+            Villager victim = m.getTarget() instanceof Villager v && target(v).hasAttached(HOME) && m.distanceToSqr(v) <= ON_THEM * ON_THEM ? v : null;
             if (victim == null) {
                 var id = GuardController.recentVictim(m);
                 if (id != null && level.getEntity(id) instanceof Villager v && target(v).hasAttached(HOME)) victim = v;
@@ -563,17 +572,39 @@ public final class Deeds {
                 keep(victim, p, DeedKind.SAVED_FROM_MONSTER, p.getName().getString() + " saved me from a " + m.getName().getString().toLowerCase(Locale.ROOT) + ".");
         }
     }
+    /**
+     * Every five seconds: everyone who killed raiders in a raid (a raid_defended deed in the last day) and hasn't
+     * been credited with winning it is, once vanilla says the raid was won, whether they are online or not.
+     */
     private static void tick(MinecraftServer server) {
-        if (server.getTickCount() % 100 != 17 || raids.isEmpty()) return;
-        for (var e : List.copyOf(raids.entrySet())) {
-            var raid = e.getKey(); var tally = e.getValue();
-            if (raid.isVictory()) {
-                for (var id : tally.players()) {
-                    var p = server.getPlayerList().getPlayer(id);
-                    if (p != null) record(p, DeedKind.RAID_WON, tally.place(), tally.key(), "", List.of(), 1, false, null);
+        if (server.getTickCount() % 100 != 17) return;
+        for (var origin : server.getAllLevels()) {
+            var book = ((AttachmentTarget) origin).getAttached(DEEDS);
+            if (book == null) continue;
+            long today = day(origin);
+            for (var village : List.copyOf(book.villages().keySet())) for (var log : List.copyOf(book.logs(village).values())) {
+                for (var d : log.deeds()) {
+                    if (d.kind() != DeedKind.RAID_DEFENDED || today - d.day() > 1) continue;
+                    if (log.deeds().stream().anyMatch(o -> o.kind() == DeedKind.RAID_WON && o.key().equals(d.key()))) continue;
+                    var raid = raid(server, d.key());
+                    if (raid == null || !raid.isVictory()) continue;
+                    UUID player;
+                    try { player = UUID.fromString(log.player()); } catch (IllegalArgumentException e) { continue; }
+                    var p = server.getPlayerList().getPlayer(player);
+                    record(new Place(origin, village), player, p != null ? p.getName().getString() : log.playerName(), p, DeedKind.RAID_WON, d.key(), "", List.of(), 1, false, null);
                 }
-                raids.remove(raid);
-            } else if (raid.isOver() || raid.isStopped()) raids.remove(raid);
+            }
+        }
+    }
+    /** The raid a raid deed's key names ("raid:<dimension>:<id>"), or null once vanilla has let it go. */
+    private static Raid raid(MinecraftServer server, String key) {
+        int last = key.lastIndexOf(':');
+        if (!key.startsWith("raid:") || last <= 5) return null;
+        try {
+            var level = server.getLevel(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.DIMENSION, Identifier.parse(key.substring(5, last))));
+            return level == null ? null : level.getRaids().get(Integer.parseInt(key.substring(last + 1)));
+        } catch (RuntimeException e) {
+            return null;
         }
     }
 
@@ -606,19 +637,36 @@ public final class Deeds {
         var house = house(level, pos);
         if (house.isEmpty()) return InteractionResult.PASS;
         var c = container(level, pos);
-        if (c != null) opened.put(p.getUUID(), new Snapshot(level, pos, house.get(), counts(c), level.getGameTime()));
+        if (c != null) opened.put(p.getUUID(), new Snapshot(level, pos, house.get(), counts(c), counts(p.getInventory()), level.getGameTime()));
         return InteractionResult.PASS;
     }
-    /** A player closed a container menu: whatever left a resident's container with them is theft. */
+    /**
+     * A player closed a container menu. If it was the menu of the resident's container they opened, whatever left
+     * that container and ended up with them (in their pack, or held on the cursor) is theft; what a hopper or
+     * another player took, or a click that opened no menu at all, is not theirs.
+     */
     public static void closed(Player player, AbstractContainerMenu menu) {
         if (!(player instanceof ServerPlayer p) || menu == p.inventoryMenu) return;
         var snapshot = opened.remove(p.getUUID());
         if (snapshot == null || p.level() != snapshot.level() || snapshot.level().getGameTime() - snapshot.tick() > 20 * 60 * 10) return;
+        if (!(snapshot.level().getBlockEntity(snapshot.pos()) instanceof Container box) || !shows(menu, box)) return;
         var c = container(snapshot.level(), snapshot.pos());
         if (c == null) return;
-        var now = counts(c); int taken = 0;
-        for (var e : snapshot.counts().entrySet()) taken += Math.max(0, e.getValue() - now.getOrDefault(e.getKey(), 0));
+        var now = counts(c); var mine = counts(p.getInventory());
+        var held = menu.getCarried();
+        if (!held.isEmpty()) mine.merge(BuiltInRegistries.ITEM.getKey(held.getItem()).toString(), held.getCount(), Integer::sum);
+        int taken = 0;
+        for (var e : snapshot.counts().entrySet()) {
+            int left = Math.max(0, e.getValue() - now.getOrDefault(e.getKey(), 0));
+            int gained = Math.max(0, mine.getOrDefault(e.getKey(), 0) - snapshot.carried().getOrDefault(e.getKey(), 0));
+            taken += Math.min(left, gained);
+        }
         if (taken > 0) stole(p, snapshot.level(), snapshot.house(), snapshot.pos(), taken);
+    }
+    /** Whether a menu shows this container (either half of a double chest counts). */
+    private static boolean shows(AbstractContainerMenu menu, Container box) {
+        for (var slot : menu.slots) if (slot.container == box || slot.container instanceof net.minecraft.world.CompoundContainer both && both.contains(box)) return true;
+        return false;
     }
     private static void stole(ServerPlayer p, ServerLevel level, HouseBounds.HouseRef house, BlockPos pos, int items) {
         record(p, DeedKind.STOLE, place(level, house, pos), "house:" + house.village() + ":" + house.house(), house.name(), house.residents(), items, false, p);

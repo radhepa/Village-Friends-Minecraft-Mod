@@ -305,7 +305,7 @@ public final class Postings {
                 reward(3 + random.nextInt(3), poster.job(), false, random), "Surprise for " + first(celebrant.name()), text, today, today + Math.min(LIFETIME, until + 1), "");
     }
 
-    /** "We need a bigger house": build one with enough beds and put up a House Plaque. Null when nobody needs one. */
+    /** "We need a bigger house" ("A bed for the baby", "A home of my own"): build one with enough beds and put up a House Plaque. Null when nobody needs one. */
     static Notice house(Society society, long today, String id, Random random, Writer writer, List<HouseNeed> needs) {
         for (var need : needs) {
             var poster = society.get(need.poster());
@@ -323,8 +323,13 @@ public final class Postings {
             var gifts = GIFTS.get("carpenter");
             var gift = gifts.get(random.nextInt(gifts.size()));
             var reward = new Notice.Reward(emeralds, gift.item(), gift.min() + random.nextInt(gift.max() - gift.min() + 1));
+            String title = switch (need.kind()) {
+                case "newborn" -> "A bed for the baby";
+                case "homeless" -> "A home of my own";
+                default -> "We need a bigger house";
+            };
             return new Notice(id, Notice.HOUSE, poster.id(), poster.name(), poster.job(), poster.id(), beds, need.kind(), poster.name(), reward,
-                    "We need a bigger house", text, today, today + HOUSE_LIFETIME, "");
+                    title, text, today, today + HOUSE_LIFETIME, "");
         }
         return null;
     }

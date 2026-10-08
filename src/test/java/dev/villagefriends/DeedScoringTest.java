@@ -57,6 +57,11 @@ class DeedScoringTest {
         var raid = log();
         for (int k = 0; k < 5; k++) raid = add(raid, DeedKind.RAID_DEFENDED, "raid:1", 0, k * 5000L, 1);
         assertEquals(1, raid.deeds().size()); assertEquals(18, raid.deeds().getFirst().points10());
+        // A night of zombies at the walls: saving the same neighbor again that day is the same rescue, worth no more.
+        var night = log();
+        for (int k = 0; k < 6; k++) night = add(night, DeedKind.SAVED_FROM_MONSTER, "r:a", 0, 13000 + k * 1500L, 1);
+        assertEquals(1, night.deeds().size()); assertEquals(10, night.deeds().getFirst().points10());
+        assertEquals(2, add(night, DeedKind.SAVED_FROM_MONSTER, "r:b", 0, 22000, 1).deeds().size(), "saving another neighbor is another deed");
         // Kinds that never merge: each revival is its own deed.
         var revived = add(add(log(), DeedKind.REVIVED, "", 0, 10, 1), DeedKind.REVIVED, "", 0, 20, 1);
         assertEquals(2, revived.deeds().size());

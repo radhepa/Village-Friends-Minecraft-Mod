@@ -27,10 +27,10 @@ Worth is in tenths of a notice (`points10`; answering one notice is 10). Bad dee
 | Deed | Worth | Half-life | Size | Price | Merges | Hook |
 |---|---|---|---|---|---|---|
 | Raid defended (raider killed in the village) | +10, +2 per raider, at most +30 | - | notable | +10 | one raid | `AFTER_DEATH` of a `Raider` near a raid inside a village, killed by a player |
-| Raid won | +30 | - | big | +15 | one raid | `Deeds.tick` (every 100 ticks) sees a tallied raid's `isVictory()` |
+| Raid won | +30 | - | big | 0 (vanilla's Hero of the Village prices it) | one raid | `Deeds.tick` (every 100 ticks): each raid-defended deed of the last day names its raid (`raid:<dimension>:<id>`); once vanilla says that raid was won, the player is credited, online or not. The deed log is the tally, so a restart mid-raid loses nothing |
 | Revived | +20 | - | big | +15 | - | `Knockouts.interact` (Smelling Salts, Revival Tonic) |
 | Bandaged | +5 | - | small | +4 | a day | `Knockouts.interact` (Bandage Wrap) |
-| Saved from a monster | +10, +15 for a child | - | notable | +8 | a minute | `AFTER_DEATH` of an `Enemy` mob killed by a player whose target was a resident, or that hurt one recently (`GuardController.recentVictim`) |
+| Saved from a monster | +10, +15 for a child | - | notable | +8 | a day per resident | `AFTER_DEATH` of an `Enemy` mob killed by a player while it was on a resident (its target, within 4 blocks), or that hurt one recently (`GuardController.recentVictim`). A zombie only hunting villagers from afar saves nobody, and a night of fighting at the walls is one rescue per neighbor, not one per kill |
 | Rescued a downed companion | +5 | - | small | +5 | a day | `CompanionController` "rescue" |
 | Notice answered | 0 (counted in the board's favors) | - | small | 0 | - | `VillageQuests.complete` |
 | Birthday gift | +5 | - | small | +4 | a day | `Birthdays.gift` |
@@ -43,7 +43,7 @@ Worth is in tenths of a notice (`points10`; answering one notice is 10). Bad dee
 | Hurt a resident's pet | -15 | 7 | notable | -10 | a minute | `AFTER_DAMAGE` of a resident's cat or dog |
 | Killed a resident's pet | -40 | 14 | big | -25 | - | `AFTER_DEATH`, same pets |
 | Broke a resident's bed, door or workstation | -10 | 7 | notable | -8 | a day per house | `PlayerBlockBreakEvents.AFTER` where `HouseBounds.owners(pos)` names residents |
-| Stole from a resident's house | -10, -1 per 8 items, at most -30 | 10 | notable | -10 | a day per house | Opening a container inside a lived-in house (`UseBlockCallback`) snapshots it; closing the menu (`ContainerCloseMixin`) counts what left. Breaking a full container there counts too |
+| Stole from a resident's house | -10, -1 per 8 items, at most -30 | 10 | notable | -10 | a day per house | Opening a container inside a lived-in house (`UseBlockCallback`) snapshots it and the player's pack; closing that container's menu (`ContainerCloseMixin`) counts what left it and ended up with the player. Breaking a full container there counts too |
 
 Creative and spectator players never do deeds. A pet's deeds belong to the village it is in, or its owner's village when it has wandered off.
 
@@ -63,7 +63,7 @@ Every roll is seeded by the deed, the two residents, the day (and the check), so
 
 ## Residents bring it up
 
-The first time a resident greets the player after learning of a deed, they open with it (`NarrativeEngine.greeting`, after a notice's thanks and before birthday wishes). They pick the deed closest to them first (it happened to them, their family, they saw it, they heard it), then the biggest, then the newest; each deed is brought up once per resident. Pools (`deed/Reactions`):
+The first time a resident greets the player after learning of a deed, they open with it (`NarrativeEngine.greeting`, after a notice's thanks and before birthday wishes). Only the line a conversation opens with does this: a greeting shown again (back on the Talk tab, or as the reply to a choice that is no longer available) leaves reactions and cold hellos for the next opening. They pick the deed closest to them first (it happened to them, their family, they saw it, they heard it), then the biggest, then the newest; each deed is brought up once per resident. Pools (`deed/Reactions`):
 
 - 70%: the deed's own lines, `deed.<kind>.self`, `.family`, `.seen` or `.heard` (falling back from self to seen and from family to heard);
 - 30%: the personality's take, `deed.<good|bad>.<seen|heard>.<personality>`;
@@ -83,7 +83,7 @@ Placeholders: `{victim}` (the first name of whoever it happened to; for pets, th
 - **Rewards come once**: reaching a tier higher than ever before here (`peakTier`) gives what a notice always gave (a message, better prices from everyone loaded, 8 emeralds for Pillar, Hero of the Village for the hero). Falling is only a message ("folk are wary of you"); climbing back to a tier you held before says "here again".
 - The board's line adds "(they remember what you did)" while a bad deed still weighs on the score.
 
-**Apologies.** A resident who was hurt by an unapologized bad deed (or whose family member died of one) offers "I'm sorry about what happened". It is accepted when their trust is 40 or more, the player is holding something they like or love, or three days have passed since; the deed then counts half and they say a line from `deed.apology.accept` (children `.accept.child`). Otherwise they answer from `deed.apology.cool` (children `.cool.child`) and you can try again tomorrow. The existing "I'm sorry" after a fresh hurt also apologizes for that deed.
+**Apologies.** A resident who was hurt by an unapologized bad deed (or whose family member died of one) offers "I'm sorry about what happened". It is accepted when their trust is 40 or more, the player is holding something they like or love, or three days have passed since; the deed then counts half and they say a line from `deed.apology.accept` (children `.accept.child`). Otherwise they answer from `deed.apology.cool` (children `.cool.child`) and you can try again tomorrow. The existing "I'm sorry" after a fresh hurt also apologizes for that deed, on the same terms (otherwise the deed waits for its own apology).
 
 ## Prices: one engine (the decision)
 
@@ -101,7 +101,7 @@ Placeholders: `{victim}` (the first name of whoever it happened to; for pets, th
 Breaking a resident's bed, door or workstation and stealing from their house ask `HouseBounds.current()` which house a block is in and who owns it; Homes installs its housing index there in `Homes.register()`. Only lived-in houses count (a house nobody lives in, or a Private one, is fair game).
 
 - **Breaking:** a bed wrongs its owner; a workstation or either half of a door the index lists wrongs the household. Any other door in a lived-in house counts for the household too (by the time `PlayerBlockBreakEvents.AFTER` runs the door is gone, so the block that was broken decides). Everything broken in one house within a day is one deed.
-- **Theft:** opening any container in a lived-in house snapshots its item counts; closing the menu counts what is missing (`STOLE`, `count` = items taken). Breaking a container with items in it counts them too. A house a player built belongs to whoever moved into it: keep your own house Private (sneak-use its plaque) if you keep chests there.
+- **Theft:** opening any container in a lived-in house snapshots its item counts and the player's pack; closing that container's menu (either half of a double chest) counts what left it and ended up with the player, in their pack or on the cursor (`STOLE`, `count` = items taken). A click that opened no menu, a hopper draining the chest, or another player taking from the same chest is not charged to them. Breaking a container with items in it counts them too. A house a player built belongs to whoever moved into it: keep your own house Private (sneak-use its plaque) if you keep chests there.
 - `HouseRef.residents` and `owners(...)` are resident ids (the `ResidentProfile` id, as in the village census).
 - `DeedsGameTest.theftAndBrokenHomes` builds a cottage with a plaque, two beds and a chest, waits for homeless residents to move in, empties the chest (screenshot `deeds-theft`) and breaks an owned bed and the top half of the door.
 

@@ -8,15 +8,17 @@ import java.util.Locale;
  * notice ({@code points10}: answering one notice is 10), what each repeat adds within the merge window and
  * the most one merged deed can be worth, how fast a bad deed fades ({@code halfLifeDays}, 0 = never), how
  * far the news travels ({@link Size}), and its weight in trade prices ({@code rep}, added on top of vanilla's
- * villager gossip). {@code mergeTicks} folds repeats into one deed: hits within a minute, bandages within a
- * day; -1 merges for as long as the key matches (one raid).
+ * villager gossip). {@code mergeTicks} folds repeats into one deed: hits within a minute, bandages and rescues
+ * within a day; -1 merges for as long as the key matches (one raid).
  */
 public enum DeedKind {
     RAID_DEFENDED(true, 10, 2, 30, 0, Size.NOTABLE, 10, -1),
-    RAID_WON(true, 30, 0, 30, 0, Size.BIG, 15, -1),
+    /** Vanilla's Hero of the Village (given for the same win) already prices it, so this adds nothing to prices. */
+    RAID_WON(true, 30, 0, 30, 0, Size.BIG, 0, -1),
     REVIVED(true, 20, 0, 20, 0, Size.BIG, 15, 0),
     BANDAGED(true, 5, 0, 5, 0, Size.SMALL, 4, 24000),
-    SAVED_FROM_MONSTER(true, 10, 0, 15, 0, Size.NOTABLE, 8, 1200),
+    /** Once a day per resident saved: a night of zombies at the walls is one rescue for each neighbor, not one per kill. */
+    SAVED_FROM_MONSTER(true, 10, 0, 15, 0, Size.NOTABLE, 8, 24000),
     RESCUED_COMPANION(true, 5, 0, 5, 0, Size.SMALL, 5, 24000),
     /** Counted in the board's favors; a deed only so residents can talk about it. */
     NOTICE_ANSWERED(true, 0, 0, 0, 0, Size.SMALL, 0, 0),

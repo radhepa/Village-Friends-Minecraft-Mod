@@ -233,7 +233,7 @@ public final class VillageFriends implements ModInitializer {
         if (TOPICS.contains(a)) {
             int friendLevel = FriendshipLevels.level(state(v, player), bond(v, player));
             if (a.equals("news") && friendLevel < FriendshipLevels.NEWS || a.equals("heart") && friendLevel < FriendshipLevels.HEART_TO_HEART) {
-                show(player, v, "talk", NarrativeEngine.greeting(v, player), "Get to know each other a little better first.", false); return;
+                show(player, v, "talk", NarrativeEngine.greeting(v, player, false), "Get to know each other a little better first.", false); return;
             }
             var old = state(v, player); long today = day(v.level()); var next = old.talk(today); save(v, player, next);
             saveBond(v, player, bond(v, player).visit(today));
@@ -253,7 +253,7 @@ public final class VillageFriends implements ModInitializer {
         if (a.equals("ledger")) { VillageLedger.open(player, v); return; }
         if (a.equals("gift")) { giveGift(player, v); return; }
         if (!NarrativeEngine.handle(player, v, a) && !CompanionController.handle(player, v, a))
-            show(player, v, "talk", NarrativeEngine.greeting(v, player), "That choice is no longer available.", false);
+            show(player, v, "talk", NarrativeEngine.greeting(v, player, false), "That choice is no longer available.", false);
     }
     private static void giveGift(ServerPlayer p, Villager v) {
         var old = state(v, p); long today = day(v.level());

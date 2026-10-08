@@ -1,5 +1,6 @@
 package dev.villagefriends.home;
 
+import dev.villagefriends.VillageSettlements;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.PoiTypeTags;
@@ -36,15 +38,34 @@ public final class HouseSurvey {
     /** How far to look for loose beds around a resident when a village has no structure to read. */
     public static final int FOUND_REACH = 48;
 
-    /** The village structure with a piece at {@code pos}, or null (chunks not ready, or no village here). */
-    public static StructureStart structureAt(ServerLevel level, BlockPos pos) {
-        try {
-            var start = level.structureManager().getStructureWithPieceAt(pos, StructureTags.VILLAGE);
-            return start != null && start.isValid() ? start : null;
-        } catch (RuntimeException e) {
-            // Structure references can point at chunks that aren't ready yet; try again another time.
-            return null;
+    /** What looking for a village's structure found: its start (null for none), or {@code retry} when it couldn't tell yet. */
+    public record Probe(StructureStart start, boolean retry) {}
+
+    /**
+     * Finds a village's structure from a resident's position and from the village's center: a piece at either,
+     * or else the structure's bounds around either (a resident on the grass between a house and the street).
+     * A village found through its structure ({@code natural:}) always has one, so when a probe can't be made yet
+     * (its chunk isn't loaded, or the structure's chunks aren't ready) the answer is "try again later", never
+     * "no structure"; only a village with none (placed by command, or claimed with a marker) falls back to
+     * houses found around its beds.
+     */
+    public static Probe structureFor(ServerLevel level, BlockPos pos, String village) {
+        var probes = new ArrayList<BlockPos>(List.of(pos));
+        var record = VillageSettlements.book(level).villages().get(village);
+        if (record != null) probes.add(new BlockPos(record.x(), record.y(), record.z()));
+        boolean unsure = false;
+        for (var p : probes) {
+            if (!level.isLoaded(p)) { unsure = true; continue; }
+            try {
+                var start = level.structureManager().getStructureWithPieceAt(p, StructureTags.VILLAGE);
+                if (start == null || !start.isValid()) start = level.structureManager().getStructureAt(p, level.registryAccess().lookupOrThrow(Registries.STRUCTURE).getOrThrow(StructureTags.VILLAGE));
+                if (start != null && start.isValid()) return new Probe(start, false);
+            } catch (RuntimeException e) {
+                // Structure references can point at chunks that aren't ready yet.
+                unsure = true;
+            }
         }
+        return new Probe(null, unsure && village.startsWith("natural:"));
     }
 
     /** Every house a village structure built, from its pieces and the catalog. Reads no blocks. */
