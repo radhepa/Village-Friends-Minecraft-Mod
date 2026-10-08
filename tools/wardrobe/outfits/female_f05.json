@@ -9,17 +9,24 @@
     {"id": "f_rosary_prioress", "name": "Prioress", "top": "tf167_prioress_rosary_girdle_habit", "bottom": "bf167_prioress_fine_habit_skirt"},
     {"id": "f_garden_lay_sister", "name": "Lay Sister", "top": "tf168_lay_sisters_hitched_work_habit", "bottom": "bf168_lay_sisters_garden_skirt"},
     {"id": "f_bread_almoner", "name": "Almoner", "top": "tf169_almoners_bread_basket_robe", "bottom": "bf169_almoners_alms_purse_skirt"},
-    {"id": "f_book_governess", "name": "Governess", "top": "tf170_governess_book_belt_kirtle", "bottom": "bf170_governess_sober_skirt"}
+    {"id": "f_book_governess", "name": "Governess", "top": "tf170_governess_book_belt_kirtle", "bottom": "bf170_governess_sober_skirt"},
+    {"id": "f_astrolabe_reader", "name": "Astrolabe Reader", "top": "tf171_astrolabe_readers_brass_hung_gown", "bottom": "bf171_astrolabe_readers_night_skirt"},
+    {"id": "f_alchemist", "name": "Alchemist", "top": "tf172_alchemists_retort_bodice", "bottom": "bf172_alchemists_scorched_skirt"},
+    {"id": "f_illuminator", "name": "Illuminator", "top": "tf173_illuminators_gold_leaf_smock", "bottom": "bf173_illuminators_ink_splashed_skirt"},
+    {"id": "f_scribe", "name": "Scribe", "top": "tf174_scribes_penner_hung_kirtle", "bottom": "bf174_scribes_desk_worn_skirt"},
+    {"id": "f_moon_seer", "name": "Seer", "top": "tf175_seers_moon_embroidered_robe", "bottom": "bf175_seers_moon_hem_skirt"}
   ],
   "professions": {
-    "APOTHECARY": ["f_flask_physician", "f_charm_wise_woman"],
-    "SCHOLAR": ["f_flask_physician", "f_book_governess"],
-    "MAGE": ["f_charm_wise_woman"],
-    "NITWIT": ["f_charm_wise_woman"],
+    "APOTHECARY": ["f_flask_physician", "f_charm_wise_woman", "f_alchemist"],
+    "SCHOLAR": ["f_flask_physician", "f_book_governess", "f_astrolabe_reader"],
+    "MAGE": ["f_charm_wise_woman", "f_astrolabe_reader", "f_alchemist", "f_moon_seer"],
+    "NITWIT": ["f_charm_wise_woman", "f_moon_seer"],
     "CLERIC": ["f_anchoress", "f_grey_beguine", "f_fur_canoness", "f_undyed_novice", "f_rosary_prioress", "f_garden_lay_sister", "f_bread_almoner"],
     "TAILOR": ["f_grey_beguine"],
-    "LIBRARIAN": ["f_fur_canoness", "f_book_governess"],
+    "LIBRARIAN": ["f_fur_canoness", "f_book_governess", "f_illuminator", "f_scribe"],
     "FARMER": ["f_garden_lay_sister"],
-    "COOK": ["f_bread_almoner"]
+    "COOK": ["f_bread_almoner"],
+    "CARTOGRAPHER": ["f_astrolabe_reader"],
+    "PAINTER": ["f_illuminator"]
   }
 }
