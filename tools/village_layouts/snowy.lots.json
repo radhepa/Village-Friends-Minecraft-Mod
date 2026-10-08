@@ -7,8 +7,48 @@
       "fallback": "snowy/lots_outer",
       "elements": [
         {
+          "template": "snowy/log_cabin",
+          "weight": 4,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/igloo",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/stone_cottage",
+          "weight": 4,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/a_frame",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/longhouse",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/family_house",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/townhouse",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
+          "template": "snowy/trapper_cabin",
+          "weight": 3,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 12
         }
       ]
     },
@@ -16,10 +56,46 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
+          "template": "snowy/igloo",
+          "weight": 1,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 6
         }
       ]
     }
+  },
+  "processor_lists": {
+    "snowy_lots_frost": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:cracked_stone_bricks"
+          }
+        ]
+      }
+    ]
   }
 }
