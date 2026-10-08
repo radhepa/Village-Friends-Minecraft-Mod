@@ -1,0 +1,165 @@
+{
+ "format": 1,
+ "size": [7, 5, 6],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "C": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:podzol"
+  },
+  "E": {
+   "id": "minecraft:fern"
+  },
+  "F": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "G": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "H": {
+   "id": "minecraft:large_fern",
+   "properties": {
+    "half": "lower"
+   }
+  },
+  "I": {
+   "id": "minecraft:large_fern",
+   "properties": {
+    "half": "upper"
+   }
+  },
+  "J": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "K": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "L": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "M": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAAA",
+    "DAAAAAD",
+    "AAAAAAA",
+    "AAAAAAD",
+    "AAAAAAA",
+    "AAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "...G...",
+    "E.....E",
+    ".KJ.LM.",
+    "......H",
+    ".BBBBB.",
+    "......."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".......",
+    ".......",
+    ".FF....",
+    "......I",
+    ".BBBBB.",
+    "......."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    "..BBB..",
+    "......."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".......",
+    ".......",
+    ".......",
+    ".......",
+    ".CCCCC.",
+    "......."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/decor.py",
+  "checksum": "ca717dde727ef8d9"
+ }
+}

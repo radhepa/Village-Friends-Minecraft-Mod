@@ -1,0 +1,342 @@
+{
+ "format": 1,
+ "size": [12, 9, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:gravel"
+  },
+  "D": {
+   "id": "minecraft:cobblestone"
+  },
+  "E": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "F": {
+   "id": "minecraft:stone"
+  },
+  "G": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "H": {
+   "id": "minecraft:andesite"
+  },
+  "I": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "J": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "K": {
+   "id": "minecraft:podzol"
+  },
+  "L": {
+   "id": "minecraft:fern"
+  },
+  "M": {
+   "id": "minecraft:grass_block"
+  },
+  "N": {
+   "id": "minecraft:mossy_stone_bricks"
+  },
+  "O": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "P": {
+   "id": "minecraft:stone_bricks"
+  },
+  "Q": {
+   "id": "minecraft:brown_mushroom"
+  },
+  "R": {
+   "id": "minecraft:polished_andesite"
+  },
+  "S": {
+   "id": "minecraft:short_grass"
+  },
+  "T": {
+   "id": "minecraft:stone_brick_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "U": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "2"
+   }
+  },
+  "V": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:chest",
+   "properties": {
+    "facing": "north",
+    "type": "single",
+    "waterlogged": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:crafting_table"
+  },
+  "Y": {
+   "id": "minecraft:dirt_path"
+  },
+  "Z": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "a": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "b": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "waterlogged": "false"
+   }
+  },
+  "c": {
+   "id": "minecraft:mossy_cobblestone_wall",
+   "properties": {
+    "east": "low",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "d": {
+   "id": "minecraft:mossy_stone_brick_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "e": {
+   "id": "minecraft:stonecutter",
+   "properties": {
+    "facing": "north"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAYAAAAAA",
+    "KAAAAEAAAAAK",
+    "ADDEEFCHFCDM",
+    "ADCCHECHCDCK",
+    "MDDCCCCCDCCM",
+    "AECCCFFEEFDA",
+    "ADFHCCHDFHEA",
+    "AEECDECDCFEA",
+    "AFCFCEEDEHFA",
+    "ACHCHDDDHEEA",
+    "MCEDCFHECCCA",
+    "AAKMAAAAKAAK"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....Z......",
+    "L..........L",
+    ".........OFL",
+    "..cV....RROQ",
+    "U.......N..L",
+    "..........D.",
+    ".G....G..PN.",
+    "............",
+    "...e........",
+    ".....X..PDD.",
+    "SGW...G.....",
+    "..UQ....L..S"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "............",
+    "............",
+    "..........F.",
+    "..b.....NT..",
+    "............",
+    "............",
+    ".G....G.....",
+    "............",
+    "............",
+    "........OPT.",
+    ".G....G.....",
+    "............"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    ".GIIIIG.....",
+    "............",
+    "....a.......",
+    "........NN..",
+    ".GIIIIG.....",
+    "............"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "JJJJJJJJ....",
+    "BBBBBBBB....",
+    "BBBBBBBB....",
+    "BBBBBBBBd...",
+    "BBBBBBBB....",
+    "............"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 10],
+   "nbt": {
+    "id": "minecraft:chest",
+    "LootTable": "minecraft:chests/village/village_mason"
+   }
+  },
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/trades.py",
+  "checksum": "e6450d41eaca6b7e"
+ }
+}

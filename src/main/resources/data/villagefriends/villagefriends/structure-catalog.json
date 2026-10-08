@@ -7699,6 +7699,1278 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/taiga/aframe_cabin",
+      "size": [
+        13,
+        14,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            3,
+            2,
+            11
+          ],
+          "max": [
+            9,
+            9,
+            15
+          ],
+          "probe": [
+            6,
+            2,
+            12
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          4
+        ],
+        [
+          6,
+          2,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          4,
+          2,
+          14
+        ],
+        [
+          8,
+          2,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            7,
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/apiary",
+      "size": [
+        11,
+        10,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/berry_patch",
+      "size": [
+        11,
+        5,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/cabin_ell",
+      "size": [
+        16,
+        15,
+        18
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            8,
+            2,
+            10
+          ],
+          "max": [
+            11,
+            4,
+            14
+          ],
+          "probe": [
+            10,
+            2,
+            11
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          9,
+          2,
+          9
+        ]
+      ],
+      "bed_feet": [
+        [
+          8,
+          2,
+          13
+        ],
+        [
+          11,
+          2,
+          13
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/cartographer",
+      "size": [
+        11,
+        22,
+        13
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/chicken_coop",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 6,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_boulder",
+      "size": [
+        7,
+        5,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_campfire_ring",
+      "size": [
+        9,
+        4,
+        9
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_drying_rack",
+      "size": [
+        8,
+        5,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_log_stack",
+      "size": [
+        7,
+        5,
+        6
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_spruce",
+      "size": [
+        7,
+        15,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_spruce_pair",
+      "size": [
+        10,
+        16,
+        9
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/decor_totem",
+      "size": [
+        5,
+        9,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/dogtrot_cabin",
+      "size": [
+        17,
+        13,
+        14
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            11,
+            2,
+            5
+          ],
+          "max": [
+            14,
+            4,
+            9
+          ],
+          "probe": [
+            12,
+            2,
+            7
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          7
+        ],
+        [
+          10,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          13,
+          2,
+          5
+        ],
+        [
+          13,
+          2,
+          9
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            2,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            8,
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/fisher",
+      "size": [
+        14,
+        11,
+        16
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/fletcher",
+      "size": [
+        12,
+        12,
+        16
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/goat_pen",
+      "size": [
+        14,
+        7,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 5,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/log_lodge",
+      "size": [
+        15,
+        18,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "bedroom_north",
+          "min": [
+            3,
+            7,
+            5
+          ],
+          "max": [
+            8,
+            9,
+            7
+          ],
+          "probe": [
+            7,
+            7,
+            6
+          ],
+          "beds": 2
+        },
+        {
+          "name": "bedroom_south",
+          "min": [
+            3,
+            7,
+            9
+          ],
+          "max": [
+            8,
+            9,
+            11
+          ],
+          "probe": [
+            7,
+            7,
+            10
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          7,
+          2,
+          4
+        ],
+        [
+          10,
+          7,
+          4
+        ],
+        [
+          9,
+          7,
+          6
+        ],
+        [
+          9,
+          7,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          4,
+          7,
+          5
+        ],
+        [
+          4,
+          7,
+          7
+        ],
+        [
+          4,
+          7,
+          10
+        ]
+      ],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/longhouse",
+      "size": [
+        13,
+        17,
+        27
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            3,
+            2,
+            19
+          ],
+          "max": [
+            9,
+            4,
+            22
+          ],
+          "probe": [
+            6,
+            2,
+            20
+          ],
+          "beds": 3
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          4
+        ],
+        [
+          6,
+          2,
+          18
+        ]
+      ],
+      "bed_feet": [
+        [
+          8,
+          2,
+          19
+        ],
+        [
+          3,
+          2,
+          21
+        ],
+        [
+          9,
+          2,
+          21
+        ]
+      ],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            4,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            8,
+            2,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/mason",
+      "size": [
+        12,
+        9,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/porch_cabin",
+      "size": [
+        15,
+        15,
+        16
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            9,
+            2,
+            7
+          ],
+          "max": [
+            11,
+            4,
+            11
+          ],
+          "probe": [
+            10,
+            2,
+            9
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          7,
+          2,
+          6
+        ],
+        [
+          8,
+          2,
+          9
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          2,
+          8
+        ],
+        [
+          11,
+          2,
+          10
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/potato_field",
+      "size": [
+        15,
+        6,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/pumpkin_field",
+      "size": [
+        11,
+        6,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/shepherd",
+      "size": [
+        16,
+        13,
+        16
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/smithy",
+      "size": [
+        13,
+        13,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/smokehouse",
+      "size": [
+        13,
+        15,
+        13
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/stone_cottage",
+      "size": [
+        13,
+        15,
+        13
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            8,
+            2,
+            5
+          ],
+          "max": [
+            9,
+            4,
+            9
+          ],
+          "probe": [
+            8,
+            2,
+            8
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          7,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          9,
+          2,
+          6
+        ],
+        [
+          9,
+          2,
+          8
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/tannery",
+      "size": [
+        13,
+        12,
+        14
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          5
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/trapper_hut",
+      "size": [
+        11,
+        14,
+        13
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            3,
+            2,
+            8
+          ],
+          "max": [
+            7,
+            4,
+            9
+          ],
+          "probe": [
+            5,
+            2,
+            8
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          3
+        ],
+        [
+          5,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          8
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/tannery",
       "size": [
         11,

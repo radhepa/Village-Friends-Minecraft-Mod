@@ -1,0 +1,223 @@
+{
+ "format": 1,
+ "size": [5, 9, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "C": {
+   "id": "minecraft:cobblestone"
+  },
+  "D": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "E": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "F": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "G": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "H": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "3"
+   }
+  },
+  "I": {
+   "id": "minecraft:carved_pumpkin",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "J": {
+   "id": "minecraft:grass_block"
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "L": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:podzol"
+  },
+  "N": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "O": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "east",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAA",
+    "AAAAA",
+    "ABBBA",
+    "MBBBA",
+    "ACCCJ"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..K..",
+    ".....",
+    ".L...",
+    "H.B..",
+    "....H"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "..F..",
+    "....."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "..G..",
+    "....."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".PFO.",
+    "....."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "..I..",
+    "....."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".EGD.",
+    "....."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".END.",
+    "....."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "....."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/decor.py",
+  "checksum": "3040b291c2e17d46"
+ }
+}

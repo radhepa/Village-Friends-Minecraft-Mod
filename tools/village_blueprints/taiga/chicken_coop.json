@@ -1,0 +1,360 @@
+{
+ "format": 1,
+ "size": [11, 7, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "D": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "F": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "G": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "H": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "I": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "J": {
+   "id": "minecraft:short_grass"
+  },
+  "K": {
+   "id": "minecraft:composter",
+   "properties": {
+    "level": "2"
+   }
+  },
+  "L": {
+   "id": "minecraft:dirt_path"
+  },
+  "M": {
+   "id": "minecraft:fern"
+  },
+  "N": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "O": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "P": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "R": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "S": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "T": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "U": {
+   "id": "minecraft:spruce_fence_gate",
+   "properties": {
+    "facing": "north",
+    "in_wall": "false",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:water_cauldron",
+   "properties": {
+    "level": "3"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAALAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA",
+    "AAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....O.....",
+    "SCCCCUCCCCQ",
+    "D...M.J...D",
+    "D......J..D",
+    "D.........D",
+    "D.........D",
+    "D.....F.FFG",
+    "D.....E.IEG",
+    "D.IW..EKNEG",
+    "D.....FFFFG",
+    "TCCCCCHHHHR"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "P..........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "......E.FE.",
+    "......V..E.",
+    "......E..E.",
+    "......EFFE.",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".....BBBBBB",
+    ".....BBBBBB",
+    ".....BBBBBB",
+    ".....BBBBBB",
+    ".....BBBBBB",
+    ".....BBBBBB"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [
+  {
+   "pos": [3.5, 1.0, 4.5],
+   "blockPos": [3, 1, 4],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [4.5, 1.0, 6.5],
+   "blockPos": [4, 1, 6],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [2.5, 1.0, 3.5],
+   "blockPos": [2, 1, 3],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [6.5, 1.0, 3.5],
+   "blockPos": [6, 1, 3],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [7.5, 1.0, 4.5],
+   "blockPos": [7, 1, 4],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [3.5, 1.0, 5.5],
+   "blockPos": [3, 1, 5],
+   "nbt": {
+    "id": "minecraft:chicken",
+    "PersistenceRequired": true,
+    "Age": -24000
+   }
+  }
+ ],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/farms.py",
+  "checksum": "a550e87f822e37b0"
+ }
+}
