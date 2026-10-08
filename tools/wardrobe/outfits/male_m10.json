@@ -14,15 +14,16 @@
     {"id": "m_daily_wrap_jacket", "name": "Harbour Hand", "top": "t357_wrap_front_wool_jacket", "bottom": "b357_wide_legged_work_slops"},
     {"id": "m_daily_striped_tabard", "name": "Merry Idler", "top": "t358_tabard_vest_striped_shirt", "bottom": "b358_striped_knee_hose"},
     {"id": "m_daily_peasant_gussets", "name": "Peasant Farmer", "top": "t359_gusseted_peasant_shirt", "bottom": "b359_gusseted_peasant_trousers"},
-    {"id": "m_daily_lambswool_cowl", "name": "Lambswool Herder", "top": "t360_lambswool_cowl_neck_tunic", "bottom": "b360_lambswool_lined_boots"}
+    {"id": "m_daily_lambswool_cowl", "name": "Lambswool Herder", "top": "t360_lambswool_cowl_neck_tunic", "bottom": "b360_lambswool_lined_boots"},
+    {"id": "m_yoke_shirt_rider", "name": "Leather-Yoke Rider", "top": "t361_leather_shoulder_yoke_shirt", "bottom": "b361_leather_seated_riding_trousers"}
   ],
   "professions": {
-    "NONE": ["m_daily_rolled_shirt", "m_daily_summer_tunic", "m_daily_patched_coat", "m_daily_knit_waistcoat", "m_daily_quilted_vest", "m_daily_short_cape", "m_daily_chore_smock", "m_daily_open_overshirt", "m_daily_side_laced_jerkin", "m_daily_double_breasted", "m_daily_overtunic_belt", "m_daily_wrap_jacket", "m_daily_striped_tabard", "m_daily_peasant_gussets", "m_daily_lambswool_cowl"],
+    "NONE": ["m_daily_rolled_shirt", "m_daily_summer_tunic", "m_daily_patched_coat", "m_daily_knit_waistcoat", "m_daily_quilted_vest", "m_daily_short_cape", "m_daily_chore_smock", "m_daily_open_overshirt", "m_daily_side_laced_jerkin", "m_daily_double_breasted", "m_daily_overtunic_belt", "m_daily_wrap_jacket", "m_daily_striped_tabard", "m_daily_peasant_gussets", "m_daily_lambswool_cowl", "m_yoke_shirt_rider"],
     "FARMER": ["m_daily_rolled_shirt", "m_daily_chore_smock", "m_daily_peasant_gussets"],
     "NITWIT": ["m_daily_patched_coat", "m_daily_striped_tabard"],
     "SHEPHERD": ["m_daily_knit_waistcoat", "m_daily_short_cape", "m_daily_lambswool_cowl"],
     "COOK": ["m_daily_quilted_vest"],
-    "LEATHERWORKER": ["m_daily_side_laced_jerkin"],
+    "LEATHERWORKER": ["m_daily_side_laced_jerkin", "m_yoke_shirt_rider"],
     "MERCHANT": ["m_daily_double_breasted"],
     "FLETCHER": ["m_daily_overtunic_belt"],
     "FISHERMAN": ["m_daily_wrap_jacket"]
