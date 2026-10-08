@@ -9,13 +9,21 @@
     {"id": "m_salt_boiler", "name": "Salt Boiler", "top": "t177_salt_boilers_steam_damp_shirt", "bottom": "b177_saltpan_clogs"},
     {"id": "m_harbour_master", "name": "Harbour Master", "top": "t178_harbour_masters_brass_buttoned_coat", "bottom": "b178_harbour_masters_buckled_boots"},
     {"id": "m_beacon_keeper", "name": "Beacon Keeper", "top": "t179_beacon_keepers_hooded_watch_coat", "bottom": "b179_beacon_keepers_stair_worn_boots"},
-    {"id": "m_ship_pilot", "name": "Ship's Pilot", "top": "t180_ship_pilots_sounding_line_coat", "bottom": "b180_pilots_rolled_sea_boots"}
+    {"id": "m_ship_pilot", "name": "Ship's Pilot", "top": "t180_ship_pilots_sounding_line_coat", "bottom": "b180_pilots_rolled_sea_boots"},
+    {"id": "m_sea_captain", "name": "Sea Captain", "top": "t181_sea_captains_long_brocade_coat", "bottom": "b181_captains_turned_down_boots"},
+    {"id": "m_eel_trapper", "name": "Eel Trapper", "top": "t182_eel_trappers_wicker_pot_jerkin", "bottom": "b182_eel_marsh_mud_wraps"},
+    {"id": "m_river_mudlark", "name": "Mudlark", "top": "t183_mudlarks_ragged_shirt", "bottom": "b183_mudlarks_rolled_rags"},
+    {"id": "m_canal_lock_keeper", "name": "Lock Keeper", "top": "t184_lock_keepers_windlass_belt_waistcoat", "bottom": "b184_lock_keepers_gate_boots"},
+    {"id": "m_coracle_man", "name": "Coracle Man", "top": "t185_coracle_mans_back_slung_boat", "bottom": "b185_coracle_mans_wading_breeks"}
   ],
   "professions": {
-    "NONE": ["m_pole_ferryman", "m_tow_bargeman", "m_beacon_keeper"],
-    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker", "m_oyster_dredger", "m_salt_boiler", "m_harbour_master", "m_beacon_keeper", "m_ship_pilot"],
+    "NONE": ["m_pole_ferryman", "m_tow_bargeman", "m_beacon_keeper", "m_river_mudlark", "m_canal_lock_keeper"],
+    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker", "m_oyster_dredger", "m_salt_boiler", "m_harbour_master", "m_beacon_keeper", "m_ship_pilot", "m_sea_captain", "m_eel_trapper", "m_coracle_man"],
     "CARPENTER": ["m_adze_shipwright", "m_oakum_caulker"],
     "COOK": ["m_salt_boiler"],
-    "CARTOGRAPHER": ["m_harbour_master", "m_ship_pilot"]
+    "CARTOGRAPHER": ["m_harbour_master", "m_ship_pilot"],
+    "MERCHANT": ["m_sea_captain"],
+    "NITWIT": ["m_river_mudlark"],
+    "MASON": ["m_canal_lock_keeper"]
   }
 }
