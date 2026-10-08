@@ -4,17 +4,24 @@
     {"id": "m_common_carrier", "name": "Carrier", "top": "t272_carriers_parcel_strapped_jerkin", "bottom": "b272_carriers_road_gaiters"},
     {"id": "m_royal_courier", "name": "Royal Courier", "top": "t273_royal_couriers_message_tube_jacket", "bottom": "b273_couriers_riding_leathers"},
     {"id": "m_horn_forester", "name": "Forester", "top": "t274_foresters_horn_and_hatchet_coat", "bottom": "b274_foresters_leaf_green_hose"},
-    {"id": "m_verderer", "name": "Verderer", "top": "t275_verderers_antler_button_jerkin", "bottom": "b275_verderers_bracken_boots"}
+    {"id": "m_verderer", "name": "Verderer", "top": "t275_verderers_antler_button_jerkin", "bottom": "b275_verderers_bracken_boots"},
+    {"id": "m_gamekeeper", "name": "Gamekeeper", "top": "t276_gamekeepers_snare_belt_coat", "bottom": "b276_gamekeepers_gaiters"},
+    {"id": "m_night_poacher", "name": "Poacher", "top": "t277_poachers_hidden_pocket_coat", "bottom": "b277_poachers_quiet_soft_boots"},
+    {"id": "m_greenwood_outlaw", "name": "Outlaw", "top": "t278_outlaws_hooded_greenwood_tunic", "bottom": "b278_outlaws_ragged_hose"},
+    {"id": "m_mountain_guide", "name": "Mountain Guide", "top": "t279_mountain_guides_rope_coiled_jacket", "bottom": "b279_mountain_guides_crampon_boots"},
+    {"id": "m_candle_miner", "name": "Miner", "top": "t280_miners_candle_shoulder_jerkin", "bottom": "b280_miners_kneecapped_trousers"}
   ],
   "professions": {
-    "NONE": ["m_road_tinker", "m_common_carrier"],
-    "NITWIT": ["m_road_tinker"],
-    "TOOLSMITH": ["m_road_tinker"],
+    "NONE": ["m_road_tinker", "m_common_carrier", "m_night_poacher", "m_greenwood_outlaw"],
+    "NITWIT": ["m_road_tinker", "m_night_poacher"],
+    "TOOLSMITH": ["m_road_tinker", "m_candle_miner"],
     "MERCHANT": ["m_common_carrier"],
-    "CARTOGRAPHER": ["m_royal_courier"],
-    "ADVENTURER": ["m_royal_courier"],
+    "CARTOGRAPHER": ["m_royal_courier", "m_mountain_guide"],
+    "ADVENTURER": ["m_royal_courier", "m_mountain_guide"],
     "CARPENTER": ["m_horn_forester"],
-    "ARCHER": ["m_horn_forester", "m_verderer"],
-    "FLETCHER": ["m_verderer"]
+    "ARCHER": ["m_horn_forester", "m_verderer", "m_gamekeeper", "m_night_poacher", "m_greenwood_outlaw"],
+    "FLETCHER": ["m_verderer", "m_gamekeeper"],
+    "FARMER": ["m_gamekeeper"],
+    "MASON": ["m_candle_miner"]
   }
 }

@@ -66,6 +66,14 @@ def rope(box, role: str = "S", base: int = 2):
     return box
 
 
+def windowpane(face, role: str = "P", base: int = 2, cell: int = 5, ox: int = 0, rows=None):
+    """Estate tweed: a calm ground crossed by a thin darker windowpane check every `cell` texels."""
+    for y in rows if rows is not None else range(face.h):
+        for x in range(face.w):
+            on = (x + ox) % cell == 0 or y % cell == 0
+            face.set(x, y, k(role, base - 1) if on else k(role, base))
+
+
 # -- props -----------------------------------------------------------------------------------
 def disc(g, pid: str, pivot, diameter: int, role: str, base: int = 2, depth: int = 1, bone: str = "TORSO",
          rotation=(0, 0, 0), texture: str = "smooth", seed: int = 0, motion: str = "none"):
