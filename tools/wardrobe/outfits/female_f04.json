@@ -1,0 +1,16 @@
+{
+  "outfits": [
+    {"id": "f_windlass_crossbowwoman", "name": "Crossbowwoman", "top": "tf136_crossbowwomans_windlass_jerkin", "bottom": "bf136_crossbowwomans_quilted_trews"},
+    {"id": "f_lamellar_spearmaiden", "name": "Spearmaiden", "top": "tf137_spearmaidens_lamellar_vest", "bottom": "bf137_spearmaidens_leather_strip_skirt"},
+    {"id": "f_mail_collar_lady_sergeant", "name": "Lady Sergeant", "top": "tf138_lady_sergeants_mail_collar_gambeson", "bottom": "bf138_lady_sergeants_splinted_boots_skirt"},
+    {"id": "f_wrap_coat_horse_archer", "name": "Horse Archer", "top": "tf139_horse_archers_wrap_coat", "bottom": "bf139_horse_archers_riding_trousers"},
+    {"id": "f_leaf_mantle_scout", "name": "Scout", "top": "tf140_scouts_leaf_mottled_mantle", "bottom": "bf140_scouts_soft_hunting_boots"}
+  ],
+  "professions": {
+    "ARCHER": ["f_windlass_crossbowwoman", "f_wrap_coat_horse_archer", "f_leaf_mantle_scout"],
+    "GUARD": ["f_windlass_crossbowwoman", "f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant"],
+    "KNIGHT": ["f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant"],
+    "ADVENTURER": ["f_wrap_coat_horse_archer"],
+    "CARTOGRAPHER": ["f_leaf_mantle_scout"]
+  }
+}
