@@ -2,6 +2,8 @@ package dev.villagefriends;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import java.util.Optional;
+import net.minecraft.core.BlockPos;
 
 /**
  * A knocked-out resident. Times are server game ticks, which only advance while the world is being
@@ -10,14 +12,17 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
  * @param until when they die of their injuries unless revived
  * @param bandages how many Bandage Wraps (from players or the village apothecary) bought them more time
  * @param tended whether the village apothecary has already dressed their wounds
+ * @param bed where they were helped to lie while they wait: their own bed (its head) or an apothecary cot
  */
-public record KnockoutState(long since, long until, int bandages, boolean tended) {
+public record KnockoutState(long since, long until, int bandages, boolean tended, Optional<BlockPos> bed) {
     public static final Codec<KnockoutState> CODEC = RecordCodecBuilder.create(i -> i.group(
             Codec.LONG.optionalFieldOf("since", 0L).forGetter(KnockoutState::since),
             Codec.LONG.optionalFieldOf("until", 0L).forGetter(KnockoutState::until),
             Codec.INT.optionalFieldOf("bandages", 0).forGetter(KnockoutState::bandages),
-            Codec.BOOL.optionalFieldOf("tended", false).forGetter(KnockoutState::tended)
+            Codec.BOOL.optionalFieldOf("tended", false).forGetter(KnockoutState::tended),
+            BlockPos.CODEC.optionalFieldOf("bed").forGetter(KnockoutState::bed)
     ).apply(i, KnockoutState::new));
+    public KnockoutState(long since, long until, int bandages, boolean tended) { this(since, until, bandages, tended, Optional.empty()); }
 
     /** A full day of play: 24 real hours of ticks. */
     public static final long DAY = 24L * 60 * 60 * 20;
@@ -30,8 +35,10 @@ public record KnockoutState(long since, long until, int bandages, boolean tended
     public long left(long now) { return Math.max(0, until - now); }
     /** One more bandage: twelve more hours, up to two days left. */
     public KnockoutState bandaged(long now, boolean byApothecary) {
-        return new KnockoutState(since, Math.min(until + BANDAGE, now + MOST_LEFT), bandages + 1, tended || byApothecary);
+        return new KnockoutState(since, Math.min(until + BANDAGE, now + MOST_LEFT), bandages + 1, tended || byApothecary, bed);
     }
+    /** Lying in their own bed (its head) or on an apothecary cot now, or nowhere in particular. */
+    public KnockoutState in(BlockPos place) { return new KnockoutState(since, until, bandages, tended, Optional.ofNullable(place)); }
     public boolean canBandage(long now) { return left(now) + 20 * 60 < MOST_LEFT; }
     /** "23h 59m", "41m", "under a minute". */
     public static String duration(long ticks) {

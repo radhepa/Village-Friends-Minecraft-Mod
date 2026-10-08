@@ -16,12 +16,18 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.ai.memory.WalkTarget;
 import net.minecraft.world.entity.npc.villager.Villager;
+import net.minecraft.world.level.block.AbstractBedBlock;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.GlobalPos;
+import dev.villagefriends.home.Homes;
 
 /**
  * A resident who would die is knocked out instead: they lie hurt on the ground for a day of play (24 real
  * hours of ticks, counted only while the world runs). Smelling Salts wake them with a fifth of their health,
  * a Revival Tonic with all of it; a Bandage Wrap buys twelve more hours, and the village apothecary will
- * come and dress their wounds once. If the clock runs out they die for good. The void and /kill still kill
+ * come and dress their wounds once, then help them to their own bed (or a cot at the apothecary's) to wait.
+ * If the clock runs out they die for good. The void and /kill still kill
  * outright. Recruited companions keep their own, gentler downing (see {@link CompanionController}) but lie
  * on the ground the same way.
  */
@@ -44,7 +50,8 @@ public final class Knockouts {
     public static void lieDown(Villager v) {
         if (!injured(v)) target(v).setAttached(INJURED, true);
         if (v.isPassenger()) v.stopRiding();
-        if (v.isSleeping()) v.stopSleeping();
+        // Someone helped into their own bed stays in it.
+        if (v.isSleeping() && !inBed(v)) v.stopSleeping();
         if (v.getPose() != Pose.SLEEPING) v.setPose(Pose.SLEEPING);
         // The injured hitbox depends on the attachment as well as the pose.
         v.refreshDimensions();
@@ -89,6 +96,13 @@ public final class Knockouts {
         if (level.getGameTime() >= s.until()) { expire(v, level); return true; }
         patients.add(v);
         if (!injured(v) || v.getPose() != Pose.SLEEPING) lieDown(v);
+        var bed = s.bed().orElse(null);
+        if (bed != null && !v.isSleeping() && level.getGameTime() % 20 == 0) {
+            // Back into bed after a reload; a bed that was broken leaves them where they are.
+            var at = level.getBlockState(bed);
+            if (at.getBlock() instanceof AbstractBedBlock && !at.getValue(AbstractBedBlock.OCCUPIED)) v.startSleeping(bed);
+            else if (at.getBlock() != VillageBlocks.get("apothecary_cot")) target(v).setAttached(KNOCKOUT, s.in(null));
+        }
         v.getNavigation().stop(); v.clearFire();
         if (v.getHealth() > 1) v.setHealth(1);
         return true;
@@ -143,6 +157,7 @@ public final class Knockouts {
     public static void revive(Villager v, float healthFraction) {
         var level = (ServerLevel) v.level();
         unload(v);
+        if (v.isSleeping()) v.stopSleeping();
         target(v).removeAttached(KNOCKOUT);
         getUp(v);
         v.setHealth(Math.max(2, v.getMaxHealth() * healthFraction));
@@ -182,7 +197,63 @@ public final class Knockouts {
         level.sendParticles(ParticleTypes.HAPPY_VILLAGER, patient.getX(), patient.getY() + .4, patient.getZ(), 6, .4, .1, .4, 0);
         var line = Component.literal(name(apothecary) + " dressed " + name(patient) + "'s wounds · " + KnockoutState.duration(next.left(now)) + " left to revive them");
         for (var p : level.players()) if (p.distanceToSqr(patient) < 48 * 48) p.sendSystemMessage(line, true);
+        helpHome(apothecary, patient, level);
         return false;
+    }
+    private static boolean inBed(Villager v) {
+        var s = state(v);
+        return s != null && s.bed().isPresent() && v.getSleepingPos().map(p -> p.equals(s.bed().get())).orElse(false);
+    }
+    /**
+     * Once their wounds are dressed, a patient is helped to their own bed when it is close by ({@link Homes#CARRY_REACH}
+     * blocks), loaded and free; otherwise onto the nearest free apothecary cot; otherwise they stay where they fell.
+     */
+    static void helpHome(Villager apothecary, Villager patient, ServerLevel level) {
+        var s = state(patient);
+        if (s == null || s.bed().isPresent()) return;
+        var from = patient.position();
+        var bed = Homes.bedOf(patient).map(dev.villagefriends.home.House.Bed::head).orElse(null);
+        String where = null;
+        if (bed != null && level.isLoaded(bed) && bed.closerToCenterThan(from, Homes.CARRY_REACH)) {
+            var at = level.getBlockState(bed);
+            if (at.getBlock() instanceof AbstractBedBlock && !at.getValue(AbstractBedBlock.OCCUPIED)) {
+                target(patient).setAttached(KNOCKOUT, s.in(bed));
+                patient.startSleeping(bed);
+                if (patient.isSleeping()) where = "their own bed";
+                else target(patient).setAttached(KNOCKOUT, s);
+            }
+        }
+        if (where == null) {
+            var cot = cot(apothecary, patient, level);
+            if (cot != null) {
+                patient.teleportTo(cot.getX() + .5, cot.getY() + 9 / 16.0, cot.getZ() + .5);
+                target(patient).setAttached(KNOCKOUT, s.in(cot));
+                lieDown(patient);
+                where = "a cot at the apothecary's";
+            }
+        }
+        if (where == null) return;
+        level.sendParticles(ParticleTypes.POOF, from.x, from.y + .4, from.z, 10, .4, .2, .4, .02);
+        level.sendParticles(ParticleTypes.POOF, patient.getX(), patient.getY() + .4, patient.getZ(), 10, .4, .2, .4, .02);
+        var line = Component.literal(name(apothecary) + " helped " + name(patient) + " to " + where + ".");
+        for (var p : level.players()) if (p.distanceToSqr(patient) < 48 * 48 || p.position().distanceToSqr(from) < 48 * 48) p.sendSystemMessage(line, false);
+    }
+    /** The nearest free apothecary cot around the apothecary's workstation (or the apothecary), within reach of the patient. */
+    private static BlockPos cot(Villager apothecary, Villager patient, ServerLevel level) {
+        var anchor = apothecary.getBrain().getMemory(MemoryModuleType.JOB_SITE).filter(g -> g.dimension() == level.dimension())
+                .map(GlobalPos::pos).orElse(apothecary.blockPosition());
+        if (!anchor.closerToCenterThan(patient.position(), Homes.CARRY_REACH)) return null;
+        var block = VillageBlocks.get("apothecary_cot");
+        BlockPos best = null; double bestDistance = Double.MAX_VALUE;
+        for (var p : BlockPos.betweenClosed(anchor.offset(-8, -3, -8), anchor.offset(8, 3, 8))) {
+            if (!level.isLoaded(p) || level.getBlockState(p).getBlock() != block) continue;
+            var top = Vec3.atBottomCenterOf(p).add(0, 9 / 16.0, 0);
+            boolean taken = false;
+            for (var other : patients) if (other != patient && other.position().distanceToSqr(top) < 1) taken = true;
+            double d = p.distSqr(anchor);
+            if (!taken && d < bestDistance) { best = p.immutable(); bestDistance = d; }
+        }
+        return best;
     }
     private Knockouts() {}
 }
