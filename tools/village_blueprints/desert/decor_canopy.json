@@ -1,0 +1,158 @@
+{
+ "format": 1,
+ "size": [7, 5, 7],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "C": {
+   "id": "minecraft:white_wool"
+  },
+  "D": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "F": {
+   "id": "minecraft:cyan_wool"
+  },
+  "G": {
+   "id": "minecraft:orange_carpet"
+  },
+  "H": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "I": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "east",
+    "waterlogged": "false"
+   }
+  },
+  "J": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "west",
+    "waterlogged": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "L": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:white_carpet"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAABAAA",
+    "AAABAAA",
+    "ABEBEBA",
+    "AEBEBEA",
+    "ABEBEBA",
+    "AEBEBEA",
+    "ABEBEBA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "...K...",
+    ".......",
+    ".D...D.",
+    "..GGG..",
+    ".IGDGJ.",
+    "..HGH..",
+    ".D...D."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".......",
+    ".......",
+    ".D...D.",
+    ".......",
+    "...M...",
+    ".......",
+    ".D...D."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".......",
+    ".......",
+    ".D...D.",
+    ".......",
+    "...L...",
+    ".......",
+    ".D...D."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".......",
+    ".......",
+    ".CFCFC.",
+    ".CFCFC.",
+    ".CFCFC.",
+    ".CFCFC.",
+    ".CFCFC."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [3, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/decor.py",
+  "checksum": "0e8f86dcb5ccd743"
+ }
+}
