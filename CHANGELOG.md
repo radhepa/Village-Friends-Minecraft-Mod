@@ -1,3 +1,13 @@
+# Village Friends 2.17.0 — Guard duty and knockouts
+
+- **Night patrols:** guards on the night watch walk a loop of checkpoints around their village in squads of two or three, the leader waiting for stragglers and the others following a pace behind. When fewer than two of a village's guards keep the watch, the next guards are called up for the night; a village's only guard stands watch at the bell instead of walking alone.
+- **Raid response:** during a raid guards wake up, ignore the alarm, the bell and panic, muster around the bell (routine "Defending the village") and go after the raiders once the first wave arrives, then return to their day when the raid is over.
+- **Knockouts and permanent death:** a fatal blow knocks a resident out instead of killing them. They lie hurt on the ground, can't be harmed or targeted and can't be zombified. Revive them within a day of play (24 real hours of ticks, counted only while the world runs) with Smelling Salts (20% health) or a Revival Tonic (full health); a Bandage Wrap adds 12 hours, up to two days left. The village apothecary walks over and dresses a knocked-out neighbor's wounds once. Residents nobody revives die permanently; the void and /kill still kill outright.
+- Knocked-out residents and downed companions lie on their backs, slumped to one side, head lolled, one arm across the stomach and one flung out, with slow shallow breathing, and a low, body-sized hitbox you can click. Downed companions no longer crouch.
+- **Ten new guard animations** (Village Life now has 359 clips) in `tools/animations/village_life/guards.py`, built around the vanilla sword and bow the guards carry (the items themselves are untouched). Knights: rest both hands on the pommel (favoured on night watch), whet the blade, sight along it for nicks, a salute-and-flourish into high guard, and hold the line in a two-handed guard during raids. Archers: hold a full draw on the horizon, scan the dark with a hand shading the eyes (night watch), flex the bow limb, wax the bowstring, and wait with an arrow half-drawn during raids.
+- Add 15 lines of dialogue: guards greeting you and talking during a raid, and night-watch talk about walking the watch in pairs.
+- Add `KnockoutGameTest` (`-Ptests=KnockoutGameTest`) and `GuardDutyTest`.
+
 # Village Friends 2.16.0 — 171 new outfits
 
 - Add 99 men's outfits (each a top and a bottom), 219 tops and 219 bottoms in all:
