@@ -647,12 +647,12 @@
   {
    "name": "hut",
    "min": [4, 2, 5],
-   "max": [8, 7, 9],
+   "max": [8, 10, 9],
    "probe": [6, 2, 6]
   }
  ],
  "design": {
   "source": "tools/village_design/buildings/savanna/homes.py",
-  "checksum": "0c723ec42fdd9fe4"
+  "checksum": "547ac956794f5a70"
  }
 }

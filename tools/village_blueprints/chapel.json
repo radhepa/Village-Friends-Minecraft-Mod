@@ -54,12 +54,6 @@
    "id": "minecraft:spruce_planks"
   },
   "L": {
-   "id": "minecraft:stone_bricks",
-   "properties": {
-    "axis": "z"
-   }
-  },
-  "M": {
    "id": "minecraft:spruce_stairs",
    "properties": {
     "facing": "north",
@@ -68,7 +62,7 @@
     "waterlogged": "false"
    }
   },
-  "N": {
+  "M": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -79,7 +73,7 @@
     "west": "none"
    }
   },
-  "O": {
+  "N": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "east",
@@ -87,7 +81,7 @@
     "shape": "straight"
    }
   },
-  "P": {
+  "O": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "west",
@@ -95,7 +89,7 @@
     "shape": "straight"
    }
   },
-  "Q": {
+  "P": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "low",
@@ -106,7 +100,7 @@
     "west": "low"
    }
   },
-  "R": {
+  "Q": {
    "id": "minecraft:orange_stained_glass_pane",
    "properties": {
     "east": "false",
@@ -116,16 +110,16 @@
     "west": "false"
    }
   },
-  "S": {
+  "R": {
    "id": "minecraft:podzol"
   },
-  "T": {
+  "S": {
    "id": "minecraft:stone_brick_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "U": {
+  "T": {
    "id": "minecraft:white_stained_glass_pane",
    "properties": {
     "east": "false",
@@ -135,7 +129,7 @@
     "west": "false"
    }
   },
-  "V": {
+  "U": {
    "id": "minecraft:yellow_stained_glass_pane",
    "properties": {
     "east": "false",
@@ -145,17 +139,17 @@
     "west": "false"
    }
   },
-  "W": {
+  "V": {
    "id": "minecraft:deepslate_tile_slab",
    "properties": {
     "type": "bottom",
     "waterlogged": "false"
    }
   },
-  "X": {
+  "W": {
    "id": "minecraft:mossy_cobblestone"
   },
-  "Y": {
+  "X": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "north",
@@ -163,7 +157,7 @@
     "waterlogged": "false"
    }
   },
-  "Z": {
+  "Y": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "south",
@@ -171,13 +165,7 @@
     "waterlogged": "false"
    }
   },
-  "a": {
-   "id": "minecraft:stone_bricks",
-   "properties": {
-    "axis": "x"
-   }
-  },
-  "b": {
+  "Z": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "east",
@@ -185,7 +173,7 @@
     "waterlogged": "false"
    }
   },
-  "c": {
+  "a": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "west",
@@ -193,25 +181,25 @@
     "waterlogged": "false"
    }
   },
-  "d": {
+  "b": {
    "id": "minecraft:red_carpet"
   },
-  "e": {
+  "c": {
    "id": "minecraft:spruce_log",
    "properties": {
     "axis": "y"
    }
   },
-  "f": {
+  "d": {
    "id": "minecraft:coarse_dirt"
   },
-  "g": {
+  "e": {
    "id": "minecraft:dandelion"
   },
-  "h": {
+  "f": {
    "id": "minecraft:gravel"
   },
-  "i": {
+  "g": {
    "id": "minecraft:yellow_stained_glass_pane",
    "properties": {
     "east": "true",
@@ -221,10 +209,10 @@
     "west": "true"
    }
   },
-  "j": {
+  "h": {
    "id": "minecraft:cornflower"
   },
-  "k": {
+  "i": {
    "id": "minecraft:dark_oak_fence",
    "properties": {
     "east": "false",
@@ -234,7 +222,7 @@
     "west": "false"
    }
   },
-  "l": {
+  "j": {
    "id": "minecraft:deepslate_tile_stairs",
    "properties": {
     "facing": "north",
@@ -242,7 +230,7 @@
     "shape": "straight"
    }
   },
-  "m": {
+  "k": {
    "id": "minecraft:deepslate_tile_stairs",
    "properties": {
     "facing": "south",
@@ -250,10 +238,10 @@
     "shape": "straight"
    }
   },
-  "n": {
+  "l": {
    "id": "minecraft:pink_tulip"
   },
-  "o": {
+  "m": {
    "id": "minecraft:red_stained_glass_pane",
    "properties": {
     "east": "true",
@@ -263,16 +251,10 @@
     "west": "true"
    }
   },
-  "p": {
-   "id": "minecraft:stone_bricks",
-   "properties": {
-    "axis": "y"
-   }
-  },
-  "q": {
+  "n": {
    "id": "minecraft:chiseled_stone_bricks"
   },
-  "r": {
+  "o": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "low",
@@ -283,21 +265,21 @@
     "west": "none"
    }
   },
-  "s": {
+  "p": {
    "id": "minecraft:iron_chain",
    "properties": {
     "axis": "y",
     "waterlogged": "false"
    }
   },
-  "t": {
+  "q": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "true",
     "waterlogged": "false"
    }
   },
-  "u": {
+  "r": {
    "id": "minecraft:mossy_stone_brick_stairs",
    "properties": {
     "facing": "south",
@@ -305,10 +287,10 @@
     "waterlogged": "false"
    }
   },
-  "v": {
+  "s": {
    "id": "minecraft:orange_tulip"
   },
-  "w": {
+  "t": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -319,7 +301,7 @@
     "west": "low"
    }
   },
-  "x": {
+  "u": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -330,7 +312,7 @@
     "west": "none"
    }
   },
-  "y": {
+  "v": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -340,7 +322,7 @@
     "powered": "false"
    }
   },
-  "z": {
+  "w": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -350,39 +332,39 @@
     "powered": "false"
    }
   },
+  "x": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "outer_left"
+   }
+  },
+  "y": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "outer_right"
+   }
+  },
+  "z": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "outer_left"
+   }
+  },
   "0": {
    "id": "minecraft:deepslate_tile_stairs",
    "properties": {
-    "facing": "north",
+    "facing": "south",
     "half": "bottom",
-    "shape": "outer_left"
+    "shape": "outer_right"
    }
   },
   "1": {
-   "id": "minecraft:deepslate_tile_stairs",
-   "properties": {
-    "facing": "north",
-    "half": "bottom",
-    "shape": "outer_right"
-   }
-  },
-  "2": {
-   "id": "minecraft:deepslate_tile_stairs",
-   "properties": {
-    "facing": "south",
-    "half": "bottom",
-    "shape": "outer_left"
-   }
-  },
-  "3": {
-   "id": "minecraft:deepslate_tile_stairs",
-   "properties": {
-    "facing": "south",
-    "half": "bottom",
-    "shape": "outer_right"
-   }
-  },
-  "4": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "true",
@@ -392,39 +374,39 @@
     "west": "true"
    }
   },
-  "5": {
+  "2": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "false",
     "waterlogged": "false"
    }
   },
-  "6": {
+  "3": {
    "id": "minecraft:oxeye_daisy"
   },
-  "7": {
+  "4": {
    "id": "minecraft:poppy"
   },
-  "8": {
+  "5": {
    "id": "minecraft:red_tulip"
   },
-  "9": {
+  "6": {
    "id": "minecraft:rooted_dirt"
   },
-  "!": {
+  "7": {
    "id": "minecraft:stone_brick_slab",
    "properties": {
     "type": "bottom",
     "waterlogged": "false"
    }
   },
-  "#": {
+  "8": {
    "id": "minecraft:stone_brick_slab",
    "properties": {
     "type": "top"
    }
   },
-  "$": {
+  "9": {
    "id": "minecraft:stone_brick_wall",
    "properties": {
     "east": "none",
@@ -435,7 +417,7 @@
     "west": "low"
    }
   },
-  "%": {
+  "!": {
    "id": "minecraft:stone_brick_wall",
    "properties": {
     "east": "none",
@@ -446,10 +428,10 @@
     "west": "none"
    }
   },
-  "&": {
+  "#": {
    "id": "minecraft:allium"
   },
-  "(": {
+  "$": {
    "id": "minecraft:bell",
    "properties": {
     "attachment": "ceiling",
@@ -457,10 +439,10 @@
     "powered": "false"
    }
   },
-  ")": {
+  "%": {
    "id": "minecraft:brewing_stand"
   },
-  "*": {
+  "&": {
    "id": "minecraft:candle",
    "properties": {
     "candles": "2",
@@ -468,7 +450,7 @@
     "waterlogged": "false"
    }
   },
-  "+": {
+  "(": {
    "id": "minecraft:candle",
    "properties": {
     "candles": "3",
@@ -476,13 +458,13 @@
     "waterlogged": "false"
    }
   },
-  ",": {
+  ")": {
    "id": "minecraft:chiseled_stone_bricks",
    "properties": {
     "type": "top"
    }
   },
-  "-": {
+  "*": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -493,7 +475,7 @@
     "west": "low"
    }
   },
-  "/": {
+  "+": {
    "id": "minecraft:cobblestone_wall",
    "properties": {
     "east": "none",
@@ -504,7 +486,7 @@
     "west": "none"
    }
   },
-  ":": {
+  ",": {
    "id": "minecraft:deepslate_tile_wall",
    "properties": {
     "east": "none",
@@ -515,25 +497,25 @@
     "west": "none"
    }
   },
-  ";": {
+  "-": {
    "id": "minecraft:iron_chain",
    "properties": {
     "axis": "y"
    }
   },
-  "<": {
+  "/": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "=": {
+  ":": {
    "id": "minecraft:lightning_rod"
   },
-  ">": {
+  ";": {
    "id": "minecraft:lily_of_the_valley"
   },
-  "?": {
+  "<": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "south",
@@ -541,7 +523,7 @@
     "waterlogged": "false"
    }
   },
-  "@": {
+  "=": {
    "id": "minecraft:stone_brick_wall",
    "properties": {
     "east": "low",
@@ -552,7 +534,7 @@
     "west": "none"
    }
   },
-  "[": {
+  ">": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "east"
@@ -563,53 +545,53 @@
   {
    "y": 0,
    "rows": [
-    "CCCCCCChAhCCCCCCC",
-    "CCCCCCChBhCCCCCCC",
-    "CJJJCAChAhCACJJJC",
+    "CCCCCCCfAfCCCCCCC",
+    "CCCCCCCfBfCCCCCCC",
+    "CJJJCACfAfCACJJJC",
     "CJJJCCAAAAACCJJJC",
     "CJJJCCADDDACCJJJC",
     "CJJJCCADDDACCJJJC",
     "CCCCCCADDDACCCCCC",
     "CCCCAAAAAAAAACCCC",
     "CCCCAEEEEEEEACCCC",
-    "CSCCAEEEEEEEACC9C",
-    "CSCCAEEEEEEEACCfC",
-    "CCSCAEEEEEEEACCCC",
-    "CSSCAEEEEEEEACCSC",
-    "CfCCAEEEEEEEACCSC",
+    "CRCCAEEEEEEEACC6C",
+    "CRCCAEEEEEEEACCdC",
+    "CCRCAEEEEEEEACCCC",
+    "CRRCAEEEEEEEACCRC",
+    "CdCCAEEEEEEEACCRC",
     "CCCCAEEEEEEEACCCC",
-    "C9CCAEEEEEEEACCSC",
-    "CSCCAEEEEEEEACCfC",
-    "CCCCAEEEEEEEACSCC",
-    "CfCCAAAAAAAAACffC",
-    "CSCCCCCCCCCCCCCSC",
+    "C6CCAEEEEEEEACCRC",
+    "CRCCAEEEEEEEACCdC",
+    "CCCCAEEEEEEEACRCC",
+    "CdCCAAAAAAAAACddC",
+    "CRCCCCCCCCCCCCCRC",
     "CCCCCCCCCCCCCCCCC"
    ]
   },
   {
    "y": 1,
    "rows": [
-    "........<........",
+    "......../........",
     ".................",
-    "..nv.k..?..k.jn..",
-    "..g8..AAAAA..g.g.",
-    ".gvv..ADDDA..njg.",
-    "..76..ADDDA..nj..",
+    "..ls.i..<..i.hl..",
+    "..e5..AAAAA..e.e.",
+    ".ess..ADDDA..lhe.",
+    "..43..ADDDA..lh..",
     "......ADDDA......",
-    "x...AAAAAAAAA...x",
-    "Xu.AADDDDDDDAA.@X",
-    "N>..ADDDDDDDA.e7N",
-    "N.u.ADDDDDDDA...N",
-    "r$.AADDDDDDDAA.qw",
-    "X8..ADDDDDDDA..&X",
-    "N...ADDDDDDDA...N",
-    "r$.AADDDDDDDAA.uN",
-    "Ng..ADDDDDDDA...N",
-    "X...AKKKKKKKA./.X",
-    "r-.AAKKKKKKKAAjqw",
-    "N6[.AAAAAAAAA...N",
-    "N...............N",
-    "XQQQXQQQXQQQXQQQX"
+    "u...AAAAAAAAA...u",
+    "Wr.AADDDDDDDAA.=W",
+    "M;..ADDDDDDDA.c4M",
+    "M.r.ADDDDDDDA...M",
+    "o9.AADDDDDDDAA.nt",
+    "W5..ADDDDDDDA..#W",
+    "M...ADDDDDDDA...M",
+    "o9.AADDDDDDDAA.rM",
+    "Me..ADDDDDDDA...M",
+    "W...AKKKKKKKA.+.W",
+    "o*.AAKKKKKKKAAhnt",
+    "M3>.AAAAAAAAA...M",
+    "M...............M",
+    "WPPPWPPPWPPPWPPPW"
    ]
   },
   {
@@ -617,22 +599,22 @@
    "rows": [
     ".................",
     ".................",
-    ".....k.....k.....",
-    "......DByBD......",
+    ".....i.....i.....",
+    "......DBvBD......",
     "......B...B......",
     "......B...B......",
     "......B...B......",
-    "....BADByBDABHHH.",
+    "....BADBvBDABHHH.",
     "...BA.......ABHHH",
-    "....A...d...AHeHH",
-    "....AMMMdMMMAHHHH",
-    "...BA...d...ABH%.",
-    "....AMMMdMMMA....",
-    "....A...d...A....",
-    "...BAMMMdMMMAB...",
-    "....A...d...A....",
+    "....A...b...AHcHH",
+    "....ALLLbLLLAHHHH",
+    "...BA...b...ABH!.",
+    "....ALLLbLLLA....",
+    "....A...b...A....",
+    "...BALLLbLLLAB...",
+    "....A...b...A....",
     "....A.......A....",
-    "...BA..#,#..AB.%.",
+    "...BA..8)8..AB.!.",
     "....BAAAAAAAB....",
     ".................",
     "................."
@@ -643,23 +625,23 @@
    "rows": [
     ".................",
     ".................",
-    ".....5.....5.....",
-    "......DBzBD......",
+    ".....2.....2.....",
+    "......DBwBD......",
     "......B...B......",
     "......B...B......",
     "......B...B......",
-    "....BADBzBDAB....",
+    "....BADBwBDAB....",
     "...BA.......ABH..",
-    "....V.......VHeH.",
-    "....U.......U.H..",
+    "....U.......UHcH.",
+    "....T.......T.H..",
     "...BA.......AB...",
-    "....V.......V....",
     "....U.......U....",
+    "....T.......T....",
     "...BA.......AB...",
-    "....V.......V....",
     "....U.......U....",
-    "...BA..)+*..AB...",
-    "....BAAioiAAB....",
+    "....T.......T....",
+    "...BA..%(&..AB...",
+    "....BAAgmgAAB....",
     ".................",
     "................."
    ]
@@ -670,22 +652,22 @@
     ".................",
     ".................",
     ".................",
-    "......DBqBD......",
+    "......DBnBD......",
     "......B...B......",
     "......B...B......",
     "......B...B......",
     "....BADBBBDABHHH.",
-    "...OA.......APHHH",
-    "....V.......VHeHH",
-    "....U.......UHHHH",
-    "...OA.......APHH.",
-    "....V.......V....",
+    "...NA.......AOHHH",
+    "....U.......UHcHH",
+    "....T.......THHHH",
+    "...NA.......AOHH.",
     "....U.......U....",
-    "...OA.......AP...",
-    "....V.......V....",
+    "....T.......T....",
+    "...NA.......AO...",
     "....U.......U....",
-    "...OA.......AP...",
-    "....BAAioiAAB....",
+    "....T.......T....",
+    "...NA.......AO...",
+    "....BAAgmgAAB....",
     ".................",
     "................."
    ]
@@ -702,16 +684,16 @@
     "......B...B......",
     "....BADBBBDAB....",
     "....A.......A.H..",
-    "....R.......RHeH.",
-    "....R.......R.H..",
+    "....Q.......QHcH.",
+    "....Q.......Q.H..",
     "....A.......A....",
-    "....R.......R....",
-    "....R.......R....",
+    "....Q.......Q....",
+    "....Q.......Q....",
     "....A.......A....",
-    "....R.......R....",
-    "....R.......R....",
+    "....Q.......Q....",
+    "....Q.......Q....",
     "....A.......A....",
-    "....BAAioiAAB....",
+    "....BAAgmgAAB....",
     ".................",
     "................."
    ]
@@ -728,7 +710,7 @@
     "......B...B......",
     "....BADBBBDAB....",
     "....A.......A.H..",
-    "....A.......AHeH.",
+    "....A.......AHcH.",
     "....A.......A.H..",
     "....A.......A....",
     "....A.......A....",
@@ -737,7 +719,7 @@
     "....A.......A....",
     "....A.......A....",
     "....A.......A....",
-    "....BAAAoAAAB....",
+    "....BAAAmAAAB....",
     ".................",
     "................."
    ]
@@ -748,13 +730,13 @@
     ".................",
     ".................",
     ".................",
-    "......D4B4D......",
+    "......D1B1D......",
     "......B...B......",
     "......B...B......",
     "......B...B......",
     "....BADBBBDAB....",
     "....A.......A....",
-    "....A.......A.e..",
+    "....A.......A.c..",
     "....A.......A....",
     "....A.......A....",
     "....A.......A....",
@@ -777,20 +759,20 @@
     "......DBBBD......",
     "......B...B......",
     "......B...B......",
-    "...O..B...B..P...",
-    "...FpaDBBBDapG...",
-    "...FL.......LG...",
-    "...FL...t...LGH..",
-    "...FL.......LG...",
-    "...FL.......LG...",
-    "...FL.......LG...",
-    "...FL...t...LG...",
-    "...FL.......LG...",
-    "...FL.......LG...",
-    "...FL...t...LG...",
-    "...FL.......LG...",
-    "...FpaaaaaaapG...",
-    "...O.........P...",
+    "...N..B...B..O...",
+    "...FBBDBBBDBBG...",
+    "...FB.......BG...",
+    "...FB...q...BGH..",
+    "...FB.......BG...",
+    "...FB.......BG...",
+    "...FB.......BG...",
+    "...FB...q...BG...",
+    "...FB.......BG...",
+    "...FB.......BG...",
+    "...FB...q...BG...",
+    "...FB.......BG...",
+    "...FBBBBBBBBBG...",
+    "...N.........O...",
     "................."
    ]
   },
@@ -803,20 +785,20 @@
     "......DBBBD......",
     "......B...B......",
     "......B...B......",
-    "....O.B...B.P....",
+    "....N.B...B.O....",
     "....FBDBBBDBG....",
     "....F.......G....",
-    "....F...s...G....",
+    "....F...p...G....",
     "....F.......G....",
     "....F.......G....",
     "....F.......G....",
-    "....F...s...G....",
+    "....F...p...G....",
     "....F.......G....",
     "....F.......G....",
-    "....F...s...G....",
+    "....F...p...G....",
     "....F.......G....",
     "....FBBBBBBBG....",
-    "....O.......P....",
+    "....N.......O....",
     "................."
    ]
   },
@@ -829,7 +811,7 @@
     "......DBBBD......",
     "......BKKKB......",
     "......BKKKB......",
-    ".....OBKKKBP.....",
+    ".....NBKKKBO.....",
     ".....FDBBBDG.....",
     ".....F.....G.....",
     ".....F.....G.....",
@@ -842,7 +824,7 @@
     ".....F.....G.....",
     ".....F.....G.....",
     ".....FBBBBBG.....",
-    ".....O.....P.....",
+    ".....N.....O.....",
     "................."
    ]
   },
@@ -852,11 +834,11 @@
     ".................",
     ".................",
     ".................",
-    "......DTTTD......",
-    "......T...T......",
-    "......T...T......",
-    "......T...T......",
-    "......DTTTD......",
+    "......DSSSD......",
+    "......S...S......",
+    "......S...S......",
+    "......S...S......",
+    "......DSSSD......",
     "......F...G......",
     "......F...G......",
     "......F...G......",
@@ -868,7 +850,7 @@
     "......F...G......",
     "......F...G......",
     "......FBBBG......",
-    "......O...P......",
+    "......N...O......",
     "................."
    ]
   },
@@ -880,8 +862,8 @@
     ".................",
     "......D...D......",
     ".................",
-    "........(........",
-    ".......O.P.......",
+    "........$........",
+    ".......N.O.......",
     "......D...D......",
     ".......F.G.......",
     ".......F.G.......",
@@ -894,7 +876,7 @@
     ".......F.G.......",
     ".......F.G.......",
     ".......FBG.......",
-    ".......O.P.......",
+    ".......N.O.......",
     "................."
    ]
   },
@@ -904,23 +886,23 @@
     ".................",
     ".................",
     ".................",
+    "......DXXXD......",
+    "......a...Z......",
+    "......a.-.Z......",
+    "......a.7.Z......",
     "......DYYYD......",
-    "......c...b......",
-    "......c.;.b......",
-    "......c.!.b......",
-    "......DZZZD......",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........W........",
-    "........!........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........V........",
+    "........7........",
     "................."
    ]
   },
@@ -929,13 +911,13 @@
    "rows": [
     ".................",
     ".................",
+    ".....XXXXXXX.....",
+    ".....aBBBBBZ.....",
+    ".....aBBBBBZ.....",
+    ".....aBBBBBZ.....",
+    ".....aBBBBBZ.....",
+    ".....aBBBBBZ.....",
     ".....YYYYYYY.....",
-    ".....cBBBBBb.....",
-    ".....cBBBBBb.....",
-    ".....cBBBBBb.....",
-    ".....cBBBBBb.....",
-    ".....cBBBBBb.....",
-    ".....ZZZZZZZ.....",
     ".................",
     ".................",
     ".................",
@@ -956,11 +938,11 @@
     ".................",
     ".................",
     ".................",
-    "......2mmm3......",
+    "......zkkk0......",
     "......FIIIG......",
     "......FIIIG......",
     "......FIIIG......",
-    "......1lll0......",
+    "......yjjjx......",
     ".................",
     ".................",
     ".................",
@@ -1035,9 +1017,9 @@
     ".................",
     ".................",
     ".................",
-    ".......2m3.......",
+    ".......zk0.......",
     ".......FIG.......",
-    ".......1l0.......",
+    ".......yjx.......",
     ".................",
     ".................",
     ".................",
@@ -1140,7 +1122,7 @@
     ".................",
     ".................",
     ".................",
-    "........:........",
+    "........,........",
     ".................",
     ".................",
     ".................",
@@ -1166,7 +1148,7 @@
     ".................",
     ".................",
     ".................",
-    "........=........",
+    "........:........",
     ".................",
     ".................",
     ".................",
@@ -1256,6 +1238,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/civic.py",
-  "checksum": "f4500d584e8d1af4"
+  "checksum": "d41396907333e188"
  }
 }

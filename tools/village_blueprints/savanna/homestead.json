@@ -870,18 +870,18 @@
   {
    "name": "sleeping_hut",
    "min": [3, 2, 7],
-   "max": [7, 7, 11],
+   "max": [7, 10, 11],
    "probe": [5, 2, 8]
   },
   {
    "name": "kitchen_hut",
    "min": [12, 2, 7],
-   "max": [16, 7, 11],
+   "max": [16, 8, 11],
    "probe": [14, 2, 8]
   }
  ],
  "design": {
   "source": "tools/village_design/buildings/savanna/homes.py",
-  "checksum": "9c8b9f8414734bc3"
+  "checksum": "0e98114c07809721"
  }
 }

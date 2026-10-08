@@ -128,9 +128,9 @@ def bell_frame(b, x, z, along='x', log='stripped_spruce_log', stone='cobblestone
         px, pz = x + dx * s, z + dz * s
         b.set(px, 1, pz, stone)
         for y in (2, 3, 4):
-            b.set(px, y, pz, log, axis='y')
+            b.set(px, y, pz, parts.log(log, 'y'))
     for s in (-1, 0, 1):
-        b.set(x + dx * s, 5, z + dz * s, log, axis=along)
+        b.set(x + dx * s, 5, z + dz * s, parts.log(log, along))
     b.set(x, 6, z, slab, type='bottom')
     b.set(x, 4, z, 'bell', attachment='ceiling', facing='north' if along == 'x' else 'east', powered=False)
     b.set(x, 1, z, stone)

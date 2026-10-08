@@ -43,8 +43,15 @@ class Style:
         self.accent = accent
 
 
+PILLAR_ENDINGS = ('_log', '_wood', '_stem', '_hyphae', '_pillar', 'froglight')
+PILLARS = {'hay_block', 'basalt', 'polished_basalt', 'bone_block', 'iron_chain', 'chain', 'bamboo_block',
+           'stripped_bamboo_block', 'muddy_mangrove_roots', 'deepslate'}
+
+
 def log(name, axis='y'):
-    return block(name, axis=axis)
+    """A pillar block turned along ``axis``; blocks without an axis (cut sandstone, planks...) stay plain."""
+    base = name.split('[')[0].split(':')[-1]
+    return block(name, axis=axis) if base.endswith(PILLAR_ENDINGS) or base in PILLARS else block(name)
 
 
 def along(x0, z0, x1, z1):

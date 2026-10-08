@@ -3105,6 +3105,259 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/savanna/bungalow_clay",
+      "size": [
+        13,
+        11,
+        15
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            8,
+            2,
+            6
+          ],
+          "max": [
+            9,
+            4,
+            10
+          ],
+          "probe": [
+            8,
+            2,
+            7
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          5
+        ],
+        [
+          7,
+          2,
+          8
+        ]
+      ],
+      "bed_feet": [
+        [
+          9,
+          2,
+          9
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            3,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/bungalow_verandah",
+      "size": [
+        17,
+        11,
+        18
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            11,
+            2,
+            7
+          ],
+          "max": [
+            13,
+            4,
+            12
+          ],
+          "probe": [
+            11,
+            2,
+            10
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          6
+        ],
+        [
+          10,
+          2,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          13,
+          2,
+          8
+        ],
+        [
+          13,
+          2,
+          11
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            6,
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/butcher",
+      "size": [
+        14,
+        11,
+        14
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          6,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/cartographer",
+      "size": [
+        11,
+        20,
+        12
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/savanna/chapel",
       "size": [
         17,
@@ -3130,6 +3383,332 @@
         {
           "pos": [
             8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/compound",
+      "size": [
+        19,
+        13,
+        20
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            9,
+            2,
+            13
+          ],
+          "max": [
+            11,
+            4,
+            17
+          ],
+          "probe": [
+            10,
+            2,
+            15
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          12
+        ],
+        [
+          8,
+          2,
+          15
+        ]
+      ],
+      "bed_feet": [
+        [
+          11,
+          2,
+          14
+        ],
+        [
+          11,
+          2,
+          16
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            8,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            10,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            9,
+            1,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/coop",
+      "size": [
+        12,
+        10,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 6,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_cart",
+      "size": [
+        5,
+        4,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_drying_rack",
+      "size": [
+        7,
+        5,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_haystack",
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_termite_mound",
+      "size": [
+        7,
+        9,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_tree_acacia",
+      "size": [
+        9,
+        11,
+        9
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_tree_acacia_twin",
+      "size": [
+        13,
+        12,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            6,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/decor_trough",
+      "size": [
+        7,
+        5,
+        6
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
             1,
             0
           ],
@@ -3235,6 +3814,142 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/savanna/farm_beets_melon",
+      "size": [
+        15,
+        6,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/farm_roots",
+      "size": [
+        15,
+        6,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/farm_wheat",
+      "size": [
+        15,
+        7,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/fisher",
+      "size": [
+        15,
+        8,
+        16
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/fletcher",
+      "size": [
+        13,
+        13,
+        16
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          6,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/savanna/garrison",
@@ -3380,6 +4095,312 @@
       ]
     },
     {
+      "id": "villagefriends:village/savanna/homestead",
+      "size": [
+        20,
+        14,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "sleeping_hut",
+          "min": [
+            3,
+            2,
+            7
+          ],
+          "max": [
+            7,
+            10,
+            11
+          ],
+          "probe": [
+            5,
+            2,
+            8
+          ],
+          "beds": 1
+        },
+        {
+          "name": "kitchen_hut",
+          "min": [
+            12,
+            2,
+            7
+          ],
+          "max": [
+            16,
+            8,
+            11
+          ],
+          "probe": [
+            14,
+            2,
+            8
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          6
+        ],
+        [
+          14,
+          2,
+          6
+        ]
+      ],
+      "bed_feet": [
+        [
+          7,
+          2,
+          9
+        ],
+        [
+          15,
+          2,
+          9
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            8,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            8,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            10,
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/hut_family",
+      "size": [
+        19,
+        16,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            6,
+            2,
+            11
+          ],
+          "max": [
+            12,
+            4,
+            12
+          ],
+          "probe": [
+            8,
+            2,
+            11
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          9,
+          2,
+          5
+        ],
+        [
+          9,
+          2,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          7,
+          2,
+          11
+        ],
+        [
+          11,
+          2,
+          11
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            5,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/hut_round",
+      "size": [
+        13,
+        14,
+        15
+      ],
+      "rooms": [
+        {
+          "name": "hut",
+          "min": [
+            4,
+            2,
+            5
+          ],
+          "max": [
+            8,
+            10,
+            9
+          ],
+          "probe": [
+            6,
+            2,
+            6
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          6,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [
+        [
+          8,
+          2,
+          7
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            9,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/kraal",
+      "size": [
+        17,
+        6,
+        18
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 5,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/savanna/library",
       "size": [
         11,
@@ -3460,6 +4481,266 @@
       ]
     },
     {
+      "id": "villagefriends:village/savanna/lodge",
+      "size": [
+        17,
+        15,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "bedroom_gallery",
+          "min": [
+            4,
+            6,
+            7
+          ],
+          "max": [
+            9,
+            8,
+            9
+          ],
+          "probe": [
+            8,
+            6,
+            8
+          ],
+          "beds": 1
+        },
+        {
+          "name": "bedroom_back",
+          "min": [
+            4,
+            6,
+            11
+          ],
+          "max": [
+            9,
+            8,
+            12
+          ],
+          "probe": [
+            7,
+            6,
+            12
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          6
+        ],
+        [
+          6,
+          6,
+          6
+        ],
+        [
+          10,
+          6,
+          8
+        ],
+        [
+          10,
+          6,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          5,
+          6,
+          8
+        ],
+        [
+          5,
+          6,
+          11
+        ],
+        [
+          5,
+          6,
+          12
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            8,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            9,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            6,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            8,
+            6,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/savanna/longhouse",
+      "size": [
+        18,
+        11,
+        14
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            2,
+            5
+          ],
+          "max": [
+            5,
+            4,
+            8
+          ],
+          "probe": [
+            4,
+            2,
+            7
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          9,
+          2,
+          4
+        ],
+        [
+          6,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          2,
+          8
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            8,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            9,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            10,
+            2,
+            7
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/savanna/market_kraal",
       "size": [
         11,
@@ -3526,6 +4807,58 @@
         {
           "pos": [
             5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/mason",
+      "size": [
+        14,
+        9,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/paddock",
+      "size": [
+        17,
+        8,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 5,
+      "connectors": [
+        {
+          "pos": [
+            8,
             1,
             0
           ],
@@ -4261,6 +5594,58 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/savanna/shepherd",
+      "size": [
+        16,
+        10,
+        15
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 5,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/smithy",
+      "size": [
+        15,
+        13,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/savanna/street_bend_left",
@@ -5621,6 +7006,38 @@
           "name": "villagefriends:lot",
           "target": "villagefriends:building_entrance",
           "pool": "villagefriends:village/savanna/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/savanna/tannery",
+      "size": [
+        15,
+        12,
+        14
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
         }
       ],
       "anchors": []
@@ -7810,6 +9227,385 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/taiga/apothecary",
+      "size": [
+        11,
+        21,
+        16
+      ],
+      "rooms": [
+        {
+          "name": "apothecary_bedroom",
+          "min": [
+            2,
+            7,
+            6
+          ],
+          "max": [
+            6,
+            9,
+            11
+          ],
+          "probe": [
+            4,
+            7,
+            8
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          7,
+          7,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          10
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:alchemical_press",
+          "pos": [
+            2,
+            2,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            6,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            6,
+            2,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/avenue",
+      "size": [
+        5,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            16
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            18
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            20
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            22
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/avenue_bend",
+      "size": [
+        8,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            11
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            14
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            17
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            19
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            20
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            22
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            23
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/taiga/berry_patch",
       "size": [
         11,
@@ -7943,6 +9739,47 @@
         }
       ],
       "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/chapel",
+      "size": [
+        17,
+        30,
+        21
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            19
+          ]
+        }
+      ]
     },
     {
       "id": "villagefriends:village/taiga/chicken_coop",
@@ -8238,6 +10075,101 @@
       ]
     },
     {
+      "id": "villagefriends:village/taiga/end_fade",
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/end_gate",
+      "size": [
+        17,
+        12,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/end_lamp",
+      "size": [
+        7,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/taiga/fisher",
       "size": [
         14,
@@ -8302,6 +10234,170 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/taiga/garrison",
+      "size": [
+        17,
+        22,
+        22
+      ],
+      "rooms": [
+        {
+          "name": "bunk_room",
+          "min": [
+            3,
+            7,
+            13
+          ],
+          "max": [
+            10,
+            9,
+            19
+          ],
+          "probe": [
+            7,
+            7,
+            15
+          ],
+          "beds": 4
+        }
+      ],
+      "doors": [
+        [
+          12,
+          1,
+          3
+        ],
+        [
+          8,
+          2,
+          13
+        ],
+        [
+          11,
+          7,
+          14
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          18
+        ],
+        [
+          5,
+          7,
+          18
+        ],
+        [
+          7,
+          7,
+          18
+        ],
+        [
+          9,
+          7,
+          18
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            5,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            6,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            9,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            10,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:command_desk",
+          "pos": [
+            5,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            9,
+            2,
+            15
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/taiga/goat_pen",
       "size": [
         14,
@@ -8326,6 +10422,86 @@
         }
       ],
       "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/library",
+      "size": [
+        11,
+        22,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "scholar_bedroom",
+          "min": [
+            2,
+            7,
+            10
+          ],
+          "max": [
+            7,
+            9,
+            12
+          ],
+          "probe": [
+            5,
+            7,
+            11
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          4,
+          7,
+          9
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          11
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:archives",
+          "pos": [
+            5,
+            2,
+            11
+          ]
+        }
+      ]
     },
     {
       "id": "villagefriends:village/taiga/log_lodge",
@@ -8537,6 +10713,110 @@
       ]
     },
     {
+      "id": "villagefriends:village/taiga/market_berries",
+      "size": [
+        11,
+        9,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            6,
+            1,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/market_furs",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/market_smokehouse",
+      "size": [
+        11,
+        11,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/taiga/mason",
       "size": [
         12,
@@ -8561,6 +10841,737 @@
         }
       ],
       "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/plaza_elder",
+      "size": [
+        33,
+        30,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/garrison"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/apothecary"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/chapel"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/workshop"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/library"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/tavern"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            7,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            20,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            10,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            10,
+            1,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            23
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            20,
+            1,
+            23
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            24,
+            2,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/plaza_hearth",
+      "size": [
+        33,
+        19,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/tavern"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/apothecary"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/garrison"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/chapel"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/library"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/workshop"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            6,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            16,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            13,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            19,
+            1,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            12,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            20,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            13,
+            1,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            19,
+            1,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            16,
+            1,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            24,
+            1,
+            21
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            26,
+            1,
+            21
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            25,
+            2,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/plaza_millpond",
+      "size": [
+        33,
+        18,
+        33
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          10,
+          1,
+          9
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/workshop"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/library"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/tavern"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/garrison"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/apothecary"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/buildings/chapel"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            23,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            25,
+            1,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            21,
+            1,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            25,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            5,
+            1,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            9,
+            1,
+            21
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            22
+          ]
+        }
+      ]
     },
     {
       "id": "villagefriends:village/taiga/porch_cabin",
@@ -8867,6 +11878,1369 @@
       ]
     },
     {
+      "id": "villagefriends:village/taiga/street_bend_left",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            9
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_bend_right",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_crossroads",
+      "size": [
+        13,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_fork",
+      "size": [
+        15,
+        6,
+        8
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_square",
+      "size": [
+        15,
+        8,
+        15
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/street_straight_lamp",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_straight_long",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_straight_short",
+      "size": [
+        5,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_tee_left",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_tee_right",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_turn_left",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            5
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/street_turn_right",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/taiga/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/taiga/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/taiga/tannery",
       "size": [
         13,
@@ -8897,6 +13271,519 @@
         }
       ],
       "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/tavern",
+      "size": [
+        17,
+        28,
+        29
+      ],
+      "rooms": [
+        {
+          "name": "guest_room_north",
+          "min": [
+            2,
+            7,
+            7
+          ],
+          "max": [
+            7,
+            9,
+            13
+          ],
+          "probe": [
+            5,
+            7,
+            11
+          ],
+          "beds": 2
+        },
+        {
+          "name": "guest_room_south",
+          "min": [
+            2,
+            7,
+            15
+          ],
+          "max": [
+            7,
+            9,
+            20
+          ],
+          "probe": [
+            5,
+            7,
+            17
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          6
+        ],
+        [
+          13,
+          2,
+          21
+        ],
+        [
+          8,
+          2,
+          24
+        ],
+        [
+          8,
+          7,
+          10
+        ],
+        [
+          8,
+          7,
+          17
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          9
+        ],
+        [
+          3,
+          7,
+          12
+        ],
+        [
+          3,
+          7,
+          16
+        ],
+        [
+          3,
+          7,
+          19
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            12,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            12,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            13,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            12,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tap_stand",
+          "pos": [
+            14,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:drinks_barrel",
+          "pos": [
+            14,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            11,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            2,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            3,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            4,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            2,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:kitchen_stove",
+          "pos": [
+            11,
+            2,
+            26
+          ]
+        }
+      ]
     },
     {
       "id": "villagefriends:village/taiga/trapper_hut",
@@ -8966,6 +13853,99 @@
             3,
             2,
             4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/taiga/workshop",
+      "size": [
+        17,
+        21,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            7,
+            7
+          ],
+          "max": [
+            6,
+            9,
+            13
+          ],
+          "probe": [
+            4,
+            7,
+            9
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          6
+        ],
+        [
+          7,
+          7,
+          12
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          7,
+          12
+        ],
+        [
+          5,
+          7,
+          12
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:sawmill",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:sewing_table",
+          "pos": [
+            3,
+            2,
+            12
           ]
         }
       ]
@@ -9862,6 +14842,65 @@
           "pool": "villagefriends:village/savanna/buildings/library",
           "templates": [
             "villagefriends:village/savanna/library"
+          ]
+        }
+      ],
+      "resident_minimum": 10
+    },
+    {
+      "type": "taiga",
+      "structure": "villagefriends:village_taiga",
+      "start_pool": "villagefriends:village/taiga/town_centers",
+      "start_jigsaw": "villagefriends:town_start",
+      "min_pieces": 20,
+      "depth": 6,
+      "max_distance": 100,
+      "biomes": [
+        "minecraft:taiga"
+      ],
+      "required_modules": [
+        {
+          "pool": "villagefriends:village/taiga/town_centers",
+          "templates": [
+            "villagefriends:village/taiga/plaza_hearth",
+            "villagefriends:village/taiga/plaza_millpond",
+            "villagefriends:village/taiga/plaza_elder"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/tavern",
+          "templates": [
+            "villagefriends:village/taiga/tavern"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/garrison",
+          "templates": [
+            "villagefriends:village/taiga/garrison"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/workshop",
+          "templates": [
+            "villagefriends:village/taiga/workshop"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/chapel",
+          "templates": [
+            "villagefriends:village/taiga/chapel"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/apothecary",
+          "templates": [
+            "villagefriends:village/taiga/apothecary"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/taiga/buildings/library",
+          "templates": [
+            "villagefriends:village/taiga/library"
           ]
         }
       ],
