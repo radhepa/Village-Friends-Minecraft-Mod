@@ -28,6 +28,10 @@ Bread and stew restore health; coffee grants a short speed boost and cider a lit
 
 For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creative's **Spawn Eggs** tab. They create ordinary equipped adult villagers at levels 15–30, work in dispensers, and keep their jobs without nearby workstations. Commands: `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. See [GUARDS.md](GUARDS.md) for combat and progression rules.
 
+## Residents' pets
+
+Some residents long for a cat or a dog. In their free time they befriend a stray (one wanders into the village if there isn't one about), name it, and from then on it follows them everywhere, naps by their bed and keeps watch if they're hurt. Now and then they stop to play: fetch, belly rubs, shaking paws and chase with dogs; string, strokes, chin scratches and a feather with cats. Right-click a resident's pet to see their card (owner, age, breed, nature and favorite things), pat them and give them treats. See [PETS.md](PETS.md).
+
 ## Play on this computer
 
 For this build, replace the older Village Friends JAR in the profile's `mods` folder with `build/libs/village-friends-2.14.0.jar`. Building alone does not replace the installed mod.

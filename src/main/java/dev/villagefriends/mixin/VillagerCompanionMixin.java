@@ -39,5 +39,6 @@ public abstract class VillagerCompanionMixin {
         if (Knockouts.drive(villager, level)) ci.cancel();
         else if (CompanionController.state(villager).active()) { CompanionController.drive(villager, level); ci.cancel(); }
         else if (GuardController.drive(villager, level, false)) ci.cancel();
+        else if (dev.villagefriends.pet.VillagerPets.drive(villager, level)) ci.cancel();
     }
 }

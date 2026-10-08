@@ -32,7 +32,7 @@ PACKS = {
                        "work for every profession, greetings, conversations, reactions, weather and children's play.",
         "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
                     "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
-                    "guards"],
+                    "guards", "pets"],
     },
 }
 MAX_ROT, MAX_POS = 400, 12

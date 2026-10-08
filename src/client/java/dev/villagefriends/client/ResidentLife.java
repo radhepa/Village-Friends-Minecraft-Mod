@@ -43,14 +43,17 @@ public final class ResidentLife {
             return w;
         }
         void clear() { clip = null; fadeFrom = -1; trigger = null; }
+        void copy(Playing other) { clip = other.clip; start = other.start; speed = other.speed; fadeFrom = other.fadeFrom; mirror = other.mirror; trigger = other.trigger; }
     }
 
     private final Random random;
     private final boolean leftHanded;
-    private final Playing activity = new Playing(), reaction = new Playing();
+    private final Playing activity = new Playing(), reaction = new Playing(), outgoing = new Playing();
     private int stillTicks, nextActivity, lastHurt, greetAt = -1, greetCooldown, partnerId = -1, partnerCheck, lastTick = -1;
     private boolean unhappy, greeted, talking, speaking;
     private String recent, previous;
+    /** Playing with their pet: the part they're acting out ("throw", "belly_rub"...) and whether it's a cat or a dog. */
+    private String petPhase, petSpecies;
 
     private ResidentLife(Villager villager) {
         int seed = ResidentMotion.seed(villager.getUUID());
@@ -111,6 +114,7 @@ public final class ResidentLife {
         boolean moving = v.walkAnimation.speed() > .06F;
         stillTicks = able && !moving ? stillTicks + 1 : 0;
         if (reaction.over(now)) reaction.clear();
+        if (outgoing.over(now)) outgoing.clear();
         if (activity.over(now)) {
             if (activity.active()) nextActivity = now + pause(v, activity.trigger);
             activity.clear();
@@ -130,6 +134,7 @@ public final class ResidentLife {
         // A new line starts: stop listening and start talking right away.
         if (speaking && !wasSpeaking && activity.active() && !"talk".equals(activity.trigger)) { activity.fade(now); nextActivity = now + 2; }
         noticePlayer(v, client, now);
+        if (playWithPet(v, now, moving)) return;
         if (activity.active() && moving && !talking) activity.fade(now);
         if (activity.active() || reaction.active() || now < nextActivity) return;
 
@@ -150,6 +155,32 @@ public final class ResidentLife {
         previous = recent; recent = clip.id();
         // Neighbors chatting now and then show what they're on about.
         if (trigger.equals("chat_speak") && random.nextFloat() < .3F) EmoteBubbles.ambient(v, random.nextFloat() < .7F ? Emote.DOTS : Emote.NOTE);
+    }
+
+    /**
+     * Playing with their pet: the server says which part of the game they're on, and they act it out with
+     * a {@code pet} clip tagged {@code play:<phase>}, cross-fading from one part to the next.
+     */
+    private boolean playWithPet(Villager v, int now, boolean moving) {
+        String play = ((AttachmentTarget) v).getAttached(dev.villagefriends.pet.VillagerPets.PLAY);
+        String phase = null, species = null;
+        if (play != null) { var parts = play.split("\\|"); phase = parts[0]; species = parts.length > 1 ? parts[1] : null; }
+        boolean changed = !java.util.Objects.equals(phase, petPhase);
+        petPhase = phase; petSpecies = species;
+        if (phase == null) {
+            if (changed && "pet".equals(activity.trigger)) activity.fade(now);
+            return false;
+        }
+        if (!changed && activity.active() && "pet".equals(activity.trigger) && activity.fadeFrom < 0) return true;
+        if (moving) return true;
+        var tags = tags(v, -1);
+        tags.add("play:" + phase);
+        if (species != null) tags.add("pet:" + species);
+        var clip = AnimationLibrary.current().pick("pet", tags, random);
+        if (clip == null) return true;
+        if (activity.active()) { outgoing.copy(activity); outgoing.fade(now); }
+        start(activity, clip, now, "pet");
+        return true;
     }
 
     private void noticePlayer(Villager v, Minecraft client, int now) {
@@ -240,6 +271,9 @@ public final class ResidentLife {
         float act = activity.weight(age) * (1 - walk) * (1 - react);
         if (act > 0) s.layers[0].set(activity.clip, activity.time(age), act, activity.mirror, 1);
         else s.layers[0].clear();
+        float out = outgoing.weight(age) * (1 - walk) * (1 - react);
+        if (out > 0) s.layers[2].set(outgoing.clip, Math.min(outgoing.time(age), outgoing.clip.length()), out, outgoing.mirror, 1);
+        else s.layers[2].clear();
         s.turnWeight = 0;
         boolean attentive = talking || reaction.active() && "greet".equals(reaction.trigger);
         var camera = Minecraft.getInstance().getCameraEntity();

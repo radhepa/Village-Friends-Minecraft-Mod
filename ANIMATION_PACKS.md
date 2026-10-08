@@ -8,7 +8,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
-359 clips (350 distinct motions; a few serve two situations):
+383 clips (374 distinct motions; a few serve two situations). Version 2.17.0 added ten guard clips and 2.18.0 twenty-four for playing with pets:
 
 | Situation | Clips |
 |---|---|
@@ -21,6 +21,7 @@ The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for eve
 | Reactions | **a joke**: belly laugh, giggles, slaps a knee laughing, snorts with laughter, wheezes with laughter, shakes with silent laughter, points and laughs; **a loved gift**: cheers, hugs the gift, jumps for joy, spins with joy, happy shimmy, gasps with joy, raises the gift like a trophy; **a gift**: bashful thanks, grateful nod, bows with a hand on the heart, two-handed handshake, tips their hat, says you shouldn't have, presses the gift to their heart; **a refused gift or trade**: shakes head, wags a finger, crosses arms in an X, pushes it back, turns up their nose, hands up: not for me, shakes head apologetically; **happy sparkles**: cheers, claps, fist pump, hops and claps, thumbs up, wiggle dance, beams with arms wide open, skips in place; **hearts**: bashful thanks, lovestruck, swoons with hands on cheeks, blows a kiss, heart flutters, dreamy sigh, shy toe twist; **angry clouds**: huffs, shakes a fist, stomps both feet, rants and flails, points and scolds, gives the cold shoulder, shakes with clenched fists; **raid sweat**: nervous glances, bites their nails, wrings their hands, glances over a shoulder, tugs at a sweaty collar, knees knocking; **harm**: flinches, staggers, clutches a hurt arm, doubles over winded, hops on one foot clutching a toe |
 | Weather and time of day | hunches in the rain, catches raindrops, shakes off the rain, shivers, shelters head from the rain, wrings out a sleeve, splashes in a puddle, looks glumly up at the clouds, jumps at a thunderclap, covers ears in the thunder, stamps feet to keep warm, hugs self against the cold, blows into cupped hands, rubs sleepy eyes, greets the morning sun, nods off standing up, wishes on a star, watches the fireflies |
 | Children | hops, twirls, plays airplane, peekaboo!, watches a bug, wants to play tag, skips rope, plays hopscotch, spins until dizzy, rides a hobby horse, builds a sandcastle, blows a dandelion, plays at swords with a stick, pretends to be a monster, plays pat-a-cake, tosses a ball up and catches it, counts for hide-and-seek, throws a stomping tantrum, measures their height, flaps like a bird, makes silly faces, marches like a soldier |
+| Pets | coaxes a stray with a treat, takes the stray home, sighs as the stray backs away, pats their knees: come here!, claps for the pet, laughs with hands on knees, watches the cat fondly; **dogs**: teases with a stick, throws the stick, watches the dog run, takes the stick back, pats the dog's head, rubs the dog's belly, holds up a treat: sit!, tosses the treat, shakes the dog's paw, twirls a finger: spin!, tags the dog: you're it!; **cats**: dangles a bit of string, strokes the cat, scratches the cat's chin, swishes a feather, offers a fish, pats the cat gently |
 
 ## How the director chooses
 
@@ -35,6 +36,7 @@ Each resident is ticked on the client. When they have stood still for a second a
 | `laugh`, `delighted`, `thanks`, `decline` | Conversation outcomes: a joke, a loved gift, an accepted gift, a declined gift. `decline` also plays when a resident refuses to trade. |
 | `happy`, `love`, `angry`, `nervous` | Vanilla villager events: happy sparkles, hearts, angry clouds, raid sweat. |
 | `hurt` | The resident takes damage. |
+| `pet` | Playing with their cat or dog, or befriending a stray: the server says which part of the game they're on (`play:<phase>`, with `pet:cat` or `pet:dog`). See [PETS.md](PETS.md). |
 
 Reactions play on a second layer and briefly replace the current activity. While walking, reactions keep their upper body and leave the stride alone; activity clips fade out when a resident starts moving.
 
@@ -134,6 +136,7 @@ python tools/animations/film.py                   # titles, crossfades and an H.
 | `reactions.py`, `feelings.py` | Reactions to jokes, gifts, refusals, vanilla events and harm. |
 | `weather.py`, `skies.py` | Rain, thunder, cold, dawn and dusk. |
 | `children.py`, `playtime.py` | Children's games. |
+| `pets.py` | Playing with a cat or dog and befriending a stray (`pet` trigger). |
 
 Weights keep each resident's trade and hobbies visible among the everyday idles: work clips weigh 3–6 (the two raid-muster clips, which require `routine:defend`, weigh 40 so mustered guards mostly stand ready), hobbies 3–4, everyday idles 1–5 (most of the newer moments about 1), and weather clips only compete when their weather applies. Every greeting requires an age (`adult`, `child` or `adult|child`). Clip names never contain commas.
 
