@@ -15,6 +15,9 @@
    "id": "minecraft:sand"
   },
   "D": {
+   "id": "minecraft:white_terracotta"
+  },
+  "E": {
    "id": "minecraft:jungle_leaves",
    "properties": {
     "distance": "1",
@@ -22,16 +25,16 @@
     "waterlogged": "false"
    }
   },
-  "E": {
+  "F": {
    "id": "minecraft:sandstone"
   },
-  "F": {
+  "G": {
    "id": "minecraft:cut_sandstone_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "G": {
+  "H": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -41,25 +44,25 @@
     "west": "false"
    }
   },
-  "H": {
+  "I": {
    "id": "minecraft:jungle_log",
    "properties": {
     "axis": "y"
    }
   },
-  "I": {
+  "J": {
    "id": "minecraft:white_glazed_terracotta",
    "properties": {
     "facing": "north"
    }
   },
-  "J": {
+  "K": {
    "id": "minecraft:light_blue_glazed_terracotta",
    "properties": {
     "facing": "north"
    }
   },
-  "K": {
+  "L": {
    "id": "minecraft:sandstone_wall",
    "properties": {
     "east": "none",
@@ -70,34 +73,34 @@
     "west": "none"
    }
   },
-  "L": {
+  "M": {
    "id": "minecraft:smooth_sandstone_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "M": {
+  "N": {
    "id": "minecraft:cyan_glazed_terracotta",
    "properties": {
     "facing": "east"
    }
   },
-  "N": {
+  "O": {
    "id": "minecraft:cyan_glazed_terracotta",
    "properties": {
     "facing": "west"
    }
   },
-  "O": {
+  "P": {
    "id": "minecraft:short_dry_grass"
   },
-  "P": {
+  "Q": {
    "id": "minecraft:orange_wool"
   },
-  "Q": {
+  "R": {
    "id": "minecraft:white_wool"
   },
-  "R": {
+  "S": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "east",
@@ -106,7 +109,7 @@
     "waterlogged": "false"
    }
   },
-  "S": {
+  "T": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "north",
@@ -115,7 +118,7 @@
     "waterlogged": "false"
    }
   },
-  "T": {
+  "U": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "south",
@@ -124,7 +127,7 @@
     "waterlogged": "false"
    }
   },
-  "U": {
+  "V": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "west",
@@ -133,44 +136,44 @@
     "waterlogged": "false"
    }
   },
-  "V": {
+  "W": {
    "id": "minecraft:acacia_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "W": {
+  "X": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "false",
     "waterlogged": "false"
    }
   },
-  "X": {
+  "Y": {
    "id": "minecraft:red_wool"
   },
-  "Y": {
+  "Z": {
    "id": "minecraft:white_glazed_terracotta",
    "properties": {
     "facing": "south"
    }
   },
-  "Z": {
+  "a": {
    "id": "minecraft:cactus",
    "properties": {
     "age": "0"
    }
   },
-  "a": {
+  "b": {
    "id": "minecraft:stripped_acacia_log",
    "properties": {
     "axis": "y"
    }
   },
-  "b": {
+  "c": {
    "id": "minecraft:dead_bush"
   },
-  "c": {
+  "d": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -180,7 +183,7 @@
     "west": "false"
    }
   },
-  "d": {
+  "e": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -190,33 +193,33 @@
     "west": "false"
    }
   },
-  "e": {
+  "f": {
    "id": "minecraft:acacia_planks"
   },
-  "f": {
+  "g": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up",
     "open": "false"
    }
   },
-  "g": {
+  "h": {
    "id": "minecraft:chiseled_sandstone"
   },
-  "h": {
+  "i": {
    "id": "minecraft:cut_sandstone_slab",
    "properties": {
     "type": "top"
    }
   },
-  "i": {
+  "j": {
    "id": "minecraft:iron_chain",
    "properties": {
     "axis": "y",
     "waterlogged": "false"
    }
   },
-  "j": {
+  "k": {
    "id": "minecraft:acacia_trapdoor",
    "properties": {
     "facing": "north",
@@ -226,7 +229,7 @@
     "waterlogged": "false"
    }
   },
-  "k": {
+  "l": {
    "id": "minecraft:acacia_trapdoor",
    "properties": {
     "facing": "south",
@@ -236,64 +239,64 @@
     "waterlogged": "false"
    }
   },
-  "l": {
+  "m": {
    "id": "minecraft:cocoa",
    "properties": {
     "age": "2",
     "facing": "east"
    }
   },
-  "m": {
+  "n": {
    "id": "minecraft:cocoa",
    "properties": {
     "age": "2",
     "facing": "west"
    }
   },
-  "n": {
+  "o": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "east_up"
    }
   },
-  "o": {
+  "p": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "p": {
+  "q": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "south_up"
    }
   },
-  "q": {
+  "r": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "west_up"
    }
   },
-  "r": {
+  "s": {
    "id": "minecraft:potted_cactus"
   },
-  "s": {
+  "t": {
    "id": "minecraft:stripped_acacia_log",
    "properties": {
     "axis": "x"
    }
   },
-  "t": {
+  "u": {
    "id": "minecraft:tall_dry_grass"
   },
-  "u": {
+  "v": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "true",
     "waterlogged": "false"
    }
   },
-  "v": {
+  "w": {
    "id": "minecraft:sandstone_wall",
    "properties": {
     "east": "low",
@@ -304,7 +307,7 @@
     "west": "low"
    }
   },
-  "w": {
+  "x": {
    "id": "minecraft:sandstone_wall",
    "properties": {
     "east": "none",
@@ -315,22 +318,12 @@
     "west": "none"
    }
   },
-  "x": {
+  "y": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
     "north": "false",
     "south": "true",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "y": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "true",
-    "south": "false",
     "waterlogged": "false",
     "west": "true"
    }
@@ -338,6 +331,16 @@
   "z": {
    "id": "minecraft:acacia_fence",
    "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "0": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
     "east": "true",
     "north": "false",
     "south": "true",
@@ -345,7 +348,7 @@
     "west": "false"
    }
   },
-  "0": {
+  "1": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -355,7 +358,7 @@
     "west": "false"
    }
   },
-  "1": {
+  "2": {
    "id": "minecraft:acacia_trapdoor",
    "properties": {
     "facing": "north",
@@ -365,13 +368,13 @@
     "waterlogged": "false"
    }
   },
-  "2": {
+  "3": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up"
    }
   },
-  "3": {
+  "4": {
    "id": "minecraft:bell",
    "properties": {
     "attachment": "ceiling",
@@ -379,89 +382,89 @@
     "powered": "false"
    }
   },
-  "4": {
+  "5": {
    "id": "minecraft:decorated_pot",
    "properties": {
     "facing": "east"
    }
   },
-  "5": {
+  "6": {
    "id": "minecraft:decorated_pot",
    "properties": {
     "facing": "south"
    }
   },
-  "6": {
+  "7": {
    "id": "minecraft:gold_block"
   },
-  "7": {
+  "8": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "y"
    }
   },
-  "8": {
+  "9": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "up_north"
    }
   },
-  "9": {
+  "!": {
    "id": "minecraft:lightning_rod",
    "properties": {
     "facing": "up",
     "powered": "false"
    }
   },
-  "!": {
+  "#": {
    "id": "minecraft:melon"
   },
-  "#": {
+  "$": {
    "id": "minecraft:pumpkin"
   },
-  "$": {
+  "%": {
    "id": "minecraft:water",
    "properties": {
     "level": "0"
    }
   },
-  "%": {
+  "&": {
    "id": "villagefriends:easel_canvas",
    "properties": {
     "facing": "east"
    }
   },
-  "&": {
+  "(": {
    "id": "villagefriends:music_stand",
    "properties": {
     "facing": "west"
    }
   },
-  "(": {
+  ")": {
    "id": "villagefriends:notice_board",
    "properties": {
     "facing": "south"
    }
   },
-  ")": {
+  "*": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "east"
    }
   },
-  "*": {
+  "+": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "north"
    }
   },
-  "+": {
+  ",": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "south"
    }
   },
-  ",": {
+  "-": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "west"
@@ -472,77 +475,77 @@
   {
    "y": 0,
    "rows": [
-    "ABABAAABBBBAAABBAAAAAAAAEAAEEAAEA",
-    "ABBBAAABBBAAAAABAAAAAAEEAAAAAABAA",
-    "BAAAEEAAAAAAAAAAAAABBAAAAAAAAAAAA",
-    "AAACCCCCCCCCCCCCBBAAAACCCCCCCCBAA",
-    "AAACCCCCCCCBBBBBBBBBBBCCCCCCCCABA",
-    "BBACCCCCCCBBAAAEAAAAABBCCCCCCCBBA",
-    "AAACCCCCBBAAAAAEABBAAAABBCCCCCBBB",
-    "AAACCCCBBAAAAAMINYMAAAAABBCCCCBBA",
-    "AAECCCBBAAEAINAAJAAMIAAAABBCCCAAA",
-    "EAACCCBAAANYAAAAJAAAAINAAABCCCEAB",
-    "EAECCBAAAMIAAAAAJAAAAAINBAABCCAAA",
-    "EEAABBAAAYACABBBBBBBACAIAAABBCEAA",
-    "AAAABAAAIAAAJBAAAAABJAAAIEAEBCAAA",
-    "AAAABAABMAABBABABABABBAAMEAABCAAA",
-    "AAAABBANAAABEBABABABABAAAMAABCEAA",
-    "AEBBBABIAAABAABABABAABAAAYEABCAAE",
-    "AAABBABMJJJBABAB$BABABJJJNAABBAAA",
-    "AAACBABYAAABAABABABAABAAAIAEBBEAA",
-    "EAACBABNAAABABABABABABAAAMEABABBA",
-    "AABCBBAANAABBABABABABBAANAAABAAAA",
-    "ABBCBAABIAAAJBAAAEABJAAAIAAABAAAA",
-    "AABCBBBAAIACABBBBBBBACAYAAEBBAAAA",
-    "AAACCBAAAMIAAAAAJAAAAAINAAEBCCAAA",
-    "AAACCCBEEAMIAAAAJAAAAYMAAABCCCAAA",
-    "BAACCCBBAEEAINAAJAAMIAAAABBCCCAAA",
-    "AAECCCCBBAEAAANYMINEEAAABBCCCCEEA",
-    "AAECCCCCBBAAAEEAAAAAAAABBCCCCCAAA",
-    "AEECCCCCCCBBEEAABAAAABBCCCCCCCAAB",
-    "AEACCCCCCCCBBBBBBBBBBBCCCCCCCCAAB",
-    "AEACCCCCCCCEAEABBCCCCCCCCCCCCCAAB",
-    "AAAEECAAAAAAAAAAAAAEAAAAAAEABAABB",
-    "AEAAAEAAAAAAEAEEAAAAAAAAAAAAAAAAA",
-    "BAAAAAAAAAAAAEAAAAAAAAAAABBABAAAE"
+    "DBDBDDDBBBBAAADBAAAADDAAFAAFFDAFA",
+    "ABBBADABBDADAAABAAADDDFFAAAAAADDA",
+    "DAAAFFAAAADAAAADAADBDAAAAADDAADDA",
+    "AAACCCCCCCCCCCCCBBAAADCCCCCCCCDDA",
+    "DDACCCCCCCCBBBBBBBBBBBCCCCCCCCDBA",
+    "BBDCCCCCCCBBAAAFADADDBBCCCCCCCDBD",
+    "AAACCCCCBBADAAAFABDAAAABBCCCCCBBB",
+    "AADCCCCBBAAAAANJOZNDADAABBCCCCBDA",
+    "AAFCCCBBAAFAJOAAKAANJAAAABBCCCAAD",
+    "FAACCCBADAOZAAAAKAAAAJOADABCCCFAD",
+    "FAFCCBAAANJAAAAAKAAAAAJODAABCCAAA",
+    "FFAABBAAAZACABBBBBBBACAJAAABBCFAA",
+    "AAADBADDJAAAKBAAADABKAAAJFAFBCAAA",
+    "AAAABAADNAABBABABABABBAANFAABCAAA",
+    "AADDBDDOAAABFBABABABABAAANAABCFDA",
+    "AFDBBDBJAAABAABABABAABAAAZFABCAAF",
+    "AAABBDBNKKKBABAB%BABABKKKOAABBDDA",
+    "AAACBDBZAAABDABABABADBAAAJAFBBFAD",
+    "FAACBDDOAAABABABABABABAAANFABABDA",
+    "AADCBDADOAABBABABABABBAAODDABAAAA",
+    "DBBCBDDDJAAAKBAAAFABKAAAJAAABAAAA",
+    "AABCBBBADJACABBBBBBBACAZAAFBBAAAA",
+    "AADCCBDAANJAAAAAKAAAAAJOAAFBCCAAA",
+    "AAACCCBFFANJAAAAKAAAAZNAAABCCCDAA",
+    "DAACCCBBAFFAJOAAKAANJDAAABBCCCDAA",
+    "AAFCCCCBBAFAAAOZNJOFFAAABBCCCCFFA",
+    "AAFCCCCCBBAAAFFAADAAADABBCCCCCAAA",
+    "AFFCCCCCCCBBFFADBDDAABBCCCCCCCAAD",
+    "AFACCCCCCCCBBBBBBBBBBBCCCCCCCCADB",
+    "AFACCCCCCCCFAFABBCCCCCCCCCCCCCAAB",
+    "AAAFFCAAAADDAAAAAAAFAADADAFADAABB",
+    "AFADAFADAAAAFAFFAAAAAADADAADAAAAD",
+    "BADDAAAAAAAAAFAAAADAAADAABBABAAAF"
    ]
   },
   {
    "y": 1,
    "rows": [
-    "........o..........o.......o.....",
+    "........p..........p.......p.....",
     ".................................",
     ".................................",
-    ".........O..............O........",
-    "...OZt.......(.........O....ZO...",
-    "q....b.bb........................",
-    ".......O...........B........O....",
-    ".....b.....B.....................",
-    "......zfx...................O...n",
-    "......efe....................O...",
-    "...........F....*....F...........",
-    "..........FHF.......FHF..B.......",
-    "...........F.........F...........",
-    "q.....B......BB...BB.............",
-    ".............B.....B....rLLLr....",
-    "...............BvB......LFFFL....",
-    "..........,....w8w....).LFFFL....",
-    "...O...........BvB......LFFFL....",
-    "......%......B.....B....LLLLL....",
-    ".....4.......BB...BB......B.....n",
-    "...........F.........F...........",
-    ".......B..FHF.......FHF..........",
-    "...........F....+....F...........",
-    "........................efeO.....",
-    "q.......BBB.............0fy......",
+    ".........P..............P........",
+    "...Pau.......).........P....aP...",
+    "r....c.cc........................",
+    ".......P...........B........P....",
+    ".....c.....B.....................",
+    "......0gy...................P...o",
+    "......fgf....................P...",
+    "...........G....+....G...........",
+    "..........GIG.......GIG..B.......",
+    "...........G.........G...........",
+    "r.....B......BB...BB.............",
+    ".............B.....B....sMMMs....",
+    "...............BwB......MGGGM....",
+    "..........-....x9x....*.MGGGM....",
+    "...P...........BwB......MGGGM....",
+    "......&......B.....B....MMMMM....",
+    ".....5.......BB...BB......B.....o",
+    "...........G.........G...........",
+    ".......B..GIG.......GIG..........",
+    "...........G....,....G...........",
+    "........................fgfP.....",
+    "r.......BBB.............1gz......",
     ".....................B...........",
-    ".............B..............O....",
-    "........................b..O....n",
-    "....Z....t.......................",
-    ".......O...............t.........",
+    ".............B..............P....",
+    "........................c..P....o",
+    "....a....u.......................",
+    ".......P...............u.........",
     ".................................",
     ".................................",
-    ".....p.......p..........p........"
+    ".....q.......q..........q........"
    ]
   },
   {
@@ -552,31 +555,31 @@
     ".................................",
     ".................................",
     ".................................",
-    "....Z.......................Z....",
+    "....a.......................a....",
     ".................................",
-    "...................K.............",
-    "...........K.....................",
-    "......G.G........................",
-    "......57!........................",
+    "...................L.............",
+    "...........L.....................",
+    "......H.H........................",
+    "......68#........................",
     ".................................",
-    "...........H.........H...K.......",
+    "...........I.........I...L.......",
     ".................................",
-    "......K......AA...AA.............",
+    "......L......AA...AA.............",
     ".............A.....A.............",
-    "...............G.G......G...G....",
-    "..........................&......",
-    "...............G.G...............",
-    ".............A.....A....G...G....",
-    ".............AA...AA......K......",
+    "...............H.H......H...H....",
+    "..........................(......",
+    "...............H.H...............",
+    ".............A.....A....H...H....",
+    ".............AA...AA......L......",
     ".................................",
-    ".......K...H.........H...........",
+    ".......L...I.........I...........",
     ".................................",
-    "........................#2r......",
-    "........a.a.............G.G......",
-    ".....................K...........",
-    ".............K...................",
+    "........................$3s......",
+    "........b.b.............H.H......",
+    ".....................L...........",
+    ".............L...................",
     ".................................",
-    "....Z............................",
+    "....a............................",
     ".................................",
     ".................................",
     ".................................",
@@ -592,27 +595,27 @@
     ".................................",
     ".................................",
     ".................................",
-    "...................K.............",
-    "...........K.....................",
-    "......c.c........................",
+    "...................L.............",
+    "...........L.....................",
     "......d.d........................",
+    "......e.e........................",
     ".................................",
-    "...........H.........H...K.......",
+    "...........I.........I...L.......",
     ".................................",
-    "......K......AA...AA.............",
+    "......L......AA...AA.............",
     ".............A.....A.............",
-    "...............G.G......G...G....",
+    "...............H.H......H...H....",
     ".................................",
-    "...............G.G...............",
-    ".............A.....A....G...G....",
-    ".............AA...AA......K......",
+    "...............H.H...............",
+    ".............A.....A....H...H....",
+    ".............AA...AA......L......",
     ".................................",
-    ".......K...H.........H...........",
+    ".......L...I.........I...........",
     ".................................",
-    "........................c.c......",
-    "........a.a.............d.d......",
-    ".....................K...........",
-    ".............K...................",
+    "........................d.d......",
+    "........b.b.............e.e......",
+    ".....................L...........",
+    ".............L...................",
     ".................................",
     ".................................",
     ".................................",
@@ -630,27 +633,27 @@
     ".................................",
     ".................................",
     ".................................",
-    "...................W.............",
-    "...........W.....................",
-    "......PQP........................",
-    "......PQP........................",
-    "......kkk........................",
-    "...........H.........H...W.......",
+    "...................X.............",
+    "...........X.....................",
+    "......QRQ........................",
+    "......QRQ........................",
+    "......lll........................",
+    "...........I.........I...X.......",
     ".................................",
-    "......W......BBUhRBB.............",
-    ".............Bu....B.............",
-    ".............S.VVV.S....G...G....",
-    ".............h.V1V.h.............",
-    ".............T.VVV.T.............",
-    ".............B....uB....G...G....",
-    ".............BBUhRBB......W......",
+    "......X......BBViSBB.............",
+    ".............Bv....B.............",
+    ".............T.WWW.T....H...H....",
+    ".............i.W2W.i.............",
+    ".............U.WWW.U.............",
+    ".............B....vB....H...H....",
+    ".............BBViSBB......X......",
     ".................................",
-    ".......W...H.........H...........",
-    "........................jjj......",
-    "........................XQX......",
-    "........a3a.............XQX......",
-    ".....................W...........",
-    ".............W...................",
+    ".......X...I.........I...........",
+    "........................kkk......",
+    "........................YRY......",
+    "........b4b.............YRY......",
+    ".....................X...........",
+    ".............X...................",
     ".................................",
     ".................................",
     ".................................",
@@ -670,24 +673,24 @@
     ".................................",
     ".................................",
     ".................................",
-    "............D....................",
-    ".....................D...........",
+    "............E....................",
+    ".....................E...........",
     ".................................",
-    ".........D..H....................",
-    ".............TTTTTTT.H...........",
-    "............RgBBBBBgU............",
-    "............RB.....BU............",
-    "............RB.....BUD..PQXQP....",
-    "............RB..i..BU...PQXQP....",
-    "............RB.....BU...PQXQP....",
-    "............RB.....BU...PQXQP....",
-    "...........DRgBBBBBgU............",
-    ".............SSSSSSS.............",
-    ".....................H...........",
-    "........D..H..D..................",
+    ".........E..I....................",
+    ".............UUUUUUU.I...........",
+    "............ShBBBBBhV............",
+    "............SB.....BV............",
+    "............SB.....BVE..QRYRQ....",
+    "............SB..j..BV...QRYRQ....",
+    "............SB.....BV...QRYRQ....",
+    "............SB.....BV...QRYRQ....",
+    "............ShBBBBBhV............",
+    ".............TTTTTTT.............",
+    ".....................I...........",
+    "........E..I..E..................",
     ".................................",
-    "........sss..........D...........",
-    "...........D.....................",
+    "........ttt..........E...........",
+    ".................................",
     ".................................",
     ".................................",
     ".................................",
@@ -708,24 +711,24 @@
     ".................................",
     ".................................",
     ".................................",
-    "............D....................",
-    "..........D...D......D...........",
-    "...................D...D.........",
-    ".........D..Hm.D.................",
-    "..................D.lH..D........",
-    "..........D...DAAA...............",
-    "............D.A...AD...D.........",
-    ".............A.....A.D...........",
-    ".............A..i..A.............",
+    "............E....................",
+    "..........E...E......E...........",
+    "...................E...E.........",
+    ".........E..In.E.................",
+    "..................E.mI..E........",
+    "..........E...EAAA...............",
+    "............E.A...AE...E.........",
+    ".............A.....A.E...........",
+    ".............A..j..A.............",
     ".............A.....A.............",
-    "..............A...A..D...........",
-    "...........D...AAA.D...D.........",
-    ".........D...D...................",
-    "..................D.lHm.D........",
-    "........D.lHm.D..................",
-    "...................D...D.........",
-    ".........L...D.......D...........",
-    "...........D.....................",
+    "..............A...A..E...........",
+    "...........E...AAA.E...E.........",
+    ".........E...E...................",
+    "..................E.mIn.E........",
+    "........E.mIn.E..................",
+    "...................E...E.........",
+    ".........M...E.......E...........",
+    "...........E.....................",
     ".................................",
     ".................................",
     ".................................",
@@ -747,22 +750,22 @@
     ".................................",
     ".................................",
     ".................................",
-    "............D....................",
-    "...........DDD.......D...........",
-    "..........DDDDD.....DDD..........",
-    "...........DDD.....DDDDD.........",
-    "............D..AAA..DDD..........",
-    "..............AAAAA..D...........",
+    "............E....................",
+    "............E........E...........",
+    "..........EEEEE......E...........",
+    "............E......EEEEE.........",
+    "............E..AAA...E...........",
+    "..............AAAAA..E...........",
     ".............AA...AA.............",
-    ".............AA.i.AA.............",
+    ".............AA.j.AA.............",
     ".............AA...AA.............",
     "..............AAAAA..............",
-    "...............AAA...D...........",
-    "...........D........DDD..........",
-    "..........DDD......DDDDD.........",
-    ".........DDDDD......DDD..........",
-    "..........DDD........D...........",
-    "...........D.....................",
+    "...............AAA...E...........",
+    "...........E.........E...........",
+    "...........E.......EEEEE.........",
+    ".........EEEEE.......E...........",
+    "...........E.........E...........",
+    "...........E.....................",
     ".................................",
     ".................................",
     ".................................",
@@ -787,18 +790,18 @@
     ".................................",
     ".................................",
     ".................................",
-    "............D....................",
-    ".....................D...........",
+    "............E....................",
+    ".....................E...........",
     ".................................",
     "...............AAA...............",
     "..............AAAAA..............",
-    "..............AAiAA..............",
+    "..............AAjAA..............",
     "..............AAAAA..............",
     "...............AAA...............",
     ".................................",
     ".................................",
-    ".....................D...........",
-    "...........D.....................",
+    ".....................E...........",
+    "...........E.....................",
     ".................................",
     ".................................",
     ".................................",
@@ -868,7 +871,7 @@
     ".................................",
     ".................................",
     ".................................",
-    "................6................",
+    "................7................",
     ".................................",
     ".................................",
     ".................................",
@@ -906,7 +909,7 @@
     ".................................",
     ".................................",
     ".................................",
-    "................9................",
+    "................!................",
     ".................................",
     ".................................",
     ".................................",
@@ -1366,6 +1369,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/desert/plazas.py",
-  "checksum": "15082d00c3daad8f"
+  "checksum": "b02a9f632e3993a1"
  }
 }

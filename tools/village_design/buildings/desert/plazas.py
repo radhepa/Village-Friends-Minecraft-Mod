@@ -30,8 +30,10 @@ def flagstones(x, z, seed):
         return 'sand'
     if n < .3:
         return 'sandstone'
-    if n < .72:
+    if n < .6:
         return 'smooth_sandstone'
+    if n < .76:
+        return 'white_terracotta'
     if n < .9:
         return 'cut_sandstone'
     return 'sandstone'
@@ -110,7 +112,7 @@ def lamp_ring(b, radius, count, offset=0.0, skip=(), height=2):
 def oasis():
     """Oasis: a spring-fed pool with a palm island, sugar cane banks and a shaded promenade."""
     b, rng = plazas.base('desert/plaza_oasis', ROLES_A, seed=211, ring=10.5, height=16, prefix='desert/',
-                         paving=flagstones, lawn='sand', ring_block='cut_sandstone', plants=False)
+                         paving=flagstones, lawn='sand', ring_block='terracotta', plants=False)
     pool, bank = set(), set()
     for x in range(SIZE):
         for z in range(SIZE):
@@ -142,8 +144,7 @@ def oasis():
     # The palm island carries the town_start jigsaw at the foot of its trunk.
     b.jigsaw(C, 1, C, 'up_north', 'town_start', final='minecraft:jungle_log')
     dp.palm(b, C, 2, C, rng, height=7, lean='east')
-    for (x, z), h, lean in (((C - 6, C + 2), 6, 'west'), ((C + 5, C + 5), 7, 'south'), ((C + 2, C - 7), 5, 'north'),
-                            ((C - 4, C - 5), 6, 'north'), ((C + 7, C - 2), 5, 'east')):
+    for (x, z), h, lean in (((C - 6, C + 3), 6, 'west'), ((C + 5, C + 5), 8, 'south'), ((C + 2, C - 7), 5, 'north')):
         b.set(x, 0, z, 'sand')
         dp.palm(b, x, 1, z, rng, height=h, lean=lean)
     # Promenade benches looking over the water, lamps between them.

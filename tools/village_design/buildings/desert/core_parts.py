@@ -286,10 +286,9 @@ def palm(b, x, y, z, rng, height=6, lean=None, dates=True):
         leaves(b, cx + dx, top, cz + dz)
         leaves(b, cx + 2 * dx, top, cz + 2 * dz)
         leaves(b, cx + 3 * dx, top - 1, cz + 3 * dz)
-        if rng.random() < .6:
+        if rng.random() < .4:
             leaves(b, cx + 3 * dx, top - 2, cz + 3 * dz)
     for dx, dz in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
-        leaves(b, cx + dx, top, cz + dz)
         leaves(b, cx + 2 * dx, top - 1, cz + 2 * dz)
     leaves(b, cx, top + 1, cz)
     if dates:
