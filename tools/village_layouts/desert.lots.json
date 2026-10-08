@@ -8,13 +8,25 @@
         "processor_type": "minecraft:rule",
         "rules": [
           {
-            "input_predicate": {"predicate_type": "minecraft:random_block_match", "block": "minecraft:smooth_sandstone", "probability": 0.08},
-            "location_predicate": {"predicate_type": "minecraft:always_true"},
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:smooth_sandstone",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
             "output_state": "minecraft:sandstone"
           },
           {
-            "input_predicate": {"predicate_type": "minecraft:random_block_match", "block": "minecraft:cut_sandstone", "probability": 0.06},
-            "location_predicate": {"predicate_type": "minecraft:always_true"},
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cut_sandstone",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
             "output_state": "minecraft:smooth_sandstone"
           }
         ]
@@ -25,22 +37,114 @@
     "desert/lots": {
       "fallback": "desert/lots_outer",
       "elements": [
-        {"template": "desert/courtyard_house", "weight": 4, "processors": "desert_lots_weathered"},
-        {"template": "desert/dome_house", "weight": 4, "processors": "desert_lots_weathered"},
-        {"template": "desert/terrace_house", "weight": 4, "processors": "desert_lots_weathered"},
-        {"template": "desert/adobe_house", "weight": 3, "processors": "desert_lots_weathered"},
-        {"template": "desert/tower_house", "weight": 3, "processors": "desert_lots_weathered"},
-        {"template": "desert/plaster_house", "weight": 3, "processors": "desert_lots_weathered"},
-        {"template": "desert/garden_house", "weight": 2, "processors": "desert_lots_weathered"},
-        {"template": "desert/family_house", "weight": 3, "processors": "desert_lots_weathered"},
-        {"template": "empty", "weight": 12}
+        {
+          "template": "desert/courtyard_house",
+          "weight": 4,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/dome_house",
+          "weight": 4,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/terrace_house",
+          "weight": 4,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/adobe_house",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/tower_house",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/plaster_house",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/garden_house",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/family_house",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/smithy",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/butcher",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/fletcher",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/weaver",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/fisher",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/cartographer",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/mason",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/tannery",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/scribe",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "empty",
+          "weight": 12
+        }
       ]
     },
     "desert/lots_outer": {
       "fallback": "minecraft:empty",
       "elements": [
-        {"template": "desert/garden_house", "weight": 1, "processors": "desert_lots_weathered"},
-        {"template": "empty", "weight": 6}
+        {
+          "template": "desert/garden_house",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/weaver",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "empty",
+          "weight": 6
+        }
       ]
     }
   }

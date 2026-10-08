@@ -74,6 +74,87 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/smithy",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/butcher",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/fletcher",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/weaver",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/fisher",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/cartographer",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/mason",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/tannery",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/scribe",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 12,
       "element": {
         "element_type": "minecraft:empty_pool_element"

@@ -1397,6 +1397,79 @@
       ]
     },
     {
+      "id": "villagefriends:village/desert/butcher",
+      "size": [
+        11,
+        10,
+        12
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          7,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/cartographer",
+      "size": [
+        9,
+        19,
+        11
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            10,
+            7
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/desert/courtyard_house",
       "size": [
         15,
@@ -1725,6 +1798,70 @@
       ]
     },
     {
+      "id": "villagefriends:village/desert/fisher",
+      "size": [
+        13,
+        10,
+        15
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/fletcher",
+      "size": [
+        11,
+        9,
+        16
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/desert/garden_house",
       "size": [
         15,
@@ -1800,6 +1937,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/desert/mason",
+      "size": [
+        11,
+        8,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/desert/plaster_house",
@@ -1893,6 +2056,105 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/desert/scribe",
+      "size": [
+        11,
+        13,
+        12
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            4,
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/smithy",
+      "size": [
+        13,
+        11,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/tannery",
+      "size": [
+        13,
+        10,
+        14
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          6,
+          2,
+          8
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/desert/terrace_house",
@@ -2063,6 +2325,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/desert/weaver",
+      "size": [
+        16,
+        9,
+        15
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/end_fade",

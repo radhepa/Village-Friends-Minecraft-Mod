@@ -11,6 +11,15 @@
       }
     },
     {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/weaver",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 6,
       "element": {
         "element_type": "minecraft:empty_pool_element"
