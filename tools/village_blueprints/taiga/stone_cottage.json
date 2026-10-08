@@ -526,6 +526,12 @@
    "properties": {
     "facing": "west"
    }
+  },
+  ";": {
+   "id": "villagefriends:house_plaque",
+   "properties": {
+    "facing": "north"
+   }
   }
  },
  "layers": [
@@ -571,7 +577,7 @@
     ".............",
     "...........0.",
     ".............",
-    "...m....m....",
+    "...m..;.m....",
     "..OCR!CCCCO..",
     "..R7x..AtqC..",
     ".EE:...A.pC..",
@@ -815,6 +821,12 @@
    }
   },
   {
+   "pos": [6, 2, 3],
+   "nbt": {
+    "id": "villagefriends:house_plaque"
+   }
+  },
+  {
    "pos": [8, 2, 5],
    "nbt": {
     "id": "minecraft:chest",
@@ -888,6 +900,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/taiga/homes.py",
-  "checksum": "b6a5fe2a2bad87ea"
+  "checksum": "89722f62d524ca41"
  }
 }

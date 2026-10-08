@@ -536,6 +536,12 @@
    "properties": {
     "facing": "north"
    }
+  },
+  "?": {
+   "id": "villagefriends:house_plaque",
+   "properties": {
+    "facing": "north"
+   }
   }
  },
  "layers": [
@@ -589,7 +595,7 @@
     "p..............",
     "..p............",
     "..U.........U..",
-    "...............",
+    "........?......",
     ".BBBBBB%BBBBBB.",
     "..Ckk.......C..",
     "..C..TTT....C..",
@@ -992,6 +998,12 @@
     "id": "minecraft:chest",
     "LootTable": "minecraft:chests/village/village_taiga_house"
    }
+  },
+  {
+   "pos": [8, 2, 3],
+   "nbt": {
+    "id": "villagefriends:house_plaque"
+   }
   }
  ],
  "entities": [
@@ -1057,6 +1069,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/taiga/homes.py",
-  "checksum": "377ca2190727a8f1"
+  "checksum": "2a48b557bb449f8f"
  }
 }
