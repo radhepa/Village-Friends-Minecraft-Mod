@@ -129,12 +129,12 @@ def fletcher():
     """Round fletcher's hut with an archery range of hay-backed targets behind."""
     rng = random.Random(5103)
     b = Build('savanna/fletcher', (13, 13, 16))
-    inside, ring, top = hp.round_hut(b, 6, 7, 3, 1, 3, pattern=(3, ['white_terracotta', 'brown_terracotta']))
+    inside, ring, top = hp.round_hut(b, 6, 7, 3.5, 1, 3, pattern=(3, ['white_terracotta', 'brown_terracotta']))
     for yy in (2, 3, 4):
         b.set(5, yy, 4, 'stripped_acacia_log', axis='y')
         b.set(7, yy, 4, 'stripped_acacia_log', axis='y')
     hp.door(b, 6, 2, 4, 'north', step='mud_brick_stairs')
-    hp.cone_roof(b, 6, 7, 3, top, inside, eave=1.3)
+    hp.cone_roof(b, 6, 7, 3.5, top, inside, eave=1.3)
     for x, z in ((3, 7), (9, 7)):
         hp.slit(b, x, 3, z)
     b.set(8, 2, 8, 'fletching_table')
@@ -297,7 +297,7 @@ def tannery():
         b.set(5, yy, 7, 'stripped_acacia_log', axis='y')
     hp.door(b, 4, 2, 7, 'north', step='mud_brick_stairs')
     hp.cone_roof(b, 4, 9, 2.5, top, inside, eave=1.3)
-    b.chest(4, 2, 11, 'north', loot=VILLAGE + 'tannery')
+    b.chest(5, 2, 10, 'west', loot=VILLAGE + 'tannery')
     b.set(3, 2, 10, 'barrel', facing='up', open=False)
     hp.lantern(b, 4, 5, 9)
     # Vats and racks.

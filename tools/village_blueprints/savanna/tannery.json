@@ -181,7 +181,7 @@
   "c": {
    "id": "minecraft:chest",
    "properties": {
-    "facing": "north",
+    "facing": "west",
     "type": "single",
     "waterlogged": "false"
    }
@@ -281,8 +281,8 @@
     "...MaM.........",
     "..C...C.IWYZI..",
     "..C...C........",
-    "..CV..C........",
-    "...CcC..IZWYI..",
+    "..CV.cC........",
+    "...CCC..IZWYI..",
     "...............",
     "..............."
    ]
@@ -474,7 +474,7 @@
    }
   },
   {
-   "pos": [4, 2, 11],
+   "pos": [5, 2, 10],
    "nbt": {
     "id": "minecraft:chest",
     "LootTable": "minecraft:chests/village/village_tannery"
@@ -485,6 +485,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/savanna/trades.py",
-  "checksum": "02e66fff4ad84221"
+  "checksum": "8b9a245182885251"
  }
 }

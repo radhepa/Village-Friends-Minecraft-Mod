@@ -130,8 +130,8 @@ def homestead():
     hp.lantern(b, 5, 8, 9, chain=2)
     b.room('sleeping_hut', (5, 3, 8))
     # Kitchen hut: hearth stores and the child's bed.
-    kitchen(b, [(12, 10), (13, 11), (15, 11), (16, 10)], 2, 'north', rng)
-    b.bed(16, 2, 8, 'south', 'yellow')
+    kitchen(b, [(13, 10), (12, 9), (16, 9), (14, 11)], 2, 'north', rng)
+    b.bed(15, 2, 9, 'south', 'yellow')
     hp.lantern(b, 14, 7, 9, chain=1)
     b.room('kitchen_hut', (14, 3, 8))
     b.resident(5, 2, 10)

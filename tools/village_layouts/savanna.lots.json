@@ -7,8 +7,118 @@
       "fallback": "savanna/lots_outer",
       "elements": [
         {
+          "template": "savanna/hut_round",
+          "weight": 4,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/homestead",
+          "weight": 3,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/hut_family",
+          "weight": 3,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/bungalow_verandah",
+          "weight": 4,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/bungalow_clay",
+          "weight": 4,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/lodge",
+          "weight": 3,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/compound",
+          "weight": 2,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/longhouse",
+          "weight": 3,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/smithy",
+          "weight": 2,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/butcher",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/fletcher",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/shepherd",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/fisher",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/mason",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/tannery",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/cartographer",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/farm_wheat",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/kraal",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_tree_acacia",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_tree_acacia_twin",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_termite_mound",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_trough",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 12
         }
       ]
     },
@@ -16,10 +126,132 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
+          "template": "savanna/farm_wheat",
+          "weight": 4,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/farm_beets_melon",
+          "weight": 3,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/farm_roots",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/kraal",
+          "weight": 3,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/paddock",
+          "weight": 3,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/coop",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_tree_acacia",
+          "weight": 3,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_tree_acacia_twin",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_termite_mound",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_haystack",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_trough",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_cart",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/decor_drying_rack",
+          "weight": 1,
+          "processors": "village"
+        },
+        {
+          "template": "savanna/hut_round",
+          "weight": 2,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/homestead",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
+          "template": "savanna/shepherd",
+          "weight": 1,
+          "processors": "savanna_lots_weathered"
+        },
+        {
           "template": "empty",
-          "weight": 1
+          "weight": 6
         }
       ]
     }
+  },
+  "processor_lists": {
+    "savanna_lots_weathered": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:packed_mud",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mud_bricks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.12
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:coarse_dirt"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:orange_terracotta",
+              "probability": 0.05
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:terracotta"
+          }
+        ]
+      }
+    ]
   }
 }

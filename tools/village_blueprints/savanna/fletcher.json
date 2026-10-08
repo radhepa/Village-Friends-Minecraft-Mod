@@ -15,10 +15,10 @@
    "id": "minecraft:structure_void"
   },
   "C": {
-   "id": "minecraft:coarse_dirt"
+   "id": "minecraft:packed_mud"
   },
   "D": {
-   "id": "minecraft:packed_mud"
+   "id": "minecraft:coarse_dirt"
   },
   "E": {
    "id": "minecraft:mud_bricks"
@@ -30,26 +30,6 @@
    "id": "minecraft:grass_block"
   },
   "H": {
-   "id": "minecraft:acacia_trapdoor",
-   "properties": {
-    "facing": "north",
-    "half": "bottom",
-    "open": "true",
-    "powered": "false",
-    "waterlogged": "false"
-   }
-  },
-  "I": {
-   "id": "minecraft:acacia_trapdoor",
-   "properties": {
-    "facing": "south",
-    "half": "bottom",
-    "open": "true",
-    "powered": "false",
-    "waterlogged": "false"
-   }
-  },
-  "J": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -59,17 +39,37 @@
     "west": "false"
    }
   },
+  "I": {
+   "id": "minecraft:acacia_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "J": {
+   "id": "minecraft:acacia_trapdoor",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
   "K": {
    "id": "minecraft:dirt_path"
   },
   "L": {
-   "id": "minecraft:white_terracotta"
-  },
-  "M": {
    "id": "minecraft:stripped_acacia_log",
    "properties": {
     "axis": "y"
    }
+  },
+  "M": {
+   "id": "minecraft:white_terracotta"
   },
   "N": {
    "id": "minecraft:brown_terracotta"
@@ -85,16 +85,6 @@
    }
   },
   "P": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "false"
-   }
-  },
-  "Q": {
    "id": "minecraft:acacia_trapdoor",
    "properties": {
     "facing": "east",
@@ -104,7 +94,7 @@
     "waterlogged": "false"
    }
   },
-  "R": {
+  "Q": {
    "id": "minecraft:acacia_trapdoor",
    "properties": {
     "facing": "west",
@@ -114,16 +104,16 @@
     "waterlogged": "false"
    }
   },
-  "S": {
+  "R": {
    "id": "minecraft:short_dry_grass"
   },
-  "T": {
+  "S": {
    "id": "minecraft:target",
    "properties": {
     "power": "0"
    }
   },
-  "U": {
+  "T": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -133,7 +123,7 @@
     "west": "true"
    }
   },
-  "V": {
+  "U": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -143,10 +133,7 @@
     "west": "false"
    }
   },
-  "W": {
-   "id": "minecraft:dead_bush"
-  },
-  "X": {
+  "V": {
    "id": "minecraft:acacia_door",
    "properties": {
     "facing": "south",
@@ -156,7 +143,7 @@
     "powered": "false"
    }
   },
-  "Y": {
+  "W": {
    "id": "minecraft:acacia_door",
    "properties": {
     "facing": "south",
@@ -166,7 +153,17 @@
     "powered": "false"
    }
   },
-  "Z": {
+  "X": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "Y": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -176,7 +173,7 @@
     "west": "false"
    }
   },
-  "a": {
+  "Z": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "false",
@@ -186,7 +183,7 @@
     "west": "true"
    }
   },
-  "b": {
+  "a": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -196,7 +193,7 @@
     "west": "false"
    }
   },
-  "c": {
+  "b": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -206,22 +203,25 @@
     "west": "false"
    }
   },
-  "d": {
+  "c": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up",
     "open": "false"
    }
   },
-  "e": {
+  "d": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "west",
     "open": "false"
    }
   },
-  "f": {
+  "e": {
    "id": "minecraft:crafting_table"
+  },
+  "f": {
+   "id": "minecraft:dead_bush"
   },
   "g": {
    "id": "minecraft:fletching_table"
@@ -268,43 +268,43 @@
   {
    "y": 0,
    "rows": [
-    "BBBBBBCBBBBBB",
-    "BBBBBBKBBBCCB",
-    "BBBBFCKGCBCCB",
-    "BBBGCCKCGFBBB",
-    "BBCGFGECFGCBB",
-    "BCGGEEFEECCGB",
-    "BGCGEFFFEFGFB",
-    "BGCEFFFFFECGB",
-    "BFCGEFFFECCFB",
-    "BGGCEEFEEGCGB",
-    "BBCCFGEGCFGBB",
-    "BBBFFCCGCGBBB",
-    "BBBBCCCCCBBBB",
+    "BBBBBBDBBBBBB",
+    "BBBBBBKBBBDDB",
+    "BBBBDFKDGBDDB",
+    "BBBGFDKDDDBBB",
+    "BBDGFEEEDDDBB",
+    "BDGGEFFFEGFDB",
+    "BGDEFFFFFEGDB",
+    "BGDEFFFFFEFGB",
+    "BFDEFFFFFEGDB",
+    "BGGGEFFFEFFDB",
+    "BBDGDEEEGDGBB",
+    "BBBDFDGDGDBBB",
+    "BBBBFDGDDBBBB",
     "BBBBBBBBBBBBB",
-    "BKCKCCKCKKCCB",
+    "BKDKDDKDKKDDB",
     "BBBBBBBBBBBBB"
    ]
   },
   {
    "y": 1,
    "rows": [
-    "......j..bOOU",
-    ".........J..J",
-    "........SJ..J",
-    "......l..cOOa",
-    "...S..E......",
-    "....EEDEE....",
-    "....EDDDE..W.",
-    "...EDDDDDE...",
-    "....EDDDE....",
-    "....EEDEE..m.",
-    "......E......",
+    "......j..aOOT",
+    ".........H..H",
+    ".........H..H",
+    ".....Rl..bOOZ",
+    "...R.EEE.....",
+    "....ECCCE....",
+    "...ECCCCCEm..",
+    "...ECCCCCER..",
+    "...ECCCCCE...",
+    "....ECCCE....",
+    ".....EEE.....",
     ".............",
-    "Z...S.W....hU",
-    "J...........J",
-    "J...........J",
-    "V.A...A...A.V"
+    "Y......f...hT",
+    "H...........H",
+    "H...........H",
+    "U.A...A...A.U"
    ]
   },
   {
@@ -314,18 +314,18 @@
     ".............",
     ".............",
     ".............",
-    ".....MXM.....",
-    "....DD.DD....",
-    "....D...e....",
-    "...D.....D...",
-    "....d...g....",
-    "....DDfDD....",
-    "......D......",
+    ".....LVL.....",
+    "....C...C....",
+    "...C....dC...",
+    "...C.....C...",
+    "...Cc...gC...",
+    "....C.e.C....",
+    ".....CCC.....",
     ".............",
     ".............",
     ".............",
     ".............",
-    "..T...T...T.."
+    "..S...S...S.."
    ]
   },
   {
@@ -335,13 +335,13 @@
     ".............",
     ".............",
     ".............",
-    ".....MYM.....",
-    "....NL.LN....",
-    "....L...L....",
-    "...P.....P...",
-    "....L...L....",
-    "....NL.LN....",
-    "......N......",
+    ".....LWL.....",
+    "....N...N....",
+    "...M.....M...",
+    "...H.....H...",
+    "...M.....M...",
+    "....N...N....",
+    ".....MNM.....",
     ".............",
     ".............",
     ".............",
@@ -355,15 +355,15 @@
     ".............",
     ".............",
     ".............",
-    ".....III.....",
-    "...IIMDMII...",
-    "...QDD.DDR...",
-    "..I.D...D.I..",
-    "..QD.....DR..",
-    "..H.D...D.H..",
-    "...QDD.DDR...",
-    "...HH.D.HH...",
-    ".....HHH.....",
+    "....JJJJJ....",
+    "...J.LCL.J...",
+    "..J.C...C.J..",
+    "..PC.....CQ..",
+    "..PC.....CQ..",
+    "..PC.....CQ..",
+    "..I.C...C.I..",
+    "...I.CCC.I...",
+    "....IIIII....",
     ".............",
     ".............",
     ".............",
@@ -376,15 +376,15 @@
     ".............",
     ".............",
     ".............",
-    ".....AAA.....",
+    "....AAAAA....",
     "...AAAAAAA...",
-    "...AAA.AAA...",
     "..AAA...AAA..",
+    "..AA.....AA..",
     "..AA..k..AA..",
+    "..AA.....AA..",
     "..AAA...AAA..",
-    "...AAA.AAA...",
     "...AAAAAAA...",
-    ".....AAA.....",
+    "....AAAAA....",
     ".............",
     ".............",
     ".............",
@@ -398,13 +398,13 @@
     ".............",
     ".............",
     ".............",
-    ".....AAA.....",
-    "....AA.AA....",
+    "....AAAAA....",
     "...AA...AA...",
+    "...A.....A...",
     "...A..i..A...",
+    "...A.....A...",
     "...AA...AA...",
-    "....AA.AA....",
-    ".....AAA.....",
+    "....AAAAA....",
     ".............",
     ".............",
     ".............",
@@ -420,11 +420,11 @@
     ".............",
     ".............",
     ".............",
-    ".....AAA.....",
-    "....AA.AA....",
+    "....AAAAA....",
     "....A...A....",
-    "....AA.AA....",
-    ".....AAA.....",
+    "....A...A....",
+    "....A...A....",
+    "....AAAAA....",
     ".............",
     ".............",
     ".............",
@@ -442,9 +442,9 @@
     ".............",
     ".............",
     ".............",
-    "......A......",
+    ".....AAA.....",
     ".....A.A.....",
-    "......A......",
+    ".....AAA.....",
     ".............",
     ".............",
     ".............",
@@ -463,9 +463,9 @@
     ".............",
     ".............",
     ".............",
-    ".............",
     "......A......",
-    ".............",
+    ".....A.A.....",
+    "......A......",
     ".............",
     ".............",
     ".............",
@@ -506,7 +506,7 @@
     ".............",
     ".............",
     ".............",
-    "......P......",
+    "......A......",
     ".............",
     ".............",
     ".............",
@@ -527,7 +527,7 @@
     ".............",
     ".............",
     ".............",
-    ".............",
+    "......X......",
     ".............",
     ".............",
     ".............",
@@ -582,6 +582,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/savanna/trades.py",
-  "checksum": "43a8d7f5c3f8d766"
+  "checksum": "b8750f7f19ce3e20"
  }
 }
