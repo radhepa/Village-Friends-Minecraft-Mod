@@ -54,7 +54,9 @@ public final class NarrativeEngine {
         var profile = profile(v); var b = bond(v, p); long today = day(v.level());
         if (v.isBaby()) {
             String said = TalkWorld.line(v, p, topic);
-            return said != null ? said : Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))) + " " + VillageSettlements.reference(v,topic,today);
+            // Children always mention home, like before.
+            return ((said != null ? said : Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))))
+                    + " " + VillageSettlements.reference(v,topic,today)).strip();
         }
         if (b.has("hurt")) return "I'd like to talk about what happened before we pretend everything is fine. An apology would be a beginning.";
         var society = VillageSocieties.of(v); int salt = salt(v, p, today);
@@ -64,7 +66,9 @@ public final class NarrativeEngine {
                 : Gossip.heart(society, profile.id(), today, salt);
         var personality = NarrativeContent.current().personality(profile.personality());
         var lines = personality.lines().get(topic);
-        int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + b.recentLines().size(), lines.size());
+        // Written-dialogue entries ("t:...") share the recent-lines memory; the personality pack's rotation ignores them.
+        int packLines = (int) b.recentLines().stream().filter(id -> !id.startsWith("t:")).count();
+        int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + packLines, lines.size());
         int index = start;
         for (int n = 0; n < lines.size(); n++) {
             int candidate = (start + n) % lines.size();
@@ -87,8 +91,8 @@ public final class NarrativeEngine {
         // Handwritten dialogue for this moment; the personality pack's own lines join in now and then.
         String said = TalkWorld.line(v, p, topic);
         String text = said != null && Math.floorMod(salt + index, 6) != 0 ? said : lines.get(index);
-        var roll = new java.util.Random(salt * 31L + index + b.recentLines().size());
-        if(!villageLine.isEmpty() && (topic.equals("chat") || topic.equals("adventure")) && roll.nextInt(5) == 0)text=villageLine+" "+text;
+        var roll = new java.util.Random(salt * 31L + index + packLines);
+        if(!villageLine.isEmpty() && (topic.equals("chat") || topic.equals("work") || topic.equals("adventure")) && (index%2==0 || today%3==1))text=villageLine+" "+text;
         var neighbors = shared(v).neighbors();
         String mention = society == null || !society.has(profile.id()) ? "" : Gossip.mention(society, profile.id(), topic, today, salt);
         if (!mention.isEmpty() && roll.nextInt(topic.equals("chat") ? 3 : 4) == 0) text += " " + mention;

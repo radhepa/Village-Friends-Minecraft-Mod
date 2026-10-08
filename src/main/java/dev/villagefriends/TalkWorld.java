@@ -172,7 +172,10 @@ public final class TalkWorld {
 
     /** Sometimes, on "How's your day?", a resident asks you something or offers to help instead. */
     public static DialogueBank.Question ask(Villager v, ServerPlayer p) {
-        var bank = DialogueBank.current(); var c = context(v, p, "chat"); var b = bond(v, p);
+        var bank = DialogueBank.current(); var b = bond(v, p);
+        // Residents warm up before they start quizzing you: not on the day you first meet.
+        if (b.visits() < 2) return null;
+        var c = context(v, p, "chat");
         long today = day(v.level());
         var done = new HashSet<String>();
         for (var flag : b.flags()) {
