@@ -4,12 +4,20 @@
     {"id": "m_crossbowman", "name": "Crossbowman", "top": "t197_crossbowmans_windlass_jack", "bottom": "b197_crossbowmans_quilted_leggings"},
     {"id": "m_halberdier", "name": "Halberdier", "top": "t198_halberdiers_livery_doublet", "bottom": "b198_halberdiers_striped_hose"},
     {"id": "m_hobelar", "name": "Hobelar", "top": "t199_hobelars_light_riding_jack", "bottom": "b199_hobelars_riding_boots"},
-    {"id": "m_sergeant_at_arms", "name": "Sergeant-at-Arms", "top": "t200_sergeant_at_arms_mace_baldric_coat", "bottom": "b200_sergeants_splinted_boots"}
+    {"id": "m_sergeant_at_arms", "name": "Sergeant-at-Arms", "top": "t200_sergeant_at_arms_mace_baldric_coat", "bottom": "b200_sergeants_splinted_boots"},
+    {"id": "m_standard_bearer", "name": "Standard Bearer", "top": "t201_standard_bearers_banner_harness", "bottom": "b201_standard_bearers_parti_hose"},
+    {"id": "m_war_drummer", "name": "War Drummer", "top": "t202_war_drummers_drum_slung_tunic", "bottom": "b202_drummers_gaitered_trousers"},
+    {"id": "m_castellan", "name": "Castellan", "top": "t203_castellans_key_chain_surcoat", "bottom": "b203_castellans_mail_leggings"},
+    {"id": "m_gate_warden", "name": "Gate Warden", "top": "t204_gate_wardens_lamellar_vest", "bottom": "b204_gate_wardens_hobnail_gaiters"},
+    {"id": "m_outrider", "name": "Outrider", "top": "t205_outriders_dust_coat", "bottom": "b205_outriders_spurred_boots"}
   ],
   "professions": {
-    "GUARD": ["m_pikeman", "m_crossbowman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms"],
-    "KNIGHT": ["m_pikeman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms"],
+    "GUARD": ["m_pikeman", "m_crossbowman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_war_drummer", "m_castellan", "m_gate_warden"],
+    "KNIGHT": ["m_pikeman", "m_halberdier", "m_hobelar", "m_sergeant_at_arms", "m_standard_bearer", "m_castellan", "m_outrider"],
     "WEAPONSMITH": ["m_pikeman"],
-    "ARCHER": ["m_crossbowman"]
+    "ARCHER": ["m_crossbowman"],
+    "BARD": ["m_standard_bearer", "m_war_drummer"],
+    "ADVENTURER": ["m_outrider"],
+    "CARTOGRAPHER": ["m_outrider"]
   }
 }
