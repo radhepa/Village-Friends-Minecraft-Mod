@@ -1,0 +1,270 @@
+{
+ "format": 1,
+ "size": [15, 11, 9],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:sugar_cane",
+   "properties": {
+    "age": "0"
+   }
+  },
+  "C": {
+   "id": "minecraft:jungle_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:sand"
+  },
+  "E": {
+   "id": "minecraft:jungle_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "F": {
+   "id": "minecraft:sandstone"
+  },
+  "G": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "H": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "I": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "J": {
+   "id": "minecraft:cocoa",
+   "properties": {
+    "age": "2",
+    "facing": "north"
+   }
+  },
+  "K": {
+   "id": "minecraft:cocoa",
+   "properties": {
+    "age": "2",
+    "facing": "south"
+   }
+  },
+  "L": {
+   "id": "minecraft:cut_sandstone_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:short_dry_grass"
+  },
+  "N": {
+   "id": "minecraft:cocoa",
+   "properties": {
+    "age": "2",
+    "facing": "west"
+   }
+  },
+  "O": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "P": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAAAGAAAAAAA",
+    "AAAAAAAGAAAAAAA",
+    "IFGFGFGFGFGFGFI",
+    "IDDDDDDDDDDDDDI",
+    "IHHHHHHHHHHHHHI",
+    "IDDDDDDDDDDDDDI",
+    "IFGFGFGFGFGFGFI",
+    "ADAAAAAAAAAAADA",
+    "AAAAAAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".......P.......",
+    "....M...O...M..",
+    "...............",
+    ".BBB.BBB.BBB.B.",
+    "L.............L",
+    ".BBB.BBB.BBB.B.",
+    "...............",
+    ".E...........E.",
+    "..............."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    ".BBB.BBB.BBB.B.",
+    "...............",
+    ".BBB.BBB.BBB.B.",
+    "...............",
+    ".E...........E.",
+    "..............."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "..B........B.B.",
+    "...............",
+    "......BB..B....",
+    "...............",
+    ".E...........E.",
+    "..............."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "EE...........EE",
+    "..............."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "C.............C",
+    "...............",
+    "K.............K",
+    "EN.C.......C..E",
+    "J.............J"
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "C.............C",
+    "..C.........C..",
+    "C.............C",
+    "EC.C.......C.CE",
+    "C.............C"
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "C.............C",
+    "CC...........CC",
+    "CCC.........CCC",
+    "CC...........CC"
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [7, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/farms.py",
+  "checksum": "ebf206d8518d5c36"
+ }
+}

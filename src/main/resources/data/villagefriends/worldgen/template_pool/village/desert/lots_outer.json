@@ -2,7 +2,124 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/farm_irrigated",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/farm_melons",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/cane_channel",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/cactus_garden",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/camel_pen",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/goat_pen",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_palm",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_palm_pair",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_haystack",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_pottery",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_cart",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_well",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/adobe_house",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/garden_house",
@@ -15,6 +132,15 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/weaver",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/fisher",
         "processors": "villagefriends:desert_lots_weathered",
         "projection": "rigid"
       }

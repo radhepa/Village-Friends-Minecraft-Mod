@@ -1429,6 +1429,93 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/desert/cactus_garden",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/camel_pen",
+      "size": [
+        15,
+        7,
+        15
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/cane_channel",
+      "size": [
+        15,
+        11,
+        9
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/desert/cartographer",
       "size": [
         9,
@@ -1561,6 +1648,214 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/desert/decor_canopy",
+      "size": [
+        7,
+        5,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/decor_cart",
+      "size": [
+        6,
+        5,
+        6
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/decor_haystack",
+      "size": [
+        6,
+        5,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/decor_palm",
+      "size": [
+        7,
+        11,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/decor_palm_pair",
+      "size": [
+        9,
+        11,
+        8
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/decor_pottery",
+      "size": [
+        7,
+        4,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/decor_well",
+      "size": [
+        7,
+        6,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/desert/dome_house",
@@ -1798,6 +2093,58 @@
       ]
     },
     {
+      "id": "villagefriends:village/desert/farm_irrigated",
+      "size": [
+        15,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/farm_melons",
+      "size": [
+        13,
+        6,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
       "id": "villagefriends:village/desert/fisher",
       "size": [
         13,
@@ -1937,6 +2284,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "villagefriends:village/desert/goat_pen",
+      "size": [
+        11,
+        7,
+        12
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
     },
     {
       "id": "villagefriends:village/desert/mason",

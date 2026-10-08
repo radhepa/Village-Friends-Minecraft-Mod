@@ -123,6 +123,31 @@
           "processors": "desert_lots_weathered"
         },
         {
+          "template": "desert/decor_palm",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_palm_pair",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_well",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_canopy",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_cart",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
           "template": "empty",
           "weight": 12
         }
@@ -132,12 +157,82 @@
       "fallback": "minecraft:empty",
       "elements": [
         {
-          "template": "desert/garden_house",
+          "template": "desert/farm_irrigated",
+          "weight": 4,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/farm_melons",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/cane_channel",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/cactus_garden",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/camel_pen",
+          "weight": 3,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/goat_pen",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_palm",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_palm_pair",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_haystack",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_pottery",
           "weight": 1,
           "processors": "desert_lots_weathered"
         },
         {
+          "template": "desert/decor_cart",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/decor_well",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/adobe_house",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/garden_house",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
           "template": "desert/weaver",
+          "weight": 1,
+          "processors": "desert_lots_weathered"
+        },
+        {
+          "template": "desert/fisher",
           "weight": 1,
           "processors": "desert_lots_weathered"
         },

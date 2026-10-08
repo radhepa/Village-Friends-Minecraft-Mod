@@ -1,0 +1,208 @@
+{
+ "format": 1,
+ "size": [11, 7, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:sand"
+  },
+  "B": {
+   "id": "minecraft:sandstone_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "C": {
+   "id": "minecraft:smooth_sandstone_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:cactus",
+   "properties": {
+    "age": "0"
+   }
+  },
+  "E": {
+   "id": "minecraft:structure_void"
+  },
+  "F": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "G": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "H": {
+   "id": "minecraft:dead_bush"
+  },
+  "I": {
+   "id": "minecraft:tall_dry_grass"
+  },
+  "J": {
+   "id": "minecraft:cactus_flower"
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "L": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "east"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "EEEEEGEEEEE",
+    "AAAAAFAAAAA",
+    "AAAAAGAAAAA",
+    "AAAAAFAAAAA",
+    "AAAAAGAAAAA",
+    "AAAAAFAAAAA",
+    "AAGFGFGFGAA",
+    "AAAAAFAAAAA",
+    "AAAAAGAAAAA",
+    "AAAAAFAAAAA",
+    "AAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....K.....",
+    "BCBCB.BCBCB",
+    "C.......H.C",
+    "B.D.I..D..B",
+    "C..D..I.D.C",
+    "B.H.......B",
+    "C...MB....C",
+    "B.I.....H.B",
+    "C..D..H.D.C",
+    "B...I.....B",
+    "CBCBCBCBCBC"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..D....D...",
+    "...........",
+    "...........",
+    ".....L.....",
+    "...........",
+    "...D....D..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "..D....J...",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "........D..",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/farms.py",
+  "checksum": "bbdc7d75d98dac7a"
+ }
+}

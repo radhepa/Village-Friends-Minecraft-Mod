@@ -155,6 +155,51 @@
       }
     },
     {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_palm",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_palm_pair",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_well",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_canopy",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/decor_cart",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 12,
       "element": {
         "element_type": "minecraft:empty_pool_element"

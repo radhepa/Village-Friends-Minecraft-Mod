@@ -1,0 +1,321 @@
+{
+ "format": 1,
+ "size": [15, 7, 15],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:sand"
+  },
+  "B": {
+   "id": "minecraft:structure_void"
+  },
+  "C": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "D": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "F": {
+   "id": "minecraft:orange_wool"
+  },
+  "G": {
+   "id": "minecraft:white_wool"
+  },
+  "H": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:short_dry_grass"
+  },
+  "J": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "K": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "L": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "M": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "N": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "O": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:acacia_fence_gate",
+   "properties": {
+    "facing": "north",
+    "in_wall": "false",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "R": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "S": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "T": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "y"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BBBBBBBSBBBBBBB",
+    "BBBBBBBBBBBBBBB",
+    "BAAAAAAAAACACAB",
+    "BACAAACAAAAAACB",
+    "BAAAAAAAACAAAAB",
+    "BCAAAAAAACCAAAB",
+    "BAAACAACCAAACAB",
+    "BACAAAAAACACCAB",
+    "BAAAACAAAAAAAAB",
+    "BAAAAAACCAAAAAB",
+    "BCAACAAAACAAACB",
+    "BAAACCAAAAACCAB",
+    "BAAACAACAAAAACB",
+    "BJMMMJACAAAAAAB",
+    "BBBBBBBBBBBBBBB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".......R.......",
+    "JEEEEEEPEEEEEEJ",
+    "D...II...I....D",
+    "D.............D",
+    "D.............D",
+    "D.............D",
+    "D.I....I......D",
+    "D......T......D",
+    "D.I...........D",
+    "D.............D",
+    "D....I..H....ON",
+    "D.............D",
+    "D...I.........D",
+    "D......I..LLLLN",
+    "JEEEEEEEEEKKKKJ"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...............",
+    "H.............H",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    ".......H.......",
+    "...............",
+    "...............",
+    "........H....H.",
+    "...............",
+    "...............",
+    "............Q..",
+    "H.............H"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "........H....H.",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "........FFFFFF.",
+    "........GGGGGG.",
+    "........FFFFFF.",
+    "........GGGGGG.",
+    "..............."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [7, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [
+  {
+   "pos": [4.5, 1.0, 5.5],
+   "blockPos": [4, 1, 5],
+   "nbt": {
+    "id": "minecraft:camel",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [10.5, 1.0, 6.5],
+   "blockPos": [10, 1, 6],
+   "nbt": {
+    "id": "minecraft:camel",
+    "PersistenceRequired": true
+   }
+  },
+  {
+   "pos": [5.5, 1.0, 10.5],
+   "blockPos": [5, 1, 10],
+   "nbt": {
+    "id": "minecraft:camel",
+    "PersistenceRequired": true,
+    "Age": -24000
+   }
+  }
+ ],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/farms.py",
+  "checksum": "65d1e92b66aeb8c5"
+ }
+}
