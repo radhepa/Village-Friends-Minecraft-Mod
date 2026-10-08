@@ -1,6 +1,6 @@
 # Birthdays and notice boards
 
-Version 2.19 gives every resident a birthday on a village calendar, with a party by the bell, and turns the Notice Board into a real village board where residents pin up notices asking for help: monster hunts, things they need for their trade, letters to carry to a neighbor, and surprises for someone's birthday.
+Version 2.20 gives every resident a birthday on a village calendar, with a party by the bell, and turns the Notice Board into a real village board where residents pin up notices asking for help: monster hunts, things they need for their trade, letters to carry to a neighbor, and surprises for someone's birthday.
 
 ## Where things live
 

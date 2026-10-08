@@ -34,6 +34,12 @@ PACKS = {
                     "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
                     "guards", "party"],
     },
+    "tavern": {
+        "name": "Tavern",
+        "description": "Residents at the tavern: sitting, eating, drinking, toasting, talking across the table, "
+                       "listening to the bard, leaning on the bar.",
+        "modules": ["seated", "dining", "chat", "bar"],
+    },
 }
 MAX_ROT, MAX_POS = 400, 12
 

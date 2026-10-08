@@ -16,7 +16,7 @@ public final class VillageSettlements {
     private static final Map<UUID,String> visiting=new HashMap<>();
     public static VillageBook book(ServerLevel level) { return ((AttachmentTarget)level).getAttachedOrCreate(VILLAGES); }
     private static void put(ServerLevel level,VillageRecord village) { ((AttachmentTarget)level).setAttached(VILLAGES,book(level).put(village)); }
-    public static void clear() { visiting.clear(); }
+    public static void clear() { visiting.clear(); arrived.clear(); }
     public static VillageRecord discover(ServerLevel level,BlockPos pos) {
         var known=book(level).at(pos); if(known!=null)return known;
         var structures=level.registryAccess().lookupOrThrow(Registries.STRUCTURE).getOrThrow(StructureTags.VILLAGE);
@@ -63,6 +63,8 @@ public final class VillageSettlements {
             membership=new ResidentHome(village.id(),VillageFriends.name(v),level.dimension().identifier().toString());
             target(v).setAttached(HOME,membership);
         }
+        String fixed=ResidentNames.corrected(v.getUUID(),profile(v).look(),membership.baseName());
+        if(fixed!=null){membership=new ResidentHome(membership.village(),fixed,membership.dimension());target(v).setAttached(HOME,membership);}
         var village=home(v); if(village==null)return;
         String previous=target(v).getAttachedOrElse(HOME_LABEL,"");
         String actual=v.hasCustomName()?v.getCustomName().getString():"";
@@ -102,14 +104,25 @@ public final class VillageSettlements {
             default -> "If you're staying in "+name+", come visit when you have a quiet moment. You don't have to bring anything.";
         };
     }
+    /** Re-crossing the same village edge within a minute does not replay the arrival card. */
+    private static final int ARRIVAL_COOLDOWN=1200;
+    private record Arrival(String key,int tick,int variant) {}
+    private static final Map<UUID,Arrival> arrived=new HashMap<>();
     public static void tick(MinecraftServer server) {
-        if(server.getTickCount()%100!=0)return;
-        for(var p:server.getPlayerList().getPlayers()) {
+        int now=server.getTickCount();
+        if(now%20==0)for(var p:server.getPlayerList().getPlayers()) {
             var level=(ServerLevel)p.level();var village=discover(level,p.blockPosition()); String key=village==null?"":level.dimension().identifier()+"/"+village.id();
             String before=visiting.put(p.getUUID(),key);
-            if(village!=null&&!key.equals(before))p.sendSystemMessage(Component.literal("Welcome to "+village.name()),true);
+            if(village==null||key.equals(before))continue;
+            var last=arrived.get(p.getUUID());
+            if(last!=null&&last.key().equals(key)&&now-last.tick()<ARRIVAL_COOLDOWN)continue;
+            int variant=VillageArrival.next(last==null?-1:last.variant(),p.getRandom().nextInt(VillageArrival.VARIANTS));
+            arrived.put(p.getUUID(),new Arrival(key,now,variant));
+            if(net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.canSend(p,VillageArrivalPayload.TYPE))
+                net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.send(p,new VillageArrivalPayload(village.name(),variant));
+            else p.sendSystemMessage(Component.literal(VillageArrival.line(variant).sentence(village.name())),true);
         }
-        for(var level:server.getAllLevels())updateResidents(level);
+        if(now%100==0)for(var level:server.getAllLevels())updateResidents(level);
     }
     private VillageSettlements() {}
 }

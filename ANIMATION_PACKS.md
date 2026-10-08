@@ -8,7 +8,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
-370 clips (361 distinct motions; a few serve two situations). Version 2.19 added eleven birthday-party clips.
+370 clips (361 distinct motions; a few serve two situations). Version 2.20 added eleven birthday-party clips.
 
 | Situation | Clips |
 |---|---|

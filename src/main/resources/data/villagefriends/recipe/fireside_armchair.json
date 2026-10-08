@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:fireside_armchair",
+    "count": 1
+  },
+  "pattern": [
+    "W  ",
+    "WRW",
+    "P P"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "R": [
+      "minecraft:red_dye",
+      "minecraft:red_wool"
+    ],
+    "P": "#minecraft:planks"
+  }
+}

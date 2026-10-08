@@ -4950,6 +4950,30 @@
 "I'm making a snow fort. Nobody's getting in.",
 "I love snow! Everything's new and white and quiet."
 ],
+"greet.routine.supper_tavern":[
+"Hello! Supper at the tavern tonight. I couldn't face my own cooking.",
+"Oh, hello, {player}! Grab a seat, the pie's nearly out.",
+"Hello! Come and eat with us. There's always room for one more.",
+"Ah, hello. I've been looking forward to this supper all day.",
+"Hello! The keeper's run off their feet tonight. Wave if you want anything.",
+"Hello! Sit, sit. The cook's outdone themselves again.",
+"Hello! I'm saving this seat for {friend}, but you can have the next one.",
+"Hello! Supper with friends. Is there anything better? There isn't."
+],
+"routine.supper_tavern":[
+"I eat supper at the tavern when the week's been long. This week's been long.",
+"The cook makes a shepherd's pie that could end a feud.",
+"Nobody washes up at the tavern. Well, somebody does. Not me.",
+"I like supper here. You hear all the news before it's even news.",
+"The tavern smells of woodsmoke and gravy. That's my favorite smell.",
+"I always sit near the fire for supper. I've earned the warm seat.",
+"Supper at home is quiet. Supper here is loud and lovely.",
+"The keeper brought my plate before I'd even asked. That's a good tavern.",
+"I said I'd only have the pie. Then the tart came round.",
+"Half of {village} eats supper here on Market Day. You can barely hear yourself chew.",
+"I like to watch everyone come in from work, one by one, all tired and hungry.",
+"I'll have a mug of cider after this, and then I'll think about going home."
+],
 "weather.clear":[
 "Not a cloud in the sky. The kind of day that makes you want to go somewhere.",
 "Clear skies today. Even the golem looks cheerful.",

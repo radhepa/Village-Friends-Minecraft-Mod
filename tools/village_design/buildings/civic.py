@@ -18,141 +18,358 @@ def plaque(b, x, z, facing='north'):
 
 
 def tavern():
-    """The Hearth: stone hall, jettied guest floor, terrace, bar, fireplace and kitchen wing."""
+    """The Hearth: where the village eats lunch and supper, spends its evenings and hears the bard.
+
+    A pergola beer garden on the square; a stone common room with a big hearth and armchairs, two long
+    trestle tables, two square tables, a long bar with stools and room to lean, and the bard's corner;
+    the kitchen wing behind with a serving hatch; two guest rooms upstairs; a yard with wood and kegs.
+
+    Tavern furniture (``tavern_table``, ``tavern_chair``, ``bar_stool``, ``fireside_armchair`` and the
+    benches) faces the way its sitter faces; stair chairs face their backrest side.
+    """
     rng = random.Random(301)
     st = Style(frame='stripped_dark_oak_log', fill='cobblestone', floor='spruce_planks', roof='dark_oak',
                base='cobblestone', trim='spruce', door='dark_oak', upper_fill='calcite')
-    b = Build('tavern', (17, 20, 21))
-    # Kitchen wing first, so the main roof tucks over it.
-    wing = Body(b, 3, 13, 8, 18, Style(frame='stripped_dark_oak_log', fill='bricks', floor='stone_bricks',
-                                         roof='dark_oak', base='cobblestone', trim='spruce'), heights=(4,))
+    b = Build('tavern', (17, 22, 29))
+    # Kitchen wing first, so the hall's back wall and roof tuck over it.
+    wing = Body(b, 8, 21, 15, 27, Style(frame='stripped_dark_oak_log', fill='bricks', floor='stone_bricks',
+                                          roof='dark_oak', base='cobblestone', trim='spruce'), heights=(4,))
     wing.build()
     wing.roof(axis='z', pitch=1, gable='bricks', rake=(0, 1))
-    main = Body(b, 2, 5, 14, 13, st, heights=(4, 3), jetty=('north',), stone_ground=True)
-    main.build()
-    # Ground floor shows timber posts in the stone walls.
-    for x in (2, 5, 8, 11, 14):
-        for y in range(2, 6):
-            b.set(x, y, 5, 'stripped_dark_oak_log', axis='y')
-    main.roof(axis='x', pitch=1, gable='calcite', trim=ROOFS['spruce'])
-    # Windows.
-    main.windows(0, 'north', [(1, 2), (10, 2)], height=2, shutters=True)
-    main.windows(0, 'west', [1, 6], height=2)
-    main.windows(0, 'east', [2], height=2)
-    main.windows(1, 'north', [1, 3, 5, 7, 9, 11], height=2, shutters=False, box='flowering_azalea_leaves')
-    main.windows(1, 'south', [2, 4, 9, 11], height=2, shutters=False)
-    main.windows(1, 'east', [3, 6], height=2)
-    main.gable_window('west')
-    wing.windows(0, 'east', [(2, 2)], height=1)
-    wing.windows(0, 'west', [(2, 2)], height=1)
-    # Entrance, terrace and sign.
-    parts.front_door(b, 8, 2, 5, 'north', wood='dark_oak', step='cobblestone_stairs', lamps=False)
-    for x in (7, 9):
-        b.set(x, 4, 4, 'lantern', hanging=True)
-    for z in range(0, 5):
-        b.set(8, 0, z, 'gravel' if z % 2 else 'cobblestone')
-    for x in range(2, 15):
-        for z in range(1, 4):
-            if x != 8:
-                b.set(x, 0, z, 'spruce_planks' if 3 <= x <= 13 else 'grass_block')
-    for x, z in ((2, 1), (14, 1), (2, 3), (14, 3)):
-        for y in (1, 2, 3):
-            b.set(x, y, z, 'spruce_fence')
-        b.set(x, 4, z, 'stripped_spruce_log', axis='y')
-    for x in range(2, 15):
-        for z in (1, 3):
-            if b.get(x, 4, z)[0] == 'minecraft:air':
-                b.set(x, 4, z, 'stripped_spruce_log', axis='x')
-    for x in range(2, 15):
-        if x % 3 != 2:
-            parts.bush(b, x, 5, 1, 'flowering_azalea_leaves' if x % 2 else 'oak_leaves')
-    for tx in (4, 12):
-        parts.table(b, tx, 1, 2, wood='spruce')
-        b.custom(tx - 1, 1, 2, 'village_bench', facing='east')
-        b.custom(tx + 1, 1, 2, 'village_bench', facing='west')
-    # Hanging tavern sign on an iron-strapped arm off the jettied corner.
-    b.set(15, 7, 4, 'dark_oak_fence')
-    b.set(15, 7, 3, 'dark_oak_fence')
-    b.set(15, 6, 3, 'dark_oak_hanging_sign', rotation=8, attached=False, waterlogged=False)
-    plaque(b, 10, 4)
-    # Main chimney on the east gable and the hearth flue on the west side.
-    for y in range(1, 4):
-        for z in (8, 9, 10):
-            b.set(15, y, z, 'cobblestone')
-    parts.chimney(b, 15, 9, 4, main.ridge + 1, 'bricks')
-    # Ground floor: hall with fireplace, bar and stairs.
-    for z in (8, 10):
-        for y in (2, 3, 4):
-            b.set(3, y, z, 'bricks')
-    b.set(3, 2, 9, 'campfire', lit=True, signal_fire=False, facing='east')
-    for y in (3, 4, 5):
-        b.set(3, y, 9, 'bricks')
-    b.set(3, 5, 8, 'brick_stairs', facing='west', half='bottom')
-    b.set(3, 5, 10, 'brick_stairs', facing='west', half='bottom')
-    for y in range(6, main.ridge + 2):
-        b.set(3, y, 9, 'bricks')
-    b.set(3, main.ridge + 2, 9, 'campfire', lit=True, signal_fire=False, facing='north')
-    for x in range(7, 12):
-        b.set(x, 2, 10, 'stripped_spruce_log', axis='x')
-        b.set(x, 3, 10, 'spruce_slab', type='bottom')
-    b.custom(9, 2, 12, 'tap_stand', facing='north')
-    b.custom(10, 2, 12, 'drinks_barrel', facing='north')
-    b.barrel(8, 2, 12, 'up')
-    b.barrel(11, 2, 12, 'north')
-    b.barrel(11, 3, 12, 'north')
-    b.set(7, 2, 12, 'brewing_stand')
-    parts.stair_run(b, 13, 12, 2, 5, 'north', wood='spruce')
-    for tx, tz in ((6, 7), (10, 7)):
-        parts.table(b, tx, 2, tz, wood='dark_oak')
-        parts.chair(b, tx - 1, 2, tz, 'west', wood='spruce')
-        parts.chair(b, tx + 1, 2, tz, 'east', wood='spruce')
-    parts.table(b, 5, 2, 11, wood='dark_oak')
-    parts.chair(b, 4, 2, 11, 'west', wood='spruce')
-    for x, z in ((6, 9), (10, 6), (5, 6)):
-        parts.lantern(b, x, 5, z)
-    b.resident(9, 2, 11, 'tavern_keeper')
-    # Kitchen wing.
-    b.door(5, 2, 13, facing='south', wood='spruce')
-    b.custom(4, 2, 17, 'kitchen_stove', facing='north')
-    b.set(5, 2, 17, 'smoker', facing='north', lit=True)
-    b.barrel(7, 2, 17, 'up')
-    b.set(4, 2, 15, 'water_cauldron', level=3)
-    b.set(4, 2, 14, 'crafting_table')
-    parts.lantern(b, 6, 5, 15)
-    b.resident(6, 2, 15, 'cook')
-    b.door(8, 2, 16, facing='west', wood='spruce')
-    b.set(9, 1, 16, 'cobblestone_stairs', facing='west', half='bottom', lock=True)
-    # Upper floor: corridor along the front, two guest rooms at the back.
-    for x in range(3, 13):
-        for y in (7, 8, 9):
-            b.set(x, y, 8, 'spruce_planks')
-    for z in range(9, 13):
-        for y in (7, 8, 9):
-            b.set(12, y, z, 'spruce_planks')
-            b.set(7, y, z, 'spruce_planks')
-    b.door(5, 7, 8, facing='south', wood='spruce')
-    b.door(10, 7, 8, facing='south', wood='spruce')
-    b.bed(4, 7, 12, 'north', 'red')
-    b.bed(6, 7, 12, 'north', 'red')
-    b.bed(9, 7, 12, 'north', 'green')
-    b.bed(11, 7, 12, 'north', 'green')
-    b.chest(5, 7, 12, 'north', loot=LOOT_HOUSE)
-    b.chest(10, 7, 12, 'north', loot=LOOT_HOUSE)
-    parts.lantern(b, 5, 9, 10)
-    parts.lantern(b, 10, 9, 10)
-    parts.lantern(b, 8, 9, 6)
-    b.room('guest_room_west', (5, 8, 10))
-    b.room('guest_room_east', (10, 8, 10))
-    parts.table(b, 4, 7, 6, wood='spruce')
-    b.set(3, 7, 5, 'bookshelf')
-    # Yard: barrels and hay by the kitchen, a cart of kegs.
-    for x, z in ((10, 17), (11, 17), (10, 18)):
-        b.barrel(x, 1, z, 'up')
-    b.set(11, 1, 18, 'hay_block', axis='y')
-    parts.woodpile(b, 12, 1, 15, 'z', length=4, wood='spruce')
+    # The hall: walls x 1..15, z 6..21; common room x 2..14, z 7..20 on the floor at Y=1; rooms on Y=6.
+    hall = Body(b, 1, 6, 15, 21, st, heights=(4, 3), stone_ground=True)
+    hall.build()
+    hall.roof(axis='z', pitch=1, gable='calcite', trim=ROOFS['spruce'])
+    _tavern_facade(b, hall, wing)
+    _tavern_terrace(b, rng)
+    _tavern_hearth(b)
+    _tavern_common_room(b)
+    _tavern_bar(b)
+    _tavern_kitchen(b)
+    _tavern_upstairs(b)
+    _tavern_yard(b, rng)
     b.entrance(8)
     b.natural_ground()
     return b
+
+
+def _tavern_facade(b, hall, wing):
+    """Gable end to the square: stone below with dark timber posts, plaster and flower boxes above."""
+    for x in (4, 7, 9, 12):
+        for y in range(2, 6):
+            b.set(x, y, 6, 'stripped_dark_oak_log', axis='y')
+    hall.windows(0, 'north', [(1, 2), (12, 2)], height=2, shutters=True)
+    hall.windows(0, 'north', [(4, 2), (9, 2)], height=2, shutters=False)
+    hall.windows(0, 'west', [(2, 2), (12, 2)], height=2, shutters=True)
+    hall.windows(0, 'east', [(2, 2), (10, 2)], height=2, shutters=True)
+    hall.windows(0, 'south', [(2, 1)], height=2, shutters=True)
+    hall.windows(1, 'north', [2, (5, 2), (8, 2), 12], height=2, shutters=False, box='flowering_azalea_leaves')
+    hall.windows(1, 'west', [(2, 2), (12, 2)], height=2, shutters=True)
+    hall.windows(1, 'east', [2, 6, (9, 2), 13], height=2, shutters=True)
+    hall.windows(1, 'south', [(3, 2)], height=2, shutters=True)
+    hall.gable_window('north', height=2)
+    hall.gable_window('south', height=1)
+    # Timber posts break up the long stone walls, in line with the frame above; the front gable is half-timbered.
+    for z in (10, 17):
+        for y in range(2, 6):
+            b.set(1, y, z, 'stripped_dark_oak_log', axis='y')
+    for z in (10, 13, 19):
+        for y in range(2, 6):
+            b.set(15, y, z, 'stripped_dark_oak_log', axis='y')
+    for x in (5, 7):
+        for y in range(2, 6):
+            b.set(x, y, 21, 'stripped_dark_oak_log', axis='y')
+    for x in range(5, 12):
+        b.set(x, 14, 6, 'stripped_dark_oak_log', axis='x')
+    for y in (11, 15, 16, 17):
+        b.set(8, y, 6, 'stripped_dark_oak_log', axis='y')
+    wing.windows(0, 'east', [(2, 2)], height=1)
+    wing.windows(0, 'south', [(1, 1), (5, 1)], height=1)
+    parts.front_door(b, 8, 2, 6, 'north', wood='dark_oak', step='cobblestone_stairs', lamps=False)
+    b.set(8, 4, 6, 'chiseled_stone_bricks')
+    plaque(b, 10, 5)
+    # The hearth's brick chimney climbs the outside of the west wall in steps.
+    for z in range(12, 17):
+        b.set(0, 0, z, 'cobblestone')
+        b.set(0, 1, z, 'cobblestone')
+        for y in range(2, 6):
+            b.set(0, y, z, 'bricks')
+    b.set(0, 6, 12, 'brick_stairs', facing='south', half='bottom')
+    b.set(0, 6, 16, 'brick_stairs', facing='north', half='bottom')
+    for z in range(13, 16):
+        for y in range(6, 10):
+            b.set(0, y, z, 'bricks')
+    b.set(0, 10, 13, 'brick_stairs', facing='south', half='bottom')
+    b.set(0, 10, 15, 'brick_stairs', facing='north', half='bottom')
+    parts.chimney(b, 0, 14, 10, hall.ridge + 1, 'bricks')
+
+
+def _tavern_terrace(b, rng):
+    """Beer garden under a pergola: two trestle tables with benches, open to the sky above the seats."""
+    for x in range(1, 16):
+        for z in range(1, 6):
+            b.set(x, 0, z, 'spruce_planks')
+    for z in range(0, 6):
+        b.set(8, 0, z, 'cobblestone' if z % 2 == 0 else 'gravel')
+    for x in (7, 9):
+        b.set(x, 0, 0, 'gravel')
+    # Posts along the front, beams on top (none of them over a seat, so the seats stay out in the open).
+    for x in (1, 6, 10, 15):
+        for y in range(1, 5):
+            b.set(x, y, 1, 'spruce_fence')
+        for z in range(2, 5):
+            b.set(x, 5, z, 'stripped_spruce_log', axis='z')
+    for x in range(1, 16):
+        for z in (1, 5):
+            b.set(x, 5, z, 'stripped_spruce_log', axis='x')
+    for x in (1, 6, 10, 15):
+        b.set(x, 5, 1, 'stripped_spruce_log', axis='y')
+    for x in range(1, 16):
+        if x not in (7, 8, 9):
+            parts.bush(b, x, 6, 1, 'flowering_azalea_leaves' if x % 3 else 'azalea_leaves')
+    for x in (1, 15):
+        parts.bush(b, x, 6, 2, 'azalea_leaves')
+    for x, z in ((6, 3), (10, 3), (3, 1), (13, 1)):
+        b.set(x, 4, z, 'lantern', hanging=True, waterlogged=False)
+    for x in (7, 9):
+        b.set(x, 4, 5, 'lantern', hanging=True, waterlogged=False)
+    b.set(8, 4, 1, 'dark_oak_hanging_sign', rotation=8, attached=False, waterlogged=False)
+    for x in (6, 10):
+        b.set(x, 5, 0, 'red_wall_banner', facing='north')
+    # Two trestle tables of two with benches along both sides.
+    for x0 in (3, 12):
+        for x in (x0, x0 + 1):
+            b.custom(x, 1, 3, 'tavern_table')
+            b.custom(x, 1, 2, 'village_bench', facing='south')
+            b.custom(x, 1, 4, 'village_bench', facing='north')
+    # Flower boxes along the front edge.
+    for x in list(range(1, 7)) + list(range(10, 16)):
+        b.set(x, 0, 0, 'rooted_dirt')
+        if x in (1, 6, 10, 15):
+            parts.bush(b, x, 1, 0, 'flowering_azalea_leaves')
+        else:
+            b.set(x, 1, 0, parts.flowers(rng))
+
+
+def _tavern_hearth(b):
+    """The big fireplace in the west wall, with armchairs facing the fire and settles either side."""
+    for z in range(12, 17):
+        for y in range(2, 6):
+            b.set(1, y, z, 'bricks')
+        b.set(2, 1, z, 'bricks')
+        b.set(1, 1, z, 'bricks')
+    for z in range(13, 16):
+        b.set(1, 2, z, 'air')
+        b.set(1, 3, z, 'air')
+        b.set(1, 4, z, 'stripped_dark_oak_log', axis='z')
+    b.set(1, 2, 14, 'campfire', lit=True, signal_fire=False, facing='east', waterlogged=False)
+    for z in (13, 15):
+        b.set(1, 2, z, 'spruce_log', axis='x')
+    for z in range(12, 17):
+        b.set(2, 4, z, 'dark_oak_slab', type='top', waterlogged=False)
+    b.set(2, 5, 12, 'candle', candles=3, lit=True, waterlogged=False)
+    b.set(2, 5, 13, 'potted_fern')
+    b.set(2, 5, 16, 'candle', candles=2, lit=True, waterlogged=False)
+    # A rug laid into the floor (wool, so it stays a walkable floor).
+    for x in (3, 4):
+        for z in range(12, 17):
+            b.set(x, 1, z, 'red_wool' if x == 3 and 13 <= z <= 15 else 'brown_wool')
+    for z in (13, 15):
+        b.custom(3, 2, z, 'fireside_armchair', facing='west')
+    b.barrel(3, 2, 14, 'up')
+    b.set(3, 3, 14, 'candle', candles=1, lit=True, waterlogged=False)
+    for x in (2, 3):
+        b.custom(x, 2, 11, 'village_bench', facing='south')
+    # Firewood stacked by the hearth.
+    b.set(2, 2, 17, 'spruce_log', axis='z')
+    b.set(2, 3, 17, 'spruce_log', axis='z')
+    b.set(3, 2, 17, 'spruce_log', axis='z')
+
+
+def _tavern_common_room(b):
+    """Long tables, square tables, the bard's corner, beams, chandelier and the stairs up."""
+    # Two long trestle tables of three, chairs down both sides.
+    for z0 in (8, 13):
+        for z in range(z0, z0 + 3):
+            b.custom(6, 2, z, 'tavern_table')
+            b.custom(5, 2, z, 'tavern_chair', facing='east')
+            b.custom(7, 2, z, 'tavern_chair', facing='west')
+    # A square table by the south-west window, and an old fence-and-plate table with stair chairs.
+    b.custom(3, 2, 19, 'tavern_table')
+    for x, z, f in ((2, 19, 'east'), (4, 19, 'west'), (3, 18, 'south'), (3, 20, 'north')):
+        b.custom(x, 2, z, 'tavern_chair', facing=f)
+    parts.table(b, 6, 2, 18, wood='dark_oak')
+    for x, z, back in ((5, 18, 'west'), (7, 18, 'east'), (6, 17, 'north'), (6, 19, 'south')):
+        parts.chair(b, x, 2, z, back, wood='spruce')
+    # The bard's corner: a low dais by the front window, two slab steps, a note block to play beside.
+    for x in (2, 3):
+        for z in (7, 8):
+            b.set(x, 2, z, 'dark_oak_planks' if (x, z) != (3, 8) else 'red_wool')
+        b.set(x, 2, 9, 'spruce_slab', type='bottom', waterlogged=False)
+    b.set(2, 3, 7, 'note_block', instrument='bass', note=0, powered=False)
+    b.set(3, 5, 7, 'yellow_wall_banner', facing='south')
+    b.set(2, 5, 8, 'red_wall_banner', facing='east')
+    b.set(3, 5, 8, 'lantern', hanging=True, waterlogged=False)
+    # Exposed ceiling beams, lanterns hung from them, and a chandelier over the middle.
+    for z in (9, 15, 18):
+        for x in range(2, 15):
+            if b.get(x, 5, z)[0] == 'minecraft:air':
+                b.set(x, 5, z, 'stripped_dark_oak_log', axis='x')
+    for x, z in ((9, 9), (9, 15), (9, 18), (3, 15), (12, 15)):
+        b.set(x, 4, z, 'lantern', hanging=True, waterlogged=False)
+    for x, z in ((5, 12), (6, 12), (7, 12), (6, 11), (6, 13)):
+        b.set(x, 5, z, 'dark_oak_fence')
+    for x, z in ((5, 12), (7, 12), (6, 11), (6, 13)):
+        b.set(x, 4, z, 'lantern', hanging=True, waterlogged=False)
+    # Stairs up along the back wall, with a cupboard of barrels underneath.
+    parts.stair_run(b, 7, 20, 2, 5, 'east', wood='spruce')
+    b.barrel(10, 2, 20, 'north')
+    b.barrel(11, 2, 20, 'north')
+    b.barrel(11, 3, 20, 'north')
+    b.set(4, 2, 7, 'barrel', facing='up', open=False)
+    b.set(4, 3, 7, 'potted_azure_bluet')
+
+
+def _tavern_bar(b):
+    """The bar along the east wall: a stripped dark oak counter with five stools and room to lean.
+
+    The keeper's well behind it is half a step down (a slab floor), so patrons never take it for
+    standing room; the tap stand and drinks barrel stand against the wall at the back of the well.
+    """
+    for z in range(9, 18):
+        b.set(12, 2, z, 'stripped_dark_oak_log', axis='z')
+    b.set(12, 2, 18, 'stripped_dark_oak_log', axis='y')
+    b.set(12, 3, 18, 'lantern', hanging=False, waterlogged=False)
+    for z in (9, 11, 13, 15, 17):
+        b.custom(11, 2, z, 'bar_stool', facing='east')
+    for z in range(9, 21):
+        b.set(13, 1, z, 'spruce_slab', type='bottom', waterlogged=False)
+    # The back bar: kegs, shelves of candles and pots, the keeper's stations.
+    b.barrel(13, 2, 8, 'west')
+    b.barrel(14, 2, 8, 'west')
+    b.barrel(14, 2, 7, 'up')
+    b.barrel(13, 2, 7, 'west')
+    b.custom(14, 2, 13, 'tap_stand', facing='west')
+    b.custom(14, 2, 14, 'drinks_barrel', facing='west')
+    for z in (9, 10, 11, 12, 18, 19, 20):
+        b.barrel(14, 2, z, 'west')
+    for z in (10, 12, 19):
+        b.barrel(14, 3, z, 'west')
+    b.set(14, 3, 11, 'brewing_stand', has_bottle_0=False, has_bottle_1=False, has_bottle_2=False)
+    b.chest(14, 2, 15, 'west')
+    b.set(14, 2, 16, 'barrel', facing='up', open=False)
+    b.set(14, 2, 17, 'water_cauldron', level=3)
+    for z in (10, 11, 12, 19, 20):
+        b.set(14, 4, z, 'spruce_trapdoor', facing='west', half='top', open=False, powered=False, waterlogged=False)
+    for z, item in ((10, 'candle'), (11, 'potted_red_tulip'), (12, 'candle'), (19, 'potted_fern'), (20, 'candle')):
+        if item == 'candle':
+            b.set(14, 5, z, 'candle', candles=3 if z % 2 else 2, lit=True, waterlogged=False)
+        else:
+            b.set(14, 5, z, item)
+    b.set(14, 4, 13, 'red_wall_banner', facing='west')
+    b.set(14, 4, 14, 'yellow_wall_banner', facing='west')
+    for z in (10, 13, 16):
+        b.set(13, 5, z, 'hanging_roots', waterlogged=False)
+    b.resident(13, 2, 14, 'tavern_keeper')
+    # Serving hatch and door to the kitchen at the end of the well.
+    b.set(12, 2, 21, 'spruce_stairs', facing='north', half='top', waterlogged=False, lock=True)
+    b.set(12, 3, 21, 'air')
+    b.door(13, 2, 21, facing='north', wood='spruce')
+
+
+def _tavern_kitchen(b):
+    """The cook's kitchen: stove and smoker under a brick hood, prep table, pantry and water."""
+    b.custom(11, 2, 26, 'kitchen_stove', facing='north')
+    b.set(12, 2, 26, 'smoker', facing='north', lit=True)
+    b.set(10, 2, 26, 'water_cauldron', level=3)
+    for x in (11, 12):
+        b.set(x, 4, 26, 'bricks')
+        b.set(x, 5, 26, 'bricks')
+    parts.chimney(b, 11, 26, 6, 12, 'bricks')
+    b.set(9, 2, 22, 'crafting_table')
+    b.barrel(9, 2, 23, 'east')
+    b.barrel(9, 3, 23, 'east')
+    b.barrel(9, 2, 25, 'up')
+    b.barrel(9, 2, 26, 'up')
+    b.set(9, 3, 26, 'hay_block', axis='y')
+    b.barrel(14, 2, 22, 'west')
+    b.set(14, 2, 23, 'smooth_stone_slab', type='double')
+    b.set(14, 2, 24, 'smooth_stone_slab', type='double')
+    b.set(14, 3, 23, 'potted_red_mushroom')
+    b.set(13, 2, 26, 'barrel', facing='up', open=False)
+    b.set(14, 2, 26, 'composter', level=4)
+    for x, z in ((10, 23), (13, 24), (11, 22)):
+        b.set(x, 5, z, 'hanging_roots', waterlogged=False)
+    parts.lantern(b, 12, 5, 24)
+    b.resident(11, 2, 24, 'cook')
+    parts.front_door(b, 8, 2, 24, 'west', wood='spruce', step='cobblestone_stairs', lamps=False)
+
+
+def _tavern_upstairs(b):
+    """Two guest rooms on the west side, a landing and linen store on the east."""
+    for z in range(7, 21):
+        for y in (7, 8, 9):
+            b.set(8, y, z, 'spruce_planks')
+    for x in range(2, 8):
+        for y in (7, 8, 9):
+            b.set(x, y, 14, 'spruce_planks')
+    b.door(8, 7, 10, facing='east', wood='spruce')
+    b.door(8, 7, 17, facing='east', wood='spruce', hinge='right')
+    for x in (9, 10):
+        b.set(x, 7, 19, 'spruce_fence')
+    # North room.
+    b.bed(3, 7, 9, 'west', 'red')
+    b.bed(3, 7, 12, 'west', 'red')
+    b.chest(2, 7, 10, 'east', loot=LOOT_HOUSE)
+    b.set(2, 7, 11, 'barrel', facing='up', open=False)
+    b.set(2, 8, 11, 'potted_dandelion')
+    parts.table(b, 6, 7, 8, wood='spruce')
+    b.set(7, 7, 13, 'barrel', facing='up', open=False)
+    parts.rug(b, 4, 10, 6, 12, 7, 'white', border='red')
+    parts.lantern(b, 5, 9, 10)
+    b.room('guest_room_north', (5, 8, 11))
+    # South room.
+    b.bed(3, 7, 16, 'west', 'green')
+    b.bed(3, 7, 19, 'west', 'green')
+    b.chest(2, 7, 17, 'east', loot=LOOT_HOUSE)
+    b.set(2, 7, 18, 'barrel', facing='up', open=False)
+    b.set(2, 8, 18, 'potted_azure_bluet')
+    parts.table(b, 6, 7, 20, wood='spruce')
+    parts.rug(b, 4, 16, 6, 18, 7, 'white', border='green')
+    parts.lantern(b, 5, 9, 17)
+    b.room('guest_room_south', (5, 8, 17))
+    # Landing and linen store.
+    for z in (7, 8):
+        b.barrel(14, 7, z, 'west')
+    b.set(14, 8, 7, 'white_wool')
+    b.chest(13, 7, 7, 'south')
+    b.set(9, 7, 7, 'bookshelf')
+    b.set(9, 8, 7, 'bookshelf')
+    parts.rug(b, 10, 10, 13, 15, 7, 'brown', border='red')
+    parts.lantern(b, 11, 9, 9)
+    parts.lantern(b, 11, 9, 16)
+
+
+def _tavern_yard(b, rng):
+    """Back yard by the kitchen door: woodpile, kegs, hay, a chopping block and a kitchen garden."""
+    for x in range(1, 8):
+        for z in range(22, 29):
+            if rng.random() < .6:
+                b.set(x, 0, z, rng.choice(['coarse_dirt', 'gravel', 'dirt_path', 'coarse_dirt']))
+    parts.woodpile(b, 2, 1, 22, 'x', length=4, wood='spruce', height=2)
+    b.set(5, 1, 25, 'stripped_oak_log', axis='y')
+    for x, z, f in ((1, 26, 'east'), (1, 27, 'east'), (2, 27, 'north')):
+        b.barrel(x, 1, z, f)
+    b.barrel(1, 2, 27, 'up')
+    for x, z in ((6, 27), (6, 28), (5, 28)):
+        b.set(x, 1, z, 'hay_block', axis='y')
+    b.set(6, 2, 28, 'hay_block', axis='x')
+    for x in (1, 2, 3):
+        b.set(x, 0, 24, 'rooted_dirt')
+        b.set(x, 1, 24, rng.choice(['fern', 'short_grass', 'poppy']))
+    for x in range(9, 15):
+        if x % 2:
+            b.barrel(x, 1, 28, 'up')
 
 
 def crenellate(b, x0, z0, x1, z1, y, mat='stone_brick_wall', block_mat='stone_bricks'):

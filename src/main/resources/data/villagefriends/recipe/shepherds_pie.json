@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:shepherds_pie",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:cooked_mutton",
+    "minecraft:baked_potato",
+    "minecraft:carrot"
+  ]
+}
