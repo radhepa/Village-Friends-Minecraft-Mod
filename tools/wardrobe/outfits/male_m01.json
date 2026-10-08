@@ -1,0 +1,15 @@
+{
+  "outfits": [
+    {"id": "m_sickle_reaper", "name": "Reaper", "top": "t121_reapers_sleeveless_smock", "bottom": "b121_stubble_field_gaiters"},
+    {"id": "m_haymaker", "name": "Haymaker", "top": "t122_haymakers_open_neck_shirt", "bottom": "b122_hay_rope_tied_trousers"},
+    {"id": "m_flail_thresher", "name": "Thresher", "top": "t123_threshers_flail_strap_jerkin", "bottom": "b123_chaff_dusted_breeches"},
+    {"id": "m_vine_dresser", "name": "Vine Dresser", "top": "t124_vine_dressers_pruning_tunic", "bottom": "b124_grape_stained_rolled_trousers"},
+    {"id": "m_hedge_layer", "name": "Hedge-Layer", "top": "t125_hedge_layers_arm_guard_shirt", "bottom": "b125_thorn_proof_leather_leggings"}
+  ],
+  "professions": {
+    "FARMER": ["m_sickle_reaper", "m_haymaker", "m_flail_thresher", "m_vine_dresser", "m_hedge_layer"],
+    "NONE": ["m_sickle_reaper", "m_flail_thresher"],
+    "TAVERN_KEEPER": ["m_vine_dresser"],
+    "CARPENTER": ["m_hedge_layer"]
+  }
+}
