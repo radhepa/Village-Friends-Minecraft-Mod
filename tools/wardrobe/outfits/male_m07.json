@@ -9,7 +9,8 @@
     {"id": "m_night_poacher", "name": "Poacher", "top": "t277_poachers_hidden_pocket_coat", "bottom": "b277_poachers_quiet_soft_boots"},
     {"id": "m_greenwood_outlaw", "name": "Outlaw", "top": "t278_outlaws_hooded_greenwood_tunic", "bottom": "b278_outlaws_ragged_hose"},
     {"id": "m_mountain_guide", "name": "Mountain Guide", "top": "t279_mountain_guides_rope_coiled_jacket", "bottom": "b279_mountain_guides_crampon_boots"},
-    {"id": "m_candle_miner", "name": "Miner", "top": "t280_miners_candle_shoulder_jerkin", "bottom": "b280_miners_kneecapped_trousers"}
+    {"id": "m_candle_miner", "name": "Miner", "top": "t280_miners_candle_shoulder_jerkin", "bottom": "b280_miners_kneecapped_trousers"},
+    {"id": "m_stone_quarryman", "name": "Quarryman", "top": "t281_quarrymans_stone_dust_shirt", "bottom": "b281_quarrymans_wedge_belt_trousers"}
   ],
   "professions": {
     "NONE": ["m_road_tinker", "m_common_carrier", "m_night_poacher", "m_greenwood_outlaw"],
@@ -22,6 +23,6 @@
     "ARCHER": ["m_horn_forester", "m_verderer", "m_gamekeeper", "m_night_poacher", "m_greenwood_outlaw"],
     "FLETCHER": ["m_verderer", "m_gamekeeper"],
     "FARMER": ["m_gamekeeper"],
-    "MASON": ["m_candle_miner"]
+    "MASON": ["m_candle_miner", "m_stone_quarryman"]
   }
 }
