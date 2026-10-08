@@ -16,7 +16,7 @@ public record AnimationPack(String id, String name, String description, List<Ani
     public static final int FORMAT = 1;
     /** Situations the director can ask for. Unknown triggers are rejected to catch typos. */
     public static final Set<String> TRIGGERS = Set.of("idle", "greet", "talk", "chat_speak", "chat_listen",
-            "laugh", "delighted", "thanks", "decline", "happy", "love", "angry", "nervous", "hurt");
+            "laugh", "delighted", "thanks", "decline", "happy", "love", "angry", "nervous", "hurt", "pet", "play");
     private static final float MAX_ROTATION = 400, MAX_OFFSET = 12, MAX_LENGTH = 30;
 
     public static AnimationPack parse(String id, String json) {

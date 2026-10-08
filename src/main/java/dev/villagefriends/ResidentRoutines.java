@@ -4,6 +4,7 @@ import dev.villagefriends.routine.Routine;
 import dev.villagefriends.routine.Routine.Block;
 import dev.villagefriends.routine.Routine.Weather;
 import dev.villagefriends.routine.RoutineBrain;
+import dev.villagefriends.play.Playground;
 import dev.villagefriends.tavern.Seat;
 import dev.villagefriends.tavern.Taverns;
 import java.util.HashMap;
@@ -35,6 +36,7 @@ import static dev.villagefriends.VillageFriends.*;
  * home until bedtime, and shares what they are doing with clients for animation and conversation.
  * Guards on night watch walk in squads and guards in a raid muster to fight ({@link GuardPatrols}); at the
  * tavern {@link Taverns} seats, serves and stands residents up;
+ * bored children play games together or tag along after a player ({@link Playground});
  * the apothecary leaves whatever they were doing to dress a knocked-out neighbor's wounds ({@link Knockouts}).
  */
 public final class ResidentRoutines {
@@ -88,7 +90,9 @@ public final class ResidentRoutines {
     /** What a resident is doing, as shown to players: "At work", "Sheltering from the rain"... */
     public static String doing(Villager v) {
         if (Knockouts.knockedOut(v)) return Knockouts.status(v);
-        return v.isSleeping() ? "Asleep" : Taverns.doing(v, plan(v).label());
+        if (v.isSleeping()) return "Asleep";
+        String playing = Playground.doing(v);
+        return playing != null ? playing : Taverns.doing(v, plan(v).label());
     }
 
     // -- applying it -------------------------------------------------------------------------------
@@ -117,6 +121,8 @@ public final class ResidentRoutines {
             brain.setActiveActivityIfPossible(activity);
         if (v.isSleeping() && !plan.block().sleep) v.stopSleeping();
         if (Knockouts.tend(v, level)) return;
+        // Bored children start games with each other, or follow a player around to see what they're up to.
+        if (Playground.update(v, level, plan)) return;
         // At the tavern they find a seat with their friends, order, eat and talk; Taverns stands them up afterwards.
         if (Taverns.update(v, level, plan)) return;
         steer(v, level, plan);

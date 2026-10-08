@@ -9,8 +9,9 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public int motionSeed;
     public boolean onGround;
     public float eyeLookX, eyeLookY, attention;
-    /** Animation pack clips: [0] activity (idle, work, chat, talk), [1] reaction (greet, laugh, hurt...). */
-    public final AnimationLayer[] layers = {new AnimationLayer(), new AnimationLayer()};
+    /** Animation pack clips: [0] activity (idle, work, chat, talk, pet play), [1] reaction (greet, laugh, hurt...),
+     *  [2] the activity being replaced, fading out underneath the new one. */
+    public final AnimationLayer[] layers = {new AnimationLayer(), new AnimationLayer(), new AnimationLayer()};
     /** Degrees to turn the head toward the player while greeting or talking, and how strongly. */
     public float turnYaw, turnPitch, turnWeight;
     /** The emote bubble above their head this frame, or null. */
@@ -25,4 +26,9 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public float tableYaw;
     /** Wearing a party hat: it's their birthday. */
     public boolean partyHat;
+    /** The leather ball in a game of catch, in flight or lying where it was fumbled, relative to this child. */
+    public boolean ballShown;
+    public final net.minecraft.client.renderer.item.ItemStackRenderState ball = new net.minecraft.client.renderer.item.ItemStackRenderState();
+    public double ballX, ballY, ballZ;
+    public float ballSpin;
 }

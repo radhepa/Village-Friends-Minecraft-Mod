@@ -1,4 +1,4 @@
-# Village Friends 2.21.0 — Villages for every biome
+# Village Friends 2.23.0 — Villages for every biome
 
 - **Every vanilla village is replaced.** Village Friends towns now take over vanilla's village placement (same spacing and salt, so villages turn up about as often and in the same kinds of places), and pillager outposts still keep their distance. Each type is its own structure: plains (`villagefriends:village`, as before), desert, savanna, snowy and taiga (`villagefriends:village_<type>`).
 - **Desert:** an oasis town of sandstone and plaster with flat roofs, domes, wind towers, striped awnings and palms: an oasis, a bazaar hall and a domed well for town centres; a courtyard inn, a walled fort, a domed chapel with a minaret; courtyard, dome, tower and garden houses; irrigated fields, cane channels, camel and goat pens.
@@ -10,6 +10,25 @@
 - **No more trees through houses:** wild trees, fallen logs, cacti, sugar cane, bamboo and boulders no longer grow inside village lots and streets.
 - **Fixes:** six plains buildings placed `chain`, which Minecraft 26.3 renamed `iron_chain`; the spruce cottage's porch lantern blocked its door; the plains chapel used an invalid stone-brick state; the neighbourhood well square and its roof no longer shear apart on slopes, and street lamps are single posts that stay upright.
 - For developers: layouts are now `tools/village_layouts/<type>.json` with optional fragments; the compiler rejects block ids that don't exist in 26.3; `-Ptests=VillageSurveyGameTest` surveys natural villages (see [BUILDING_EDITING.md](BUILDING_EDITING.md)).
+
+# Village Friends 2.22.0 — Children at play
+
+- **Children play together.** When a child gets bored of playing on their own (sooner for lively personalities), they round up the children nearby for a game or join one already going: **tag**, **hide-and-seek** (the seeker counts with eyes covered while the others hide behind walls, houses and trees, then goes looking), **ring-around-the-rosie** (round and round, and they all fall down), **follow the leader** (the line copies the leader's hops, star jumps, spins, bird flaps, stomps and salutes one after another), and **catch** with a leather ball that flies in an arc between them and is sometimes fumbled. Groups choose by headcount and by what each child likes, and rarely play the same game twice in a row.
+- **Curious children follow you around.** Now and then a bored child (curious ones most of all) tags along behind a nearby player to see what they're up to, tiptoeing after them and watching closely when they stop. Turn round and look at them and they freeze and act innocent until you look away. They wave goodbye after a minute or two, or give up if you sprint off.
+- Games stop for lessons, meals and storms, the moment a monster comes near or a raid starts, and for any child who gets hurt; the status line says what each child is up to ("Playing tag", "Hiding", "Following you around").
+- **37 new animations** for the games and for following a player (Village Life now has 431 clips), on a new `play` trigger, and a new item, the **Leather Ball**.
+- Add `PlayTest` and `PlaygroundGameTest` (`-Ptests=PlaygroundGameTest`, screenshots `playground-*`). See [PLAYTIME.md](PLAYTIME.md).
+
+# Village Friends 2.21.0 — Residents' pets
+
+- **Residents keep cats and dogs.** About two residents in five long for a pet (warmhearted, gentle and playful residents most of all; adventurous and protective ones mostly want dogs, thoughtful and reserved ones cats). In their free time they look for an untamed cat or wolf nearby, or a stray wanders into the village; they crouch and hold out a fish or a bone until the stray comes home with them, then name it and give it a collar in a color that suits them. Players nearby hear about it in chat.
+- Residents' pets are tamed to them the vanilla way: they follow their resident (catching up from seven blocks, teleporting from twelve), defend them from monsters without ever biting players, neighbors or iron golems, curl up by their bed at night and keep watch beside them if they're knocked out.
+- **They play together:** fetch (the dog brings the stick back in its mouth), belly rubs, begging, shaking paws, spinning and chase for dogs; string, long strokes, chin scratches, a feather, treat time and weaving round ankles for cats. Each pet has a nature (playful, lazy, zoomy, aloof...) and a favorite game.
+- **24 new resident clips** with a new `pet` trigger (`tools/animations/village_life/pets.py`; Village Life now has 394 clips), and residents now cross-fade from one clip to the next while they play.
+- **20 pet tricks**, poses for the vanilla cat and wolf models such as a play bow, rolling over, sitting up to beg, batting at string, a crouching wiggle and pounce, and a big stretch, authored in `tools/pets/tricks.py` with an offline previewer (`tools/pets/preview.py`) and loaded as client resources (`assets/<namespace>/pet_tricks/`).
+- **Pet cards:** right-click a resident's pet for a card in the style of the conversation window, with their portrait, owner, age, breed, nature, favorite game and treat, health and how fond they are of you. Pat them and give them treats to win them over. A resident's own card mentions their pet.
+- A pet whose resident dies becomes a stray again and remembers them; a resident who is cured of zombification keeps their pet.
+- Add `ResidentPetsTest` and `PetGameTest` (`-Ptests=PetGameTest`). See [PETS.md](PETS.md).
 
 # Village Friends 2.20.0 — Birthdays and notice boards
 

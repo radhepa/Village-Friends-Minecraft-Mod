@@ -29,10 +29,10 @@ PACKS = {
     "village_life": {
         "name": "Village Life",
         "description": "The first resident animation pack: everyday idles, hobbies for every personality, "
-                       "work for every profession, greetings, conversations, reactions, weather and children's play.",
+                       "work for every profession, greetings, conversations, reactions, weather, children's play and games.",
         "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
                     "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
-                    "guards", "party"],
+                    "guards", "party", "pets", "games"],
     },
     "tavern": {
         "name": "Tavern",

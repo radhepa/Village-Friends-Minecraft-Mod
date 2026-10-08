@@ -88,6 +88,8 @@ public final class VillageItems {
         add("sealed_letter", p -> new Item(p.stacksTo(1)), SUPPLIES);
         add("birthday_cake_slice", p -> new Item(p.stacksTo(16).food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.4F).alwaysEdible().build(),
                 Consumable.builder().onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 400, 0))).build())), MEALS);
+        // The ball the village children toss about when they play catch.
+        add("leather_ball", p -> new Item(p.stacksTo(16)), SUPPLIES);
         guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}

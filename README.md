@@ -26,11 +26,17 @@ Each building is an independent template written as a small design program and c
 
 Bread and stew restore health; coffee grants a short speed boost and cider a little regeneration. Rain cloaks, ponchos and uniforms can be worn or equipped on companions. Smelling Salts, Revival Tonics and Bandage Wraps treat knocked-out residents. Bench seating, cot treatment, administrative blocks and tools provide foundations for later behavior. Their full AI and interaction systems and spatial bed scanner are later work. Knights and Archers receive combat equipment and defend villagers automatically. At night they patrol the village in squads of two or more, and during a raid they muster at the bell and go after the raiders instead of hiding.
 
+**Children at play:** bored village children round each other up for tag, hide-and-seek, ring-around-the-rosie, follow the leader and catch with a leather ball, and now and then a curious child follows you around to see what you're doing, freezing all innocent whenever you turn to look. See [PLAYTIME.md](PLAYTIME.md).
+
 **Knockouts:** a resident who would die is knocked out instead and lies hurt on the ground. Revive them with Smelling Salts or a Revival Tonic within a day of play (24 real hours, counted only while the world runs); a Bandage Wrap buys 12 more hours, and the village apothecary will come and dress their wounds once. Otherwise they die for good. See [GUARDS.md](GUARDS.md#knockouts).
 
 **Birthdays and notice boards:** every resident has a birthday on the village calendar (four seasons of 28 days). On the day the village hears about it, they wear a party hat, and in the evening their family, friends and the village's children throw them a party by the bell, with music, confetti and cake for everyone who comes. Wish them a happy birthday, and give them something: birthday gifts count double, and a cake or a handmade Birthday Card is everyone's favorite. Every village's **Notice Board** fills up with residents' notices: monsters to hunt, things they need for their trade, sealed letters to carry to a neighbor, and birthday surprises to help plan. Answer them for emeralds, a gift from their trade, their friendship and better prices, and become a Helping Hand, a Good Neighbor, a Pillar of the Community and finally the Hero of the village. See [BIRTHDAYS_AND_NOTICES.md](BIRTHDAYS_AND_NOTICES.md).
 
 For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creative's **Spawn Eggs** tab. They create ordinary equipped adult villagers at levels 15–30, work in dispensers, and keep their jobs without nearby workstations. Commands: `/give @s villagefriends:knight_spawn_egg` and `/give @s villagefriends:archer_spawn_egg`. See [GUARDS.md](GUARDS.md) for combat and progression rules.
+
+## Residents' pets
+
+Some residents long for a cat or a dog. In their free time they befriend a stray (one wanders into the village if there isn't one about), name it, and from then on it follows them everywhere, naps by their bed and keeps watch if they're hurt. Now and then they stop to play: fetch, belly rubs, shaking paws and chase with dogs; string, strokes, chin scratches and a feather with cats. Right-click a resident's pet to see their card (owner, age, breed, nature and favorite things), pat them and give them treats. See [PETS.md](PETS.md).
 
 ## Play on this computer
 
