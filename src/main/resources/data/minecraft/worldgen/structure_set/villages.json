@@ -1,6 +1,10 @@
 {
   "structures": [
     {
+      "structure": "villagefriends:village_desert",
+      "weight": 1
+    },
+    {
       "structure": "villagefriends:village",
       "weight": 1
     },
