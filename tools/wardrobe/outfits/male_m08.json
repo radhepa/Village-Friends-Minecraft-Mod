@@ -1,0 +1,18 @@
+{
+  "outfits": [
+    {"id": "m_byzantine_notable", "name": "Byzantine Notable", "top": "t296_byzantine_clavi_tunic", "bottom": "b296_byzantine_embroidered_leg_wraps"},
+    {"id": "m_andalusian_silk_merchant", "name": "Andalusian Silk Merchant", "top": "t297_andalusian_silk_jubba", "bottom": "b297_andalusian_pleated_saraweel"},
+    {"id": "m_persian_qaba_scholar", "name": "Persian Scholar", "top": "t298_persian_qaba_wrap_coat", "bottom": "b298_persian_tapered_trousers_and_boots"},
+    {"id": "m_polish_zupan_noble", "name": "Polish Nobleman", "top": "t299_polish_zupan_long_coat", "bottom": "b299_polish_red_riding_boots"},
+    {"id": "m_hungarian_hussar", "name": "Hungarian Hussar", "top": "t300_hungarian_frogged_dolman", "bottom": "b300_hungarian_braided_breeches"}
+  ],
+  "professions": {
+    "MERCHANT": ["m_byzantine_notable", "m_andalusian_silk_merchant", "m_persian_qaba_scholar", "m_polish_zupan_noble"],
+    "CLERIC": ["m_byzantine_notable"],
+    "NONE": ["m_byzantine_notable"],
+    "APOTHECARY": ["m_andalusian_silk_merchant"],
+    "SCHOLAR": ["m_persian_qaba_scholar"],
+    "KNIGHT": ["m_polish_zupan_noble", "m_hungarian_hussar"],
+    "BARD": ["m_hungarian_hussar"]
+  }
+}
