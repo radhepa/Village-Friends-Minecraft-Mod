@@ -10,15 +10,16 @@ from wardrobe import shade
 
 
 def wicker(face, role: str = "L", base: int = 2, x0: int = 0, y0: int = 0, w: int | None = None, h: int | None = None):
-    """Basketwork: weavers passing over and under upright stakes, a calm two-tone check."""
+    """Basketwork: dark upright stakes every third column, weavers passing over and under them in rows."""
     w = face.w - x0 if w is None else w
     h = face.h - y0 if h is None else h
     for y in range(y0, y0 + h):
         for x in range(x0, x0 + w):
-            if (x + y) % 2 == 0:
-                key = k(role, base + 1)
+            col = (x + face.x0) % 3
+            if col == 0:
+                key = k(role, base - 1)
             else:
-                key = k(role, base - 1) if x % 2 else k(role, base)
+                key = k(role, base + 1) if (col == 1) == (y % 2 == 0) else k(role, base)
             face.set(x, y, key)
 
 
