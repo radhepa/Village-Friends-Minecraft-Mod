@@ -4,6 +4,7 @@ import dev.villagefriends.social.Gossip;
 import dev.villagefriends.social.Relations;
 import dev.villagefriends.social.Society;
 import dev.villagefriends.social.Townsfolk;
+import dev.villagefriends.home.Homes;
 import java.util.*;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.chat.Component;
@@ -12,7 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.npc.villager.Villager;
 import static dev.villagefriends.VillageFriends.*;
 
-/** Builds Village Ledger pages: the census of a village as the reading player knows it. */
+/** Builds Village Ledger pages: the census of a village as the reading player knows it, and where everyone lives. */
 public final class VillageLedger {
     private static final Map<UUID, Long> lastRequest = new HashMap<>();
     public static void clear() { lastRequest.clear(); }
@@ -51,15 +52,18 @@ public final class VillageLedger {
         var loaded = new HashMap<String, Villager>();
         for (var v : CompanionController.loaded) if (v.isAlive() && v.level() == player.level()) loaded.put(VillageSocieties.id(v), v);
         var entries = new ArrayList<LedgerPayload.Entry>();
+        var homeless = Homes.homeless(level, record.id());
         for (var t : society.everyone()) {
             if (entries.size() >= LedgerPayload.MAX_RESIDENTS) break;
             var v = loaded.get(t.id());
-            entries.add(new LedgerPayload.Entry(t.id(), t.name(), job(t), t.status(), t.adult(), known.getOrDefault(t.id(), -1), note(society, t, today), v == null ? -1 : v.getId(), t.gender()));
+            entries.add(new LedgerPayload.Entry(t.id(), t.name(), job(t), t.status(), t.adult(), known.getOrDefault(t.id(), -1), note(society, t, today, homeless), v == null ? -1 : v.getId(), t.gender()));
         }
-        var news = new ArrayList<String>();
+        // Households short of room come first in the news.
+        var news = new ArrayList<String>(Homes.needLines(level, record.id(), society));
         for (var n : society.recent(today, 60)) { if (news.size() >= 12) break; news.add("Day " + (n.day() + 1) + ": " + n.headline(society)); }
         if (news.isEmpty()) news.add("No news yet. Life in " + record.name() + " is just getting started.");
-        var detail = society.has(focus) ? detail(society, focus, today, known.getOrDefault(focus, -1), loaded.get(focus), record.name()) : LedgerPayload.Detail.NONE;
+        var detail = society.has(focus) ? detail(society, focus, today, known.getOrDefault(focus, -1), loaded.get(focus), record.name(),
+                Homes.ledgerLine(level, record.id(), society, focus)) : LedgerPayload.Detail.NONE;
         ServerPlayNetworking.send(player, new LedgerPayload(record.id(), record.name(), today, society.has(focus) ? focus : "", entries, news, detail));
     }
     private static String job(Townsfolk t) {
@@ -67,10 +71,11 @@ public final class VillageLedger {
         return switch (t.job()) { case "none" -> "Neighbor"; case "nitwit" -> "Free Spirit"; default -> VillageProfessions.label(t.job()); };
     }
     /** One short line under a name in the list. */
-    private static String note(Society s, Townsfolk t, long today) {
+    private static String note(Society s, Townsfolk t, long today, Set<String> homeless) {
         if (t.status().equals(Townsfolk.PASSED)) return "Remembered fondly";
         if (t.status().equals(Townsfolk.CURSED)) return "Zombified. Cure them to bring them home";
         if (t.home() && dev.villagefriends.social.Calendar.isBirthday(t.birthday(), today)) return "Birthday today!";
+        if (t.home() && homeless.contains(t.id())) return "Looking for a home";
         if (!t.partner().isEmpty()) return (t.married() ? "Married to " : "Sweethearts with ") + s.nameOf(t.partner());
         if (!t.adult()) {
             var parents = s.family(t.id()).stream().filter(id -> s.relation(t.id(), id).equals("parent")).map(s::nameOf).toList();
@@ -81,11 +86,12 @@ public final class VillageLedger {
         if (!family.isEmpty()) return Relations.kin(s.relation(family.getFirst(), t.id()), t.gender()) + " of " + s.nameOf(family.getFirst());
         return "Single";
     }
-    private static LedgerPayload.Detail detail(Society s, String id, long today, int level, Villager loaded, String village) {
+    private static LedgerPayload.Detail detail(Society s, String id, long today, int level, Villager loaded, String village, String home) {
         var t = s.get(id); var about = new ArrayList<String>();
         var personality = NarrativeContent.current().personality(t.personality());
         about.add(personality.label() + " · loves " + personality.hobby());
         about.add("Lives in " + village + " since day " + (t.joined() + 1) + (t.status().equals(Townsfolk.PASSED) ? " · passed away" : ""));
+        if (home != null) about.add(home);
         if (t.home()) {
             // Their day, as the neighbors know it: when they're up, at work, at the bell and in bed.
             var day = dev.villagefriends.routine.Routine.day(ResidentRoutines.seed(id), t.job(), t.personality(), !t.adult(), today);

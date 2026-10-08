@@ -246,6 +246,7 @@ public final class NarrativeEngine {
         var profile = profile(v); var b = bond(v, p);
         return name(v) + "\n" + NarrativeContent.current().personality(profile.personality()).label() + "\nHobby: " + profile.hobby()
                 + "\nHome village: " + (VillageSettlements.home(v)==null?"Not yet settled":VillageSettlements.home(v).name())
+                + (dev.villagefriends.home.Homes.homeName(v).isEmpty() ? "" : "\nHome: " + dev.villagefriends.home.Homes.homeName(v))
                 + "\nValues: " + profile.value() + "\nLoves: " + itemName(profile.love()) + "\nDislikes: " + itemName(profile.dislike())
                 + "\nTrust: " + b.trustLabel() + "\nVisits on different days: " + b.visits()
                 + "\nFriendship: Lv. " + FriendshipLevels.level(state(v, p), b) + " " + FriendshipLevels.name(FriendshipLevels.level(state(v, p), b))

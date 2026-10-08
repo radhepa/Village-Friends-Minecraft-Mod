@@ -71,6 +71,9 @@ public final class Talk {
             if (c.topic.equals("chat") || c.topic.equals("greet")) {
                 w.put("baby.routine." + c.routine, 2); w.put("baby.time." + c.period, 1);
                 if (c.market) w.put("baby.market", 2);
+                // A child whose family is short of room talks about the bigger house they asked for.
+                String home = c.fill.get("home_talk");
+                if ("crowded".equals(home) || "homeless".equals(home)) w.put("baby.notice.house", 2);
                 held(w, c, 1);
             }
             return w;
@@ -81,6 +84,7 @@ public final class Talk {
                 w.put("greet.routine." + c.routine, 3);
                 if (weather) w.put("greet.weather." + c.weather, 5);
                 if (c.market) w.put("greet.market", 4);
+                home(w, c);
                 held(w, c, 2); states(w, c, 4);
             }
             case "chat" -> {
@@ -90,6 +94,7 @@ public final class Talk {
                 if (c.night()) w.put("moon." + c.moon, 2);
                 if (c.market) w.put("day.market", 3); else w.put("day.week", 1);
                 w.put("home." + c.home, 1);
+                home(w, c);
                 held(w, c, 2); states(w, c, 3);
                 for (var tag : c.extra) {
                     if (tag.startsWith("a:")) w.put("remember." + tag.substring(2).replace(':', '_'), 3);
@@ -114,6 +119,8 @@ public final class Talk {
         }
         return w;
     }
+    /** Their own house: "home.mine", "home.crowded", "home.new"... (TalkWorld puts which one fits into {@code home_talk}). */
+    private static void home(Map<String, Integer> w, Context c) { if (c.fill.containsKey("home_talk")) w.put("home." + c.fill.get("home_talk"), 2); }
     private static void held(Map<String, Integer> w, Context c, int weight) { if (!c.held.isEmpty()) w.put("held." + c.held, weight); }
     private static void states(Map<String, Integer> w, Context c, int weight) { for (var s : c.states) w.put("player." + s, weight); }
 

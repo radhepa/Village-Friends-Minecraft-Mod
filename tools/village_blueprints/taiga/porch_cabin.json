@@ -484,6 +484,12 @@
    }
   },
   "-": {
+   "id": "villagefriends:house_plaque",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "/": {
    "id": "villagefriends:village_bench",
    "properties": {
     "facing": "south"
@@ -541,7 +547,7 @@
     "....i....i.....",
     "..TaaT6.8TaaT..",
     "..f.........f..",
-    "..f.-.....wc7..",
+    "..f./...-.wc7..",
     ".CCCCCC3CCCCCC.",
     "..Eo....Ac.vE..",
     ".II.X!X.A..uE..",
@@ -829,6 +835,12 @@
    }
   },
   {
+   "pos": [8, 2, 5],
+   "nbt": {
+    "id": "villagefriends:house_plaque"
+   }
+  },
+  {
    "pos": [11, 2, 7],
    "nbt": {
     "id": "minecraft:bed"
@@ -895,6 +907,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/taiga/homes.py",
-  "checksum": "b5993876b833c114"
+  "checksum": "5482ef2a65c26c70"
  }
 }

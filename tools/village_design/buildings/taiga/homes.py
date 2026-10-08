@@ -14,6 +14,11 @@ from ...parts import log
 from . import homes_logs as H
 
 
+def plaque(b, x, z, y=2, facing='north'):
+    """The House Plaque on the front wall beside the door, at eye height: it names the house and who lives there."""
+    b.custom(x, y, z, 'house_plaque', facing=facing)
+
+
 def trapper_hut():
     """A one-room trapper's hut with a back sleeping room, hide racks and a woodpile."""
     rng = random.Random(4101)
@@ -48,6 +53,7 @@ def trapper_hut():
     b.set(4, 2, 9, 'white_carpet')
     H.bedroom_lamp(b, 5, 4, 9)
     b.room('bedroom', (5, 3, 8))
+    plaque(b, 6, 2)
     H.moss_roof(b, rng, .14)
     # Yard: hide racks, woodpile, chopping block.
     H.path(b, 5, 0, 2, rng)
@@ -122,6 +128,7 @@ def aframe_cabin():
     parts.lantern(b, 6, 9, 13)
     b.set(3, 2, 15, 'lantern', hanging=False, waterlogged=False)
     b.room('bedroom', (6, 3, 12))
+    plaque(b, 7, 3)
     H.moss_roof(b, rng, .1, kinds=('dark_oak',), y_min=1)
     H.path(b, 6, 0, 0, rng)
     b.set(6, 0, 1, 'dirt_path')
@@ -195,6 +202,7 @@ def porch_cabin():
     b.set(10, 2, 9, 'green_carpet')
     H.bedroom_lamp(b, 10, 4, 9)
     b.room('bedroom', (10, 3, 9))
+    plaque(b, 8, 5)
     H.moss_roof(b, rng, .12)
     # Yard.
     H.path(b, 7, 0, 1, rng)
@@ -283,6 +291,7 @@ def log_lodge():
     b.set(3, 7, 9, 'white_carpet')
     H.bedroom_lamp(b, 6, 9, 10)
     b.room('bedroom_south', (7, 8, 10))
+    plaque(b, 8, 3)
     H.bedroom_lamp(b, 10, 9, 6)
     H.moss_roof(b, rng, .1)
     # Yard.
@@ -373,6 +382,7 @@ def longhouse():
     H.rug(b, 4, 20, 8, 21, 2, 'brown', 'green')
     H.bedroom_lamp(b, 6, 4, 20)
     b.room('bedroom', (6, 3, 20))
+    plaque(b, 7, 3)
     H.moss_roof(b, rng, .1, kinds=('spruce', 'dark_oak'))
     H.path(b, 6, 0, 2, rng)
     b.entrance(6)
@@ -431,6 +441,7 @@ def dogtrot_cabin():
     H.rug(b, 12, 6, 13, 8, 2, 'brown', 'brown')
     H.bedroom_lamp(b, 12, 4, 7)
     b.room('bedroom', (12, 3, 7))
+    plaque(b, 5, 3)
     # Breezeway: bench, saddle-bag barrels, hides and a chained lantern.
     b.custom(8, 2, 9, 'village_bench', facing='south')
     b.barrel(7, 2, 9, 'up')
@@ -493,6 +504,7 @@ def stone_cottage():
     b.set(8, 2, 9, 'lantern', hanging=False, waterlogged=False)
     H.bedroom_lamp(b, 8, 4, 7)
     b.room('bedroom', (8, 3, 8))
+    plaque(b, 6, 3)
     H.moss_roof(b, rng, .12, kinds=('spruce', 'dark_oak'))
     # Front garden behind a low mossy wall.
     H.path(b, 5, 0, 3, rng)
@@ -562,6 +574,7 @@ def cabin_ell():
     H.wall_hide(b, 8, 3, 10, 'east')
     H.bedroom_lamp(b, 10, 4, 11)
     b.room('bedroom', (10, 3, 11))
+    plaque(b, 6, 3)
     H.moss_roof(b, rng, .12)
     # Yard tucked into the L: berry patch, woodpile, a young spruce.
     H.path(b, 5, 0, 2, rng)

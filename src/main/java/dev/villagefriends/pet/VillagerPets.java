@@ -20,6 +20,7 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
@@ -120,7 +121,7 @@ public final class VillagerPets {
     /** Registers the attachments at startup, before any player joins: synced attachment types are agreed with each client as they connect. */
     public static void register() {}
     public static void clear() {
-        byVillager.clear(); byPet.clear(); nextPlay.clear(); nextAdopt.clear(); nextStray.clear(); trickEnds.clear(); attempts.clear(); attention.clear();
+        byVillager.clear(); byPet.clear(); nextPlay.clear(); nextAdopt.clear(); nextStray.clear(); trickEnds.clear(); attempts.clear(); attention.clear(); bedsides.clear();
     }
 
     // -- queries -----------------------------------------------------------------------------------
@@ -151,7 +152,7 @@ public final class VillagerPets {
     public static void unloaded(Entity entity) {
         var s = entity instanceof Villager ? byVillager.get(entity.getUUID()) : byPet.get(entity.getUUID());
         if (s != null) end(s, false);
-        attention.remove(entity.getUUID());
+        attention.remove(entity.getUUID()); bedsides.remove(entity.getUUID());
     }
 
     // -- the world ticking -------------------------------------------------------------------------
@@ -649,21 +650,35 @@ public final class VillagerPets {
         pet.setInSittingPose(false);
         if (pet instanceof Cat cat) cat.setLying(false);
     }
-    /** Beside a sleeping resident: a cat curls up, a dog lies watch. Beside a knocked-out one, a dog whines now and then. */
+    /**
+     * Beside a sleeping resident: a cat curls up, a dog lies watch, on the floor beside their own bed. Beside a
+     * knocked-out one, a dog whines now and then.
+     */
     private static void rest(TamableAnimal pet, Villager owner) {
         var nav = pet.getNavigation();
-        double d = pet.distanceToSqr(owner);
-        if (d > 144) { pet.tryToTeleportToOwner(); return; }
-        if (d > 2.4 * 2.4) {
+        var bedside = pet.tickCount % 20 == 0 || !bedsides.containsKey(pet.getUUID())
+                ? remember(pet, dev.villagefriends.home.Homes.bedside(owner).orElse(null)) : bedsides.get(pet.getUUID()).orElse(null);
+        double d = bedside != null ? pet.distanceToSqr(Vec3.atBottomCenterOf(bedside)) : pet.distanceToSqr(owner);
+        if (pet.distanceToSqr(owner) > 144) { pet.tryToTeleportToOwner(); return; }
+        if (d > (bedside != null ? .8 * .8 : 2.4 * 2.4)) {
             pet.setInSittingPose(false);
             if (pet instanceof Cat cat) cat.setLying(false);
-            if ((pet.tickCount % 10 == 0 || nav.isDone()) && !nav.moveTo(owner, 1.0)) settle(pet, owner);
+            boolean moving = pet.tickCount % 10 != 0 && !nav.isDone()
+                    || (bedside != null ? nav.moveTo(bedside.getX() + .5, bedside.getY(), bedside.getZ() + .5, 1.0) : nav.moveTo(owner, 1.0));
+            // A closed door between them: it slips in anyway, the way pets turn up beside their owner.
+            if (bedside != null && (!moving || nav.getPath() != null && !nav.getPath().canReach())) {
+                nav.stop(); pet.teleportTo(bedside.getX() + .5, bedside.getY(), bedside.getZ() + .5); settle(pet, owner); return;
+            }
+            if (!moving) settle(pet, owner);
             return;
         }
         nav.stop();
         settle(pet, owner);
         if (Knockouts.injured(owner) && pet.tickCount % 200 == 0) whine(pet);
     }
+    /** Where each pet last found its resident's bedside (refreshed every second while they sleep). */
+    private static final Map<UUID, Optional<BlockPos>> bedsides = new HashMap<>();
+    private static BlockPos remember(TamableAnimal pet, BlockPos bedside) { bedsides.put(pet.getUUID(), Optional.ofNullable(bedside)); return bedside; }
     private static void settle(TamableAnimal pet, Villager owner) {
         pet.getLookControl().setLookAt(owner, 20, 20);
         if (pet instanceof Cat cat) cat.setLying(true); else pet.setInSittingPose(true);

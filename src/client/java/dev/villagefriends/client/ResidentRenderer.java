@@ -56,7 +56,8 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
     @Override public void extractRenderState(Villager villager, ResidentRenderState state, float delta) {
         super.extractRenderState(villager, state, delta);
         state.motionSeed=ResidentMotion.seed(villager.getUUID());
-        state.injured=villager.hasPose(net.minecraft.world.entity.Pose.SLEEPING) && dev.villagefriends.Knockouts.injured(villager);
+        // Someone knocked out who was helped into their own bed lies in it like any sleeper.
+        state.injured=villager.hasPose(net.minecraft.world.entity.Pose.SLEEPING) && dev.villagefriends.Knockouts.injured(villager) && villager.getSleepingPos().isEmpty();
         // The pose and the injured flag arrive separately; the lying hitbox needs both, so refit it once both are here.
         if(state.injured && villager.getBbWidth()<.5F && !villager.isBaby()) villager.refreshDimensions();
         state.onGround=villager.onGround();

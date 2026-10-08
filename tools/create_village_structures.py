@@ -7,7 +7,8 @@ biome tags, the ``minecraft:villages`` structure set that replaces the vanilla
 villages, and the structure catalog the tests read.
 
 Only Python's standard library is required. Rooms, beds and connectors are checked
-before writing; the catalog also gives the later bed scanner reproducible fixtures.
+before writing. The catalog is also read at runtime by the housing index (HOMES.md):
+each template's role (``use``), every bed's facing and room, and its outside doors.
 Run: python tools/create_village_structures.py
 """
 from collections import deque
@@ -185,22 +186,38 @@ class Template:
                     'name':nbt['name'],'target':nbt['target'],'pool':nbt['pool']})
         return t
 
+    def open_cell(self, pos):
+        """Air a resident can stand in when every door is shut: what the room flood walks through."""
+        s = self.blocks.get(pos)
+        if s is None: return True
+        name = s['Name']
+        return name == 'minecraft:air' or name in {
+            'minecraft:lantern', 'minecraft:wall_torch', 'minecraft:torch',
+            'minecraft:ladder', 'minecraft:flower_pot', 'minecraft:potted_fern',
+            'minecraft:potted_poppy', 'minecraft:potted_dandelion',
+        } or (name.startswith(NS+':') and name != NS+':house_plaque')
+
+    def escapes(self, start, limit=40000):
+        """Whether the open air from ``start`` (doors shut) reaches the template's edge: the outdoors."""
+        if not self.open_cell(start): return False
+        queue, seen = deque([start]), {start}
+        while queue and len(seen) < limit:
+            x, y, z = queue.popleft()
+            if not all(0 < v < size-1 for v, size in zip((x, y, z), self.size)): return True
+            for dx, dy, dz in [(1,0,0),(-1,0,0),(0,1,0),(0,-1,0),(0,0,1),(0,0,-1)]:
+                p = (x+dx, y+dy, z+dz)
+                if p not in seen and self.open_cell(p): seen.add(p); queue.append(p)
+        return len(seen) >= limit
+
     def validate(self):
+        self.room_cells = []
         for room in self.rooms:
             lo, hi = room['min'], room['max']
-            # The future scanner can close doors conceptually and walk the air at
-            # head height. Every partition, window, floor and ceiling is sealed.
+            # The bed scanner closes doors conceptually and walks the air at head
+            # height. Every partition, window, floor and ceiling is sealed.
             start = room.get('probe', lo)
             probe = (start[0], start[1]+1, start[2])
-            def open_cell(pos):
-                s = self.blocks.get(pos)
-                if s is None: return True
-                name = s['Name']
-                return name == 'minecraft:air' or name in {
-                    'minecraft:lantern', 'minecraft:wall_torch', 'minecraft:torch',
-                    'minecraft:ladder', 'minecraft:flower_pot', 'minecraft:potted_fern',
-                    'minecraft:potted_poppy', 'minecraft:potted_dandelion',
-                } or (name.startswith(NS+':') and name != NS+':house_plaque')
+            open_cell = self.open_cell
             assert open_cell(probe), (self.name, room['name'], 'probe occupied')
             queue, seen = deque([probe]), {probe}
             while queue:
@@ -213,6 +230,7 @@ class Template:
             count = sum(tuple(b) in seen or (b[0], b[1]+1, b[2]) in seen for b in self.beds)
             room['beds'] = count
             assert count > 0, (self.name, room['name'], 'room has no bed')
+            self.room_cells.append(seen)
         for foot in self.beds:
             s = self.blocks[tuple(foot)]
             dx, dz = {'north': (0,-1), 'south': (0,1), 'east': (1,0), 'west': (-1,0)}[s['Properties']['facing']]
@@ -223,7 +241,24 @@ class Template:
             assert lower['Name'] == upper['Name'] and upper['Properties']['half'] == 'upper', (self.name,'door halves differ')
             assert {k:v for k,v in lower['Properties'].items() if k != 'half'} == {k:v for k,v in upper['Properties'].items() if k != 'half'}, (self.name,'door states differ')
 
-    def save(self, write=True, villager_type='minecraft:plains'):
+    def housing(self):
+        """What the housing index reads: each bed's facing and room, and which doors lead outdoors."""
+        facings, rooms = [], []
+        for foot in self.beds:
+            facing = self.blocks[tuple(foot)]['Properties']['facing']
+            dx, dz = {'north': (0,-1), 'south': (0,1), 'east': (1,0), 'west': (-1,0)}[facing]
+            head = (foot[0]+dx, foot[1], foot[2]+dz)
+            cells = [tuple(foot), (foot[0], foot[1]+1, foot[2]), head, (head[0], head[1]+1, head[2])]
+            facings.append(facing)
+            rooms.append(next((i for i, seen in enumerate(self.room_cells) if any(c in seen for c in cells)), -1))
+        exterior = []
+        for x, y, z in self.doors:
+            facing = self.blocks[(x, y, z)]['Properties']['facing']
+            dx, dz = {'north': (0,-1), 'south': (0,1), 'east': (1,0), 'west': (-1,0)}[facing]
+            if self.escapes((x+dx, y, z+dz)) or self.escapes((x-dx, y, z-dz)): exterior.append([x, y, z])
+        return facings, rooms, exterior
+
+    def save(self, write=True, villager_type='minecraft:plains', use='other'):
         self.validate()
         for entity in self.entities:
             if entity['nbt'].get('id') == 'minecraft:villager':
@@ -248,8 +283,10 @@ class Template:
             packed = gzip.compress(b'\x0a\x00\x00' + payload(data), mtime=0)
             # Pin the gzip OS byte so templates are byte-identical on every platform.
             target.write_bytes(packed[:9] + b'\x03' + packed[10:])
-        return {'id': f'{NS}:village/{self.name}', 'size': list(self.size), 'rooms': self.rooms,
-                'doors': self.doors, 'bed_feet': self.beds, 'residents': len(self.entities),
+        facings, bed_rooms, exterior = self.housing()
+        return {'id': f'{NS}:village/{self.name}', 'size': list(self.size), 'use': use, 'rooms': self.rooms,
+                'doors': self.doors, 'exterior_doors': exterior, 'bed_feet': self.beds, 'bed_facing': facings,
+                'bed_room': bed_rooms, 'residents': len(self.entities),
                 'connectors': self.connectors, 'anchors': [
                     {'id': s['Name'], 'pos': list(p)} for p, s in self.blocks.items() if s['Name'].startswith(NS+':')]}
 
@@ -397,7 +434,22 @@ def main():
         kind = kind_of[t.name]
         return layouts[kind].get('villager_type', 'minecraft:' + kind)
 
-    catalog = {'templates': [t.save(write=not args.check and (not args.only or args.only == t.name), villager_type=villager_type(t))
+    # A building's role comes from the pools it is drawn from: guest rooms at the tavern, the garrison's
+    # barracks, a civic building's quarters (the apothecary sleeps above the shop), or a home on a lot.
+    pools_of = {}
+    for name, spec in pools.items():
+        for entry in spec['elements']:
+            if entry.get('template') != 'empty': pools_of.setdefault(entry['template'], set()).add('/' + name)
+
+    def use(t):
+        names = pools_of.get(t.name, set())
+        if any(n.endswith('/buildings/tavern') for n in names): return 'inn'
+        if any(n.endswith('/buildings/garrison') for n in names): return 'barracks'
+        if any('/buildings/' in n for n in names): return 'quarters'
+        if any(n.endswith('/lots') or n.endswith('/lots_outer') for n in names): return 'home'
+        return 'other'
+
+    catalog = {'templates': [t.save(write=not args.check and (not args.only or args.only == t.name), villager_type=villager_type(t), use=use(t))
                              for t in templates],
                'villages': [v['catalog'] for v in villages]}
     if args.check:

@@ -85,7 +85,7 @@ public final class VillageQuests {
         var old = boards(level).getOrDefault(record.id(), Board.create(record.id()));
         var society = VillageSocieties.society(level, record.id());
         if (society == null || society.living().isEmpty()) return old;
-        var next = Postings.refresh(old, society, day(level), writer(record.name()));
+        var next = Postings.refresh(old, society, day(level), writer(record.name()), dev.villagefriends.home.Homes.needs(level, record.id()));
         if (next != old) put(level, next);
         return next;
     }
@@ -159,6 +159,7 @@ public final class VillageQuests {
         return switch (n.kind()) {
             case Notice.HUNT -> q.hunted();
             case Notice.FETCH, Notice.BIRTHDAY -> count(p, n.target()) >= n.count();
+            case Notice.HOUSE -> dev.villagefriends.home.Homes.housed(origin(p, q), q.village(), n.poster());
             default -> false;
         };
     }
@@ -220,6 +221,7 @@ public final class VillageQuests {
             case Notice.FETCH -> "Bring " + Words.count(n.count(), itemLabel(n.target())) + " to " + first(n.posterName()) + " or this board";
             case Notice.LETTER -> "Carry a sealed letter to " + n.who();
             case Notice.BIRTHDAY -> "Bring " + Words.count(n.count(), itemLabel(n.target())) + " for " + first(n.who()) + "'s birthday";
+            case Notice.HOUSE -> "Build a house with " + n.count() + " beds in the village and put up a House Plaque for " + first(n.posterName()) + "'s family";
             default -> n.title();
         };
     }
@@ -234,6 +236,7 @@ public final class VillageQuests {
         return switch (n.kind()) {
             case Notice.HUNT -> ICONS.getOrDefault(n.target(), "minecraft:iron_sword");
             case Notice.LETTER -> "villagefriends:sealed_letter";
+            case Notice.HOUSE -> "villagefriends:house_plaque";
             default -> n.target();
         };
     }
@@ -251,6 +254,7 @@ public final class VillageQuests {
             case Notice.HUNT -> q.progress() + "/" + n.count() + " " + Words.plural(Words.mobs(1, n.target()).substring(Words.mobs(1, n.target()).indexOf(' ') + 1));
             case Notice.FETCH, Notice.BIRTHDAY -> "Have " + Math.min(n.count(), count(p, n.target())) + "/" + n.count() + " " + Words.plural(itemLabel(n.target()));
             case Notice.LETTER -> "Deliver to " + first(n.who());
+            case Notice.HOUSE -> ready(p, q) ? first(n.posterName()) + " has moved in!" : "A house with " + n.count() + " beds and a plaque";
             default -> "";
         };
     }
@@ -311,6 +315,7 @@ public final class VillageQuests {
         var n = q.notice();
         switch (n.kind()) {
             case Notice.HUNT -> { return q.hunted() ? null : "Defeat " + (n.count() - q.progress()) + " more first."; }
+            case Notice.HOUSE -> { return ready(p, q) ? null : "Build a house with " + n.count() + " beds, put up a House Plaque, and wait for " + first(n.posterName()) + "'s family to move in."; }
             case Notice.FETCH, Notice.BIRTHDAY -> {
                 int have = count(p, n.target());
                 if (have < n.count()) return "You need " + Words.count(n.count(), itemLabel(n.target())) + " (you have " + have + ").";

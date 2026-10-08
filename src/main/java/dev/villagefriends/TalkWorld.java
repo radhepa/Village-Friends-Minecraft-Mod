@@ -96,6 +96,7 @@ public final class TalkWorld {
             if (!celebrants.isEmpty()) fill.put("celebrant", first(celebrants.getFirst().name()));
         }
         fill.put("season", dev.villagefriends.social.Calendar.season(today));
+        dev.villagefriends.home.Homes.talk(v, fill);
         return new Talk.Context(topic, v.isBaby(), profile.personality(), job, friendLevel, Talk.period(time), weather,
                 plan.block().id(), Routine.marketDay(today), moon, home, held, states, extra, fill);
     }

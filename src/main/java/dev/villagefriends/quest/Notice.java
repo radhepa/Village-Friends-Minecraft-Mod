@@ -12,6 +12,8 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
  * <li>{@code letter}: carry a sealed letter to the resident {@code target} ({@code who} by name); {@code about}
  *     is how they know each other ("friend", "family", "crush", "partner", "apology").</li>
  * <li>{@code birthday}: bring {@code count} of {@code target} for the birthday of resident {@code about} ({@code who}).</li>
+ * <li>{@code house}: build a house with {@code count} beds and put up a House Plaque, for the household of the poster, which
+ *     is {@code target} ({@code about} is what they need: "homeless", "crowded" or "newborn"). Done once they live there.</li>
  * </ul>
  *
  * {@code taker} is the UUID of the player who accepted it, or "" while it is up for grabs. Notices nobody
@@ -19,7 +21,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
  */
 public record Notice(String id, String kind, String poster, String posterName, String posterJob, String target, int count,
         String about, String who, Reward reward, String title, String text, long posted, long expires, String taker) {
-    public static final String HUNT = "hunt", FETCH = "fetch", LETTER = "letter", BIRTHDAY = "birthday";
+    public static final String HUNT = "hunt", FETCH = "fetch", LETTER = "letter", BIRTHDAY = "birthday", HOUSE = "house";
     /** What answering the notice earns: emeralds and a little something from the poster's trade. */
     public record Reward(int emeralds, String item, int count) {
         public static final Reward NONE = new Reward(0, "", 0);

@@ -30,8 +30,11 @@ public final class VillageBlocks {
         var identifier = id(name);
         var properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, identifier))
                 .strength(stone ? 3.0F : 2.0F).sound(stone ? SoundType.STONE : SoundType.WOOD).noOcclusion();
-        Block block = kind == null ? new FoundationBlock(properties, boxes) : kind == FoundationEntityBlock.Kind.NOTICE_BOARD
-                ? new NoticeBoardBlock(properties, boxes) : new FoundationEntityBlock(properties, boxes, kind);
+        Block block = kind == null ? new FoundationBlock(properties, boxes) : switch (kind) {
+            case NOTICE_BOARD -> new NoticeBoardBlock(properties, boxes);
+            case HOUSE_PLAQUE -> new dev.villagefriends.home.HousePlaqueBlock(properties, boxes);
+            default -> new FoundationEntityBlock(properties, boxes, kind);
+        };
         BLOCKS.put(name, Registry.register(BuiltInRegistries.BLOCK, identifier, block));
         Registry.register(BuiltInRegistries.ITEM, identifier, new BlockItem(block,
                 new Item.Properties().setId(ResourceKey.create(Registries.ITEM, identifier)).useBlockDescriptionPrefix()));
