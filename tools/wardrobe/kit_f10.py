@@ -45,3 +45,12 @@ def cord(g, pid: str, pivot, length: int, role: str = "A", base: int = 2, end: s
         box.strip.hline(0, box.strip.w - 1, length - 1, end)
         box.bottom.fill(end)
     return box
+
+
+def lambswool(face, seed: int = 0, role: str = "S"):
+    """Lambswool or fleece: tight little curls rather than long fur."""
+    for y in range(face.h):
+        for x in range(face.w):
+            gx, gy = x + face.x0, y + face.y0
+            ring = (gx + 2 * (gy // 2) + seed) % 3
+            face.set(x, y, k(role, 4 if ring == 0 and gy % 2 == 0 else 2 if ring == 2 else 3))
