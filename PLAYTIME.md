@@ -90,5 +90,6 @@ Leader moves must keep the lengths in `Games.Move` (ticks / 20). The throw relea
 ## Verification
 
 - `gradlew test` (`PlayTest` and the animation pack tests).
+- `python tools/animations/games_preview.py` writes a looping animated WebP of every game clip to `build/previews/games/`. Clips used while running are shown over a stand-in running gait, since in game the walk drives their legs.
 - `python tools/animations/animations.py --check`, `python tools/animations/vlcheck.py tools/animations/village_life/games.py --sheet build/previews/games.png`.
 - `gradlew runClientGameTest -Ptests=PlaygroundGameTest` plays every game with four children on a playground with walls. It checks roles, hiding, the ring, copied moves, the ball in flight, a child following and freezing when looked at, games stopping for a monster, and bored children starting something on their own. Screenshots are `playground-*`.
