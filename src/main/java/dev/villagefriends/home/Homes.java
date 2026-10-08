@@ -258,12 +258,14 @@ public final class Homes {
     /** Puts {@code house} (their house's name) and {@code home_talk} (which "home." pool fits their situation) into a dialogue fill. */
     public static void talk(Villager v, Map<String, String> fill) {
         var home = target(v).getAttached(HOME); var origin = origin(v);
-        if (home == null || origin == null || v.isBaby()) return;
+        if (home == null || origin == null) return;
         var index = index(origin, home.village()); String id = id(v);
         if (!index.surveyed()) return;
         var h = index.houseOf(id); long today = day(origin);
         var need = index.needOf(id);
         if (h == null) { fill.put("home_talk", "homeless"); return; }
+        // Children only notice when the house is too small.
+        if (v.isBaby()) { if (need != null) fill.put("home_talk", "crowded"); return; }
         fill.put("house", name(origin, index, h));
         var housemates = index.residents(h.id());
         String talk;

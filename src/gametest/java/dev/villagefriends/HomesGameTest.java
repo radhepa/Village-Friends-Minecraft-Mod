@@ -303,6 +303,16 @@ public final class HomesGameTest implements FabricClientGameTest {
             check(later.equals(before), "and stay the same once the residents load again: " + later);
             LOGGER.info("HOMES PLAYER HOUSE PASSED: {} beds kept across a reload", later.size());
 
+            // --- Sneak and use the plaque: the house is private and its residents move out; again, and it's open.
+            BlockPos plaqueAgain = w.getServer().computeOnServer(s -> Homes.index(level(w), reloaded).houses().stream().filter(House::player).findFirst().orElseThrow().plaque().orElseThrow());
+            String playerHouse = "p:" + plaqueAgain.getX() + "," + plaqueAgain.getY() + "," + plaqueAgain.getZ();
+            w.getServer().runOnServer(s -> Homes.togglePrivate(w.getConnection().getServerPlayer(), plaqueAgain));
+            until(c, () -> onServer(w, () -> { var i = Homes.index(level(w), reloaded); return i.house(playerHouse).privateHome() && i.residents(playerHouse).isEmpty(); }), 300,
+                    () -> "a private house is left to its builder");
+            w.getServer().runOnServer(s -> Homes.togglePrivate(w.getConnection().getServerPlayer(), plaqueAgain));
+            until(c, () -> onServer(w, () -> { var i = Homes.index(level(w), reloaded); return !i.house(playerHouse).privateHome() && !i.residents(playerHouse).isEmpty(); }), 300,
+                    () -> "opened again, the homeless move back in");
+
             // --- Every village type's houses, read from its structure without reading a block.
             String[] types = {"village", "village_desert", "village_savanna", "village_snowy", "village_taiga"};
             for (int t = 0; t < types.length; t++) {
