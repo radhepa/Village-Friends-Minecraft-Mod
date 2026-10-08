@@ -1,0 +1,420 @@
+{
+  "format": 3,
+  "type": "savanna",
+  "structure": "village_savanna",
+  "villager_type": "minecraft:savanna",
+  "weight": 1,
+  "biomes": [
+    "minecraft:savanna"
+  ],
+  "start_pool": "savanna/town_centers",
+  "start_jigsaw": "town_start",
+  "depth": 6,
+  "max_distance": {
+    "horizontal": 100,
+    "vertical": 20
+  },
+  "terrain": {
+    "radius": 64,
+    "step": 16,
+    "core_radius": 32,
+    "max_height_range": 14,
+    "max_water": 0.2,
+    "max_core_water": 0.25,
+    "min_biome": 0.4
+  },
+  "prune": {
+    "max_buried": 5,
+    "max_floating": 5,
+    "tolerance": 0.25
+  },
+  "min_pieces": 20,
+  "pools": {
+    "savanna/town_centers": [
+      {
+        "template": "savanna/plaza_meeting_tree",
+        "weight": 2,
+        "processors": "savanna_weathered"
+      },
+      {
+        "template": "savanna/plaza_market",
+        "weight": 2,
+        "processors": "savanna_weathered"
+      },
+      {
+        "template": "savanna/plaza_waterhole",
+        "weight": 2,
+        "processors": "savanna_weathered"
+      }
+    ],
+    "savanna/buildings/tavern": [
+      {
+        "template": "savanna/tavern",
+        "weight": 1
+      }
+    ],
+    "savanna/buildings/garrison": [
+      {
+        "template": "savanna/garrison",
+        "weight": 1,
+        "processors": "savanna_weathered"
+      }
+    ],
+    "savanna/buildings/workshop": [
+      {
+        "template": "savanna/workshop",
+        "weight": 1
+      }
+    ],
+    "savanna/buildings/chapel": [
+      {
+        "template": "savanna/chapel",
+        "weight": 1,
+        "processors": "savanna_weathered"
+      }
+    ],
+    "savanna/buildings/apothecary": [
+      {
+        "template": "savanna/apothecary",
+        "weight": 1
+      }
+    ],
+    "savanna/buildings/library": [
+      {
+        "template": "savanna/library",
+        "weight": 1,
+        "processors": "savanna_weathered"
+      }
+    ],
+    "savanna/buildings/market": [
+      {
+        "template": "savanna/market_stalls",
+        "weight": 3,
+        "processors": "savanna_weathered"
+      },
+      {
+        "template": "savanna/market_shade",
+        "weight": 2,
+        "processors": "savanna_weathered"
+      },
+      {
+        "template": "savanna/market_kraal",
+        "weight": 2,
+        "processors": "savanna_weathered"
+      }
+    ],
+    "savanna/avenues": [
+      {
+        "template": "savanna/avenue",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "savanna_street"
+      },
+      {
+        "template": "savanna/avenue_bend",
+        "weight": 2,
+        "projection": "terrain_matching",
+        "processors": "savanna_street"
+      }
+    ],
+    "savanna/streets": {
+      "fallback": "savanna/street_ends",
+      "elements": [
+        {
+          "template": "savanna/street_straight_short",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_straight_long",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_straight_lamp",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_bend_right",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_bend_left",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_turn_right",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_turn_left",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_tee_right",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_tee_left",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_fork",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_crossroads",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "savanna_street"
+        },
+        {
+          "template": "savanna/street_square",
+          "weight": 1,
+          "processors": "savanna_street"
+        }
+      ]
+    },
+    "savanna/street_ends": [
+      {
+        "template": "savanna/end_gate",
+        "weight": 3,
+        "processors": "savanna_weathered"
+      },
+      {
+        "template": "savanna/end_lamp",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "savanna_street"
+      },
+      {
+        "template": "savanna/end_fade",
+        "weight": 4,
+        "projection": "terrain_matching",
+        "processors": "savanna_street"
+      }
+    ]
+  },
+  "required_pools": [
+    "savanna/town_centers",
+    "savanna/buildings/tavern",
+    "savanna/buildings/garrison",
+    "savanna/buildings/workshop",
+    "savanna/buildings/chapel",
+    "savanna/buildings/apothecary",
+    "savanna/buildings/library"
+  ],
+  "slot_widths": {
+    "savanna/buildings/tavern": 17,
+    "savanna/buildings/garrison": 17,
+    "savanna/buildings/workshop": 17,
+    "savanna/buildings/chapel": 17,
+    "savanna/buildings/apothecary": 11,
+    "savanna/buildings/library": 11,
+    "savanna/buildings/market": 11
+  },
+  "processor_lists": {
+    "savanna_weathered": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:mud_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:packed_mud"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:packed_mud",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mud_bricks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:orange_terracotta",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:terracotta"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:white_terracotta",
+              "probability": 0.03
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:light_gray_terracotta"
+          }
+        ]
+      }
+    ],
+    "savanna_street": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:dirt_path"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:packed_mud"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:coarse_dirt"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:red_sand"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:mud_bricks"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:cobblestone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:grass_block"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": {
+              "id": "minecraft:water",
+              "properties": {
+                "level": "0"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.06
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:coarse_dirt"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:packed_mud",
+              "probability": 0.05
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:coarse_dirt"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:dirt_path",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:packed_mud"
+          }
+        ]
+      }
+    ]
+  }
+}

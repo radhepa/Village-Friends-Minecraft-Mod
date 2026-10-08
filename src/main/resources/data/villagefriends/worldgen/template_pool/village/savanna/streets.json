@@ -1,0 +1,113 @@
+{
+  "fallback": "villagefriends:village/savanna/street_ends",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_straight_short",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_straight_long",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_straight_lamp",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_bend_right",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_bend_left",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_turn_right",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_turn_left",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_tee_right",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_tee_left",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_fork",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_crossroads",
+        "processors": "villagefriends:savanna_street",
+        "projection": "terrain_matching"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/street_square",
+        "processors": "villagefriends:savanna_street",
+        "projection": "rigid"
+      }
+    }
+  ]
+}
