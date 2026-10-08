@@ -1,0 +1,164 @@
+{
+  "id": "tf116_harbour_traders_ledger_bodice",
+  "kind": "top",
+  "name": "Harbour Trader's Ledger Bodice",
+  "gender": "female",
+  "texture": "tops/tf116_harbour_traders_ledger_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "slim",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "ledger",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        8.0,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -2,
+        -3,
+        -0.5
+      ],
+      "size": [
+        4,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "ledger_girdle",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        7.6,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -2,
+        0,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        40,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "penner",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        51,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "inkhorn",
+      "bone": "TORSO",
+      "pivot": [
+        -2.0,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        56,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A double-breasted trader's bodice with ink-spotted cuffs, a clasped ledger thrust under the girdle and a pen case and inkhorn at the hip."
+}

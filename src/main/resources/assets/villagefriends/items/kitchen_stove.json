@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/kitchen_stove"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/kitchen_stove"
+ }
 }

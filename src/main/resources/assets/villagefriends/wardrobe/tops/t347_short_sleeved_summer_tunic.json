@@ -1,0 +1,192 @@
+{
+  "id": "t347_short_sleeved_summer_tunic",
+  "kind": "top",
+  "name": "Short-Sleeved Summer Tunic",
+  "gender": "male",
+  "texture": "tops/t347_short_sleeved_summer_tunic.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "neck_cord_r",
+      "bone": "TORSO",
+      "pivot": [
+        -0.45,
+        2.2,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neck_cord_l",
+      "bone": "TORSO",
+      "pivot": [
+        0.45,
+        2.2,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "right_sleeve_end",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -3.0
+      ],
+      "size": [
+        5,
+        3,
+        6
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_end",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -3.0
+      ],
+      "size": [
+        5,
+        3,
+        6
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        10
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A light, loose summer tunic with wide short sleeves, a cord-tied neck slit and one woven stripe round sleeves and hem."
+}

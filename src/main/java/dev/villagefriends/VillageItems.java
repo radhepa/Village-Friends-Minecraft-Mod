@@ -72,6 +72,10 @@ public final class VillageItems {
         add("steaming_coffee_mug", p -> new Item(p.stacksTo(16).food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).alwaysEdible().build(),
                 Consumable.builder().animation(ItemUseAnimation.DRINK).sound(SoundEvents.GENERIC_DRINK).hasConsumeParticles(false)
                         .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 600, 0))).build()).usingConvertsTo(mug)), MEALS);
+        // Poured from a tavern's drinks barrel: sweet, warm and a little restorative.
+        add("mug_of_cider", p -> new Item(p.stacksTo(16).food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.4F).alwaysEdible().build(),
+                Consumable.builder().animation(ItemUseAnimation.DRINK).sound(SoundEvents.GENERIC_DRINK).hasConsumeParticles(false)
+                        .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0))).build()).usingConvertsTo(mug)), MEALS);
         add("fresh_village_bread", p -> new VillageMealItem(p.food(new FoodProperties.Builder().nutrition(6).saturationModifier(0.6F).build()).villagerFood(6), 2.0F), MEALS);
         add("hearty_stew", p -> new VillageMealItem(p.stacksTo(1).food(new FoodProperties.Builder().nutrition(8).saturationModifier(0.8F).build()).usingConvertsTo(Items.BOWL), 6.0F), MEALS);
         wearable("rain_cloak"); wearable("hooded_poncho");
@@ -79,6 +83,11 @@ public final class VillageItems {
         for (String tool : List.of("broom", "paintbrush", "lute", "carpenter_hammer", "field_journal"))
             add(tool, p -> new Item(p.stacksTo(1)), SUPPLIES);
         add("village_ledger", p -> new VillageLedgerItem(p.stacksTo(1)), SUPPLIES);
+        // Birthdays and notice boards: a card to give, a letter to carry, and cake for the guests.
+        add("birthday_card", p -> new Item(p.stacksTo(16)), SUPPLIES);
+        add("sealed_letter", p -> new Item(p.stacksTo(1)), SUPPLIES);
+        add("birthday_cake_slice", p -> new Item(p.stacksTo(16).food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.4F).alwaysEdible().build(),
+                Consumable.builder().onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 400, 0))).build())), MEALS);
         guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}

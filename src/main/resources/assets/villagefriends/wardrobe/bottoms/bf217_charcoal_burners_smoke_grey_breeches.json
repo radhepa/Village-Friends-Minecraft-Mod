@@ -1,0 +1,46 @@
+{
+  "id": "bf217_charcoal_burners_smoke_grey_breeches",
+  "kind": "bottom",
+  "name": "Charcoal Burner's Smoke-Grey Breeches",
+  "gender": "female",
+  "texture": "bottoms/bf217_charcoal_burners_smoke_grey_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_tinder_pouch",
+      "bone": "TORSO",
+      "pivot": [
+        6.5,
+        9.6,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    }
+  ],
+  "description": "Full wool breeches bloused over sacking leg wraps, knees blackened from kneeling at the kiln, a tinder pouch on the hip and wooden-soled clogs."
+}

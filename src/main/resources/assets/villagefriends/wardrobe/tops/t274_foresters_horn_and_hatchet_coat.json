@@ -1,0 +1,276 @@
+{
+  "id": "t274_foresters_horn_and_hatchet_coat",
+  "kind": "top",
+  "name": "Forester's Horn and Hatchet Coat",
+  "gender": "male",
+  "texture": "tops/t274_foresters_horn_and_hatchet_coat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "horn_bell",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        6.8,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "horn_body",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        7.3,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "horn_tip",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        6.3,
+        -3.2
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        0
+      ]
+    },
+    {
+      "id": "hatchet_haft",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        6.2,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        50,
+        0
+      ]
+    },
+    {
+      "id": "hatchet_eye",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        6.2,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        -0.5,
+        0.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "hatchet_bit",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        6.2,
+        2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        -16
+      ],
+      "origin": [
+        1.5,
+        -0.6,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        5,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        26,
+        9
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A forester's wrap-over twill coat closed slantwise from shoulder to hip, a banded ox-horn riding the baldric across his belly and a hatchet thrust through the belt at his back."
+}

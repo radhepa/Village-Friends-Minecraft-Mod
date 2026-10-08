@@ -1,0 +1,195 @@
+{
+  "id": "t224_deacons_dalmatic",
+  "kind": "top",
+  "name": "Deacon's Dalmatic",
+  "gender": "male",
+  "texture": "tops/t224_deacons_dalmatic.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "holy",
+    "robe"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_dalmatic_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.1,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "left_dalmatic_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.1,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.22
+    },
+    {
+      "id": "dalmatic_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "dalmatic_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.2,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "back_cord_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        0.4,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        23,
+        13
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "back_cord_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        0.4,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        7,
+        1
+      ],
+      "uv": [
+        28,
+        13
+      ],
+      "motion": "sway"
+    }
+  ],
+  "lockedTo": "b224_deacons_alb_hem",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A deacon's knee-length dalmatic with short, wide sleeves, two bright clavi running from shoulder to fringed hem, and tasselled cords hanging behind, over the white alb."
+}

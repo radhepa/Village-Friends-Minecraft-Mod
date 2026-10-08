@@ -1,0 +1,274 @@
+{
+  "id": "t122_haymakers_open_neck_shirt",
+  "kind": "top",
+  "name": "Haymaker's Open-Neck Shirt",
+  "gender": "male",
+  "texture": "tops/t122_haymakers_open_neck_shirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "relaxed",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "neck_lace_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        1.2,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neck_lace_1",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        1.2,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "straw_hat_brim_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        2.55
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -2.5,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "straw_hat_brim_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        2.63
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -3.5,
+        0
+      ],
+      "size": [
+        7,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ]
+    },
+    {
+      "id": "straw_hat_brim_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.6,
+        2.71
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        -4.5,
+        0
+      ],
+      "size": [
+        5,
+        9,
+        1
+      ],
+      "uv": [
+        38,
+        8
+      ]
+    },
+    {
+      "id": "straw_hat_crown",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.3,
+        3.6
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        5,
+        2
+      ],
+      "uv": [
+        0,
+        19
+      ]
+    },
+    {
+      "id": "hat_band_bow",
+      "bone": "TORSO",
+      "pivot": [
+        -2.9,
+        6.2,
+        4.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        19
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A loose linen shirt unlaced deep down the chest with its laces hanging free, sleeves rolled to the elbow and a broad-brimmed straw hat slung down the back."
+}

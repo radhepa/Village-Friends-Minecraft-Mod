@@ -1,0 +1,190 @@
+{
+  "id": "b134_whey_splashed_clog_trousers",
+  "kind": "bottom",
+  "name": "Whey-Splashed Clog Trousers",
+  "gender": "male",
+  "texture": "bottoms/b134_whey_splashed_clog_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_ankle_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_clog_sole",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        11.6,
+        -3.0
+      ],
+      "size": [
+        5,
+        1,
+        6
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "left_ankle_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_clog_sole",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        11.6,
+        -3.0
+      ],
+      "size": [
+        5,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "right_clog_nose",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        23,
+        8
+      ]
+    },
+    {
+      "id": "left_clog_nose",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.9,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        -1
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ]
+    }
+  ],
+  "description": "Twill trousers drawn tight at the ankle and splashed pale with whey from the churn, over tall wooden-soled dairy clogs with leather uppers and a brass clasp."
+}

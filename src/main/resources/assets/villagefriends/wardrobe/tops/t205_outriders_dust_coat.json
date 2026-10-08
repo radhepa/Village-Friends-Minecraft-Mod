@@ -1,0 +1,193 @@
+{
+  "id": "t205_outriders_dust_coat",
+  "kind": "top",
+  "name": "Outrider's Dust Coat",
+  "gender": "male",
+  "texture": "tops/t205_outriders_dust_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "capelet",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -6.0,
+        -0.8,
+        -2.9
+      ],
+      "size": [
+        12,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "map_case",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        6.2,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        50
+      ],
+      "origin": [
+        -1,
+        -4,
+        -1
+      ],
+      "size": [
+        2,
+        8,
+        2
+      ],
+      "uv": [
+        37,
+        0
+      ]
+    },
+    {
+      "id": "coat_skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.25,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        46,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.25,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back_right",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.25,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        11,
+        11
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_skirt_back_left",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.25,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        8,
+        1
+      ],
+      "uv": [
+        22,
+        11
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long, road-dusted riding coat split front and back to the hip for the saddle, with a short shoulder capelet, wooden toggles and a leather map case slung across the back on a strap."
+}

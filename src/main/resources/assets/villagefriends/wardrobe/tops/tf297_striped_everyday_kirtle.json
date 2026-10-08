@@ -1,0 +1,18 @@
+{
+  "id": "tf297_striped_everyday_kirtle",
+  "kind": "top",
+  "name": "Striped Everyday Kirtle",
+  "gender": "female",
+  "texture": "tops/tf297_striped_everyday_kirtle.png",
+  "extrasHeight": 0,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A kirtle of cheap striped ticking with the stripes running straight down, finished with a plain contrasting yoke, plain cuffs and one button at the throat."
+}

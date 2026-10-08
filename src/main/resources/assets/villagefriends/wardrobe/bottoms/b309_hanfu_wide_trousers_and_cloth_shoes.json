@@ -1,0 +1,130 @@
+{
+  "id": "b309_hanfu_wide_trousers_and_cloth_shoes",
+  "kind": "bottom",
+  "name": "Hanfu Wide Trousers and Cloth Shoes",
+  "gender": "male",
+  "texture": "bottoms/b309_hanfu_wide_trousers_and_cloth_shoes.png",
+  "extrasHeight": 16,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_shoe_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_shoe_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "right_cloud_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "left_cloud_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        9.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "lockedTo": "t309_song_scholars_hanfu_robe",
+  "description": "Wide pale trousers falling loose to the ankle, and black cloth shoes on white layered soles, each toe turned up in a cloud-head scroll."
+}

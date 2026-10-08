@@ -1,0 +1,196 @@
+{
+  "id": "tf119_market_stallholders_money_apron",
+  "kind": "top",
+  "name": "Market Stallholder's Money Apron",
+  "gender": "female",
+  "texture": "tops/tf119_market_stallholders_money_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_ties",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.2,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "money_apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coin_pocket_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.2,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "inflate": 0.06,
+      "motion": "flap_front"
+    },
+    {
+      "id": "coin_pocket_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.2,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.06,
+      "motion": "flap_front"
+    },
+    {
+      "id": "coin_pocket_2",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.2,
+        -1.0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        8
+      ],
+      "inflate": 0.06,
+      "motion": "flap_front"
+    },
+    {
+      "id": "tally_stick",
+      "bone": "TORSO",
+      "pivot": [
+        -1.8,
+        7.8,
+        -3.3
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        14,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A short leather change apron of three bulging coin pockets tied over a laced bodice and linen partlet, a notched tally stick thrust through the ties."
+}

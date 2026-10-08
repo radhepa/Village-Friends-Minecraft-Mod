@@ -70,6 +70,7 @@ public final class VillageLedger {
     private static String note(Society s, Townsfolk t, long today) {
         if (t.status().equals(Townsfolk.PASSED)) return "Remembered fondly";
         if (t.status().equals(Townsfolk.CURSED)) return "Zombified. Cure them to bring them home";
+        if (t.home() && dev.villagefriends.social.Calendar.isBirthday(t.birthday(), today)) return "Birthday today!";
         if (!t.partner().isEmpty()) return (t.married() ? "Married to " : "Sweethearts with ") + s.nameOf(t.partner());
         if (!t.adult()) {
             var parents = s.family(t.id()).stream().filter(id -> s.relation(t.id(), id).equals("parent")).map(s::nameOf).toList();
@@ -85,6 +86,12 @@ public final class VillageLedger {
         var personality = NarrativeContent.current().personality(t.personality());
         about.add(personality.label() + " · loves " + personality.hobby());
         about.add("Lives in " + village + " since day " + (t.joined() + 1) + (t.status().equals(Townsfolk.PASSED) ? " · passed away" : ""));
+        if (t.home()) {
+            // Their day, as the neighbors know it: when they're up, at work, at the bell and in bed.
+            var day = dev.villagefriends.routine.Routine.day(ResidentRoutines.seed(id), t.job(), t.personality(), !t.adult(), today);
+            about.add(day.chronotype().label + (loaded != null ? " · Now: " + ResidentRoutines.doing(loaded) : ""));
+            about.add((day.marketDay() ? "Market Day: " : "Today: ") + dev.villagefriends.routine.Routine.summary(day));
+        }
         about.addAll(Gossip.about(s, id, today));
         String crush = s.crush(id, today);
         if (!crush.isEmpty() && level >= FriendshipLevels.SECRETS) about.add("Secretly smitten with " + s.nameOf(crush) + " (shh!)");

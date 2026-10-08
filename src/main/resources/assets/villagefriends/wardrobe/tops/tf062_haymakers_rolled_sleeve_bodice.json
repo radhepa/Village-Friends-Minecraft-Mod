@@ -1,0 +1,358 @@
+{
+  "id": "tf062_haymakers_rolled_sleeve_bodice",
+  "kind": "top",
+  "name": "Haymaker's Rolled-Sleeve Bodice",
+  "gender": "female",
+  "texture": "tops/tf062_haymakers_rolled_sleeve_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        1.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        1.2,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.8,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "sweat_cloth",
+      "bone": "TORSO",
+      "pivot": [
+        -2.8,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "rake_handle",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        -0.5,
+        -16,
+        -0.5
+      ],
+      "size": [
+        1,
+        16,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "rake_head",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        -3.5,
+        -17,
+        -0.5
+      ],
+      "size": [
+        7,
+        1,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "rake_tooth_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        -3.5,
+        -19,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        58,
+        8
+      ]
+    },
+    {
+      "id": "rake_tooth_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        -1.5,
+        -19,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        26
+      ]
+    },
+    {
+      "id": "rake_tooth_2",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        0.5,
+        -19,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        5,
+        26
+      ]
+    },
+    {
+      "id": "rake_tooth_3",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        2.5,
+        -19,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        10,
+        26
+      ]
+    },
+    {
+      "id": "rake_brace_right",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        -2.1,
+        -15,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        26
+      ]
+    },
+    {
+      "id": "rake_brace_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        10.2,
+        3.3
+      ],
+      "rotation": [
+        -6,
+        0,
+        -31
+      ],
+      "origin": [
+        1.1,
+        -15,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        26
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A hook-fronted bodice over chemise sleeves rolled up to the shoulder, a sweat cloth at the girdle and a wooden hay rake over the shoulder."
+}

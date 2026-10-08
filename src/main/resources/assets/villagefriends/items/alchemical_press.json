@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/alchemical_press"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/alchemical_press"
+ }
 }

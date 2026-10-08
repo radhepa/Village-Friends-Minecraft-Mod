@@ -1,0 +1,248 @@
+{
+  "id": "t222_barber_surgeons_striped_apron",
+  "kind": "top",
+  "name": "Barber-Surgeon's Striped Apron",
+  "gender": "male",
+  "texture": "tops/t222_barber_surgeons_striped_apron.png",
+  "extrasHeight": 16,
+  "tags": [
+    "apron",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "razor_case",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        5.4,
+        -2.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "apron_lap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "apron_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        9.6,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "apron_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        9.6,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        24,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "bowl_thong",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.2,
+        -3.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bleeding_bowl",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        9.2,
+        -3.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A barber-surgeon's bib apron striped on the slant like his pole, over a rolled-sleeve shirt, a razor case in the bib pocket and a notched brass bleeding bowl at the hip."
+}

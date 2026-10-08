@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/archives"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/archives"
+ }
 }

@@ -1,0 +1,360 @@
+{
+  "id": "tf164_beguines_plain_kirtle_and_mantle",
+  "kind": "top",
+  "name": "Beguine's Plain Kirtle and Mantle",
+  "gender": "female",
+  "texture": "tops/tf164_beguines_plain_kirtle_and_mantle.png",
+  "extrasHeight": 48,
+  "tags": [
+    "holy",
+    "robe",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "clasp_right",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        3.5,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "clasp_left",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        3.5,
+        -2.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "mantle_shoulders",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.6,
+        -2.8
+      ],
+      "size": [
+        17,
+        3,
+        6
+      ],
+      "uv": [
+        10,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "mantle_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        2.6
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "mantle_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.423204552858065,
+        3.3673212111853785
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        10
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "huik_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -0.6,
+        -3
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        23
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "huik_collar_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        23
+      ]
+    },
+    {
+      "id": "huik_fall",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        3.75
+      ],
+      "rotation": [
+        4,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        8,
+        1
+      ],
+      "uv": [
+        48,
+        23
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        33
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "spindle",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        7.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        -2.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        33
+      ]
+    },
+    {
+      "id": "spindle_whorl",
+      "bone": "TORSO",
+      "pivot": [
+        3.1,
+        9.0,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.0,
+        -0.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        33
+      ]
+    },
+    {
+      "id": "spindle_cop",
+      "bone": "TORSO",
+      "pivot": [
+        2.45,
+        5.9,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -1.0,
+        -1.5,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        43,
+        33
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A plain kirtle under a long dark mantle tied between pewter clasps, a white huik down the back and a spindle."
+}

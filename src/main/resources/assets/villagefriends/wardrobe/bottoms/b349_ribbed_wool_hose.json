@@ -1,0 +1,132 @@
+{
+  "id": "b349_ribbed_wool_hose",
+  "kind": "bottom",
+  "name": "Ribbed Wool Hose",
+  "gender": "male",
+  "texture": "bottoms/b349_ribbed_wool_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "knit",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knit_welt",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_garter_tail",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.6,
+        6.6,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "left_knit_welt",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_tail",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.6,
+        6.6,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Close hand-knitted wool hose ribbed from waist to ankle, a patterned turnover welt below each knee tied with a yarn garter, and soft ankle shoes."
+}

@@ -1,0 +1,190 @@
+{
+  "id": "b181_captains_turned_down_boots",
+  "kind": "bottom",
+  "name": "Captain's Turned-Down Boots",
+  "gender": "male",
+  "texture": "bottoms/b181_captains_turned_down_boots.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "sea",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_hose_lace",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "left_boot_hose_lace",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "right_boot_turn",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.26
+    },
+    {
+      "id": "left_boot_turn",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        3.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.26
+    },
+    {
+      "id": "right_square_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        9
+      ]
+    },
+    {
+      "id": "left_square_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        30,
+        9
+      ]
+    }
+  ],
+  "description": "Close velvet breeches and tall boots with wide tops turned down to the shin, pale flesh side out, the lace frill of the boot hose spilling over the fold, and square toes."
+}

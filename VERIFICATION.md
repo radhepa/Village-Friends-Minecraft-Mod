@@ -1,3 +1,56 @@
+# Tavern verification (2.19.0)
+
+Verified October 8, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `gradlew test` passed with 123 unit tests, including `PatronageTest` (6), `TavernPackTest` (3), the new tavern cases in `RoutineTest` (13 in all) and `AnimationPackTest` loading both bundled packs.
+- `python tools/tavern/furniture.py --check`, `tools/tavern/sprites.py --check`, `tools/animations/animations.py --check` (359 + 67 clips), `tools/dialogue/dialogue.py --check` (5,933 pieces) and `tools/create_village_structures.py --check` (60 blueprints, 13 pools) all pass. `python tools/village_design/simulate.py --seeds 300`: pieces 58/85/123, residents 23/38/63 (min/median/max), required pools never missing.
+- `-Ptests=TavernGameTest` passed: The Hearth on a flat world (37 seats, 10 by the hearth, 8 outdoors, 5 standing places, the stage); on a Market Day evening 10–15 of 18 residents came, sat down square to their tables and were served by the keeper (trays carried out), the client drew them seated with their dish on the table or in hand; a player sat on a Tavern Chair and got up; at bedtime every seat was given back; the next lunch was the dish of the day (a ploughman's when the stove was cold).
+- `-Ptests=TavernVillageGameTest` passed: in a placed village of 31 residents, 6–9 sat in the tavern at once on Market Day evening with the bard playing; in a naturally generated village the survey read the tavern's own (rotated) structure piece and found all 37 seats, both keeper stations, the stage and the stove.
+- `-Ptests=WorkstationGameTest` (dish-of-the-day rotation) and `-PstructuresOnly` (60 templates, rooms, doors, block entities, natural worldgen, save/reload) passed.
+- Evidence: `build/run/clientGameTest/screenshots/*tavern-*.png`; previews in `build/previews/tavern_*.png`.
+
+# Wardrobe expansion verification (2.16.0)
+
+Verified October 8, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `python tools/wardrobe/wardrobe.py` compiled all 832 pieces with no errors, and `--check` reports them current:
+  - men: 80 hairstyles, 219 tops and 219 bottoms;
+  - women: 50 hairstyles, 132 tops and 132 bottoms;
+  - 351 outfit templates, every one worn by a real profession.
+- Mixing coverage: 37,077 of 38,416 men's and 14,449 of 14,884 women's free pairs are allowed. There are 23 men's and 10 women's locked sets.
+- Release build passed with 102 unit tests and no failures. `WardrobeTest` checks the new per-set counts, locked sets, coverage and palette lock under all ten palettes.
+- `-PoutfitsOnly` passed inside Minecraft: 351 outfits, 130 hairstyles, 351 tops and 351 bottoms, with palette lock on every baked atlas texel, armor hiding and resource reload. Posing a resident took 8.8 µs, the same as with the smaller wardrobe.
+- Evidence: `build/outfits-2.16.log` and `build/run/clientGameTest/screenshots/` (gallery, back and mid-stride pages for all 36 pages of outfits, and an in-world scene per page).
+
+# Village Life animation pack, 349 clips (2.15.0)
+
+Verified October 7, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `python tools/animations/animations.py --check` validated all 349 clips (340 distinct motions) and confirmed the compiled pack is current. `tools/animations/vlcheck.py` passed every one of the 16 authoring modules (feet kept under the resident, known tags only, an age on every greeting, no commas in names).
+- Every new clip was reviewed in offline contact sheets (`preview.py` poses) from at least one angle while it was authored.
+- Release build passed with 80 unit tests. `AnimationPackTest` now requires at least 349 clips, four work motions for every profession, three hobbies per personality, six or more clips for each reaction trigger, 20 children's games, seven rain clips and a thunder clip. Weighted picking still shows the cleric praying and the gentle hobby often among 200+ idles.
+- `runClientGameTest -PanimationPack` passed twice (before and after a clip-name cleanup): every clip at three moments kept armor matched to the resident model and the feet under the resident; held items, mirroring, eyes, children, idles, neighbor chats, greetings, the conversation window and event reactions all passed. The gallery now lays residents out 20 wide and captured 18 pages.
+- In-game stills reviewed for the trades, conversation gestures and children's games pages.
+- The release JAR contains the 349-clip pack and no gametest classes.
+- Evidence: `build/run/clientGameTest/screenshots/*animation-pack-*.png`.
+
+# Village days verification (2.14.0)
+
+Verified October 7, 2026 on Windows 11 with Minecraft 26.3, Fabric 0.19.5 and Java 25.
+
+- `gradlew test` passed with 102 unit tests, including the new `RoutineTest` (10), `DialogueBankTest` (6) and `TalkTest` (6).
+- `python tools/workstations/workstations.py --check`, `python tools/dialogue/dialogue.py --check` (5,898 pieces of dialogue) and `python tools/animations/animations.py --check` passed.
+- `runClientGameTest -Ptests=WorkstationGameTest` passed:
+  - all eleven workstations placed and photographed;
+  - each one used by a player: the stove (beef cooked in half the campfire time), the barrel and tap, the press (Herbal Tonic), the easel (sketch, painting, taken home), the sawmill (6 planks a log, 3 sticks a plank, 16 at a click), the sewing table (wool unravelled, boots mended), the archives (chronicle book), the music stand (Haste), the dummy (a strike is measured; holding attack never mines it) and the target's scoring;
+  - a cook, painter, tavern keeper and knight at work: dish of the day once per visitor, a finished painting, restocking, training experience;
+  - a librarian asleep at midnight, sheltering awake from a thunderstorm, and back out to the bell when it clears;
+  - written dialogue on every topic, a remembered answer, and an apothecary's offer that heals a hurt player through the real conversation window.
+- `-Ptests=GuardSpawnEggGameTest,GuardGameTest,GuardProgressGameTest`, `FriendshipGameTest`, `CommunityGameTest`, `FoundationGameTest` (28 items), `VillageLifeGameTest`, `RoadmapGameTest`, `AnimationGameTest`, `StructuresGameTest`, `OutfitGameTest` and `HairFaceGameTest` passed: every registered gameplay test. Run in small groups: this PC was short of memory, and a full-suite run hung once and later stopped with a native out-of-memory error, not a test failure.
+- Two regressions were found and fixed along the way. Questions on a first visit could replace the topic buttons the Friendship test clicks next, so residents now only quiz you from your second visiting day; offers to help still come on first meeting. Village references had dropped out of work talk and children's lines, so the earlier rule was restored, as the Community test expects.
+- Evidence: `build/run/clientGameTest/screenshots/*workstations-*.png`; `python tools/workstations/workstations.py --preview` writes `build/previews/workstations.png`.
+
+
 # Village life verification (2.13.0)
 
 Verified October 7, 2026 on Linux with Minecraft 26.3, Fabric 0.19.5 and Java 25 (Temurin 25.0.4), in a headless X server with Mesa llvmpipe (OpenGL 4.5 through EGL; no sound device).

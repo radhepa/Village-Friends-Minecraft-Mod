@@ -1,0 +1,201 @@
+# Would-you-rathers, opinions and little dilemmas.
+
+? wyr_fly_breathe
+Q: Would you rather fly like a phantom or breathe underwater like a fish?
+- Fly :: Fly! You'd see {village} from the clouds. Wave to me. @wants:fly {points:1} [SPARKLE]
+- Breathe underwater :: Underwater! All those ruins and coral and turtles. I'd choose that too. @wants:swim {points:1} [NOTE]
+- Neither, I like walking :: Walking. Steady and sure. The ground's never let you down. {points:1} [NOTE]
+
+? wyr_golem_creeper
+Q: Would you rather have an iron golem as a bodyguard, or a creeper who's sworn never to explode?
+- The golem :: The golem! Strong, silent and gives flowers to children. A perfect friend. {points:1} [HEART]
+- The polite creeper :: A polite creeper! Ha! You'd never relax, though. Every hiss would be terrifying. {points:1} [SWEAT]
+- Both, for balance :: Both! The golem would keep an eye on the creeper. Very sensible arrangement. {points:1} [IDEA]
+
+? wyr_nether_end
+Q: Would you rather live in the Nether or the End? If you had to choose.
+- The Nether :: The Nether! Warm, at least. Bring a lot of fire resistance. {points:1} [EXCLAIM]
+- The End :: The End. Quiet and strange. You'd be the only one there besides the endermen. {points:1} [DOTS]
+- I'd stay right here :: Right here. Good answer. Neither of those places has a bell. {points:1} [HEART]
+
+? wyr_bread_cake
+Q: For the rest of your life: bread every day, or cake once a week?
+- Bread every day :: Bread every day! Steady and good. You think like a farmer. {points:1} [NOTE]
+- Cake once a week :: Cake once a week! Something to look forward to. Market Day cake! {points:1} [HEART]
+- Can I have both? :: Both? Greedy! I'd say the same, honestly. {points:1} [NOTE]
+
+? wyr_big_small
+Q: Would you rather live in a huge castle or a tiny cottage by a stream?
+- The castle :: A castle! You'd need a lot of servants. And a lot of torches. {points:1} [EXCLAIM]
+- The cottage :: The cottage. Me too. Small enough to keep warm, big enough for friends. @dream:cottage {points:1} [HEART]
+- A boat :: A boat! Always moving, always home. Very romantic. {points:1} [SPARKLE]
+
+? wyr_know_future
+Q: If you could know one thing about your future, would you want to?
+- Yes, tell me everything :: Everything? I'd be too scared. You're braver than me. {points:1} [EXCLAIM]
+- No, I'll find out :: You'd rather find out. Me too. That's half the fun of tomorrow. {points:1} [NOTE]
+- Only good news :: Only good news! Clever. Leave the rest as a surprise. {points:1} [IDEA]
+
+? wyr_animal_talk
+Q: Would you rather talk to animals or understand every language in the world?
+- Talk to animals :: Talk to animals! Imagine what the cats would say. Mostly complaints, I think. @wants:animals {points:1} [HEART]
+- Every language :: Every language! You could talk to the wandering trader properly. Finally. {points:1} [NOTE]
+- Neither, I like quiet :: Quiet. Sometimes the best conversations have no words at all. {points:1} [DOTS]
+
+? wyr_rich_free
+Q: Would you rather have a chest full of diamonds, or never need to sleep?
+- The diamonds :: The diamonds! Practical. You could buy the whole market. {points:1} [SPARKLE]
+- Never sleep :: Never sleep? You'd miss dreaming. And the phantoms would never leave you alone. {points:1} [SWEAT]
+- I'll keep my naps :: Keep your naps! A wise person. The nitwit would be so proud. {points:1} [NOTE]
+
+? wyr_summer_winter
+Q: Endless summer or endless winter? You have to pick one.
+- Endless summer :: Summer forever! Swimming, sunshine, picnics. Sounds lovely. And hot. {points:1} [NOTE]
+- Endless winter :: Winter forever! Snow and fires and soup. I'd need more scarves. {points:1} [SPARKLE]
+- I couldn't choose :: Couldn't choose? Then you'd better not be in charge of the weather. {points:1} [DOTS]
+
+? wyr_dragon_egg
+Q: If you found a dragon egg, would you hatch it or leave it be?
+- Hatch it! :: Hatch it! You'd have a dragon! The whole village would come to see it. Or run away. {points:1} [EXCLAIM]
+- Leave it be :: Leave it be. Some things aren't ours to wake. Wise. {points:1} [NOTE]
+- Bring it here :: Bring it here? To {village}? The golem would have a fit. {points:1} [SWEAT]
+
+? wyr_mansion_temple
+Q: Would you rather explore a woodland mansion or a jungle temple?
+- The mansion :: The mansion! Full of illagers and secret rooms. Bring friends. And a totem. {points:1} [EXCLAIM]
+- The temple :: The temple! Vines, traps and puzzles. Very adventurous. {points:1} [SPARKLE]
+- A library :: A library! The safest adventure of all. And the quietest. {points:1} [NOTE]
+
+? wyr_invisibility
+Q: Would you rather be invisible or be able to see in the dark?
+- Invisible :: Invisible! Would you use it to sneak cookies? I would. {points:1} [NOTE]
+- See in the dark :: See in the dark! Never afraid of caves again. Golden carrots would be wasted on you. {points:1} [IDEA]
+- Neither, thanks :: Neither? Happy as you are. That's the best answer of all. {points:1} [HEART]
+
+? opinion_best_block
+Q: What's the best block in the whole world? I have strong opinions on this.
+- Oak planks :: Oak planks! Honest, warm and everywhere. A fine choice. {points:1} [NOTE]
+- Glass :: Glass! You can see the world through it. Very clever. {points:1} [IDEA]
+- The bell :: The bell! The heart of every village. You understand us. @fond:bell {points:2} [HEART]
+- Hay bales :: Hay bales! Soft to land on and pretty to look at. A playful pick. {points:1} [NOTE]
+
+? opinion_best_mob
+Q: Which creature in the world do you like best?
+- Axolotls :: Axolotls! Pink and smiling. Everyone loves an axolotl. {points:1} [HEART]
+- Foxes :: Foxes! Clever little thieves. They steal our chickens, but I can't stay mad. {points:1} [NOTE]
+- Bees :: Bees! Hard workers. Honey makers. Underrated. {points:1} [NOTE]
+- Villagers, of course :: Villagers! Oh, you flatterer. We like you too. {points:2} [BLUSH]
+
+? opinion_creepers
+Q: Do you think creepers are evil, or just misunderstood?
+- Definitely evil :: Evil! They blow up houses. I can't argue with that. {points:1} [ANGER]
+- Just misunderstood :: Misunderstood. Maybe they just want a hug. A very loud, very final hug. {points:1} [DOTS]
+- They're lonely :: Lonely. Oh, that's sad. Now I'll never look at one the same way. {points:1} [GLOOM]
+
+? opinion_trader
+Q: The wandering trader. Honest merchant or charming swindler?
+- Honest merchant :: Honest? You're kind. His prices say otherwise. {points:1} [QUESTION]
+- Charming swindler :: Charming swindler! Exactly. But I still buy his saplings every time. {points:1} [NOTE]
+- Mysterious wizard :: A wizard! The invisibility potions make sense now. {points:1} [IDEA]
+
+? opinion_golem_flowers
+Q: Why do you think the iron golem gives flowers to children?
+- Because it's kind :: Because it's kind. Simple and true. I believe that too. {points:1} [HEART]
+- It wants friends :: It wants friends. Oh. That makes my heart ache a little. {points:1} [GLOOM]
+- It's a mystery :: A mystery. Some things are better that way. {points:1} [DOTS]
+
+? opinion_bell_volume
+Q: Honestly now: is our bell too loud?
+- Far too loud :: Too loud! I knew it. I'm telling the cleric you agreed with me. {points:1} [ANGER]
+- Just right :: Just right! A diplomatic answer. You'd make a good mayor. {points:1} [NOTE]
+- Ring it louder :: Louder?! You're dangerous. I love it. {points:1} [EXCLAIM]
+
+? opinion_pumpkin_melon
+Q: Pumpkins or melons? The village is divided.
+- Pumpkins :: Pumpkins! Pies, lanterns and scarecrow heads. Versatile. {points:1} [NOTE]
+- Melons :: Melons! Sweet, juicy and perfect on a hot day. {points:1} [NOTE]
+- Both are just round :: Both are just round? Bold. Nobody's said that at a village meeting yet. {points:1} [QUESTION]
+
+? dilemma_lost_coin
+Q: If you found an emerald on the path, would you keep it or ask around?
+- Ask around :: Ask around. Honest! That's why people trust you here. @trait:honest {points:2} [HEART]
+- Keep it :: Keep it? Ha! Well, finders keepers, I suppose. Don't tell the baker. {points:1} [DOTS]
+- Give it to the bell :: Give it to the bell? You mean leave it for whoever needs it. That's lovely. {points:2} [SPARKLE]
+
+? dilemma_last_bread
+Q: Last loaf of bread, two hungry people. What do you do?
+- Share it :: Share it. Of course. Half a loaf for two is better than a whole one for one. @trait:generous {points:2} [HEART]
+- Give it away :: Give it away entirely? You're too good. Eat something yourself sometimes. @trait:generous {points:2} [HEART]
+- Bake more :: Bake more! Practical. Problem solved for everyone. {points:1} [IDEA]
+
+? dilemma_storm_choice
+Q: Storm's coming and the sheep are out. Save the sheep or your own house?
+- The sheep :: The sheep! They can't help themselves. The shepherd would kiss you. {points:1} [HEART]
+- My house :: Your house. Sensible. Sheep can swim. Probably. {points:1} [SWEAT]
+- Call the neighbors :: Call the neighbors and save both! That's how a village works. {points:2} [IDEA]
+
+? dilemma_zombie_neighbor
+Q: If a neighbor got turned into a zombie, would you try to cure them?
+- Of course I would :: Of course. A splash of weakness and a golden apple. I'm so glad you know. @trait:healer {points:2} [HEART]
+- If I knew how :: Weakness potion, then a golden apple. Now you know. Promise you'd try? {points:1} [IDEA]
+- Too dangerous :: Too dangerous? I understand. But I hope someone would do it for me. {points:1} [GLOOM]
+
+? dilemma_secret
+Q: If a friend told you a secret, would you ever tell anyone?
+- Never :: Never. Good. Then I know I can trust you. @trait:trusty {points:2} [HEART]
+- Only if it hurt them :: Only to protect them. That's the right exception. You're wise. {points:2} [NOTE]
+- Depends on the gossip :: Depends on the gossip? Ha! At least you're honest about it. {points:1} [DOTS]
+
+? village_name_vote
+Q: If we renamed {village}, what would you call it?
+- Keep the name :: Keep it? Good. We've grown into it, like an old coat. {points:1} [HEART]
+- Something with "bell" :: Bellsworth? Bellmere? Ooh, I like that. I'll suggest it. Nobody will agree. {points:1} [IDEA]
+- Name it after me :: After you?! Bold. ...{player}ville. It does have a ring to it. {points:1} [EXCLAIM]
+
+? village_festival
+Q: If we threw a festival, what should it celebrate?
+- The harvest :: The harvest! Pumpkins and pies and dancing. Perfect. @idea:harvest {points:1} [NOTE]
+- The first snow :: The first snow! Lanterns and hot cider. How lovely. @idea:snow {points:1} [SPARKLE]
+- The golem :: The golem! A festival for our protector. We'd give it all the flowers. @idea:golem {points:1} [HEART]
+- Nothing, just a party :: Just a party! No reason needed. You understand village life perfectly. {points:1} [NOTE]
+
+? village_pet
+Q: The village wants a mascot animal. What should it be?
+- A cat :: A cat! It keeps the creepers away. Practical and adorable. {points:1} [HEART]
+- A goat :: A goat! Loud, stubborn and climbs everything. Very like us. {points:1} [NOTE]
+- A chicken :: A chicken! Humble, dependable, makes breakfast. Good choice. {points:1} [NOTE]
+- A llama :: A llama! Spits at strangers. Excellent guard animal. {points:1} [EXCLAIM]
+
+? ideal_day
+Q: What would your perfect day in {village} look like?
+- Fishing, then a nap :: Fishing and a nap! You'd fit right in with our fisherman. {points:1} [NOTE]
+- Market Day with friends :: Market Day with friends. Honey cakes, gossip, music. Yes. {points:1} [HEART]
+- Building something :: Building something. Bring your tools; we'll find you a project. {points:1} [IDEA]
+- Talking with you :: Talking with me? Oh, stop. ...Don't stop. {points:2} [BLUSH]
+
+? advice_for_me
+Q: Can I ask for some advice? What should I do when I'm feeling stuck?
+- Take a walk :: Take a walk. Yes. The answers are usually somewhere between here and the river. {points:1} [NOTE]
+- Talk to a friend :: Talk to a friend. Like we're doing now. It's working already. {points:2} [HEART]
+- Have a snack :: Have a snack! Ha! Honestly, that fixes half my problems. {points:1} [NOTE]
+- Sleep on it :: Sleep on it. Things look different in the morning. Usually better. {points:1} [DOTS]
+
+? which_season_village
+Q: When do you think {village} looks its prettiest?
+- At sunrise :: At sunrise! Everything gold and quiet. I agree. {points:1} [SPARKLE]
+- Lit up at night :: At night, with every window lit. Like a little constellation. {points:1} [HEART]
+- After the rain :: After the rain, when everything sparkles. You notice the nice things. {points:1} [NOTE]
+- On Market Day :: Market Day! Busy, colorful, alive. {points:1} [NOTE]
+
+? magic_or_machines
+Q: Enchanting or redstone? Which is the real magic?
+- Enchanting :: Enchanting! Glowing books and floating letters. The old magic. {points:1} [SPARKLE]
+- Redstone :: Redstone! Clever little circuits. Magic you can understand, if you're clever. {points:1} [IDEA]
+- Bread rising :: Bread rising! Ha! That's the real magic. The baker would agree. {points:1} [HEART]
+
+? best_sound
+Q: What's the best sound in the world, do you think?
+- Rain on the roof :: Rain on the roof. Yes. Cozy and safe. @likes:rain {points:1} [NOTE]
+- A cat purring :: A cat purring! Nothing more peaceful. @likes:cats {points:1} [HEART]
+- The village bell :: The village bell. Calling everyone home. You're sentimental. I like that. @fond:bell {points:1} [HEART]
+- Friends laughing :: Friends laughing. The best sound there is. {points:2} [HEART]

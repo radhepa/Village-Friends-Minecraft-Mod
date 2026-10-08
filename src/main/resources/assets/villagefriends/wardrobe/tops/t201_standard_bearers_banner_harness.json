@@ -1,0 +1,302 @@
+{
+  "id": "t201_standard_bearers_banner_harness",
+  "kind": "top",
+  "name": "Standard Bearer's Banner Harness",
+  "gender": "male",
+  "texture": "tops/t201_standard_bearers_banner_harness.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "martial"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "socket_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.07
+    },
+    {
+      "id": "pole_socket",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.4,
+        9.0,
+        2.3
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": "banner_pole",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        -25,
+        -0.5
+      ],
+      "size": [
+        1,
+        25,
+        1
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "banner_finial",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        -27,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        43,
+        0
+      ]
+    },
+    {
+      "id": "banner_cross_bar",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        -0.5,
+        -25,
+        -0.5
+      ],
+      "size": [
+        7,
+        1,
+        1
+      ],
+      "uv": [
+        48,
+        0
+      ]
+    },
+    {
+      "id": "pennant",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        0.5,
+        -24,
+        -0.5
+      ],
+      "size": [
+        6,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        27
+      ]
+    },
+    {
+      "id": "pennant_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        6.5,
+        -24,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        15,
+        27
+      ]
+    },
+    {
+      "id": "pennant_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        10.6,
+        3.4
+      ],
+      "rotation": [
+        -4,
+        0,
+        12
+      ],
+      "origin": [
+        6.5,
+        -21,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        22,
+        27
+      ]
+    },
+    {
+      "id": "tunic_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        27
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tunic_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        34
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A bordered tunic under a leather carrying harness: breast straps meet at an iron ring, and a socket at the small of the back holds a tall banner pole flying a swallow-tailed pennant above the left shoulder."
+}

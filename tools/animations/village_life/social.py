@@ -132,7 +132,7 @@ def _(c):
     c.key(1.6, waist=(-2, 0, 0), head=(-2, 0, 2), lid=.3)
 
 
-@clip("listen_arms_folded", "Listens, arms folded", trigger="chat_listen", weight=2, require=["adult"], length=3.5)
+@clip("listen_arms_folded", "Listens with arms folded", trigger="chat_listen", weight=2, require=["adult"], length=3.5)
 def _(c):
     c.key(0.5, **ARMS_CROSSED, head=(4, 6, 8))
     c.key(1.9, head=(14, 6, 8))

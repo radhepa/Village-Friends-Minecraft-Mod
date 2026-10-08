@@ -1,0 +1,362 @@
+{
+  "id": "tf172_alchemists_retort_bodice",
+  "kind": "top",
+  "name": "Alchemist's Retort Bodice",
+  "gender": "female",
+  "texture": "tops/tf172_alchemists_retort_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "whimsical",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_forearm_guard",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_forearm_guard",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "vial_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        2.9,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "vial_cork_0",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        1.4,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "vial_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        4.5,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "vial_cork_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        3.0,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "vial_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        6.1,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "vial_cork_2",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        4.6,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "retort_sling",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "retort_bulb",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.4,
+        -1.1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        15,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "retort_beak",
+      "bone": "TORSO",
+      "pivot": [
+        0.5,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.4,
+        -0.1
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        26,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "retort_beak_tip",
+      "bone": "TORSO",
+      "pivot": [
+        2.5,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        1.2,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        35,
+        10
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A laced leather bodice with forearm guards, a bandolier of stoppered vials and a glass retort slung at the hip."
+}

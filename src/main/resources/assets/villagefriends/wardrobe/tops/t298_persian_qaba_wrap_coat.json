@@ -1,0 +1,278 @@
+{
+  "id": "t298_persian_qaba_wrap_coat",
+  "kind": "top",
+  "name": "Persian Qaba Wrap Coat",
+  "gender": "male",
+  "texture": "tops/t298_persian_qaba_wrap_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "scholarly",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_half_sleeve_hem",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        3.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_half_sleeve_hem",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "qaba_sash",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "qaba_sash_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        10.2,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        29,
+        7
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "qalamdan",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        7.2,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        34,
+        7
+      ]
+    },
+    {
+      "id": "qaba_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        39,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "qaba_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "qaba_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        10.6,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        21,
+        17
+      ]
+    },
+    {
+      "id": "qaba_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        10.6,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        7,
+        4
+      ],
+      "uv": [
+        32,
+        17
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A brocade qaba crossing over from the right shoulder to the left hip, half sleeves over a pale under-robe, a knotted sash and a lacquered pen case tucked in it."
+}

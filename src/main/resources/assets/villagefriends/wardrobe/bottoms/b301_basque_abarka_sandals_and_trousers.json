@@ -1,0 +1,74 @@
+{
+  "id": "b301_basque_abarka_sandals_and_trousers",
+  "kind": "bottom",
+  "name": "Basque Abarka Sandals and Trousers",
+  "gender": "male",
+  "texture": "bottoms/b301_basque_abarka_sandals_and_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_abarka_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_abarka_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -2
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        11,
+        0
+      ]
+    }
+  ],
+  "description": "Dark wool knee breeches slit and buttoned at the knee, thick white knitted stockings and rawhide abarkak puckered over the toes, their thongs wound round the ankle."
+}

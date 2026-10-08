@@ -1,0 +1,505 @@
+{
+  "id": "bf137_spearmaidens_leather_strip_skirt",
+  "kind": "bottom",
+  "name": "Spearmaiden's Leather-Strip Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf137_spearmaidens_leather_strip_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "martial",
+    "skirt",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "strip_front_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.75,
+        9.5,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        13,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "strip_front_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.25,
+        9.5,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        20,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "strip_front_2",
+      "bone": "TORSO",
+      "pivot": [
+        1.25,
+        9.5,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        27,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "strip_front_3",
+      "bone": "TORSO",
+      "pivot": [
+        3.75,
+        9.5,
+        -3.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        34,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "strip_back_4",
+      "bone": "TORSO",
+      "pivot": [
+        -3.75,
+        9.5,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        41,
+        12
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "strip_back_5",
+      "bone": "TORSO",
+      "pivot": [
+        -1.25,
+        9.5,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        48,
+        12
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "strip_back_6",
+      "bone": "TORSO",
+      "pivot": [
+        1.25,
+        9.5,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        55,
+        12
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "strip_back_7",
+      "bone": "TORSO",
+      "pivot": [
+        3.75,
+        9.5,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "strip_right_0",
+      "bone": "TORSO",
+      "pivot": [
+        -5.2,
+        9.5,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        7,
+        2
+      ],
+      "uv": [
+        7,
+        24
+      ]
+    },
+    {
+      "id": "strip_right_1",
+      "bone": "TORSO",
+      "pivot": [
+        -5.2,
+        9.5,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        -1,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        7,
+        2
+      ],
+      "uv": [
+        14,
+        24
+      ]
+    },
+    {
+      "id": "strip_left_0",
+      "bone": "TORSO",
+      "pivot": [
+        5.2,
+        9.5,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        7,
+        2
+      ],
+      "uv": [
+        21,
+        24
+      ]
+    },
+    {
+      "id": "strip_left_1",
+      "bone": "TORSO",
+      "pivot": [
+        5.2,
+        9.5,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        0,
+        0,
+        -1
+      ],
+      "size": [
+        1,
+        7,
+        2
+      ],
+      "uv": [
+        28,
+        24
+      ]
+    },
+    {
+      "id": "waist_war_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.0,
+        -3.05
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        34
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "description": "A short wool underskirt hung all round with separate studded leather strips that fan apart in her stride, a studded war belt and knee boots."
+}

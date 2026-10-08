@@ -1,0 +1,192 @@
+{
+  "id": "b182_eel_marsh_mud_wraps",
+  "kind": "bottom",
+  "name": "Eel Marsh Mud Wraps",
+  "gender": "male",
+  "texture": "bottoms/b182_eel_marsh_mud_wraps.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "rugged",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_breech_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "right_mud_patten",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.1,
+        11.0,
+        -4.8
+      ],
+      "size": [
+        5,
+        1,
+        8
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_patten_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.8,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        4
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_breech_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        19,
+        10
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_mud_patten",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.9,
+        11.0,
+        -4.8
+      ],
+      "size": [
+        5,
+        1,
+        8
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "left_patten_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        9.8,
+        -2.4
+      ],
+      "size": [
+        5,
+        1,
+        4
+      ],
+      "uv": [
+        27,
+        18
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Breeches rolled above shins caked grey-brown with marsh mud and cross-bound with cord, over broad wooden mud pattens strapped under the feet for the soft fen."
+}

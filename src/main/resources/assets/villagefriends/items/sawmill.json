@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/sawmill"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/sawmill"
+ }
 }

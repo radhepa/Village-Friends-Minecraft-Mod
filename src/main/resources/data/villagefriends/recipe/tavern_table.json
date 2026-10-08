@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:tavern_table",
+    "count": 2
+  },
+  "pattern": [
+    "SSS",
+    " F ",
+    "P P"
+  ],
+  "key": {
+    "S": "#minecraft:wooden_slabs",
+    "F": "#minecraft:wooden_fences",
+    "P": "#minecraft:planks"
+  }
+}

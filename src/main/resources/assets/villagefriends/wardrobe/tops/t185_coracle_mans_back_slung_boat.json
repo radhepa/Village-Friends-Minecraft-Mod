@@ -1,0 +1,246 @@
+{
+  "id": "t185_coracle_mans_back_slung_boat",
+  "kind": "top",
+  "name": "Coracle Man's Back-Slung Boat",
+  "gender": "male",
+  "texture": "tops/t185_coracle_mans_back_slung_boat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "coracle_shell",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        -5.0,
+        0
+      ],
+      "size": [
+        8,
+        10,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "coracle_crown_top",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -6.0,
+        0
+      ],
+      "size": [
+        6,
+        1,
+        2
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "coracle_crown_bottom",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        5.0,
+        0
+      ],
+      "size": [
+        6,
+        1,
+        2
+      ],
+      "uv": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": "coracle_bottom",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        -4.0,
+        2
+      ],
+      "size": [
+        6,
+        8,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "coracle_paddle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -0.5,
+        -4.5,
+        3.0
+      ],
+      "size": [
+        1,
+        9,
+        1
+      ],
+      "uv": [
+        15,
+        13
+      ]
+    },
+    {
+      "id": "coracle_paddle_blade",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        32
+      ],
+      "origin": [
+        -1.0,
+        4.5,
+        3.0
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        20,
+        13
+      ]
+    },
+    {
+      "id": "shirt_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "shirt_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        24
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A plain wool shirt under a broad carrying strap, the round tarred-hide coracle slung upside down on the back like a shell, willow ribs showing, a short paddle lashed across it."
+}

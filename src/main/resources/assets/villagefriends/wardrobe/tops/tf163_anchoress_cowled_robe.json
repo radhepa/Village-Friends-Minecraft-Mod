@@ -1,0 +1,309 @@
+{
+  "id": "tf163_anchoress_cowled_robe",
+  "kind": "top",
+  "name": "Anchoress's Cowled Robe",
+  "gender": "female",
+  "texture": "tops/tf163_anchoress_cowled_robe.png",
+  "extrasHeight": 48,
+  "tags": [
+    "holy",
+    "robe",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_long_sleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_long_sleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.5,
+        -2.5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "cowl_roll",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        -1.6,
+        -3.2
+      ],
+      "size": [
+        10,
+        3,
+        6
+      ],
+      "uv": [
+        0,
+        11
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "cowl_droop",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.2,
+        -3.4
+      ],
+      "rotation": [
+        -8,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        33,
+        11
+      ]
+    },
+    {
+      "id": "cowl_hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.5,
+        2.3
+      ],
+      "rotation": [
+        14,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        0
+      ],
+      "size": [
+        7,
+        3,
+        2
+      ],
+      "uv": [
+        0,
+        21
+      ]
+    },
+    {
+      "id": "rope_girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        19,
+        21
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "rope_end",
+      "bone": "TORSO",
+      "pivot": [
+        2.0,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        48,
+        21
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cross_cord",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        53,
+        21
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cross_upright",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        2,
+        -0.1
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        58,
+        21
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "cross_arms",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3,
+        -0.25
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        33
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "lockedTo": "bf163_anchoress_plain_robe_skirt",
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A coarse darned robe with a deep rolled cowl, sleeves long enough to hide the hands and a knotted rope girdle."
+}

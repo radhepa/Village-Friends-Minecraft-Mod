@@ -1,0 +1,219 @@
+{
+  "id": "tf291_wrap_front_linen_bodice",
+  "kind": "top",
+  "name": "Wrap-Front Linen Bodice",
+  "gender": "female",
+  "texture": "tops/tf291_wrap_front_linen_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "relaxed"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "wrap_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        7.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "wrap_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.3,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "bow_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        8.0,
+        2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": "bow_loop_right",
+      "bone": "TORSO",
+      "pivot": [
+        -1.5,
+        7.9,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        28
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "bow_loop_left",
+      "bone": "TORSO",
+      "pivot": [
+        1.5,
+        7.9,
+        2.7
+      ],
+      "rotation": [
+        0,
+        0,
+        -28
+      ],
+      "origin": [
+        -1,
+        -1,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        7
+      ]
+    },
+    {
+      "id": "bow_tail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        8.6,
+        2.1999999999999997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        5,
+        1
+      ],
+      "uv": [
+        14,
+        7
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "bow_tail_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.6,
+        8.6,
+        2.1999999999999997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        19,
+        7
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A light linen bodice wrapped across the chest, its long ties wound twice round the waist and bowed at the back, with slit three-quarter sleeves."
+}

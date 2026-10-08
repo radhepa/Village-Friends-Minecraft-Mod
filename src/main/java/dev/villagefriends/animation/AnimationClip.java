@@ -50,6 +50,11 @@ public record AnimationClip(String id, String name, String trigger, float length
         return Math.min(in, out);
     }
     public boolean uses(Bone bone) { return rotations[bone.ordinal()] != null || positions[bone.ordinal()] != null; }
+    /** Written for someone sitting down (it requires the {@code seated} tag). */
+    public boolean seated() {
+        for (var group : require) if (group.size() == 1 && group.contains("seated")) return true;
+        return false;
+    }
 
     public static float smooth(float value) {
         float t = Math.max(0, Math.min(1, value)); return t * t * (3 - 2 * t);

@@ -1,0 +1,222 @@
+{
+  "id": "tf161_physicians_flask_case_gown",
+  "kind": "top",
+  "name": "Physician's Flask-Case Gown",
+  "gender": "female",
+  "texture": "tops/tf161_physicians_flask_case_gown.png",
+  "extrasHeight": 32,
+  "tags": [
+    "robe",
+    "scholarly"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.0,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "gown_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "gown_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        14
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "flask_case",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.6,
+        -1.1
+      ],
+      "size": [
+        3,
+        5,
+        2
+      ],
+      "uv": [
+        23,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "flask_lid",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.6,
+        -1.1
+      ],
+      "size": [
+        3,
+        1,
+        2
+      ],
+      "uv": [
+        34,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "flask_neck",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        45,
+        14
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "physic_purse",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        8.6,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.2,
+        -0.1
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        50,
+        14
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long sober gown buttoned at the throat, banded cuffs, and a lidded wicker flask case slung at the hip."
+}

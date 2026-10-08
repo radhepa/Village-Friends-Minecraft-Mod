@@ -1,0 +1,193 @@
+{
+  "id": "tf220_mountain_herders_goat_hair_vest",
+  "kind": "top",
+  "name": "Mountain Herder's Goat-Hair Vest",
+  "gender": "female",
+  "texture": "tops/tf220_mountain_herders_goat_hair_vest.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "vest_hem_right",
+      "bone": "TORSO",
+      "pivot": [
+        -3.0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "vest_hem_left",
+      "bone": "TORSO",
+      "pivot": [
+        3.0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        0
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "vest_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "signal_horn",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "signal_horn_bell",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        2,
+        -2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "signal_horn_tip",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        8.4,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -1,
+        -1.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        0
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "An open vest of long shaggy goat hair with a ragged hem, over a linen shirt with embroidered cuffs, and a cow-horn signal horn hung on a baldric at the hip."
+}

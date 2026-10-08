@@ -1,0 +1,74 @@
+{
+  "id": "b208_engineers_measuring_rod_trousers",
+  "kind": "bottom",
+  "name": "Engineer's Measuring-Rod Trousers",
+  "gender": "male",
+  "texture": "bottoms/b208_engineers_measuring_rod_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_rod_pocket",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.9,
+        1.0,
+        -1.0
+      ],
+      "size": [
+        1,
+        7,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_measuring_rod",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.1,
+        -2.0,
+        -0.7
+      ],
+      "size": [
+        1,
+        10,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    }
+  ],
+  "description": "Straight canvas trousers with a patched left knee and a long leather pocket down the right leg holding a graduated measuring rod marked off in pale and dark spans, over laced shoes."
+}

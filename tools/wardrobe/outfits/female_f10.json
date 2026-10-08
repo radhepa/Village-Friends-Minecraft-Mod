@@ -1,0 +1,27 @@
+{
+  "outfits": [
+    {"id": "f_wool_kirtle_goodwife", "name": "Goodwife", "top": "tf286_front_laced_wool_kirtle", "bottom": "bf286_ankle_length_wool_skirt"},
+    {"id": "f_short_sleeve_villager", "name": "Summer Villager", "top": "tf287_short_sleeved_summer_kirtle", "bottom": "bf287_summer_calf_skirt"},
+    {"id": "f_knit_shawl_villager", "name": "Shawled Villager", "top": "tf288_knitted_shawl_over_chemise", "bottom": "bf288_everyday_wool_petticoat"},
+    {"id": "f_quilted_kitchen_maid", "name": "Kitchen Maid", "top": "tf289_quilted_waistcoat_bodice", "bottom": "bf289_quilted_hem_skirt"},
+    {"id": "f_overjacket_townswoman", "name": "Townswoman", "top": "tf290_short_wool_overjacket", "bottom": "bf290_plain_gathered_skirt"},
+    {"id": "f_linen_wrap_villager", "name": "Linen Wrap Villager", "top": "tf291_wrap_front_linen_bodice", "bottom": "bf291_wrap_over_linen_skirt"},
+    {"id": "f_patched_field_hand", "name": "Field Hand", "top": "tf292_patched_elbow_kirtle", "bottom": "bf292_patched_knee_work_breeches"},
+    {"id": "f_capelet_villager", "name": "Capeleted Villager", "top": "tf293_hooded_capelet_over_kirtle", "bottom": "bf293_belted_everyday_skirt"},
+    {"id": "f_overdress_housewife", "name": "Housewife", "top": "tf294_laced_sleeveless_overdress", "bottom": "bf294_plain_underdress_skirt"},
+    {"id": "f_buttoned_seamstress", "name": "Seamstress", "top": "tf295_button_front_wool_bodice", "bottom": "bf295_button_hem_wool_skirt"},
+    {"id": "f_drawstring_blouse_villager", "name": "Drawstring Villager", "top": "tf296_drawstring_neck_linen_blouse", "bottom": "bf296_linen_drawstring_skirt"},
+    {"id": "f_striped_kirtle_idler", "name": "Village Idler", "top": "tf297_striped_everyday_kirtle", "bottom": "bf297_striped_everyday_skirt"},
+    {"id": "f_lambswool_shepherdess", "name": "Lambswool Shepherdess", "top": "tf298_lambswool_cowl_bodice", "bottom": "bf298_lambswool_lined_skirt"},
+    {"id": "f_pinafore_cook", "name": "Pinafore Cook", "top": "tf299_sleeveless_pinafore_over_blouse", "bottom": "bf299_pinafore_skirt"},
+    {"id": "f_two_tone_villager", "name": "Two-Tone Villager", "top": "tf300_two_tone_panelled_kirtle", "bottom": "bf300_two_tone_panelled_skirt"}
+  ],
+  "professions": {
+    "NONE": ["f_wool_kirtle_goodwife", "f_short_sleeve_villager", "f_knit_shawl_villager", "f_quilted_kitchen_maid", "f_overjacket_townswoman", "f_linen_wrap_villager", "f_patched_field_hand", "f_capelet_villager", "f_overdress_housewife", "f_buttoned_seamstress", "f_drawstring_blouse_villager", "f_striped_kirtle_idler", "f_lambswool_shepherdess", "f_pinafore_cook", "f_two_tone_villager"],
+    "SHEPHERD": ["f_knit_shawl_villager", "f_lambswool_shepherdess"],
+    "COOK": ["f_quilted_kitchen_maid", "f_pinafore_cook"],
+    "FARMER": ["f_patched_field_hand"],
+    "TAILOR": ["f_buttoned_seamstress"],
+    "NITWIT": ["f_striped_kirtle_idler"]
+  }
+}

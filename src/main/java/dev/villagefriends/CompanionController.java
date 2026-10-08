@@ -91,7 +91,7 @@ public final class CompanionController {
             }
             case "rescue" -> {
                 if (!s.downed()) return false;
-                v.setHealth(Math.max(8, v.getMaxHealth() / 2)); v.setPose(Pose.STANDING); v.clearFire();
+                v.setHealth(Math.max(8, v.getMaxHealth() / 2)); Knockouts.getUp(v); v.clearFire();
                 state(v, new CompanionState(s.owner(), "follow", s.x(), s.y(), s.z(), 0, s.originalNoAi(), s.started()));
                 var b = bond(v, p);
                 if (!b.has("rescue:" + day(v.level()))) {
@@ -207,7 +207,7 @@ public final class CompanionController {
             }
         }
         if (!placed) v.teleportTo(s.x(), s.y(), s.z());
-        v.setHealth(Math.max(v.getHealth(), v.getMaxHealth() / 2)); v.clearFire(); v.setPose(Pose.STANDING);
+        v.setHealth(Math.max(v.getHealth(), v.getMaxHealth() / 2)); v.clearFire(); Knockouts.getUp(v);
         if (p != null && record && !outings.containsKey(v.getUUID())) {
             var b = bond(v, p); saveBond(v, p, b.flag("adventure_return").remember(day(v.level()), "We returned safely from an adventure together."));
         }
@@ -225,8 +225,9 @@ public final class CompanionController {
     }
     public static boolean allowDeath(LivingEntity entity, DamageSource source, float amount) {
         if (!(entity instanceof Villager v) || !state(v).active()) return true;
-        var s = state(v); v.setHealth(1); v.clearFire(); v.getNavigation().stop(); v.setPose(Pose.CROUCHING);
+        var s = state(v); v.setHealth(1); v.clearFire(); v.getNavigation().stop();
         state(v, s.downed(v.level().getGameTime() + 1200));
+        Knockouts.lieDown(v);
         var p = ((ServerLevel)v.level()).getServer().getPlayerList().getPlayer(UUID.fromString(s.owner()));
         if (p != null) {
             saveBond(v, p, bond(v, p).remember(day(v.level()), "I was badly hurt on our outing. You could help me recover."));
@@ -242,7 +243,12 @@ public final class CompanionController {
         if (s.mode().equals("gathering_guest")) {
             if (loaded.stream().noneMatch(host -> state(host).owner().equals(s.owner()) && outings.containsKey(host.getUUID()))) { returnHome(v, p, false); return; }
         } else if (!target(p).getAttachedOrElse(VillageFriends.PARTY, "").equals(profile(v).id())) { returnHome(v, null, false); return; }
-        if (s.downed()) { v.getNavigation().stop(); if (level.getGameTime() >= s.until()) returnHome(v, p, false); return; }
+        if (s.downed()) {
+            v.getNavigation().stop();
+            if (!Knockouts.injured(v) || v.getPose() != Pose.SLEEPING) Knockouts.lieDown(v);
+            if (level.getGameTime() >= s.until()) returnHome(v, p, false);
+            return;
+        }
         if (v.getY() < level.getMinY() - 4) { returnHome(v, p, false); return; }
         if (GuardController.isGuard(v) && GuardController.drive(v, level, s.mode().equals("wait"))) return;
         if (!GuardController.isGuard(v) && s.mode().equals("follow") && !outings.containsKey(v.getUUID())) {

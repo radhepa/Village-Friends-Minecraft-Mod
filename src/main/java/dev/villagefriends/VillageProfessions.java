@@ -40,6 +40,20 @@ public final class VillageProfessions {
             default -> throw new IllegalArgumentException("Unknown Village Friends profession: " + job);
         };
     }
+    /** The sound a resident makes working at their station. */
+    static net.minecraft.sounds.SoundEvent workSound(String job) {
+        return switch (job) {
+            case "knight" -> SoundEvents.VILLAGER_WORK_WEAPONSMITH;
+            case "archer" -> SoundEvents.VILLAGER_WORK_FLETCHER;
+            case "cook" -> SoundEvents.VILLAGER_WORK_BUTCHER;
+            case "tavern_keeper" -> SoundEvents.BOTTLE_FILL;
+            case "apothecary" -> SoundEvents.VILLAGER_WORK_CLERIC;
+            case "painter" -> SoundEvents.VILLAGER_WORK_CARTOGRAPHER;
+            case "tailor" -> SoundEvents.VILLAGER_WORK_SHEPHERD;
+            case "carpenter" -> SoundEvents.VILLAGER_WORK_TOOLSMITH;
+            default -> SoundEvents.VILLAGER_WORK_LIBRARIAN;
+        };
+    }
     public static void register() {
         for (String job : JOBS) {
             Set<BlockState> states = workstations(job).stream().flatMap(name -> VillageBlocks.get(name).getStateDefinition().getPossibleStates().stream()).collect(Collectors.toSet());
@@ -48,7 +62,7 @@ public final class VillageProfessions {
             for (int level = 1; level <= 5; level++) trades.put(level, ResourceKey.create(Registries.TRADE_SET, VillageBlocks.id(job + "/level_" + level)));
             Registry.register(BuiltInRegistries.VILLAGER_PROFESSION, key(job), new VillagerProfession(
                     Component.translatable("entity.villagefriends.villager." + job), holder -> holder.is(poiKey(job)), holder -> holder.is(poiKey(job)),
-                    ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN, trades));
+                    ImmutableSet.of(), ImmutableSet.of(), workSound(job), trades));
         }
     }
     private VillageProfessions() {}

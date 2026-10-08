@@ -12,13 +12,31 @@ public final class ResidentAnimation {
     }
     /** Animation pack clips also play mid-air (a flinch from knockback), but never in vanilla's special poses. */
     public static boolean canAnimate(ResidentRenderState s) {
-        return s.hasPose(Pose.STANDING) && s.deathTime==0 && !s.isPassenger
+        return s.hasPose(Pose.STANDING) && s.deathTime==0 && (!s.isPassenger || s.seated)
                 && !s.isInWater && !s.isFallFlying && !s.isCrouching && s.swimAmount==0
                 && !s.isUsingItem && s.currentSwing==null;
     }
     public static void apply(HumanoidModel<ResidentRenderState> model, ResidentRenderState s) {
+        if(s.injured) { injured(model,s); return; }
         if(canMove(s)) gait(model,s);
         if(canAnimate(s)) ResidentPoser.apply(model,s);
+    }
+    /**
+     * Lying hurt: head lolled to one side, one arm across the stomach, the other flung out, a knee raised,
+     * and slow, shallow breaths. Which side is which comes from the resident's motion seed.
+     */
+    private static void injured(HumanoidModel<ResidentRenderState> model, ResidentRenderState s) {
+        boolean flip=(s.motionSeed&1)!=0;
+        float breath=Mth.sin(s.ageInTicks*.045F+ResidentMotion.phase(s.motionSeed));
+        var across=flip?model.leftArm:model.rightArm; var flung=flip?model.rightArm:model.leftArm;
+        var bent=flip?model.leftLeg:model.rightLeg; var straight=flip?model.rightLeg:model.leftLeg;
+        float out=flip?-1:1;
+        model.head.xRot=.12F; model.head.yRot=.55F*out; model.head.zRot=.12F*out;
+        model.body.xRot=model.body.yRot=model.body.zRot=0;
+        across.xRot=-.55F+breath*.04F; across.yRot=0; across.zRot=-.32F*out;
+        flung.xRot=.08F; flung.yRot=0; flung.zRot=-1.05F*out+breath*.02F;
+        bent.xRot=-.42F; bent.yRot=0; bent.zRot=.1F*out;
+        straight.xRot=.04F; straight.yRot=0; straight.zRot=-.06F*out;
     }
     private static void gait(HumanoidModel<ResidentRenderState> model, ResidentRenderState s) {
         var gait=ResidentMotion.gait(s.motionSeed);

@@ -1,0 +1,251 @@
+{
+  "id": "tf175_seers_moon_embroidered_robe",
+  "kind": "top",
+  "name": "Seer's Moon-Embroidered Robe",
+  "gender": "female",
+  "texture": "tops/tf175_seers_moon_embroidered_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_bell",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        4.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        6,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_bell",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        4.0,
+        -3.0
+      ],
+      "size": [
+        6,
+        6,
+        6
+      ],
+      "uv": [
+        25,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "deep_hood",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.8,
+        2.2
+      ],
+      "rotation": [
+        16,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        4,
+        2
+      ],
+      "uv": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        13
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        20
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        20
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "glass_cord",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        20
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "scrying_glass",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.4,
+        -1.1
+      ],
+      "size": [
+        3,
+        3,
+        2
+      ],
+      "uv": [
+        51,
+        20
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A deep-hooded robe with crescent moons down the front, a full moon between the shoulders and a scrying glass in a net."
+}

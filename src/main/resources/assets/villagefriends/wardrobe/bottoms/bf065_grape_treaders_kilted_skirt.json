@@ -1,0 +1,220 @@
+{
+  "id": "bf065_grape_treaders_kilted_skirt",
+  "kind": "bottom",
+  "name": "Grape-Treader's Kilted Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf065_grape_treaders_kilted_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        7
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -7
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        6,
+        5
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "waist_skirt_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -0.6,
+        -1.05
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        13,
+        12
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_knot_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        16
+      ],
+      "origin": [
+        -1.5,
+        2.2,
+        -1.05
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        22,
+        12
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_knot_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        0.4,
+        2.2,
+        -1.05
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        27,
+        12
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A skirt drawn up and knotted in a big knot at the front for treading the vat, bare legs and feet stained deep with grape must."
+}

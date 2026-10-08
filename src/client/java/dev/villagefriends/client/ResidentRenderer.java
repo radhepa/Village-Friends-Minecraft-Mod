@@ -27,6 +27,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         // dispatched to the player renderer even when it originated from a villager.
         super(context, new ResidentModel(false), new ResidentModel(true), 0.45F);
         this.addLayer(new WardrobeLayer(this));
+        this.addLayer(new PartyHatLayer(this));
         this.addLayer(new net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer<>(this,
                 ModelLayers.PLAYER_ARMOR.map(layer -> new ResidentArmorModel(context.bakeLayer(layer))),
                 net.minecraft.client.model.player.PlayerModel.createArmorMeshSet(new net.minecraft.client.model.geom.builders.CubeDeformation(.5F),new net.minecraft.client.model.geom.builders.CubeDeformation(1F))
@@ -41,12 +42,25 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         return super.getArmPose(villager, arm);
     }
     @Override public Identifier getTextureLocation(ResidentRenderState state) { return state.texture; }
+    /** Someone lying hurt: flat on their back, slumped a little to one side, centered over their hitbox. */
+    @Override protected void setupRotations(ResidentRenderState state, PoseStack pose, float bodyRot, float scale) {
+        if(!state.injured) { super.setupRotations(state, pose, bodyRot, scale); return; }
+        float side=(state.motionSeed&1)==0?1:-1;
+        pose.rotateDegrees(com.mojang.math.Axis.YP, 180-bodyRot);
+        pose.translate(0, state.isBaby?.08F:.16F, state.isBaby?-.45F:-.9F);
+        pose.rotateDegrees(com.mojang.math.Axis.XP, 90);
+        pose.rotateDegrees(com.mojang.math.Axis.YP, 14*side);
+    }
     @Override protected float getShadowRadius(ResidentRenderState state) { return super.getShadowRadius(state)*(state.isBaby?.6F:1F); }
 
     @Override public void extractRenderState(Villager villager, ResidentRenderState state, float delta) {
         super.extractRenderState(villager, state, delta);
         state.motionSeed=ResidentMotion.seed(villager.getUUID());
+        state.injured=villager.hasPose(net.minecraft.world.entity.Pose.SLEEPING) && dev.villagefriends.Knockouts.injured(villager);
+        // The pose and the injured flag arrive separately; the lying hitbox needs both, so refit it once both are here.
+        if(state.injured && villager.getBbWidth()<.5F && !villager.isBaby()) villager.refreshDimensions();
         state.onGround=villager.onGround();
+        state.partyHat=!state.injured && dev.villagefriends.Birthdays.wearingHat(villager);
         state.eyeLookX=state.eyeLookY=state.attention=0;
         var camera=Minecraft.getInstance().getCameraEntity();
         if(camera!=null && villager.isAlive() && !villager.isSleeping()) {
@@ -71,6 +85,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         state.outfit = ResidentSkins.outfit(look, job);
         state.texture = ResidentSkins.texture(look, job);
         ResidentLife.of(villager).extract(villager, state, portrait);
+        TavernClient.extract(villager, state, portrait);
         var bubble = portrait ? null : EmoteBubbles.get(villager.getId());
         state.bubble = bubble;
         state.bubbleAge = bubble == null ? 0 : bubble.age(delta);
@@ -78,6 +93,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
 
     @Override public void submit(ResidentRenderState state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
         super.submit(state, pose, collector, camera);
+        TavernClient.submit(state, pose, collector);
         if (state.bubble != null && state.distanceToCameraSq < 40 * 40) submitBubble(state, pose, collector, camera);
     }
     /** Draws the emote bubble as a camera-facing card above the head (and above the name, when shown). */

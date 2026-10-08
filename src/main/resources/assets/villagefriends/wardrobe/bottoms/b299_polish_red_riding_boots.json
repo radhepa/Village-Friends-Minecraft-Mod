@@ -1,0 +1,129 @@
+{
+  "id": "b299_polish_red_riding_boots",
+  "kind": "bottom",
+  "name": "Polish Red Riding Boots",
+  "gender": "male",
+  "texture": "bottoms/b299_polish_red_riding_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "fancy",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_heel",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        10.4,
+        1.65
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_heel",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        10.4,
+        1.65
+      ],
+      "size": [
+        3,
+        2,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "right_boot_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        18,
+        0
+      ]
+    },
+    {
+      "id": "left_boot_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    }
+  ],
+  "description": "Slim trousers tucked into tall boots of bright dyed morocco leather, the tops rising to a curve at the front, with iron-tipped heels and a stitched front seam."
+}

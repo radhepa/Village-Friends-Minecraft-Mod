@@ -1,0 +1,76 @@
+{
+  "id": "b234_interpreters_travel_breeches",
+  "kind": "bottom",
+  "name": "Interpreter's Travel Breeches",
+  "gender": "male",
+  "texture": "bottoms/b234_interpreters_travel_breeches.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_band",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_knee_band",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    }
+  ],
+  "description": "Hard-wearing wool knee breeches lined with leather at the seat and inner thighs for long days in the saddle, closed below the knee by buttoned bands, over ribbed stockings and strapped ankle boots."
+}

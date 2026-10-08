@@ -1,0 +1,190 @@
+{
+  "id": "t182_eel_trappers_wicker_pot_jerkin",
+  "kind": "top",
+  "name": "Eel Trapper's Wicker-Pot Jerkin",
+  "gender": "male",
+  "texture": "tops/t182_eel_trappers_wicker_pot_jerkin.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "eel_trap_mouth",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        0.4,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -2.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        5,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "eel_trap_body",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        0.4,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -2.0,
+        4.0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        2
+      ],
+      "uv": [
+        17,
+        0
+      ]
+    },
+    {
+      "id": "eel_trap_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        0.4,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -1.0,
+        8.0,
+        0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": "eel_trap_stopper",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        0.4,
+        3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        11.0,
+        0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        39,
+        0
+      ]
+    },
+    {
+      "id": "jerkin_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        44,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jerkin_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A short toggled leather jerkin over a linen shirt, fen mud dried on its hem, and a long tapering wicker eel trap carried on the back on rope straps."
+}

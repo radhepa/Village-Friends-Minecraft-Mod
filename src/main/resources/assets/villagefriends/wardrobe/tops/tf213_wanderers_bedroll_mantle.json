@@ -1,0 +1,162 @@
+{
+  "id": "tf213_wanderers_bedroll_mantle",
+  "kind": "top",
+  "name": "Wanderer's Bedroll Mantle",
+  "gender": "female",
+  "texture": "tops/tf213_wanderers_bedroll_mantle.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "mantle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.6,
+        -2.8
+      ],
+      "size": [
+        17,
+        4,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "mantle_pin",
+      "bone": "TORSO",
+      "pivot": [
+        1.4,
+        0.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "bedroll_front",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        -0.4,
+        -4.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        3,
+        12,
+        3
+      ],
+      "uv": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "bedroll_back",
+      "bone": "TORSO",
+      "pivot": [
+        -3.2,
+        -0.4,
+        4.8
+      ],
+      "rotation": [
+        0,
+        0,
+        -34
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        3,
+        12,
+        3
+      ],
+      "uv": [
+        13,
+        11
+      ]
+    },
+    {
+      "id": "bedroll_knot",
+      "bone": "TORSO",
+      "pivot": [
+        3.7,
+        9.6,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        26,
+        11
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A short fringed wool mantle over a plain kirtle, with a striped blanket rolled into a horseshoe and slung across the body from shoulder to hip."
+}

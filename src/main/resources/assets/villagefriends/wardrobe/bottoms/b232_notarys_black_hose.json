@@ -1,0 +1,186 @@
+{
+  "id": "b232_notarys_black_hose",
+  "kind": "bottom",
+  "name": "Notary's Black Hose",
+  "gender": "male",
+  "texture": "bottoms/b232_notarys_black_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "scholarly",
+    "slim",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_garter_bow",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.6,
+        3.6,
+        -2.4
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_garter_tail",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -1.6,
+        4.6,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        7,
+        0
+      ]
+    },
+    {
+      "id": "right_shoe_tongue",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        8.4,
+        -2.8
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_bow",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.6000000000000001,
+        3.6,
+        -2.4
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    },
+    {
+      "id": "left_garter_tail",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        1.6,
+        4.6,
+        -1.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "left_shoe_tongue",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        8.4,
+        -2.8
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    }
+  ],
+  "description": "Close black hose seamed up the back, a coloured ribbon garter tied in a bow below each knee, and polished black shoes with tall pointed tongues standing up at the ankle."
+}

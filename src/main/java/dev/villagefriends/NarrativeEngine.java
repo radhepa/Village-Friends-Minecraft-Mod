@@ -18,7 +18,12 @@ public final class NarrativeEngine {
         if (b.has("hurt")) return "I'm still shaken by what happened. I need to know you won't hurt me again.";
         if (b.has("adventure_return")) return "It's good to see you safely home. I still think about our adventure together.";
         if (b.has("activity:picnic")) return "I was remembering our picnic. It was nice having time just to be together.";
-        String greeting = Dialogue.greeting(name(v), b.level(state(v, p)), v.isBaby(), day(v.level()));
+        String thanks = VillageQuests.thanks(v, p);
+        if (thanks != null) return thanks;
+        String birthday = Birthdays.greeting(v, p);
+        if (birthday != null) return birthday;
+        String written = TalkWorld.line(v, p, "greet");
+        String greeting = written != null ? written : Dialogue.greeting(name(v), b.level(state(v, p)), v.isBaby(), day(v.level()));
         var society = VillageSocieties.of(v); long today = day(v.level());
         String news = society == null ? "" : Gossip.greeting(society, profile(v).id(), today, salt(v, p, today));
         if (!news.isEmpty()) return greeting + " " + news;
@@ -51,7 +56,14 @@ public final class NarrativeEngine {
     }
     public static String conversation(Villager v, ServerPlayer p, String topic) {
         var profile = profile(v); var b = bond(v, p); long today = day(v.level());
-        if (v.isBaby()) return Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))) + " " + VillageSettlements.reference(v,topic,today);
+        String birthday = Birthdays.chat(v, p, topic);
+        if (birthday != null && !b.has("hurt")) return birthday;
+        if (v.isBaby()) {
+            String said = TalkWorld.line(v, p, topic);
+            // Children always mention home, like before.
+            return ((said != null ? said : Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), true, today, b.level(state(v, p))))
+                    + " " + VillageSettlements.reference(v,topic,today)).strip();
+        }
         if (b.has("hurt")) return "I'd like to talk about what happened before we pretend everything is fine. An apology would be a beginning.";
         var society = VillageSocieties.of(v); int salt = salt(v, p, today);
         if (topic.equals("news")) return society == null || !society.has(profile.id()) ? "I haven't settled anywhere yet, so I don't hear much news. Ask me again once I have a hometown."
@@ -60,7 +72,9 @@ public final class NarrativeEngine {
                 : Gossip.heart(society, profile.id(), today, salt);
         var personality = NarrativeContent.current().personality(profile.personality());
         var lines = personality.lines().get(topic);
-        int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + b.recentLines().size(), lines.size());
+        // Written-dialogue entries ("t:...") share the recent-lines memory; the personality pack's rotation ignores them.
+        int packLines = (int) b.recentLines().stream().filter(id -> !id.startsWith("t:")).count();
+        int start = Math.floorMod(Long.hashCode(today) + p.getUUID().hashCode() + packLines, lines.size());
         int index = start;
         for (int n = 0; n < lines.size(); n++) {
             int candidate = (start + n) % lines.size();
@@ -80,17 +94,20 @@ public final class NarrativeEngine {
         var story = arc(v);
         if (topic.equals("work") && story != null && shared(v).done(story.id() + "/" + story.requests().getFirst().id()))
             return "The " + story.requests().getFirst().title().toLowerCase() + " you helped with mattered to me. " + (b.chapter() >= 3 ? "You know why now. Thank you for listening as well as helping." : "When I find the words, I'd like to tell you why.");
-        String text = lines.get(index);
+        // Handwritten dialogue for this moment; the personality pack's own lines join in now and then.
+        String said = TalkWorld.line(v, p, topic);
+        String text = said != null && Math.floorMod(salt + index, 6) != 0 ? said : lines.get(index);
+        var roll = new java.util.Random(salt * 31L + index + packLines);
         if(!villageLine.isEmpty() && (topic.equals("chat") || topic.equals("work") || topic.equals("adventure")) && (index%2==0 || today%3==1))text=villageLine+" "+text;
         var neighbors = shared(v).neighbors();
         String mention = society == null || !society.has(profile.id()) ? "" : Gossip.mention(society, profile.id(), topic, today, salt);
-        if (!mention.isEmpty() && (topic.equals("chat") ? salt % 3 != 2 : salt % 2 == 0)) text += " " + mention;
-        else if (topic.equals("chat") && !neighbors.isEmpty() && today % 3 == 0) text += " I've also been keeping " + neighbors.getFirst() + " company around the village.";
-        if (topic.equals("work") && today % 2 == 0) text += " " + Dialogue.conversation(UUID.fromString(profile.id()), topic, profession(v), false, today, b.level(state(v, p)));
+        if (!mention.isEmpty() && roll.nextInt(topic.equals("chat") ? 3 : 4) == 0) text += " " + mention;
+        else if (topic.equals("chat") && !neighbors.isEmpty() && roll.nextInt(8) == 0) text += " I've also been keeping " + neighbors.getFirst() + " company around the village.";
         return text;
     }
     public static List<FriendshipPayload.Choice> choices(Villager v, ServerPlayer p, String tab) {
         var b = bond(v, p); var s = arc(v);
+        if (tab.equals("question")) return TalkWorld.choices(v, p);
         if (tab.equals("journal")) return List.of(choice("journal", "Recent memories", true), choice("about", "About this resident", true), choice("story_notes", "Story notes", true), choice("talk_tab", "Back to talking", true));
         if (tab.equals("together")) return CompanionController.activityChoices(v, p);
         if (tab.equals("companion")) return CompanionController.choices(v, p);
@@ -106,6 +123,14 @@ public final class NarrativeEngine {
             };
         }
         int level = FriendshipLevels.level(state(v, p), b);
+        // Birthday wishes, letters to hand over and notices to turn in come first.
+        var extras = new ArrayList<FriendshipPayload.Choice>();
+        if (!tab.equals("plain")) { extras.addAll(Birthdays.choices(v, p)); extras.addAll(VillageQuests.choices(v, p)); }
+        if (!extras.isEmpty()) {
+            var all = new ArrayList<>(extras.subList(0, Math.min(2, extras.size())));
+            all.addAll(choices(v, p, "plain"));
+            return List.copyOf(all);
+        }
         return List.of(choice("chat", "How's your day?", true), choice("work", "Tell me about work", true),
                 choice("adventure", "Talk about adventures", true), choice(b.has("hurt") || b.has("broken_promise") ? "apologize" : "joke", b.has("hurt") || b.has("broken_promise") ? "I'm sorry" : "Share a joke", true),
                 new FriendshipPayload.Choice("news", "Any village news?", level >= FriendshipLevels.NEWS, "Unlocks at friendship Lv. " + FriendshipLevels.NEWS),
@@ -183,7 +208,10 @@ public final class NarrativeEngine {
                 saveBond(v, p, next);
                 show(p, v, "talk", "I'm disappointed, but thank you for telling me. I'd rather know than keep wondering. We can try again when you're ready.", "Trust can be repaired. No deadline penalty.", false);
             }
-            default -> { return false; }
+            default -> {
+                if (Birthdays.handle(p, v, action) || VillageQuests.handle(p, v, action)) return true;
+                return (action.startsWith("answer:") || action.equals("skip_question")) && TalkWorld.answer(p, v, action);
+            }
         }
         return true;
     }

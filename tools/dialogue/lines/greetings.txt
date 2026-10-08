@@ -1,0 +1,448 @@
+# Greetings: the first thing a resident says when you start talking.
+# Keys: greet.<period> (dawn, morning, noon, afternoon, evening, night, late), greet.band.<how well they know you>,
+# greet.weather.<weather>, greet.routine.<part of their day>, greet.personality.<personality>, greet.market.
+
+## greet.dawn
+You're up early! The roosters haven't even finished complaining.
+Morning already? The sky's still deciding what color to be.
+Ah, a fellow early riser. The dew's still on everything.
+Good dawn to you. I always think the first hour belongs to whoever's awake for it.
+Shh, the village is still yawning. Hello, though!
+Up with the sun, are we? Or did you never go to bed?
+The bread isn't even in the oven yet, and here you are.
+Look at that sky. Pink and gold, like someone spilled a pie.
+Hello! I'm only half awake, so be gentle with me.
+Early bird, are you? The worms are terrified.
+The well water's coldest at dawn. Very good for waking up. Very bad for my toes.
+Good morning! Or very late night, depending on how you look at it.
+You caught me before my first cup of anything. Hello!
+The mist's still sitting on the fields. I love this hour.
+Well, good dawn, {player}. You look like someone with plans.
+Mornings like this make the whole village smell of woodsmoke and wet grass.
+Hello! I just watched the sun come up over the rooftops. Free show, every day.
+The golem's on its first round of the day. So am I.
+
+## greet.morning
+Good morning! The day's still full of possibilities.
+Morning, {player}! Sleep well?
+Hello there! The village is properly awake now.
+Good morning. Everything smells like fresh bread at this hour.
+Ah, morning visitors. My favorite kind.
+Hello! The bell's already rung twice and I've already lost my gloves once.
+Morning! I've got the whole day ahead and absolutely no idea what to do with it.
+Good morning! You've got that "going somewhere" look.
+Hello, hello! The chickens are out and so are we.
+A fine morning to you. The air's crisp and the gossip is fresh.
+Good morning! If you're looking for trouble, try somewhere else. If you're looking for company, here I am.
+Morning! The shadows are long and the queue at the well is longer.
+Hello! I always feel braver in the mornings.
+Morning, friend of the village! What brings you by?
+Good morning. Mind the puddle by the path, it's deeper than it looks.
+Hello! It's {time} and I've already had three conversations about turnips.
+Morning! I love how the light comes through the window at this hour.
+Good morning, {player}. The day's young and so am I, in spirit.
+
+## greet.noon
+Midday already? My stomach noticed before I did.
+Hello! Perfect timing, I was just thinking about lunch.
+Noon, and the sun's right on top of us. Nowhere to hide from it now.
+Hello there! The shadows have all gone for their break.
+Good day! It's the hour when everyone in {village} smells of somebody's soup.
+Ah, hello! The bell's about to ring for lunch, I can feel it.
+Midday greetings! Half the day's gone and I've done about a quarter of it.
+Hello! It's warm enough for the cats to stop moving entirely.
+Good afternoon, almost. Close enough!
+Hello! Join me in pretending I've been productive all morning.
+Noon! The perfect time to stand still and talk to someone.
+Hello! Have you eaten? You look like you haven't eaten.
+Good day, {player}. The sun's at its highest and so are my spirits.
+Hello! I was halfway through a sandwich in my head.
+Midday already. Where does the morning go? Somewhere nicer than here, probably.
+Hello! The market stalls are busy and the gossip is busier.
+
+## greet.afternoon
+Good afternoon! The day's settled into itself now.
+Hello! Afternoons are for slow walks and long talks, I always say.
+Afternoon, {player}! The light's gone all golden.
+Ah, hello! The busy part of the day is over and the nice part's begun.
+Good afternoon. I've done my share for today, so I'm all yours.
+Hello there! The bees are out in force this afternoon.
+Afternoon! The bread's long gone but the company's still good.
+Hello! It's the sleepy part of the day. Talk to me so I don't nod off.
+Good afternoon! You've caught me in a thinking mood.
+Hello! The shadows are starting to stretch. I like that.
+Afternoon greetings! The village feels lazy and warm today.
+Hello! It's {time} already. The day's sneaking away from me again.
+Good afternoon. If you hear snoring from the hayloft, no you didn't.
+Hello! I always feel chatty in the afternoon.
+Afternoon! The children are out of lessons and the noise level is climbing.
+Good afternoon, friend. The sun's on its way down but it's in no hurry.
+
+## greet.evening
+Good evening! The lanterns are going up one by one.
+Evening, {player}! Supper smells drift all over {village} at this hour.
+Hello! The sky's going orange. Sit a while?
+Good evening. Everyone's heading home, but I'm glad you stopped.
+Evening already? The day went past like a startled rabbit.
+Hello! The light's soft and the day's work is done.
+Good evening! The bell's quiet and the crickets have taken over.
+Evening, friend. This is my favorite hour for a chat.
+Hello! I can hear the tavern from here. Can you?
+Good evening. It's getting dark soon, so let's not dawdle too long.
+Evening! The cows are complaining about dinner, same as every evening.
+Hello there! The first stars are coming out.
+Good evening, {player}. You'll want to be indoors before long.
+Evening! The smoke from the chimneys goes straight up when it's this still.
+Hello! I just lit my lamp and saw you through the window.
+Good evening! It's been a long day. Make it a good ending.
+
+## greet.night
+You're out late! Aren't you worried about the zombies?
+Good evening, or should I say good night? It's very dark out.
+Oh! You startled me. Not many visitors after dark.
+Hello! Quietly, now. Half the village is asleep.
+It's late, {player}. Stay close to the lamps.
+Night visitor! I hope you've got a sword and a sensible reason.
+Hello. The stars are out, and so are the skeletons, so mind yourself.
+Good night to you! I was just about to turn in.
+You're brave, walking around at this hour.
+Hello! I heard something groaning near the fields. Probably the wind. Probably.
+Oh, it's you. I thought you were a creeper for a moment. You're much less green.
+Late, isn't it? The golem's doing its rounds, at least.
+Hello! I can't sleep either. Want to listen to the frogs?
+Evening, or night, or whatever this is. Hello!
+It's dark as a cave out there. Did you bring a torch?
+Shh. The baby next door just fell asleep. Hello!
+
+## greet.late
+Goodness, it's the middle of the night! Is everything all right?
+Hello? It's {time}! Even the owls are tired.
+You know it's past midnight, don't you? I'm only up because of the dog.
+Oh! You gave me a fright. What are you doing up at this hour?
+The middle of the night is no time for visiting, but... hello.
+Can't sleep? Me neither. The moon's too bright.
+Shh, shh. If my neighbor wakes up, we're both in trouble.
+Hello, night owl. Mind the phantoms if you haven't slept in a while.
+It's so late the stars are starting to look bored.
+Ah, a midnight wanderer. You'd better have a good story.
+Hello. I was dreaming about pie, so this had better be important.
+Up at {time}? You and the zombies keep the same hours, it seems.
+Oh, hello. I came out to check on the noise. It was a sheep.
+Hush now, it's the quiet part of the night. What brings you?
+
+## greet.band.stranger
+Hello, traveler! I'm {name}. I don't think we've met.
+Oh, a new face! Welcome to {village}. I'm {name}.
+Hello! You're not from around here, are you? I'm {name}.
+Greetings, stranger. Are you lost, or just exploring?
+Welcome! It's not every day someone new walks through {village}.
+Hello there. I'm {name}, the {job} round here. And you are... {player}? Nice to meet you.
+Oh! Hello. You'll have to forgive me, I'm not used to new faces.
+Hello! If you're looking for the bell, it's in the middle. Everything here is in the middle.
+A visitor! Mind the chickens, they don't trust anyone either.
+Hello, stranger. You look like you've walked a long way.
+Welcome to {village}. We're small, but we're friendly. Mostly.
+Hello! I'm {name}. If anyone asks, I was very welcoming.
+Ah, hello. I don't bite. The goat by the fence does, though.
+Hello, {player}. I've heard about you. Good things, I think.
+Oh, hello! Are you here to trade? Or just passing by?
+Welcome, welcome! I'm {name}. Feel free to look around, just don't trample the carrots.
+Good to meet you. Folks here call me {name}. You can too.
+Hello! New faces always make the day more interesting.
+Greetings! You've got a kind face. Kind of a square one, but kind.
+Hello! Welcome to {village}. Tell me, what brings you all the way out here?
+Ah, a visitor. The dogs didn't bark, so you must be all right.
+Hello, I'm {name}. And before you ask, no, I don't know where the treasure is.
+
+## greet.band.acquaintance
+Oh, it's you again! Hello, {player}.
+Back again? You must like it here.
+Hello! I remember you. You were the one with the very full pockets.
+{player}! Good to see a familiar face.
+Hello again. I was wondering when you'd pass through.
+Ah, you're back. The village has been quiet without you.
+Hello! Last time we talked, you said you'd come back. And here you are.
+Oh, hello! I'm starting to recognize your footsteps.
+Back in {village}, are you? Good, good.
+Hello! You keep turning up. I'm starting to like it.
+Ah, {player}! I was just thinking about our last chat.
+Hello again! You're becoming part of the scenery. In a good way.
+Oh, hi! You've got that "back again" look.
+Welcome back! The chickens remember you too. They're pretending not to.
+Hello! I told my neighbor about you. Only nice things.
+Ah, good. I was hoping you'd stop by.
+Hello again, {player}! What adventures have you had since?
+There you are! I had a feeling it was a visiting sort of day.
+Oh, hello! You look a bit more sunburned than last time.
+Back already? Did you forget something, or did you miss us?
+Hello! I saved a smile for you. Here it is.
+Look who it is! Come in, come in. Well, there's no door, but you know what I mean.
+
+## greet.band.friend
+{player}! My friend! Come here, sit a while.
+There you are! I've got so much to tell you.
+Hello, friend! The day just got better.
+Oh good, it's you. I was hoping it would be you.
+My favorite visitor! Don't tell the others.
+Hello! I've been saving up stories for you.
+{player}! You're a sight for sore eyes.
+Ah, my friend's back in {village}. Everything's right with the world.
+Hello, you! I was telling {neighbor} about you just this morning.
+Friend! Did you eat? Have you slept? Tell me everything.
+There's my favorite adventurer.
+Hello, hello! The kettle's metaphorically on.
+Oh, wonderful. I needed a friendly face today.
+{player}! I knew it was you from all the way down the path.
+Hello, friend. You've got dirt on your nose. No, other side. There.
+Look at you! Back in one piece. That's my favorite kind of back.
+Hello! I was just about to go looking for you. Not really. But I thought about it.
+Ah, my friend the wanderer. Welcome home, or near enough.
+There you are! The village didn't feel right without you.
+Hello! I made a list of things to tell you and then I lost the list.
+Friend! Come, come. The sun's nicer when you're here.
+Oh, I'm so glad you're here. You always know what to say.
+
+## greet.band.close
+{player}! My dear friend. Come here, let me look at you.
+There you are. I always feel better when you visit.
+Oh, I'm so happy to see you. Truly.
+My dear friend! You've been gone ages. Or a day. It felt like ages.
+Hello, you. I saved you the good seat. Well, the good patch of grass.
+You're back! I worried about you, you know. Just a little.
+{player}! I was hoping you'd come. I've missed our talks.
+Ah, my good friend. Everything's a bit brighter now.
+There's the face I was waiting for.
+Oh, hello. You always turn up exactly when I need you.
+My friend! Tell me everything. Leave out nothing. Especially the dangerous bits.
+Hello, dear. You look tired. Sit a while with me.
+You came! I knew you would.
+There you are, my friend. {village} has been asking after you.
+Ah! You. Come here. I've got something important to say. I'm glad you're here. That was it.
+{player}, my friend. The days you visit are my favorite days.
+Hello, you wonderful wanderer. Welcome back.
+Oh good. I had a feeling today would be a good day, and here you are.
+Dear friend! The well, the bell and I have all missed you.
+Hello! Don't you dare leave without saying goodbye this time.
+
+## greet.band.best
+My best friend! The whole village feels like home when you're here.
+{player}! There you are. My favorite person in the whole Overworld.
+Oh, my dearest friend. Come here. Sit. Stay as long as you like.
+You! I'd know your footsteps anywhere.
+Best friend! I've been counting the days. All right, I lost count. But I was counting.
+There's my kindred spirit. Everything's better now.
+Hello, my dear friend. I keep a little corner of every day for you.
+{player}! I told everyone you'd be back. I was right, as usual.
+My best friend in all the world! Hug? No? A very firm nod, then.
+You're home! Well, you know what I mean. You're home to me.
+Ah, there you are. Now the day can start properly.
+My friend for life. Hello, hello, hello!
+Oh, I've missed you so much. Tell me everything, and then tell me again.
+{player}! I saved the best gossip just for you.
+Hello, dearest. Whatever you need, I'm here.
+There's my favorite face. Don't be gone so long next time.
+Best friend! I baked a story for you. I mean, I have a story. I'm excited.
+You came back! You always come back. That means a lot to me.
+Oh, it's you! The day just turned golden.
+My best friend's here! Somebody ring the bell. No, don't, it scares the cows.
+
+## greet.weather.rain
+Come in out of the wet! Well, as in, out from under the clouds.
+You're soaked! Did you walk all the way here in this?
+Hello! Rainy days are for staying in and talking, I always say.
+Oh, look at you, dripping. Stand under the eaves a moment.
+Hello! The farmers are thrilled. Everyone else is damp.
+Rain again! At least the crops are happy.
+Hello, {player}. Don't mind the puddles, they're decorative.
+What weather! The whole village smells of wet straw.
+Oh, hello! I was just listening to the rain on the roof.
+You brought the rain with you, I see. Or it followed you.
+Hello! My hat leaks, but my spirits are dry.
+Rain, rain. Lovely for the garden, terrible for my hair.
+
+## greet.weather.thunder
+Get under cover! That thunder's close!
+Hello! Did you hear that crack? It shook the windows.
+You shouldn't be out in a storm like this! Stay near me.
+Oh! I nearly jumped out of my boots. Hello.
+Thunder! Everyone's hiding indoors. Smart people, every one of them.
+Hello! Keep away from tall trees and the bell tower, please.
+What a storm! The sky's having a terrible day.
+Hello. If lightning strikes the pig pen again, we'll have a very confused pigman.
+Oh, it's you! I thought it was the thunder knocking.
+Hello! Stay close. I'm not scared, I'm just... cautious.
+That storm's really rolling in, {player}. Let's keep this quick and dry.
+Hello! Every flash makes the whole village go white for a moment. Eerie.
+
+## greet.weather.snow
+Hello! Look at all this snow!
+You must be frozen! Come stand by the fire.
+Snowing again! The children are delighted. The rest of us are cold.
+Hello, {player}! Your shoulders have snow on them.
+Hello! Every roof in {village} is wearing a white hat today.
+Brr! Hello! My nose has stopped working.
+Hello! Mind the ice on the path, I've fallen twice already.
+Snow! It makes everything so quiet.
+Hello! I'd shake your hand but I can't feel mine.
+Oh, a snowy visitor! Do you want something warm?
+Hello! The snow's as deep as my boots and rising.
+Lovely snow, terrible cold. Hello!
+
+## greet.weather.clearing
+Hello! The rain's stopped. Smell that air!
+Look, the clouds are breaking up! Hello!
+Hello! Everything's sparkling after the rain.
+Oh, hello. I came out the moment the rain stopped. Couldn't stay inside another minute.
+The sun's back! And so are you. Hello!
+Hello! Did you see the rainbow? It was right over the fields.
+Mind the puddles, {player}. The children have been jumping in them all over.
+Fresh air at last! Hello!
+Hello! The whole village is drying out like laundry on a line.
+Everything smells green after rain. Hello!
+
+## greet.weather.hot
+Hello! Phew, it's hot. Stand in the shade with me.
+It's baking out here! Hello, {player}.
+Hello! The sand's too hot to walk on barefoot. Don't ask how I know.
+Hot one today. Hello! Do you have any water?
+Hello! Even the lizards are hiding from this sun.
+Scorching! Hello. Stay in the shade or you'll cook.
+Hello! On days like this I envy the fish.
+Hot enough to fry an egg on the wall. Somebody tried. It didn't work.
+
+## greet.market
+Happy Market Day! The whole village is out.
+Hello! It's Market Day, so mind your purse and your manners.
+Market Day greetings! Have you been to the stalls yet?
+Hello! It's Market Day, my favorite day of the week.
+Market Day! No work, just talk and treats. Hello!
+Hello! Everyone's at the bell today, trading and gossiping.
+Ah, Market Day. The one day nobody asks me to work. Hello!
+Hello, {player}! Come for the market, stay for the gossip.
+Market Day! I've already bought three things I don't need.
+Hello! The whole village smells of pies and wool today.
+Market Day hello! Try the honey, if there's any left.
+Hello! It's Market Day, so everyone's wearing their good hats.
+Happy Market Day, {player}! The stalls are full and the jokes are terrible.
+Hello! I love Market Day. Everyone's out, nobody's in a hurry.
+Hello! The children have been running between the stalls all morning.
+
+## greet.personality.warmhearted
+Oh, hello, dear! Come here, you look like you need a smile.
+There you are! Have you eaten? You look peaky.
+Hello, sweetheart. What can I do for you today?
+Oh, it warms my heart to see you!
+Hello, love! Sit down, sit down. Tell me how you are.
+Welcome, welcome! Any friend of the village is a friend of mine.
+Oh, my! Look at you. Come, I'll find you a snack.
+Hello, dear one! I was just thinking of you.
+
+## greet.personality.thoughtful
+Hello. I was just thinking about something. Several somethings, actually.
+Ah, {player}. Hello. Have you ever wondered why bells are bell-shaped?
+Hello. Forgive me if I'm distracted; my mind's halfway into a book.
+Good to see you. I've been meaning to ask your opinion on something.
+Hello. You arrived just as I was having a very interesting thought.
+Ah, hello. Quiet days are good for thinking, but company's better.
+Hello. I wrote down something clever earlier and now I can't read my own writing.
+Hello, {player}. Do you think the stars know we're watching them?
+
+## greet.personality.playful
+Hey hey! Look who it is!
+Hello! Guess what I'm thinking. Wrong! It was pie.
+Ta-da! Oh, it's just you. Hello! I was practicing my entrance.
+Hiya! You're it! No tag-backs!
+Hello! I was just humming a tune. Want to hear it? Too late, here it comes.
+Boo! Ha! Did I scare you? No? Rats.
+Hello, {player}! Ready for some fun?
+Oh good, an audience! Hello!
+
+## greet.personality.adventurous
+Hello, traveler! Where've you been? Anywhere exciting?
+Ah, {player}! You've got the look of someone who's seen a jungle lately.
+Hello! I was just planning a trip. In my head. Very detailed.
+Greetings, fellow wanderer!
+Hello! Tell me there's a dungeon in your story today.
+Hey! Your boots are muddier than last time. Good sign.
+Hello! I heard there's a shipwreck past the river. Want to go see?
+Hello, explorer! Any new maps?
+
+## greet.personality.meticulous
+Hello. You're precisely on time. For what, I'm not sure, but on time.
+Good day. Wipe your boots, please. Thank you.
+Hello, {player}. I've just finished organizing my buttons by color.
+Ah, hello. Mind the step; I swept it twice.
+Hello. Everything's in order today, which makes me very happy.
+Good day. Your collar's crooked. There. Better.
+Hello. I've counted the chickens. All present. Hello to you, too.
+Ah, {player}. Right on schedule.
+
+## greet.personality.steadfast
+Hello there. Good to see you, same as always.
+Morning or evening, I'm here. Hello, {player}.
+Hello. Steady day today. I like steady days.
+Ah, hello. Nice to see a reliable face.
+Hello, friend. The garden's coming along. So's the day.
+Hello. Same old me, same old village. Good to see you.
+Hello there. Things are as they should be.
+Hello, {player}. Sit if you like. I'm not going anywhere.
+
+## greet.personality.reserved
+Oh. Hello.
+Hello. ...It's nice to see you.
+Mm. Hello, {player}.
+Oh, hello. I didn't hear you coming.
+Hello. Quiet day. I like it that way.
+Hi. ...Sorry, I'm not much of a talker. But I'm glad you're here.
+Hello. You can stay a while, if you like.
+Oh. It's you. ...Good.
+
+## greet.personality.imaginative
+Hello! Did you know the clouds today look exactly like a flying sheep?
+Oh, hello! I was just imagining a castle made of cake.
+Greetings, wanderer from a faraway land! Or wherever you're from.
+Hello! What color is your mood today? Mine's sort of teal.
+Ah, {player}! You've arrived just as my daydream got good.
+Hello! If you were a painting, you'd be a sunrise.
+Hello! I've decided the moon is made of very shy cheese.
+Oh, it's you! Hello! I was painting you in my head just now.
+
+## greet.personality.pragmatic
+Hello. What do you need?
+Afternoon. Or morning. Whatever it is, hello.
+Hello, {player}. Make it quick, I've got wood to cut.
+Hello. If you're here to talk, I'll listen while I work.
+Right. Hello. What can I do for you?
+Hello. Weather's fine, crops are fine, I'm fine.
+Hello. Good timing; I just finished a job.
+Hello. You've got a loose strap on your boot. Fix that before it trips you.
+
+## greet.personality.curious
+Oh! Hello! Where did you come from? What's that? Where are you going?
+Hello! Can I ask you something? Several somethings?
+Hello, {player}! What did you find today?
+Oh, hello! Have you ever seen the end of the world? The very edge?
+Hello! I've been wondering about something and you look like someone who'd know.
+Hi! What's in your pockets? Sorry. Hello first.
+Hello! Is it true that some caves glow? I need to know.
+Oh, it's you! Tell me something I don't know.
+
+## greet.personality.protective
+Hello. Everything all right? You look a bit worn.
+Ah, {player}. Good. You're safe. Hello.
+Hello. Anyone bothering you, you let me know.
+Hello there. Watch yourself on the road out, it's been rough lately.
+Hello. I keep an eye on things around here. You're welcome among them.
+Good to see you in one piece, {player}.
+Hello. Stay close to the village after dark, understand?
+Ah, there you are. I was wondering if you'd made it back.
+
+## greet.personality.gentle
+Oh, hello. It's lovely to see you.
+Hello, {player}. The flowers are blooming beautifully today.
+Hello, dear. Would you like to sit in the sun a while?
+Oh, hello. You have a kind sort of quiet about you.
+Hello. I hope your day has been gentle with you.
+Hello there. I just watered the poppies. They say hello too.
+Oh, how nice. A visitor. Hello.
+Hello, {player}. Mind the little sprouts by the path.

@@ -1,0 +1,220 @@
+{
+  "id": "bf070_carders_lap_cloth_skirt",
+  "kind": "bottom",
+  "name": "Carder's Lap-Cloth Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf070_carders_lap_cloth_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "long_skirt",
+    "simple",
+    "skirt",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "lap_cloth",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0.2,
+        -1.1
+      ],
+      "size": [
+        8,
+        7,
+        1
+      ],
+      "uv": [
+        13,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lap_tie_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.6,
+        10.2,
+        -3.5500000000000003
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        32,
+        18
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lap_tie_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.6,
+        10.2,
+        -3.5500000000000003
+      ],
+      "rotation": [
+        0,
+        0,
+        -10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        37,
+        18
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A long wool skirt with a square leather lap-cloth tied over the front for carding on the knee, fleece wisps clinging to it, and felt slippers."
+}

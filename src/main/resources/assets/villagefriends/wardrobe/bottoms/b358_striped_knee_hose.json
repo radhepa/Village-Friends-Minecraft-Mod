@@ -1,0 +1,74 @@
+{
+  "id": "b358_striped_knee_hose",
+  "kind": "bottom",
+  "name": "Striped Knee Hose",
+  "gender": "male",
+  "texture": "bottoms/b358_striped_knee_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_hose_fold",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_hose_fold",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "description": "Plain wool knee breeches over long knee hose striped up and down in two colours, folded over in a plain band below the knee, worn with soft ankle boots."
+}

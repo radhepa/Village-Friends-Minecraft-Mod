@@ -1,0 +1,245 @@
+{
+  "id": "b279_mountain_guides_crampon_boots",
+  "kind": "bottom",
+  "name": "Mountain Guide's Crampon Boots",
+  "gender": "male",
+  "texture": "bottoms/b279_mountain_guides_crampon_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sock_turn",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.03
+    },
+    {
+      "id": "left_sock_turn",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "right_crampon_frame",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        11.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        42,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "left_crampon_frame",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        11.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "right_crampon_point_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -1.2,
+        11.6,
+        -2.6
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        8
+      ]
+    },
+    {
+      "id": "right_crampon_point_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        1.2,
+        11.6,
+        -2.6
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        26,
+        8
+      ]
+    },
+    {
+      "id": "left_crampon_point_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        -1.2,
+        11.6,
+        -2.6
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        31,
+        8
+      ]
+    },
+    {
+      "id": "left_crampon_point_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        1.2,
+        11.6,
+        -2.6
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    }
+  ],
+  "description": "Stout wool breeches, thick knitted socks turned down over laced mountain boots, and iron crampons strapped under the soles with two spikes jutting from each toe."
+}

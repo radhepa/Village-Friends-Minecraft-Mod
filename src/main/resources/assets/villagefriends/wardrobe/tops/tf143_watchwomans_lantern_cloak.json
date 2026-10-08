@@ -1,0 +1,307 @@
+{
+  "id": "tf143_watchwomans_lantern_cloak",
+  "kind": "top",
+  "name": "Watchwoman's Lantern Cloak",
+  "gender": "female",
+  "texture": "tops/tf143_watchwomans_lantern_cloak.png",
+  "extrasHeight": 48,
+  "tags": [
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "cloak_cape",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -8.5,
+        -0.9,
+        -2.8
+      ],
+      "size": [
+        17,
+        5,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "cloak_clasp",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.4,
+        -3.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "cloak_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.4,
+        3.15
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "cloak_tail",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.423204552858065,
+        3.9173212111853783
+      ],
+      "rotation": [
+        4.0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        8,
+        1
+      ],
+      "uv": [
+        23,
+        12
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        25
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "lantern_chain",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0.2,
+        -1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        25
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lantern",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.6,
+        -3
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "uv": [
+        34,
+        25
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "lantern_cap",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.6,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        47,
+        25
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hand_bell",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.0,
+        -2.35
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.4,
+        -2
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        56,
+        25
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "hand_bell_handle",
+      "bone": "TORSO",
+      "pivot": [
+        -2.6,
+        9.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -1
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        33
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A dark wool cloak with a deep shoulder cape clasped at the throat over a buttoned coat, a lit horn-paned lantern at her belt and a hand bell for calling the hours."
+}

@@ -1,0 +1,252 @@
+{
+  "id": "t178_harbour_masters_brass_buttoned_coat",
+  "kind": "top",
+  "name": "Harbour Master's Brass-Buttoned Coat",
+  "gender": "male",
+  "texture": "tops/t178_harbour_masters_brass_buttoned_coat.png",
+  "extrasHeight": 32,
+  "tags": [
+    "fancy",
+    "sea",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_turned_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_turned_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        6.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "stand_collar",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        -1.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "speaking_horn_mouth",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "speaking_horn_tube",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.0,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        34,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "speaking_horn_bell",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.8,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.0,
+        -1
+      ],
+      "size": [
+        3,
+        2,
+        2
+      ],
+      "uv": [
+        43,
+        9
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        0,
+        17
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        5,
+        1
+      ],
+      "uv": [
+        21,
+        17
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A double-breasted wool sea coat with two rows of brass buttons, a stand collar, broad buttoned cuffs and a brass speaking horn hung at the hip on a cord."
+}

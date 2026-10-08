@@ -1,0 +1,245 @@
+{
+  "id": "t281_quarrymans_stone_dust_shirt",
+  "kind": "top",
+  "name": "Quarryman's Stone-Dust Shirt",
+  "gender": "male",
+  "texture": "tops/t281_quarrymans_stone_dust_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.1,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        0,
+        0
+      ],
+      "size": [
+        5,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_point",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.9,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        55,
+        0
+      ]
+    },
+    {
+      "id": "kerchief_band",
+      "bone": "TORSO",
+      "pivot": [
+        -0.1,
+        -0.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.3,
+        0,
+        -2.4
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.02
+    },
+    {
+      "id": "kerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        0.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.6,
+        1.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        18
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    },
+    {
+      "id": "kerchief_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        -0.8,
+        1.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A heavy work shirt tucked into the waistband, whitened with stone dust that thickens toward the hem and the pushed-up sleeves, a neckerchief knotted at the throat and leather straps bound round the wrists."
+}

@@ -1,0 +1,505 @@
+{
+  "id": "t227_almoners_alms_purse_robe",
+  "kind": "top",
+  "name": "Almoner's Alms-Purse Robe",
+  "gender": "male",
+  "texture": "tops/t227_almoners_alms_purse_robe.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_turned_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_turned_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "girdle",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "purse_frame",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        10.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "alms_purse",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        10.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1,
+        -0.5
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        38,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "purse_tassel_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        10.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "purse_tassel_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.4,
+        10.4,
+        -3.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.5,
+        4,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        52,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "bread_basket",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        7.4,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -1.5
+      ],
+      "size": [
+        4,
+        2,
+        3
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "loaf_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0.09999999999999998,
+        7.4,
+        -3.7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        15,
+        15
+      ]
+    },
+    {
+      "id": "loaf_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.9,
+        7.4,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        24,
+        15
+      ]
+    },
+    {
+      "id": "basket_handle_0",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -3,
+        -0.5
+      ],
+      "size": [
+        4,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        15
+      ]
+    },
+    {
+      "id": "basket_handle_1",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        44,
+        15
+      ]
+    },
+    {
+      "id": "basket_handle_2",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        1.0,
+        7.4,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1,
+        -2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        49,
+        15
+      ]
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        7,
+        1
+      ],
+      "uv": [
+        21,
+        21
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "robe_side_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        42,
+        21
+      ]
+    },
+    {
+      "id": "robe_side_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.0,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        6,
+        4
+      ],
+      "uv": [
+        53,
+        21
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "The house almoner's knee-length robe with a bordered hem, a big embroidered alms purse swinging from his girdle on tasselled cords, and a wicker basket of round loaves carried on his arm for the poor at the gate."
+}

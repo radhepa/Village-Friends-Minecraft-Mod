@@ -1,0 +1,76 @@
+{
+  "id": "b204_gate_wardens_hobnail_gaiters",
+  "kind": "bottom",
+  "name": "Gate Warden's Hobnail Gaiters",
+  "gender": "male",
+  "texture": "bottoms/b204_gate_wardens_hobnail_gaiters.png",
+  "extrasHeight": 16,
+  "tags": [
+    "martial",
+    "rugged",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_gaiter",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_gaiter",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        5.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    }
+  ],
+  "description": "Stout wool trousers under stiff boiled-leather gaiters that stand off the shin, seamed up the front and strapped at the back, over low shoes whose soles bristle with iron hobnails."
+}

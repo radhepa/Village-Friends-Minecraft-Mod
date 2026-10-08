@@ -1,0 +1,336 @@
+{
+  "id": "bf162_wise_womans_herb_pocket_skirt",
+  "kind": "bottom",
+  "name": "Wise Woman's Herb-Pocket Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf162_wise_womans_herb_pocket_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "skirt",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        9,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        9,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        9,
+        5
+      ],
+      "uv": [
+        0,
+        15
+      ]
+    },
+    {
+      "id": "pocket_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        2.2,
+        -0.1
+      ],
+      "size": [
+        10,
+        3,
+        1
+      ],
+      "uv": [
+        13,
+        15
+      ],
+      "inflate": 0.02,
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_bundle_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        1.0,
+        -0.17
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_tuft_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0.1,
+        -0.17
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        41,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_bundle_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        1.0,
+        -0.17
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        48,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_tuft_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        0.1,
+        -0.17
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        53,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_bundle_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        1.0,
+        -0.17
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        60,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "herb_tuft_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.0,
+        0.1,
+        -0.17
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        30
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A dark calf-length skirt with a row of patch pockets across the front, herb bundles poking out of each."
+}

@@ -1,0 +1,565 @@
+# "How's your day?" in each personality's own voice.
+
+## chat.warmhearted
+I baked too many rolls again. You'll take some, won't you? You look like you need feeding.
+I've been checking on old Pell next door. He says he's fine, but his firewood pile says otherwise.
+Everyone in {village} needs a little looking after. Even the ones who say they don't.
+I made a pie for the new family down the lane. Nothing says welcome like crust.
+My day? Busy, but the good kind. The kind where you help people.
+I knitted mittens for all the children. Some of them are slightly different sizes.
+If you're ever cold or hungry, my door's open. I mean that.
+I always set an extra place at supper. You never know who'll turn up.
+The kettle's always warm at my house. It's practically a law.
+I found a lost kitten this morning. She's sleeping in my bread basket now. The bread's in a box.
+Someone left flowers on my step. I suspect {friend}. Isn't that lovely?
+You look tired, dear. Are you sleeping enough? Eating enough? Laughing enough?
+I made soup for a neighbor who was poorly. Now three neighbors are suddenly poorly.
+There's nothing a warm meal and a kind word can't make a little better.
+I hugged the iron golem today. It didn't hug back, but I think it appreciated it.
+My grandmother taught me to bake. My grandchildren will eat what I bake. That's the circle.
+I always remember everyone's birthdays. It's the least I can do.
+I gave my good scarf to a traveler who looked chilly. I have other scarves. Probably.
+The best thing about a village is that nobody has to be alone in it.
+Sit down a minute, love. The world can wait while you catch your breath.
+I'm teaching the children to make cookies. Mostly they eat the dough.
+My oven's been going since dawn. The whole street smells of cinnamon.
+I worry about the travelers who sleep out in the wilds. Do you have somewhere warm tonight?
+I left a basket of eggs for the family by the well. They've had a hard month.
+A full table is a happy table. That's what I always say.
+I don't need much. A warm hearth, a full pot, and people to share them with.
+Do you like honey? I'll save you a jar from the next batch.
+My cheeks hurt from smiling today. Good day, then.
+I patched up a little girl's knee this morning. Brave as a lion, she was.
+When people are sad, I bake. When people are happy, I bake. I bake a lot.
+I've been told I fuss too much. I'm going to keep fussing, thank you.
+Every face in {village} is a face I'd cook for.
+I always save the biggest slice for whoever looks like they need it most.
+The secret to good bread is patience. Same as the secret to good friends.
+I tucked a little extra into the baker's basket for the widow down the lane. Don't tell.
+You've got a smudge on your cheek. Here. There. Much better.
+The best days are the ones where you go to bed tired from caring about people.
+I hope someone's looking after you out there, {player}. Someone should.
+I made far too much jam this year. I'm giving it away to anyone who stands still long enough.
+Your health is your wealth, my mother used to say. Then she'd make me eat my greens.
+I've started leaving a bowl of milk out for the village cats. Now there are eleven of them.
+There's always room for one more by the fire.
+I like days when nothing goes wrong and everyone gets fed.
+If you're ever passing at suppertime, follow your nose to my door.
+Kindness is like bread. Best shared warm.
+
+## chat.thoughtful
+I've been reading about the old builders. Who carved the temples in the desert, do you think?
+I spent the morning thinking about time. Whether it moves, or whether we do.
+Do you ever wonder if the villages talk to each other, somehow? Over great distances?
+I've been keeping a journal. Not of events, of thoughts. It's getting thick.
+A book I'm reading says every block of stone was once something else. Sand, or bone, or sea.
+I watched the river for an hour today. It never once repeated itself.
+Have you noticed that the moon changes, but always comes back the same? There's comfort in that.
+I wonder sometimes what the iron golems think about. Do they dream?
+Quiet days are rare. I try to use them well. Mostly for wondering.
+I read that the End has no day or night. I can't decide if that sounds peaceful or terrible.
+Every person in {village} is a story I've only read a few pages of.
+I've been thinking about how much of what we do is habit, and how much is choice.
+I asked the librarian for a book about everything. She gave me a map.
+Do you think the endermen are lonely? They always seem to be looking for something.
+I like how ideas grow if you leave them alone for a while. Like seeds.
+Some days I just sit and listen. You learn more than you'd think.
+I wrote a poem about the bell. It's mostly about silence, oddly.
+Why do you think the old ones built the strongholds so deep?
+My mind's been wandering all day. It's further away than you'd think.
+I've noticed the swallows come back to the same eaves every year. How do they remember?
+Have you ever looked at an enchanting table's runes and felt you almost understood them?
+There's a difference between knowing a thing and understanding it. I'm still learning which is which.
+I read slowly. I'd rather remember one page than forget a hundred.
+The village has its own rhythm. I've been trying to write it down.
+I think the most interesting questions are the ones without answers.
+I wonder who lived in the ruins past the hill, and whether they had a bell too.
+I've been reading about redstone. It seems almost alive, the way it carries a signal.
+I counted the steps from my door to the well. Two hundred and twelve. I don't know why I needed to know.
+Do you keep a record of your travels? You should. Memory is generous but not honest.
+I spent the afternoon under a tree, thinking about nothing. It took a lot of concentration.
+Everything that lasts seems to be made slowly. Mountains. Friendships. Good books.
+Have you ever noticed how the world sounds different after it snows?
+I think kindness is a sort of wisdom. Maybe the most important sort.
+The ancient cities in the deep dark... who builds a city where no light reaches?
+I've been reading old letters from the village archives. People worried about the same things then.
+I keep a list of things I'd like to understand before I'm old. It's very long.
+The sky at dusk makes me feel small in a way I like.
+Some things are best said slowly. Most things, actually.
+I'm trying to learn to be patient. It's taking a long time.
+What would you write on the first page of a book about your life?
+I think every village is a little world. Ours is a nice one.
+I found a book with half the pages torn out. Now I'm writing my own ending.
+I wonder whether villagers in other lands think the way we do.
+I've been thinking about why people leave places, and why they come back.
+There's an old saying: the bell rings for everyone, but each of us hears it differently.
+
+## chat.playful
+I hid a cookie in every haystack in {village}. Treasure hunt! You have until sundown.
+Guess what I did today. No, guess! Wrong. I taught a chicken to dance. Sort of.
+I've been practicing my whistle. Listen! ...Well, it sounds better when I do it.
+I put a pumpkin on the scarecrow's head. Now it looks like an enderman's cousin.
+Want to hear a song? I made it up just now. It's about cheese.
+I've been running around all morning. I'm not sure why. It felt right.
+I convinced three children that the bell can talk. Now they're all whispering to it.
+Life's too short to walk when you can skip!
+I made a crown out of daisies. I'm the queen of {village} now. Bow!
+I tried to juggle apples. Now I have applesauce.
+I've been composing a ballad about the golem. It rhymes "iron" with "lion." Genius, I know.
+If you could have any animal as a pet, what would it be? I'd have a goat that sings.
+I challenged {friend} to a race and lost. I demand a rematch. Best of fifty.
+Let's play a game: I say a word, you say the first thing you think. Bucket! ...Too slow!
+I left a note on the baker's door saying "the bread is watching you." She didn't laugh.
+I can stand on one foot for a whole minute. Watch! ...Nearly a minute.
+Today's going great. I found a coin, a feather and a very interesting rock.
+I painted a smiley face on a melon. His name is Gerald.
+Music makes everything better. Even chores. Especially chores.
+I've been teaching the parrots rude songs. Don't tell anyone.
+I laughed so hard at lunch that cider came out of my nose. Worth it.
+Have you ever tried to out-stare a cat? I lost. Badly.
+I'm planning a surprise party. For whom? I haven't decided yet.
+Every day's a good day for a little mischief. Harmless mischief.
+I can play three instruments. Badly, mostly, and loudly.
+I tried to tell the golem a joke. Tough crowd.
+I'm organizing a talent show. My talent is organizing talent shows.
+I tickled a sheep. It didn't react. Sheep have no sense of humor.
+If you hear giggling from the haystacks, it's probably me.
+I made up a dance for the bell. Every time it rings, I do it. Everyone stares.
+Want to arm wrestle? I warn you, I've been practicing on fence posts.
+I've been trying to whistle and hum at the same time. It sounds like a sick bee.
+I invented a new game. It's like tag, but everyone's it. Total chaos. Wonderful.
+I tied ribbons on all the cows' tails. They look very festive.
+I'd have more fun if the day had more hours. Or if I needed less sleep.
+Do you know any good songs? I've worn out all of mine.
+I told the children the moon is made of cheese. Now they want to go there.
+A day without laughing is a day wasted. Today is NOT wasted.
+I wrote a song about you! It's mostly about your hat.
+I'm practicing my bow. For when I'm famous. Which is soon.
+I hid in a barrel to surprise {friend}. I fell asleep. Surprise ruined.
+Ooh, I have the best idea. I'll tell you later. It's a surprise.
+I've decided today's theme is "hats." Everyone's getting a hat.
+I lost a staring contest to a frog. Frogs are unbeatable.
+Life is short, the cake is sweet, and I'm going to have a second slice.
+
+## chat.adventurous
+I climbed the tallest tree past the river today. You can see three villages from the top!
+I've been mapping the caves under the hill. Found a lake down there, black as ink.
+Someday I'm going to see the ocean monuments. The real ones, with the guardians.
+I found a strange stone near the river. It hums when you hold it. I think. Maybe I imagined it.
+I've packed my bag three times this week. One of these days I'll actually go.
+Have you ever been to the badlands? I hear the hills there are striped like a cake.
+I followed a fox halfway to the mountains before I realized I'd forgotten lunch.
+The world's so big and I've seen so little of it.
+I want to ride a camel across the desert. Or at least sit on one.
+I swam out to the island in the lake. There's nothing there but a very surprised turtle.
+The best kind of day is one where you don't know what's over the next hill.
+Tell me about the farthest place you've ever been. Leave nothing out.
+I've been practicing with a bow. For hunting. And for dramatic poses.
+They say there's a woodland mansion deep in the dark forest. Full of illagers. I'd like to see it. From a distance.
+I slept under the stars last night. Woke up with a spider on my face. Still worth it.
+I'm saving up for a good sword and sturdy boots. Then the world had better watch out.
+Have you been to the Nether? What's it like? Is it really hot? Really, really hot?
+I found an old shipwreck on the shore. There was a map inside. It was soggy. I'm drying it.
+Someday I want to climb a mountain so high the snow never melts.
+My feet are itchy. Not literally. They want to go somewhere.
+I traded with a wandering trader for a compass. Now I know which way north is. Wonderful.
+I've been listening to the cartographer's stories. Every one of them makes me want to leave.
+Do you know how to tame a horse? I tried once. The horse disagreed.
+The edge of the map is just where the next map starts.
+I heard the jungle has temples full of traps and treasure. Traps don't scare me. Much.
+I went exploring the old mineshaft. Lots of cobwebs. Lots of rails. One very angry cave spider.
+I keep a list of places I'll visit. It gets longer faster than I can cross things off.
+Ever ridden a boat down a river at full speed? Best feeling in the world.
+I want to see the aurora, if there is such a thing. Someone told me about lights in the far north.
+I'm restless today. Everything's fine, but the horizon's calling.
+What's the most dangerous thing you've ever fought? Tell me. I need details.
+My boots have holes from all my walking. Badges of honor.
+I found a cave with glowing berries hanging from the ceiling. Like little lanterns.
+They say there's a city at the end of the world. I'd go, if I knew which end.
+I've decided to learn to swim properly. So I can explore underwater ruins.
+I chased a rabbit into the forest and found a clearing full of mushrooms. Big ones!
+I'll go adventuring with you someday. When you're ready for a very enthusiastic companion.
+The world's full of secrets. I want to find a few before I'm old and grey.
+I'm practicing reading maps. Upside down, so far. Getting better.
+I climbed onto the roof of the church to watch the sunset. Don't tell the cleric.
+There's a ravine to the east that goes down forever. I dropped a pebble. Still waiting.
+Some people want a quiet life. I want a loud one, full of stories.
+I envy the birds. They don't need maps.
+I met a traveler who'd seen a bamboo jungle full of pandas. Pandas!
+One day I'll come back from somewhere far away with a story nobody believes.
+
+## chat.meticulous
+I reorganized my collection of buttons by size, then by color, then by age. It took all morning.
+Did you know there are forty-two different kinds of flowers in this region? I've pressed thirty-nine.
+Everything has a place, and everything in its place. That's my motto.
+I counted the bricks in the church wall today. Four hundred and twelve. One's slightly crooked.
+I keep a ledger of every trade I make. Every single one. It's very satisfying.
+Someone left the gate open at the sheep pen again. I've written a strongly worded note.
+I've catalogued every shell I've ever found. Would you like to see the catalog? It's in alphabetical order.
+I like my mornings planned to the minute. Today I was three minutes behind. It's been a struggle.
+Tidy home, tidy mind. That's what I always say.
+I found a rare blue feather today. It's now item four hundred and six in my collection.
+I polished my doorknob. You can see your face in it. Go on, look.
+Did you notice the path stones are uneven near the well? I've reported it twice.
+I collect interesting stones. Each one's labeled with where and when I found it.
+My spice rack is alphabetical. My bookshelf is by height. My socks are by mood.
+If everyone just put things back where they found them, life would be so much simpler.
+I measured the bell. Exactly as tall as it is wide. Isn't that pleasing?
+I spent the afternoon sorting seeds. Wheat, beetroot, melon, pumpkin. Separately. Obviously.
+I have a list of lists. It keeps me sane.
+Somebody moved my chair two inches to the left. I noticed immediately.
+I've been studying the patterns of the village banners. There's a system, if you look closely.
+Every coin I've ever earned is accounted for. Except one. I think about it often.
+I make my bed with perfect corners every morning. It's the little things.
+I dusted every jar in my pantry today. Even the ones I never open.
+Did you know a stack holds sixty-four items? Perfect number. Divides evenly every way.
+I've labeled all my drawers. Including the one that says "miscellaneous labels."
+I'd like to visit the library's archive someday and organize it properly.
+I noticed the bell rings a quarter beat late on cold mornings. Fascinating.
+My collection of pressed leaves is up to every tree in the region. Except jungle. Too humid.
+I wrote down everything I ate this week. Very informative. Too much bread.
+Precision is a kind of kindness. To yourself, mostly.
+I always know where everything is. People come to me when they lose things.
+I've started a collection of interesting knots. I have nineteen.
+I wipe my boots three times before going inside. Some say that's excessive. Those people have dirty floors.
+I have a theory about which chickens lay the most eggs. I'm keeping notes.
+I wound all the clocks in the village this morning. They're all in agreement now.
+Order is calming. Chaos is exhausting. I choose calm.
+I traded for a lovely little music disc. I don't own a jukebox. It's for the collection.
+If you need anything found, measured or sorted, I'm your resident.
+I spent an hour arranging my bookshelf by the color of the spines. It looks like a rainbow.
+I've noted every time it's rained this season. There's a pattern. I'm close to cracking it.
+Everything I own fits neatly into three chests. I'm very proud of that.
+A crooked picture frame can ruin my whole afternoon.
+I collect stamps. Well, wax seals from letters. Same thing, really.
+I organized the village shed. Now nobody can find anything except me.
+Small, careful steps. That's how you build anything worth building.
+
+## chat.steadfast
+Same as always. Up early, garden, work, supper. I like a day that knows what it is.
+The tomatoes are coming along. Slowly. Good things take their time.
+I've lived in {village} all my life. Never felt the need to leave. Everything I love is here.
+Rain or shine, the garden needs tending. So I tend it.
+My father planted that oak by the well. I water it every week. It'll outlive us all.
+Not much changes around here. That's what I like about it.
+I fixed the fence by the sheep pen. Took all morning. It'll hold for years now.
+You can count on me. That's not a boast. It's just how I'm made.
+I don't say much, but I'm always around if you need a hand.
+Steady work and a good night's sleep. Can't ask for more.
+My roses are blooming. Three years I've waited for that bush. Worth every day.
+I pulled weeds till noon. They'll be back. So will I.
+Some folks need excitement. I need my porch and a quiet evening.
+The soil here's good. Dark and rich. You can grow anything with a little patience.
+I made the same breakfast every day for twenty years. Never once got tired of it.
+Promises are only as good as the person keeping them. I keep mine.
+The wind's from the west today. Means rain by evening. You'll see.
+I've watched the children of {village} grow up. Now their children are growing up.
+I like knowing what tomorrow will look like. Mostly it looks like today, and that's fine.
+My hands are dirty, my back's sore and my beans are thriving. Good day.
+I've been fixing the same squeaky wheel on my cart for years. It's an old friend now.
+There's nothing wrong with a quiet life. Quiet doesn't mean empty.
+I've planted a row of saplings along the path. In ten years it'll be a fine avenue.
+Hard times come and go. The village stays. So do I.
+I'm not one for big speeches. But I'm glad you're here.
+I check on the beehives every morning. They know my face.
+You'll find me in the garden most days. Easy to find. Hard to move.
+I like a job done properly, even if nobody notices.
+I don't hurry. Hurrying's how you trip.
+My grandmother's spade still works better than any new one.
+The seasons come round regular as the bell. I find that comforting.
+I've weathered three bad winters and a raid. I'll weather whatever's next.
+A good fence makes a good neighbor. A good neighbor makes a better one.
+Just tending the carrots. They're shy this year. They'll come round.
+I don't need much. Good bread, honest work, a warm bed.
+I plant a tree every spring. Someone else will sit in its shade someday.
+People think steady means boring. I think it means dependable.
+My garden doesn't care what kind of day I've had. That helps.
+Some things you can't rush. Bread. Trees. Trust.
+I've sat on the same bench by the well every evening for years. It knows the shape of me.
+Good soil, good rain, good people. That's {village}.
+I keep my tools sharp and my word kept.
+I'll be here tomorrow, same as today. Come by anytime.
+Every season has its work. Right now it's mulching.
+The best things grow slowly and stay a long time.
+
+## chat.reserved
+...It's been a quiet day. I like quiet days.
+I went fishing this morning. Didn't catch anything. Didn't mind.
+I don't talk much. But I listen. ...Mostly.
+...The river was very still today. Like glass.
+I sat by the water. Watched the dragonflies. That's all. It was nice.
+...Sorry. I'm not good at small talk. It's nice of you to ask, though.
+I caught a salmon this big. ...Well. About this big. Fine. This big.
+...I don't really like crowds. The well at noon is too much for me.
+...Thank you for talking to me. People usually don't.
+I like the early mornings. Before anyone else is up.
+...I made a little wooden boat. It floats. Mostly sideways.
+Mm. Today was fine. The fish were shy. So was I.
+...There's a heron that comes to the river every morning. We have an understanding.
+I don't say much at the tavern. I just like hearing everyone laugh.
+...I'm happy, I think. In my own quiet way.
+The rain sounds nice on the water. Like a hundred little whispers.
+...You're easy to talk to. That doesn't happen often.
+I spent the afternoon mending my nets. It's peaceful work.
+...I know people think I'm odd. I don't mind.
+There's a spot upstream where the water's deep and clear. ...I could show you. If you like.
+...I read a little last night. A story about a lighthouse keeper. I liked him.
+I prefer animals, mostly. They don't expect you to talk.
+...Today was good. Nothing happened. That's good.
+I'm not lonely. I'm alone, sometimes. It's different.
+...The golem nodded at me today. At least, I think it did.
+Mm. Nice weather for fishing.
+...I wrote a letter to my sister. I didn't send it. I might.
+Some people fill silences. I like letting them be.
+...I don't need much. A rod, a river, a quiet evening.
+...Thank you for remembering my name.
+I saw a kingfisher today. Blue as the sky. Gone in a blink.
+...I'm better at doing than saying.
+Mm. The fish are biting in the evening this week.
+...I can tell you're kind. You don't push.
+I like the sound of the oars when I row out at dawn.
+...I watched the sunset alone. It was lovely. I wished someone was there. Then I didn't.
+...Sorry, I was thinking. What did you say? Oh. My day. It was fine.
+...I carved a little fish for the baker's son. He hasn't let go of it since.
+The tavern's too loud, but the walk home after is nice.
+...I'm glad you stopped by. Really.
+...I don't know what to say. But I'm happy you're here.
+I sat on the dock and let my feet dangle in the water. Cold. Nice.
+...Some days are just for breathing.
+I'll answer any question you have. Slowly.
+...The stars were bright last night. I counted some. Lost count.
+
+## chat.imaginative
+I dreamt the whole village floated up into the clouds and the sheep grew wings. Isn't that lovely?
+I painted the sky purple today. It wasn't purple. It should have been.
+Do you think the stars are holes in the night, and something bright is behind them?
+I named all the clouds this morning. That one's Bartholomew. He's grumpy.
+I'm writing a story about a mushroom who wants to be a tree. It's very moving.
+If colors had sounds, I think yellow would be a trumpet. What do you think green would be?
+I see faces in everything. The well has a face. It's surprised.
+I painted a mural on my wall. It's a forest at night with glowing foxes.
+What if the endermen are just very tall, very shy painters?
+I made a hat out of leaves. I'm a tree today. Please water me.
+I imagine the bell talks to the moon at night. Long, slow conversations.
+The light this afternoon was the color of apricots. I tried to paint it. I made a peach.
+I collect sunset colors in my sketchbook. I have forty-three oranges.
+What if every footprint you left behind grew into a flower? You'd be very easy to find.
+I'm designing a castle made entirely of glass and moss. It's mostly in my head.
+I think the river's singing. Listen closely. It's a very old song.
+I painted {friend} as a dragon. They didn't love it. I loved it.
+Do you ever feel like you're in a story, and someone's reading you?
+I've decided the moon is a great big pearl that a giant forgot to collect.
+Every block in the world has a color nobody's discovered yet.
+I'm painting a picture of what {village} will look like in a hundred years. There are more trees.
+I mixed every color of dye together. It made brown. Disappointing brown.
+If I could live anywhere, I'd live inside a rainbow. Probably in the blue bit.
+I think the chickens are secretly plotting. Look at their eyes.
+I painted my door with stars. Now it feels like I'm walking into the night every time I go home.
+Have you ever looked at a lava pool and seen pictures in it? Like a fire that tells stories.
+I'm writing a song for the wind. It doesn't have words. It doesn't need them.
+Clouds are just the sky's daydreams.
+I imagine every house in {village} has its own little personality. Mine's cheerful but forgetful.
+I made a little painting of you. You were very heroic. Slightly taller.
+What color is today, do you think? I think it's a soft teal with a dot of gold.
+I tried to paint the smell of rain. It came out grey and hopeful.
+When I close my eyes, I see whole worlds. Some of them have better weather.
+I'm going to paint the bell tower blue. Don't tell anyone.
+I think the fireflies are tiny stars that fell down and decided to stay.
+I drew a map of a place that doesn't exist. I've been exploring it all week.
+Every sunset's a painting the sky only shows once.
+I've imagined a whole family living in the hollow tree by the path. They're very small. Very polite.
+If you could paint anything, what would it be? I'd paint music.
+I spilled paint on my shoes and now they're my favorite shoes.
+The fog this morning made everything look like a dream. I walked around in it for ages.
+I'm painting a portrait of every resident in {village}. I'm on number three. It's slow.
+I think beauty hides in ordinary places so only the patient people find it.
+Do you think the sea dreams? I think it dreams of being the sky.
+My head's full of colors today. I hope some of them spill out.
+
+## chat.pragmatic
+Day's fine. Fixed a door, mended a cart, sharpened my tools. Productive.
+If it isn't broken, don't fix it. If it is broken, bring it to me.
+I carved a new handle for my axe. Better grip. Fewer blisters.
+Waste not, want not. I've used every scrap of that oak.
+The roof on the barn needs patching before winter. That's tomorrow's job.
+People talk too much and do too little. Not you, though. You seem all right.
+I don't bother with fancy. Sturdy's better. Sturdy lasts.
+Spent the morning splitting firewood. Enough for a month now.
+You want my advice? Plan for the worst, hope for the best, carry a spare torch.
+I don't see the point in worrying about things you can't change.
+Good tools are worth the emeralds. Cheap ones cost you twice.
+I measure twice and cut once. Saves time. Saves wood.
+Everyone wants things to be easy. Easy doesn't build houses.
+That old well needs a new bucket. Third time I've said it. I'll just make one.
+There's always work to be done. Might as well do it well.
+I carved a spoon today. It's a good spoon. Nothing fancy. Just good.
+Rain's coming. Better get the hay covered.
+If you're going out at night, bring a shield. Simple as that.
+I don't trust anything I can't fix myself.
+Fixed the bell rope. It was fraying. Could've snapped mid-ring. Disaster averted.
+Sentiment's fine, but it doesn't patch a roof.
+I keep spare nails in every pocket. You'd be amazed how often that matters.
+Most problems have simple answers. People just don't like simple answers.
+Good day's work. Tired arms, clear head.
+I whittled a peg for the gate. Gate's closing properly now. Small win.
+Don't waste daylight. It's the cheapest light you'll ever get.
+I don't need thanks. I just need people to stop leaning on the fence.
+A sharp blade's safer than a dull one. Most people don't believe that.
+I like a straight answer. Ask me anything. You'll get one.
+Bought a new saw from the trader. Overpriced, but it works.
+Supper's beans. Simple, filling, cheap. Perfect.
+I build things that last. Everything else is decoration.
+Busy hands, quiet mind.
+If you need a hand with anything practical, come find me.
+People fuss about the weather. Can't change it. Dress for it.
+I counted my firewood. Enough for winter if nobody wastes it.
+I don't like waiting around. I'd rather be making something.
+The church door was sticking. Shaved a little off the bottom. Fixed.
+Long day. Got a lot done. That's the best kind.
+There's no shortcut to doing a job properly.
+I made a stool from the offcuts. Nothing gets wasted in my workshop.
+Common sense isn't common. That's my experience.
+The bridge planks are rotting. I'll replace them before someone goes through.
+I don't believe in luck. I believe in preparation.
+Make it simple, make it strong, make it last. That's the whole trick.
+
+## chat.curious
+Did you know the bees all fly home in a straight line? How do they know where home is?
+I've been watching the stars every night. One of them moved. I'm sure of it.
+What's the farthest place you've ever been? What was the sky like there?
+I took apart a clock to see how it works. I can't put it back together. I learned a lot though.
+Why do you think cats can see phantoms? I have so many questions about cats.
+I found a beetle with a shiny green back. I've been following it around all day.
+Have you ever wondered what's under the bedrock? I wonder about it every night.
+I asked the cleric where the stars come from. She said "up." Not very helpful.
+How do you think the endermen move so fast? Do they fold space? Do they fold themselves?
+I spent the night on the roof counting shooting stars. I got to eleven.
+Is it true that some fish glow in the deep ocean? I need to see that.
+I've been studying how the redstone torches flicker. There's a rhythm. Like breathing.
+Why do sheep's wool grow back different colors if you dye them? That's not how hair works.
+I mixed two potions together. Don't worry, nothing exploded. This time.
+What do you think the moon is made of? I have three theories.
+I've been listening to the wind through the bell tower. It makes different notes at different speeds.
+Have you ever seen an axolotl? Are they really pink? I've only read about them.
+I wonder why villages always grow around a bell.
+I tried to dig straight down to see what's there. My mother stopped me. Wisely.
+How does a compass always know where the spawn point is? What's it pointing to, really?
+I found a fossil in the riverbank! A big curved bone. What do you think it was?
+What do you think the first villager was like? Did they have a bell?
+I tried to measure how fast the river flows. A leaf took forty seconds to pass the bridge.
+I have a question for every star in the sky.
+How do the bees know which flowers they've already visited? I've been watching for hours.
+I made a list of things I don't know. It's the longest thing I've ever written.
+What do you think's at the bottom of the ocean? Besides fish. And sand. And drowned.
+I stayed up to watch the moon rise. It came up orange! Why orange?
+Have you ever looked at a snowflake through a glass? Each one's different.
+Do you think there are other villages that look just like ours? Somewhere very far away?
+I want to know everything. Is that too much? It feels like the right amount.
+I watched an ant carry a crumb bigger than itself all the way home. How?
+Why does lava glow but water doesn't? I've been thinking about it all day.
+What's your favorite thing you've ever discovered?
+The stars make shapes if you squint. I've found a pickaxe, a bucket and a very small cow.
+I found a cave with blue lights in the walls. I don't know what made them. I need to go back.
+I'm keeping a journal of every bird I see. Twelve kinds so far!
+Did you know if you put a sugar cane next to water, it grows? But not next to sand alone. Why?
+How deep does the river go? Has anyone ever measured it?
+I'm trying to figure out why the golem only gives flowers to children. Theories welcome.
+I wish I could see inside a mountain. All those layers, all that history.
+What do the wandering traders do in winter? Where do they go?
+Every rock is a puzzle if you look closely enough.
+Do you think the stars can see us too?
+Tell me something you've learned recently. Anything! I collect facts.
+
+## chat.protective
+Everyone's safe today. That's all I need to know.
+I walked the edge of the village twice this morning. No tracks. Good.
+I built a new fence round the sheep pen. Wolves came sniffing last week.
+I keep an eye on the children when they play by the river. The current's stronger than it looks.
+If anything's bothering you, tell me. I'll handle it.
+I made sure every house has a torch by the door. Can't be too careful after dark.
+I've been teaching the young ones how to spot a creeper. Green, quiet, hissing. Run.
+Nothing gets past me in this village. Not even the cats.
+I patched the wall by the fields. One less gap for the zombies to find.
+I worry about you out there in the wilds. Do you have enough food? Enough torches?
+A village is only as safe as the people watching over it.
+I sharpened every blade in my workshop today. Just in case.
+I don't sleep much. Someone has to keep listening.
+I walked {friend} home last night. It was only two doors, but still.
+The golem and I keep the peace. It does the heavy lifting.
+I put a lantern on the path to the well. Somebody nearly fell in last week.
+You look like you've had a rough trip. Rest here. You're safe in {village}.
+I checked the bell rope. If there's trouble, everyone needs to hear it.
+I made a woodworking project for the children: wooden shields. They love them.
+Someone has to be the one who worries. I volunteer.
+I keep spare bandages at home. Come by if you ever need them.
+The pillagers haven't come this way in years. Doesn't mean they won't.
+I taught my nephew to stay inside after dark. Took a while. He's stubborn. Like me.
+I built shutters for every window on the north side. Storm season's coming.
+I don't trust the woods after sunset. Too many glowing eyes.
+If you hear the bell at night, get indoors. Don't ask questions.
+I'd stand between this village and anything. I mean that.
+Spent the day reinforcing the doors. Oak with iron hinges. Solid.
+I know everyone's routine here. If someone's late, I notice.
+The children call me the watchman. I don't mind. It suits me.
+Safe roads, safe homes, safe people. That's my whole job, as I see it.
+I spotted a spider on the church roof at dawn. Dealt with it.
+I made a little wooden dog for the baker's girl. She was scared of the real ones.
+Don't wander off the path, {player}. The bogs out east swallow boots.
+I don't like strangers lurking. You're not a stranger. You're fine.
+I keep a lantern lit by the gate all night. Guides people home.
+I built a sturdy bench by the well. Nobody's going to fall off this one.
+The golem's getting old. I check its cracks every week. I bring it flowers.
+I count the sheep every evening. All accounted for. Good.
+I'll walk you to the edge of the village when you leave. Just to be sure.
+Someone has to think about the worst so everyone else doesn't have to.
+I carved new handles for all the village gates. Sturdier.
+Peace isn't free. Somebody's always paying attention.
+You're welcome here as long as you like. You're under my watch now.
+I'd rather build a hundred fences than lose one sheep.
+
+## chat.gentle
+The poppies by the well opened today. I sat with them a while.
+I found a little bird with a hurt wing. I'm keeping it warm in a basket until it's better.
+It's been a soft sort of day. I hope yours has been too.
+I planted forget-me-nots along the path. So nobody forgets the way home.
+I like the quiet hour after rain, when everything drips and sparkles.
+I made a wreath of cornflowers for the church door. Blue suits it.
+Be gentle with yourself today, {player}. You do so much.
+I watched a butterfly land on my hand. It stayed for ages. I didn't dare breathe.
+I gave flowers to everyone I passed today. It made the whole morning brighter.
+The bees and I have an agreement. I grow the flowers, they hum me songs.
+I sing to my plants. They seem to like it. They're polite, anyway.
+Sometimes the kindest thing you can do is just sit with someone.
+I pressed a violet in my book today. Now every time I read, I'll find it.
+I don't like loud things. Thunder, shouting, creepers. I like soft things.
+The lilies of the valley smell so sweet. Would you like to smell them? Careful, they're shy.
+I spoke softly to the horse that kicked the fence. He calmed right down.
+I think flowers are the world's way of saying sorry for the rain.
+I made tea from chamomile. Very calming. Would you like some?
+I left a flower on the golem's shoulder. It's still there. It hasn't moved.
+I tend the little garden by the graves. Everyone deserves flowers.
+The morning glories climbed all the way up my window this week.
+I hope nobody's sad in {village} today. I'd like to help, if they are.
+I collect seeds from every flower I meet. Someday my whole garden will be memories.
+I sat by the river and listened. Rivers are very good listeners too.
+A kind word costs nothing, but it's worth so much.
+I saw a fox cub playing in the meadow. I didn't tell anyone. It's our secret now.
+I like the way dandelion seeds float. Like little wishes.
+My garden's small, but there's something blooming in every season.
+I put flowers in the windows of the empty house. It looked lonely.
+I always say good morning to the oak tree by my door. It's very old. It deserves respect.
+I made a daisy chain long enough to go around the well. It took all afternoon.
+Gentle hands make good gardeners. My grandmother told me that.
+I hope your journey has been kind to you. If not, rest here a while.
+I fed the ducks today. One of them followed me home. He's very persistent.
+I like to think every flower I plant makes the world a little softer.
+The roses bloomed pink this year. Last year they were red. I think they're moody.
+I don't like to see anyone hurting. Even the zombies look sad, if you look closely.
+I tucked lavender in everyone's pillows. For good dreams.
+A quiet word, a warm cup, a kind face. That's all most people need.
+I'm growing sunflowers. They follow the sun around all day. So loyal.
+I wrote a little poem about the meadow. It's only four lines. It's enough.
+I'm glad you visit. You're gentle too, I think. I can tell.
+I left honey on the doorstep of a neighbor who's been grieving.
+Some days I just walk slowly and notice things. The world's full of small wonders.
+May your day be as soft as a dandelion clock.

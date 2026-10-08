@@ -1,0 +1,134 @@
+{
+  "id": "t177_salt_boilers_steam_damp_shirt",
+  "kind": "top",
+  "name": "Salt Boiler's Steam-Damp Shirt",
+  "gender": "male",
+  "texture": "tops/t177_salt_boilers_steam_damp_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "relaxed",
+    "sea",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_salt_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.55,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_salt_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "salt_rake_handle",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        4.6,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -0.5,
+        -4.4,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "salt_rake_board",
+      "bone": "TORSO",
+      "pivot": [
+        0.4,
+        4.6,
+        3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        14
+      ],
+      "origin": [
+        -2.0,
+        7.0,
+        -0.6
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "An open-necked linen shirt clinging dark with steam from the pans, sleeves rolled into crusts of white salt, and the long wooden salt rake slung across the back."
+}

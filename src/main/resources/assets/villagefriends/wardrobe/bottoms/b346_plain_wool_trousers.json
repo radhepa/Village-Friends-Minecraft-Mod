@@ -1,0 +1,75 @@
+{
+  "id": "b346_plain_wool_trousers",
+  "kind": "bottom",
+  "name": "Plain Wool Trousers",
+  "gender": "male",
+  "texture": "bottoms/b346_plain_wool_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "waist_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_belt_tongue",
+      "bone": "TORSO",
+      "pivot": [
+        1.6,
+        10.2,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "description": "Straight, well-cut wool trousers with stitched side seams, a narrow belt whose metal-tipped tongue hangs long, and soft turnshoes."
+}

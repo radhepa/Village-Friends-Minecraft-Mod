@@ -1,0 +1,279 @@
+{
+  "id": "tf173_illuminators_gold_leaf_smock",
+  "kind": "top",
+  "name": "Illuminator's Gold-Leaf Smock",
+  "gender": "female",
+  "texture": "tops/tf173_illuminators_gold_leaf_smock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "relaxed",
+    "whimsical",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_oversleeve",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_oversleeve",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        2.8,
+        -2.5
+      ],
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "brush_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.5,
+        2.7,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "brush_1",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        2.4000000000000004,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        47,
+        0
+      ]
+    },
+    {
+      "id": "cord",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "leaf_book",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0.4,
+        -0.1
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        29,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "leaf_book_string",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        36,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "burnisher",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.4,
+        -0.1
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        41,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "burnisher_tooth",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        9.0,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        3.6,
+        -0.1
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        13
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A smocked linen smock flecked with gold leaf, white tied oversleeves, brushes in the pocket and a gold-leaf book on a cord."
+}

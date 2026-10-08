@@ -1,0 +1,338 @@
+{
+  "id": "t199_hobelars_light_riding_jack",
+  "kind": "top",
+  "name": "Hobelar's Light Riding Jack",
+  "gender": "male",
+  "texture": "tops/t199_hobelars_light_riding_jack.png",
+  "extrasHeight": 32,
+  "tags": [
+    "martial",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_riding_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "left_riding_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        7.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.2
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        -2.5
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.07
+    },
+    {
+      "id": "sword_grip",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        2.5,
+        -2.0,
+        -0.8
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "sword_guard",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.5,
+        -0.40000000000000036,
+        -0.8
+      ],
+      "size": [
+        3,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "buckler",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.0,
+        -0.20000000000000107,
+        -1.9
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        43,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "buckler_boss",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.4,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        1.0,
+        0.7999999999999989,
+        -2.9
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        54,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "riding_skirt_front_right",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.3,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "riding_skirt_front_left",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.3,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        11,
+        15
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "riding_skirt_back_right",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.3,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        22,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "riding_skirt_back_left",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.3,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        4,
+        1
+      ],
+      "uv": [
+        33,
+        15
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A light horseman's fitted leather jack over quilted cloth sleeves, laced up the side and split front and back for the saddle, with flared riding cuffs and a small buckler hung over the sword hilt at his left hip."
+}

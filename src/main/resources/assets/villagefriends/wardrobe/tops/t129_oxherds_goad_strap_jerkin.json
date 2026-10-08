@@ -1,0 +1,279 @@
+{
+  "id": "t129_oxherds_goad_strap_jerkin",
+  "kind": "top",
+  "name": "Oxherd's Goad-Strap Jerkin",
+  "gender": "male",
+  "texture": "tops/t129_oxherds_goad_strap_jerkin.png",
+  "extrasHeight": 32,
+  "tags": [
+    "rugged",
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "leather_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        -0.7,
+        -2.9
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "strap_ring",
+      "bone": "TORSO",
+      "pivot": [
+        -1.0,
+        3.6,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        9
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "ox_goad",
+      "bone": "TORSO",
+      "pivot": [
+        0.3,
+        6.4,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -0.5,
+        -6.0,
+        -0.5
+      ],
+      "size": [
+        1,
+        12,
+        1
+      ],
+      "uv": [
+        29,
+        9
+      ]
+    },
+    {
+      "id": "goad_spud",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        11.3,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ]
+    },
+    {
+      "id": "goad_loop_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.55,
+        3.2,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        41,
+        9
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "goad_loop_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.8,
+        7.2,
+        3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        46,
+        9
+      ],
+      "inflate": 0.15
+    },
+    {
+      "id": "jerkin_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        23
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "jerkin_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        21,
+        23
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sleeved wool jerkin under a stitched leather shoulder yoke, a broad strap with a brass ring across the chest, and a long iron-tipped ox goad with its plough-scraping spud held across the back."
+}

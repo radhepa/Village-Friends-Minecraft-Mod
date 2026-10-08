@@ -1,0 +1,160 @@
+{
+  "id": "bf215_mushroom_gatherers_leaf_litter_skirt",
+  "kind": "bottom",
+  "name": "Mushroom Gatherer's Leaf-Litter Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf215_mushroom_gatherers_leaf_litter_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "long_skirt",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        11,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        10,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        10,
+        5
+      ],
+      "uv": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "waist_forage_bag",
+      "bone": "TORSO",
+      "pivot": [
+        -6.5,
+        9.6,
+        -0.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -1.0
+      ],
+      "size": [
+        2,
+        3,
+        2
+      ],
+      "uv": [
+        13,
+        16
+      ]
+    }
+  ],
+  "description": "An ankle-length wool skirt embroidered with fallen leaves drifting thicker toward the hem, a drawstring forage bag at the hip and wooden clogs."
+}

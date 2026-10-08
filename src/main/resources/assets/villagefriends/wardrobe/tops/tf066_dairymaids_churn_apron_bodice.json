@@ -1,0 +1,194 @@
+{
+  "id": "tf066_dairymaids_churn_apron_bodice",
+  "kind": "top",
+  "name": "Dairymaid's Churn Apron Bodice",
+  "gender": "female",
+  "texture": "tops/tf066_dairymaids_churn_apron_bodice.png",
+  "extrasHeight": 32,
+  "tags": [
+    "apron",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "apron_band",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.2,
+        8.4,
+        -3.25
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "apron",
+      "bone": "TORSO",
+      "pivot": [
+        0.0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "butter_hand_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -3.8,
+        1.0,
+        -1.05
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        54,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "butter_hand_grip_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -3.3,
+        -1.0,
+        -1.05
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "butter_hand_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1.6,
+        1.0,
+        -1.05
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        5,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "butter_hand_grip_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.0,
+        -3.15
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -1.1,
+        -1.0,
+        -1.05
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        12,
+        13
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long white churn apron pinned high on the bodice, banded elbow sleeves over bare forearms and two ribbed butter paddles standing in the apron pocket."
+}

@@ -1,0 +1,277 @@
+{
+  "id": "bf116_harbour_traders_coin_belt_skirt",
+  "kind": "bottom",
+  "name": "Harbour Trader's Coin-Belt Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf116_harbour_traders_coin_belt_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "long_skirt",
+    "skirt",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "waist_coin_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        9.2,
+        -3.05
+      ],
+      "size": [
+        11,
+        2,
+        6
+      ],
+      "uv": [
+        13,
+        18
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "waist_purse_0",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        9.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.4,
+        -1.2
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        48,
+        18
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "waist_purse_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.2,
+        9.6,
+        -3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        1.4,
+        -1.2
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        55,
+        18
+      ],
+      "inflate": 0.1,
+      "motion": "flap_front"
+    },
+    {
+      "id": "right_shoe_point",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        36
+      ]
+    },
+    {
+      "id": "left_shoe_point",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        9,
+        36
+      ]
+    }
+  ],
+  "description": "A long overskirt parted over a banded underskirt, a broad coin-studded belt with two heavy purses, and pointed shoes."
+}

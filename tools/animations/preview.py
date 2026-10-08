@@ -136,7 +136,7 @@ class Resident:
     def __init__(self, index=0):
         garments = W.build_all()
         palettes, hairs = W.load_palettes(), W.load_hair_colors()
-        catalog = json.loads((W.TOOL / "outfits.json").read_text())
+        catalog = W.load_templates()
         outfit = catalog["outfits"][index % len(catalog["outfits"])]
         hair = [g for g in garments.values() if g.kind == "hair"][index * 7 % 30]
         top, bottom = garments[outfit["top"]], garments[outfit["bottom"]]

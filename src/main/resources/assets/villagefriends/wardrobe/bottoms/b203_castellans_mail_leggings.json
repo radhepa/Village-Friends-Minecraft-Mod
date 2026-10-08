@@ -1,0 +1,135 @@
+{
+  "id": "b203_castellans_mail_leggings",
+  "kind": "bottom",
+  "name": "Castellan's Mail Leggings",
+  "gender": "male",
+  "texture": "bottoms/b203_castellans_mail_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "martial",
+    "sturdy"
+  ],
+  "requires": [
+    "martial",
+    "rugged"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_knee_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "left_knee_roll",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.16
+    },
+    {
+      "id": "right_pointed_toe",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "left_pointed_toe",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        11.0,
+        -2.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        51,
+        0
+      ]
+    }
+  ],
+  "description": "Riveted mail leggings from hip to ankle, a fat quilted roll padding each knee, and pointed leather shoes buckled across the ankle."
+}

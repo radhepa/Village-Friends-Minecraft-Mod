@@ -1,0 +1,136 @@
+{
+  "id": "t358_tabard_vest_striped_shirt",
+  "kind": "top",
+  "name": "Tabard Vest over Striped Shirt",
+  "gender": "male",
+  "texture": "tops/t358_tabard_vest_striped_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "whimsical"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "tabard_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "tabard_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.2,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        4,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "hip_tie_0",
+      "bone": "TORSO",
+      "pivot": [
+        -3.4,
+        9.0,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        -8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        30,
+        0
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "hip_tie_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        9.0,
+        -2.45
+      ],
+      "rotation": [
+        0,
+        0,
+        8
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        35,
+        0
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A plain tabard vest open at the sides and tied at the hips, its square panels hanging to the upper thigh, over a cheerful shirt banded in broad stripes down to the cuffs."
+}

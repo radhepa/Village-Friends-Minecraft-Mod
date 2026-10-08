@@ -1,0 +1,354 @@
+{
+  "id": "b356_belted_hose_low_shoes",
+  "kind": "bottom",
+  "name": "Belted Hose and Low Shoes",
+  "gender": "male",
+  "texture": "bottoms/b356_belted_hose_low_shoes.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "slim"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_leg_belt_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_buckle_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.55,
+        5.1,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_belt_end_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.65,
+        5.6,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_belt_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        31,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_buckle_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.55,
+        8.7,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_belt_end_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.65,
+        9.2,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        0
+      ]
+    },
+    {
+      "id": "left_leg_belt_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        4.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "left_leg_buckle_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.55,
+        5.1,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ]
+    },
+    {
+      "id": "left_leg_belt_end_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.65,
+        5.6,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        26,
+        7
+      ]
+    },
+    {
+      "id": "left_leg_belt_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        8.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        31,
+        7
+      ]
+    },
+    {
+      "id": "left_leg_buckle_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.55,
+        8.7,
+        -0.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        52,
+        7
+      ]
+    },
+    {
+      "id": "left_leg_belt_end_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        2.65,
+        9.2,
+        0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        57,
+        7
+      ]
+    }
+  ],
+  "description": "Close wool hose seamed up the back and held by two little buckled leather belts round each leg, one under the knee and one above the ankle, over low dark shoes."
+}

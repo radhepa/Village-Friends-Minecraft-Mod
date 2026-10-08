@@ -1,0 +1,129 @@
+{
+  "id": "b222_barber_surgeons_strapped_trousers",
+  "kind": "bottom",
+  "name": "Barber-Surgeon's Strapped Trousers",
+  "gender": "male",
+  "texture": "bottoms/b222_barber_surgeons_strapped_trousers.png",
+  "extrasHeight": 16,
+  "tags": [
+    "sturdy",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "lancet_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        4,
+        3
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "lancet_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.6,
+        -1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    },
+    {
+      "id": "lancet_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.6,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        14,
+        0
+      ]
+    },
+    {
+      "id": "lancet_2",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        -2.5,
+        0.6,
+        1.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        -1,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        19,
+        0
+      ]
+    }
+  ],
+  "description": "Close twill trousers buckled tight below the knee and at the ankle, a rolled leather case of lancets and razors strapped to the right thigh, over low shoes."
+}

@@ -1,0 +1,225 @@
+# Where they come from (home.<villager type>) and what's going on around them (village.<tag>).
+
+## home.plains
+The plains go on forever. Grass and sky, grass and sky. I love it.
+We get every kind of weather in the plains. Sometimes in one afternoon.
+Out here you can see a storm coming from a day away.
+Horses run wild across the plains. Beautiful to watch.
+I like flat land. You always know what's coming.
+Sunflowers grow in fields out here. They all turn to follow the sun.
+Plains folk are simple folk. Bread, sheep, and a good fence.
+The wind across the grass sounds like the sea, they say. I've never seen the sea.
+Every plains village has a bell in the middle. Ours rings the loudest. I'm sure of it.
+You can walk for miles here and only see rabbits.
+Our soil's the best for wheat. Golden fields as far as you can see.
+I was born under a sky this big. I'd feel squashed anywhere else.
+The plains are gentle, mostly. Except for the zombies at night.
+I like the smell of rain on the grass out here.
+There's always a breeze in the plains. Good for drying washing.
+We have the friendliest bees in the plains. Lots of flowers.
+A plains sunset is the widest sunset there is.
+Oak trees here grow round and lazy. Like they've got nowhere to be.
+Travelers say plains villages all look the same. They don't look closely.
+I've lived on the plains all my life. Every hill's a friend.
+
+## home.desert
+The desert's hot by day and cold by night. You learn to love both.
+Sand gets everywhere. In your boots, your bed, your bread.
+We build with sandstone. Cool inside, even at noon.
+Water's precious here. We never waste a drop.
+The stars in the desert are the brightest in the world.
+Cactus is good for green dye. And for not sitting on.
+Husks wander the dunes at night. Like zombies, but sunburnt.
+Desert folk wear their scarves high against the sand.
+We grow sugar cane by the oasis and trade it for everything else.
+The dunes shift every year. The village never moves.
+I've heard the desert temples hide treasure. And traps.
+The camels are my favorite. Tall, patient, a little smug.
+In the desert, shade is a gift and a friend is a well.
+Sandstorms are rare, but you never forget one.
+We don't get rain here. When we do, everyone dances.
+The heat makes everyone slow and kind.
+Our houses have flat roofs. We sleep up there on hot nights.
+The desert looks empty, but it's full of life if you look.
+A good well's the heart of a desert village. Ours is deep and sweet.
+Sunrise over the dunes turns everything gold.
+
+## home.savanna
+The savanna's golden and wide. Acacia trees like umbrellas.
+Our houses are acacia wood. Orange inside. Warm and bright.
+Horses and llamas roam the savanna. Nobody owns them. Everyone loves them.
+It never rains much here, but when it does, the grass turns green overnight.
+The plateaus rise up like tables for giants.
+The sunsets on the savanna are orange and pink and purple all at once.
+We grow wheat on the flats and graze sheep on the hills.
+Armadillos wander through sometimes. Little armored fellows.
+The acacia trees lean every which way. I think they're dancing.
+Savanna folk are tough. Hot sun, dry ground, big hearts.
+At night you can hear the wind through the long grass.
+Our village sits on a high plateau. Best view in the world.
+The ground cracks in the dry season. We wait for the rains.
+Every savanna house has a good shady porch.
+I love the smell of dry grass in the heat.
+Llamas come down from the hills to drink at our well.
+The sky here is enormous. It makes you feel very small and very free.
+We trade acacia wood for things we can't grow.
+The cartographer says our plateau's on three different maps.
+Living on the savanna teaches you patience. The rain comes when it comes.
+
+## home.snow
+Winter lasts most of the year here. We're used to it.
+Our houses are spruce and stone. Thick walls, warm hearths.
+Snow's lovely to look at and terrible to shovel.
+The polar bears wander close sometimes. We leave them alone.
+We keep the fires going day and night in the cold months.
+Ice spikes stand on the plains like frozen towers. Beautiful and dangerous.
+Strays wander out here. Skeletons that shoot slowness arrows. Brr.
+Snow villages are close-knit. You have to be, in the cold.
+Nothing tastes better than hot stew after a day in the snow.
+The frozen rivers are perfect for fishing through the ice.
+We wear three layers and still feel the cold.
+The quiet after a snowfall is the most peaceful thing I know.
+Igloos dot the snowy plains. Some of them have secrets underneath, they say.
+Our children learn to walk on ice before they learn to run.
+Powder snow can swallow you whole. Mind your step.
+The northern lights dance over us some nights. Or I dream they do.
+Snow golems are the only golems that like it here.
+We store food all summer for the long winter.
+Every snow village has a good cobbler. Boots matter here.
+When the sun comes out on fresh snow, it's like the world's made of diamonds.
+
+## home.taiga
+The taiga smells of pine needles and woodsmoke.
+Our houses are spruce, dark and sturdy. Built to last.
+Wolves howl in the forest at night. They're mostly harmless. Mostly.
+Sweet berries grow wild here. Prickly, but delicious.
+The foxes come right up to the houses sometimes. Bold little things.
+The spruce trees grow so tall you can't see their tops.
+Taiga folk are quiet, steady people. Like the trees.
+Ferns and mossy boulders everywhere. It's very green.
+The rain here is soft and constant. Everything's damp and alive.
+We chop spruce for houses and pinecones for the fire.
+Mushrooms grow in the shade of the old trees. Some are tasty. Some aren't.
+In winter, the taiga turns white and silent.
+The old growth forest past the hill has trees older than anyone remembers.
+Our pumpkin patches do well here. Cool weather, rich soil.
+The foxes steal our chickens. We've come to an arrangement. They still steal the chickens.
+A taiga village feels hidden. Safe, among the trees.
+The smell of pine is the smell of home.
+We trade spruce logs and furs for things from the south.
+The forest is full of sounds if you listen. Owls, wolves, wind.
+I like the dark of the forest. It's cozy, not scary.
+
+## home.jungle
+The jungle's loud day and night. Birds, frogs, rustling leaves.
+It rains here more than anywhere. Everything's green and dripping.
+Parrots live in the trees. They copy every sound they hear.
+Bamboo grows faster than you can cut it.
+Cocoa grows on the jungle trees. Cocoa means cookies.
+Ocelots slink through the undergrowth. Shy, beautiful cats.
+The vines grow everywhere. On the houses, the trees, me, if I stand still.
+They say there's a temple deep in the jungle with a puzzle inside.
+The heat and the damp make everything grow huge. Even the melons.
+Pandas wander in from the bamboo groves. They're very lazy. Very cute.
+Jungle trees are so tall they make their own weather.
+You can get lost in the jungle in three steps.
+We build our houses up on stilts sometimes, away from the wet ground.
+Melons grow wild here. Sweet and cool on a hot day.
+The jungle never sleeps. Even at night it hums.
+The leaves are so thick, the forest floor's always twilight.
+I love the smell of the jungle after rain. Earthy and alive.
+The parrots here know rude songs. Don't ask who taught them.
+Jungle folk are cheerful folk. All this green is good for the spirit.
+There's more life in one jungle tree than in a whole plains field.
+
+## home.swamp
+The swamp's murky and misty. But it's home.
+Frogs everywhere! Little ones, big ones, all singing at night.
+Witches live in huts out in the water. We don't visit.
+Slimes bounce out of the swamp on full moons. Squishy and annoying.
+Lily pads make good stepping stones if you're careful.
+The trees here grow right out of the water. Their roots hang like curtains.
+Mud's a way of life in the swamp.
+The mangroves tangle so thick you can barely row a boat through.
+Swamp water's dark but the fish are fat.
+At night the fireflies light up the whole marsh.
+We build our houses on raised ground. Wet feet are no fun.
+Mushrooms grow everywhere in the swamp. Brown ones, red ones.
+The swamp smells of mud and growing things. You get used to it.
+Swamp folk are tough and quiet. And very good at not slipping.
+The frogs here change color depending on where they hatched. Isn't that something?
+The fog rolls in every evening. Spooky, but pretty.
+Bogged skeletons wander the marsh. They shoot poison arrows. Nasty.
+Blue orchids grow only in swamps. My favorite flower.
+I love the sound of rain on the swamp water. Like a thousand tiny bells.
+The swamp's not pretty to everyone. It's pretty to me.
+
+## village.golem
+The golem's standing right over there. Doesn't it look noble?
+Our golem's been walking the same path for years. It knows every stone.
+I gave the golem a poppy once. It held it all day.
+The golem's cracked on one side. I hope someone has iron to patch it.
+Don't hit any villagers near the golem. It takes that very personally.
+The golem's the best neighbor. Quiet, strong, protective.
+I feel safer with the golem nearby. Silly, but true.
+The golem stopped and looked at the sunset with me last night.
+When the golem's near, the zombies stay away.
+The golem picked up the baker's son and spun him around. He laughed for an hour.
+Did you know golems are made when villagers are scared together? Funny, a protector born of fear.
+I polish the golem's head sometimes when it's not looking. It doesn't seem to mind.
+
+## village.cat
+There's a cat nearby. Creepers hate cats, you know.
+That cat's been following me all day. I think it wants my fish.
+The village cats keep the phantoms away. Good kitties.
+I've named that cat Biscuit. I don't know if it has another name.
+Cats sleep on beds when you're not looking. And when you are.
+That cat brought me a present this morning. A dead rabbit. Lovely thought.
+A village with cats is a village without creepers. Mostly.
+I like cats. They don't need you, but they choose you anyway.
+That cat's got the right idea. Sun, nap, repeat.
+The cats rule this village, really. We just live here.
+
+## village.trader
+The wandering trader's in town! Mind the llamas, they spit.
+That trader's got the strangest goods. Saplings from far away, glowing ink.
+I always wonder where the wandering trader sleeps.
+The trader's prices are steep, but sometimes they have something you can't get anywhere else.
+Those llamas are nervous. Don't make any sudden movements.
+The trader drinks a potion and goes invisible at night. Very mysterious.
+I bought a strange flower from the trader once. It still hasn't bloomed.
+The trader doesn't say much. Just "hm" and "hrm."
+If you're looking for blue ice or sea pickles, the trader's your best bet.
+The llamas chewed my washing line last time the trader came.
+
+## village.children
+The children are out playing. Listen to them shriek!
+Those little ones run around all day. Where do they get the energy?
+Watch your step, the children are playing tag.
+The children of {village} keep us all young.
+One of those children asked me if the moon is made of cheese.
+The kids are building something by the haystacks. A fort, I think.
+I love hearing the children laugh. It's the sound of a happy village.
+The children follow the golem around like ducklings.
+Mind your ankles, there are small people everywhere.
+When I was that small, I thought the bell was a giant's hat.
+
+## village.friends
+You've become such a regular here. It's lovely.
+The village feels different when you're around. Brighter.
+Half of {village} knows your name now.
+You're practically a resident at this point.
+{neighbor} asked about you yesterday. You're popular.
+We should get you a house here. Then you'd never have to leave.
+You've got friends all over {village} now. I'm proud to be one.
+People smile when they see you coming. That's a good sign.
+
+## village.newcomers
+Everyone's curious about you. Don't mind the staring.
+The children think you're a knight from a faraway land.
+{neighbor} asked me who you were. I said a friend. Was that right?
+Get to know a few of us and you'll feel at home in no time.
+News travels fast here. By supper, everyone will know you visited.
+The village takes a while to warm to new faces. I'm faster than most.
+Say hello to the others too. We're a friendly lot, under it all.
+I like meeting new people. We don't get many here.

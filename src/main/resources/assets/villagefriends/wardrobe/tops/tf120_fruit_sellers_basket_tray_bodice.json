@@ -1,0 +1,246 @@
+{
+  "id": "tf120_fruit_sellers_basket_tray_bodice",
+  "kind": "top",
+  "name": "Fruit Seller's Basket-Tray Bodice",
+  "gender": "female",
+  "texture": "tops/tf120_fruit_sellers_basket_tray_bodice.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "whimsical",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_ruffle",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "left_sleeve_ruffle",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.0,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "fruit_tray",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.8,
+        -4.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        0,
+        -2
+      ],
+      "size": [
+        7,
+        3,
+        4
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "fruit_0",
+      "bone": "TORSO",
+      "pivot": [
+        -2.2,
+        6.2,
+        -3.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "fruit_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        6.0,
+        -3.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        9,
+        8
+      ]
+    },
+    {
+      "id": "fruit_2",
+      "bone": "TORSO",
+      "pivot": [
+        2.2,
+        6.3,
+        -3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        18,
+        8
+      ]
+    },
+    {
+      "id": "fruit_3",
+      "bone": "TORSO",
+      "pivot": [
+        -1.2,
+        6.4,
+        -5.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        27,
+        8
+      ]
+    },
+    {
+      "id": "fruit_4",
+      "bone": "TORSO",
+      "pivot": [
+        1.2,
+        6.2,
+        -5.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        -1,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        36,
+        8
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A sweetheart bodice with ruffled elbow sleeves and a wide wicker tray of apples and pears carried at the waist on shoulder straps."
+}

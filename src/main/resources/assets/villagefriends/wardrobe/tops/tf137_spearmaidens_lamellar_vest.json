@@ -1,0 +1,308 @@
+{
+  "id": "tf137_spearmaidens_lamellar_vest",
+  "kind": "top",
+  "name": "Spearmaiden's Lamellar Vest",
+  "gender": "female",
+  "texture": "tops/tf137_spearmaidens_lamellar_vest.png",
+  "extrasHeight": 32,
+  "tags": [
+    "armor",
+    "martial"
+  ],
+  "requires": [
+    "sturdy"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_lamellar_guard",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "left_lamellar_guard",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        -2.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        8.4,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "spear_shaft",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -0.5,
+        -17,
+        -0.5
+      ],
+      "size": [
+        1,
+        17,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ]
+    },
+    {
+      "id": "spear_heel",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -0.5,
+        -0.4,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        34,
+        10
+      ],
+      "inflate": 0.1
+    },
+    {
+      "id": "spear_socket",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -0.5,
+        -18.4,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        39,
+        10
+      ],
+      "inflate": 0.12
+    },
+    {
+      "id": "spear_tassel",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -1.0,
+        -16.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        44,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "spear_blade",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -1.0,
+        -21.2,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        53,
+        10
+      ]
+    },
+    {
+      "id": "spear_tip",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -0.5,
+        -23.2,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        60,
+        10
+      ]
+    },
+    {
+      "id": "spear_sling_loop",
+      "bone": "TORSO",
+      "pivot": [
+        -2.4,
+        10.6,
+        3.25
+      ],
+      "rotation": [
+        0.0,
+        0,
+        30.96
+      ],
+      "origin": [
+        -1.0,
+        -9.0,
+        -1.0
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        29
+      ],
+      "inflate": 0.05
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A vest of small laced lamellar plates over a wool tunic, with lamellar shoulder guards, leather bracers and a leaf-bladed spear slung across her back."
+}

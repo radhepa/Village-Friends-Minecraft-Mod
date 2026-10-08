@@ -1,0 +1,251 @@
+{
+  "id": "bf165_canoness_linen_rochet_skirt",
+  "kind": "bottom",
+  "name": "Canoness's Linen Rochet Skirt",
+  "gender": "female",
+  "texture": "bottoms/bf165_canoness_linen_rochet_skirt.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "holy",
+    "long_skirt",
+    "skirt"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        12,
+        1
+      ],
+      "uv": [
+        23,
+        0
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        5
+      ],
+      "origin": [
+        0,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        46,
+        0
+      ]
+    },
+    {
+      "id": "skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -5
+      ],
+      "origin": [
+        -1,
+        0,
+        -2.5
+      ],
+      "size": [
+        1,
+        12,
+        5
+      ],
+      "uv": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "rochet_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        0,
+        -0.08
+      ],
+      "size": [
+        11,
+        7,
+        1
+      ],
+      "uv": [
+        13,
+        18
+      ],
+      "inflate": 0.04,
+      "motion": "flap_front"
+    },
+    {
+      "id": "rochet_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.8,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.5,
+        0,
+        0.08
+      ],
+      "size": [
+        11,
+        7,
+        1
+      ],
+      "uv": [
+        38,
+        18
+      ],
+      "inflate": 0.04,
+      "motion": "flap_back"
+    },
+    {
+      "id": "rochet_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        6
+      ],
+      "origin": [
+        -0.4,
+        0,
+        -2.7
+      ],
+      "size": [
+        1,
+        7,
+        5
+      ],
+      "uv": [
+        0,
+        36
+      ],
+      "inflate": 0.04
+    },
+    {
+      "id": "rochet_left",
+      "bone": "TORSO",
+      "pivot": [
+        5.1,
+        9.8,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -6
+      ],
+      "origin": [
+        -0.6,
+        0,
+        -2.7
+      ],
+      "size": [
+        1,
+        7,
+        5
+      ],
+      "uv": [
+        13,
+        36
+      ],
+      "inflate": 0.04
+    }
+  ],
+  "description": "A knee-length white linen rochet, finely pleated and lace-edged, over a dark floor-length cassock skirt."
+}

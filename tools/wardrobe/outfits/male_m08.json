@@ -1,0 +1,34 @@
+{
+  "outfits": [
+    {"id": "m_byzantine_notable", "name": "Byzantine Notable", "top": "t296_byzantine_clavi_tunic", "bottom": "b296_byzantine_embroidered_leg_wraps"},
+    {"id": "m_andalusian_silk_merchant", "name": "Andalusian Silk Merchant", "top": "t297_andalusian_silk_jubba", "bottom": "b297_andalusian_pleated_saraweel"},
+    {"id": "m_persian_qaba_scholar", "name": "Persian Scholar", "top": "t298_persian_qaba_wrap_coat", "bottom": "b298_persian_tapered_trousers_and_boots"},
+    {"id": "m_polish_zupan_noble", "name": "Polish Nobleman", "top": "t299_polish_zupan_long_coat", "bottom": "b299_polish_red_riding_boots"},
+    {"id": "m_hungarian_hussar", "name": "Hungarian Hussar", "top": "t300_hungarian_frogged_dolman", "bottom": "b300_hungarian_braided_breeches"},
+    {"id": "m_basque_shepherd", "name": "Basque Shepherd", "top": "t301_basque_wool_shepherds_jacket", "bottom": "b301_basque_abarka_sandals_and_trousers"},
+    {"id": "m_welsh_bowman", "name": "Welsh Bowman", "top": "t302_welsh_wool_brat", "bottom": "b302_welsh_archers_one_shoe_leggings"},
+    {"id": "m_breton_piper", "name": "Breton Piper", "top": "t303_breton_embroidered_chupenn_vest", "bottom": "b303_breton_bragou_braz"},
+    {"id": "m_sicilian_market_trader", "name": "Sicilian Market Trader", "top": "t304_sicilian_striped_market_tunic", "bottom": "b304_sicilian_rope_soled_trousers"},
+    {"id": "m_venetian_merchant", "name": "Venetian Merchant", "top": "t305_venetian_merchants_vesta", "bottom": "b305_venetian_calze_hose"},
+    {"id": "m_alpine_herdsman", "name": "Alpine Herdsman", "top": "t306_alpine_herdsmans_loden_jacket", "bottom": "b306_alpine_herdsmans_leather_breeches"},
+    {"id": "m_bohemian_villager", "name": "Bohemian Villager", "top": "t307_bohemian_embroidered_shirt", "bottom": "b307_bohemian_felt_leggings"},
+    {"id": "m_novgorod_townsman", "name": "Novgorod Townsman", "top": "t308_novgorod_side_button_shirt", "bottom": "b308_novgorod_boot_tucked_trousers"},
+    {"id": "m_song_scholar", "name": "Song Scholar", "top": "t309_song_scholars_hanfu_robe", "bottom": "b309_hanfu_wide_trousers_and_cloth_shoes"}
+  ],
+  "professions": {
+    "MERCHANT": ["m_byzantine_notable", "m_andalusian_silk_merchant", "m_persian_qaba_scholar", "m_polish_zupan_noble", "m_sicilian_market_trader", "m_venetian_merchant", "m_novgorod_townsman"],
+    "CLERIC": ["m_byzantine_notable"],
+    "NONE": ["m_byzantine_notable", "m_bohemian_villager", "m_novgorod_townsman"],
+    "APOTHECARY": ["m_andalusian_silk_merchant"],
+    "SCHOLAR": ["m_persian_qaba_scholar", "m_song_scholar"],
+    "KNIGHT": ["m_polish_zupan_noble", "m_hungarian_hussar"],
+    "BARD": ["m_hungarian_hussar", "m_breton_piper", "m_bohemian_villager"],
+    "SHEPHERD": ["m_basque_shepherd", "m_welsh_bowman", "m_alpine_herdsman"],
+    "FARMER": ["m_basque_shepherd", "m_sicilian_market_trader", "m_alpine_herdsman"],
+    "ARCHER": ["m_welsh_bowman"],
+    "FISHERMAN": ["m_breton_piper"],
+    "TAILOR": ["m_venetian_merchant"],
+    "LIBRARIAN": ["m_song_scholar"],
+    "PAINTER": ["m_song_scholar"]
+  }
+}

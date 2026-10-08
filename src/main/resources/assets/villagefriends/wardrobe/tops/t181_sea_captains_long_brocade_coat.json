@@ -1,0 +1,307 @@
+{
+  "id": "t181_sea_captains_long_brocade_coat",
+  "kind": "top",
+  "name": "Sea Captain's Long Brocade Coat",
+  "gender": "male",
+  "texture": "tops/t181_sea_captains_long_brocade_coat.png",
+  "extrasHeight": 48,
+  "tags": [
+    "fancy",
+    "sea",
+    "tailored"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_great_cuff",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "left_great_cuff",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        5.6,
+        -2.5
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.18
+    },
+    {
+      "id": "lace_jabot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.2,
+        -2.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "sword_belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.2,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        10
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "spyglass_tube",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.6,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0.6,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "spyglass_lens",
+      "bone": "TORSO",
+      "pivot": [
+        2.6,
+        9.6,
+        -3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1,
+        4.6,
+        -1
+      ],
+      "size": [
+        2,
+        2,
+        2
+      ],
+      "uv": [
+        34,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        43,
+        10
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "coat_skirt_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        9,
+        1
+      ],
+      "uv": [
+        0,
+        21
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "coat_skirt_right",
+      "bone": "TORSO",
+      "pivot": [
+        -4.5,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        8,
+        4
+      ],
+      "uv": [
+        21,
+        21
+      ]
+    },
+    {
+      "id": "coat_skirt_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.5,
+        11.2,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -2.0
+      ],
+      "size": [
+        1,
+        8,
+        4
+      ],
+      "uv": [
+        32,
+        21
+      ]
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A long, full-skirted brocade coat to the calf, edged in braid, with great turned cuffs, a lace jabot at the throat and a brass spyglass hung at the hip."
+}

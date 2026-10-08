@@ -1,0 +1,274 @@
+# Everyday chat anyone might say, and chat that depends on how well they know you.
+# chat.general, chat.new (levels 0-1), chat.friendly (levels 2-5), chat.close (level 6 and up)
+
+## chat.general
+Not a bad day, all told. The well's full and nobody's on fire.
+I heard the wandering trader's llamas spat at the blacksmith. Twice.
+Somebody's been leaving bread out for the foxes. Now the foxes have opinions.
+The bell needs polishing. It's gone a bit green on one side.
+I found a horseshoe in the road. Lucky, they say. I'm still waiting.
+My neighbor's rooster crows at all hours. I think it's broken.
+Life's simple here. I like simple.
+I traded a stack of wheat for an emerald this morning. Good trade, I think.
+The iron golem walked right past my window this morning. Gave me a fright.
+I can't find my other boot. If you see a boot, it's mine.
+The cats have taken over the hay barn. The farmer's surrendered.
+Some days are just for getting through. Today's one of the nicer ones, though.
+I tried a new recipe. Mushroom and carrot pie. It was... bold.
+My chickens have been laying double-yolk eggs. Very exciting around here.
+I'm thinking of painting my door. Blue, maybe. Or green. Or blue.
+There's a crack in my wall the shape of a creeper. Very unsettling.
+The children found a frog and named it Mayor. It's very respected now.
+I swept the path this morning. The wind unswept it by noon.
+I spent the morning talking to a goat. It was a better listener than most people.
+My back aches, my feet are sore and my heart is full. Normal day.
+I've been meaning to fix my roof for a month. The roof's been meaning to leak for a month.
+Have you ever noticed every village has someone who knows everyone's business? Here it's me.
+I hope tomorrow's as nice as today. I'll settle for nearly as nice.
+I traded my old hat for a new hat. The new hat is worse. I miss the old hat.
+The golem stood in the square for an hour today just looking at a flower. I like the golem.
+My cousin from the next village visited. She thinks our bell is too loud. It is.
+Somebody keeps stealing apples from the orchard. I suspect the pigs.
+The well bucket squeaks. Everyone complains. Nobody oils it. Village life.
+I bumped into a slime in the swamp last week. It bumped back.
+I had the oddest feeling someone was watching me today. It was a parrot.
+I counted the cows this morning. Then I counted them again. One of them moved.
+The church bell and the village bell had a ringing contest. Nobody won. Everyone lost their hearing.
+I'm saving up for a proper bed. My current one's mostly straw and hope.
+I saw a shooting star last night and made a wish. I wished for pie. Still waiting.
+Days go by quickly here. In a good way.
+The children are learning to whistle. All of them. At once. Constantly.
+I left my window open and a bat flew in. We had a long chat. Mostly screaming.
+I think it's going to be a good harvest this year. Don't tell the weather.
+The trader had a bottle he swore was a potion of youth. It was water. I'm still old.
+My knees can predict rain better than the cleric.
+I sat in the sun and did absolutely nothing. It was wonderful.
+Someone's been planting flowers along the paths at night. Nobody's owned up to it.
+I lost a bet and had to wear a pumpkin on my head all morning. Couldn't see a thing.
+Ever since the new family arrived, the village has been livelier.
+I tried to build a birdhouse. It's more of a bird shed now.
+The baker's experimenting with cookies again. Bless her.
+I can hear the river from my bed. Best sleep I've ever had.
+It's the little things, isn't it? A warm bowl, a friendly nod.
+I saw two rabbits fighting over a carrot. Very dramatic. The carrot won.
+My hands smell of onions. They always smell of onions. It's a lifestyle.
+Every morning, the same three birds sit on my fence. I think they're judging me.
+I'm learning to knit. I've made one sock. It's three feet long.
+Did you see the sunset yesterday? The whole sky was on fire. The good kind.
+I keep meaning to visit the next village. Then I remember walking exists.
+The cleric gave me a potion for my cough. Now I glow slightly.
+Some days I feel like the village is one big family. A noisy one.
+I made friends with a crow. It brings me shiny pebbles. I bring it bread.
+I think the golem likes me. It stood next to me for a whole minute.
+There's nothing like a cool drink from the well on a warm day.
+We had a power cut. I mean, a redstone torch went out. Same thing.
+I've been trying to grow a pumpkin as big as a house. It's the size of a pumpkin.
+My door creaks. I've named the creak. It's called Gregory.
+I had soup for breakfast. Don't judge me. It was good soup.
+The sheep got out again. They always get out again.
+I don't know much, but I know this village. Every stone of it.
+Somebody tied a bow on the bell. Very festive. The cleric's furious.
+The spiders have been building webs on the fences. Ugly, but impressive.
+I found a sweet berry bush behind the church. Ouch. Worth it.
+I'm thinking about getting a dog. Or a cat. Or a very quiet parrot.
+Everything's in its place, more or less. Mostly less.
+The kids dared me to touch the golem's nose. I did. It didn't like it.
+I spilled an entire bucket of milk on the path. The cats think it was a gift.
+I heard a strange noise from the well last night. Turned out to be an echo of me yawning.
+If you're ever bored, count the bricks on the church. I've done it. It's not that fun.
+Everyone's got a story. Most people just never ask.
+The fields smell like cut hay and sunshine. My favorite smell.
+I tried to teach a chicken to fetch. The chicken taught me humility.
+I don't need adventure. My garden's full of slugs. That's plenty of drama.
+I got my sleeve caught on a fence and tore it right off. Very fashionable now.
+Even on dull days, the bell rings at noon. That's comforting, somehow.
+There's a wasp nest by the barn. We've agreed to leave each other alone.
+I found a book on my doorstep with no name in it. Mystery! It's about turnips.
+Rain or shine, there's always someone at the well. That's {village} for you.
+I swapped seats at supper and now everyone thinks I'm being mysterious.
+My favorite mug cracked. I'm still using it. We've been through too much together.
+I tried sleeping in late. The roosters disagreed.
+I hung wind chimes. The wind's been very chatty since.
+Nobody in {village} can whistle in tune. It's a village tradition at this point.
+A dog followed me around all morning. Now I think it lives with me.
+Have you noticed the grass is greener near the church? The cleric won't say why.
+I spent a whole emerald on a fancy hat. Then it rained.
+My neighbor sings in the bath. Very loudly. Very badly. Every night.
+I'm trying to eat more vegetables. The carrots are winning.
+The well is the beating heart of {village}. That and the gossip.
+I've been sleeping with the window open. Fresh air and the occasional moth.
+Life's like a bucket of milk. You never know when someone's going to drink it.
+Someone stacked all the pumpkins in the square into a tower. Very impressive. Very wobbly.
+Some days you just need to sit on a fence and watch the clouds.
+I made a friend at the market. We argued about turnips for an hour. Wonderful person.
+The ducks have formed a gang. They patrol the pond.
+I keep my good boots for special occasions. Haven't had one in years.
+I found my lost cat. She was in the cupboard. For three days. Eating the bread.
+My grandfather always said: never trust a creeper that's being quiet. They're always quiet.
+There's frost on the windows this morning. Pretty patterns. Cold toes.
+I'm told the bell was brought here by the first villagers on a cart pulled by goats.
+I watched the clouds and one looked just like a llama. Then it looked like a llama with two heads.
+I've learned to tell the time by the shadows. It's {time}, more or less.
+Every village has its quirks. Ours is that nobody can agree on the best pie.
+The bees made so much honey this year, we're putting it in everything.
+The goat escaped and climbed onto the church roof. It's still up there. It's very proud.
+I'm going to bed early tonight. I've decided. Ask me again in an hour.
+I heard someone found diamonds in the ravine. Then I heard it was glass. Then I heard it was a lie.
+It's a good day to be alive. Most days are, honestly.
+I tried to make the bell ring by throwing a pebble. Missed. Hit the cleric.
+My boots squeak on wet stone. Everyone knows when I'm coming.
+I planted a tree last spring. It's taller than me now. Show-off.
+I love the smell of the tavern at night. Apples and woodsmoke.
+I keep the village's spare key. Nobody remembers what it opens.
+The wandering trader stopped by. Prices have gone up. Llama prices especially.
+My cat brought me a dead rabbit as a gift. I said thank you. It's the polite thing to do.
+There's a little brook behind the houses. I dangle my feet in it when nobody's looking.
+I've decided to be cheerful today. It's going quite well so far.
+I made a scarecrow. The crows love it. They sit on it.
+We had a village meeting about the noisy rooster. The rooster won.
+My hands are full of splinters and my head's full of plans.
+I found a four-leaf clover. Then I found eleven more. Now I'm suspicious.
+Someone left a cake on the well. We're all too polite to eat it.
+The night was so still I heard a zombie sneeze. Do zombies sneeze?
+Today I learned that pigs can't look up. Very sad for the pigs.
+My cousin swears she saw an enderman carrying a flower. I believe her.
+I polished my best spoon. For no reason. It just felt right.
+I like the sound of footsteps on the wooden bridge. Clop, clop, clop.
+There's nothing better than a cold apple on a hot day.
+It's {time}. Halfway through something, as always.
+I tidied my house and found three things I thought I'd lost forever.
+I wish the days were longer. Then I'd just nap more.
+The well water tastes different after rain. Fresher, somehow.
+I've seen a lot of things in {village}, but never a quiet Market Day.
+Somebody's been leaving tiny carved animals around the village. I found a wooden bee today.
+My grandmother lived to a hundred and two. She said it was the porridge.
+Every house in {village} has a different color door. Mine's the brightest.
+I'm learning a new song on the flute. The neighbors are learning patience.
+A bird built a nest in my mailbox. I'm not getting letters until the chicks fledge.
+Life's good. Not perfect. Good.
+
+## chat.new
+We don't know each other well yet. Tell me something about yourself.
+Most travelers just trade and go. You actually stopped to talk. That's nice.
+You're welcome to stay in {village} a while. We don't bite. Mostly.
+I'm {name}. I've lived here a long time. If you need directions, ask me.
+New faces always get the village talking. Don't worry, it's mostly kind talk.
+Where are you headed, if you don't mind my asking?
+You'll get used to us. We're a bit odd, but we mean well.
+If you're staying the night, the inn's warm. Well, the tavern. There's a bench.
+I don't usually chat with strangers, but you seem all right.
+The village is small, but you'll find everything you need. Food, beds, gossip.
+Mind the golem. It's friendly, but it doesn't know you yet.
+I hope you like it here. People who stay tend to stay a long time.
+Are you a builder? You look like a builder. Or a digger. Something with a pickaxe.
+First time in {village}? Make sure you see the bell. It's very important to us.
+You're not one of those adventurers who takes everything that isn't nailed down, are you?
+It takes a while to get to know people here. But once you do, they're yours for life.
+I'm a bit shy with new people. It'll pass. Give it a few visits.
+If anyone asks who invited you, say it was me. That'll make me sound important.
+Welcome. The well's that way, the bell's that way, and my house is the one with the flowers.
+We don't get many visitors who talk. Most just look at our trades and frown.
+You seem like a decent sort. Don't prove me wrong.
+I'll tell you what I tell everyone new: be nice to the golem, and it'll be nice to you.
+You've come at a good time. The weather's been kind lately.
+Stick around. We're more interesting than we look.
+I'm told I talk too much. Let me know if I do. You'll have to interrupt me, though.
+I can tell you've traveled. Your boots have that look.
+Pleased to meet you properly. Next time I'll remember your name without asking.
+Don't be a stranger. Well, you are a stranger. Don't stay one.
+There's a lot to see around here, if you know where to look.
+I think we'll get on fine, you and me.
+If you come back tomorrow, I'll show you the best spot for watching the sunset.
+Everyone in {village} started as a stranger once. Even me. I was born here, but still.
+I hope your travels bring you back this way.
+You've got a friendly face. That counts for a lot round here.
+We're simple folk. Good food, hard work, long talks.
+I don't trust everyone, but you've passed the first test. You said hello.
+If you get lost, follow the sound of the bell. It always leads home.
+I'm curious about you. That's a compliment, by the way.
+Visitors make the days different. Different is good sometimes.
+Come back soon. I'll have better stories next time.
+
+## chat.friendly
+I always look forward to your visits. Did you know that?
+I told {neighbor} about you. They want to meet you properly.
+You've become part of {village}, you know. People ask after you.
+I was hoping you'd stop by today. I've had a funny week.
+I saved a story for you. Ready? It involves a goat and the church roof.
+You're good company. Not everyone is.
+You've been visiting a while now. It feels like you've always been around.
+I think about the things you tell me. Your travels, the places you've been.
+Next time you're here, stay for supper. I insist.
+You've made {village} feel a bit bigger. In a good way.
+It's nice having someone to talk to who isn't from here.
+You always seem to turn up when I need cheering up.
+I made something for you once, but it went wrong. Pretend I gave you something nice.
+I think we're proper friends now, don't you?
+You're the only one I've told about my secret pie recipe. Well, half of it.
+I feel like I can tell you anything. Within reason.
+The village feels safer when you're around. Is that silly?
+I laughed at your joke from last time again this morning. On my own. Like a fool.
+You've got a way of making people feel at ease.
+You're one of us now. Whether you like it or not.
+When you leave, I always wonder where you're going.
+If you ever need somewhere to rest, my door's open.
+I've started telling people we're friends. I hope that's all right.
+I made a note of your favorite things. I'm not strange. I'm thoughtful.
+You look well today. The road's treating you kindly?
+Every time you visit, I learn something new.
+I always feel a bit braver after we talk.
+{village} talks about you, you know. Good things, mostly. The golem's undecided.
+Stay a while. The day's nicer with company.
+I kept your seat warm. Metaphorically.
+You've got a good heart. I can tell these things.
+You're the first person I think of when something funny happens.
+I'm glad we met. I don't say that enough.
+The children ask if the adventurer is coming today. I always say probably.
+Let's take a walk sometime. Just around the village. Nothing dangerous.
+You're easy to be around. That's a rare thing.
+I'd trust you with my good spoons. That's saying something.
+Next Market Day, let's go to the stalls together.
+I've been meaning to ask: do you ever get lonely on the road?
+Tell me about your day. I mean really tell me.
+
+## chat.close
+I don't know what I'd do without our talks. Really.
+You're like family to me now. You know that, don't you?
+Some people come and go. You stayed. That means everything.
+I think about you when you're away. I hope you're safe.
+I've never told anyone this, but you make {village} feel like home.
+You've seen me on my worst days and my best. And you keep coming back.
+If you ever need anything, anything at all, you come to me first.
+I'm proud of you, {player}. I don't know if anyone's told you that lately.
+I keep a little candle in the window when you're out adventuring. Silly, I know.
+Being your friend is one of the best things that ever happened to me.
+I trust you more than I trust most people I've known all my life.
+You don't have to say anything. I just like that you're here.
+I wrote about you in my journal. Only good things. Mostly good things.
+When I'm sad, I think about our talks. It helps.
+I'd follow you to the Nether and back. Well, partway. It's very hot.
+You're one of the few people who really listens.
+We've been through a lot together, haven't we?
+I hope you know how much you matter around here. To me especially.
+I saved this spot by the well for us. Nobody else sits here now.
+Whatever happens out there, you've always got a home in {village}.
+I'm a better person since we became friends. Truly.
+You're the first one I'd tell good news to. And bad news. All the news.
+Thank you. For everything. I don't say it enough.
+If I could give you anything, it'd be a day with nothing to worry about.
+You've got a friend for life here. I hope you know that.
+Some friendships just fit. Ours does.
+I'd stay up all night listening to your stories. I have, actually. Twice.
+I always feel lighter after you visit.
+Promise me you'll be careful out there. I mean it.
+I keep everything you've ever given me in a little box. Don't laugh.
+You understand me better than I understand myself sometimes.
+Even on quiet days, I know you're out there somewhere. That's comforting.
+I'd share my last loaf with you. And I really love bread.
+When we're old and grey, we'll still be talking by this well.
+You've made my life so much bigger than it was.
+I'm so glad you walked into {village} that day.
+Friends like you are rarer than diamonds. And much better company.
+I hope I've been as good a friend to you as you've been to me.
+There's no one I'd rather spend a quiet afternoon with.
+I'll always be here when you get back. Always.

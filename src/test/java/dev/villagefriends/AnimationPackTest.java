@@ -19,22 +19,25 @@ class AnimationPackTest {
     }
 
     @Test void villageLifeIsALargeVariedFirstPack() {
-        assertEquals(1, PACK.packs().size());
+        assertEquals(2, PACK.packs().size());
         assertEquals("Village Life", PACK.packs().getFirst().name());
-        assertTrue(PACK.clips().size() >= 90, "a large first pack: " + PACK.clips().size());
+        assertEquals("Tavern", PACK.packs().get(1).name());
+        assertTrue(PACK.clips().size() >= 349, "a large first pack: " + PACK.clips().size());
         for (String trigger : AnimationPack.TRIGGERS) assertFalse(PACK.clips(trigger).isEmpty(), "clips for " + trigger);
-        assertTrue(PACK.clips("idle").size() >= 50);
-        assertTrue(PACK.clips("talk").size() >= 6 && PACK.clips("chat_speak").size() >= 4 && PACK.clips("chat_listen").size() >= 4);
-        assertTrue(PACK.clips("greet").stream().anyMatch(c -> c.eligible(Set.of("child"))), "children greet too");
+        assertTrue(PACK.clips("idle").size() >= 210);
+        assertTrue(PACK.clips("talk").size() >= 24 && PACK.clips("chat_speak").size() >= 15 && PACK.clips("chat_listen").size() >= 15);
+        assertTrue(PACK.clips("greet").stream().filter(c -> c.eligible(Set.of("child"))).count() >= 4, "children greet too");
+        for (String trigger : List.of("laugh", "delighted", "thanks", "decline", "happy", "love", "angry", "nervous"))
+            assertTrue(PACK.clips(trigger).size() >= 6, "a varied set of reactions for " + trigger);
     }
 
     @Test void everyPersonalityHasAHobbyAndEveryProfessionAWorkMotion() {
         for (var personality : NarrativeContent.current().personalities())
-            assertTrue(eligible("idle", adult("personality:" + personality.id()), "personality:" + personality.id()) > 0, "hobby for " + personality.id());
+            assertTrue(eligible("idle", adult("personality:" + personality.id()), "personality:" + personality.id()) >= 3, "hobbies for " + personality.id());
         var jobs = new ArrayList<>(VANILLA_JOBS); jobs.addAll(VillageProfessions.JOBS);
         for (String job : jobs) {
             var tags = adult(); ResidentBehavior.jobTags(job, tags);
-            assertTrue(eligible("idle", tags, "job:" + job) > 0, "work motion for " + job);
+            assertTrue(eligible("idle", tags, "job:" + job) >= 4, "work motions for " + job);
         }
         var guard = adult(); ResidentBehavior.jobTags("knight", guard);
         assertTrue(PACK.clips("greet").stream().anyMatch(c -> c.eligible(guard) && c.name().equals("Salutes")));
@@ -42,10 +45,11 @@ class AnimationPackTest {
 
     @Test void childrenPlayAndWeatherChangesTheMood() {
         var child = Set.of("child", "day");
-        assertTrue(PACK.clips("idle").stream().filter(c -> c.eligible(child) && c.require().stream().anyMatch(g -> g.contains("child"))).count() >= 6);
+        assertTrue(PACK.clips("idle").stream().filter(c -> c.eligible(child) && c.require().stream().anyMatch(g -> g.contains("child"))).count() >= 20);
         assertTrue(PACK.clips("idle").stream().noneMatch(c -> c.eligible(child) && c.name().equals("Hammers at the anvil")));
         var rain = adult("rain");
-        assertTrue(PACK.clips("idle").stream().filter(c -> c.eligible(rain) && c.require().stream().anyMatch(g -> g.contains("rain"))).count() >= 3);
+        assertTrue(PACK.clips("idle").stream().filter(c -> c.eligible(rain) && c.require().stream().anyMatch(g -> g.contains("rain"))).count() >= 7);
+        assertTrue(PACK.clips("idle").stream().anyMatch(c -> c.eligible(adult("thunder")) && c.require().stream().anyMatch(g -> g.contains("thunder"))));
         assertTrue(PACK.clips("idle").stream().noneMatch(c -> c.eligible(rain) && c.name().equals("Big stretch")), "nobody stretches in the rain");
         assertTrue(PACK.clips("idle").stream().anyMatch(c -> c.eligible(adult("cold")) && c.name().equals("Shivers")));
     }

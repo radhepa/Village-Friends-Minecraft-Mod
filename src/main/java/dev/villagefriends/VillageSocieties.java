@@ -28,7 +28,7 @@ import static dev.villagefriends.VillageFriends.*;
 public final class VillageSocieties {
     /** Newcomers this close to each other may be one household. */
     private static final double HOUSEHOLD_RANGE = 20, TOGETHER_RANGE = 6, CHAT_RANGE = 3.5;
-    private static final Set<String> ANNOUNCED = Set.of("sweethearts", "married", "born", "passed", "cursed", "cured", "grew_up");
+    private static final Set<String> ANNOUNCED = Set.of("sweethearts", "married", "born", "passed", "cursed", "cured", "grew_up", "birthday");
     /** "player|resident" to the day that resident last waved a player over. */
     private static final Map<String, Long> nudged = new HashMap<>();
     /** Deaths settle a tick later: a villager killed by a zombie dies first and is converted right after. */

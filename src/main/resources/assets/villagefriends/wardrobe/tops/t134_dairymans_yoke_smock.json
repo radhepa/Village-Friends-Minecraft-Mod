@@ -1,0 +1,306 @@
+{
+  "id": "t134_dairymans_yoke_smock",
+  "kind": "top",
+  "name": "Dairyman's Yoke Smock",
+  "gender": "male",
+  "texture": "tops/t134_dairymans_yoke_smock.png",
+  "extrasHeight": 48,
+  "tags": [
+    "casual",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        2.6,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "apron_string",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.55,
+        9.4,
+        -2.55
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "smock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        29,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "smock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        4,
+        1
+      ],
+      "uv": [
+        0,
+        15
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "milk_yoke",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0.2,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -11,
+        0,
+        -1
+      ],
+      "size": [
+        22,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        21
+      ]
+    },
+    {
+      "id": "pail_cord_0",
+      "bone": "TORSO",
+      "pivot": [
+        -10.2,
+        1.2,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        49,
+        21
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "milk_pail_0",
+      "bone": "TORSO",
+      "pivot": [
+        -10.2,
+        1.2,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        27
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "pail_cord_1",
+      "bone": "TORSO",
+      "pivot": [
+        10.2,
+        1.2,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        13,
+        27
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "milk_pail_1",
+      "bone": "TORSO",
+      "pivot": [
+        10.2,
+        1.2,
+        3.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        4,
+        -1.5
+      ],
+      "size": [
+        3,
+        3,
+        3
+      ],
+      "uv": [
+        18,
+        27
+      ],
+      "motion": "sway"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A scrubbed pale dairy smock with a pin-tucked front and rolled sleeves, a carved milking yoke across the shoulders and two iron-hooped pails of fresh milk swinging from its ends."
+}

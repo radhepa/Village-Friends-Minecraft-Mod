@@ -1,0 +1,73 @@
+{
+  "id": "b271_tinkers_patched_leggings",
+  "kind": "bottom",
+  "name": "Tinker's Patched Leggings",
+  "gender": "male",
+  "texture": "bottoms/b271_tinkers_patched_leggings.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "rugged"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "left_knee_pad",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        3.6,
+        -2.85
+      ],
+      "size": [
+        3,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_leg_roll",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        9,
+        0
+      ]
+    }
+  ],
+  "description": "Close leggings mended with a patch of every cloth he has ever carried, a darned shin, one leg rolled to the calf and turnshoes cobbled at the toe."
+}

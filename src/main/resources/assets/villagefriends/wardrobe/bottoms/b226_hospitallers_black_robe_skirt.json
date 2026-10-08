@@ -1,0 +1,449 @@
+{
+  "id": "b226_hospitallers_black_robe_skirt",
+  "kind": "bottom",
+  "name": "Hospitaller's Black Robe Skirt",
+  "gender": "male",
+  "texture": "bottoms/b226_hospitallers_black_robe_skirt.png",
+  "extrasHeight": 32,
+  "tags": [
+    "holy",
+    "robe",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_spur",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.3,
+        1.6
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_spur_strap",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        10.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        7,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "left_spur",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        10.3,
+        1.6
+      ],
+      "size": [
+        1,
+        1,
+        2
+      ],
+      "uv": [
+        28,
+        0
+      ]
+    },
+    {
+      "id": "left_spur_strap",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        10.2,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        35,
+        0
+      ],
+      "inflate": 0.06
+    },
+    {
+      "id": "robe_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        0,
+        7
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "robe_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        1.95
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        11,
+        1
+      ],
+      "uv": [
+        21,
+        7
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "robe_right",
+      "bone": "TORSO",
+      "pivot": [
+        -5.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        42,
+        7
+      ]
+    },
+    {
+      "id": "robe_left",
+      "bone": "TORSO",
+      "pivot": [
+        4.1,
+        10.6,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        1,
+        10,
+        4
+      ],
+      "uv": [
+        53,
+        7
+      ]
+    },
+    {
+      "id": "paternoster_0",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        11.0,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_1",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        12.05,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_2",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        13.1,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_3",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        14.15,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_4",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        15.2,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_cross",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        16.6,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -1.5
+      ],
+      "size": [
+        1,
+        1,
+        3
+      ],
+      "uv": [
+        25,
+        22
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "paternoster_stem",
+      "bone": "TORSO",
+      "pivot": [
+        -5.6,
+        16.0,
+        -1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        22
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "description": "A brother's plain black robe to the ankle, split before and behind for the saddle, a string of paternoster beads at the hip, over riding boots with iron prick spurs."
+}

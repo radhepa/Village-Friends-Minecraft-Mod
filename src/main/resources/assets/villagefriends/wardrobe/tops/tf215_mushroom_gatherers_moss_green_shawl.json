@@ -1,0 +1,275 @@
+{
+  "id": "tf215_mushroom_gatherers_moss_green_shawl",
+  "kind": "top",
+  "name": "Mushroom Gatherer's Moss-Green Shawl",
+  "gender": "female",
+  "texture": "tops/tf215_mushroom_gatherers_moss_green_shawl.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "knit"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "shawl_wrap",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        -0.5,
+        0.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5,
+        0,
+        -3
+      ],
+      "size": [
+        10,
+        2,
+        6
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.05
+    },
+    {
+      "id": "shawl_point_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -5.0,
+        0,
+        0
+      ],
+      "size": [
+        10,
+        2,
+        1
+      ],
+      "uv": [
+        33,
+        0
+      ]
+    },
+    {
+      "id": "shawl_point_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        3.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.0,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        2,
+        1
+      ],
+      "uv": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "shawl_point_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        5.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.0,
+        0,
+        0
+      ],
+      "size": [
+        6,
+        2,
+        1
+      ],
+      "uv": [
+        19,
+        9
+      ]
+    },
+    {
+      "id": "shawl_point_3",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        7.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.0,
+        0,
+        0
+      ],
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "uv": [
+        34,
+        9
+      ]
+    },
+    {
+      "id": "shawl_point_4",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        9.4,
+        2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        0
+      ],
+      "size": [
+        2,
+        2,
+        1
+      ],
+      "uv": [
+        45,
+        9
+      ]
+    },
+    {
+      "id": "mushroom_basket",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2,
+        0,
+        -3
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "uv": [
+        0,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mushroom_cap_0",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.6,
+        -1,
+        -2.6
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        15,
+        13
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "mushroom_cap_1",
+      "bone": "TORSO",
+      "pivot": [
+        3.4,
+        8.8,
+        -3.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.1,
+        -1,
+        -1.6
+      ],
+      "size": [
+        2,
+        1,
+        2
+      ],
+      "uv": [
+        24,
+        13
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": false,
+  "description": "A fringed knitted triangle shawl with its point down her back and its ends crossed over the breast, and a little basket of speckled mushroom caps at her hip."
+}

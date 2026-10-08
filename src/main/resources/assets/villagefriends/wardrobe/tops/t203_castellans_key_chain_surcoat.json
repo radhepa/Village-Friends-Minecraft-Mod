@@ -1,0 +1,254 @@
+{
+  "id": "t203_castellans_key_chain_surcoat",
+  "kind": "top",
+  "name": "Castellan's Key-Chain Surcoat",
+  "gender": "male",
+  "texture": "tops/t203_castellans_key_chain_surcoat.png",
+  "extrasHeight": 16,
+  "tags": [
+    "armor",
+    "fancy",
+    "martial"
+  ],
+  "requires": [
+    "sturdy"
+  ],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "belt",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.6,
+        9.6,
+        -2.6
+      ],
+      "size": [
+        9,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "surcoat_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        29,
+        0
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "surcoat_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.8,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4,
+        0,
+        0
+      ],
+      "size": [
+        8,
+        6,
+        1
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "motion": "flap_back"
+    },
+    {
+      "id": "key_chain",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.1,
+        0.0,
+        -1.1
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        19,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "key_ring",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.1,
+        3.0,
+        -1.1
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        24,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "key_0",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.1,
+        4.0,
+        -1.2
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        31,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "key_1",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.1,
+        4.0,
+        -1.5
+      ],
+      "size": [
+        1,
+        2,
+        1
+      ],
+      "uv": [
+        36,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "key_2",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        10.6,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.6,
+        4.0,
+        -1.8
+      ],
+      "size": [
+        1,
+        4,
+        1
+      ],
+      "uv": [
+        41,
+        8
+      ],
+      "motion": "flap_front"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A sleeveless surcoat parted down the middle in the two house colours and charged with a counterchanged castle tower, worn over a mail shirt with quilted forearms, the castle's great keys hanging from the belt on an iron chain."
+}

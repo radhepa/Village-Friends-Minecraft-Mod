@@ -1,0 +1,76 @@
+{
+  "id": "b179_beacon_keepers_stair_worn_boots",
+  "kind": "bottom",
+  "name": "Beacon Keeper's Stair-Worn Boots",
+  "gender": "male",
+  "texture": "bottoms/b179_beacon_keepers_stair_worn_boots.png",
+  "extrasHeight": 16,
+  "tags": [
+    "rugged",
+    "simple",
+    "sturdy"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_boot_cuff",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ],
+      "inflate": 0.32
+    },
+    {
+      "id": "left_boot_cuff",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -2.5,
+        7.4,
+        -2.5
+      ],
+      "size": [
+        5,
+        1,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ],
+      "inflate": 0.32
+    }
+  ],
+  "description": "Thick wool trousers worn shiny at the knee, tucked into slouched ankle boots with turned-down cuffs, toes scuffed pale by the tower steps and a patch stitched on the side."
+}

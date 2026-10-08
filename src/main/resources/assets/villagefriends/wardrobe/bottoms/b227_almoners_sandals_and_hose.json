@@ -1,0 +1,188 @@
+{
+  "id": "b227_almoners_sandals_and_hose",
+  "kind": "bottom",
+  "name": "Almoner's Sandals and Hose",
+  "gender": "male",
+  "texture": "bottoms/b227_almoners_sandals_and_hose.png",
+  "extrasHeight": 16,
+  "tags": [
+    "holy",
+    "relaxed",
+    "simple"
+  ],
+  "requires": [],
+  "rejects": [
+    "armor"
+  ],
+  "pieces": [
+    {
+      "id": "right_thong_knot",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        6.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "right_thong_end_0",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.1,
+        7.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        5,
+        0
+      ]
+    },
+    {
+      "id": "right_thong_end_1",
+      "bone": "RIGHT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.09999999999999998,
+        7.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": "left_thong_knot",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -0.5,
+        6.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        15,
+        0
+      ]
+    },
+    {
+      "id": "left_thong_end_0",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.1,
+        7.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": "left_thong_end_1",
+      "bone": "LEFT_LEG",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        0.09999999999999998,
+        7.8,
+        -2.8
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "uv": [
+        25,
+        0
+      ]
+    }
+  ],
+  "description": "Plain woollen hose with a darn at the knee and narrow garters, worn in open leather sandals whose thongs criss-cross up the ankle and tie in a knot in front."
+}

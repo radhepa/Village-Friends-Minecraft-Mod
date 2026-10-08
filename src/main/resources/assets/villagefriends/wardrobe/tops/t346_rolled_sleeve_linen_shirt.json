@@ -1,0 +1,76 @@
+{
+  "id": "t346_rolled_sleeve_linen_shirt",
+  "kind": "top",
+  "name": "Rolled-Sleeve Linen Shirt",
+  "gender": "male",
+  "texture": "tops/t346_rolled_sleeve_linen_shirt.png",
+  "extrasHeight": 16,
+  "tags": [
+    "casual",
+    "simple",
+    "work"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        1.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.5,
+        1.3,
+        -2.5
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    }
+  ],
+  "tucked": true,
+  "coversWaist": false,
+  "description": "A plain linen work shirt with a narrow band collar and a two-button slit, its sleeves rolled in thick folds above the elbow."
+}

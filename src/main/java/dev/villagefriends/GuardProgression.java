@@ -64,6 +64,14 @@ public final class GuardProgression {
         nextHealth = Math.min(nextHealth, v.getMaxHealth());
         if (v.getHealth() != nextHealth) v.setHealth(nextHealth);
     }
+    /** Practice at the training dummy or archery target: a little experience, without a kill. */
+    public static void train(Villager v, double xp) {
+        if (!GuardController.isGuard(v)) return;
+        refresh(v);
+        var saved = progress(v);
+        if (saved == null) return;
+        target(v).setAttached(GUARD_PROGRESS, saved.award(xp)); refresh(v);
+    }
     public static VillagerData lockedData(Villager v, VillagerData proposed) {
         var saved = progress(v);
         if (saved == null || saved.lockedProfession().isEmpty() || v.isBaby()) return proposed;

@@ -64,7 +64,7 @@ public final class GuardController {
         return v.getVillagerData().profession().unwrapKey().map(k -> k.equals(VillageProfessions.key("archer"))).orElse(false);
     }
     private static boolean eligible(Villager v) {
-        return isGuard(v) && v.isAlive() && !v.isNoAi() && !CompanionController.state(v).downed()
+        return isGuard(v) && v.isAlive() && !v.isNoAi() && !CompanionController.state(v).downed() && !Knockouts.injured(v)
                 && !CompanionController.hasActivity(v);
     }
     public static void initializeEquipment(Villager v) {
@@ -99,6 +99,7 @@ public final class GuardController {
 
     /** Capture forgiveness before the existing relationship damage callback changes trust. */
     public static boolean allowDamage(LivingEntity entity, DamageSource source, float amount) {
+        if (!Knockouts.allowDamage(entity, source)) return false;
         if (source.getDirectEntity() instanceof AbstractArrow arrow && protectedFromArrow(arrow, entity)) return false;
         if (entity instanceof Villager v && !CompanionController.state(v).downed()) {
             Entity attacker = attacker(source);
@@ -117,7 +118,8 @@ public final class GuardController {
     public static boolean allowDeath(LivingEntity entity, DamageSource source, float amount) {
         GuardProgression.afterDamage(entity, source);
         observeDamage(entity, source);
-        return CompanionController.allowDeath(entity, source, amount);
+        // Recruited companions are downed; everyone else is knocked out instead of dying.
+        return CompanionController.allowDeath(entity, source, amount) && Knockouts.allowDeath(entity, source);
     }
     public static void afterDeath(LivingEntity entity, DamageSource source) { GuardProgression.afterDeath(entity, source); }
     public static Entity attacker(DamageSource source) {
@@ -300,7 +302,7 @@ public final class GuardController {
 
     public static boolean canExchange(Villager v, ServerPlayer p) {
         var s = CompanionController.state(v);
-        return isGuard(v) && validTarget(p, v) && !s.downed() && !fighting(v) && !angryAt(v, p)
+        return isGuard(v) && validTarget(p, v) && !s.downed() && !Knockouts.injured(v) && !fighting(v) && !angryAt(v, p)
                 && !CompanionController.hasActivity(v) && (!s.active() || s.owner().equals(p.getUUID().toString()));
     }
     public static boolean exchange(ServerPlayer p, Villager v) {

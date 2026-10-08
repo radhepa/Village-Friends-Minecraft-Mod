@@ -1,0 +1,249 @@
+{
+  "id": "t173_sailors_striped_slop_frock",
+  "kind": "top",
+  "name": "Sailor's Striped Slop Frock",
+  "gender": "male",
+  "texture": "tops/t173_sailors_striped_slop_frock.png",
+  "extrasHeight": 32,
+  "tags": [
+    "casual",
+    "relaxed",
+    "sea"
+  ],
+  "requires": [],
+  "rejects": [],
+  "pieces": [
+    {
+      "id": "right_sleeve_roll",
+      "bone": "RIGHT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.45,
+        5.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "left_sleeve_roll",
+      "bone": "LEFT_ARM",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.45,
+        5.0,
+        -2.45
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "uv": [
+        21,
+        0
+      ]
+    },
+    {
+      "id": "neckerchief",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -3.5,
+        -0.8,
+        -2.5
+      ],
+      "size": [
+        7,
+        2,
+        5
+      ],
+      "uv": [
+        0,
+        8
+      ],
+      "inflate": 0.08
+    },
+    {
+      "id": "neckerchief_knot",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        1.1,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -1.0,
+        0,
+        -0.5
+      ],
+      "size": [
+        2,
+        1,
+        1
+      ],
+      "uv": [
+        25,
+        8
+      ]
+    },
+    {
+      "id": "neckerchief_end_0",
+      "bone": "TORSO",
+      "pivot": [
+        -0.6,
+        1.8,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        10
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        32,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "neckerchief_end_1",
+      "bone": "TORSO",
+      "pivot": [
+        0.7,
+        1.8,
+        -2.75
+      ],
+      "rotation": [
+        0,
+        0,
+        -14
+      ],
+      "origin": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "size": [
+        1,
+        3,
+        1
+      ],
+      "uv": [
+        37,
+        8
+      ],
+      "motion": "sway"
+    },
+    {
+      "id": "frock_hem_front",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        -2.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        42,
+        8
+      ],
+      "motion": "flap_front"
+    },
+    {
+      "id": "frock_hem_back",
+      "bone": "TORSO",
+      "pivot": [
+        0,
+        11.0,
+        1.85
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "origin": [
+        -4.5,
+        0,
+        0
+      ],
+      "size": [
+        9,
+        3,
+        1
+      ],
+      "uv": [
+        0,
+        16
+      ],
+      "motion": "flap_back"
+    }
+  ],
+  "tucked": false,
+  "coversWaist": true,
+  "description": "A loose linen slop frock in broad bands, a wide boat neck, three-quarter sleeves rolled at the forearm and a neckerchief knotted at the throat."
+}

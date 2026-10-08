@@ -56,11 +56,13 @@ public final class LedgerScreen extends Screen {
         pageW = (w - 24) / 2;
         listTop = y + 34; listH = h - 34 - 30;
         detailX = x + 14 + pageW + 8; detailTop = y + 34; detailH = h - 34 - 30;
-        addRenderableWidget(new ConversationButton(x + w - 74, y + h - 25, 62, 18, parent instanceof FriendshipScreen ? "Back" : "Close", true, b -> onClose()));
+        addRenderableWidget(new ConversationButton(x + w - 74, y + h - 25, 62, 18, returns() ? "Back" : "Close", true, b -> onClose()));
         if (!data.focus().isEmpty())
             addRenderableWidget(new ConversationButton(x + w - 74 - 92, y + h - 25, 86, 18, "Village news", false, b -> focus("")));
     }
-    @Override public void onClose() { minecraft.gui.setScreen(parent instanceof FriendshipScreen ? parent : null); }
+    /** Opened from a conversation or a notice board, the ledger goes back to it. */
+    private boolean returns() { return parent instanceof FriendshipScreen || parent instanceof NoticeBoardScreen; }
+    @Override public void onClose() { minecraft.gui.setScreen(returns() ? parent : null); }
     @Override public boolean isPauseScreen() { return false; }
 
     // -- input -------------------------------------------------------------------------------------
@@ -95,7 +97,7 @@ public final class LedgerScreen extends Screen {
         g.fill(x + w / 2 - 1, y + 10, x + w / 2 + 1, y + h - 10, 0x33000000);
         long living = data.residents().stream().filter(e -> !e.status().equals("passed")).count();
         g.text(font, font.plainSubstrByWidth(data.villageName(), pageW - 10), x + 16, y + 14, INK, false);
-        g.text(font, living + " residents · day " + (data.day() + 1), x + 16, y + 23, MUTED, false);
+        g.text(font, font.plainSubstrByWidth(living + " residents · " + dev.villagefriends.social.Calendar.date(data.day()) + ", Year " + dev.villagefriends.social.Calendar.year(data.day()), pageW - 10), x + 16, y + 23, MUTED, false);
         drawList(g, mouseX, mouseY);
         if (data.focus().isEmpty()) drawNews(g); else drawDetail(g, mouseX, mouseY);
         super.extractRenderState(g, mouseX, mouseY, delta);
