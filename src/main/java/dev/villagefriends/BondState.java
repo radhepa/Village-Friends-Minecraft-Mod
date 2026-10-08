@@ -5,10 +5,15 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Personal history is distinct from the resident's shared, physical story outcomes. */
+/**
+ * Personal history is distinct from the resident's shared, physical story outcomes. {@code kept} are the
+ * memories that never scroll away ("You saved my sister Liora."), shown first in the Journal.
+ */
 public record BondState(int trust, int chapter, int legacyLevel, int visits, long visitDay,
-        long activityDay, List<String> memories, List<String> flags, List<String> recentLines) {
-    public static final BondState NEW = new BondState(50, 0, 0, 0, -1, -1, List.of(), List.of(), List.of());
+        long activityDay, List<String> memories, List<String> flags, List<String> recentLines, List<String> kept) {
+    public static final BondState NEW = new BondState(50, 0, 0, 0, -1, -1, List.of(), List.of(), List.of(), List.of());
+    /** At most this many memories are kept for good. */
+    public static final int KEPT = 12;
     public static final Codec<BondState> CODEC = RecordCodecBuilder.create(i -> i.group(
             Codec.INT.optionalFieldOf("trust", 50).forGetter(BondState::trust),
             Codec.INT.optionalFieldOf("chapter", 0).forGetter(BondState::chapter),
@@ -18,19 +23,21 @@ public record BondState(int trust, int chapter, int legacyLevel, int visits, lon
             Codec.LONG.optionalFieldOf("activity_day", -1L).forGetter(BondState::activityDay),
             Codec.STRING.listOf().optionalFieldOf("memories", List.of()).forGetter(BondState::memories),
             Codec.STRING.listOf().optionalFieldOf("flags", List.of()).forGetter(BondState::flags),
-            Codec.STRING.listOf().optionalFieldOf("recent_lines", List.of()).forGetter(BondState::recentLines)
+            Codec.STRING.listOf().optionalFieldOf("recent_lines", List.of()).forGetter(BondState::recentLines),
+            Codec.STRING.listOf().optionalFieldOf("kept", List.of()).forGetter(BondState::kept)
     ).apply(i, BondState::new));
     public BondState {
         trust = Math.clamp(trust, 0, 100); chapter = Math.clamp(chapter, 0, 4);
         legacyLevel = Math.clamp(legacyLevel, 0, 4); visits = Math.max(visits, 0);
         memories = bounded(memories, 24); flags = List.copyOf(flags.stream().distinct().toList()); recentLines = bounded(recentLines, 12);
+        kept = bounded(kept == null ? List.of() : kept, KEPT);
     }
     private static List<String> bounded(List<String> list, int max) {
         return List.copyOf(list.subList(Math.max(0, list.size() - max), list.size()));
     }
     public static BondState migrated(int oldLevel) { return NEW.copy(50, 0, oldLevel, 0, -1, -1, NEW.memories, NEW.flags, NEW.recentLines); }
     private BondState copy(int t, int c, int l, int v, long vd, long ad, List<String> m, List<String> f, List<String> r) {
-        return new BondState(t, c, l, v, vd, ad, m, f, r);
+        return new BondState(t, c, l, v, vd, ad, m, f, r, kept);
     }
     public BondState visit(long day) {
         return visitDay == day ? this : copy(trust, chapter, legacyLevel, visits + 1, day, activityDay, memories, flags, recentLines);
@@ -50,6 +57,13 @@ public record BondState(int trust, int chapter, int legacyLevel, int visits, lon
     public BondState remember(long day, String event) {
         var next = new ArrayList<>(memories); next.add("Day " + (day + 1) + ": " + event.substring(0, Math.min(200, event.length())));
         return copy(trust, chapter, legacyLevel, visits, visitDay, activityDay, next, flags, recentLines);
+    }
+    /** A memory kept for good: it never scrolls out of the Journal. The same words aren't kept twice. */
+    public BondState keep(long day, String event) {
+        String text = "Day " + (day + 1) + ": " + event.substring(0, Math.min(200, event.length()));
+        if (kept.stream().anyMatch(k -> k.endsWith(": " + event.substring(0, Math.min(200, event.length()))))) return this;
+        var next = new ArrayList<>(kept); next.add(text);
+        return new BondState(trust, chapter, legacyLevel, visits, visitDay, activityDay, memories, flags, recentLines, next);
     }
     public BondState line(String id) {
         var next = new ArrayList<>(recentLines); next.remove(id); next.add(id);

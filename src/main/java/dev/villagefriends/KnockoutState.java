@@ -10,14 +10,18 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
  * @param until when they die of their injuries unless revived
  * @param bandages how many Bandage Wraps (from players or the village apothecary) bought them more time
  * @param tended whether the village apothecary has already dressed their wounds
+ * @param by the UUID of the player who knocked them out, or "": if they die, the village blames that player
  */
-public record KnockoutState(long since, long until, int bandages, boolean tended) {
+public record KnockoutState(long since, long until, int bandages, boolean tended, String by) {
     public static final Codec<KnockoutState> CODEC = RecordCodecBuilder.create(i -> i.group(
             Codec.LONG.optionalFieldOf("since", 0L).forGetter(KnockoutState::since),
             Codec.LONG.optionalFieldOf("until", 0L).forGetter(KnockoutState::until),
             Codec.INT.optionalFieldOf("bandages", 0).forGetter(KnockoutState::bandages),
-            Codec.BOOL.optionalFieldOf("tended", false).forGetter(KnockoutState::tended)
+            Codec.BOOL.optionalFieldOf("tended", false).forGetter(KnockoutState::tended),
+            Codec.STRING.optionalFieldOf("by", "").forGetter(KnockoutState::by)
     ).apply(i, KnockoutState::new));
+    public KnockoutState { by = by == null ? "" : by; }
+    public KnockoutState(long since, long until, int bandages, boolean tended) { this(since, until, bandages, tended, ""); }
 
     /** A full day of play: 24 real hours of ticks. */
     public static final long DAY = 24L * 60 * 60 * 20;
@@ -26,11 +30,12 @@ public record KnockoutState(long since, long until, int bandages, boolean tended
     /** Bandages can't stretch the clock past this much time left. */
     public static final long MOST_LEFT = 2 * DAY;
 
-    public static KnockoutState knockedOut(long now) { return new KnockoutState(now, now + DAY, 0, false); }
+    public static KnockoutState knockedOut(long now) { return knockedOut(now, ""); }
+    public static KnockoutState knockedOut(long now, String by) { return new KnockoutState(now, now + DAY, 0, false, by); }
     public long left(long now) { return Math.max(0, until - now); }
     /** One more bandage: twelve more hours, up to two days left. */
     public KnockoutState bandaged(long now, boolean byApothecary) {
-        return new KnockoutState(since, Math.min(until + BANDAGE, now + MOST_LEFT), bandages + 1, tended || byApothecary);
+        return new KnockoutState(since, Math.min(until + BANDAGE, now + MOST_LEFT), bandages + 1, tended || byApothecary, by);
     }
     public boolean canBandage(long now) { return left(now) + 20 * 60 < MOST_LEFT; }
     /** "23h 59m", "41m", "under a minute". */

@@ -59,7 +59,7 @@ class ReputationTest {
         assertEquals(Standing.UNWELCOME, Standing.tier(-20), "on the line: Unwelcome");
         assertEquals(Standing.UNWELCOME, Standing.tier(-500));
         assertEquals("Unwelcome", Standing.title(Standing.UNWELCOME, "Ash"));
-        assertTrue(Standing.hint(-20, "Ash").startsWith("Nobody here will give you work"));
+        assertTrue(Standing.hint(-20, "Ash").startsWith("Bad deeds fade"));
         for (int favors = 0; favors < 30; favors++) assertNotEquals(Standing.UNWELCOME, Standing.tier(Standing.score10(favors, null, 0)), "notices alone never make you Unwelcome");
         // One hit: Newcomer. Hitting the golem and knocking a resident out: Unwelcome.
         assertEquals(0, Standing.tier(Standing.score10(0, log(DeedKind.HIT_RESIDENT), 0)));

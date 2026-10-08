@@ -794,6 +794,7 @@ public final class VillagerPets {
                 boolean first = fondness.patDay() != today;
                 var next = first ? fondness.add(6).patted(today) : fondness;
                 target(pet).setAttached(PROFILE, profile.fondness(player.getUUID(), next));
+                if (first) dev.villagefriends.deed.Deeds.petKindness(player, pet);
                 react(pet, profile.cat() ? "lean" : random.nextInt(3) == 0 && !pet.isBaby() ? "belly_up" : "happy", 50);
                 level.broadcastEntityEvent(pet, (byte) 7);
                 if (profile.cat()) sound(pet, purr(pet), .8F); else if (random.nextBoolean()) pet.playAmbientSound();
@@ -816,6 +817,7 @@ public final class VillagerPets {
                 level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, eaten),
                         pet.getX(), pet.getY() + pet.getBbHeight() * .7, pet.getZ(), 6, .12, .08, .12, .05);
                 target(pet).setAttached(PROFILE, profile.fondness(player.getUUID(), first ? fondness.add(gain).treated(today) : fondness));
+                if (first) dev.villagefriends.deed.Deeds.petKindness(player, pet);
                 react(pet, profile.cat() ? "tail_up" : "catch", 30);
                 show(player, pet, PetKeeping.treatLine(profile, item, first), first ? "+" + gain + " fondness." : "Treat fondness returns tomorrow.", false,
                         item.equals(profile.treat()) ? Emote.SPARKLE : Emote.NOTE);

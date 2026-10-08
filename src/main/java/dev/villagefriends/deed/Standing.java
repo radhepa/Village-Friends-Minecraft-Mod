@@ -54,7 +54,7 @@ public final class Standing {
     /** "3 more notices to become a Good Neighbor", the board's hint line. */
     public static String hint(int score10, String villageName) {
         int tier = tier(score10);
-        if (tier == UNWELCOME) return "Nobody here will give you work until they trust you again. Bad deeds fade; apologies and good deeds help.";
+        if (tier == UNWELCOME) return "Bad deeds fade with time; apologies and good deeds help.";
         if (tier + 1 >= Board.STANDING.length) return "Everyone here knows your name. Trades are cheaper all over the village.";
         int needed = Math.max(1, (int) Math.ceil((Board.STANDING[tier + 1] * 10 - score10) / 10.0));
         return needed + " more " + (needed == 1 ? "notice" : "notices") + " to become " + Board.title(tier + 1, villageName);

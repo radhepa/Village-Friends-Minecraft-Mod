@@ -193,6 +193,11 @@ public record Society(String village, Map<String, Townsfolk> folk, Map<String, T
         var nextNews = new ArrayList<>(news); nextNews.add(new News(today, "helped", poster, "", helper));
         return new Society(village, folk, ties, nextNews, day);
     }
+    /** Something a player did that the whole village talks about ({@code "deed:<kind>"} news). */
+    public Society report(News n) {
+        var nextNews = new ArrayList<>(news); nextNews.add(n);
+        return new Society(village, folk, ties, nextNews, day);
+    }
     public Society passed(String id, long today) {
         var t = folk.get(id); if (t == null || !t.living()) return this;
         var work = new Work(this);

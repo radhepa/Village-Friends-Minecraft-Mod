@@ -45,7 +45,8 @@ public final class GuardController {
     private static final Map<UUID, Combat> fights = new HashMap<>();
     private static final Map<UUID, RecentAttack> recent = new HashMap<>();
     private static final Map<UUID, Incident> pending = new HashMap<>();
-    private record RecentAttack(ServerLevel level, long until) {}
+    /** A monster that recently hurt a resident: when that stops counting, and which resident ({@code victim}) it hurt. */
+    private record RecentAttack(ServerLevel level, long until, UUID victim) {}
     private record Incident(DamageSource source, boolean forgiven) {}
     private static final class Combat {
         final Map<UUID, Long> anger = new HashMap<>();
@@ -143,8 +144,13 @@ public final class GuardController {
                 c.retryAfter = 0;
             }
         } else if (attacker instanceof Mob m && !(m instanceof Villager) && !(m instanceof IronGolem)) {
-            recent.put(m.getUUID(), new RecentAttack(level, now + GuardPolicy.RECENT_ATTACK_TICKS));
+            recent.put(m.getUUID(), new RecentAttack(level, now + GuardPolicy.RECENT_ATTACK_TICKS, victim.getUUID()));
         }
+    }
+    /** The resident a monster attacked recently, or null: killing it saved them. */
+    public static UUID recentVictim(Mob m) {
+        var attack = recent.get(m.getUUID());
+        return attack == null || m.level() != attack.level() || m.level().getGameTime() >= attack.until() ? null : attack.victim();
     }
     public static boolean threat(Mob m, ServerLevel level) {
         var attack = recent.get(m.getUUID());

@@ -59,6 +59,8 @@ public final class VillageLedger {
         var news = new ArrayList<String>();
         for (var n : society.recent(today, 60)) { if (news.size() >= 12) break; news.add("Day " + (n.day() + 1) + ": " + n.headline(society)); }
         if (news.isEmpty()) news.add("No news yet. Life in " + record.name() + " is just getting started.");
+        String standing = dev.villagefriends.deed.Deeds.ledgerLine(player, level, record.id(), record.name());
+        if (!standing.isEmpty()) news.addFirst(standing);
         var detail = society.has(focus) ? detail(society, focus, today, known.getOrDefault(focus, -1), loaded.get(focus), record.name()) : LedgerPayload.Detail.NONE;
         ServerPlayNetworking.send(player, new LedgerPayload(record.id(), record.name(), today, society.has(focus) ? focus : "", entries, news, detail));
     }

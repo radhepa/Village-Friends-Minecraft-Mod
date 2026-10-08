@@ -64,14 +64,19 @@ public final class Knockouts {
     public static boolean allowDeath(LivingEntity entity, DamageSource source) {
         if (!(entity instanceof Villager v) || !(v.level() instanceof ServerLevel level)) return true;
         if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) return true;
-        knockOut(v, level);
+        var by = GuardController.attacker(source) instanceof ServerPlayer p && !p.isCreative() && !p.isSpectator() ? p : null;
+        boolean fresh = !knockedOut(v);
+        knockOut(v, level, by == null ? "" : by.getUUID().toString());
+        if (by != null && fresh) dev.villagefriends.deed.Deeds.knockedOut(by, v);
         return false;
     }
-    public static void knockOut(Villager v, ServerLevel level) {
+    public static void knockOut(Villager v, ServerLevel level) { knockOut(v, level, ""); }
+    /** {@code by}: the UUID of the player who did it, or "". */
+    public static void knockOut(Villager v, ServerLevel level, String by) {
         v.setHealth(1); v.clearFire(); v.removeAllEffects(); v.setTradingPlayer(null); v.stopUsingItem();
         v.getNavigation().stop(); v.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
         GuardController.unload(v);
-        if (!knockedOut(v)) target(v).setAttached(KNOCKOUT, KnockoutState.knockedOut(level.getGameTime()));
+        if (!knockedOut(v)) target(v).setAttached(KNOCKOUT, KnockoutState.knockedOut(level.getGameTime(), by));
         lieDown(v);
         patients.add(v);
         level.playSound(null, v.blockPosition(), SoundEvents.VILLAGER_HURT, SoundSource.NEUTRAL, 1F, .8F);
@@ -106,6 +111,9 @@ public final class Knockouts {
             if (p.distanceToSqr(v) < 128 * 128 || target(v).getAttachedOrCreate(FRIENDSHIPS).get(p.getUUID()).points() > 0)
                 p.sendSystemMessage(line, false);
         }
+        String by = state(v).by();
+        // The village blames whoever knocked them out (before they are gone, so their family is still known).
+        dev.villagefriends.deed.Deeds.died(v, by);
         target(v).removeAttached(KNOCKOUT);
         v.kill(level);
     }
@@ -130,6 +138,7 @@ public final class Knockouts {
             var next = s.bandaged(now, false);
             target(v).setAttached(KNOCKOUT, next);
             if (!p.getAbilities().instabuild) held.shrink(1);
+            dev.villagefriends.deed.Deeds.bandaged(p, v);
             level.playSound(null, v.blockPosition(), SoundEvents.WOOL_PLACE, SoundSource.PLAYERS, 1F, 1.1F);
             level.sendParticles(ParticleTypes.HAPPY_VILLAGER, v.getX(), v.getY() + .4, v.getZ(), 6, .4, .1, .4, 0);
             p.sendSystemMessage(Component.literal("You bandage " + name(v) + "'s wounds · " + KnockoutState.duration(next.left(now)) + " left"), true);
@@ -138,6 +147,7 @@ public final class Knockouts {
         if (!p.getAbilities().instabuild) held.shrink(1);
         revive(v, treatment.restoredHealthFraction());
         saveBond(v, p, bond(v, p).trust(10).remember(day(level), "You revived me after I was knocked out."));
+        dev.villagefriends.deed.Deeds.revived(p, v);
         p.sendSystemMessage(Component.literal(name(v) + " comes to. " + (treatment == MedicalSupplyItem.Treatment.REVIVAL_TONIC ? "Fully restored." : "Still weak: let them rest.")), true);
     }
     public static void revive(Villager v, float healthFraction) {

@@ -98,6 +98,7 @@ public final class CompanionController {
                     for (String flag : b.flags()) if (flag.startsWith("rescue:")) b = b.unflag(flag);
                     saveBond(v, p, b.trust(5).flag("rescue:" + day(v.level())).remember(day(v.level()), "You helped me up when I couldn't carry on."));
                 }
+                dev.villagefriends.deed.Deeds.rescued(p, v);
                 show(p, v, "companion", "Thank you for staying with me. Let's be careful, or head home if things are too dangerous.", "Recovered. Equipment and memories kept.", false);
             }
             case "equip" -> {
@@ -220,6 +221,7 @@ public final class CompanionController {
         if (source.getEntity() instanceof ServerPlayer p && strikes.getOrDefault(v.getUUID(), -100) + 20 <= v.tickCount) {
             strikes.put(v.getUUID(), v.tickCount);
             saveBond(v, p, bond(v, p).trust(-15).flag("hurt").remember(day(v.level()), "You hurt me. I need to feel safe again."));
+            dev.villagefriends.deed.Deeds.hit(p, v);
         }
         return true;
     }

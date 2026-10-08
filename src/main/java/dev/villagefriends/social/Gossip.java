@@ -117,6 +117,14 @@ public final class Gossip {
                     : "It was " + a + "'s birthday! There was cake by the bell and somebody tried to juggle. Ask " + a + " about it.";
             case "helped" -> n.a().equals(me) ? n.c() + " answered my notice on the board. I didn't even have to ask twice!"
                     : n.c() + " took care of " + a + "'s notice on the board. Good people are worth gossiping about.";
+            case "deed:raid_won" -> "The raid's over! " + n.c() + " was out there with the guards, and we're all still here. I could hug them.";
+            case "deed:revived" -> n.a().equals(me) ? "I was knocked out cold, and " + n.c() + " brought me back. I owe them everything."
+                    : n.c() + " brought " + a + " back after " + a + " was knocked out. Right there in the street!";
+            case "deed:knocked_out_resident" -> n.a().equals(me) ? n.c() + " knocked me out. I don't want to talk about it."
+                    : n.c() + " knocked " + a + " out cold. Can you believe it? Keep an eye on that one.";
+            case "deed:killed_resident" -> "We lost " + a + ". " + n.c() + " did that. I can't say the name without shaking.";
+            case "deed:killed_golem" -> n.c() + " killed our iron golem. Who keeps us safe at night now?";
+            case "deed:killed_pet" -> (n.a().equals(me) ? "My " : a + "'s ") + (n.b().isEmpty() ? "pet" : n.b()) + " is gone. " + n.c() + " did it. Poor thing.";
             default -> "Oh, the usual comings and goings.";
         };
     }
