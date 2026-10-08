@@ -1,0 +1,358 @@
+{
+ "format": 1,
+ "size": [11, 12, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:sandstone"
+  },
+  "B": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "C": {
+   "id": "minecraft:white_terracotta"
+  },
+  "D": {
+   "id": "minecraft:jungle_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "F": {
+   "id": "minecraft:smooth_sandstone_slab",
+   "properties": {
+    "type": "bottom"
+   }
+  },
+  "G": {
+   "id": "minecraft:jungle_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "H": {
+   "id": "minecraft:cyan_terracotta"
+  },
+  "I": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "J": {
+   "id": "minecraft:cut_sandstone_slab",
+   "properties": {
+    "type": "top"
+   }
+  },
+  "K": {
+   "id": "minecraft:cocoa",
+   "properties": {
+    "age": "2",
+    "facing": "west"
+   }
+  },
+  "L": {
+   "id": "minecraft:sand"
+  },
+  "M": {
+   "id": "minecraft:sandstone_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "top",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "N": {
+   "id": "minecraft:sandstone_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "top",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:sandstone_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "top",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:sandstone_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:chiseled_sandstone"
+  },
+  "R": {
+   "id": "minecraft:cocoa",
+   "properties": {
+    "age": "2",
+    "facing": "east"
+   }
+  },
+  "S": {
+   "id": "minecraft:gold_block"
+  },
+  "T": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "U": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:potted_cactus"
+  },
+  "W": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "east"
+   }
+  },
+  "X": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "west"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "ABABABABABA",
+    "BABABABABAB",
+    "ABABABABALA",
+    "BABABABABAB",
+    "ABABABABABA",
+    "BABAHHHABAB",
+    "ABABHHHBABA",
+    "BABAHHHABAB",
+    "ABABABABABA",
+    "BLBABABABAB",
+    "ABABABABABA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....T.....",
+    "...........",
+    ".........G.",
+    "...........",
+    ".W.EFFFE...",
+    "...FIIIF...",
+    "...FIQIF...",
+    "...FIIIF...",
+    "...EFFFE.X.",
+    ".G.........",
+    ".........V."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    ".........G.",
+    "...........",
+    "...E...E...",
+    "...........",
+    "...........",
+    "...........",
+    "...E...E...",
+    ".G.........",
+    "..........."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    ".........G.",
+    "...........",
+    "...EPJME...",
+    "...N...N...",
+    "...J...J...",
+    "...O...O...",
+    "...EPJME...",
+    ".G.........",
+    "..........."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    ".........G.",
+    "...........",
+    "...........",
+    "...EEEEE.D.",
+    "...E...E...",
+    "D..E.U.E...",
+    "...E...E...",
+    "...EEEEE...",
+    "G..........",
+    "..........."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "......D.RGK",
+    "...........",
+    ".......D...",
+    "....CCC..D.",
+    "...CC.CC...",
+    "D..C...C...",
+    "..DCC.CC...",
+    "....CCC....",
+    "GK.D.......",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "........DDD",
+    ".......DDDD",
+    "........DDD",
+    ".........D.",
+    ".....C.....",
+    "....CCC....",
+    "...CC.CC...",
+    "D...CCC....",
+    "DD...C.....",
+    "DDD........",
+    "DD........."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...........",
+    ".........D.",
+    "...........",
+    "...........",
+    "...........",
+    ".....C.....",
+    "....CCC....",
+    ".....C.....",
+    "...........",
+    "D..........",
+    "..........."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    ".....S.....",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 11,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/civic.py",
+  "checksum": "e9a85695a91bf1bd"
+ }
+}
