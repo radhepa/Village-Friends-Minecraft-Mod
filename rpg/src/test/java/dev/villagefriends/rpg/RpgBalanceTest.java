@@ -15,7 +15,9 @@ class RpgBalanceTest {
         assertEquals(1.4, Balance.hungerRate(1), 1e-9);
         assertEquals(1.0, Balance.hungerRate(20), 1e-9);
         assertEquals(.85, Balance.hungerRate(100), 1e-9);
-        assertEquals(.85, Balance.meleeBase(1), 1e-9);
+        assertEquals(.75, Balance.meleeBase(1), 1e-9);
+        assertEquals(.6, Balance.mineBase(1), 1e-9);
+        assertEquals(1, Balance.mineBase(15), 1e-9);
         assertEquals(1, Balance.meleeBase(15), 1e-9);
         for (int l = 1; l < 100; l++) assertTrue(Balance.need(l + 1) > Balance.need(l));
     }
@@ -40,8 +42,17 @@ class RpgBalanceTest {
         assertTrue(200 / Balance.outgoing(sharpVCrit, m, true, 200) >= 7);
         // Ordinary mobs get the full bonus, and the weak start applies to bosses too.
         assertEquals(sharpVCrit * m, Balance.outgoing(sharpVCrit, m, false, 20), 1e-3);
-        assertEquals(10 * .85F, Balance.outgoing(10, .85, true, 500), 1e-3);
+        assertEquals(10 * .75F, Balance.outgoing(10, Balance.meleeBase(1), true, 500), 1e-3);
         assertEquals(2.5F, Balance.incoming(10, 2), 1e-3);
+    }
+    @Test void repeatKillsAndMassKillsPayLess() {
+        assertEquals(1, Balance.fatigue(1, 1), 1e-9);
+        assertEquals(.5, Balance.fatigue(2, 1), 1e-9);
+        assertEquals(.5, Balance.fatigue(10, 1), 1e-9);
+        assertEquals(.4, Balance.fatigue(11, 1), 1e-9);
+        assertTrue(Balance.fatigue(25, 1) < .05 + 1e-9);
+        assertEquals(.25, Balance.fatigue(1, 5), 1e-9);
+        assertEquals(.05, Balance.fatigue(2, 10), 1e-9);
     }
     @Test void skillsClimbToFifty() {
         assertEquals(0, Balance.skillLevel(0));
@@ -55,7 +66,9 @@ class RpgBalanceTest {
         assertEquals(22, Bestiary.FAMILIES.size());
         for (var f : Bestiary.FAMILIES) {
             for (int t = 1; t < 5; t++) assertTrue(f.rarity().tiers[t] > f.rarity().tiers[t - 1]);
-            assertEquals(List.of(3, 5), f.perks().stream().map(Bestiary.Perk::tier).toList(), f.id());
+            assertEquals(List.of(3, 5, 5), f.perks().stream().map(Bestiary.Perk::tier).toList(), f.id());
+            assertEquals("active", f.active().kind(), f.id());
+            assertTrue(f.active().amount() >= 8 && f.active().count() >= 1, f.id());
             assertEquals(0, f.tier(0)); assertEquals(5, f.tier(1_000_000)); assertEquals(-1, f.next(1_000_000));
         }
         assertEquals("zombie", Bestiary.ofMob("husk").id());

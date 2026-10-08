@@ -96,9 +96,6 @@ public final class Life {
 
     // -- the pulse ---------------------------------------------------------------------------------
     static void tick(MinecraftServer server) {
-        boolean decay = server.getTickCount() % 120 == 0;
-        if (decay) Hunt.RECENT.values().forEach(m -> m.replaceAll((k, v) -> v - 1));
-        if (decay) Hunt.RECENT.values().forEach(m -> m.values().removeIf(v -> v <= 0));
         for (var p : server.getPlayerList().getPlayers()) if ((p.tickCount + p.getId()) % 20 == 0 && p.isAlive()) pulse(p);
     }
     private static final List<String> IMMUNITIES = List.of("hunger", "poison", "weakness", "slowness", "levitation", "mining_fatigue", "wither", "darkness");
@@ -189,6 +186,7 @@ public final class Life {
                 p.sendSystemMessage(Component.literal("Your attribute points are free to spend again.").withStyle(ChatFormatting.GOLD), true);
             }
             case "abandon" -> Quests.abandon(p, a.arg());
+            case "ability" -> Abilities.use(p, a.arg());
             default -> {}
         }
     }

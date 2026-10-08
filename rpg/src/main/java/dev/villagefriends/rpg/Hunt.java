@@ -46,10 +46,11 @@ import java.util.UUID;
 /** Combat and gathering: damage scaling, kills, masteries, bonus drops, and skill experience from blocks. */
 public final class Hunt {
     private Hunt() {}
-    /** Recent kills per player and family, for kill fatigue; decayed by {@link Life#tick}. */
-    static final Map<UUID, Map<String, Integer>> RECENT = new HashMap<>();
+    /** Per player: kind -> {streak, game time of the last kill}, and game times of recent kills of anything. */
+    static final Map<UUID, Map<String, long[]>> STREAKS = new HashMap<>();
+    static final Map<UUID, java.util.ArrayDeque<Long>> BURSTS = new HashMap<>();
     private static final Set<String> FLYING = Set.of("ghast", "phantom", "blaze", "breeze", "vex", "bat", "bee", "allay");
-    static void clear() { RECENT.clear(); }
+    static void clear() { STREAKS.clear(); BURSTS.clear(); }
 
     static String path(LivingEntity e) { return BuiltInRegistries.ENTITY_TYPE.getKey(e.getType()).getPath(); }
     static Bestiary.Family family(LivingEntity e) { return Bestiary.ofMob(path(e)); }
@@ -82,6 +83,10 @@ public final class Hunt {
             m = Balance.meleeBase(s.level()) + Balance.STR_MELEE * s.attr(Attr.STRENGTH);
             if (held.is(ItemTags.SWORDS)) m += Balance.SWORD_DAMAGE * s.skill(Skill.SWORDS);
             else if (held.is(ItemTags.AXES)) m += Balance.AXE_DAMAGE * s.skill(Skill.AXES);
+            if (s.mark("until:wither_strike") > level.getGameTime()) {
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1));
+                Rpg.set(p, s.unmark("until:wither_strike"));
+            }
             if (p.getRandom().nextDouble() < Balance.PRE_CRIT * s.attr(Attr.PRECISION)) {
                 m += Balance.CRIT_BONUS;
                 level.sendParticles(ParticleTypes.ENCHANTED_HIT, target.getX(), target.getY(.6), target.getZ(), 12, .3, .3, .3, .2);
@@ -100,9 +105,12 @@ public final class Hunt {
         if (level.isRaided(target.blockPosition())) m += s.perk("damage", "raid");
         return Balance.outgoing(amount, m, boss, target.getMaxHealth());
     }
-    /** Pearl Thrift: ender pearls don't hurt at all. */
+    /** Pearl Thrift: ender pearls don't hurt at all; nor do falls just after a Bounce, Riptide or Wind Burst. */
     static boolean allowDamage(LivingEntity entity, DamageSource source, float amount) {
-        return !(entity instanceof ServerPlayer p && source.is(DamageTypes.ENDER_PEARL) && Rpg.sheet(p).perk("resist", "pearl") >= 1);
+        if (!(entity instanceof ServerPlayer p)) return true;
+        var s = Rpg.sheet(p);
+        if (source.is(DamageTypes.ENDER_PEARL) && s.perk("resist", "pearl") >= 1) return false;
+        return !(source.is(DamageTypeTags.IS_FALL) && s.mark("until:no_fall") > p.level().getGameTime());
     }
     /** Skill experience from hits given and taken. */
     static void afterDamage(LivingEntity entity, DamageSource source, float base, float taken, boolean blocked) {
@@ -148,9 +156,15 @@ public final class Hunt {
         var f = family(dead);
         boolean hostile = dead instanceof Enemy, animal = dead instanceof Animal;
         String key = f != null ? f.id() : path(dead);
-        int recent = RECENT.computeIfAbsent(p.getUUID(), k -> new HashMap<>()).merge(key, 1, Integer::sum);
-        int xp = (int) Math.round(Balance.killXp(dead.getMaxHealth(), hostile, f == null ? null : f.rarity()) * Balance.fatigue(recent - 1));
-        if (hostile || animal) Progress.xp(p, Math.max(1, xp), "(" + dead.getName().getString() + ")");
+        long now = level.getGameTime();
+        var streak = STREAKS.computeIfAbsent(p.getUUID(), k -> new HashMap<>()).computeIfAbsent(key, k -> new long[]{0, 0});
+        streak[0] = now - streak[1] <= Balance.STREAK_SECONDS * 20L ? streak[0] + 1 : 1; streak[1] = now;
+        var burst = BURSTS.computeIfAbsent(p.getUUID(), k -> new java.util.ArrayDeque<>());
+        burst.addLast(now);
+        while (!burst.isEmpty() && now - burst.peekFirst() > Balance.BURST_SECONDS * 20L) burst.removeFirst();
+        double share = Balance.fatigue((int) streak[0], burst.size());
+        double xp = Balance.killXp(dead.getMaxHealth(), hostile, f == null ? null : f.rarity()) * share;
+        if (hostile || animal) Progress.xp(p, xp, "(" + dead.getName().getString() + (share < 1 ? ", " + Math.round(share * 100) + "%" : "") + ")");
         var weapon = weaponSkill(p, source);
         if (weapon != null && hostile) Progress.skill(p, weapon, xp / 2.0);
         var s = Rpg.sheet(p);

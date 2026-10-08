@@ -3,8 +3,8 @@ package dev.villagefriends.rpg;
 /**
  * Every number the RPG runs on, in one place. Pure: no Minecraft types, so it can be unit tested.
  *
- * <p>The shape: a new character is weaker than vanilla (6 hearts, hungrier, weaker swings, slower
- * mining), reaches vanilla around level 15-20, and keeps growing to level 100. Attribute points
+ * <p>The shape: a new character is weaker than vanilla (6 hearts, 40% hungrier, 75% melee damage,
+ * 60% mining speed), reaches vanilla around level 15-20, and keeps growing to level 100. Attribute points
  * (317 by level 100) can't max all ten attributes (500), so every character is a build. Against
  * bosses only half of any damage bonus counts, and the bonus on one hit can't pass a small share
  * of the boss's health, so even a maxed character fights the Warden and the dragon for real.
@@ -42,10 +42,10 @@ public final class Balance {
         if (level <= 20) return hardStart ? 1.4 - .4 * (level - 1) / 19.0 : 1;
         return 1 - .15 * (level - 20) / 80.0;
     }
-    /** Melee damage before bonuses: 0.85 at level 1, 1.0 from level 15. */
-    public static double meleeBase(int level) { return !hardStart || level >= 15 ? 1 : .85 + .15 * (level - 1) / 14.0; }
-    /** Block breaking speed before skills: 0.8 at level 1, 1.0 from level 15. */
-    public static double mineBase(int level) { return !hardStart || level >= 15 ? 1 : .8 + .2 * (level - 1) / 14.0; }
+    /** Melee damage before bonuses: 0.75 at level 1, 1.0 from level 15. */
+    public static double meleeBase(int level) { return !hardStart || level >= 15 ? 1 : .75 + .25 * (level - 1) / 14.0; }
+    /** Block breaking speed before skills: 0.6 at level 1, 1.0 from level 15. */
+    public static double mineBase(int level) { return !hardStart || level >= 15 ? 1 : .6 + .4 * (level - 1) / 14.0; }
 
     // -- attributes, per point ----------------------------------------------------------------------
     public static final double VIT_HEALTH = .3, STR_MELEE = .01, DEX_SPEED = .008, AGI_SPEED = .002, AGI_JUMP = .002,
@@ -95,8 +95,18 @@ public final class Balance {
         double mult = rarity == null ? 1 : switch (rarity) { case COMMON -> 1; case UNCOMMON -> 1.3; case RARE -> 1.6; case BOSS -> 6; };
         return (int) Math.clamp(Math.round(maxHealth * .6 * mult), 1, 4000);
     }
-    /** Repeated kills of one kind in a short time are worth less (mob farms), down to 20%. */
-    public static double fatigue(int recentKills) { return Math.max(.2, 1 - .03 * recentKills); }
+    /** Seconds between kills of one kind that still count as "in a row", and the window for a mass kill. */
+    public static final int STREAK_SECONDS = 30, BURST_SECONDS = 4;
+    /**
+     * Kill experience share. {@code streak} is this kill's place in a run of the same kind of mob, each
+     * within {@link #STREAK_SECONDS} of the last: the first is full, the 2nd to 10th give half, and past
+     * 10 it keeps dropping (x0.8 per kill, down to 5%). {@code burst} is how many kills of anything landed
+     * in the last {@link #BURST_SECONDS}: 5 or more is a mass kill (x0.25), 10 or more a farm (x0.1).
+     */
+    public static double fatigue(int streak, int burst) {
+        double m = streak <= 1 ? 1 : streak <= 10 ? .5 : Math.max(.05, .5 * Math.pow(.8, streak - 10));
+        return m * (burst >= 10 ? .1 : burst >= 5 ? .25 : 1);
+    }
     /** Character experience for breaking an ore block, by block id path. */
     public static int oreXp(String path) {
         if (path.contains("ancient_debris")) return 25;

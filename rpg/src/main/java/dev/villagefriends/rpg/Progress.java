@@ -71,5 +71,7 @@ public final class Progress {
         p.sendSystemMessage(Component.literal(f.label() + " mastery: " + rank + ". +2% damage to them, -2% damage from them"
                 + (unlock.isEmpty() ? "." : ". Unlocked " + unlock + ".")).withStyle(ChatFormatting.LIGHT_PURPLE));
         p.level().playSound(null, p.blockPosition(), SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, .7F, 1);
+        if (tier == 5) p.sendSystemMessage(Component.literal("New ability: " + f.active().name() + " - " + f.active().desc()
+                + ". Press R to use it, G to switch abilities.").withStyle(ChatFormatting.GOLD));
     }
 }
