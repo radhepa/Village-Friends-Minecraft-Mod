@@ -6,13 +6,13 @@
    "id": "minecraft:air"
   },
   "A": {
-   "id": "minecraft:dark_oak_planks"
+   "id": "minecraft:stone_bricks"
   },
   "B": {
-   "id": "minecraft:cobblestone"
+   "id": "minecraft:dark_oak_planks"
   },
   "C": {
-   "id": "minecraft:stone_bricks"
+   "id": "minecraft:cobblestone"
   },
   "D": {
    "id": "minecraft:deepslate_tiles"
@@ -52,7 +52,7 @@
    "id": "minecraft:polished_andesite"
   },
   "L": {
-   "id": "minecraft:stone_bricks",
+   "id": "minecraft:stripped_dark_oak_log",
    "properties": {
     "axis": "z"
    }
@@ -60,34 +60,16 @@
   "M": {
    "id": "minecraft:stripped_dark_oak_log",
    "properties": {
-    "axis": "z"
+    "axis": "x"
    }
   },
   "N": {
-   "id": "minecraft:stone_bricks",
-   "properties": {
-    "axis": "y"
-   }
-  },
-  "O": {
-   "id": "minecraft:stone_bricks",
-   "properties": {
-    "axis": "x"
-   }
-  },
-  "P": {
-   "id": "minecraft:stripped_dark_oak_log",
-   "properties": {
-    "axis": "x"
-   }
-  },
-  "Q": {
    "id": "minecraft:light_blue_carpet"
   },
-  "R": {
+  "O": {
    "id": "minecraft:snow_block"
   },
-  "S": {
+  "P": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "true",
@@ -97,17 +79,17 @@
     "west": "true"
    }
   },
-  "T": {
+  "Q": {
    "id": "minecraft:deepslate_tile_slab",
    "properties": {
     "type": "bottom",
     "waterlogged": "false"
    }
   },
-  "U": {
+  "R": {
    "id": "minecraft:gravel"
   },
-  "V": {
+  "S": {
    "id": "minecraft:dark_oak_fence",
    "properties": {
     "east": "false",
@@ -117,7 +99,7 @@
     "west": "false"
    }
   },
-  "W": {
+  "T": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "false",
@@ -127,7 +109,7 @@
     "west": "false"
    }
   },
-  "X": {
+  "U": {
    "id": "minecraft:dark_oak_stairs",
    "properties": {
     "facing": "north",
@@ -136,10 +118,10 @@
     "waterlogged": "false"
    }
   },
-  "Y": {
+  "V": {
    "id": "minecraft:blue_carpet"
   },
-  "Z": {
+  "W": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "true",
@@ -149,17 +131,17 @@
     "west": "false"
    }
   },
-  "a": {
+  "X": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "true",
     "waterlogged": "false"
    }
   },
-  "b": {
+  "Y": {
    "id": "minecraft:podzol"
   },
-  "c": {
+  "Z": {
    "id": "minecraft:spruce_leaves",
    "properties": {
     "distance": "1",
@@ -167,13 +149,13 @@
     "waterlogged": "false"
    }
   },
-  "d": {
+  "a": {
    "id": "minecraft:stripped_dark_oak_log",
    "properties": {
     "axis": "y"
    }
   },
-  "e": {
+  "b": {
    "id": "minecraft:candle",
    "properties": {
     "candles": "2",
@@ -181,7 +163,7 @@
     "waterlogged": "false"
    }
   },
-  "f": {
+  "c": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -191,7 +173,7 @@
     "powered": "false"
    }
   },
-  "g": {
+  "d": {
    "id": "minecraft:dark_oak_door",
    "properties": {
     "facing": "south",
@@ -201,7 +183,7 @@
     "powered": "false"
    }
   },
-  "h": {
+  "e": {
    "id": "minecraft:glass_pane",
    "properties": {
     "east": "true",
@@ -211,14 +193,14 @@
     "west": "true"
    }
   },
-  "i": {
+  "f": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "false",
     "waterlogged": "false"
    }
   },
-  "j": {
+  "g": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "east",
@@ -226,7 +208,7 @@
     "waterlogged": "false"
    }
   },
-  "k": {
+  "h": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "south",
@@ -234,7 +216,7 @@
     "waterlogged": "false"
    }
   },
-  "l": {
+  "i": {
    "id": "minecraft:blue_bed",
    "properties": {
     "facing": "north",
@@ -242,7 +224,7 @@
     "part": "foot"
    }
   },
-  "m": {
+  "j": {
    "id": "minecraft:blue_bed",
    "properties": {
     "facing": "north",
@@ -250,7 +232,7 @@
     "part": "head"
    }
   },
-  "n": {
+  "k": {
    "id": "minecraft:campfire",
    "properties": {
     "facing": "north",
@@ -259,7 +241,7 @@
     "waterlogged": "false"
    }
   },
-  "o": {
+  "l": {
    "id": "minecraft:campfire",
    "properties": {
     "facing": "west",
@@ -268,7 +250,7 @@
     "waterlogged": "false"
    }
   },
-  "p": {
+  "m": {
    "id": "minecraft:candle",
    "properties": {
     "candles": "3",
@@ -276,7 +258,7 @@
     "waterlogged": "false"
    }
   },
-  "q": {
+  "n": {
    "id": "minecraft:chest",
    "properties": {
     "facing": "north",
@@ -284,19 +266,19 @@
     "waterlogged": "false"
    }
   },
-  "r": {
+  "o": {
    "id": "minecraft:chiseled_bookshelf",
    "properties": {
     "facing": "north"
    }
   },
-  "s": {
+  "p": {
    "id": "minecraft:dark_oak_pressure_plate",
    "properties": {
     "powered": "false"
    }
   },
-  "t": {
+  "q": {
    "id": "minecraft:dark_oak_stairs",
    "properties": {
     "facing": "east",
@@ -305,7 +287,7 @@
     "waterlogged": "false"
    }
   },
-  "u": {
+  "r": {
    "id": "minecraft:dark_oak_stairs",
    "properties": {
     "facing": "west",
@@ -314,13 +296,13 @@
     "waterlogged": "false"
    }
   },
-  "v": {
+  "s": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "w": {
+  "t": {
    "id": "minecraft:lectern",
    "properties": {
     "facing": "east",
@@ -328,7 +310,7 @@
     "powered": "false"
    }
   },
-  "x": {
+  "u": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
     "facing": "south",
@@ -336,13 +318,13 @@
     "waterlogged": "false"
    }
   },
-  "y": {
+  "v": {
    "id": "villagefriends:archives",
    "properties": {
     "facing": "north"
    }
   },
-  "z": {
+  "w": {
    "id": "villagefriends:house_plaque",
    "properties": {
     "facing": "north"
@@ -353,21 +335,21 @@
   {
    "y": 0,
    "rows": [
-    "FUFFUKFFUFR",
-    "RFFUFCFFURF",
-    "FbFCUKRCUbF",
-    "RRRFFRRFFRR",
-    "FBBBBBBBBBF",
-    "bBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBb",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBEEEEEEEBF",
-    "FBBBBBBBBBF",
+    "FRFFRKFFRFO",
+    "OFFRFAFFROF",
+    "FYFARKOARYF",
+    "OOOFFOOFFOO",
+    "FCCCCCCCCCF",
+    "YCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCEEEEEEECY",
+    "FCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCEEEEEEECF",
+    "FCCCCCCCCCF",
     "FFFFFFFFFFF",
     "FFFFFFFFFFF"
    ]
@@ -375,21 +357,21 @@
   {
    "y": 1,
    "rows": [
-    ".....v.....",
+    ".....s.....",
     "...........",
-    ".c.V...V.c.",
-    "...kzx.k...",
-    ".BBBBBBBBB.",
-    "cBAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BAAAAAAABc",
-    ".BAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BAAAAAAAB.",
-    ".BBBBBBBBB.",
+    ".Z.S...S.Z.",
+    "...hwu.h...",
+    ".CCCCCCCCC.",
+    "ZCBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBCZ",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CBBBBBBBC.",
+    ".CCCCCCCCC.",
     "...........",
     "..........."
    ]
@@ -399,19 +381,19 @@
    "rows": [
     "...........",
     "...........",
-    "...V...V...",
+    "...S...S...",
     "...........",
-    ".CBSBfBSBC.",
-    ".BG.....GB.",
-    ".ZG.....GB.",
-    ".B..uVt.BB.",
-    ".BGQQQQAoB.",
-    ".BGQYYQABB.",
-    ".ZGQYYQAGB.",
-    ".BGQQQQA.B.",
-    ".BG..y.XGB.",
-    ".BGGGGGGGB.",
-    ".CBBBBBBBC.",
+    ".ACPCcCPCA.",
+    ".CG.....GC.",
+    ".WG.....GC.",
+    ".C..rSq.CC.",
+    ".CGNNNNBlC.",
+    ".CGNVVNBCC.",
+    ".WGNVVNBGC.",
+    ".CGNNNNB.C.",
+    ".CG..v.UGC.",
+    ".CGGGGGGGC.",
+    ".ACCCCCCCA.",
     "...........",
     "..........."
    ]
@@ -421,19 +403,19 @@
    "rows": [
     "...........",
     "...........",
-    "...i...i...",
+    "...f...f...",
     "...........",
-    ".KBSBgBSBK.",
-    ".BG.....GB.",
-    ".ZG.....GB.",
-    ".B...s..BB.",
-    ".BG....ABB.",
-    ".BG....ABB.",
-    ".ZG....AGB.",
-    ".BG....X.B.",
-    ".BG.....GB.",
-    ".BGGGGGGGB.",
-    ".KBBBBBBBK.",
+    ".KCPCdCPCK.",
+    ".CG.....GC.",
+    ".WG.....GC.",
+    ".C...p..CC.",
+    ".CG....BCC.",
+    ".CG....BCC.",
+    ".WG....BGC.",
+    ".CG....U.C.",
+    ".CG.....GC.",
+    ".CGGGGGGGC.",
+    ".KCCCCCCCK.",
     "...........",
     "..........."
    ]
@@ -445,17 +427,17 @@
     "...........",
     "...........",
     "...........",
-    ".CBBBBBBBC.",
-    ".BG.....GB.",
-    ".BG.....GB.",
-    ".B......jB.",
-    ".BG....ABB.",
-    ".BG....AjB.",
-    ".BG....XGB.",
-    ".BG......B.",
-    ".BG.....GB.",
-    ".BGGGrGGGB.",
-    ".CBBBBBBBC.",
+    ".ACCCCCCCA.",
+    ".CG.....GC.",
+    ".CG.....GC.",
+    ".C......gC.",
+    ".CG....BCC.",
+    ".CG....BgC.",
+    ".CG....UGC.",
+    ".CG......C.",
+    ".CG.....GC.",
+    ".CGGGoGGGC.",
+    ".ACCCCCCCA.",
     "...........",
     "..........."
    ]
@@ -467,17 +449,17 @@
     "...........",
     "...........",
     "...........",
-    ".KBBBBBBBK.",
-    ".B.......B.",
-    ".B.......B.",
-    ".B......eB.",
-    ".B...a.ABB.",
-    ".B.....XeB.",
-    ".B.......B.",
-    ".B..a....B.",
-    ".B.......B.",
-    ".B.......B.",
-    ".KBBBBBBBK.",
+    ".KCCCCCCCK.",
+    ".C.......C.",
+    ".C.......C.",
+    ".C......bC.",
+    ".C...X.BCC.",
+    ".C.....UbC.",
+    ".C.......C.",
+    ".C..X....C.",
+    ".C.......C.",
+    ".C.......C.",
+    ".KCCCCCCCK.",
     "...........",
     "..........."
    ]
@@ -489,17 +471,17 @@
     "...........",
     "...........",
     "...........",
-    ".dPPPPPPPd.",
-    ".MAAAAAAAM.",
-    ".MAAAAAAAM.",
-    ".MAAAAAAAM.",
-    ".MAAAAAXBM.",
-    ".MAAAAA.AM.",
-    ".MAAAAA.AM.",
-    ".MAAAAAAAM.",
-    ".MAAAAAAAM.",
-    ".MAAAAAAAM.",
-    ".dPPPPPPPd.",
+    ".aMMMMMMMa.",
+    ".LBBBBBBBL.",
+    ".LBBBBBBBL.",
+    ".LBBBBBBBL.",
+    ".LBBBBBUCL.",
+    ".LBBBBB.BL.",
+    ".LBBBBB.BL.",
+    ".LBBBBBBBL.",
+    ".LBBBBBBBL.",
+    ".LBBBBBBBL.",
+    ".aMMMMMMMa.",
     "...........",
     "..........."
    ]
@@ -511,17 +493,17 @@
     "...........",
     "...........",
     "...........",
-    ".KChCNCSCK.",
-    ".CGG.....C.",
-    ".C...V...C.",
-    ".C.......W.",
-    ".Ww.....BC.",
-    ".N.......N.",
-    ".CAAfAA.AC.",
-    ".Cp....A.W.",
-    ".C.m...A.C.",
-    ".C.l.qGA.C.",
-    ".KCCCNCCCK.",
+    ".KAeAAAPAK.",
+    ".AGG.....A.",
+    ".A...S...A.",
+    ".A.......T.",
+    ".Tt.....CA.",
+    ".A.......A.",
+    ".ABBcBB.BA.",
+    ".Am....B.T.",
+    ".A.j...B.A.",
+    ".A.i.nGB.A.",
+    ".KAAAAAAAK.",
     "...........",
     "..........."
    ]
@@ -533,17 +515,17 @@
     "...........",
     "...........",
     "...........",
-    ".CChCNCSCC.",
-    ".CGG.....C.",
-    ".C...e...C.",
-    ".C.......W.",
-    ".W......BC.",
-    ".N.......N.",
-    ".CAAgAA.AC.",
-    ".C.....A.W.",
-    ".C.....A.C.",
-    ".C....GA.C.",
-    ".CCCCNCCCC.",
+    ".AAeAAAPAA.",
+    ".AGG.....A.",
+    ".A...b...A.",
+    ".A.......T.",
+    ".T......CA.",
+    ".A.......A.",
+    ".ABBdBB.BA.",
+    ".A.....B.T.",
+    ".A.....B.A.",
+    ".A....GB.A.",
+    ".AAAAAAAAA.",
     "...........",
     "..........."
    ]
@@ -555,17 +537,17 @@
     "...........",
     "...........",
     "...........",
-    ".KCCCNCCCK.",
-    ".C.......C.",
-    ".C.......C.",
-    ".C.......C.",
-    ".C...a..BC.",
-    ".N.......N.",
-    ".CAAAAA.AC.",
-    ".C.....A.C.",
-    ".C..a..A.C.",
-    ".C.....A.C.",
-    ".KCCCNCCCK.",
+    ".KAAAAAAAK.",
+    ".A.......A.",
+    ".A.......A.",
+    ".A.......A.",
+    ".A...X..CA.",
+    ".A.......A.",
+    ".ABBBBB.BA.",
+    ".A.....B.A.",
+    ".A..X..B.A.",
+    ".A.....B.A.",
+    ".KAAAAAAAK.",
     "...........",
     "..........."
    ]
@@ -577,17 +559,17 @@
     "...........",
     "...........",
     "...........",
-    "CNOOOOOOONC",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "HLAAAAAABLI",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "HLAAAAAAALI",
-    "CNOOOOOOONC",
+    "AAAAAAAAAAA",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "HABBBBBBCAI",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "HABBBBBBBAI",
+    "AAAAAAAAAAA",
     "...........",
     "..........."
    ]
@@ -599,17 +581,17 @@
     "...........",
     "...........",
     "...........",
-    "CDCCCSCCCDC",
+    "ADAAAPAAADA",
     ".D.......D.",
     ".D.......D.",
     ".D.......D.",
-    ".D......BD.",
+    ".D......CD.",
     ".D.......D.",
     ".D.......D.",
     ".D.......D.",
     ".D.......D.",
     ".D.......D.",
-    "CDCCCCCCCDC",
+    "ADAAAAAAADA",
     "...........",
     "..........."
    ]
@@ -621,17 +603,17 @@
     "...........",
     "...........",
     "...........",
-    "JCCCCSCCCCJ",
+    "JAAAAPAAAAJ",
     ".H.......I.",
     ".H.......I.",
     ".H.......I.",
-    ".H......BI.",
+    ".H......CI.",
     ".H.......I.",
     ".H.......I.",
     ".H.......I.",
     ".H.......I.",
     ".H.......I.",
-    "JCCCCSCCCCJ",
+    "JAAAAPAAAAJ",
     "...........",
     "..........."
    ]
@@ -643,17 +625,17 @@
     "...........",
     "...........",
     "...........",
-    ".CDCCSCCDC.",
+    ".ADAAPAADA.",
     "..D.....D..",
     "..D.....D..",
     "..D.....D..",
-    "..D.....B..",
+    "..D.....C..",
     "..D.....D..",
     "..D.....D..",
     "..D.....D..",
     "..D.....D..",
     "..D.....D..",
-    ".CDCCCCCDC.",
+    ".ADAAAAADA.",
     "...........",
     "..........."
    ]
@@ -665,17 +647,17 @@
     "...........",
     "...........",
     "...........",
-    ".JCCCCCCCJ.",
+    ".JAAAAAAAJ.",
     "..H.....I..",
     "..H.....I..",
     "..H.....I..",
-    "..H.....B..",
+    "..H.....C..",
     "..H.....I..",
     "..H.....I..",
     "..H.....I..",
     "..H.....I..",
     "..H.....I..",
-    ".JCCCCCCCJ.",
+    ".JAAAAAAAJ.",
     "...........",
     "..........."
    ]
@@ -687,17 +669,17 @@
     "...........",
     "...........",
     "...........",
-    "..CDCCCDC..",
+    "..ADAAADA..",
     "...D...D...",
     "...D...D...",
     "...D...D...",
-    "...D...DB..",
+    "...D...DC..",
     "...D...D...",
     "...D...D...",
     "...D...D...",
     "...D...D...",
     "...D...D...",
-    "..CDCCCDC..",
+    "..ADAAADA..",
     "...........",
     "..........."
    ]
@@ -709,17 +691,17 @@
     "...........",
     "...........",
     "...........",
-    "..JCCCCCJ..",
+    "..JAAAAAJ..",
     "...H...I...",
     "...H...I...",
     "...H...I...",
-    "...H...IB..",
+    "...H...IC..",
     "...H...I...",
     "...H...I...",
     "...H...I...",
     "...H...I...",
     "...H...I...",
-    "..JCCCCCJ..",
+    "..JAAAAAJ..",
     "...........",
     "..........."
    ]
@@ -731,17 +713,17 @@
     "...........",
     "...........",
     "...........",
-    "...CDCDC...",
+    "...ADADA...",
     "....D.D....",
     "....D.D....",
     "....D.D....",
-    "....D.D.B..",
+    "....D.D.C..",
     "....D.D....",
     "....D.D....",
     "....D.D....",
     "....D.D....",
     "....D.D....",
-    "...CDCDC...",
+    "...ADADA...",
     "...........",
     "..........."
    ]
@@ -753,17 +735,17 @@
     "...........",
     "...........",
     "...........",
-    "...JCCCJ...",
+    "...JAAAJ...",
     "....H.I....",
     "....H.I....",
     "....H.I....",
-    "....H.I.n..",
+    "....H.I.k..",
     "....H.I....",
     "....H.I....",
     "....H.I....",
     "....H.I....",
     "....H.I....",
-    "...JCCCJ...",
+    "...JAAAJ...",
     "...........",
     "..........."
    ]
@@ -775,7 +757,7 @@
     "...........",
     "...........",
     "...........",
-    "....CDC....",
+    "....ADA....",
     ".....D.....",
     ".....D.....",
     ".....D.....",
@@ -785,7 +767,7 @@
     ".....D.....",
     ".....D.....",
     ".....D.....",
-    "....CDC....",
+    "....ADA....",
     "...........",
     "..........."
    ]
@@ -797,17 +779,17 @@
     "...........",
     "...........",
     "...........",
-    "....JCJ....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    ".....T.....",
-    "....JCJ....",
+    "....JAJ....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    ".....Q.....",
+    "....JAJ....",
     "...........",
     "..........."
    ]
@@ -819,7 +801,7 @@
     "...........",
     "...........",
     "...........",
-    ".....C.....",
+    ".....A.....",
     "...........",
     "...........",
     "...........",
@@ -829,7 +811,7 @@
     "...........",
     "...........",
     "...........",
-    ".....C.....",
+    ".....A.....",
     "...........",
     "..........."
    ]
@@ -968,6 +950,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/snowy/civic.py",
-  "checksum": "aacb922af92b567b"
+  "checksum": "702d983d181c6ad2"
  }
 }

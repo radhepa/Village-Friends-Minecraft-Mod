@@ -31,7 +31,7 @@ def _lookup(*names):
 def color(name, face, props):
     special = {'water': (63, 118, 228), 'lava': (207, 92, 20), 'air': None, 'jigsaw': None,
                'structure_void': None, 'lantern': (200, 150, 70), 'campfire': (210, 120, 40),
-               'bell': (230, 190, 60), 'chain': (60, 60, 70), 'iron_chain': (60, 60, 70), 'composter': (110, 80, 40)}
+               'bell': (230, 190, 60), 'snow_block': (240, 248, 250), 'snow': (240, 248, 250), 'powder_snow': (240, 248, 250), 'chain': (60, 60, 70), 'iron_chain': (60, 60, 70), 'composter': (110, 80, 40)}
     if name in special:
         return special[name]
     base = name
