@@ -14,11 +14,12 @@
     {"id": "m_eel_trapper", "name": "Eel Trapper", "top": "t182_eel_trappers_wicker_pot_jerkin", "bottom": "b182_eel_marsh_mud_wraps"},
     {"id": "m_river_mudlark", "name": "Mudlark", "top": "t183_mudlarks_ragged_shirt", "bottom": "b183_mudlarks_rolled_rags"},
     {"id": "m_canal_lock_keeper", "name": "Lock Keeper", "top": "t184_lock_keepers_windlass_belt_waistcoat", "bottom": "b184_lock_keepers_gate_boots"},
-    {"id": "m_coracle_man", "name": "Coracle Man", "top": "t185_coracle_mans_back_slung_boat", "bottom": "b185_coracle_mans_wading_breeks"}
+    {"id": "m_coracle_man", "name": "Coracle Man", "top": "t185_coracle_mans_back_slung_boat", "bottom": "b185_coracle_mans_wading_breeks"},
+    {"id": "m_cockle_raker", "name": "Cockle Raker", "top": "t186_cockle_rakers_bib_smock", "bottom": "b186_cockle_sand_bare_legs"}
   ],
   "professions": {
-    "NONE": ["m_pole_ferryman", "m_tow_bargeman", "m_beacon_keeper", "m_river_mudlark", "m_canal_lock_keeper"],
-    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker", "m_oyster_dredger", "m_salt_boiler", "m_harbour_master", "m_beacon_keeper", "m_ship_pilot", "m_sea_captain", "m_eel_trapper", "m_coracle_man"],
+    "NONE": ["m_pole_ferryman", "m_tow_bargeman", "m_beacon_keeper", "m_river_mudlark", "m_canal_lock_keeper", "m_cockle_raker"],
+    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker", "m_oyster_dredger", "m_salt_boiler", "m_harbour_master", "m_beacon_keeper", "m_ship_pilot", "m_sea_captain", "m_eel_trapper", "m_coracle_man", "m_cockle_raker"],
     "CARPENTER": ["m_adze_shipwright", "m_oakum_caulker"],
     "COOK": ["m_salt_boiler"],
     "CARTOGRAPHER": ["m_harbour_master", "m_ship_pilot"],
