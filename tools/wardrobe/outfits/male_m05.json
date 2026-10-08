@@ -4,13 +4,23 @@
     {"id": "m_barber_surgeon", "name": "Barber-Surgeon", "top": "t222_barber_surgeons_striped_apron", "bottom": "b222_barber_surgeons_strapped_trousers"},
     {"id": "m_chantry_priest", "name": "Chantry Priest", "top": "t223_chantry_priests_stole_and_alb", "bottom": "b223_chantry_alb_skirt_and_soft_shoes"},
     {"id": "m_deacon", "name": "Deacon", "top": "t224_deacons_dalmatic", "bottom": "b224_deacons_alb_hem"},
-    {"id": "m_choir_cantor", "name": "Cantor", "top": "t225_cantors_choir_surplice", "bottom": "b225_cantors_cassock_skirt"}
+    {"id": "m_choir_cantor", "name": "Cantor", "top": "t225_cantors_choir_surplice", "bottom": "b225_cantors_cassock_skirt"},
+    {"id": "m_hospitaller_brother", "name": "Hospitaller", "top": "t226_hospitallers_eight_point_cross_mantle", "bottom": "b226_hospitallers_black_robe_skirt"},
+    {"id": "m_almoner", "name": "Almoner", "top": "t227_almoners_alms_purse_robe", "bottom": "b227_almoners_sandals_and_hose"},
+    {"id": "m_pardoner", "name": "Pardoner", "top": "t228_pardoners_relic_hung_coat", "bottom": "b228_pardoners_dusty_hose"},
+    {"id": "m_novice_brother", "name": "Novice", "top": "t229_novices_undyed_tunic_and_cord", "bottom": "b229_novices_bare_ankle_robe"},
+    {"id": "m_lay_brother", "name": "Lay Brother", "top": "t230_lay_brothers_hitched_work_habit", "bottom": "b230_lay_brothers_field_boots"}
   ],
   "professions": {
-    "APOTHECARY": ["m_physic_doctor", "m_barber_surgeon"],
+    "APOTHECARY": ["m_physic_doctor", "m_barber_surgeon", "m_hospitaller_brother"],
     "SCHOLAR": ["m_physic_doctor"],
     "BUTCHER": ["m_barber_surgeon"],
-    "CLERIC": ["m_chantry_priest", "m_deacon", "m_choir_cantor"],
-    "BARD": ["m_choir_cantor"]
+    "CLERIC": ["m_chantry_priest", "m_deacon", "m_choir_cantor", "m_hospitaller_brother", "m_almoner", "m_pardoner", "m_novice_brother", "m_lay_brother"],
+    "BARD": ["m_choir_cantor"],
+    "KNIGHT": ["m_hospitaller_brother"],
+    "NITWIT": ["m_pardoner"],
+    "MERCHANT": ["m_pardoner"],
+    "NONE": ["m_novice_brother"],
+    "FARMER": ["m_lay_brother"]
   }
 }

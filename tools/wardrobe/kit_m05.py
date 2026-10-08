@@ -105,6 +105,18 @@ def leg_prop(g, pid: str, side: str, pivot, size, role: str, base: int = 2, text
     return box
 
 
+BAYER = ((0, 8, 2, 10), (12, 4, 14, 6), (3, 11, 1, 9), (15, 7, 13, 5))
+
+
+def fade(face, key: str, y0: int, y1: int, ox: int = 0, start: float = .1, end: float = 1.0):
+    """Ordered (Bayer) dither of `key` that thickens from row y0 to solid-ish at y1: road dust, mud, soot, wet."""
+    for y in range(y0, y1 + 1):
+        t = start + (end - start) * (y - y0) / max(1, y1 - y0)
+        for x in range(face.w):
+            if BAYER[y % 4][(x + ox) % 4] < t * 16:
+                face.set(x, y, key)
+
+
 def dust(face, key: str, seed: int, rows, density_top: float = .05, density_bottom: float = .3):
     """Dust or mud that thickens toward the ground: denser on lower rows."""
     from paint import rnd
