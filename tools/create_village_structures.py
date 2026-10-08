@@ -1,4 +1,10 @@
-"""Reproduce the Phase 2 village pools and native, compressed Minecraft templates.
+"""Compile every village type's blueprints and layout into Minecraft data.
+
+Reads ``tools/village_blueprints/**`` and ``tools/village_layouts/*.json`` (see
+``village_design/layouts.py``) and writes native, compressed templates, template
+pools, processor lists, one ``villagefriends:village`` structure per type, their
+biome tags, the ``minecraft:villages`` structure set that replaces the vanilla
+villages, and the structure catalog the tests read.
 
 Only Python's standard library is required. Rooms, beds and connectors are checked
 before writing; the catalog also gives the later bed scanner reproducible fixtures.
@@ -10,12 +16,14 @@ import gzip
 import json
 import struct
 import argparse
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent / 'src/main/resources'
 NS = 'villagefriends'
 DATA_VERSION = 5023  # The project's Minecraft 26.3 world format.
 BLUEPRINTS = Path(__file__).resolve().parent / 'village_blueprints'
-LAYOUT = Path(__file__).resolve().parent / 'village_layout.json'
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from village_design import layouts as village_layouts  # noqa: E402
 
 
 class Byte(int):
@@ -143,10 +151,10 @@ class Template:
             'entities': plain(self.entities), 'rooms': self.rooms}
 
     @staticmethod
-    def from_blueprint(path):
+    def from_blueprint(path, name=None):
         data = json.loads(path.read_text(encoding='utf-8'))
         assert data['format'] == 1, f'Unsupported blueprint format: {path}'
-        t = Template(path.stem, tuple(data['size']))
+        t = Template(name or path.stem, tuple(data['size']))
         assert len(data['layers']) == t.size[1], f'Include every Y layer: {path}'
         assert {layer['y'] for layer in data['layers']} == set(range(t.size[1])), f'Duplicate or missing Y layer: {path}'
         for layer in data['layers']:
@@ -215,8 +223,11 @@ class Template:
             assert lower['Name'] == upper['Name'] and upper['Properties']['half'] == 'upper', (self.name,'door halves differ')
             assert {k:v for k,v in lower['Properties'].items() if k != 'half'} == {k:v for k,v in upper['Properties'].items() if k != 'half'}, (self.name,'door states differ')
 
-    def save(self, write=True):
+    def save(self, write=True, villager_type='minecraft:plains'):
         self.validate()
+        for entity in self.entities:
+            if entity['nbt'].get('id') == 'minecraft:villager':
+                entity['nbt']['VillagerData']['type'] = villager_type
         palette, indices, blocks = [], {}, []
         for pos, block in sorted(self.blocks.items(), key=lambda p: (p[0][1], p[0][2], p[0][0])):
             key = json.dumps(block, sort_keys=True)
@@ -233,26 +244,23 @@ class Template:
                 'blocks': blocks, 'entities': self.entities}
         target = ROOT / f'data/{NS}/structure/village/{self.name}.nbt'
         target.parent.mkdir(parents=True, exist_ok=True)
-        if write: target.write_bytes(gzip.compress(b'\x0a\x00\x00' + payload(data), mtime=0))
+        if write:
+            packed = gzip.compress(b'\x0a\x00\x00' + payload(data), mtime=0)
+            # Pin the gzip OS byte so templates are byte-identical on every platform.
+            target.write_bytes(packed[:9] + b'\x03' + packed[10:])
         return {'id': f'{NS}:village/{self.name}', 'size': list(self.size), 'rooms': self.rooms,
                 'doors': self.doors, 'bed_feet': self.beds, 'residents': len(self.entities),
                 'connectors': self.connectors, 'anchors': [
                     {'id': s['Name'], 'pos': list(p)} for p, s in self.blocks.items() if s['Name'].startswith(NS+':')]}
 
 
+
+
 def location(template):
     return template if ':' in template else f'{NS}:village/{template}'
 
 
-def pool_spec(entries):
-    """Format 1 pools are plain lists; format 2 pools are objects with elements and a fallback."""
-    if isinstance(entries, list):
-        return {'elements': entries, 'fallback': 'minecraft:empty'}
-    return {'elements': entries['elements'], 'fallback': entries.get('fallback', 'minecraft:empty')}
-
-
-def pool_name(name):
-    return name if ':' in name else f'{NS}:village/{name}'
+pool_name = village_layouts.pool_id
 
 
 def pool(name, spec):
@@ -282,95 +290,151 @@ def check_lot(t):
     assert 3 <= t.size[0] <= 32 and 3 <= t.size[2] <= 32 and 3 <= t.size[1] <= 32, f'{t.name}: lots are 3..32 blocks in each dimension'
 
 
+def remove_stale(folder, keep, pattern='*.json'):
+    if not folder.exists():
+        return
+    for stale in folder.rglob(pattern):
+        if stale.relative_to(folder).as_posix() not in keep:
+            stale.unlink()
+    for sub in sorted(folder.rglob('*'), reverse=True):
+        if sub.is_dir() and not any(sub.iterdir()):
+            sub.rmdir()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--only', metavar='BUILDING', help='Write only this template plus the room catalog; keep other templates and pools unchanged.')
-    parser.add_argument('--check', action='store_true', help='Validate blueprints and layout without changing files.')
+    parser.add_argument('--check', action='store_true', help='Validate blueprints and layouts without changing files.')
     args = parser.parse_args()
-    layout = json.loads(LAYOUT.read_text(encoding='utf-8'))
-    assert layout['format'] in (1, 2)
-    templates = [Template.from_blueprint(p) for p in sorted(BLUEPRINTS.glob('*.json'))]
+    layouts = village_layouts.load()
+    assert 'plains' in layouts and not layouts['plains'].get('_detached'), 'The plains layout is required'
+    templates = [Template.from_blueprint(p, p.relative_to(BLUEPRINTS).with_suffix('').as_posix())
+                 for p in sorted(BLUEPRINTS.rglob('*.json'))]
     names = {t.name for t in templates}
-    by_name = {t.name:t for t in templates}
+    by_name = {t.name: t for t in templates}
     if args.only and args.only not in names: parser.error(f'Unknown blueprint: {args.only}')
-    pools = {name: pool_spec(entries) for name, entries in layout['pools'].items()}
-    used = set()
-    for name,spec in pools.items():
+    pools, owner, lists = {}, {}, {'village': []}
+    for kind, layout in layouts.items():
+        for name, spec in layout['pools'].items():
+            assert name not in pools, f'Pool {name} is defined by both {owner.get(name)} and {kind}'
+            pools[name], owner[name] = spec, kind
+        for name, spec in layout.get('processor_lists', {}).items():
+            assert name not in lists or lists[name] == spec, f'{kind}: processor list {name} differs from another type'
+            lists[name] = spec
+    used, kind_of = set(), {}
+    for name, spec in pools.items():
+        kind = owner[name]
         assert spec['elements'], f'Empty pool: {name}'
         fallback = spec['fallback']
-        assert fallback == 'minecraft:empty' or fallback in pools, f'{name}: unknown fallback pool {fallback}'
+        assert fallback == 'minecraft:empty' or (fallback in pools and owner[fallback] == kind), f'{name}: unknown fallback pool {fallback}'
         for entry in spec['elements']:
             assert 1 <= entry['weight'] <= 150, f'Invalid pool weight: {name}'
             if entry.get('template') == 'empty': continue
-            assert entry['template'] in names, f'Pool {name} needs a blueprint for {entry["template"]}'
+            template = entry['template']
+            assert template in names, f'Pool {name} needs a blueprint for {template}'
+            assert village_layouts.owns_template(kind, template), f'{name}: {kind} pools use {kind}/ templates, not {template}'
             assert entry.get('projection', 'rigid') in ('rigid', 'terrain_matching'), f'{name}: unknown projection'
-            used.add(entry['template'])
-            t = by_name[entry['template']]
-            if any(c['name'] == f'{NS}:building_entrance' for c in t.connectors) or name.startswith('buildings/'):
+            processors = entry.get('processors', 'village')
+            assert ':' in processors or processors in lists, f'{name}: unknown processor list {processors}'
+            assert kind_of.setdefault(template, kind) == kind, f'{template} is used by two village types'
+            used.add(template)
+            t = by_name[template]
+            if any(c['name'] == f'{NS}:building_entrance' for c in t.connectors) or '/buildings/' in '/' + name:
                 check_lot(t)
             for c in t.connectors:
                 if c['pool'] != 'minecraft:empty':
-                    target = c['pool'].split(f'{NS}:village/')[-1]
+                    target = village_layouts.short_pool(c['pool'])
                     assert target in pools, f'{t.name}: jigsaw at {c["pos"]} names unknown pool {c["pool"]}'
-    # Civic slots around the square have fixed widths; a wider building would silently fail to place.
-    for name, width in layout.get('slot_widths', {}).items():
-        half = (width - 1) // 2
-        for entry in pools[name]['elements']:
-            if entry.get('template') == 'empty': continue
-            t = by_name[entry['template']]
-            ex = next(c['pos'][0] for c in t.connectors if c['name'] == f'{NS}:building_entrance')
-            assert ex <= half and t.size[0] - 1 - ex <= half, f'{t.name}: {name} slots allow {half} blocks either side of the entrance'
-    start_pool = layout['start_pool'].split(f'{NS}:village/')[-1]
-    for entry in pools[start_pool]['elements']:
-        t = by_name[entry['template']]
-        assert any(c['name'] == layout['start_jigsaw'] for c in t.connectors), f'{t.name}: town centres need the {layout["start_jigsaw"]} jigsaw'
+                    assert owner[target] == kind, f'{t.name}: a {kind} template may not reach the {owner[target]} pool {target}'
     unused = names - used
     assert not unused, f'Blueprints not referenced by any pool: {sorted(unused)}'
-    lists = layout.get('processor_lists', {'village': []})
-    for name,spec in pools.items():
-        for entry in spec['elements']:
-            processors = entry.get('processors', 'village')
-            assert ':' in processors or processors in lists, f'{name}: unknown processor list {processors}'
-    catalog = {'structure':f'{NS}:village','start_pool':layout['start_pool'],
-        'start_jigsaw':layout['start_jigsaw'],'min_pieces':layout['min_pieces'] if 'min_pieces' in layout else layout['expected_pieces'],
-        'depth':layout['depth'],'max_distance':layout['max_distance'],
-        'templates':[t.save(write=not args.check and (not args.only or args.only==t.name)) for t in templates],
-        'required_modules':[{'pool':f'{NS}:village/{name}', 'templates':[location(e['template']) for e in pools[name]['elements'] if e.get('template') != 'empty']}
-                            for name in layout['required_pools']]}
-    populations = {t.name:len(t.entities) for t in templates}
-    catalog['resident_minimum'] = sum(min(populations[e['template']] for e in pools[name]['elements'] if e.get('template') != 'empty')
-                                      for name in layout['required_pools'])
+    populations = {t.name: len(t.entities) for t in templates}
+    villages = []
+    for kind, layout in sorted(layouts.items()):
+        if layout.get('_detached'):
+            continue
+        # Civic slots around the square have fixed widths; a wider building would silently fail to place.
+        for name, width in layout.get('slot_widths', {}).items():
+            half = (width - 1) // 2
+            for entry in pools[name]['elements']:
+                if entry.get('template') == 'empty': continue
+                t = by_name[entry['template']]
+                ex = next(c['pos'][0] for c in t.connectors if c['name'] == f'{NS}:building_entrance')
+                assert ex <= half and t.size[0] - 1 - ex <= half, f'{t.name}: {name} slots allow {half} blocks either side of the entrance'
+        start = layout['start_pool']
+        assert owner.get(start) == kind, f'{kind}: unknown start pool {start}'
+        start_jigsaw = f'{NS}:{layout["start_jigsaw"]}'
+        slot_pools = set()
+        for entry in pools[start]['elements']:
+            t = by_name[entry['template']]
+            assert any(c['name'] == start_jigsaw for c in t.connectors), f'{t.name}: town centres need the {start_jigsaw} jigsaw'
+            slot_pools |= {village_layouts.short_pool(c['pool']) for c in t.connectors if c['pool'] != 'minecraft:empty'}
+        for name in layout['required_pools']:
+            assert owner.get(name) == kind, f'{kind}: required pool {name} is missing'
+        # The square and everything in its slots is never pruned for bad ground.
+        keep = sorted({location(e['template']) for name in slot_pools | {start} for e in pools[name]['elements']
+                       if e.get('template') != 'empty' and e.get('projection', 'rigid') == 'rigid'})
+        horizontal = layout['max_distance'] if isinstance(layout['max_distance'], int) else layout['max_distance']['horizontal']
+        villages.append({'type': kind, 'layout': layout, 'keep': keep, 'catalog': {
+            'type': kind, 'structure': village_layouts.structure_id(layout), 'start_pool': pool_name(start),
+            'start_jigsaw': start_jigsaw, 'min_pieces': layout['min_pieces'], 'depth': layout['depth'],
+            'max_distance': horizontal, 'biomes': layout['biomes'],
+            'required_modules': [{'pool': pool_name(name), 'templates': [location(e['template']) for e in pools[name]['elements'] if e.get('template') != 'empty']}
+                                 for name in layout['required_pools']],
+            'resident_minimum': sum(min(populations[e['template']] for e in pools[name]['elements'] if e.get('template') != 'empty')
+                                    for name in layout['required_pools'])}})
+
+    def villager_type(t):
+        kind = kind_of[t.name]
+        return layouts[kind].get('villager_type', 'minecraft:' + kind)
+
+    catalog = {'templates': [t.save(write=not args.check and (not args.only or args.only == t.name), villager_type=villager_type(t))
+                             for t in templates],
+               'villages': [v['catalog'] for v in villages]}
     if args.check:
-        print(f'Validated {len(templates)} independent blueprints and {len(pools)} pools; no files changed.')
+        print(f'Validated {len(templates)} independent blueprints, {len(pools)} pools and {len(villages)} village types; no files changed.')
         return
-    write_json(f'data/{NS}/villagefriends/structure-catalog.json',catalog)
+    write_json(f'data/{NS}/villagefriends/structure-catalog.json', catalog)
     if args.only:
         print(f'Updated {args.only}.nbt and room catalog; other templates and pools unchanged.')
         return
-    keep = {f'{name}.nbt' for name in names}
-    for stale in (ROOT/f'data/{NS}/structure/village').glob('*.nbt'):
-        if stale.name not in keep: stale.unlink()
-    pool_root = ROOT/f'data/{NS}/worldgen/template_pool/village'
-    for stale in pool_root.rglob('*.json'):
-        if stale.relative_to(pool_root).with_suffix('').as_posix() not in pools: stale.unlink()
-    for folder in sorted(pool_root.rglob('*'), reverse=True):
-        if folder.is_dir() and not any(folder.iterdir()): folder.rmdir()
-    for name,spec in pools.items(): pool(name,spec)
-    for name,processors in lists.items():
-        write_json(f'data/{NS}/worldgen/processor_list/{name}.json',{'processors':processors})
-    write_json(f'data/{NS}/worldgen/structure/village.json',{
-        'type':'minecraft:jigsaw', 'biomes':f'#{NS}:has_structure/village', 'step':'surface_structures',
-        'spawn_overrides':{}, 'terrain_adaptation':'beard_thin', 'start_pool':catalog['start_pool'],
-        'start_jigsaw_name':catalog['start_jigsaw'], 'size':layout['depth'], 'start_height':{'absolute':0},
-        'project_start_to_heightmap':'WORLD_SURFACE_WG', 'max_distance_from_center':layout['max_distance'], 'use_expansion_hack':False})
-    write_json(f'data/{NS}/worldgen/structure_set/villages.json',{'structures':[{'structure':catalog['structure'],'weight':1}],
-        'placement':layout['placement']})
-    write_json(f'data/{NS}/tags/worldgen/biome/has_structure/village.json',{'replace':False,'values':layout['biomes']})
-    target = ROOT/'data/minecraft/tags/worldgen/structure/village.json'
-    tag = json.loads(target.read_text()) if target.exists() else {'replace':False,'values':[]}
-    tag['values'] = sorted(set(tag['values']) | {catalog['structure']})
-    write_json('data/minecraft/tags/worldgen/structure/village.json',tag)
-    print(f'Generated {len(templates)} templates, {len(pools)} pools, natural village placement and enclosed-room fixtures.')
+    remove_stale(ROOT / f'data/{NS}/structure/village', {f'{name}.nbt' for name in names}, '*.nbt')
+    remove_stale(ROOT / f'data/{NS}/worldgen/template_pool/village', {f'{name}.json' for name in pools})
+    for name, spec in pools.items(): pool(name, spec)
+    for name, processors in lists.items():
+        write_json(f'data/{NS}/worldgen/processor_list/{name}.json', {'processors': processors})
+    structures = []
+    for v in villages:
+        layout, structure = v['layout'], v['layout']['structure']
+        prune = dict(layout.get('prune', {}))
+        prune['keep'] = v['keep']
+        definition = {'type': f'{NS}:village', 'biomes': f'#{NS}:has_structure/{structure}', 'step': 'surface_structures',
+            'spawn_overrides': {}, 'terrain_adaptation': layout.get('terrain_adaptation', 'beard_thin'),
+            'start_pool': pool_name(layout['start_pool']), 'start_jigsaw_name': f'{NS}:{layout["start_jigsaw"]}',
+            'size': layout['depth'], 'max_distance_from_center': layout['max_distance'], 'prune': prune}
+        if 'terrain' in layout:
+            definition['terrain'] = layout['terrain']
+        write_json(f'data/{NS}/worldgen/structure/{structure}.json', definition)
+        write_json(f'data/{NS}/tags/worldgen/biome/has_structure/{structure}.json', {'replace': False, 'values': layout['biomes']})
+        structures.append({'structure': f'{NS}:{structure}', 'weight': layout.get('weight', 1)})
+    written = {f'{v["layout"]["structure"]}.json' for v in villages}
+    for folder in (ROOT / f'data/{NS}/worldgen/structure', ROOT / f'data/{NS}/tags/worldgen/biome/has_structure'):
+        for stale in folder.glob('village*.json'):
+            if stale.name not in written: stale.unlink()
+    # Our types replace the vanilla villages under the vanilla set's name, so pillager
+    # outposts and anything else that keeps its distance from villages still does.
+    world = village_layouts.world()
+    space, set_path = world['structure_set'].split(':')
+    write_json(f'data/{space}/worldgen/structure_set/{set_path}.json', {'structures': structures, 'placement': world['placement']})
+    legacy = ROOT / f'data/{NS}/worldgen/structure_set/villages.json'
+    if legacy.exists(): legacy.unlink()
+    target = ROOT / 'data/minecraft/tags/worldgen/structure/village.json'
+    tag = json.loads(target.read_text()) if target.exists() else {'replace': False, 'values': []}
+    ours = {s['structure'] for s in structures}
+    tag['values'] = sorted({v for v in tag['values'] if not v.startswith(NS + ':')} | ours)
+    write_json('data/minecraft/tags/worldgen/structure/village.json', tag)
+    print(f'Generated {len(templates)} templates, {len(pools)} pools and {len(villages)} village types '
+          f'({", ".join(v["type"] for v in villages)}) replacing the vanilla villages.')
 
 
 if __name__ == '__main__': main()

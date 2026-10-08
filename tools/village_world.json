@@ -1,0 +1,10 @@
+{
+  "format": 3,
+  "structure_set": "minecraft:villages",
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 34,
+    "separation": 13,
+    "salt": 10387312
+  }
+}

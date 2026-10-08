@@ -66,6 +66,7 @@ public final class VillageFriends implements ModInitializer {
 
     @Override public void onInitialize() {
         VillageMarkerBlock.register();
+        VillageStructure.register();
         VillageFoundation.register();
         NarrativeContent.register();
         ResidentNames.register();

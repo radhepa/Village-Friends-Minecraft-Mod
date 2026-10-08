@@ -69,33 +69,6 @@
    "properties": {
     "orientation": "south_up"
    }
-  },
-  "O": {
-   "id": "minecraft:lantern",
-   "properties": {
-    "hanging": "true",
-    "waterlogged": "false"
-   }
-  },
-  "P": {
-   "id": "minecraft:spruce_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "Q": {
-   "id": "minecraft:spruce_fence",
-   "properties": {
-    "east": "true",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "false"
-   }
   }
  },
  "layers": [
@@ -208,7 +181,7 @@
     ".....",
     "B....",
     ".....",
-    "...OF",
+    "....F",
     ".....",
     "B....",
     ".....",
@@ -239,7 +212,7 @@
     ".....",
     "B....",
     ".....",
-    "...QP",
+    "....L",
     ".....",
     "B....",
     ".....",
@@ -422,6 +395,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/streets.py",
-  "checksum": "d6ad4a3c9cba1bfb"
+  "checksum": "798b315ac1d06fc1"
  }
 }

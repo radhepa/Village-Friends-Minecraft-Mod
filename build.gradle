@@ -83,11 +83,17 @@ tasks.named('processGametestResources') {
 
 // The art-direction gallery (-PvillageGallery) takes its template list and village count from
 // -Pgallery=tavern,cottage_oak and -PgalleryVillages=2. The resident sample (-PresidentSample)
-// draws five random men and women; -PsampleSeed=123 repeats a draw.
+// draws five random men and women; -PsampleSeed=123 repeats a draw. The village survey
+// (-Ptests=VillageSurveyGameTest) takes -PsurveySeed, -PsurveyCount, -PsurveyTypes and -PsurveyShots.
 tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     systemProperty 'villagefriends.gallery', providers.gradleProperty('gallery').getOrElse('')
     systemProperty 'villagefriends.galleryVillages', providers.gradleProperty('galleryVillages').getOrElse('2')
     systemProperty 'villagefriends.sampleSeed', providers.gradleProperty('sampleSeed').getOrElse('')
+    systemProperty 'villagefriends.surveySeed', providers.gradleProperty('surveySeed').getOrElse('1')
+    systemProperty 'villagefriends.surveyCount', providers.gradleProperty('surveyCount').getOrElse('4')
+    systemProperty 'villagefriends.surveyTypes', providers.gradleProperty('surveyTypes').getOrElse('')
+    systemProperty 'villagefriends.surveyShots', providers.gradleProperty('surveyShots').getOrElse('true')
+    systemProperty 'villagefriends.galleryWait', providers.gradleProperty('galleryWait').getOrElse('160')
 }
 
 // Development runs use a separate world folder and a recognizable player name.

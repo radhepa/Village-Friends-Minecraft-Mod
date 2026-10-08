@@ -106,7 +106,7 @@
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/street_square",
         "processors": "villagefriends:plains_street",
-        "projection": "terrain_matching"
+        "projection": "rigid"
       }
     }
   ]

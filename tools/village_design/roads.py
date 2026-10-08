@@ -3,13 +3,19 @@
 Streets are terrain-matching pieces: every column follows the ground, so a
 road is just its Y=0 surface plus clear air above it. Cells nobody paints are
 ``structure_void`` and keep the natural ground and grass.
+
+Because each column of a terrain-matching piece is placed on its own, anything
+taller than one block that spans several columns (a roofed well, a lamp arm, a
+gatehouse) shears apart on slopes. Keep street decor to single columns; put
+anything wider in a rigid piece (a square or a street end).
+
+A ``Theme`` holds the materials of one village type's streets, so every type can
+reuse the street kit in ``buildings/streets.py`` with its own surface, edges,
+lamps and pools.
 """
 import random
 
 from .kit import Build
-
-STREET_IN = dict(name='street_in', target='street_out')
-LOT = dict(name='lot', target='building_entrance', pool='plains/lots')
 
 
 def noise(x, z, seed):
@@ -30,7 +36,7 @@ def smooth(x, z, seed, scale=3.0):
 
 
 def road_block(x, z, seed, centrality):
-    """Pick a surface block: worn gravel and cobble near the middle, packed path toward the edges."""
+    """Plains: worn gravel and cobble near the middle, packed path toward the edges."""
     n = smooth(x, z, seed) * 0.7 + noise(x, z, seed + 7) * 0.3
     v = n + centrality * 0.25
     if v > 0.86:
@@ -46,13 +52,47 @@ def road_block(x, z, seed, centrality):
     return 'dirt_path'
 
 
+def edge_block(r):
+    """Plains verge for a ragged-edge cell; ``r`` is noise in [0, 1)."""
+    return 'dirt_path' if r < .45 else 'coarse_dirt' if r < .6 else 'grass_block'
+
+
+class Theme:
+    """Street materials and pool names for one village type.
+
+    ``prefix`` is prepended to every street template name ('' for plains,
+    'desert/' for the desert). ``road(x, z, seed, centrality)`` and ``edge(r)``
+    choose surface blocks. ``post`` is the lamp post (a fence) standing on
+    ``post_base``; ``light`` sits on top. ``planter`` is the soil under a
+    ``bush``/``bush_alt`` decoration. ``bench`` is a single-block seat.
+    """
+
+    def __init__(self, prefix='', streets='plains/streets', ends='plains/street_ends', lots='plains/lots',
+                 road=road_block, edge=edge_block, post='spruce_fence', post_base='cobblestone', light='lantern',
+                 planter='grass_block', bush='azalea_leaves', bush_alt='flowering_azalea_leaves',
+                 bench='villagefriends:village_bench', wood='spruce', stone='cobblestone', seed_offset=0):
+        self.prefix, self.streets, self.ends, self.lots = prefix, streets, ends, lots
+        self.road, self.edge = road, edge
+        self.post, self.post_base, self.light = post, post_base, light
+        self.planter, self.bush, self.bush_alt, self.bench = planter, bush, bush_alt, bench
+        self.wood, self.stone, self.seed_offset = wood, stone, seed_offset
+
+    def name(self, base):
+        return self.prefix + base
+
+
+PLAINS = Theme()
+STREET_IN = dict(name='street_in', target='street_out')
+
+
 class Street:
     """A terrain-matching street template."""
 
-    def __init__(self, name, w, d, h=6, seed=1):
+    def __init__(self, name, w, d, h=6, seed=1, theme=PLAINS):
+        self.theme = theme
         self.b = Build(name, (w, h, d), kind='street', background='structure_void')
-        self.seed = seed
-        self.rng = random.Random(seed)
+        self.seed = seed + theme.seed_offset
+        self.rng = random.Random(self.seed)
         self.core = {}
         self.edge = set()
 
@@ -84,15 +124,14 @@ class Street:
     def paint(self):
         b = self.b
         for (x, z), c in self.core.items():
-            b.set(x, 0, z, road_block(x, z, self.seed, c))
+            b.set(x, 0, z, self.theme.road(x, z, self.seed, c))
             for y in range(1, b.h):
                 if b.get(x, y, z)[0] == 'minecraft:air' and (x, y, z) not in b.grid:
                     b.set(x, y, z, 'air')
         for (x, z) in self.edge:
             if (x, z) in self.core or not b.inside(x, 0, z):
                 continue
-            r = noise(x, z, self.seed + 11)
-            b.set(x, 0, z, 'dirt_path' if r < .45 else 'coarse_dirt' if r < .6 else 'grass_block')
+            b.set(x, 0, z, self.theme.edge(noise(x, z, self.seed + 11)))
             for y in range(1, b.h):
                 if (x, y, z) not in b.grid:
                     b.set(x, y, z, 'air')
@@ -102,22 +141,31 @@ class Street:
     def street_in(self, x, z=0):
         self.b.jigsaw(x, 1, z, 'north_up', **STREET_IN)
 
-    def street_out(self, x, z, facing, pool='plains/streets', selection=1):
-        self.b.jigsaw(x, 1, z, f'{facing}_up', 'street_out', target='street_in', pool=pool, selection=selection)
+    def street_out(self, x, z, facing, pool=None, selection=1):
+        self.b.jigsaw(x, 1, z, f'{facing}_up', 'street_out', target='street_in', pool=pool or self.theme.streets,
+                      selection=selection)
 
-    def lot(self, x, z, facing, pool='plains/lots'):
-        self.b.jigsaw(x, 1, z, f'{facing}_up', 'lot', target='building_entrance', pool=pool)
+    def lot(self, x, z, facing, pool=None):
+        self.b.jigsaw(x, 1, z, f'{facing}_up', 'lot', target='building_entrance', pool=pool or self.theme.lots)
 
-    def lamp(self, x, z, arm=None, height=3):
-        b = self.b
-        b.set(x, 0, z, 'cobblestone')
+    def lamp(self, x, z, height=3):
+        """A single-column lamp post, which stays upright on any slope."""
+        b, t = self.b, self.theme
+        b.set(x, 0, z, t.post_base)
         for y in range(1, 1 + height):
-            b.set(x, y, z, 'spruce_fence')
-        if arm:
-            from .kit import DIRS
-            dx, dz = DIRS[arm]
-            b.set(x, 1 + height, z, 'spruce_fence')
-            b.set(x + dx, 1 + height, z + dz, 'spruce_fence')
-            b.set(x + dx, height, z + dz, 'lantern', hanging=True, waterlogged=False)
+            b.set(x, y, z, t.post)
+        b.set(x, 1 + height, z, t.light, hanging=False, waterlogged=False) if t.light == 'lantern' \
+            else b.set(x, 1 + height, z, t.light)
+
+    def planter(self, x, z, alt=False):
+        """A bush on its own patch of soil."""
+        b, t = self.b, self.theme
+        b.set(x, 0, z, t.planter)
+        b.set(x, 1, z, t.bush_alt if alt else t.bush, persistent=True, distance=1, waterlogged=False)
+
+    def bench(self, x, z, facing):
+        b, t = self.b, self.theme
+        if t.bench.startswith('villagefriends:'):
+            b.custom(x, 1, z, t.bench.split(':')[1], facing=facing)
         else:
-            b.set(x, 1 + height, z, 'lantern', hanging=False, waterlogged=False)
+            b.set(x, 1, z, t.bench, facing=facing, half='bottom', shape='straight', waterlogged=False, lock=True)

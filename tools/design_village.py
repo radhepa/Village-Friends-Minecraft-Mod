@@ -5,7 +5,8 @@
     python tools/design_village.py --list
     python tools/design_village.py --preview       # also writes isometric PNGs (needs Pillow)
 
-Each design writes one independent ``tools/village_blueprints/<name>.json``.
+Each design writes one independent ``tools/village_blueprints/<name>.json``
+(other village types include their folder, e.g. ``desert/tavern``).
 A blueprint records its design source and a checksum. If someone hand-edits
 the JSON afterwards, this script leaves it alone unless ``--force`` is given,
 so hand edits are never silently replaced. Then run
@@ -48,6 +49,7 @@ def main():
         b.source = module
         data = b.finish().blueprint()
         target = BLUEPRINTS / f'{name}.json'
+        target.parent.mkdir(parents=True, exist_ok=True)
         if target.exists() and not args.force:
             old = json.loads(target.read_text(encoding='utf-8'))
             design = old.get('design')
@@ -61,7 +63,7 @@ def main():
             out = HERE.parent / 'build/previews'
             out.mkdir(parents=True, exist_ok=True)
             for view in ('nw', 'se'):
-                preview.render(data, 12, view).save(out / f'{name}_{view}.png')
+                preview.render(data, 12, view).save(out / f'{name.replace("/", "_")}_{view}.png')
     print(f'Wrote {len(written)} blueprint(s).')
     if skipped:
         print('Kept hand-edited blueprint(s) (use --force to replace): ' + ', '.join(skipped))

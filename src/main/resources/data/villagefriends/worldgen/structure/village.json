@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:jigsaw",
+  "type": "villagefriends:village",
   "biomes": "#villagefriends:has_structure/village",
   "step": "surface_structures",
   "spawn_overrides": {},
@@ -7,10 +7,35 @@
   "start_pool": "villagefriends:village/town_centers",
   "start_jigsaw_name": "villagefriends:town_start",
   "size": 6,
-  "start_height": {
-    "absolute": 0
+  "max_distance_from_center": {
+    "horizontal": 100,
+    "vertical": 20
   },
-  "project_start_to_heightmap": "WORLD_SURFACE_WG",
-  "max_distance_from_center": 100,
-  "use_expansion_hack": false
+  "prune": {
+    "max_buried": 5,
+    "max_floating": 5,
+    "tolerance": 0.25,
+    "keep": [
+      "villagefriends:village/apothecary",
+      "villagefriends:village/central_plaza",
+      "villagefriends:village/chapel",
+      "villagefriends:village/decor_well",
+      "villagefriends:village/garrison",
+      "villagefriends:village/library",
+      "villagefriends:village/market_garden",
+      "villagefriends:village/market_stalls",
+      "villagefriends:village/plaza_green",
+      "villagefriends:village/plaza_market",
+      "villagefriends:village/tavern",
+      "villagefriends:village/workshop"
+    ]
+  },
+  "terrain": {
+    "radius": 64,
+    "step": 16,
+    "core_radius": 32,
+    "max_height_range": 10,
+    "max_water": 0.1,
+    "min_biome": 0.6
+  }
 }

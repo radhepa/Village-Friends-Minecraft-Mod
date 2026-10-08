@@ -1,10 +1,4 @@
 {
-  "structure": "villagefriends:village",
-  "start_pool": "villagefriends:village/town_centers",
-  "start_jigsaw": "villagefriends:town_start",
-  "min_pieces": 20,
-  "depth": 6,
-  "max_distance": 100,
   "templates": [
     {
       "id": "villagefriends:village/apiary",
@@ -4615,51 +4609,66 @@
       ]
     }
   ],
-  "required_modules": [
+  "villages": [
     {
-      "pool": "villagefriends:village/town_centers",
-      "templates": [
-        "villagefriends:village/central_plaza",
-        "villagefriends:village/plaza_green",
-        "villagefriends:village/plaza_market"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/tavern",
-      "templates": [
-        "villagefriends:village/tavern"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/garrison",
-      "templates": [
-        "villagefriends:village/garrison"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/workshop",
-      "templates": [
-        "villagefriends:village/workshop"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/chapel",
-      "templates": [
-        "villagefriends:village/chapel"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/apothecary",
-      "templates": [
-        "villagefriends:village/apothecary"
-      ]
-    },
-    {
-      "pool": "villagefriends:village/buildings/library",
-      "templates": [
-        "villagefriends:village/library"
-      ]
+      "type": "plains",
+      "structure": "villagefriends:village",
+      "start_pool": "villagefriends:village/town_centers",
+      "start_jigsaw": "villagefriends:town_start",
+      "min_pieces": 20,
+      "depth": 6,
+      "max_distance": 100,
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:meadow"
+      ],
+      "required_modules": [
+        {
+          "pool": "villagefriends:village/town_centers",
+          "templates": [
+            "villagefriends:village/central_plaza",
+            "villagefriends:village/plaza_green",
+            "villagefriends:village/plaza_market"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/tavern",
+          "templates": [
+            "villagefriends:village/tavern"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/garrison",
+          "templates": [
+            "villagefriends:village/garrison"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/workshop",
+          "templates": [
+            "villagefriends:village/workshop"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/chapel",
+          "templates": [
+            "villagefriends:village/chapel"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/apothecary",
+          "templates": [
+            "villagefriends:village/apothecary"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/buildings/library",
+          "templates": [
+            "villagefriends:village/library"
+          ]
+        }
+      ],
+      "resident_minimum": 10
     }
-  ],
-  "resident_minimum": 10
+  ]
 }

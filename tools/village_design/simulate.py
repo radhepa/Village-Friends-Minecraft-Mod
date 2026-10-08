@@ -2,6 +2,7 @@
 
     python tools/village_design/simulate.py --seeds 200          # statistics
     python tools/village_design/simulate.py --map 3 --out build   # top-down map PNGs (needs Pillow)
+    python tools/village_design/simulate.py --type desert         # another village type
 
 It follows JigsawPlacement's breadth-first order, selection priorities, weighted
 shuffles, empty-element early exit, fallback pools, rotations, the max-distance
@@ -15,6 +16,9 @@ import sys
 from collections import Counter, deque
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from village_design import layouts as village_layouts  # noqa: E402
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 NS = 'villagefriends'
@@ -23,17 +27,22 @@ OPP = {'north': 'south', 'south': 'north', 'east': 'west', 'west': 'east'}
 STEP = {'north': (0, -1), 'south': (0, 1), 'east': (1, 0), 'west': (-1, 0)}
 
 
-def load():
-    layout = json.loads((ROOT / 'village_layout.json').read_text())
+def load(kind='plains'):
+    layouts = village_layouts.load()
+    assert kind in layouts and not layouts[kind].get('_detached'), f'No complete {kind} layout'
+    layout = layouts[kind]
     templates = {}
-    for path in sorted((ROOT / 'village_blueprints').glob('*.json')):
+    for path in sorted((ROOT / 'village_blueprints').rglob('*.json')):
+        name = path.relative_to(ROOT / 'village_blueprints').with_suffix('').as_posix()
         data = json.loads(path.read_text(encoding='utf-8'))
         w, h, d = data['size']
-        jigsaws = []
+        jigsaws, start = [], []
         for e in data['block_entities']:
             n = e['nbt']
             if n.get('id') != 'minecraft:jigsaw':
                 continue
+            if n.get('name') == f'{NS}:{layout["start_jigsaw"]}':
+                start.append(e['pos'])
             x, y, z = e['pos']
             row = data['layers'][y]['rows'][z][x]
             orient = data['palette'][row]['properties']['orientation'].split('_')[0]
@@ -41,17 +50,21 @@ def load():
                 continue
             jigsaws.append({'pos': (x, z), 'facing': orient, 'name': n['name'], 'target': n['target'],
                             'pool': n['pool'], 'sel': n.get('selection_priority', 0)})
-        templates[path.stem] = {'size': (w, d), 'jigsaws': jigsaws,
-                                'residents': len(data.get('entities', []))}
+        templates[name] = {'size': (w, d), 'jigsaws': jigsaws, 'residents': len(data.get('entities', [])),
+                           'start': start}
     pools = {}
-    for name, spec in layout['pools'].items():
-        if isinstance(spec, list):
-            spec = {'elements': spec, 'fallback': 'minecraft:empty'}
-        pools[f'{NS}:village/{name}'] = {
-            'elements': [(e['template'], e['weight']) for e in spec['elements']],
-            'fallback': spec.get('fallback', 'minecraft:empty') if spec.get('fallback', 'minecraft:empty') == 'minecraft:empty'
-            else f'{NS}:village/{spec["fallback"]}'}
+    for other in layouts.values():
+        for name, spec in other['pools'].items():
+            fallback = spec['fallback']
+            pools[f'{NS}:village/{name}'] = {
+                'elements': [(e['template'], e['weight']) for e in spec['elements']],
+                'fallback': fallback if fallback == 'minecraft:empty' else f'{NS}:village/{fallback}'}
     return layout, templates, pools
+
+
+def horizontal(layout):
+    distance = layout['max_distance']
+    return distance if isinstance(distance, int) else distance['horizontal']
 
 
 def rotate(x, z, r):
@@ -91,15 +104,14 @@ def shuffled(pool, rng):
 def assemble(layout, templates, pools, seed):
     rng = random.Random(seed)
     depth_max = layout['depth']
-    dist = layout['max_distance']
-    start = layout['pools']['town_centers']
+    dist = horizontal(layout)
+    start = layout['pools'][layout['start_pool']]['elements']
     start_names = [e['template'] for e in start]
     name = rng.choice(start_names)
     t = templates[name]
     r = rng.randrange(4)
-    sj = next(j for j in json.loads((ROOT / 'village_blueprints' / f'{name}.json').read_text())['block_entities']
-              if j['nbt'].get('name') == layout['start_jigsaw'])
-    sx, sz = rotate(sj['pos'][0], sj['pos'][2], r)
+    sj = t['start'][0]
+    sx, sz = rotate(sj[0], sj[2], r)
     origin = (-sx, -sz)
     bounds = (-dist, -dist, dist, dist)
     pieces = [{'name': name, 'rot': r, 'origin': origin, 'box': placed_box(t, r, origin), 'depth': 0}]
@@ -159,13 +171,13 @@ def assemble(layout, templates, pools, seed):
 
 def draw(pieces, templates, path, layout):
     from PIL import Image, ImageDraw
-    dist = layout['max_distance']
+    dist = horizontal(layout)
     s = 3
     img = Image.new('RGB', ((2 * dist + 1) * s, (2 * dist + 1) * s), (110, 160, 80))
     g = ImageDraw.Draw(img)
     for p in pieces:
         x0, z0, x1, z1 = p['box']
-        n = p['name']
+        n = p['name'].split('/')[-1]
         col = (150, 150, 150) if n.startswith(('street', 'avenue', 'end_')) or 'plaza' in n else \
             (200, 90, 60) if p.get('pool', '').endswith(('tavern', 'garrison', 'workshop', 'chapel', 'apothecary', 'library')) else \
             (220, 200, 120) if 'farm' in n or 'pen' in n else (90, 130, 200) if 'decor' in n else (170, 110, 60)
@@ -179,9 +191,10 @@ def main():
     parser.add_argument('--seeds', type=int, default=100)
     parser.add_argument('--map', type=int, default=0)
     parser.add_argument('--out', default='build')
+    parser.add_argument('--type', default='plains', help='Village type (a tools/village_layouts/<type>.json)')
     args = parser.parse_args()
-    layout, templates, pools = load()
-    required = [f'{NS}:village/{p}' for p in layout['required_pools'] if p != 'town_centers']
+    layout, templates, pools = load(args.type)
+    required = [f'{NS}:village/{p}' for p in layout['required_pools'] if p != layout['start_pool']]
     counts, residents, missing, kinds = [], [], Counter(), Counter()
     for seed in range(args.seeds):
         pieces = assemble(layout, templates, pools, seed)
@@ -196,7 +209,7 @@ def main():
         if seed < args.map:
             out = Path(args.out)
             out.mkdir(parents=True, exist_ok=True)
-            draw(pieces, templates, out / f'village_map_{seed}.png', layout)
+            draw(pieces, templates, out / f'village_map_{args.type}_{seed}.png', layout)
     counts.sort()
     print(f'pieces: min {counts[0]}  median {counts[len(counts) // 2]}  max {counts[-1]}')
     residents.sort()

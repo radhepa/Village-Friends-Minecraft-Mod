@@ -63,32 +63,12 @@
   "M": {
    "id": "minecraft:lantern",
    "properties": {
-    "hanging": "true",
+    "hanging": "false",
     "waterlogged": "false"
    }
   },
   "N": {
    "id": "minecraft:mossy_cobblestone"
-  },
-  "O": {
-   "id": "minecraft:spruce_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "P": {
-   "id": "minecraft:spruce_fence",
-   "properties": {
-    "east": "true",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "false"
-   }
   }
  },
  "layers": [
@@ -169,7 +149,7 @@
     "A...A",
     "....A",
     ".....",
-    "...MJ",
+    "....J",
     "A...A",
     "....A",
     ".....",
@@ -191,7 +171,7 @@
     "A...A",
     "....A",
     ".....",
-    "...PO",
+    "....M",
     "A...A",
     "....A",
     ".....",
@@ -348,6 +328,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/streets.py",
-  "checksum": "260c4f40a231524d"
+  "checksum": "db3fb6bb892d70d0"
  }
 }
