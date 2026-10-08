@@ -4,15 +4,22 @@
     {"id": "f_charm_wise_woman", "name": "Wise Woman", "top": "tf162_wise_womans_charm_hung_shawl", "bottom": "bf162_wise_womans_herb_pocket_skirt"},
     {"id": "f_anchoress", "name": "Anchoress", "top": "tf163_anchoress_cowled_robe", "bottom": "bf163_anchoress_plain_robe_skirt"},
     {"id": "f_grey_beguine", "name": "Beguine", "top": "tf164_beguines_plain_kirtle_and_mantle", "bottom": "bf164_beguines_grey_skirt"},
-    {"id": "f_fur_canoness", "name": "Canoness", "top": "tf165_canoness_fur_almuce", "bottom": "bf165_canoness_linen_rochet_skirt"}
+    {"id": "f_fur_canoness", "name": "Canoness", "top": "tf165_canoness_fur_almuce", "bottom": "bf165_canoness_linen_rochet_skirt"},
+    {"id": "f_undyed_novice", "name": "Novice", "top": "tf166_novices_undyed_habit", "bottom": "bf166_novices_plain_skirt"},
+    {"id": "f_rosary_prioress", "name": "Prioress", "top": "tf167_prioress_rosary_girdle_habit", "bottom": "bf167_prioress_fine_habit_skirt"},
+    {"id": "f_garden_lay_sister", "name": "Lay Sister", "top": "tf168_lay_sisters_hitched_work_habit", "bottom": "bf168_lay_sisters_garden_skirt"},
+    {"id": "f_bread_almoner", "name": "Almoner", "top": "tf169_almoners_bread_basket_robe", "bottom": "bf169_almoners_alms_purse_skirt"},
+    {"id": "f_book_governess", "name": "Governess", "top": "tf170_governess_book_belt_kirtle", "bottom": "bf170_governess_sober_skirt"}
   ],
   "professions": {
     "APOTHECARY": ["f_flask_physician", "f_charm_wise_woman"],
-    "SCHOLAR": ["f_flask_physician"],
+    "SCHOLAR": ["f_flask_physician", "f_book_governess"],
     "MAGE": ["f_charm_wise_woman"],
     "NITWIT": ["f_charm_wise_woman"],
-    "CLERIC": ["f_anchoress", "f_grey_beguine", "f_fur_canoness"],
+    "CLERIC": ["f_anchoress", "f_grey_beguine", "f_fur_canoness", "f_undyed_novice", "f_rosary_prioress", "f_garden_lay_sister", "f_bread_almoner"],
     "TAILOR": ["f_grey_beguine"],
-    "LIBRARIAN": ["f_fur_canoness"]
+    "LIBRARIAN": ["f_fur_canoness", "f_book_governess"],
+    "FARMER": ["f_garden_lay_sister"],
+    "COOK": ["f_bread_almoner"]
   }
 }
