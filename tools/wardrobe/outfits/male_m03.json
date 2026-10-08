@@ -1,0 +1,14 @@
+{
+  "outfits": [
+    {"id": "m_pole_ferryman", "name": "Ferryman", "top": "t171_ferrymans_pole_strapped_coat", "bottom": "b171_ferrymans_wet_hem_breeches"},
+    {"id": "m_tow_bargeman", "name": "Bargeman", "top": "t172_bargemans_tow_rope_jerkin", "bottom": "b172_towpath_boots"},
+    {"id": "m_slop_sailor", "name": "Sailor", "top": "t173_sailors_striped_slop_frock", "bottom": "b173_sailors_wide_slops"},
+    {"id": "m_adze_shipwright", "name": "Shipwright", "top": "t174_shipwrights_adze_loop_apron", "bottom": "b174_shipwrights_tar_spotted_trousers"},
+    {"id": "m_oakum_caulker", "name": "Caulker", "top": "t175_caulkers_oakum_smock", "bottom": "b175_caulkers_pitch_stained_leggings"}
+  ],
+  "professions": {
+    "NONE": ["m_pole_ferryman", "m_tow_bargeman"],
+    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker"],
+    "CARPENTER": ["m_adze_shipwright", "m_oakum_caulker"]
+  }
+}
