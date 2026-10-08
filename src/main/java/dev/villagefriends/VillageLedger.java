@@ -70,6 +70,7 @@ public final class VillageLedger {
     private static String note(Society s, Townsfolk t, long today) {
         if (t.status().equals(Townsfolk.PASSED)) return "Remembered fondly";
         if (t.status().equals(Townsfolk.CURSED)) return "Zombified. Cure them to bring them home";
+        if (t.home() && dev.villagefriends.social.Calendar.isBirthday(t.birthday(), today)) return "Birthday today!";
         if (!t.partner().isEmpty()) return (t.married() ? "Married to " : "Sweethearts with ") + s.nameOf(t.partner());
         if (!t.adult()) {
             var parents = s.family(t.id()).stream().filter(id -> s.relation(t.id(), id).equals("parent")).map(s::nameOf).toList();

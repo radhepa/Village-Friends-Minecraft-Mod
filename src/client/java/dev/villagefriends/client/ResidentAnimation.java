@@ -12,7 +12,7 @@ public final class ResidentAnimation {
     }
     /** Animation pack clips also play mid-air (a flinch from knockback), but never in vanilla's special poses. */
     public static boolean canAnimate(ResidentRenderState s) {
-        return s.hasPose(Pose.STANDING) && s.deathTime==0 && !s.isPassenger
+        return s.hasPose(Pose.STANDING) && s.deathTime==0 && (!s.isPassenger || s.seated)
                 && !s.isInWater && !s.isFallFlying && !s.isCrouching && s.swimAmount==0
                 && !s.isUsingItem && s.currentSwing==null;
     }

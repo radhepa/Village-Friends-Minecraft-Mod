@@ -50,7 +50,7 @@ public record DialogueBank(int format, Map<String, List<String>> pools, List<Que
         return n;
     }
 
-    static DialogueBank builtin() {
+    public static DialogueBank builtin() {
         try (var stream = DialogueBank.class.getResourceAsStream("/data/villagefriends/" + PATH)) {
             if (stream == null) throw new IllegalStateException("Bundled dialogue missing");
             return validate(GSON.fromJson(new InputStreamReader(stream, StandardCharsets.UTF_8), DialogueBank.class));

@@ -1,6 +1,6 @@
 {
-  "model": {
-    "type": "minecraft:model",
-    "model": "villagefriends:block/notice_board"
-  }
+ "model": {
+  "type": "minecraft:model",
+  "model": "villagefriends:block/notice_board_2"
+ }
 }

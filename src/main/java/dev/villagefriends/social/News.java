@@ -31,6 +31,8 @@ public record News(long day, String kind, String a, String b, String c) {
             case "friends" -> x + " and " + y + " became good friends.";
             case "best_friends" -> x + " and " + y + " are now best friends.";
             case "quarrel" -> x + " and " + y + " had a quarrel.";
+            case "birthday" -> "It's " + x + "'s birthday! Party by the bell this evening.";
+            case "helped" -> c + " answered a notice from " + x + ".";
             default -> x + " has news.";
         };
     }

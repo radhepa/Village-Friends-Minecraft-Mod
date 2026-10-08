@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:ploughmans_lunch",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:bread",
+    "minecraft:apple",
+    "minecraft:beetroot"
+  ]
+}

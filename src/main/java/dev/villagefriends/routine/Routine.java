@@ -9,13 +9,17 @@ import java.util.Locale;
  * A resident's day: when they wake, work, eat, enjoy their hobby, see the neighbors and sleep, and how
  * the weather changes it. Every resident keeps their own hours (early birds, night owls, a tavern keeper
  * who works late, guards on night watch), every seventh day is Market Day, and rain, storms and snow
- * send most people indoors. Pure and unit-tested; {@code ResidentRoutines} applies it to the world.
+ * send most people indoors. Some days they eat lunch or supper at the tavern, or spend the evening
+ * there; how often depends on their habits and personality. Pure and unit-tested; {@code ResidentRoutines}
+ * applies it to the world and {@code Taverns} seats and serves them.
  *
  * <p>Times are ticks of the Minecraft day: 0 is 6:00, 6000 is noon, 12000 is 18:00, 18000 is midnight.
  */
 public final class Routine {
     /** Where a block of the day is spent. */
     public enum Place { HOME, WORK, BELL, TAVERN, HOBBY, VILLAGE }
+    /** Parts of the day spent at the tavern. */
+    public static boolean atTavern(Block block) { return block != null && block.place == Place.TAVERN; }
     /** What the sky is doing where the resident lives. {@code CLEARING} is the hour after rain stops. */
     public enum Weather {
         CLEAR, CLEARING, RAIN, THUNDER, SNOW;
@@ -40,6 +44,7 @@ public final class Routine {
         SOCIAL("Catching up with neighbors", Place.BELL, false),
         MARKET("At the market", Place.BELL, false),
         SUPPER("Having supper", Place.HOME, false),
+        SUPPER_TAVERN("Supper at the tavern", Place.TAVERN, false),
         EVENING("Relaxing at home", Place.HOME, false),
         TAVERN("At the tavern", Place.TAVERN, false),
         PERFORM("Performing at the tavern", Place.TAVERN, false),
@@ -52,7 +57,9 @@ public final class Routine {
         RAIN_WALK("Enjoying the rain", Place.VILLAGE, false),
         SNOW_PLAY("Playing in the snow", Place.VILLAGE, false),
         /** Guards during a raid: mustered at the bell and out after the raiders instead of hiding. */
-        DEFEND("Defending the village", Place.VILLAGE, false);
+        DEFEND("Defending the village", Place.VILLAGE, false),
+        /** A neighbor's birthday party by the bell, or their own. */
+        PARTY("At a birthday party", Place.BELL, false);
 
         public final String label; public final Place place; public final boolean sleep;
         Block(String label, Place place, boolean sleep) { this.label = label; this.place = place; this.sleep = sleep; }
@@ -131,6 +138,36 @@ public final class Routine {
         return switch (job) { case "farmer", "shepherd", "fisherman", "knight", "archer", "mason" -> true; default -> false; };
     }
 
+    /** How much a personality likes company, from -1 (keeps to themselves) to 2 (never misses a night out). */
+    public static int sociable(String personality) {
+        return switch (personality) { case "warmhearted", "playful" -> 2; case "adventurous", "curious", "imaginative" -> 1; case "reserved", "meticulous" -> -1; default -> 0; };
+    }
+    /** A roll from 0 to 99 that is the same all day for one resident and one decision. */
+    static int roll(int seed, long day, int salt) { return Math.floorMod(mix(seed ^ (int) day * 0x9E37 ^ salt), 100); }
+    /**
+     * Lunch at the tavern today? A third of residents are regulars who go most days; the rest go now and then.
+     * Market Day makes it likelier still.
+     */
+    public static boolean tavernLunch(int seed, String personality, long day) {
+        boolean regular = Math.floorMod(mix(seed ^ 0x1C4), 3) == 2;
+        int chance = (regular ? 70 : 12) + sociable(personality) * 4 + (marketDay(day) ? 15 : 0);
+        return roll(seed, day, 0x4C55) < chance;
+    }
+    /** Supper at the tavern instead of at home: about one evening in five, nearly half on Market Day. */
+    public static boolean tavernSupper(int seed, String personality, long day) {
+        int chance = 18 + sociable(personality) * 5 + (marketDay(day) ? 25 : 0);
+        return roll(seed, day, 0x5099) < chance;
+    }
+    /** An evening at the tavern: about one night in three, two in three on Market Day. */
+    public static boolean tavernNight(int seed, String personality, long day) {
+        int chance = 30 + sociable(personality) * 5 + (marketDay(day) ? 35 : 0);
+        return roll(seed, day, 0x7E5) < chance;
+    }
+    /** Now and then a free afternoon becomes a drink at the tavern. */
+    public static boolean afternoonPint(int seed, String personality, long day) {
+        return roll(seed, day, 0xA1E) < 4 + sociable(personality) * 3;
+    }
+
     /** A resident's day: their personal hours, their job's hours, and Market Day. */
     public static Day day(int seed, String job, String personality, boolean child, long number) {
         var type = chronotype(seed, personality, job, child);
@@ -147,10 +184,12 @@ public final class Routine {
             add(keys, at(17, 0), Block.SUPPER); add(keys, at(18, 0), Block.EVENING); add(keys, bed, Block.SLEEP);
             return sorted(number, type, market, keys);
         }
-        int lunch = Math.floorMod(mix(seed ^ 0x1C4), 3);
-        Block lunchBlock = lunch == 0 ? Block.LUNCH : lunch == 1 ? Block.LUNCH_HOME : Block.LUNCH_TAVERN;
-        boolean tavernNight = Math.floorMod(mix(seed ^ (int) number * 7919), 3) == 0;
-        Block evening = tavernNight ? Block.TAVERN : Block.EVENING;
+        // Tavern lunches and suppers start a little early, to get a table.
+        boolean tavernLunch = tavernLunch(seed, personality, number), tavernSupper = tavernSupper(seed, personality, number);
+        Block lunchBlock = tavernLunch ? Block.LUNCH_TAVERN : Math.floorMod(mix(seed ^ 0x1C4), 3) == 0 ? Block.LUNCH : Block.LUNCH_HOME;
+        int lunchAt = tavernLunch ? at(11, 15) : at(11, 30), supperAt = tavernSupper ? at(17, 15) : at(17, 30);
+        Block supper = tavernSupper ? Block.SUPPER_TAVERN : Block.SUPPER;
+        Block evening = tavernNight(seed, personality, number) ? Block.TAVERN : Block.EVENING;
         switch (job) {
             case "knight", "archer" -> {
                 if (nightWatch(seed, job)) {
@@ -159,27 +198,28 @@ public final class Routine {
                     return sorted(number, type, market, keys);
                 }
                 add(keys, wake, Block.WAKE); add(keys, wake + 300, Block.BREAKFAST); add(keys, at(7, 30), Block.WORK);
-                add(keys, at(11, 30), lunchBlock); add(keys, at(12, 30), Block.WORK); add(keys, at(16, 30), Block.SOCIAL);
-                add(keys, at(17, 30), Block.SUPPER); add(keys, at(18, 30), evening); add(keys, bed, Block.SLEEP);
+                add(keys, lunchAt, lunchBlock); add(keys, at(12, 30), Block.WORK); add(keys, at(16, 30), Block.SOCIAL);
+                add(keys, supperAt, supper); add(keys, at(18, 30), evening); add(keys, bed, Block.SLEEP);
                 return sorted(number, type, market, keys);
             }
             case "tavern_keeper" -> {
                 add(keys, wake, Block.WAKE); add(keys, wake + 400, Block.BREAKFAST); add(keys, at(9, 30), Block.HOBBY);
-                add(keys, at(11, 0), Block.WORK); add(keys, at(19, 45), Block.EVENING); add(keys, bed, Block.SLEEP);
+                // The keeper serves lunch, supper and the evening crowd, and closes up at nine.
+                add(keys, at(11, 0), Block.WORK); add(keys, at(21, 0), Block.EVENING); add(keys, bed, Block.SLEEP);
                 return sorted(number, type, market, keys);
             }
             case "bard" -> {
                 add(keys, wake, Block.WAKE); add(keys, wake + 400, Block.BREAKFAST);
                 add(keys, at(9, 0), market ? Block.MARKET : Block.WORK); add(keys, at(11, 30), Block.LUNCH_TAVERN);
                 add(keys, at(12, 30), Block.HOBBY); add(keys, at(15, 0), Block.SOCIAL); add(keys, at(17, 0), Block.SUPPER);
-                add(keys, at(18, 0), Block.PERFORM); add(keys, at(19, 45), Block.EVENING); add(keys, bed, Block.SLEEP);
+                add(keys, at(18, 0), Block.PERFORM); add(keys, at(20, 15), Block.TAVERN); add(keys, at(21, 15), Block.EVENING); add(keys, bed, Block.SLEEP);
                 return sorted(number, type, market, keys);
             }
             case "nitwit" -> {
                 wake = at(8, 30) + jitter; bed = at(21, 30) + jitter;
                 add(keys, wake, Block.WAKE); add(keys, wake + 500, Block.BREAKFAST); add(keys, at(10, 0), Block.HOBBY);
-                add(keys, at(11, 30), lunchBlock); add(keys, at(12, 30), Block.NAP); add(keys, at(14, 0), Block.HOBBY);
-                add(keys, at(15, 30), market ? Block.MARKET : Block.SOCIAL); add(keys, at(17, 30), Block.SUPPER);
+                add(keys, lunchAt, lunchBlock); add(keys, at(12, 30), Block.NAP); add(keys, at(14, 0), Block.HOBBY);
+                add(keys, at(15, 30), market ? Block.MARKET : Block.SOCIAL); add(keys, supperAt, supper);
                 add(keys, at(18, 15), Block.TAVERN); add(keys, at(19, 45), Block.EVENING); add(keys, bed, Block.SLEEP);
                 return sorted(number, type, market, keys);
             }
@@ -196,13 +236,18 @@ public final class Routine {
         if (works) {
             if (!job.equals("cleric") && wake + 1300 < start && type == Chronotype.EARLY_BIRD) add(keys, wake + 900, Block.HOBBY);
             add(keys, start, work);
-            if (!job.equals("cook")) { add(keys, at(11, 30), lunchBlock); add(keys, at(12, 30), work); }
-            add(keys, stop, Block.HOBBY);
+            if (!job.equals("cook")) { add(keys, lunchAt, lunchBlock); add(keys, at(12, 30), work); }
+            add(keys, stop, afternoonPint(seed, personality, number) && stop < at(15, 30) ? Block.TAVERN : Block.HOBBY);
         } else {
-            add(keys, at(9, 0), Block.MARKET); add(keys, at(12, 0), lunchBlock); add(keys, at(13, 0), Block.HOBBY);
+            add(keys, at(9, 0), Block.MARKET); add(keys, tavernLunch ? at(11, 45) : at(12, 0), lunchBlock); add(keys, at(13, 0), Block.HOBBY);
         }
-        add(keys, at(16, 30), Block.SOCIAL); add(keys, at(17, 30), Block.SUPPER);
-        add(keys, at(18, 30), market ? Block.TAVERN : evening); add(keys, bed, Block.SLEEP);
+        if (job.equals("cook")) {
+            // The cook comes back to the kitchen for the supper service and eats late, at home.
+            add(keys, at(16, 0), Block.WORK); add(keys, at(18, 45), Block.SUPPER); add(keys, bed, Block.SLEEP);
+            return sorted(number, type, market, keys);
+        }
+        add(keys, at(16, 30), Block.SOCIAL); add(keys, supperAt, supper);
+        add(keys, at(18, 30), evening); add(keys, bed, Block.SLEEP);
         return sorted(number, type, market, keys);
     }
     private static void add(List<Slot> keys, int time, Block block) { keys.add(new Slot(Math.floorMod(time, 24000), block)); }
@@ -226,6 +271,11 @@ public final class Routine {
     public static Plan plan(Day day, int time, Weather weather, int seed, String job, String personality, boolean child, boolean workIndoors) {
         Block scheduled = day.at(time), block = scheduled;
         boolean guard = job.equals("knight") || job.equals("archer");
+        // A wet lunch hour fills the tavern, and the friendliest neighbors wait out the rain there together.
+        if (!child && (weather == Weather.RAIN || weather == Weather.THUNDER)) {
+            if (scheduled == Block.LUNCH) return new Plan(Block.LUNCH_TAVERN, scheduled, weather, day);
+            if (scheduled == Block.SOCIAL && sociable(personality) >= 2 && !likesRain(seed, personality, false)) return new Plan(Block.TAVERN, scheduled, weather, day);
+        }
         boolean outside = scheduled.outdoors() || scheduled == Block.WORK && !workIndoors || scheduled == Block.PRAYER && !workIndoors;
         if (outside) switch (weather) {
             case THUNDER -> {
@@ -246,6 +296,21 @@ public final class Routine {
         return new Plan(block, scheduled, weather, day);
     }
 
+    /** Birthday parties gather by the bell from 16:30 to 18:30. */
+    public static final int PARTY_START = at(16, 30), PARTY_END = at(18, 30);
+    public static boolean partyTime(int time) { int t = Math.floorMod(time, 24000); return t >= PARTY_START && t < PARTY_END; }
+    /**
+     * A birthday party in the evening: the guest of honor ({@code host}) takes the evening off work and their
+     * family and friends join them by the bell. Rain and storms keep everyone indoors; nobody leaves their bed,
+     * the night watch or a raid for it.
+     */
+    public static Plan party(Plan plan, int time, boolean host) {
+        var scheduled = plan.block();
+        if (!partyTime(time) || plan.weather() == Weather.RAIN || plan.weather() == Weather.THUNDER) return plan;
+        if (scheduled.sleep || scheduled == Block.NIGHT_WATCH || scheduled == Block.DEFEND || scheduled == Block.WORK && !host) return plan;
+        return new Plan(Block.PARTY, plan.scheduled(), plan.weather(), plan.day());
+    }
+
     /** "6:00 wake · 8:00 work · 11:30 lunch at the bell · ... · 20:30 bed" for the Village Ledger. */
     public static String summary(Day day) {
         var parts = new ArrayList<String>();
@@ -261,8 +326,9 @@ public final class Routine {
         return switch (block) {
             case SLEEP -> "bed"; case NAP -> "nap"; case WAKE -> "up"; case BREAKFAST -> "breakfast"; case PRAYER -> "prayers";
             case WORK -> "work"; case LUNCH -> "lunch at the bell"; case LUNCH_HOME -> "lunch at home"; case LUNCH_TAVERN -> "lunch at the tavern";
-            case HOBBY -> "hobby"; case SOCIAL -> "neighbors"; case MARKET -> "market"; case SUPPER -> "supper"; case EVENING -> "home";
+            case HOBBY -> "hobby"; case SOCIAL -> "neighbors"; case MARKET -> "market"; case SUPPER -> "supper"; case SUPPER_TAVERN -> "supper at the tavern"; case EVENING -> "home";
             case TAVERN -> "tavern"; case PERFORM -> "performs"; case NIGHT_WATCH -> "night watch"; case PLAY -> "play"; case LESSONS -> "lessons";
+            case PARTY -> "party";
             default -> block.label.toLowerCase(Locale.ROOT);
         };
     }

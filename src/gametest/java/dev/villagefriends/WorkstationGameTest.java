@@ -185,12 +185,14 @@ public final class WorkstationGameTest implements FabricClientGameTest {
                 var cook = (Villager) level.getEntity(residents.get(0));
                 Workstations.worked(level, cook);
                 check(station(w, stove).mealDay == day(level), "The cook makes the dish of the day");
-                int before = count(p, VillageItems.get("hearty_stew")) + count(p, VillageItems.get("fresh_village_bread"));
+                // The dish of the day is the tavern's lunch: stew, shepherd's pie, bread or a ploughman's lunch.
+                var dish = net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(dev.villagefriends.tavern.Patronage.dishOfTheDay(day(level))));
+                int before = count(p, dish);
                 p.teleportTo(level, stove.getX() + .5, stove.getY(), stove.getZ() - 2, java.util.Set.of(), 0, 20, true);
                 use(w, stove, ItemStack.EMPTY);
-                check(count(p, VillageItems.get("hearty_stew")) + count(p, VillageItems.get("fresh_village_bread")) > before, "A visitor gets a helping");
+                check(count(p, dish) > before, "A visitor gets a helping");
                 use(w, stove, ItemStack.EMPTY);
-                check(count(p, VillageItems.get("hearty_stew")) + count(p, VillageItems.get("fresh_village_bread")) == before + (day(level) % 2 == 1 ? 1 : 2), "Only one helping a day");
+                check(count(p, dish) == before + (dish == VillageItems.get("fresh_village_bread") ? 2 : 1), "Only one helping a day");
                 var painter = (Villager) level.getEntity(residents.get(1));
                 for (int i = 0; i < 8; i++) Workstations.worked(level, painter);
                 check(level.getBlockState(easel).getValue(WorkstationBlock.ART) >= WorkstationBlock.FIRST_PAINTING, "The painter finishes a painting at work");

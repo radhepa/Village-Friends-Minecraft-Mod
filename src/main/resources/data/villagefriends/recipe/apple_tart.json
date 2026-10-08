@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:apple_tart",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:sugar",
+    "minecraft:wheat",
+    "#minecraft:eggs"
+  ]
+}

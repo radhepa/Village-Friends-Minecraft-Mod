@@ -110,7 +110,7 @@ public final class VillageLifeGameTest implements FabricClientGameTest {
             var entityIds = w.getServer().computeOnServer(s -> residents.stream().map(id -> villager(w, id).getId()).toList());
             c.runOnClient(client -> { for (int id : entityIds) check(EmoteBubbles.get(id) != null, "Every resident shows their bubble"); });
             c.takeScreenshot("village-life-bubbles");
-            // The ledger item and a notice board both open the village's ledger.
+            // The ledger item opens the village's ledger.
             w.getServer().runOnServer(s -> w.getConnection().getServerPlayer().setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(VillageItems.get("village_ledger"))));
             flush(w);
             c.runOnClient(client -> client.gameMode.useItem(client.player, InteractionHand.MAIN_HAND)); flush(w);
@@ -123,7 +123,10 @@ public final class VillageLifeGameTest implements FabricClientGameTest {
             });
             flush(w); c.waitTicks(2);
             c.runOnClient(client -> client.gameMode.useItemOn(client.player, InteractionHand.MAIN_HAND, new BlockHitResult(Vec3.atCenterOf(board), Direction.WEST, board, false)));
-            flush(w); c.waitForScreen(LedgerScreen.class); c.clickScreenButton("Close"); c.waitForScreen(null);
+            // The notice board opens its own screen, with a way into the ledger and back.
+            flush(w); c.waitForScreen(NoticeBoardScreen.class);
+            c.clickScreenButton("Village Ledger"); flush(w); c.waitForScreen(LedgerScreen.class);
+            c.clickScreenButton("Back"); c.waitForScreen(NoticeBoardScreen.class); c.clickScreenButton("Close"); c.waitForScreen(null);
             // A neighbor's death is remembered, and their partner is free to love again.
             w.getServer().runOnServer(s -> villager(w, residents.getLast()).kill(w.getConnection().getServerLevel()));
             c.waitTicks(3);

@@ -21,7 +21,7 @@ sys.path.insert(0, str(TOOL))
 import kit  # noqa: E402
 import animations  # noqa: E402
 
-TAG = re.compile(r"(adult|child|smith|guard|social|holding|rain|thunder|cold|morning|day|evening|night|"
+TAG = re.compile(r"(adult|child|smith|guard|social|holding|rain|thunder|cold|morning|day|evening|night|birthday|"
                  r"job:[a-z_]+|personality:[a-z]+|routine:[a-z_]+)")
 
 

@@ -19,4 +19,11 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public float bubbleAge;
     /** Lying hurt on the ground: knocked out, or a downed companion. */
     public boolean injured;
+    /** Sitting on a tavern seat (legs stay in vanilla's riding pose), and the dish set on the table in front of them. */
+    public boolean seated, tableItemShown;
+    public final net.minecraft.client.renderer.item.ItemStackRenderState tableItem = new net.minecraft.client.renderer.item.ItemStackRenderState();
+    public double tableX, tableY, tableZ;
+    public float tableYaw;
+    /** Wearing a party hat: it's their birthday. */
+    public boolean partyHat;
 }

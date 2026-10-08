@@ -132,10 +132,12 @@ public final class Workstations {
         long today = today(level);
         if (e.mealDay == today && !e.served.contains(p.getUUID().toString())) {
             e.served.add(p.getUUID().toString()); e.changed();
-            boolean stew = today % 2 == 1;
-            give(p, new ItemStack(VillageItems.get(stew ? "hearty_stew" : "fresh_village_bread"), stew ? 1 : 2));
+            // The same dish the tavern serves at lunch today.
+            String dish = dev.villagefriends.tavern.Patronage.dishOfTheDay(today);
+            var item = net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(dish));
+            give(p, new ItemStack(item, dish.endsWith("bread") ? 2 : 1));
             level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, .6F, .8F);
-            return tell(p, keeper(level, pos, "The cook") + "'s dish of the day: " + (stew ? "hearty stew" : "fresh village bread") + ". Enjoy!");
+            return tell(p, keeper(level, pos, "The cook") + "'s dish of the day: " + itemName(dish).replace("ploughmans", "ploughman's").replace("shepherds", "shepherd's") + ". Enjoy!");
         }
         if (e.cooking()) {
             int left = 0;
@@ -255,6 +257,21 @@ public final class Workstations {
         if (inspire) for (var player : level.getEntitiesOfClass(ServerPlayer.class, area, pl -> !pl.isSpectator()))
             player.addEffect(new MobEffectInstance(MobEffects.HASTE, 1200, 0, false, true));
         return t;
+    }
+
+    /** The bard plays a song on the tavern's stage; returns how long it lasts in ticks. */
+    public static int serenade(ServerLevel level, BlockPos pos, net.minecraft.util.RandomSource random) {
+        return perform(level, pos, Songbook.SONGS.get(random.nextInt(Songbook.SONGS.size())), SoundEvents.NOTE_BLOCK_GUITAR, false);
+    }
+    /** A tavern patron's mug is filled from a drinks barrel or tap stand: false if it has run dry. */
+    public static boolean pour(ServerLevel level, BlockPos pos) {
+        if (!(level.getBlockEntity(pos) instanceof WorkstationBlockEntity e) || e.stock <= 0) return false;
+        e.stock--; e.changed();
+        return true;
+    }
+    /** The tavern keeper taps a fresh barrel. */
+    public static void restock(ServerLevel level, BlockPos pos, int mugs) {
+        if (level.getBlockEntity(pos) instanceof WorkstationBlockEntity e && e.stock < MAX_DRINKS) { e.stock = Math.min(MAX_DRINKS, e.stock + mugs); e.changed(); }
     }
 
     /** Items a tailor can mend with thread: leather, bows, rods, elytra and the like. */

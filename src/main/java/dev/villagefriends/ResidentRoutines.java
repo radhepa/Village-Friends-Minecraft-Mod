@@ -4,6 +4,8 @@ import dev.villagefriends.routine.Routine;
 import dev.villagefriends.routine.Routine.Block;
 import dev.villagefriends.routine.Routine.Weather;
 import dev.villagefriends.routine.RoutineBrain;
+import dev.villagefriends.tavern.Seat;
+import dev.villagefriends.tavern.Taverns;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +33,8 @@ import static dev.villagefriends.VillageFriends.*;
  * that carries out the current part of their day (work, the bell, home, bed, play), walks them to the
  * tavern or their hobby spot, hurries them indoors when rain or a storm starts, keeps them awake at
  * home until bedtime, and shares what they are doing with clients for animation and conversation.
- * Guards on night watch walk in squads and guards in a raid muster to fight ({@link GuardPatrols});
+ * Guards on night watch walk in squads and guards in a raid muster to fight ({@link GuardPatrols}); at the
+ * tavern {@link Taverns} seats, serves and stands residents up;
  * the apothecary leaves whatever they were doing to dress a knocked-out neighbor's wounds ({@link Knockouts}).
  */
 public final class ResidentRoutines {
@@ -80,12 +83,12 @@ public final class ResidentRoutines {
         // Guard duty outranks the schedule: a raid calls every guard out, and a short-handed watch calls up the next guard.
         if (GuardPatrols.defending(v)) return new Routine.Plan(Block.DEFEND, plan.scheduled(), plan.weather(), plan.day());
         if (GuardPatrols.drafted(v, timeOfDay(level)) && plan.block() != Block.NIGHT_WATCH) return new Routine.Plan(Block.NIGHT_WATCH, plan.scheduled(), plan.weather(), plan.day());
-        return plan;
+        return Birthdays.party(v, plan, timeOfDay(level));
     }
     /** What a resident is doing, as shown to players: "At work", "Sheltering from the rain"... */
     public static String doing(Villager v) {
         if (Knockouts.knockedOut(v)) return Knockouts.status(v);
-        return v.isSleeping() ? "Asleep" : plan(v).label();
+        return v.isSleeping() ? "Asleep" : Taverns.doing(v, plan(v).label());
     }
 
     // -- applying it -------------------------------------------------------------------------------
@@ -100,9 +103,9 @@ public final class ResidentRoutines {
         boolean duty = plan.block() == Block.DEFEND;
         routine.villagefriends$duty(duty);
         // Companions on an outing, guards in a fight and trading residents follow other rules.
-        if (v.isNoAi() || v.isPassenger() || CompanionController.state(v).active() || CompanionController.hasActivity(v)
+        if (v.isNoAi() || v.isPassenger() && !Seat.seated(v) || CompanionController.state(v).active() || CompanionController.hasActivity(v)
                 || GuardController.fighting(v) || v.isTrading()) { routine.villagefriends$routine(null, true); return; }
-        var activity = activity(v, level, plan.block());
+        var activity = Taverns.activity(v, activity(v, level, plan.block()));
         routine.villagefriends$routine(activity, plan.block().sleep);
         var current = brain.getActiveNonCoreActivity().orElse(Activity.IDLE);
         if (duty) {
@@ -114,6 +117,8 @@ public final class ResidentRoutines {
             brain.setActiveActivityIfPossible(activity);
         if (v.isSleeping() && !plan.block().sleep) v.stopSleeping();
         if (Knockouts.tend(v, level)) return;
+        // At the tavern they find a seat with their friends, order, eat and talk; Taverns stands them up afterwards.
+        if (Taverns.update(v, level, plan)) return;
         steer(v, level, plan);
     }
     private static Activity activity(Villager v, ServerLevel level, Block block) {
@@ -122,8 +127,8 @@ public final class ResidentRoutines {
         return switch (block) {
             case SLEEP, NAP, WAKE, BREAKFAST, LUNCH_HOME, SUPPER, EVENING, SHELTER, STORM, SNOWED_IN -> Activity.REST;
             case WORK, PRAYER -> !v.isBaby() && brain.hasMemoryValue(MemoryModuleType.JOB_SITE) ? Activity.WORK : Activity.IDLE;
-            case LUNCH, SOCIAL, MARKET, LESSONS -> bell ? Activity.MEET : Activity.IDLE;
-            case TAVERN, PERFORM, LUNCH_TAVERN -> tavern(v, level) != null || !bell ? Activity.IDLE : Activity.MEET;
+            case LUNCH, SOCIAL, MARKET, LESSONS, PARTY -> bell ? Activity.MEET : Activity.IDLE;
+            case TAVERN, PERFORM, LUNCH_TAVERN, SUPPER_TAVERN -> tavern(v, level) != null || !bell ? Activity.IDLE : Activity.MEET;
             case PLAY, SNOW_PLAY -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
             case RAIN_WALK -> v.isBaby() ? Activity.PLAY : Activity.IDLE;
             case HOBBY, NIGHT_WATCH, DEFEND -> Activity.IDLE;
@@ -133,7 +138,7 @@ public final class ResidentRoutines {
     private static void steer(Villager v, ServerLevel level, Routine.Plan plan) {
         var brain = v.getBrain();
         switch (plan.block()) {
-            case TAVERN, PERFORM, LUNCH_TAVERN -> {
+            case TAVERN, PERFORM, LUNCH_TAVERN, SUPPER_TAVERN -> {
                 var tavern = tavern(v, level);
                 if (tavern != null && !tavern.closerToCenterThan(v.position(), 5)) walk(v, tavern, .55F, 3);
             }
@@ -152,7 +157,7 @@ public final class ResidentRoutines {
             default -> {}
         }
     }
-    static void walk(Villager v, BlockPos pos, float speed, int closeEnough) {
+    public static void walk(Villager v, BlockPos pos, float speed, int closeEnough) {
         var brain = v.getBrain();
         var existing = brain.getMemory(MemoryModuleType.WALK_TARGET);
         if (existing.isPresent() && existing.get().getTarget().currentBlockPosition().closerThan(pos, closeEnough + 1)) return;
@@ -167,6 +172,7 @@ public final class ResidentRoutines {
             case DEFEND -> VillageSocieties.emote(v, Emote.EXCLAIM, v.getRandom().nextInt(10));
             case RAIN_WALK -> VillageSocieties.emote(v, Emote.NOTE, v.getRandom().nextInt(30));
             case SNOW_PLAY -> VillageSocieties.emote(v, Emote.SPARKLE, v.getRandom().nextInt(30));
+            case PARTY -> VillageSocieties.emote(v, Birthdays.celebrating(v) ? Emote.SPARKLE : v.getRandom().nextBoolean() ? Emote.NOTE : Emote.EXCLAIM, v.getRandom().nextInt(30));
             default -> {
                 if ((old == Block.SHELTER || old == Block.STORM) && plan.weather() == Weather.CLEARING && v.getRandom().nextInt(3) == 0)
                     VillageSocieties.emote(v, Emote.SPARKLE, v.getRandom().nextInt(40));

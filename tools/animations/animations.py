@@ -32,7 +32,13 @@ PACKS = {
                        "work for every profession, greetings, conversations, reactions, weather and children's play.",
         "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
                     "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
-                    "guards", "pets"],
+                    "guards", "party", "pets"],
+    },
+    "tavern": {
+        "name": "Tavern",
+        "description": "Residents at the tavern: sitting, eating, drinking, toasting, talking across the table, "
+                       "listening to the bard, leaning on the bar.",
+        "modules": ["seated", "dining", "chat", "bar"],
     },
 }
 MAX_ROT, MAX_POS = 400, 12
@@ -42,8 +48,10 @@ MAX_ROT, MAX_POS = 400, 12
 # trade, during their free hour their hobby. Clips from these modules are boosted for that part of the day.
 WORK_HOURS = {"routine:work": 3.0, "routine:prayer": 3.0, "routine:night_watch": 2.0}
 FREE_HOUR = {"routine:hobby": 4.0, "routine:rain_walk": 1.5}
+# At a birthday party the party clips (weights 5-8) must outweigh a resident's ~150 of everyday idle weight.
+PARTY = {"routine:party": 5.0}
 ROUTINE_BOOSTS = {"work": WORK_HOURS, "trades": WORK_HOURS, "crafts": WORK_HOURS, "guards": WORK_HOURS,
-                  "hobbies": FREE_HOUR, "pastimes": FREE_HOUR}
+                  "hobbies": FREE_HOUR, "pastimes": FREE_HOUR, "party": PARTY}
 
 
 def load(pack: str):

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:bar_stool",
+    "count": 1
+  },
+  "pattern": [
+    " W ",
+    " S ",
+    "S S"
+  ],
+  "key": {
+    "W": "#minecraft:wooden_slabs",
+    "S": "minecraft:stick"
+  }
+}

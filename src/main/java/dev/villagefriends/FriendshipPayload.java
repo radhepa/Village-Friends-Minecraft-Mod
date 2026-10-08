@@ -19,7 +19,7 @@ public record FriendshipPayload(int entityId, UUID villagerId, String name, Stri
         String tab, String journal, List<Choice> choices, String trust,
         int friendLevel, String levelName, int levelFloor, String goal, boolean levelUp, String emote, String home, String family)
         implements CustomPacketPayload {
-    public static final int MAX_CHOICES = 6;
+    public static final int MAX_CHOICES = 8;
     /** A reply the player can choose; {@code hint} explains a locked one. */
     public record Choice(String id, String label, boolean enabled, String hint) {
         public Choice(String id, String label, boolean enabled) { this(id, label, enabled, ""); }

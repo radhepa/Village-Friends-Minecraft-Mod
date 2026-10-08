@@ -30,7 +30,8 @@ public final class VillageBlocks {
         var identifier = id(name);
         var properties = BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, identifier))
                 .strength(stone ? 3.0F : 2.0F).sound(stone ? SoundType.STONE : SoundType.WOOD).noOcclusion();
-        Block block = kind == null ? new FoundationBlock(properties, boxes) : new FoundationEntityBlock(properties, boxes, kind);
+        Block block = kind == null ? new FoundationBlock(properties, boxes) : kind == FoundationEntityBlock.Kind.NOTICE_BOARD
+                ? new NoticeBoardBlock(properties, boxes) : new FoundationEntityBlock(properties, boxes, kind);
         BLOCKS.put(name, Registry.register(BuiltInRegistries.BLOCK, identifier, block));
         Registry.register(BuiltInRegistries.ITEM, identifier, new BlockItem(block,
                 new Item.Properties().setId(ResourceKey.create(Registries.ITEM, identifier)).useBlockDescriptionPrefix()));
@@ -71,7 +72,7 @@ public final class VillageBlocks {
         add("campfire_bench", false, bench);
         add("apothecary_cot", false, new double[][]{{0,5,1,16,9,15},{1,0,2,3,5,4},{13,0,2,15,5,4},{1,0,12,3,5,14},{13,0,12,15,5,14}}, FoundationEntityBlock.Kind.APOTHECARY_COT);
         add("house_plaque", false, new double[][]{{2,5,12,14,15,16}}, FoundationEntityBlock.Kind.HOUSE_PLAQUE);
-        add("notice_board", false, new double[][]{{2,0,7,4,14,9},{12,0,7,14,14,9},{1,6,6,15,16,10}}, FoundationEntityBlock.Kind.NOTICE_BOARD);
+        add("notice_board", false, new double[][]{{1,0,7,3,16,9},{13,0,7,15,16,9},{3,2,6,13,14,9},{0,14,5,16,16,11}}, FoundationEntityBlock.Kind.NOTICE_BOARD);
         add("command_desk", false, new double[][]{{0,10,0,16,13,16},{1,0,1,4,10,15},{12,0,1,15,10,15},{4,13,7,12,14,14}}, FoundationEntityBlock.Kind.COMMAND_DESK);
     }
 

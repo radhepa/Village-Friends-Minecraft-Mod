@@ -153,6 +153,63 @@ class RoutineTest {
         assertEquals(Block.WORK, Routine.plan(reserved, Routine.at(10, 0), Weather.SNOW, 8, "librarian", "reserved", false, false).block(), "Work goes on in the snow");
     }
 
+    @Test void residentsEatAndSpendEveningsAtTheTavern() {
+        int lunches = 0, suppers = 0, evenings = 0, marketEvenings = 0, n = 0;
+        for (int seed = 0; seed < 1200; seed++) {
+            String personality = PERSONALITIES.get(seed % PERSONALITIES.size());
+            var day = Routine.day(seed * 7919, "librarian", personality, false, WORKDAY);
+            n++;
+            if (day.at(Routine.at(11, 45)) == Block.LUNCH_TAVERN) lunches++;
+            if (day.at(Routine.at(17, 45)) == Block.SUPPER_TAVERN) suppers++;
+            if (day.at(Routine.at(19, 0)) == Block.TAVERN) evenings++;
+            if (Routine.day(seed * 7919, "librarian", personality, false, MARKET).at(Routine.at(19, 0)) == Block.TAVERN) marketEvenings++;
+        }
+        assertTrue(lunches > n / 5 && lunches < n / 2, "A good lunch crowd, not the whole village: " + lunches + "/" + n);
+        assertTrue(suppers > n / 10 && suppers < n * 35 / 100, "About one supper in five: " + suppers + "/" + n);
+        assertTrue(evenings > n / 5 && evenings < n * 45 / 100, "About one evening in three: " + evenings + "/" + n);
+        assertTrue(marketEvenings > n / 2 && marketEvenings < n * 85 / 100, "Most of the village on Market Day evening: " + marketEvenings + "/" + n);
+        // Sociable residents go out more than reserved ones.
+        int playful = 0, reserved = 0;
+        for (int seed = 0; seed < 400; seed++) for (long d = 0; d < 6; d++) {
+            if (Routine.tavernNight(seed, "playful", d)) playful++;
+            if (Routine.tavernNight(seed, "reserved", d)) reserved++;
+        }
+        assertTrue(playful > reserved * 1.3, "Playful " + playful + " vs reserved " + reserved);
+    }
+
+    @Test void tavernMealsHaveTheirOwnHours() {
+        for (int seed = 0; seed < 300; seed++) {
+            var day = Routine.day(seed, "mason", "warmhearted", false, WORKDAY);
+            if (!Routine.tavernSupper(seed, "warmhearted", WORKDAY)) continue;
+            assertEquals(Block.SUPPER_TAVERN, day.at(Routine.at(17, 20)), "Tavern suppers start early to get a table");
+            assertNotEquals(Block.SUPPER_TAVERN, day.at(Routine.at(18, 40)));
+        }
+        var keeper = Routine.day(5, "tavern_keeper", "warmhearted", false, WORKDAY);
+        assertEquals(Block.WORK, keeper.at(Routine.at(20, 30)), "The keeper serves the evening crowd");
+        assertEquals(Block.EVENING, keeper.at(Routine.at(21, 10)), "and closes up at nine");
+        var cook = Routine.day(5, "cook", "warmhearted", false, WORKDAY);
+        assertEquals(Block.WORK, cook.at(Routine.at(17, 0)), "The cook comes back for the supper service");
+        assertEquals(Block.SUPPER, cook.at(Routine.at(19, 0)));
+        var bard = Routine.day(5, "bard", "playful", false, WORKDAY);
+        assertEquals(Block.TAVERN, bard.at(Routine.at(20, 30)), "The bard stays for a drink after the show");
+        // Children don't go to the tavern.
+        for (int seed = 0; seed < 100; seed++) for (int t = 0; t < 24000; t += 100)
+            assertFalse(Routine.atTavern(Routine.day(seed, "none", "playful", true, MARKET).at(t)));
+    }
+
+    @Test void aWetLunchHourFillsTheTavern() {
+        int moved = 0, checked = 0;
+        for (int seed = 0; seed < 400 && checked < 40; seed++) {
+            var day = Routine.day(seed, "mason", "pragmatic", false, WORKDAY);
+            if (day.at(Routine.at(11, 45)) != Block.LUNCH) continue;
+            checked++;
+            var plan = Routine.plan(day, Routine.at(11, 45), Weather.RAIN, seed, "mason", "pragmatic", false, true);
+            if (plan.block() == Block.LUNCH_TAVERN) moved++;
+            assertEquals(Block.LUNCH, plan.scheduled());
+        }
+        assertTrue(checked > 10 && moved == checked, "Everyone lunching at the bell heads into the tavern: " + moved + "/" + checked);
+    }
+
     @Test void summariesReadFromMorningToNight() {
         var summary = Routine.summary(Routine.day(3, "mason", "pragmatic", false, WORKDAY));
         assertTrue(summary.contains(" up") && summary.contains("work") && summary.endsWith("bed"), summary);
