@@ -22,6 +22,14 @@ class DialogueBankTest {
     static final Set<String> EFFECTS = Set.of("heal", "meal", "shelter", "torch", "cook_held", "mend_held", "directions", "fish", "study",
             "flower", "apple", "bread", "cookie", "seeds", "emerald_tip");
 
+    static final List<String> GOOD_DEEDS = List.of("raid_defended", "raid_won", "revived", "bandaged", "saved_from_monster", "rescued_companion",
+            "notice_answered", "birthday_gift", "pet_kindness");
+    static final List<String> BAD_DEEDS = List.of("hit_resident", "knocked_out_resident", "killed_resident", "hit_golem", "killed_golem", "hurt_pet",
+            "killed_pet", "broke_home", "stole");
+    /** Deeds done to or for a resident who lives to talk about it (raids and golems involve nobody; the killed can't speak). */
+    static final List<String> SELF_DEEDS = List.of("revived", "bandaged", "saved_from_monster", "rescued_companion", "notice_answered", "birthday_gift",
+            "pet_kindness", "hit_resident", "knocked_out_resident", "hurt_pet", "killed_pet", "broke_home", "stole");
+
     private static void has(String key) { assertTrue(BANK.has(key), "Missing dialogue pool " + key); }
 
     @Test void thereAreMoreThanFiveThousandPiecesOfDialogue() {
@@ -54,6 +62,55 @@ class DialogueBankTest {
                 "adventure.general", "adventure.place", "joke.general", "day.market", "day.week", "greet.market")) has(key);
     }
 
+    @Test void everyDeedHasReactionsForEveryWayOfKnowingAndEveryPersonality() {
+        for (String kind : GOOD_DEEDS) { has("deed." + kind + ".seen"); has("deed." + kind + ".heard"); }
+        for (String kind : BAD_DEEDS) { has("deed." + kind + ".seen"); has("deed." + kind + ".heard"); }
+        for (String kind : SELF_DEEDS) { has("deed." + kind + ".self"); has("deed." + kind + ".family"); }
+        has("deed.killed_resident.family");
+        for (String sort : List.of("good", "bad")) for (String how : List.of("seen", "heard")) {
+            for (String p : PERSONALITIES) has("deed." + sort + "." + how + "." + p);
+            has("baby.deed." + sort + "." + how);
+        }
+        for (String sort : List.of("good", "bad")) has("baby.deed." + sort + ".family");
+        for (String kind : List.of("saved_from_monster", "revived", "bandaged", "birthday_gift", "pet_kindness", "hit_resident")) has("baby.deed." + kind + ".self");
+        for (String key : List.of("deed.apology.accept", "deed.apology.cool", "deed.apology.accept.child", "deed.apology.cool.child",
+                "deed.apology.remembered")) has(key);
+        for (String kind : List.of("revived", "saved_from_monster", "rescued_companion")) { has("deed.kept." + kind + ".self"); has("deed.kept." + kind + ".family"); }
+        has("greet.unwelcome"); has("baby.greet.unwelcome"); has("chat.unwelcome"); has("notice.unwelcome");
+        for (String p : PERSONALITIES) has("greet.unwelcome." + p);
+    }
+
+    @Test void deedReactionsNeverDependOnlyOnOptionalDetails() {
+        // {kin}, {teller} and {house} aren't always known; {victim} always is for a deed with someone involved, and raids and
+        // golems involve nobody. Every reaction pool keeps lines that need no more than that.
+        var always = new java.util.HashMap<>(Map.of("name", "Mira", "player", "Alex", "village", "Thistlewick"));
+        var withVictim = new java.util.HashMap<>(always); withVictim.put("victim", "Liora");
+        for (var pool : BANK.pools().entrySet()) {
+            String key = pool.getKey();
+            if (!key.startsWith("deed.") && !key.startsWith("baby.deed.")) continue;
+            boolean nobody = key.contains("raid_") || key.contains("_golem") || key.startsWith("deed.good.") || key.startsWith("deed.bad.")
+                    || key.startsWith("deed.apology.") || key.startsWith("baby.deed.good.") || key.startsWith("baby.deed.bad.");
+            var values = nobody ? always : withVictim;
+            long ok = pool.getValue().stream().filter(line -> Talk.fill(line, values) != null).count();
+            assertTrue(ok >= 2, key + " has at least two lines that always fill: " + ok);
+        }
+        for (String kind : List.of("raid_defended", "raid_won", "hit_golem", "killed_golem"))
+            for (String how : List.of("seen", "heard")) for (var line : BANK.pool("deed." + kind + "." + how))
+                assertFalse(line.contains("{victim}") || line.contains("{kin}"), "Nobody is involved in " + kind + ": " + line);
+    }
+
+    @Test void homesHaveSomethingToSay() {
+        for (String key : List.of("home.mine", "home.shared", "home.homeless", "home.crowded", "home.new", "home.new.player", "home.newborn_bed",
+                "home.partner_moved", "home.vacant", "home.bedtime", "home.carried", "home.carried.cot", "baby.home.mine", "baby.home.new",
+                "home.plaque.lived", "home.plaque.empty", "home.plaque.private", "notice.house", "notice.house.homeless", "notice.house.crowded",
+                "notice.house.newborn", "notice.thanks.house", "baby.notice.house")) has(key);
+        var always = Map.of("name", "Mira", "player", "Alex", "village", "Thistlewick");
+        for (var pool : BANK.pools().entrySet()) {
+            if (!pool.getKey().startsWith("home.") && !pool.getKey().startsWith("baby.home.") && !pool.getKey().contains(".house")) continue;
+            assertTrue(pool.getValue().stream().anyMatch(line -> Talk.fill(line, always) != null), pool.getKey() + " can speak without a house name");
+        }
+    }
+
     @Test void questionsAreWellFormedAndAnswersAreRemembered() {
         var ids = new HashSet<String>();
         for (var q : BANK.questions()) {
@@ -75,7 +132,8 @@ class DialogueBankTest {
                 Map.entry("biome", "the plains"), Map.entry("moon", "full moon"), Map.entry("market", "tomorrow"), Map.entry("neighbor", "Tamsin"),
                 Map.entry("weekday", "Bellday"), Map.entry("celebrant", "Mira"), Map.entry("birthday", "Summer 12"), Map.entry("when", "in 3 days"),
                 Map.entry("mobs", "5 zombies"), Map.entry("wanted", "12 wheat"), Map.entry("recipient", "Tobin"), Map.entry("sender", "Mira"),
-                Map.entry("season", "Summer"));
+                Map.entry("season", "Summer"), Map.entry("victim", "Liora"), Map.entry("kin", "sister"), Map.entry("teller", "Pell"),
+                Map.entry("house", "The Ashford House"));
         for (var pool : BANK.pools().entrySet()) for (var line : pool.getValue()) {
             String filled = Talk.fill(line, all);
             assertNotNull(filled, "Fillable: " + line);

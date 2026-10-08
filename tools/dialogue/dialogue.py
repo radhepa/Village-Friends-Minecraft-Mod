@@ -28,6 +28,10 @@ as "Summer 12"), {when} ("today", "tomorrow", "in 3 days"), {season} ("Summer"),
 such as "5 zombies"), {wanted} (an item request such as "12 wheat"), {recipient} (who a letter is for)
 and {sender} (who wrote it).
 
+Deeds and homes add: {victim} (the resident a deed was done to or for; for a pet, its owner), {kin} (the
+speaker's family word for them in lower case, such as "sister"), {teller} (who passed the news on) and {house}
+(a house name such as "The Ashford House").
+
     python tools/dialogue/dialogue.py           # compile
     python tools/dialogue/dialogue.py --check   # validate and confirm the compiled file is current
     python tools/dialogue/dialogue.py --stats   # counts by pool family
@@ -42,7 +46,8 @@ ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT.parents[1]
 OUT = PROJECT / 'src/main/resources/data/villagefriends/villagefriends/dialogue.json'
 PLACEHOLDERS = {'name', 'player', 'village', 'job', 'hobby', 'love', 'friend', 'partner', 'rival', 'time', 'day', 'item', 'biome', 'moon', 'market', 'neighbor', 'weekday',
-                'celebrant', 'birthday', 'when', 'mobs', 'wanted', 'recipient', 'sender', 'season'}
+                'celebrant', 'birthday', 'when', 'mobs', 'wanted', 'recipient', 'sender', 'season',
+                'victim', 'kin', 'teller', 'house'}
 MOODS = {'EXCLAIM', 'QUESTION', 'HEART', 'NOTE', 'ANGER', 'SWEAT', 'DOTS', 'SLEEP', 'SPARKLE', 'IDEA', 'GLOOM', 'BLUSH'}
 EFFECTS = {'heal', 'meal', 'shelter', 'torch', 'cook_held', 'mend_held', 'directions', 'fish', 'study', 'flower', 'apple', 'bread', 'cookie', 'seeds', 'emerald_tip'}
 MAX_LINE, MAX_LABEL = 300, 30

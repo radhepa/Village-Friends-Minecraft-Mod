@@ -1,0 +1,188 @@
+# Homes: residents talking about the house and bed they call their own, and the notes they pin up when they need one.
+# Keys: home.mine (they have a house and live there), home.shared (they share it with partner or family), home.homeless,
+# home.crowded (the family is split or squeezed), home.new (just moved in), home.new.player (moved into a house the player
+# built), home.newborn_bed (a baby in the family needs a bed), home.partner_moved (moved in with their partner),
+# home.vacant (a neighbor's bed stands empty after a death), home.bedtime (heading home for the night), home.carried
+# (woke in their own bed after a knockout), home.carried.cot (woke on the apothecary's cot), baby.home.mine, baby.home.new.
+# Plaque readout flavour (one line under the readout): home.plaque.lived, home.plaque.empty, home.plaque.private.
+# Notice board: notice.house (any household need), notice.house.homeless, notice.house.crowded, notice.house.newborn,
+# notice.thanks.house, baby.notice.house.
+# Placeholders: {house} a house name ("The Ashford House"), plus the usual {name}, {player}, {village}, {partner}.
+# A line whose placeholder can't be filled is skipped, so every pool keeps lines that need no {house} or {partner}.
+
+## home.mine
+Have you seen my house? It's not big, but every corner of it is mine.
+I sleep better in my own bed than anywhere else in the world.
+{house} isn't grand, but the roof doesn't leak and the bed is soft. What more could anyone want?
+Come by {house} some time. I'll show you where the good chair is.
+There's nothing like coming home at the end of the day and knowing exactly where everything is.
+I put a flower on my windowsill this morning. Small things make a house a home.
+
+## home.shared
+Our house is full of noise and boots and arguments about the blankets. I wouldn't change any of it.
+We all fit in {house}. Just about. If nobody breathes in at the same time.
+Sharing a house means sharing everything. Including the last slice of pie. Especially that.
+{partner} snores, but I've learned to sleep through it. Mostly.
+Home's where your family is. Ours happens to have a very creaky staircase.
+We've got a bed each and a table for all of us. That's a home, I'd say.
+
+## home.homeless
+I haven't a bed of my own just now. I've been sleeping wherever there's a spare one.
+Do you know of an empty house anywhere? Mine's... well, I haven't got one.
+Every night I wonder where I'll sleep. It's tiring, wondering.
+I'd give a lot for a bed that's mine. Just one. A small one would do.
+Some nights I sleep at the tavern. Some nights I don't sleep much at all.
+I've put my name down for the next free bed in {village}. I hope it comes soon.
+
+## home.crowded
+We need a bigger house. There are more of us than there are beds.
+Half my family sleeps in one house and half in another. It isn't right.
+There's an elbow in my ear every night. Somebody's, I'm never sure whose.
+We've outgrown {house}. Every morning is a queue for everything.
+I'd love a house where we could all sleep under one roof again.
+We take turns sleeping on the floor. My turn's tonight. Again.
+
+## home.new
+I've just moved in! Everything smells of fresh wood and new beginnings.
+New house, new bed, new view from the window. I keep walking round it grinning.
+I'm still unpacking. Mostly I'm still deciding where to put the unpacking.
+My first night in {house} was the best sleep I've had in ages.
+It's strange, a new home. You have to learn which floorboards creak.
+I moved in this week. I've already named the spider in the corner. We're getting along.
+
+## home.new.player
+You built this house? For us? I don't know what to say. Thank you, {player}.
+We moved into the house you built. It's perfect. Well, nearly. We've rearranged the chests.
+Every time I close the door of {house}, I think of who built it. Thank you.
+I've never lived in a house a friend built. It feels different. Warmer, somehow.
+The beds are just right and the door shuts properly. You did a fine job, {player}.
+Folk keep asking who built our house. I tell them proudly.
+
+## home.newborn_bed
+We've a new baby in the family and nowhere for them to sleep. We're making do with a drawer.
+The baby needs a bed of their own. Do you know anyone handy with a hammer?
+Our little one is sleeping between us for now. Nobody's sleeping much.
+A new baby is the best news. A new bed for them would be the second best.
+We need a bed for the baby. They're very small, but they take up a surprising amount of room.
+If anyone has a spare cot, we have a very small person who would like it.
+
+## home.partner_moved
+I've moved in with {partner}! Our things are all muddled together now. I love it.
+We finally share a house. I keep waking up and forgetting where I am, and then I remember, and I smile.
+{partner} and I have a home together now. Two of everything, and one of us always loses the other's socks.
+Moving in together was the best decision we've made. Apart from deciding which side of the bed is whose.
+Our house, not mine and not theirs. Ours. I like the sound of that.
+
+## home.vacant
+There's an empty bed down the lane now. Nobody's had the heart to sleep in it.
+I walk past that empty house and still expect a light in the window.
+Someone will move in eventually, I suppose. It won't be the same.
+The bed's still made, just as they left it. Nobody wants to change that yet.
+A house goes very quiet when someone's gone. You can feel it from the street.
+We keep the step swept at the empty house. It seems like the right thing to do.
+
+## home.bedtime
+I'm off home. My bed's been calling me since supper.
+Time for me to head back to {house}. Goodnight, {player}.
+Home, slippers, bed. In that order, and quickly.
+I'm going home before my eyes close by themselves.
+Can't stop, it's late. The lamp's lit at home and someone's waiting.
+Goodnight! If I'm not home soon somebody will start worrying.
+
+## home.carried
+I woke up in my own bed. Last I knew I was lying in the dirt. Somebody carried me home.
+The apothecary patched me up and had me brought home. There's nowhere better to mend.
+I came round under my own blanket, with my own ceiling above me. Best sight in the world.
+They tell me I was carried home after I went down. My head hurts, but my pillow helps.
+Waking up at home after a fright like that... I nearly cried. Maybe I did a little.
+
+## home.carried.cot
+I woke up on the apothecary's cot. Not my bed, but a kind one.
+The apothecary kept me overnight on the cot. Smelled of herbs and worry.
+I've been on the cot at the apothecary's. They wouldn't let me leave until I could stand.
+I came round at the apothecary's with a blanket over me and a bitter tea beside me.
+No bed of my own to go to, so they kept me on the cot. I'm grateful all the same.
+
+## baby.home.mine
+I've got my own bed! It's got a squeaky bit if you bounce in the middle!
+My room is the best room. It has a window AND a spider.
+I sleep right next to my mum and dad's room. In case of monsters.
+Want to see my bed? I made it myself! Well, I put the pillow on.
+Our house is the best house in the whole village. I checked all of them.
+I have a secret hiding place in my house. I'm not telling you where. Under the bed.
+
+## baby.home.new
+We moved to a new house! I've got a new bed and it doesn't creak yet!
+Our new house is SO big! Well, bigger. I can do a whole cartwheel in it.
+I got a new bed! It's just for me! Nobody else's feet!
+We live in a different house now. I keep going to the old one by mistake.
+
+## home.plaque.lived
+The doorstep is worn smooth by the people who live here.
+Boots by the door, smoke from the chimney: somebody calls this home.
+A well-loved house. You can tell by the scuffs on the step.
+Someone has polished this plaque recently.
+The windowsill has a flower on it, and someone remembers to water it.
+Somewhere inside, a kettle is probably on.
+
+## home.plaque.empty
+Nobody lives here yet. The house is waiting.
+An empty house, swept and ready for someone.
+The beds are made and nobody has slept in them.
+Quiet inside. It needs people to make it a home.
+
+## home.plaque.private
+Private. Nobody will move in uninvited.
+A private house: the village knows to leave it be.
+This house is kept private. Residents won't settle here.
+
+# Notice board.
+
+## notice.house
+We need a bigger house. If anyone can build one, my family would be ever so grateful. - {name}
+Wanted: a house for a family in {village}. A roof, a door, and beds enough for all of us. - {name}
+Please, somebody, build us a home. We'll keep it clean, we'll keep it warm, and we'll never forget who built it.
+Help wanted: a builder with a kind heart. We need somewhere to live. - {name}
+Does anyone have the know-how to build a house? Ours has run out of room, or we've run out of house. - {name}
+Notice: house needed. Beds needed. Patience running out. Gratitude guaranteed. - {name}
+We're making do, but we can't make do much longer. A house with enough beds would change everything. - {name}
+To any builder passing through {village}: a family here needs a home. Put up a House Plaque so we know it's ours.
+
+## notice.house.homeless
+I haven't got a home in {village}. Could someone build a little house with a bed in it? - {name}
+Wanted: four walls, a roof and a bed. For me. I've been sleeping wherever I can. - {name}
+I'd be so grateful for a house of my own. Even a small one. Even a very small one. - {name}
+Somebody without a bed is looking for one. That somebody is me. Please help. - {name}
+A home for someone who hasn't got one. That's all I'm asking. - {name}
+
+## notice.house.crowded
+We need a bigger house! There are more of us than beds, and someone always ends up on the floor. - {name}
+Our family is split between two houses. Could someone build one big enough for all of us? - {name}
+Wanted: a house with more beds than we've got now. Elbows in faces nightly. Please help. - {name}
+We've outgrown our house. Lovingly, but completely. A bigger one would be a dream. - {name}
+Too many of us, too few beds. If you can build, we'd be forever in your debt. - {name}
+
+## notice.house.newborn
+We have a new baby and nowhere to put them! A house with a bed for the little one, please. - {name}
+New baby, same old house, not enough beds. Could someone build us a home with room to grow? - {name}
+Wanted: a cot or a house with one. Our newest arrival is sleeping in a drawer. - {name}
+The baby needs a bed of their own, and we need a little more room. Can anyone help? - {name}
+A new life has come to {village}! Now it needs a place to sleep. Please help us build one. - {name}
+
+## notice.thanks.house
+You built us a house! I don't know what to say. Thank you, from all of us.
+We moved in last night. Everybody slept. Everybody! Thank you, {player}.
+A home. You gave us a home. I'll never walk past it without thinking of you.
+Thank you for the house! The beds are wonderful. The door shuts. It's perfect.
+I've already put a flower on the windowsill. Thank you for building it.
+Thank you, {player}. When people ask who built our house, I'll say a friend did.
+Our family is under one roof again, thanks to you. Thank you.
+Here, take this, and know you're welcome at our table any night.
+
+## baby.notice.house
+We need a bigger house! My brother kicks in his sleep and I need my own bed!
+Can you build us a house? With a tower? It doesn't need a tower. But a tower would be nice.
+I sleep on the floor right now! It's a bit fun but mostly it's lumpy.
+We need a new house because there's a new baby and the baby is LOUD.
+If you build us a house, I'll help! I'm good at carrying very small blocks.
+Please make us a house! I'll draw you a picture of it when it's done!
