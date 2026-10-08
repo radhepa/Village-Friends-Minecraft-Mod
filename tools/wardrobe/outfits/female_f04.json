@@ -4,13 +4,20 @@
     {"id": "f_lamellar_spearmaiden", "name": "Spearmaiden", "top": "tf137_spearmaidens_lamellar_vest", "bottom": "bf137_spearmaidens_leather_strip_skirt"},
     {"id": "f_mail_collar_lady_sergeant", "name": "Lady Sergeant", "top": "tf138_lady_sergeants_mail_collar_gambeson", "bottom": "bf138_lady_sergeants_splinted_boots_skirt"},
     {"id": "f_wrap_coat_horse_archer", "name": "Horse Archer", "top": "tf139_horse_archers_wrap_coat", "bottom": "bf139_horse_archers_riding_trousers"},
-    {"id": "f_leaf_mantle_scout", "name": "Scout", "top": "tf140_scouts_leaf_mottled_mantle", "bottom": "bf140_scouts_soft_hunting_boots"}
+    {"id": "f_leaf_mantle_scout", "name": "Scout", "top": "tf140_scouts_leaf_mottled_mantle", "bottom": "bf140_scouts_soft_hunting_boots"},
+    {"id": "f_fur_hood_tracker", "name": "Tracker", "top": "tf141_trackers_fur_lined_hood_jerkin", "bottom": "bf141_trackers_leg_wraps"},
+    {"id": "f_padded_jack_militia_woman", "name": "Militia Woman", "top": "tf142_militia_womans_padded_jack", "bottom": "bf142_militia_womans_kilted_skirt_over_hose"},
+    {"id": "f_lantern_watchwoman", "name": "Watchwoman", "top": "tf143_watchwomans_lantern_cloak", "bottom": "bf143_watchwomans_night_boots"},
+    {"id": "f_key_hung_gate_warden", "name": "Gate Warden", "top": "tf144_gate_wardens_key_hung_brigandine", "bottom": "bf144_gate_wardens_mail_hemmed_skirt"},
+    {"id": "f_breastplate_mounted_lancer", "name": "Mounted Lancer", "top": "tf145_mounted_lancers_breastplate", "bottom": "bf145_lancers_plate_cuisses"}
   ],
   "professions": {
-    "ARCHER": ["f_windlass_crossbowwoman", "f_wrap_coat_horse_archer", "f_leaf_mantle_scout"],
-    "GUARD": ["f_windlass_crossbowwoman", "f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant"],
-    "KNIGHT": ["f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant"],
+    "ARCHER": ["f_windlass_crossbowwoman", "f_wrap_coat_horse_archer", "f_leaf_mantle_scout", "f_fur_hood_tracker"],
+    "GUARD": ["f_windlass_crossbowwoman", "f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant", "f_padded_jack_militia_woman", "f_lantern_watchwoman", "f_key_hung_gate_warden"],
+    "KNIGHT": ["f_lamellar_spearmaiden", "f_mail_collar_lady_sergeant", "f_key_hung_gate_warden", "f_breastplate_mounted_lancer"],
     "ADVENTURER": ["f_wrap_coat_horse_archer"],
-    "CARTOGRAPHER": ["f_leaf_mantle_scout"]
+    "CARTOGRAPHER": ["f_leaf_mantle_scout"],
+    "FLETCHER": ["f_fur_hood_tracker"],
+    "NONE": ["f_padded_jack_militia_woman", "f_lantern_watchwoman"]
   }
 }
