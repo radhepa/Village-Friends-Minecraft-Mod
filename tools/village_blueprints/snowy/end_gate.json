@@ -1,0 +1,452 @@
+{
+ "format": 1,
+ "size": [17, 16, 7],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:cobblestone"
+  },
+  "C": {
+   "id": "minecraft:deepslate_tiles"
+  },
+  "D": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "E": {
+   "id": "minecraft:stone_bricks"
+  },
+  "F": {
+   "id": "minecraft:dirt_path"
+  },
+  "G": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "H": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "I": {
+   "id": "minecraft:dark_oak_planks"
+  },
+  "J": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "K": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "L": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "M": {
+   "id": "minecraft:spruce_planks"
+  },
+  "N": {
+   "id": "minecraft:dark_oak_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "O": {
+   "id": "minecraft:dark_oak_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "P": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "Q": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "S": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "T": {
+   "id": "minecraft:gravel"
+  },
+  "U": {
+   "id": "minecraft:dark_oak_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "W": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:snow_block"
+  },
+  "Y": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "outer_left"
+   }
+  },
+  "Z": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "outer_right"
+   }
+  },
+  "a": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "outer_left"
+   }
+  },
+  "b": {
+   "id": "minecraft:deepslate_tile_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "outer_right"
+   }
+  },
+  "c": {
+   "id": "minecraft:light_blue_wall_banner",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "d": {
+   "id": "minecraft:light_blue_wall_banner",
+   "properties": {
+    "facing": "south"
+   }
+  },
+  "e": {
+   "id": "minecraft:packed_ice"
+  },
+  "f": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "g": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "top",
+    "waterlogged": "false"
+   }
+  },
+  "h": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "waterlogged": "false"
+   }
+  },
+  "i": {
+   "id": "minecraft:grass_block"
+  },
+  "j": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "k": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAABFTBBFBAAAAA",
+    "AAAAAXFFTTFiAAAAA",
+    "AABBBBFTBBFBBBBAA",
+    "BBBBBBFFBTFBBBBBB",
+    "AABBBBFFeFFBBBBAA",
+    "AAAAAAXFTFFXAAAAA",
+    "AAAAABFFeFFBAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "AAAAAQ..k..QAAAAA",
+    "AAAAA.......AAAAA",
+    "AABBBB.....BBBBAA",
+    "LLBBBB.....BBBBLL",
+    "AABBBB.....BBBBAA",
+    "AAAAAA......AAAAA",
+    "AAAAAQ.....QAAAAA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "AAAAAV.....VAAAAA",
+    "AAAAA.......AAAAA",
+    "AAEBBE.....EBBEAA",
+    "LLB..B.....B..BLL",
+    "AAEBBE.....EBBEAA",
+    "AAAAAA......AAAAA",
+    "AAAAAV.....VAAAAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAEBBE.....EBBEAA",
+    "LLB..B.....B..BLL",
+    "AAEBBE.....EBBEAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAEKBE.....EKBEAA",
+    "LfB..B..W..B..BfL",
+    "AAEKBE.....EKBEAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAc.......cAAAA",
+    "AAEBBEg...hEBBEAA",
+    "QAB..B..j..B..BAQ",
+    "AAEBBEg...hEBBEAA",
+    "AAAAdA......dAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AADDDDPPPPPDDDDAA",
+    "AAG..GMMMMMG..GAA",
+    "AADDDDPPPPPDDDDAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAGKKGDDKDDGKKGAA",
+    "AAG..G.....G..GAA",
+    "AAGKKGDDKDDGKKGAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AADDDDDDDDDDDDDAA",
+    "AAGW.G.....GW.GAA",
+    "AADDDDDDDDDDDDDAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AaHHHHOOOOOHHHHbA",
+    "ARCCCCS...RCCCCSA",
+    "ARCCCCMMMMMCCCCSA",
+    "ARCCCCS...RCCCCSA",
+    "AZJJJJNNNNNJJJJYA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AACCCCIIIIICCCCAA",
+    "AACAACM...MCAACAA",
+    "AACCCCIIIIICCCCAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 11,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAaHHHOOOOOHHHbAA",
+    "AARCCSM...MRCCSAA",
+    "AAZJJJNNNNNJJJYAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 12,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAACC.IIIII.CCAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 13,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAHH.UUUUU.HHAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 14,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAQA.......QAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  },
+  {
+   "y": 15,
+   "rows": [
+    "AAAAA.......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAA.......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA",
+    "AAAAAA......AAAAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [8, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/streets.py",
+  "checksum": "e7e30cfdb586fb77"
+ }
+}
