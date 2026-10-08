@@ -131,7 +131,7 @@ public final class Homes {
         if (mine != null && index.house(mine.house()) != null) {
             var head = mine.head();
             if (!head.equals(memory)) {
-                if (memory != null && level.isLoaded(memory)) poi.release(memory);
+                if (memory != null) release(level, memory);
                 if (level.isLoaded(head)) poi.take(h -> h.is(PoiTypes.HOME), (h, p) -> p.equals(head), head, 1);
                 brain.setMemory(MemoryModuleType.HOME, GlobalPos.of(level.dimension(), head));
                 var anchored = anchors.get(key(origin, village));
@@ -147,7 +147,7 @@ public final class Homes {
         if (owner != null && !owner.equals(id)) {
             // Vanilla gave them someone else's bed: give it back.
             brain.eraseMemory(MemoryModuleType.HOME);
-            if (level.isLoaded(memory)) poi.release(memory);
+            release(level, memory);
             return;
         }
         if (level != origin) return;
@@ -155,6 +155,10 @@ public final class Homes {
         // A bed no house knows about, in a village that has no structure to read houses from.
         if (owner == null && index.surveyed() && houseWith(index, memory) == null && index.houses().stream().noneMatch(h -> h.kind() == House.Kind.GENERATED))
             enqueue(new Job(origin.dimension(), village, "", memory.immutable(), Job.Kind.FOUND));
+    }
+    /** Gives a bed's ticket back, if the bed is still there and its chunk is loaded. */
+    private static void release(ServerLevel level, BlockPos head) {
+        if (level.isLoaded(head) && level.getPoiManager().existsAtPosition(PoiTypes.HOME, head)) level.getPoiManager().release(head);
     }
     private static House houseWith(HousingIndex index, BlockPos pos) {
         for (var h : index.houses()) if (h.box().inflatedBy(1).isInside(pos)) return h;
@@ -240,7 +244,7 @@ public final class Homes {
         var next = index.vacate(resident, name, day(origin), why);
         if (next == index) return;
         var key = index.beds().get(resident);
-        if (key != null && origin.isLoaded(key.head())) origin.getPoiManager().release(key.head());
+        if (key != null) release(origin, key.head());
         put(origin, next); changed(origin, village);
     }
     /** A resident has settled in another village: their old bed is freed and the new village finds them one. */
@@ -463,7 +467,7 @@ public final class Homes {
         var before = new HashMap<BlockPos, String>(); var after = new HashMap<BlockPos, String>();
         for (var e : index.beds().entrySet()) before.put(e.getValue().head(), e.getKey());
         for (var e : next.beds().entrySet()) after.put(e.getValue().head(), e.getKey());
-        for (var e : before.entrySet()) if (!after.containsKey(e.getKey()) && level.isLoaded(e.getKey())) poi.release(e.getKey());
+        for (var e : before.entrySet()) if (!after.containsKey(e.getKey())) release(level, e.getKey());
         for (var e : after.entrySet()) if (!e.getValue().equals(before.get(e.getKey())) && level.isLoaded(e.getKey())) {
             var head = e.getKey();
             poi.take(h -> h.is(PoiTypes.HOME), (h, p) -> p.equals(head), head, 1);
@@ -578,7 +582,7 @@ public final class Homes {
     private static String failure(FloodFill.Result flood, String name) {
         String house = name == null || name.isBlank() ? "This house" : name;
         return switch (flood.status()) {
-            case OPEN_TO_SKY -> flood.leak() == null ? house + " is open to the sky." : house + " is open to the sky near " + flood.leak().getX() + " " + flood.leak().getY() + " " + flood.leak().getZ() + ".";
+            case OPEN_TO_SKY -> flood.leak() == null ? house + " is open to the sky." : house + " is open to the sky above " + flood.leak().getX() + " " + flood.leak().getY() + " " + flood.leak().getZ() + ".";
             case TOO_BIG -> house + " is too big or not closed in (over " + FloodFill.MAX_CELLS + " blocks of room). Put the plaque in a smaller, closed house.";
             case UNLOADED -> "Part of " + (name == null || name.isBlank() ? "this house" : name) + " isn't loaded yet. Try again up close.";
             default -> "The plaque needs to be on a wall of a closed room.";

@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.PoolElementStructurePiece;
 import net.minecraft.world.level.levelgen.structure.StructureStart;
@@ -125,7 +126,8 @@ public final class HouseSurvey {
             var state = level.getBlockState(cursor);
             if (door(state)) return FloodFill.Cell.DOOR;
             if (!state.getCollisionShape(level, cursor).isEmpty()) return FloodFill.Cell.SOLID;
-            return level.canSeeSky(cursor) ? FloodFill.Cell.SKY : FloodFill.Cell.OPEN;
+            // Under the open sky: nothing above it blocks movement. (The heightmap, unlike sky light, is current the moment a roof goes on.)
+            return y >= level.getHeight(Heightmap.Types.MOTION_BLOCKING, x, z) ? FloodFill.Cell.SKY : FloodFill.Cell.OPEN;
         };
     }
     /** Doors, fence gates and trapdoors: always the edge of a room. */

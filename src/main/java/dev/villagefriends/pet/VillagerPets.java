@@ -660,11 +660,15 @@ public final class VillagerPets {
                 ? remember(pet, dev.villagefriends.home.Homes.bedside(owner).orElse(null)) : bedsides.get(pet.getUUID()).orElse(null);
         double d = bedside != null ? pet.distanceToSqr(Vec3.atBottomCenterOf(bedside)) : pet.distanceToSqr(owner);
         if (pet.distanceToSqr(owner) > 144) { pet.tryToTeleportToOwner(); return; }
-        if (d > (bedside != null ? .6 * .6 : 2.4 * 2.4)) {
+        if (d > (bedside != null ? .8 * .8 : 2.4 * 2.4)) {
             pet.setInSittingPose(false);
             if (pet instanceof Cat cat) cat.setLying(false);
             boolean moving = pet.tickCount % 10 != 0 && !nav.isDone()
                     || (bedside != null ? nav.moveTo(bedside.getX() + .5, bedside.getY(), bedside.getZ() + .5, 1.0) : nav.moveTo(owner, 1.0));
+            // A closed door between them: it slips in anyway, the way pets turn up beside their owner.
+            if (bedside != null && (!moving || nav.getPath() != null && !nav.getPath().canReach())) {
+                nav.stop(); pet.teleportTo(bedside.getX() + .5, bedside.getY(), bedside.getZ() + .5); settle(pet, owner); return;
+            }
             if (!moving) settle(pet, owner);
             return;
         }
