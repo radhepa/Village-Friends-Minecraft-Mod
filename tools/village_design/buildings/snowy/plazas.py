@@ -243,7 +243,7 @@ def plaza_rink():
 # ------------------------------------------------------------------ midwinter tree
 def midwinter_tree(b, cx, cz, rng, y=1, height=17):
     """A great spruce in tiers, hung with lanterns, a shroomlight star on top."""
-    for yy in range(y + 1, y + height):
+    for yy in range(y + 1, y + height - 2):
         b.set(cx, yy, cz, 'spruce_log', axis='y')
     tiers = []
     top = y + height
@@ -258,7 +258,7 @@ def midwinter_tree(b, cx, cz, rng, y=1, height=17):
         for x in range(cx - 5, cx + 6):
             for z in range(cz - 5, cz + 6):
                 d = math.hypot(x - cx, z - cz)
-                if d <= r and (x, z) != (cx, cz) and b.get(x, yy, z)[0] == 'minecraft:air':
+                if d <= max(r, .5) and b.get(x, yy, z)[0] == 'minecraft:air':
                     b.set(x, yy, z, 'spruce_leaves', persistent=True, distance=1, waterlogged=False)
                     if r - 1 < d <= r and yy < top - 2:
                         lantern_spots.append((x, yy, z))
