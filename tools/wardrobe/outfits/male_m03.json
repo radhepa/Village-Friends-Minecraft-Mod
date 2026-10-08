@@ -4,11 +4,18 @@
     {"id": "m_tow_bargeman", "name": "Bargeman", "top": "t172_bargemans_tow_rope_jerkin", "bottom": "b172_towpath_boots"},
     {"id": "m_slop_sailor", "name": "Sailor", "top": "t173_sailors_striped_slop_frock", "bottom": "b173_sailors_wide_slops"},
     {"id": "m_adze_shipwright", "name": "Shipwright", "top": "t174_shipwrights_adze_loop_apron", "bottom": "b174_shipwrights_tar_spotted_trousers"},
-    {"id": "m_oakum_caulker", "name": "Caulker", "top": "t175_caulkers_oakum_smock", "bottom": "b175_caulkers_pitch_stained_leggings"}
+    {"id": "m_oakum_caulker", "name": "Caulker", "top": "t175_caulkers_oakum_smock", "bottom": "b175_caulkers_pitch_stained_leggings"},
+    {"id": "m_oyster_dredger", "name": "Oyster Dredger", "top": "t176_oyster_dredgers_oilcloth_cape", "bottom": "b176_oyster_bed_thigh_boots"},
+    {"id": "m_salt_boiler", "name": "Salt Boiler", "top": "t177_salt_boilers_steam_damp_shirt", "bottom": "b177_saltpan_clogs"},
+    {"id": "m_harbour_master", "name": "Harbour Master", "top": "t178_harbour_masters_brass_buttoned_coat", "bottom": "b178_harbour_masters_buckled_boots"},
+    {"id": "m_beacon_keeper", "name": "Beacon Keeper", "top": "t179_beacon_keepers_hooded_watch_coat", "bottom": "b179_beacon_keepers_stair_worn_boots"},
+    {"id": "m_ship_pilot", "name": "Ship's Pilot", "top": "t180_ship_pilots_sounding_line_coat", "bottom": "b180_pilots_rolled_sea_boots"}
   ],
   "professions": {
-    "NONE": ["m_pole_ferryman", "m_tow_bargeman"],
-    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker"],
-    "CARPENTER": ["m_adze_shipwright", "m_oakum_caulker"]
+    "NONE": ["m_pole_ferryman", "m_tow_bargeman", "m_beacon_keeper"],
+    "FISHERMAN": ["m_pole_ferryman", "m_tow_bargeman", "m_slop_sailor", "m_adze_shipwright", "m_oakum_caulker", "m_oyster_dredger", "m_salt_boiler", "m_harbour_master", "m_beacon_keeper", "m_ship_pilot"],
+    "CARPENTER": ["m_adze_shipwright", "m_oakum_caulker"],
+    "COOK": ["m_salt_boiler"],
+    "CARTOGRAPHER": ["m_harbour_master", "m_ship_pilot"]
   }
 }

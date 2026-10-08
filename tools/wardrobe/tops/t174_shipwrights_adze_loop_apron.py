@@ -9,7 +9,7 @@ META = {
     "gender": "male",
     "description": "A heavy leather bib apron over a rolled-sleeve linen shirt, an adze hung head-up in a loop at the hip "
                    "and a pocket bristling with wooden treenails.",
-    "tags": ["work", "sea", "rugged"],
+    "tags": ["work", "sea", "apron", "rugged"],
     "covers_waist": True,
 }
 
