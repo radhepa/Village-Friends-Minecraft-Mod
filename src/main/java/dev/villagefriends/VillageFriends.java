@@ -56,6 +56,9 @@ public final class VillageFriends implements ModInitializer {
     /** Every village's residents, families and relationships, kept on the level that records the village. */
     public static final AttachmentType<dev.villagefriends.social.SocietyBook> SOCIETIES = AttachmentRegistry.create(id("societies"),
             b -> b.initializer(() -> dev.villagefriends.social.SocietyBook.EMPTY).persistent(dev.villagefriends.social.SocietyBook.CODEC));
+    /** Every village's houses and who sleeps in which bed, kept on the level that records the village. */
+    public static final AttachmentType<dev.villagefriends.home.HousingBook> HOUSING = AttachmentRegistry.create(id("housing"),
+            b -> b.initializer(() -> dev.villagefriends.home.HousingBook.EMPTY).persistent(dev.villagefriends.home.HousingBook.CODEC));
     /** "parentId|parentId" for a baby until it joins its village. */
     public static final AttachmentType<String> PARENTS = AttachmentRegistry.create(id("parents"), b -> b.persistent(Codec.STRING));
     /** A player's last known friendship level with each resident they have talked to, for the Village Ledger. */
@@ -84,6 +87,7 @@ public final class VillageFriends implements ModInitializer {
         Birthdays.register();
         VillageQuests.register();
         dev.villagefriends.pet.VillagerPets.register();
+        dev.villagefriends.home.Homes.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> dev.villagefriends.pet.VillagerPets.loaded(entity));

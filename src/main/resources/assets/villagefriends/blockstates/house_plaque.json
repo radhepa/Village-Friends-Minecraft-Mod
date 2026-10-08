@@ -1,19 +1,35 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,mount=wall": {
       "model": "villagefriends:block/house_plaque",
       "y": 0
     },
-    "facing=east": {
+    "facing=east,mount=wall": {
       "model": "villagefriends:block/house_plaque",
       "y": 90
     },
-    "facing=south": {
+    "facing=south,mount=wall": {
       "model": "villagefriends:block/house_plaque",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,mount=wall": {
       "model": "villagefriends:block/house_plaque",
+      "y": 270
+    },
+    "facing=north,mount=standing": {
+      "model": "villagefriends:block/house_plaque_standing",
+      "y": 0
+    },
+    "facing=east,mount=standing": {
+      "model": "villagefriends:block/house_plaque_standing",
+      "y": 90
+    },
+    "facing=south,mount=standing": {
+      "model": "villagefriends:block/house_plaque_standing",
+      "y": 180
+    },
+    "facing=west,mount=standing": {
+      "model": "villagefriends:block/house_plaque_standing",
       "y": 270
     }
   }

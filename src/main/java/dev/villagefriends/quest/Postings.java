@@ -21,7 +21,12 @@ public final class Postings {
         /** The item a resident loves most, or "". */
         String loved(String residentId);
     }
-    public static final int MIN_OPEN = 3, MAX_OPEN = 5, NEW_PER_DAY = 2, MAX_NOTICES = 14, LIFETIME = 3;
+    public static final int MIN_OPEN = 3, MAX_OPEN = 5, NEW_PER_DAY = 2, MAX_NOTICES = 14, LIFETIME = 3, HOUSE_LIFETIME = 7;
+    /**
+     * A household short of room ({@code kind}: "homeless", "crowded" or "newborn"): {@code people} of them and
+     * {@code beds} beds between them. {@code poster} is the grown-up who would ask on the board.
+     */
+    public record HouseNeed(String poster, String kind, int people, int beds) {}
 
     // -- monsters -----------------------------------------------------------------------------------
 
@@ -126,12 +131,18 @@ public final class Postings {
     // -- the board ----------------------------------------------------------------------------------
 
     /** The board for {@code today}: stale notices come down and new ones go up, once a day. */
-    public static Board refresh(Board board, Society society, long today, Writer writer) {
+    public static Board refresh(Board board, Society society, long today, Writer writer) { return refresh(board, society, today, writer, List.of()); }
+    /**
+     * The board for {@code today}, given the households short of room: one of them may ask for a bigger house
+     * (at most one such notice is up at a time), and one nobody took comes down once that household has room.
+     */
+    public static Board refresh(Board board, Society society, long today, Writer writer, List<HouseNeed> needs) {
         if (board.day() >= today) return board;
         var notices = new ArrayList<Notice>();
         for (var n : board.notices()) {
             var poster = society == null ? null : society.get(n.poster());
             boolean gone = poster == null || !poster.home();
+            if (n.kind().equals(Notice.HOUSE) && !n.taken() && needs.stream().noneMatch(x -> x.poster().equals(n.poster()))) gone = true;
             if (n.taken() || today < n.expires() && !gone) notices.add(n);
         }
         int open = (int) notices.stream().filter(n -> n.open(today)).count();
@@ -142,6 +153,11 @@ public final class Postings {
             var notice = post(society, today, "n" + serial, random, writer, notices);
             if (notice == null) continue;
             notices.add(notice); serial++; i++;
+        }
+        // A household short of room asks for a bigger house, after the day's other notices so those stay the same.
+        if (society != null && notices.size() < MAX_NOTICES && notices.stream().noneMatch(n -> n.kind().equals(Notice.HOUSE))) {
+            var notice = house(society, today, "n" + serial, random, writer, needs);
+            if (notice != null) { notices.add(notice); serial++; }
         }
         return new Board(board.village(), notices, today, serial, board.favors());
     }
@@ -287,6 +303,30 @@ public final class Postings {
         String text = write(writer, random, "notice.birthday", null, fill, first(celebrant.name()) + "'s birthday is " + fill.get("when") + ". Could you help me surprise them with " + fill.get("wanted") + "?");
         return new Notice(id, Notice.BIRTHDAY, poster.id(), poster.name(), poster.job(), item, count, celebrant.id(), celebrant.name(),
                 reward(3 + random.nextInt(3), poster.job(), false, random), "Surprise for " + first(celebrant.name()), text, today, today + Math.min(LIFETIME, until + 1), "");
+    }
+
+    /** "We need a bigger house": build one with enough beds and put up a House Plaque. Null when nobody needs one. */
+    static Notice house(Society society, long today, String id, Random random, Writer writer, List<HouseNeed> needs) {
+        for (var need : needs) {
+            var poster = society.get(need.poster());
+            if (poster == null || !poster.home() || !poster.adult()) continue;
+            int beds = Math.max(2, need.people());
+            var fill = fill(poster);
+            fill.put("count", Integer.toString(beds)); fill.put("people", Integer.toString(need.people()));
+            String fallback = switch (need.kind()) {
+                case "newborn" -> "Our family has grown, and there's no bed for the baby. Could someone build us a house with " + beds + " beds?";
+                case "homeless" -> "I have no home of my own here. If someone could build a little house with a bed, I'd be so grateful.";
+                default -> "We need a bigger house! There are " + need.people() + " of us and only " + need.beds() + (need.beds() == 1 ? " bed" : " beds") + ". Could someone build us one?";
+            };
+            String text = write(writer, random, "notice.house", null, fill, fallback);
+            int emeralds = 6 + Math.min(6, beds);
+            var gifts = GIFTS.get("carpenter");
+            var gift = gifts.get(random.nextInt(gifts.size()));
+            var reward = new Notice.Reward(emeralds, gift.item(), gift.min() + random.nextInt(gift.max() - gift.min() + 1));
+            return new Notice(id, Notice.HOUSE, poster.id(), poster.name(), poster.job(), poster.id(), beds, need.kind(), poster.name(), reward,
+                    "We need a bigger house", text, today, today + HOUSE_LIFETIME, "");
+        }
+        return null;
     }
 
     private Postings() {}

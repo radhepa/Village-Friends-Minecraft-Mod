@@ -38,6 +38,8 @@ import static dev.villagefriends.VillageFriends.*;
  * tavern {@link Taverns} seats, serves and stands residents up;
  * bored children play games together or tag along after a player ({@link Playground});
  * the apothecary leaves whatever they were doing to dress a knocked-out neighbor's wounds ({@link Knockouts}).
+ * Everyone sleeps in their own bed and goes back to their own house for meals and the evening
+ * ({@link dev.villagefriends.home.Homes}).
  */
 public final class ResidentRoutines {
     /** Rain counts as "just stopped" for this long. */
@@ -104,6 +106,8 @@ public final class ResidentRoutines {
         if (!id.equals(old)) { target(v).setAttached(ROUTINE, id); changed(v, Block.byId(old), plan); }
         var brain = v.getBrain();
         if (!(brain instanceof RoutineBrain routine)) return;
+        // Their own bed is their vanilla home.
+        dev.villagefriends.home.Homes.keep(v, level);
         boolean duty = plan.block() == Block.DEFEND;
         routine.villagefriends$duty(duty);
         // Companions on an outing, guards in a fight and trading residents follow other rules.
@@ -157,6 +161,11 @@ public final class ResidentRoutines {
                 var home = brain.getMemory(MemoryModuleType.HOME).filter(h -> h.dimension() == level.dimension()).map(GlobalPos::pos)
                         .filter(h -> h.closerToCenterThan(v.position(), 48)).orElseGet(() -> cover(v, level));
                 if (home != null) walk(v, home, .7F, 1);
+            }
+            case BREAKFAST, SUPPER, EVENING -> {
+                // Home for meals and the evening: their own house, even from the far side of the village.
+                var home = dev.villagefriends.home.Homes.homeward(v, level);
+                if (home != null) walk(v, home, .6F, 2);
             }
             case NIGHT_WATCH -> GuardPatrols.patrol(v, level);
             case DEFEND -> GuardPatrols.muster(v, level);

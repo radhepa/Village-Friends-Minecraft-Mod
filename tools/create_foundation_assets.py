@@ -126,7 +126,16 @@ for name, entry in blocks.items():
     model = {'parent': 'minecraft:block/block', 'textures': {'surface': f'{NS}:block/{name}', 'side': 'minecraft:block/polished_andesite' if entry['stone'] else 'minecraft:block/stripped_oak_log', 'particle': f'{NS}:block/{name}'},
              'elements': [{'from': b[:3], 'to': b[3:], 'faces': {face: {'texture': '#surface' if face in ('north','south','up') else '#side', 'uv': [0,0,16,16]} for face in ('down','up','north','south','east','west')}} for b in entry['boxes']]}
     save(f'assets/{NS}/models/block/{name}.json', model)
-    save(f'assets/{NS}/blockstates/{name}.json', {'variants': {f'facing={direction}': {'model': f'{NS}:block/{name}', 'y': rotation} for direction,rotation in [('north',0),('east',90),('south',180),('west',270)]}})
+    turns = [('north',0),('east',90),('south',180),('west',270)]
+    if name == 'house_plaque':
+        # Hung on a wall (as in village houses) or standing on a post: geometry from home/HousePlaqueBlock.STANDING.
+        post = boxes(re.search(r'STANDING = new double\[\]\[\](\{.*?\});', (JAVA / 'home/HousePlaqueBlock.java').read_text(encoding='utf-8')).group(1))
+        standing = dict(model, elements=[{'from': b[:3], 'to': b[3:], 'faces': {face: {'texture': '#surface' if face in ('north','south') else '#side', 'uv': [0,0,16,16]} for face in ('down','up','north','south','east','west')}} for b in post])
+        save(f'assets/{NS}/models/block/{name}_standing.json', standing)
+        save(f'assets/{NS}/blockstates/{name}.json', {'variants': {f'facing={direction},mount={mount}': {'model': f'{NS}:block/{name}' + ('_standing' if mount == 'standing' else ''), 'y': rotation}
+                                                                  for mount in ('wall', 'standing') for direction,rotation in turns}})
+    else:
+        save(f'assets/{NS}/blockstates/{name}.json', {'variants': {f'facing={direction}': {'model': f'{NS}:block/{name}', 'y': rotation} for direction,rotation in turns}})
     save(f'assets/{NS}/items/{name}.json', {'model': {'type': 'minecraft:model', 'model': f'{NS}:block/{name}'}})
 tag('data/minecraft/tags/block/mineable/axe.json', [f'{NS}:{name}' for name,b in blocks.items() if not b['stone']])
 tag('data/minecraft/tags/block/mineable/pickaxe.json', [f'{NS}:{name}' for name,b in blocks.items() if b['stone']])
