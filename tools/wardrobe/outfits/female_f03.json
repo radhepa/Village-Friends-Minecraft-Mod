@@ -1,0 +1,14 @@
+{
+  "outfits": [
+    {"id": "f_net_mender", "name": "Net Mender", "top": "tf111_net_menders_shuttle_bodice", "bottom": "bf111_net_menders_cork_hemmed_skirt"},
+    {"id": "f_oyster_seller", "name": "Oyster Seller", "top": "tf112_oyster_sellers_shell_basket_bodice", "bottom": "bf112_oyster_sellers_wet_hem_skirt"},
+    {"id": "f_cockle_gatherer", "name": "Cockle Gatherer", "top": "tf113_cockle_gatherers_rake_strap_bodice", "bottom": "bf113_cockle_gatherers_tucked_petticoat"},
+    {"id": "f_ferrywoman", "name": "Ferrywoman", "top": "tf114_ferrywomans_oar_strapped_jerkin", "bottom": "bf114_ferrywomans_waxed_breeches"},
+    {"id": "f_sailor_lass", "name": "Sailor Lass", "top": "tf115_sailor_lass_striped_slop_blouse", "bottom": "bf115_sailor_lass_wide_slops"}
+  ],
+  "professions": {
+    "FISHERMAN": ["f_net_mender", "f_oyster_seller", "f_cockle_gatherer", "f_ferrywoman", "f_sailor_lass"],
+    "MERCHANT": ["f_oyster_seller"],
+    "NONE": ["f_ferrywoman"]
+  }
+}
