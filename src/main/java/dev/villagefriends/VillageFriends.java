@@ -95,16 +95,17 @@ public final class VillageFriends implements ModInitializer {
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
             if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); if (Knockouts.knockedOut(villager)) Knockouts.lieDown(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); GuardPatrols.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); VillageAlarm.unload(v); GuardPatrols.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); dev.villagefriends.deed.Deeds.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); VillageAlarm.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); dev.villagefriends.deed.Deeds.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSocieties::tick);
         ServerTickEvents.END_SERVER_TICK.register(ResidentRoutines::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardPatrols::tick);
+        ServerTickEvents.END_SERVER_TICK.register(VillageAlarm::tick);
         ServerTickEvents.END_SERVER_TICK.register(Workstations::tick);
         ServerTickEvents.END_SERVER_TICK.register(dev.villagefriends.pet.VillagerPets::tick);
         // Striking the training dummy measures the hit instead of breaking it.
@@ -141,6 +142,12 @@ public final class VillageFriends implements ModInitializer {
             }
             if (player.isShiftKeyDown()) return InteractionResult.PASS;
             if (held.is(Items.NAME_TAG) || held.getItem() instanceof SpawnEggItem) return InteractionResult.PASS;
+            // A downed companion can't talk: the window only offers to help them up or take them home.
+            if (CompanionController.state(villager).downed()) {
+                if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !validTarget(sp, villager)) return InteractionResult.PASS;
+                show(sp, villager, "companion", CompanionController.downedNarration(villager), "Help them up, or take them home.", true, null);
+                return InteractionResult.SUCCESS_SERVER;
+            }
             if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !validTarget(sp, villager)) return InteractionResult.PASS;
             if (villager.isSleeping()) { sp.sendSystemMessage(Component.literal("Your neighbor is sleeping. Visit again in the morning!"), true); return InteractionResult.SUCCESS_SERVER; }
             ensureIdentity(villager);
@@ -229,6 +236,9 @@ public final class VillageFriends implements ModInitializer {
             player.sendSystemMessage(Component.literal("Move closer to an awake villager to keep talking."), true); return;
         }
         String a = action.action();
+        if (CompanionController.state(v).downed() && !a.equals("rescue") && !a.equals("home") && !a.equals("journal") && !a.equals("about") && !a.equals("story_notes")) {
+            show(player, v, "companion", CompanionController.downedNarration(v), "Help them up, or take them home.", false, null); return;
+        }
         if (a.equals("trade")) { if (!v.isBaby() && !v.isTrading() && !CompanionController.state(v).downed()) v.mobInteract(player, InteractionHand.MAIN_HAND); return; }
         if (TOPICS.contains(a)) {
             int friendLevel = FriendshipLevels.level(state(v, player), bond(v, player));
@@ -252,8 +262,10 @@ public final class VillageFriends implements ModInitializer {
         }
         if (a.equals("ledger")) { VillageLedger.open(player, v); return; }
         if (a.equals("gift")) { giveGift(player, v); return; }
-        if (!NarrativeEngine.handle(player, v, a) && !CompanionController.handle(player, v, a))
-            show(player, v, "talk", NarrativeEngine.greeting(v, player, false), "That choice is no longer available.", false);
+        if (!NarrativeEngine.handle(player, v, a) && !CompanionController.handle(player, v, a)) {
+            if (CompanionController.state(v).downed()) show(player, v, "companion", CompanionController.downedNarration(v), "That choice is no longer available.", false, null);
+            else show(player, v, "talk", NarrativeEngine.greeting(v, player, false), "That choice is no longer available.", false);
+        }
     }
     private static void giveGift(ServerPlayer p, Villager v) {
         var old = state(v, p); long today = day(v.level());

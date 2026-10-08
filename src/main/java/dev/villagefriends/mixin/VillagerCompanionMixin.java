@@ -33,12 +33,19 @@ public abstract class VillagerCompanionMixin {
     private void villagefriends$injured(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
         if (Knockouts.injured((Villager)(Object)this)) cir.setReturnValue(InteractionResult.PASS);
     }
+    /** Someone lying hurt on the ground doesn't hum to themselves. */
+    @Inject(method = "getAmbientSound", at = @At("HEAD"), cancellable = true)
+    private void villagefriends$quietWhenHurt(CallbackInfoReturnable<net.minecraft.sounds.SoundEvent> cir) {
+        if (Knockouts.injured((Villager)(Object)this)) cir.setReturnValue(null);
+    }
     @Inject(method = "customServerAiStep", at = @At("HEAD"), cancellable = true)
     private void villagefriends$travel(ServerLevel level, CallbackInfo ci) {
         var villager = (Villager)(Object)this;
         if (Knockouts.drive(villager, level)) ci.cancel();
         else if (CompanionController.state(villager).active()) { CompanionController.drive(villager, level); ci.cancel(); }
         else if (GuardController.drive(villager, level, false)) ci.cancel();
+        // Running home after seeing a neighbor struck down.
+        else if (dev.villagefriends.VillageAlarm.drive(villager, level)) ci.cancel();
         // Children in a game (or tagging along after a player) are moved by the playground.
         else if (dev.villagefriends.play.Playground.busy(villager)) ci.cancel();
         else if (dev.villagefriends.pet.VillagerPets.drive(villager, level)) ci.cancel();

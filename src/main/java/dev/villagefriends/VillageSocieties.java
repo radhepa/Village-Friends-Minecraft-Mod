@@ -224,7 +224,7 @@ public final class VillageSocieties {
         if (player.isSpectator()) return;
         var acquaintances = target(player).getAttachedOrCreate(ACQUAINTANCES);
         for (var v : CompanionController.loaded) {
-            if (v.level() != player.level() || v.isSleeping() || v.distanceToSqr(player) > 36 || !v.isAlive()) continue;
+            if (v.level() != player.level() || v.isSleeping() || Knockouts.injured(v) || v.distanceToSqr(player) > 36 || !v.isAlive()) continue;
             String key = player.getUUID() + "|" + id(v); long today = day(v.level());
             if (nudged.getOrDefault(key, -1L) == today) continue;
             int level = acquaintances.getOrDefault(id(v), -1);
@@ -238,7 +238,7 @@ public final class VillageSocieties {
     }
     /** Shows an emote above a resident to everyone nearby. */
     public static void emote(Villager v, Emote emote, int delay) {
-        if (!(v.level() instanceof ServerLevel)) return;
+        if (!(v.level() instanceof ServerLevel) || Knockouts.injured(v)) return;
         var payload = new EmotePayload(v.getId(), emote.name(), delay);
         for (var player : PlayerLookup.tracking(v))
             if (player.distanceToSqr(v) < 48 * 48 && ServerPlayNetworking.canSend(player, EmotePayload.TYPE)) ServerPlayNetworking.send(player, payload);

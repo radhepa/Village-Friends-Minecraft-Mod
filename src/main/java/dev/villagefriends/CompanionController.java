@@ -66,10 +66,14 @@ public final class CompanionController {
         boolean available = !v.isBaby() && !state(v).active() && VillageFriends.state(v, p).points() >= 15 && bond(v, p).trust() >= 30 && v.level().dimension().equals(Level.OVERWORLD);
         return List.of(c("walk", "Take a walk", available), c("picnic", "Share a picnic", available), c("explore", "Explore together", available), c("gathering", "Invite the neighbors", available));
     }
+    /** What the window shows for a downed companion: narration, not speech (a line starting with '*' types out silently). */
+    public static String downedNarration(Villager v) {
+        return "*" + name(v) + " lies hurt on the ground, too weak to speak. Help them up, or take them home to recover.*";
+    }
     public static boolean handle(ServerPlayer p, Villager v, String action) {
         var s = state(v); boolean owns = s.owner().equals(p.getUUID().toString());
         switch (action) {
-            case "companion" -> show(p, v, "companion", s.downed() ? "I need a hand getting up." : s.active() ? "I'm " + s.mode() + " here with my traveling companion. Hold equipment in your main hand if you'd like me to use it."
+            case "companion" -> show(p, v, "companion", s.downed() ? downedNarration(v) : s.active() ? "I'm " + s.mode() + " here with my traveling companion. Hold equipment in your main hand if you'd like me to use it."
                     : eligible(v, p) ? "I'd like to see the world with you. We'll watch out for each other." : "Let's get to know each other first. Become friends, help with my story, and build comfortable trust. Adult residents can travel in the Overworld.", "One companion per player.", false);
             case "together" -> show(p, v, "together", "We could take a walk, share a picnic, or explore somewhere new. Bring bread, an apple, or a cookie for a picnic. For a gathering, invite nearby neighbors with bread.", "Close the window to move, then talk again to finish.", false);
             case "recruit" -> {
@@ -230,6 +234,7 @@ public final class CompanionController {
         var s = state(v); v.setHealth(1); v.clearFire(); v.getNavigation().stop();
         state(v, s.downed(v.level().getGameTime() + 1200));
         Knockouts.lieDown(v);
+        Knockouts.shakeOff(v, (ServerLevel) v.level());
         var p = ((ServerLevel)v.level()).getServer().getPlayerList().getPlayer(UUID.fromString(s.owner()));
         if (p != null) {
             saveBond(v, p, bond(v, p).remember(day(v.level()), "I was badly hurt on our outing. You could help me recover."));
@@ -248,6 +253,7 @@ public final class CompanionController {
         if (s.downed()) {
             v.getNavigation().stop();
             if (!Knockouts.injured(v) || v.getPose() != Pose.SLEEPING) Knockouts.lieDown(v);
+            if (v.tickCount % 10 == 0) Knockouts.shakeOff(v, level);
             if (level.getGameTime() >= s.until()) returnHome(v, p, false);
             return;
         }

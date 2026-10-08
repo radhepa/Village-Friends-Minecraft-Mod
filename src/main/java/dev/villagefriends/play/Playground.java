@@ -82,6 +82,11 @@ public final class Playground {
         kids.remove(v.getUUID());
     }
 
+    /** Called away mid-game (an alarm): they leave their game at once; it carries on without them, or ends. */
+    public static void excuse(Villager v) {
+        var s = sessionOf.get(v.getUUID());
+        if (s != null) leave(s, v.getUUID(), v, s.level.getGameTime());
+    }
     /** In a game or tagging along after a player: the playground moves them, not their brain. */
     public static boolean busy(Villager v) { return sessionOf.containsKey(v.getUUID()); }
     /** "Playing tag", "Hiding"... or null when not in a game. */
@@ -238,7 +243,7 @@ public final class Playground {
     }
     /** A monster close by or a raid on the village: games stop and everyone runs home. */
     private static boolean danger(Session s) {
-        if (s.level.isRaided(s.center)) return true;
+        if (s.level.isRaided(s.center) || dev.villagefriends.VillageAlarm.raised(s.level, s.center)) return true;
         var box = new net.minecraft.world.phys.AABB(s.center).inflate(16, 6, 16);
         return !s.level.getEntitiesOfClass(Mob.class, box, m -> m instanceof Enemy && m.isAlive()).isEmpty();
     }

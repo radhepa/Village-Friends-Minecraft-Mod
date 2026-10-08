@@ -99,8 +99,11 @@ public final class FriendshipScreen extends Screen {
     private void restartTyping() { shown = 0; typeBudget = 0; typePause = 0; sinceBlip = 0; popPending = true; }
     private boolean typing() { return shown < typeFlat.length(); }
     private boolean document() { return data.tab().equals("journal"); }
+    /** A line in *asterisks* is narration (a downed companion can't speak): shown whole, no blips, no gestures. */
+    private boolean narration() { var d = data.dialogue(); return d.length() > 1 && d.startsWith("*") && d.endsWith("*"); }
+    private String spoken() { return narration() ? data.dialogue().substring(1, data.dialogue().length() - 1) : data.dialogue(); }
     /** True while the resident's line is still typing out: they gesture as they speak, then listen. */
-    public boolean speaking() { return !document() && (typing() || typeFlat.isEmpty()); }
+    public boolean speaking() { return !document() && !narration() && (typing() || typeFlat.isEmpty()); }
     private void finishLine() { if (typing()) { shown = typeFlat.length(); playUi(POP, 1.25F, .35F); } }
     private void playUi(SoundEvent sound, float pitch, float volume) {
         if (minecraft != null) minecraft.getSoundManager().play(SimpleSoundInstance.forUI(sound, pitch, volume));
@@ -109,19 +112,19 @@ public final class FriendshipScreen extends Screen {
         String key = data.dialogue() + '|' + wrapWidth;
         if (key.equals(typeKey)) return;
         typeKey = key;
-        typeLines = font.splitIgnoringLanguage(Component.literal(data.dialogue()), wrapWidth).stream().map(t -> t.getString()).toList();
+        typeLines = font.splitIgnoringLanguage(Component.literal(spoken()), wrapWidth).stream().map(t -> t.getString()).toList();
         lineStarts = new int[typeLines.size()];
         int total = 0;
         for (int i = 0; i < lineStarts.length; i++) { lineStarts[i] = total; total += typeLines.get(i).length(); }
         typeFlat = String.join("", typeLines);
         // Journal pages appear at once; spoken lines type out.
-        shown = document() ? total : Math.min(shown, total);
+        shown = document() || narration() ? total : Math.min(shown, total);
     }
     private void advanceTyping() {
         long now = System.nanoTime();
         float dt = lastFrameNanos == 0 ? 0F : Math.min(0.1F, (now - lastFrameNanos) / 1.0E9F);
         lastFrameNanos = now;
-        if (popPending) { popPending = false; if (!document()) playUi(POP, 0.95F + (float) Math.random() * 0.15F, 0.5F); }
+        if (popPending) { popPending = false; if (!document() && !narration()) playUi(POP, 0.95F + (float) Math.random() * 0.15F, 0.5F); }
         if (!typing()) return;
         typeBudget += dt;
         float cost = 1F / CHARS_PER_SECOND;

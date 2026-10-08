@@ -40,8 +40,10 @@ public final class EmoteBubbles {
     public static void show(int entityId, Emote emote, int delay) {
         if (emote == null) return;
         if (delay > 0) { PENDING.add(new Pending(entityId, emote, clock + delay, clock)); return; }
-        ACTIVE.put(entityId, new Bubble(emote, clock, length(emote)));
         var level = Minecraft.getInstance().level;
+        // Someone lying hurt on the ground says nothing, not even in bubbles.
+        if (level != null && dev.villagefriends.Knockouts.injured(level.getEntity(entityId))) return;
+        ACTIVE.put(entityId, new Bubble(emote, clock, length(emote)));
         var camera = Minecraft.getInstance().getCameraEntity();
         if (level != null && camera != null && level.getEntity(entityId) instanceof Villager v && v.distanceToSqr(camera) < 24 * 24)
             level.playLocalSound(v.getX(), v.getEyeY() + .6, v.getZ(), POP, SoundSource.NEUTRAL, .35F, pitch(emote), false);
@@ -69,7 +71,7 @@ public final class EmoteBubbles {
         if (clock % 20 == 0) {
             var camera = client.getCameraEntity();
             for (var entity : client.level.entitiesForRendering()) {
-                if (!(entity instanceof Villager v) || !v.isSleeping() || camera == null || v.distanceToSqr(camera) > 20 * 20) continue;
+                if (!(entity instanceof Villager v) || !v.isSleeping() || dev.villagefriends.Knockouts.injured(v) || camera == null || v.distanceToSqr(camera) > 20 * 20) continue;
                 int next = NEXT_SNORE.getOrDefault(v.getId(), 0);
                 if (clock >= next) { ambient(v, Emote.SLEEP); NEXT_SNORE.put(v.getId(), clock + 120 + v.getRandom().nextInt(100)); }
             }

@@ -64,17 +64,36 @@ public final class Knockouts {
 
     // -- damage ------------------------------------------------------------------------------------
 
-    /** Nothing hurts someone already lying unconscious, except the void and /kill. */
+    /** Nothing hurts someone already lying hurt on the ground (knocked out or a downed companion), except the void and /kill. */
     public static boolean allowDamage(LivingEntity entity, DamageSource source) {
-        return !(entity instanceof Villager v) || !knockedOut(v) || source.is(DamageTypeTags.BYPASSES_INVULNERABILITY);
+        return !(entity instanceof Villager v) || !(knockedOut(v) || injured(v)) || source.is(DamageTypeTags.BYPASSES_INVULNERABILITY);
+    }
+    /**
+     * Whoever was after someone now lying on the ground loses interest: goal-based mobs drop them as a target,
+     * brain-based ones forget them, and angry neutral mobs calm down. They stay ignored until they're back up.
+     */
+    public static void shakeOff(Villager v, ServerLevel level) {
+        for (var m : level.getEntitiesOfClass(net.minecraft.world.entity.Mob.class, v.getBoundingBox().inflate(48, 16, 48), m -> m != v)) {
+            if (m.getTargetUnchecked() == v) { m.setTarget(null); m.getNavigation().stop(); }
+            var brain = m.getBrain();
+            if (brain.checkMemory(MemoryModuleType.ATTACK_TARGET, net.minecraft.world.entity.ai.memory.MemoryStatus.REGISTERED)
+                    && brain.getMemory(MemoryModuleType.ATTACK_TARGET).filter(t -> t == v).isPresent()) brain.eraseMemory(MemoryModuleType.ATTACK_TARGET);
+            if (brain.checkMemory(MemoryModuleType.ANGRY_AT, net.minecraft.world.entity.ai.memory.MemoryStatus.REGISTERED)
+                    && brain.getMemory(MemoryModuleType.ANGRY_AT).filter(id -> id.equals(v.getUUID())).isPresent()) brain.eraseMemory(MemoryModuleType.ANGRY_AT);
+            if (m instanceof net.minecraft.world.entity.NeutralMob angry && angry.getPersistentAngerTarget() != null
+                    && v.getUUID().equals(angry.getPersistentAngerTarget().getUUID())) angry.stopBeingAngry();
+        }
     }
     public static boolean allowDeath(LivingEntity entity, DamageSource source) {
         if (!(entity instanceof Villager v) || !(v.level() instanceof ServerLevel level)) return true;
         if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) return true;
-        var by = GuardController.attacker(source) instanceof ServerPlayer p && !p.isCreative() && !p.isSpectator() ? p : null;
+        var player = GuardController.attacker(source) instanceof ServerPlayer p && !p.isSpectator() ? p : null;
+        var by = player != null && !player.isCreative() ? player : null;
         boolean fresh = !knockedOut(v);
         knockOut(v, level, by == null ? "" : by.getUUID().toString());
         if (by != null && fresh) dev.villagefriends.deed.Deeds.knockedOut(by, v);
+        // The neighbors who saw it run for home (whatever game mode the player is in).
+        if (player != null && fresh) VillageAlarm.raise(v, level, player);
         return false;
     }
     public static void knockOut(Villager v, ServerLevel level) { knockOut(v, level, ""); }
@@ -85,6 +104,7 @@ public final class Knockouts {
         GuardController.unload(v);
         if (!knockedOut(v)) target(v).setAttached(KNOCKOUT, KnockoutState.knockedOut(level.getGameTime(), by));
         lieDown(v);
+        shakeOff(v, level);
         patients.add(v);
         level.playSound(null, v.blockPosition(), SoundEvents.VILLAGER_HURT, SoundSource.NEUTRAL, 1F, .8F);
         var line = Component.literal(name(v) + " was knocked out! Revive them with Smelling Salts or a Revival Tonic within a day of play ("
@@ -110,6 +130,7 @@ public final class Knockouts {
         }
         v.getNavigation().stop(); v.clearFire();
         if (v.getHealth() > 1) v.setHealth(1);
+        if (v.tickCount % 10 == 0) shakeOff(v, level);
         return true;
     }
     /** "Unconscious · 23h 59m left", for the conversation status line and the Ledger. */

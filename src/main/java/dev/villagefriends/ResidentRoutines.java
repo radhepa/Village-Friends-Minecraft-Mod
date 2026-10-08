@@ -112,7 +112,7 @@ public final class ResidentRoutines {
         routine.villagefriends$duty(duty);
         // Companions on an outing, guards in a fight and trading residents follow other rules.
         if (v.isNoAi() || v.isPassenger() && !Seat.seated(v) || CompanionController.state(v).active() || CompanionController.hasActivity(v)
-                || GuardController.fighting(v) || v.isTrading()) { routine.villagefriends$routine(null, true); return; }
+                || GuardController.fighting(v) || VillageAlarm.fleeing(v) || v.isTrading()) { routine.villagefriends$routine(null, true); return; }
         var activity = Taverns.activity(v, activity(v, level, plan.block()));
         routine.villagefriends$routine(activity, plan.block().sleep);
         var current = brain.getActiveNonCoreActivity().orElse(Activity.IDLE);

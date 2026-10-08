@@ -52,11 +52,15 @@ public final class GuardController {
         final Map<UUID, Long> anger = new HashMap<>();
         Vec3 origin, lastPosition;
         LivingEntity foe;
-        long nextAttack, returnUntil, lastProgress, retryAfter;
+        long nextAttack, returnUntil, lastProgress, retryAfter, calledUntil;
         boolean returning, engaged;
+        /** Whoever this guard was called out against (a player or a mob that hurt a resident on village grounds). */
+        UUID called;
         Combat(Villager v, long now) { origin = lastPosition = v.position(); lastProgress = now; }
     }
 
+    /** On village grounds, guards this far from the resident who was hurt are called out (and chase this far from where they stood). */
+    public static final int CALL_REACH = 64, CALL_LEASH = 80;
     public static boolean isGuard(Villager v) {
         return !v.isBaby() && v.getVillagerData().profession().unwrapKey()
                 .map(k -> k.equals(VillageProfessions.key("knight")) || k.equals(VillageProfessions.key("archer"))).orElse(false);
@@ -133,8 +137,12 @@ public final class GuardController {
         if (incident == null || incident.source() != source) return;
         Entity attacker = attacker(source);
         long now = level.getGameTime();
+        var village = VillageAlarm.villageAt(level, victim.blockPosition());
         if (attacker instanceof ServerPlayer p) {
-            if (incident.forgiven() || p.isCreative() || p.isSpectator()) return;
+            if (p.isCreative() || p.isSpectator()) return;
+            // On village grounds no one gets the benefit of the doubt: every guard comes for them at once.
+            if (village != null) { call(level, victim, p, village); return; }
+            if (incident.forgiven()) return;
             for (Villager guard : level.getEntitiesOfClass(Villager.class, victim.getBoundingBox().inflate(16),
                     v -> eligible(v) && v.distanceToSqr(victim) <= 256)) {
                 initializeEquipment(guard);
@@ -145,7 +153,35 @@ public final class GuardController {
             }
         } else if (attacker instanceof Mob m && !(m instanceof Villager) && !(m instanceof IronGolem)) {
             recent.put(m.getUUID(), new RecentAttack(level, now + GuardPolicy.RECENT_ATTACK_TICKS, victim.getUUID()));
+            if (village != null) call(level, victim, m, village);
         }
+    }
+    /**
+     * Someone hurt a resident on village grounds: every guard in the village (awake, or asleep close by) drops
+     * what they're doing and goes straight for them, without waiting to spot them on a scan.
+     */
+    private static void call(ServerLevel level, Villager victim, LivingEntity foe, VillageRecord village) {
+        long now = level.getGameTime();
+        for (Villager guard : level.getEntitiesOfClass(Villager.class, victim.getBoundingBox().inflate(CALL_REACH, 24, CALL_REACH),
+                g -> eligible(g) && village.contains(g.blockPosition()) && (!g.isSleeping() || g.distanceToSqr(victim) <= 24 * 24))) {
+            initializeEquipment(guard);
+            if (dev.villagefriends.tavern.Seat.seated(guard)) dev.villagefriends.tavern.Taverns.leave(guard);
+            var c = fights.computeIfAbsent(guard.getUUID(), id -> new Combat(guard, now));
+            if (c.foe == null || c.returning) { c.returning = false; c.engaged = false; c.origin = guard.position(); }
+            if (foe instanceof ServerPlayer p) c.anger.put(p.getUUID(), now + GuardPolicy.ANGER_TICKS);
+            c.called = foe.getUUID(); c.calledUntil = now + GuardPolicy.ANGER_TICKS; c.retryAfter = 0;
+            if (c.foe == null || priority(foe) < priority(c.foe)) {
+                // Off at once, not on the next scan.
+                c.foe = foe; guard.stopSleeping(); guard.getNavigation().moveTo(foe, speed(c, now));
+            }
+        }
+    }
+    private static boolean calledOut(Combat c, long now) { return c.called != null && now < c.calledUntil; }
+    private static double leash(Combat c, long now) { return calledOut(c, now) ? CALL_LEASH * CALL_LEASH : 1024; }
+    /** The foe this guard was called out against, while they're still fair game. */
+    private static LivingEntity called(Villager v, Combat c, ServerLevel level) {
+        if (!calledOut(c, level.getGameTime())) return null;
+        return level.getEntity(c.called) instanceof LivingEntity e && valid(v, c, e, level) ? e : null;
     }
     /** The resident a monster attacked recently, or null: killing it saved them. */
     public static UUID recentVictim(Mob m) {
@@ -163,7 +199,7 @@ public final class GuardController {
                 && ((ServerLevel)v.level()).getServer().getPlayerList().getPlayer(p.getUUID()) == p;
     }
     private static boolean valid(Villager v, Combat c, LivingEntity foe, ServerLevel level) {
-        if (!foe.isAlive() || foe.isRemoved() || foe.level() != level || foe.position().distanceToSqr(c.origin) > 1024) return false;
+        if (!foe.isAlive() || foe.isRemoved() || foe.level() != level || foe.position().distanceToSqr(c.origin) > leash(c, level.getGameTime())) return false;
         if (foe instanceof ServerPlayer p) return playerValid(p, v) && angryAt(v, p);
         return foe instanceof Mob m && threat(m, level);
     }
@@ -180,6 +216,9 @@ public final class GuardController {
             if (p != null && v.distanceToSqr(p) <= 256 && valid(v, c, p, level)
                     && (best == null || priority(best) > 0 || v.distanceToSqr(p) < v.distanceToSqr(best))) best = p;
         }
+        // Called out: they go for that foe from anywhere in the village, seen or not.
+        var called = called(v, c, level);
+        if (called != null && (best == null || priority(called) < priority(best))) best = called;
         if (best != null && priority(best) == 0) return best;
         for (Mob m : level.getEntitiesOfClass(Mob.class, v.getBoundingBox().inflate(16),
                 m -> v.distanceToSqr(m) <= 256 && threat(m, level) && v.hasLineOfSight(m))) {
@@ -206,7 +245,7 @@ public final class GuardController {
             var p = level.getServer().getPlayerList().getPlayer(e.getKey());
             return !GuardPolicy.angerActive(now, e.getValue()) || p == null || !playerValid(p, v);
         });
-        if (c.engaged && v.position().distanceToSqr(c.origin) > 1024) beginReturn(v, c, now);
+        if (c.engaged && v.position().distanceToSqr(c.origin) > leash(c, now)) beginReturn(v, c, now);
         if (c.returning) {
             if (stationary || v.position().distanceToSqr(c.origin) <= 4 || now >= c.returnUntil) {
                 c.returning = false; c.engaged = false; v.getNavigation().stop();
@@ -239,7 +278,7 @@ public final class GuardController {
         if (archer(v)) ranged(v, c, level, stationary);
         else {
             if (stationary) v.getNavigation().stop();
-            else if (now % 10 == 0) v.getNavigation().moveTo(c.foe, .8);
+            else if (now % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, now));
             if (now >= c.nextAttack && v.hasLineOfSight(c.foe) && v.isWithinMeleeAttackRange(c.foe)) {
                 v.swingForAttack(InteractionHand.MAIN_HAND); c.nextAttack = now + 20;
                 if (v.doHurtTarget(level, c.foe)) {
@@ -250,6 +289,8 @@ public final class GuardController {
         }
         return true;
     }
+    /** Called out, they run; otherwise a brisk walk. */
+    private static double speed(Combat c, long now) { return calledOut(c, now) ? 1.0 : .8; }
     private static void beginReturn(Villager v, Combat c, long now) {
         if (c.returning) return;
         c.foe = null; c.returning = true; c.returnUntil = now + 200;
@@ -266,7 +307,7 @@ public final class GuardController {
                 if (level.hasChunkAt(net.minecraft.core.BlockPos.containing(away))) v.getNavigation().moveTo(away.x, away.y, away.z, .8);
             }
         } else if (distance > 144 || !v.hasLineOfSight(c.foe)) {
-            if (level.getGameTime() % 10 == 0) v.getNavigation().moveTo(c.foe, .8);
+            if (level.getGameTime() % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, level.getGameTime()));
         } else v.getNavigation().stop();
         if (distance > 256 || !v.hasLineOfSight(c.foe) || !safeShot(v, c.foe, level)) { v.stopUsingItem(); return; }
         if (level.getGameTime() < c.nextAttack) return;

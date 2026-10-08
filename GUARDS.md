@@ -4,7 +4,9 @@ Adult Village Friends knights and archers defend villagers automatically. Knight
 
 Guards scan within 16 blocks twice per second. They attack zombies, husks, drowned, zombie villagers, pillagers, vindicators, evokers, ravagers, illusioners and zoglins. Other mobs qualify while targeting villagers, or for 30 seconds after damaging one. Creepers are always excluded. An idle skeleton or spider is not a target simply because it is hostile to players. A data pack can replace `data/villagefriends/tags/entity_type/villager_predators.json`; the creeper exclusion still applies.
 
-An unforgiven player hit on any villager alerts all eligible guards within 16 blocks. This includes player-owned arrows. Forgiveness uses the victim's effective **Friend** tier or above, including the shared-experience gate and migrated friendships. Friendship with the responding guards does not excuse harming a different resident. Forgiven hits still cause damage and the existing loss of trust. Creative and Spectator players are not combat targets.
+**On village grounds there is no waiting.** When a player or a mob hurts a resident inside a village, every guard of that village within 64 blocks (awake, or asleep within 24 blocks) is called out at once: they get up from the tavern table or out of bed and run straight at the attacker, seen or not, and chase it up to 80 blocks from where they stood. On village grounds friendship excuses nothing.
+
+Out in the wild, an unforgiven player hit on any villager alerts all eligible guards within 16 blocks. This includes player-owned arrows. Forgiveness uses the victim's effective **Friend** tier or above, including the shared-experience gate and migrated friendships. Friendship with the responding guards does not excuse harming a different resident. Forgiven hits still cause damage and the existing loss of trust. Creative and Spectator players are not combat targets.
 
 Each guard remembers each aggressor for 60 seconds of server ticks; additional unforgiven hits refresh that player's timer. Combat stays within 32 blocks of the guard's starting point. Guards return there afterward using normal pathfinding. They do not load distant chunks, teleport, build bridges or clear terrain. Unreachable fights eventually give way to a return attempt; targets and anger clear when the guard unloads or the server restarts.
 
@@ -45,13 +47,17 @@ Guards on the night watch (about half of them, from 18:00 until 08:00) walk a lo
 
 The squad leader walks eight checkpoints in a ring 11–28 blocks around the bell, skipping roofs, water and drops; the others follow a pace behind, side by side. The leader waits whenever someone falls more than ten blocks behind, and moves on from a checkpoint it can't reach after 30 seconds. Patrols use the villager brain's own walking, so doors still open. A guard who spots a threat fights it with the rules above and rejoins the squad afterward.
 
+## When a resident is struck down
+
+When a player knocks out a resident, the neighbors who are about panic: everyone awake in the same village (or within 40 blocks out in the wild) drops what they're doing, leaves the tavern or their game, and runs home to their own house (or their bed, or simply away from the player if they have no home) at vanilla's panic speed. They stay indoors for a minute, then get on with their day. Guards don't run; they are called out (see above). The alarm happens in any game mode, but Creative and Spectator players can't be attacked.
+
 ## Raid response
 
 During a raid at or near their village, guards don't hide. Their routine becomes **Defending the village**: sleeping guards wake, the raid alarm, the bell's call to hide and panic are ignored, and they muster in a ring around the bell. Once the first wave arrives they head for the nearest raider within 48 blocks of the bell, and normal guard combat takes over when one comes into range. When the raid ends (victory, defeat or stopped) they return to their routine. Recruited guards stay with their companion; knocked-out guards stay down.
 
 ## Knockouts
 
-No resident dies from an ordinary fatal blow. They are **knocked out** instead: they lie on the ground hurt, eyes closed, with their equipment, memories and friendships intact. Nothing can hurt them and mobs stop targeting them. Zombies can't convert them.
+No resident dies from an ordinary fatal blow. They are **knocked out** instead: they lie on the ground hurt, eyes closed, with their equipment, memories and friendships intact. Nothing can hurt them, and every mob that was after them loses interest at once and ignores them until they are back on their feet (revived by a player or the apothecary). Zombies can't convert them. They don't speak: no hums, no speech bubbles, no conversation.
 
 They must be revived within **a day of play: 24 real hours of game ticks**. The clock counts only while the world is running; it stops when nobody is playing, and if their chunk is unloaded when time runs out it catches up when the chunk loads. Right-click a knocked-out resident to check how long they have left. To treat them, right-click while holding:
 
@@ -63,10 +69,10 @@ They must be revived within **a day of play: 24 real hours of game ticks**. The 
 
 One item is used per treatment (not in Creative). Reviving someone earns their trust and a memory. The village apothecary also helps: an awake apothecary within 32 blocks walks over to a knocked-out neighbor and dresses their wounds once, adding 12 hours. If nobody revives them in time, they **die permanently**, and nearby players and anyone who knew them are told. The void and `/kill` still kill outright.
 
-Recruited companions keep their own gentler rule (downed for a minute, then they recover at home), but they now lie on the ground the same way instead of crouching.
+Recruited companions keep their own gentler rule (downed for a minute, then they recover at home), but they lie on the ground the same way, mobs ignore them the same way, and they don't talk either: right-clicking one shows a silent note with **Help them up** and **Take them home**.
 
 Command Desk controls, shields and additional combat jobs remain future work.
 
 ## Development checks
 
-Run `gradlew.bat build` for packaging/unit checks, and `gradlew.bat runClientGameTest -PguardsOnly` for the focused native gameplay fixture. `-Ptests=KnockoutGameTest` covers knockouts, treatment, permanent death, the apothecary, downed companions, night squads and the raid muster, with screenshots. Use `-PcompanionsOnly` for the existing friendship and companion regressions and `-PfoundationOnly` for profession/trade checks. The default gameplay run also includes the guard test. Test worlds and screenshots are development artifacts; building does not install the mod into the player's launcher profile.
+Run `gradlew.bat build` for packaging/unit checks, and `gradlew.bat runClientGameTest -PguardsOnly` for the focused native gameplay fixture. `-Ptests=VillageAlarmGameTest` covers the panic, the village call-out, mobs leaving the downed alone and the silent downed companion. `-Ptests=KnockoutGameTest` covers knockouts, treatment, permanent death, the apothecary, downed companions, night squads and the raid muster, with screenshots. Use `-PcompanionsOnly` for the existing friendship and companion regressions and `-PfoundationOnly` for profession/trade checks. The default gameplay run also includes the guard test. Test worlds and screenshots are development artifacts; building does not install the mod into the player's launcher profile.

@@ -1,3 +1,11 @@
+# Village Friends 2.25.0 — The village raises the alarm
+
+- **Neighbors panic.** When a player knocks out a resident, everyone awake in the village drops what they're doing (work, the tavern, a game of tag), runs home to their own house and stays indoors for a minute. Residents with no home run away from the player instead.
+- **Guards come at once.** On village grounds, a player or a mob hurting a resident calls out every guard of that village within 64 blocks: they leave the tavern table or their bed and run straight at the attacker, seen or not, and chase up to 80 blocks. Before, only guards within 16 blocks that also had the attacker within 16 blocks reacted, and friends of the victim were let off; on village grounds friendship no longer excuses it.
+- **Mobs leave the downed alone.** A knocked-out resident, guard or downed companion is dropped as a target the moment they go down, brain-driven and angry neutral mobs forget them too, and nothing can hurt a downed companion either. They are ignored until a player or the apothecary gets them back up.
+- **The downed don't talk.** No idle hums, no speech bubbles, and a downed companion's window is a silent note ("lies hurt on the ground, too weak to speak") with only Help them up and Take them home.
+- Add `VillageAlarmGameTest` (`-Ptests=VillageAlarmGameTest`). See [GUARDS.md](GUARDS.md).
+
 # Village Friends 2.24.0 — Homes and beds, and residents who remember what you did
 
 - **Every village knows its houses.** Houses are read from the village's own buildings in all five styles (plains, desert, savanna, snowy and taiga), with their rooms, beds, doors and workstations, and checked against the real blocks once they're loaded. A bed someone breaks or adds is noticed; nothing is rescanned on a timer and nothing loads a chunk.
