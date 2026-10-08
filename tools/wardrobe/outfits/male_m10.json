@@ -1,0 +1,16 @@
+{
+  "outfits": [
+    {"id": "m_daily_rolled_shirt", "name": "Field Hand", "top": "t346_rolled_sleeve_linen_shirt", "bottom": "b346_plain_wool_trousers"},
+    {"id": "m_daily_summer_tunic", "name": "Summer Villager", "top": "t347_short_sleeved_summer_tunic", "bottom": "b347_summer_knee_breeches"},
+    {"id": "m_daily_patched_coat", "name": "Make-Do Villager", "top": "t348_patched_elbow_wool_coat", "bottom": "b348_patched_knee_trousers"},
+    {"id": "m_daily_knit_waistcoat", "name": "Knitted Shepherd", "top": "t349_knitted_wool_waistcoat", "bottom": "b349_ribbed_wool_hose"},
+    {"id": "m_daily_quilted_vest", "name": "Kitchen Hand", "top": "t350_quilted_sleeveless_vest", "bottom": "b350_quilted_knee_breeches"}
+  ],
+  "professions": {
+    "NONE": ["m_daily_rolled_shirt", "m_daily_summer_tunic", "m_daily_patched_coat", "m_daily_knit_waistcoat", "m_daily_quilted_vest"],
+    "FARMER": ["m_daily_rolled_shirt"],
+    "NITWIT": ["m_daily_patched_coat"],
+    "SHEPHERD": ["m_daily_knit_waistcoat"],
+    "COOK": ["m_daily_quilted_vest"]
+  }
+}
