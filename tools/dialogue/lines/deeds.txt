@@ -1,0 +1,958 @@
+# Deeds: what residents say the first time they talk to you after learning what you did in their village.
+# Kind pools: deed.<kind>.seen (they watched it), deed.<kind>.heard (someone told them), deed.<kind>.self (it was done
+# to them or for them), deed.<kind>.family (it was done to or for their partner or family).
+# Good kinds: raid_defended, raid_won, revived, bandaged, saved_from_monster, rescued_companion, notice_answered,
+# birthday_gift, pet_kindness. Bad kinds: hit_resident, knocked_out_resident, killed_resident, hit_golem, killed_golem,
+# hurt_pet, killed_pet, broke_home, stole.
+# Personality pools: deed.<good|bad>.<seen|heard>.<personality>, generic enough for any deed of that sort.
+# Children: baby.deed.<good|bad>.<seen|heard|family>, baby.deed.<kind>.self for the kinds a child lives through.
+# Apologies: deed.apology.accept, deed.apology.cool (and .child of each), deed.apology.remembered.
+# Kept memories for the Journal: deed.kept.<kind>.self and .family (revived, saved_from_monster, rescued_companion).
+# The "Unwelcome" title (standing below Newcomer): greet.unwelcome, greet.unwelcome.<personality>, baby.greet.unwelcome,
+# chat.unwelcome, notice.unwelcome.
+# Placeholders: {victim} the involved resident's first name (for pet deeds, the pet's owner), {kin} the speaker's family
+# word for them in lower case ("sister", "husband"), {teller} who told the speaker, {house} a house name ("The Ashford
+# House"). Raids and golems involve no resident, so their pools never use {victim}. A line whose placeholder can't be
+# filled is skipped, so every pool keeps plenty of lines that need nothing but {player}, {name} and {village}.
+# Lines never describe more than the placeholders say: one line has to fit one deed or several merged together.
+
+## deed.raid_defended.seen
+I watched you from behind the well when the raiders came. You didn't back down once.
+I saw you holding the line by the houses. I've never seen anyone move like that.
+You were out there in the thick of it while the rest of us hid. I saw every swing.
+I saw the raiders fall back from you. I'll remember that sight for a long time.
+I peeked through the shutters during the raid. You were the only thing standing between them and us.
+
+## deed.raid_defended.heard
+Word is you stood up to the raiders when they came. Thank you, {player}.
+{teller} says you fought off the raiders practically by yourself. Is that true?
+Everyone's saying you were right in the middle of it when the raiders came through.
+I was hiding in the cellar during the raid, but I heard all about you afterwards.
+They tell me you kept the raiders away from the houses. That's a debt the whole village owes you.
+
+## deed.raid_won.seen
+I saw the last raider fall, and I saw who was standing at the end of it. You!
+I watched the whole thing. When the raid broke, I cried and cheered at the same time.
+I saw you win it. The bell rang, the raiders were gone, and there you were.
+I was there when it ended. I've never heard {village} so loud, or so happy.
+I saw you send the whole raid packing. I still can't quite believe it.
+
+## deed.raid_won.heard
+You're the one who beat the raid! {teller} hasn't stopped talking about it.
+The whole village is saying you won the day when the raiders came. Thank you.
+I heard the raid's over and it's thanks to you. {village} is still standing because of you.
+News travels fast here. Raid beaten, village safe, and your name on everyone's lips.
+They say you saw off the whole raid. I'd shake your hand, but I'd like to hug you instead.
+
+## deed.revived.seen
+I saw you kneel down beside {victim} and bring them back. I was shaking the whole time.
+You're the one who brought {victim} round! I saw it with my own eyes.
+I watched you work on {victim} when everyone else had frozen. Thank you.
+I saw the whole thing. One moment I thought we'd lost them, and then you were there.
+I was right there when you brought them back. I didn't know what to do. You did.
+
+## deed.revived.heard
+You're the one who carried {victim} back from the brink! {teller} told me everything.
+Is it true you brought {victim} round when nobody else could?
+I heard what you did for {victim}. The whole village has heard, I think.
+{teller} says you kept someone breathing when it mattered most. Thank you, {player}.
+Word is you saved a life here. I just wanted you to know people noticed.
+
+## deed.revived.self
+You're the one who brought me back. I don't remember much, only your face. Thank you.
+They tell me I was very nearly gone, and that you wouldn't let me go. I owe you everything.
+I woke up and the first thing I saw was you. I'll never forget that.
+Thank you for not giving up on me. I mean it, {player}. Every day from now on is partly yours.
+
+## deed.revived.family
+You saved my {kin} {victim}. I don't have the words. I just don't.
+You're the one who brought {victim} back to us. Our door is always open to you.
+My {kin} is alive because of you. Please, come and eat with us some time.
+Our family nearly lost someone, and you wouldn't let it happen. Thank you, {player}.
+
+## deed.bandaged.seen
+I saw you patch up {victim}. Gentle hands, for an adventurer.
+I watched you wrap that bandage. You've done that before, haven't you?
+I saw you stop to tend someone who was hurt. Not everyone stops.
+You knelt right down in the dirt to see to {victim}. I saw. That was kind.
+I saw you bandage someone up as calm as anything. Thank you for that.
+
+## deed.bandaged.heard
+{teller} says you bandaged {victim} up when they were hurt. Thank you.
+I heard you stopped to tend somebody who'd been hurt. That's the right sort of person.
+Word is you've been patching people up around here. Our apothecary will be jealous.
+Somebody told me you bandaged {victim}. Good. They'd have tried to walk it off.
+I heard you looked after someone who was hurt. Thank you, {player}.
+
+## deed.bandaged.self
+You patched me up when I was hurt. It still stings, but it's healing well. Thank you.
+Look, the bandage held! You've got a steady hand, {player}.
+Thank you for looking after me when I was down. I felt very small just then.
+I'm on my feet again, and that's partly your doing. Thank you.
+
+## deed.bandaged.family
+You tended to my {kin} when they were hurt. Thank you for that.
+{victim} told us you bandaged them up. We're grateful, all of us.
+Thank you for helping my {kin}. That sort of thing means a great deal in a family.
+You looked after one of ours. We won't forget it.
+
+## deed.saved_from_monster.seen
+I saw that monster go for {victim}, and I saw you get there first.
+I watched you cut it down before it could reach {victim}. My heart's still pounding.
+I saw what you did out there. One more second and it would have been too late.
+I saw you jump in between that thing and one of ours. Thank you, {player}.
+I was too far away to help, but I saw you get there in time. I've never been so glad to see anyone.
+
+## deed.saved_from_monster.heard
+{teller} says a monster went after {victim} and you dealt with it. Thank you.
+I heard you saved someone from a monster at the edge of the village.
+Word is you got between {victim} and something nasty. That took nerve.
+Everyone's saying you saved one of ours from a monster. Is that true? It is, isn't it?
+I heard a monster nearly had someone, and then you happened to it. Good.
+
+## deed.saved_from_monster.self
+That monster would have had me if you hadn't come. Thank you, {player}. Truly.
+I still see it when I close my eyes. And then I see you, and it's all right.
+You saved me out there. I didn't even get the chance to scream.
+I owe you my life. I'm not exaggerating, for once.
+
+## deed.saved_from_monster.family
+You saved my {kin} from that monster. I'll be grateful to you for the rest of my days.
+{victim} came home shaking and told us all about you. Thank you, thank you.
+You stood between my {kin} and that monster. There's nothing I wouldn't do for you now.
+Our family owes you, {player}. If you ever need anything, you come to us first.
+
+## deed.rescued_companion.seen
+I saw you go back for {victim} out there. You didn't leave them behind.
+I watched you help {victim} up when they were down. That's a real companion.
+I saw you turn round for your friend instead of running. Good on you.
+I saw you carry {victim} out of trouble. They're lucky to travel with you.
+I saw you get your companion back on their feet. I like that about you.
+
+## deed.rescued_companion.heard
+{teller} says {victim} went down on the road and you went back for them.
+I heard you never leave a friend behind on your travels. That's how it should be.
+Word is you saved {victim} out in the wilds. They're telling everyone.
+I heard you picked your companion up when they fell. I'd travel with you, then.
+They say you went back for your friend when it would have been easier not to.
+
+## deed.rescued_companion.self
+You came back for me out there. I thought I was done for, and then there you were.
+Thank you for getting me back on my feet. I'll watch your back next time, I promise.
+I went down and you didn't leave me. I won't forget that, {player}.
+You're a proper friend. Not many would have turned round for me.
+
+## deed.rescued_companion.family
+You brought my {kin} home safe from your travels. Thank you for looking after them.
+{victim} says you came back for them when they fell. We're so grateful.
+Thank you for not leaving my {kin} out there. I'd never have forgiven the road.
+You looked after one of ours out in the wilds. That means everything to us.
+
+## deed.notice_answered.seen
+I saw you take that notice down off the board. Thank you for helping.
+I saw you sorting out one of the notices. You're getting to be a regular helper.
+I watched you bring the reward home. Well earned, I'd say.
+I saw you hand it over to {victim}. They looked so relieved.
+I saw you turn in a notice. The board has a friend in you.
+
+## deed.notice_answered.heard
+{teller} says you answered {victim}'s notice. That was good of you.
+I heard you took care of a notice off the board. People notice that sort of thing.
+Word is you've been helping folk through the notice board. Thank you.
+I heard you sorted out {victim}'s trouble. You're becoming quite the neighbor.
+Somebody's notice came down and everyone says it was you. Thank you, {player}.
+
+## deed.notice_answered.self
+I'm still glad you answered my notice. Things have been so much easier since.
+I keep thinking about the help you gave me. Thank you again, {player}.
+You answered when I asked for help. I won't forget who did.
+My notice is long gone from the board, but I still remember who took it down.
+
+## deed.notice_answered.family
+You answered my {kin}'s notice. Thank you for helping our family.
+{victim} told us you sorted things out for them. We're grateful.
+Thank you for helping my {kin}. You've made our house a happier one.
+You took on {victim}'s notice. That makes you a friend of the family.
+
+## deed.birthday_gift.seen
+I saw {victim}'s face when you gave them that birthday present. You picked well!
+I saw you bring a birthday gift for {victim}. They lit up like a lantern.
+I watched {victim} open your present. I don't think I've seen them that happy all year.
+I saw you remember a birthday. Most travelers don't even know what day it is.
+I saw that gift you gave. Perfect choice. How did you know?
+
+## deed.birthday_gift.heard
+{teller} says you gave {victim} the perfect birthday present. How thoughtful!
+I heard you remembered {victim}'s birthday. That's the sort of thing that matters here.
+Word is you found just the right birthday gift. You must listen when people talk.
+I heard about the birthday present. {victim} is still showing everybody.
+Someone told me you brought a lovely birthday gift. You're a thoughtful one, {player}.
+
+## deed.birthday_gift.self
+I'm still thinking about the present you gave me for my birthday. It was perfect.
+You remembered my birthday! And you knew exactly what I'd love. Thank you.
+I keep your birthday gift right where I can see it. It makes me smile every morning.
+Nobody's ever picked a present for me that well. Thank you, {player}.
+
+## deed.birthday_gift.family
+You gave my {kin} the loveliest birthday present. They haven't stopped talking about it.
+{victim} showed us your birthday gift. You've made our whole family smile.
+Thank you for remembering my {kin}'s birthday. That was a kindness we noticed.
+The gift you gave {victim} is on our mantelpiece now. Pride of place.
+
+## deed.pet_kindness.seen
+I saw you give {victim}'s pet a fuss. It's been strutting about ever since.
+I saw you stop and pat that little animal. Kind hands are worth noticing.
+I watched you share a treat with one of the village pets. It's your friend for life now.
+I saw you kneel down to say hello to {victim}'s pet. That made my day.
+I saw you being sweet to one of our animals. You're a good sort.
+
+## deed.pet_kindness.heard
+{teller} says you've been spoiling {victim}'s pet with treats. Good.
+I heard the village pets have taken a liking to you. Animals know a good heart.
+Word is you never walk past a pet without a pat. I like that in a person.
+I heard you made friends with {victim}'s pet. That's no small thing. It's very picky.
+Somebody told me the animals here all come running when you walk by.
+
+## deed.pet_kindness.self
+My pet adores you, you know. It waits by the door when it hears you coming.
+Thank you for being so kind to my pet. It's had a spring in its step all day.
+You've been feeding my pet treats, haven't you? It's getting round. I don't mind.
+My little one was so happy after you gave it a fuss. Thank you, {player}.
+
+## deed.pet_kindness.family
+You've been kind to our family's pet. It talks about you. Well. It wags about you.
+{victim} says you made a fuss of our pet. Thank you, it loves attention.
+Our pet has a new favorite person, and it's you. My {kin} is a little jealous.
+Thank you for being gentle with our animal. A family's pet is part of the family.
+
+## deed.hit_resident.seen
+I saw you hit {victim}. I don't know what happened between you, but I saw it.
+I saw what you did to {victim}. We don't do that here, {player}.
+I was standing right there when you struck {victim}. I haven't forgotten.
+I saw you raise your hand to one of ours. I'm keeping my distance for a bit.
+I saw that. Hitting folk in their own village? I expected better of you.
+
+## deed.hit_resident.heard
+{teller} says you hit {victim}. Tell me that isn't true.
+I heard you struck one of our neighbors. That's not how you make friends in {village}.
+Word is you've been knocking people about. I'd rather it stopped, thank you.
+I heard what happened with {victim}. People are talking, and not kindly.
+Someone told me you hit one of us. I'm going to need a while before I trust you again.
+
+## deed.hit_resident.self
+You hit me. I haven't forgotten it, even if you have.
+I've still got the bruise, you know. I'd like an apology, not a hello.
+Why did you hit me? I've gone over it a hundred times and I still don't understand.
+Please keep your hands to yourself around me from now on.
+
+## deed.hit_resident.family
+You hit my {kin}. I'm being polite to you because I was raised to be.
+{victim} came home bruised and told us who did it. Don't expect a warm welcome at our house.
+You struck one of my family. I'd think very hard before doing that again.
+I know what you did to my {kin}. I just wanted you to know that I know.
+
+## deed.knocked_out_resident.seen
+I saw you put {victim} on the ground. I thought they'd never get up again.
+I saw {victim} go down, and I saw who did it. It was you.
+I watched you beat {victim} until they fell. I still feel sick about it.
+I saw what you did. If the apothecary hadn't come, I don't know what would have happened.
+I was there when you knocked one of us down cold. I won't pretend I wasn't.
+
+## deed.knocked_out_resident.heard
+{teller} says you beat {victim} so badly they had to be carried to the cot.
+I heard someone was knocked senseless, and everyone says it was you.
+Word is {victim} nearly didn't wake up after what you did. Is that who you are?
+I heard what you did to {victim}. The whole village is uneasy, {player}.
+People are saying you laid one of ours out cold. I hope they're wrong. I don't think they are.
+
+## deed.knocked_out_resident.self
+You knocked me out cold. I woke up on the apothecary's cot and my head still rings.
+I could have died, you know. I nearly did. You'll forgive me if I don't smile.
+Last thing I remember before the dark was your face. That's not a nice thing to remember.
+You laid me flat. I don't know what I did to deserve it, but I'd like to know.
+
+## deed.knocked_out_resident.family
+You put my {kin} on the apothecary's cot. Do you know how frightened we were?
+{victim} nearly didn't come home because of you. I can barely look at you.
+My {kin} still has nightmares about what you did. I'd like you to stay away from our house.
+We sat up all night beside {victim} because of you. I won't forget that night.
+
+## deed.killed_resident.seen
+I saw what you did to {victim}. They never got up. They never will.
+I was there when {victim} fell, and I was there when they didn't wake. It was you.
+I saw it. I see it every night now. {village} is smaller because of you.
+I watched {victim} go down and stay down. I don't know why you're still welcome here.
+I saw you take one of us away for good. Please don't talk to me.
+
+## deed.killed_resident.heard
+{victim} is gone, and {teller} says it was your doing.
+I heard about {victim}. The whole village is grieving, and they all say your name.
+Word is it was you who took {victim} from us. I can't bring myself to be friendly.
+I heard what happened. There's an empty seat at supper now, and everyone knows why.
+They say one of ours is never coming home because of you. Leave me be, {player}.
+
+## deed.killed_resident.family
+There is an empty chair at our table now. Every meal, I know whose fault that is.
+You took my {kin} from me. I don't know why I'm even speaking to you.
+{victim} is gone, and it was you. Our house is so quiet now.
+My {kin} should be here. They're not. Every day I remember who did that.
+I lost my {kin} because of you. I'll never forget it. Never.
+
+## deed.hit_golem.seen
+I saw what you did to the golem. It's done nothing but look after us.
+I saw you take a swing at our golem. Whatever for?
+I watched you pick a fight with the golem. That's a fight nobody wins.
+I saw you strike the golem. It just stood there and took it. I felt sorry for it.
+I saw you having a go at our iron guardian. Leave it alone, please.
+
+## deed.hit_golem.heard
+{teller} says you've been hitting our golem. It keeps us safe, you know.
+I heard you had a go at the golem. Not clever, and not kind.
+Word is you picked a fight with the golem. I'd watch my back if I were you.
+I heard you've been picking on our golem. It's never hurt anyone who didn't deserve it.
+Somebody saw you bashing at the golem. It looks a little sad today. Iron can look sad.
+
+## deed.killed_golem.seen
+I saw you bring down our golem. Who's going to watch the walls tonight?
+I saw the golem fall, and I saw who felled it. We're less safe now because of you.
+I watched you destroy our golem. The children cried when they saw the pieces.
+I saw you smash our golem to scrap. It was guarding us long before you came.
+I saw what you did to the golem. I'm going to sleep with the door barred tonight.
+
+## deed.killed_golem.heard
+{teller} says our golem is gone and it was you who did it.
+I heard you destroyed the golem. Nobody feels safe at night any more.
+Word is you brought down our guardian. The monsters will be glad, at least.
+I heard about the golem. The whole of {village} is talking about it, and not fondly.
+They say you smashed our golem to pieces. I'd like to know why. Then I'd like you to fix it.
+
+## deed.hurt_pet.seen
+I saw you hurt {victim}'s pet. A poor little animal that never did anything to you.
+I saw what you did to that pet. It ran under the house and hasn't come out.
+I watched you hurt one of the village pets. I can't think of a good reason for that.
+I saw you strike {victim}'s pet. How could you?
+I saw it yelp. I saw you. I didn't like what I saw.
+
+## deed.hurt_pet.heard
+{teller} says you hurt {victim}'s pet. That's a cruel thing to do.
+I heard one of our pets came home limping, and everyone says it was you.
+Word is you were rough with {victim}'s pet. People here love their animals.
+I heard what you did to that little animal. Children in this village have long memories.
+Somebody told me you hurt a pet. I hope it was an accident. Tell me it was an accident.
+
+## deed.hurt_pet.self
+You hurt my pet. It hides when it hears you coming now. Do you know how that feels?
+My little one is still limping because of you. I'm not ready to be friendly.
+How could you hurt my pet? It only ever wanted a pat.
+Stay away from my pet. I mean it.
+
+## deed.hurt_pet.family
+You hurt our family's pet. My {kin} cried all night.
+{victim} told us what you did to our pet. Our door is closed to you for now.
+Our pet is part of our family, and you hurt it. Think about that.
+My {kin} loves that animal more than anything. You hurt it. I can't forgive that quickly.
+
+## deed.killed_pet.seen
+I saw what you did to {victim}'s pet. I can't stop seeing it.
+I saw that poor animal fall. And I saw who did it.
+I watched you kill one of the village pets. I've no words. No good ones.
+I saw it happen. {victim} came running and it was already too late.
+I saw you take a pet from its family. I'll remember that about you.
+
+## deed.killed_pet.heard
+{teller} says {victim}'s pet is gone, and that you did it.
+I heard about the pet. The whole village is heartbroken, and everyone's saying your name.
+Word is you killed {victim}'s pet. I hope it isn't true, and I'm afraid it is.
+I heard one of our pets is never coming home. I'm not sure I want to talk to you.
+Somebody told me what you did to that little animal. That's not something I can laugh off.
+
+## deed.killed_pet.self
+You killed my pet. Its bowl is still by the door. I can't bring myself to move it.
+My pet is gone because of you. I don't want to talk about it. I don't want to talk to you.
+I keep calling its name out of habit. Then I remember. Then I remember you.
+You took my best friend from me. It was only an animal to you. It wasn't to me.
+
+## deed.killed_pet.family
+You killed our family's pet. My {kin} hasn't smiled since.
+{victim} buried our pet under the apple tree. I hope you think about that.
+Our pet was family. You took it from us. Please don't come to our house.
+My {kin} keeps waiting by the door for a pet that's never coming. That's on you.
+
+## deed.broke_home.seen
+I saw you break into {victim}'s house. Those are people's homes, {player}.
+I saw you tearing things out of {victim}'s house. What were you thinking?
+I watched you smash up somebody's home. I didn't believe it until I saw it.
+I saw you break what wasn't yours. Somebody sleeps in that house, you know.
+I saw you wrecking a house in our village. I've told the others. I had to.
+
+## deed.broke_home.heard
+{teller} says you broke into {victim}'s house and smashed things up.
+I heard {house} got broken into, and everyone says it was you.
+Word is you've been breaking things in people's houses. That's not on.
+I heard you wrecked part of {victim}'s home. They had to sleep on the floor.
+Somebody told me you damaged a house here. We built these homes with our own hands.
+
+## deed.broke_home.self
+You broke into my house. I came home and things were smashed. I know it was you.
+You wrecked my home, {player}. Do you know how long that took to build?
+I had to sleep on the floor because of what you did to my house.
+My home was the one place I always felt safe. You took that from me.
+
+## deed.broke_home.family
+You broke into our house. My {kin} found the mess. We're still putting it right.
+{victim} told us who smashed up our home. You did. Why?
+Our family's house isn't the same since you broke in. It doesn't feel like ours.
+You damaged our home. My {kin} had to fix it with their own hands. Again.
+
+## deed.stole.seen
+I saw you helping yourself to {victim}'s things. That wasn't yours to take.
+I saw you go through {victim}'s chest and come out with your pockets full.
+I watched you take from somebody's house. We don't lock our doors here. We never needed to.
+I saw you steal, {player}. I won't pretend I didn't.
+I saw you pocket things that weren't yours. I'm keeping an eye on my own chest now.
+
+## deed.stole.heard
+{teller} says you've been stealing from {victim}'s house.
+I heard things went missing from {house}, and everyone says it was you.
+Word is you've got sticky fingers. I'd like to keep my things, if it's all the same.
+I heard you emptied somebody's chest when they weren't looking. That's low.
+Somebody told me you stole from a neighbor. Folk here are starting to lock their doors.
+
+## deed.stole.self
+You took my things. I counted twice, and then I asked around. It was you.
+My chest is half empty and I know who emptied it. Give it back, {player}.
+You stole from me. From my own home. I trusted you in my house.
+I'd like my things back. And then I'd like an apology. In that order.
+
+## deed.stole.family
+You stole from our house. My {kin} saved for months for some of those things.
+{victim} says our chest was raided, and we all know by whom.
+You took from my family. We hadn't much, and now we've less.
+My {kin} cried when they saw what was missing. I hope it was worth it to you.
+
+# Personality pools: generic enough for any good or bad deed, in each personality's own voice.
+
+## deed.good.seen.warmhearted
+I saw what you did, love. Come here, you've earned a hug and a hot meal.
+I saw it all, and my heart's still full. You're one of us now, {player}.
+I watched you be kind when it counted. I'm going to bake you something. Don't argue.
+
+## deed.good.seen.thoughtful
+I saw what you did. I've been thinking about it all day. It said a lot about you.
+I watched you closely back there. Some people show who they are when nobody's asking. You did.
+I saw it. Kindness that isn't for show is the only sort worth having.
+
+## deed.good.seen.playful
+I saw that! Who are you, a hero out of a storybook? Do it again, I wasn't ready!
+Saw the whole thing! You're officially my favorite person this week. Possibly this month.
+I saw you! Very dashing. I'd have helped, but I was busy being impressed.
+
+## deed.good.seen.adventurous
+I saw you in action! Now that's how it's done. Teach me some time?
+I saw what you did. Bold, quick and right. My kind of traveler.
+I watched you out there. I've been on a few adventures, and that was as brave as any.
+
+## deed.good.seen.meticulous
+I saw it. Neatly done, and at exactly the right moment. I noticed.
+I watched carefully. You didn't waste a single move. Very good.
+I saw what you did. I've made a note of it. A good note.
+
+## deed.good.seen.steadfast
+I saw you stand your ground for us. That's the measure of a person.
+I saw what you did. You can count on me from now on.
+I saw you do the right thing when it was hard. I won't forget it.
+
+## deed.good.seen.reserved
+I saw. ...Thank you.
+I saw what you did. I don't say much, but I wanted to say that.
+I was watching. ...That was good of you. Really.
+
+## deed.good.seen.imaginative
+I saw what you did, and I've already turned it into a song in my head. You're in the chorus.
+I saw it! It was like something out of an old tale, with you as the hero.
+I watched it happen and painted the whole scene in my mind. You looked very brave in it.
+
+## deed.good.seen.pragmatic
+I saw what you did. Useful and kind. That's a rare pair.
+I saw it. You did what needed doing and didn't make a fuss. I respect that.
+I watched you handle it. Sensible work. The village is better off.
+
+## deed.good.seen.curious
+I saw what you did! How did you know what to do? Where did you learn it?
+I saw the whole thing. I have questions. Many questions. All of them admiring.
+I saw it happen! Do you always do things like that, or was today special?
+
+## deed.good.seen.protective
+I saw you look after one of ours. That puts you on my side of the fence for good.
+I saw what you did. If anyone ever gives you trouble here, you come to me.
+I watched you keep someone safe. That's my job round here, and you did it well.
+
+## deed.good.seen.gentle
+I saw what you did. It was so kind. I had to sit down for a moment.
+I saw it, and it made me quietly happy all afternoon.
+I watched you be good to someone. Thank you. The world needs more of that.
+
+## deed.good.heard.warmhearted
+I've been hearing such lovely things about you! Come in, come in, the kettle's on.
+{teller} told me what you did, and I nearly cried into my soup. Bless you.
+Everyone's saying good things about you, and I've been agreeing with all of them.
+
+## deed.good.heard.thoughtful
+{teller} told me what you did. It's been on my mind ever since, in a good way.
+I hear you've been doing good around here. I'd like to understand what makes a person do that.
+People are talking about you. Kindly. That's harder to earn than it sounds.
+
+## deed.good.heard.playful
+Folk keep talking about you. Good things! I'm almost jealous. Almost.
+{teller} told me what you did. Hero stuff! Should I bow? I'm going to bow.
+I hear you've been very good lately. Suspiciously good. I approve.
+
+## deed.good.heard.adventurous
+Word travels fast. I hear you've been doing brave things right here at home.
+{teller} says you've been out doing the right thing. Tell me the whole story some time.
+I heard about you! Next time there's trouble, I'm coming along.
+
+## deed.good.heard.meticulous
+I heard what you did. I asked three people, and the story was the same each time. Well done.
+{teller} told me about it. I checked the details. They hold up. Impressive.
+I hear you did something good. I like it when a reputation is properly earned.
+
+## deed.good.heard.steadfast
+I heard what you did. You've earned my trust, and I don't give it lightly.
+{teller} told me. That's the kind of thing that keeps a village standing.
+People are saying you can be relied on. I'd say the same.
+
+## deed.good.heard.reserved
+I heard what you did. ...Good. That's all. Good.
+{teller} told me about you. I'm glad. Quietly glad.
+People keep mentioning you. Nicely. ...I thought you'd want to know.
+
+## deed.good.heard.imaginative
+I heard the story of what you did, and it's already growing wings. By next week you'll have fought a dragon.
+{teller} told me all about it. I can see it like a picture in a book.
+They're telling tales about you around the hearths. Good tales. The best kind.
+
+## deed.good.heard.pragmatic
+I heard what you did. Good. A village runs on people like that.
+{teller} told me. Sensible of you. Kind, too. Well done.
+I hear you've been useful around here. That's the highest praise I give.
+
+## deed.good.heard.curious
+{teller} told me what you did! Is it all true? Tell me everything.
+I heard a story about you and I need to know the parts that got left out.
+People keep talking about you! What will you do next? I want to be there.
+
+## deed.good.heard.protective
+I heard you looked after one of ours. You're all right in my book.
+{teller} told me what you did. Anyone who protects this village is a friend of mine.
+I hear you've been keeping folk safe. Good. Keep doing it.
+
+## deed.good.heard.gentle
+I heard what you did. It made my whole day softer.
+{teller} told me about your kindness. I've been smiling about it ever since.
+I hear you've been good to people here. Thank you, {player}. Truly.
+
+## deed.bad.seen.warmhearted
+I saw what you did. I always see the best in people, {player}, but you're making it very hard.
+I saw it, and it broke my heart a little. That isn't the you I thought I knew.
+I saw what happened. I'll still feed you if you're hungry. But I'm disappointed.
+
+## deed.bad.seen.thoughtful
+I saw what you did. I keep trying to understand it, and I can't.
+I watched it happen. People show who they are when they think nobody's looking. I was looking.
+I saw it. I'm not going to shout. I'm just going to remember.
+
+## deed.bad.seen.playful
+I saw that, and I'm not laughing. That's rare for me, so you know it's bad.
+I saw what you did. Not funny, {player}. Not even a little.
+I usually find something to joke about. I saw what you did. I've got nothing.
+
+## deed.bad.seen.adventurous
+I've seen a lot out in the wilds, but I didn't expect to see that here. From you.
+I saw what you did. That's not bravery. That's just cruelty with a sword.
+I watched it happen. A real adventurer protects villages. They don't do that to them.
+
+## deed.bad.seen.meticulous
+I saw exactly what you did. Every detail. I don't forget details.
+I watched closely. There's no mistaking it. It was you.
+I saw it happen, and I've written it down. I write everything down.
+
+## deed.bad.seen.steadfast
+I saw what you did. I stand by this village, and right now that means standing against you.
+I saw it. Trust takes years to build. You'll have to start again.
+I watched you do it. I won't look away and pretend I didn't.
+
+## deed.bad.seen.reserved
+I saw. ...I'd rather not talk right now.
+I saw what you did. ...Please go.
+I was there. ...I saw.
+
+## deed.bad.seen.imaginative
+I saw what you did, and now there's a shadow in every story I tell about you.
+I watched it happen. In my head, the sky went grey and stayed that way.
+I saw it. I used to picture you as the hero of the tale. Not any more.
+
+## deed.bad.seen.pragmatic
+I saw what you did. Pointless and harmful. I don't understand people like that.
+I saw it. Whatever you gained, it wasn't worth what it cost you here.
+I watched it happen. You'll find doors a lot harder to open in {village} now.
+
+## deed.bad.seen.curious
+I saw what you did, and I have one question. Why?
+I watched it happen. I keep asking myself what could make someone do that.
+I saw it. I want to understand. I really don't.
+
+## deed.bad.seen.protective
+I saw what you did. Stay away from my people, {player}. I won't ask twice.
+I saw it with my own eyes. Do it again and you'll answer to me.
+I watched you do it. From now on, I'm watching you.
+
+## deed.bad.seen.gentle
+I saw what you did. It frightened me. I'm still a little frightened.
+I saw it. ...Why would you do something like that?
+I watched it happen and I couldn't stop shaking. Please don't do it again.
+
+## deed.bad.heard.warmhearted
+{teller} told me what you did. I didn't want to believe it. I still don't, quite.
+I've heard some unkind things about you lately. I'd so love for them not to be true.
+People are saying hard things about you, {player}. I'm hoping you'll prove them wrong.
+
+## deed.bad.heard.thoughtful
+{teller} told me what you did. I've been turning it over, trying to find a reason.
+I heard something troubling about you. I'll listen if you want to explain.
+People are saying things about you. I like to hear both sides. I've only heard one.
+
+## deed.bad.heard.playful
+Psst, people are talking about you. Not the good kind of talking.
+{teller} told me what you did. Even I can't make a joke out of that.
+Folk keep whispering your name, and they're frowning while they do it.
+
+## deed.bad.heard.adventurous
+I heard what you did. Out on the road, a reputation like that follows you around.
+{teller} told me about it. I thought you were one of the good ones.
+Word travels, {player}. Even out in the wilds, word travels.
+
+## deed.bad.heard.meticulous
+I heard what you did. I asked around to be sure. I'm sure.
+{teller} told me. I checked the story twice. It holds, unfortunately.
+I've heard the details, and they don't flatter you.
+
+## deed.bad.heard.steadfast
+{teller} told me what you did. I'm loyal to this village, so I'll be careful around you.
+I heard about it. Trust is earned. You've a long way to go now.
+People are saying things about you, and I've no reason to doubt them.
+
+## deed.bad.heard.reserved
+I heard. ...I'd rather keep to myself today.
+{teller} told me about you. ...I don't really want to talk.
+People are saying things. ...I'm listening to them.
+
+## deed.bad.heard.imaginative
+I heard the story about you, and it's a dark one. Every telling makes it darker.
+{teller} told me what you did. In the tales round the hearth, you're the villain now.
+People are telling stories about you, and none of them end happily.
+
+## deed.bad.heard.pragmatic
+I heard what you did. Bad for the village, bad for you. Nobody wins.
+{teller} told me. People will charge you more and trust you less. That's just how it goes.
+I heard about it. If you want things to go back to normal, you've got some making up to do.
+
+## deed.bad.heard.curious
+{teller} told me what you did. Is it true? Please tell me it isn't.
+I heard something about you that I can't make sense of. Help me understand it.
+People are saying strange, unkind things about you. What happened?
+
+## deed.bad.heard.protective
+I heard what you did. Nobody hurts this village on my watch. Remember that.
+{teller} told me about you. Keep your distance from my family.
+I hear you've been causing trouble. I'll be keeping an eye on you.
+
+## deed.bad.heard.gentle
+I heard what you did. It made me very sad.
+{teller} told me, and I had to go and sit by the river for a while.
+People are saying unkind things about you. I hope they're wrong. I really do.
+
+# Children react in their own voice.
+
+## baby.deed.good.seen
+I saw you! I saw you do the brave thing! You're like a real hero!
+I saw what you did! I'm going to do that too when I'm big!
+Wow! I saw it! I was hiding behind the barrel but I saw ALL of it!
+I saw you help! I clapped! Did you hear me clap?
+I saw you be really nice! Mum says that's the most important thing.
+I saw it! You were so fast! Whoosh! Like that!
+
+## baby.deed.good.heard
+Everybody says you're a hero! Are you? You are, aren't you?
+{teller} told me what you did! I made them tell it twice!
+I heard about you! I'm telling all my friends! Well, they already know.
+Are you the one everyone's talking about? The good one?
+I heard you did something amazing! Can I have your autograph? What's an autograph?
+Grown-ups keep saying your name and smiling. That means you did something good!
+
+## baby.deed.bad.seen
+I saw what you did. That wasn't nice. That wasn't nice at all.
+I saw you! You were mean! I'm telling!
+I saw it and I hid. I'm still a bit hiding.
+I saw what happened. Why were you so mean? You looked nice before.
+I saw you do a bad thing. Mum says I'm not to play near you.
+I saw that. I'm not your friend right now.
+
+## baby.deed.bad.heard
+{teller} says you did a bad thing. Did you? Say sorry, then.
+Everybody's whispering about you. I'm not supposed to listen but I did.
+I heard you were mean. Mean people don't get cookies.
+My dad says to stay away from you. Is it because of the bad thing?
+I heard about what you did. You have to say sorry. That's the rule.
+The grown-ups are cross with you. Really cross. Are you in trouble?
+
+## baby.deed.good.family
+You helped my {kin}! You're my favorite grown-up now!
+Thank you for helping my family! I drew you a picture. It's of you being brave.
+You saved my {kin}! I'm going to hug you! Too late, I'm hugging you!
+My {kin} says you're the best! I already knew that!
+Thank you for being nice to us! When I grow up I'm going to help people too!
+
+## baby.deed.bad.family
+You were mean to my {kin}! That's not allowed!
+My {kin} cried because of you. I don't like you right now.
+You hurt my family. I'm not talking to you. ...That was talking. I'm stopping now.
+Mum says you did something bad to us. Say sorry!
+Leave my {kin} alone! I'm small but I'm very fierce!
+
+## baby.deed.saved_from_monster.self
+You saved me from the monster! It was so big and scary and you were SO brave!
+That monster nearly got me! Then you got it! Thank you thank you thank you!
+I wasn't scared. Well, I was a bit scared. Then you came and I wasn't!
+You're my hero! The monster's gone and it's because of you!
+I told everybody you saved me! Now I'm famous too!
+
+## baby.deed.revived.self
+You woke me up! I was having a really long sleep and you woke me up!
+Mum says I was very poorly and you made me better. Thank you!
+I don't remember much, but they said it was you! You're the best!
+You saved me! I'm going to be your best friend forever. That's a promise.
+I'm all better now, look! I can jump! That's because of you!
+
+## baby.deed.bandaged.self
+Look at my bandage! You did it! It's the best bandage in the whole village!
+You fixed my ouchie! It hardly hurts now. Only a bit.
+Thank you for the bandage! I was very brave, wasn't I?
+I fell over and you helped me! I'm keeping the bandage on forever.
+You made it better! Can I have another bandage? Just for fun?
+
+## baby.deed.birthday_gift.self
+You gave me a birthday present! It's my favorite thing ever! EVER!
+I love my present so much! I sleep with it next to my pillow!
+Thank you for my birthday present! How did you know? Are you magic?
+My birthday present is the best one! Don't tell the others I said that.
+You remembered my birthday! You're the best grown-up in the world!
+
+## baby.deed.pet_kindness.self
+My pet loves you! It wagged so hard it fell over!
+You gave my pet a treat! Now it follows you everywhere. Can it follow me too?
+My pet says thank you! Well, it said woof. Or meow. It means thank you.
+You're nice to my pet! That means you're nice to me!
+My pet likes you more than me now. That's okay. I like you too.
+
+## baby.deed.hit_resident.self
+You hit me! That really hurt! Why did you do that?
+I'm not playing with you any more. You hurt me.
+Ow. That was mean. I told my mum.
+You're supposed to be nice to kids! You hit me!
+I'm scared of you now. Please don't do that again.
+
+# Apologies: "I'm sorry about what happened". accept and cool are the reply; remembered comes up later.
+
+## deed.apology.accept
+Thank you for saying it. That wasn't easy, I know. Let's start again.
+All right. I accept. I'm not going to forget it, but I can forgive it.
+I've been waiting to hear that. Thank you, {player}. Truly.
+Apology accepted. We'll say no more about it.
+That means more than you know. Come here. We're all right now.
+Sorry is a small word, but you said it properly. I forgive you.
+I could tell you meant that. Very well. Fresh start, then.
+Thank you. I was angry for a long time, and I'm tired of it. Let's be friends again.
+
+## deed.apology.cool
+Sorry? Hm. It's a bit soon for sorry. Ask me again another day.
+I hear you. I'm just not ready to forgive yet.
+Words are easy, {player}. Give me some time.
+I'm not angry any more. But I'm not ready either. Tomorrow, perhaps.
+You'll forgive me if I need a little longer.
+That's a start. Only a start. Come back when it's had time to settle.
+I'd like to believe you. Let me sleep on it.
+Not today. Maybe not tomorrow. But I'm listening.
+
+## deed.apology.accept.child
+Okay! I forgive you! Pinky promise you won't do it again?
+You said sorry! Mum says that makes it all right. So it's all right!
+Okay. I'm not cross any more. Want to play?
+I forgive you! But you have to give me a piggyback. That's the rule.
+You said sorry properly! I'll tell everyone you're nice again.
+Okay! Friends again! Friends forever, actually.
+I accept your sorry! I've never accepted a sorry before. It feels nice.
+Okay. Sorry is a magic word. Now everything is fixed.
+
+## deed.apology.cool.child
+Hmm. I'm still a bit cross. Say it again tomorrow.
+No! I'm still upset! ...Maybe tomorrow.
+Mum says I don't have to forgive you yet. So I'm not. Yet.
+I'm thinking about it. Thinking takes a long time.
+You have to say sorry a lot more times. Like, a hundred.
+Not yet. I'm still sulking. Sulking is important.
+
+## deed.apology.remembered
+You said sorry, and you meant it. That counts for a lot round here.
+I haven't forgotten your apology. Water under the bridge, {player}.
+We had our trouble, you and I. You put it right. I respect that.
+You owned up when you didn't have to. I think better of you for it.
+Remember when you said sorry? I do. It took courage.
+There was a rough patch between us, but you mended it. Good.
+I've told the others you apologized. Folk here believe in second chances.
+Every time I see you, I remember the apology more than the trouble. That's a good sign.
+
+# Kept memories: written into the Journal for good, in the resident's own words.
+
+## deed.kept.revived.self
+The day I nearly died, {player} knelt in the dirt and stayed with me until I breathed again.
+{player} brought me back when I was nearly gone.
+I woke on the ground with {player} kneeling beside me. I'm alive because of them.
+{player} wouldn't let me go. I owe them every day since.
+
+## deed.kept.revived.family
+Our family still has {victim}, and that is because of {player}.
+{player} brought my {kin} {victim} back to us.
+When {victim} was nearly lost, {player} saved them. Our family will never forget it.
+{player} kept my {kin} breathing when it mattered most.
+
+## deed.kept.saved_from_monster.self
+I was nearly lost to a monster in {village}. {player} saved me.
+{player} saved me from a monster at the edge of {village}.
+A monster nearly had me, and {player} got there first.
+{player} stood between me and the dark. I'll remember it always.
+
+## deed.kept.saved_from_monster.family
+When a monster came for {victim}, {player} was there. We are all grateful.
+{player} saved my {kin} {victim} from a monster.
+A monster went for {victim}, and {player} stopped it. Our family owes them.
+{player} saved my {kin}. I'll be grateful for the rest of my days.
+
+## deed.kept.rescued_companion.self
+Out on the road, when I could go no further, {player} carried me home.
+{player} came back for me when I fell on the road.
+I went down far from home, and {player} didn't leave me there.
+{player} picked me up when I couldn't stand. A true companion.
+
+## deed.kept.rescued_companion.family
+{player} looked after {victim} out in the wilds and brought them home to us.
+{player} brought my {kin} {victim} home safe from the wilds.
+When {victim} fell on the road, {player} went back for them.
+{player} didn't leave my {kin} behind. We remember that.
+
+# The "Unwelcome" title: what the village says to someone whose deeds have turned it against them.
+
+## greet.unwelcome
+Oh. It's you. What do you want?
+You've got a nerve, showing your face in {village}.
+I'll talk to you. I won't enjoy it.
+Make it quick, {player}. People are watching.
+Hm. You again.
+I've nothing to say to you that you'd like to hear.
+You're not welcome here, you know. Not after everything.
+Folk here remember what you did. So do I.
+I'm only answering because my mother raised me polite.
+Keep your hands where I can see them, please.
+If you've come to make amends, I'm listening. Otherwise, I'm busy.
+The whole village knows your name now, {player}. Not in a good way.
+
+## greet.unwelcome.warmhearted
+I'd usually offer you tea. Not today, {player}.
+I want to be kind to you. You're making it very hard.
+My door's open to everyone. Almost everyone. Just now, not you.
+
+## greet.unwelcome.thoughtful
+I've thought a lot about you lately. None of it was pleasant.
+What do you want, {player}? I'm asking honestly.
+I keep hoping you'll give me a reason to think better of you.
+
+## greet.unwelcome.playful
+Oh look, it's the village villain. No jokes for you today.
+Hello, trouble. And I don't mean the fun sort.
+I'd make a joke, but nobody here is laughing about you.
+
+## greet.unwelcome.adventurous
+I've met bandits on the road with better manners than you've shown here.
+Out in the wilds, folk like you get left behind. Just so you know.
+What brings you back? Not more trouble, I hope.
+
+## greet.unwelcome.meticulous
+I've kept count of everything you've done here. The list isn't short.
+State your business, please. Briefly.
+I've noted that you're here. I note everything.
+
+## greet.unwelcome.steadfast
+I'll stand here and hear you out. That's more than you've earned.
+I don't hold grudges for ever. But I hold them for a while.
+Say what you came to say.
+
+## greet.unwelcome.reserved
+...Oh. It's you.
+...What do you want?
+...I'd rather not.
+
+## greet.unwelcome.imaginative
+In every story the village tells now, you're the one in the dark cloak.
+I used to imagine you as a hero. My imagination has changed its mind.
+You've the look of a cautionary tale about you today.
+
+## greet.unwelcome.pragmatic
+Let's not waste each other's time. What do you need?
+I'll trade with you, because emeralds are emeralds. Don't expect more than that.
+You know nobody wants you here, right? Just checking.
+
+## greet.unwelcome.curious
+I'm curious about lots of things. Why you're still here is one of them.
+What makes a person do what you've done? I still can't work it out.
+You're back? Why? I really want to know.
+
+## greet.unwelcome.protective
+Stay away from my family, {player}. I mean it.
+I'm watching you. Every step.
+Don't make me ask you to leave.
+
+## greet.unwelcome.gentle
+Oh. Please don't come too close.
+I'm sorry, I'm a little frightened of you.
+Hello. ...Please be nice today.
+
+## baby.greet.unwelcome
+Mum says I'm not allowed to talk to you.
+You're the mean one. Everybody says so.
+I'm not scared of you! ...I'm a bit scared of you.
+Go away! I'm guarding this bit of the village.
+Are you going to say sorry? You should say sorry.
+I'm not supposed to be near you. Bye!
+Everyone's cross with you. Even the chickens.
+You have to be nice for a REALLY long time now.
+
+## chat.unwelcome
+How's my day? Better before you turned up, if I'm honest.
+I don't really want to chat with you, {player}.
+People will talk if they see me being friendly with you. I'd rather they didn't.
+I've nothing to share with you. Not today.
+If you want things to go back to how they were, you'll have to earn it.
+My day is my business. Yours seems to be trouble.
+I'm not one to hold a grudge for ever. But it hasn't been for ever yet.
+Maybe try saying sorry to the people you hurt. Then we'll talk.
+You'll find {village} a lot friendlier when you start being friendlier to it.
+Good deeds wash out bad ones, slowly. You'd better get started.
+
+## notice.unwelcome
+There's nothing on that board for you, {player}. Nobody wants your help just now.
+I wouldn't ask you to carry a letter, let alone my troubles.
+We'll find somebody else for our notices, thank you.
+The board's for friends of the village. You're not one at the moment.
+Help? From you? Not until folk can trust you again.
+Put things right with the village first. Then maybe there'll be a notice for you.
