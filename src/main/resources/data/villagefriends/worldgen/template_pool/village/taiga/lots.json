@@ -2,7 +2,178 @@
   "fallback": "villagefriends:village/taiga/lots_outer",
   "elements": [
     {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/trapper_hut",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/aframe_cabin",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/porch_cabin",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/log_lodge",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/longhouse",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/dogtrot_cabin",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/stone_cottage",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/cabin_ell",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/smithy",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
       "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/smokehouse",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/fletcher",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/shepherd",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/fisher",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/cartographer",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/mason",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/tannery",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/decor_spruce",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/decor_log_stack",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/taiga/decor_campfire_ring",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 12,
       "element": {
         "element_type": "minecraft:empty_pool_element"
       }
