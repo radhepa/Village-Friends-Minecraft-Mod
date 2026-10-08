@@ -231,19 +231,29 @@
    }
   },
   "j": {
+   "id": "minecraft:dark_oak_door",
+   "properties": {
+    "facing": "south",
+    "half": "upper",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "k": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "k": {
+  "l": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "false",
     "waterlogged": "false"
    }
   },
-  "l": {
+  "m": {
    "id": "minecraft:lectern",
    "properties": {
     "facing": "north",
@@ -251,10 +261,10 @@
     "powered": "false"
    }
   },
-  "m": {
+  "n": {
    "id": "minecraft:potted_fern"
   },
-  "n": {
+  "o": {
    "id": "minecraft:spruce_leaves",
    "properties": {
     "distance": "1",
@@ -262,25 +272,17 @@
     "waterlogged": "false"
    }
   },
-  "o": {
+  "p": {
    "id": "minecraft:stone_brick_slab",
    "properties": {
     "type": "top",
     "waterlogged": "false"
    }
   },
-  "p": {
-   "id": "minecraft:stone_brick_stairs",
-   "properties": {
-    "facing": "north",
-    "half": "bottom",
-    "shape": "straight"
-   }
-  },
   "q": {
    "id": "minecraft:stone_brick_stairs",
    "properties": {
-    "facing": "south",
+    "facing": "north",
     "half": "bottom",
     "shape": "straight"
    }
@@ -290,16 +292,24 @@
    "properties": {
     "facing": "south",
     "half": "bottom",
-    "waterlogged": "false"
+    "shape": "straight"
    }
   },
   "s": {
+   "id": "minecraft:stone_brick_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "t": {
    "id": "minecraft:water_cauldron",
    "properties": {
     "level": "3"
    }
   },
-  "t": {
+  "u": {
    "id": "villagefriends:fireside_armchair",
    "properties": {
     "facing": "east"
@@ -328,10 +338,10 @@
   {
    "y": 1,
    "rows": [
-    ".....j.......",
+    ".....k.......",
     ".............",
-    "...n....K....",
-    ".....r.......",
+    "...o....K....",
+    ".....s.......",
     "..CCCCCCCCC..",
     "..CAAAAAAACK.",
     "..CAAAAAACCK.",
@@ -352,9 +362,9 @@
     ".............",
     "..HDDiHDDDH..",
     "..D......gCK.",
-    "..D....t..fK.",
+    "..D....u..fK.",
     "..Dc......CK.",
-    "..DAs..lRRD..",
+    "..DAt..mRRD..",
     "..HDDDHDDDH..",
     ".............",
     ".............",
@@ -367,11 +377,11 @@
     ".............",
     ".............",
     "........Z....",
-    "...S..SS.S...",
-    "..HDQQHDQDH..",
+    "..S.S.S..S...",
+    "..HQDjHQQDH..",
     "..D.......CK.",
     "..D.......hK.",
-    "..Dm......CK.",
+    "..Dn......CK.",
     "..Dd....RRD..",
     "..HDQDHQDDH..",
     "...T.TT.T....",
@@ -384,11 +394,11 @@
    "rows": [
     ".............",
     ".............",
-    "........k....",
+    "........l....",
     ".............",
     "..HDDDHDDDH..",
     "..D.......CK.",
-    "..D..Y..YoCK.",
+    "..D..Y..YpCK.",
     "..D.......CK.",
     "..D.......D..",
     "..HDDDHDDDH..",
@@ -405,9 +415,9 @@
     ".............",
     ".IIIIIIIIIII.",
     "..HMMMMMMMH..",
-    "..PEEEEEEEPq.",
+    "..PEEEEEEEPr.",
     "..PEEEEEEEPC.",
-    "..PEEEEEEEPp.",
+    "..PEEEEEEEPq.",
     "..PEEEEEEEP..",
     "..HMMMMMMMH..",
     ".JJJJJJJJJJJ.",
@@ -622,6 +632,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/snowy/trades.py",
-  "checksum": "f839c558a560bfcd"
+  "checksum": "b88cc50d4562911c"
  }
 }

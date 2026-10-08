@@ -372,7 +372,7 @@ def herbalist():
     ridge = body.roof(axis='x', pitch=2, gable='white_terracotta')
     parts.front_door(b, 5, 2, 4, 'north', wood='dark_oak', step='stone_brick_stairs', lamps=False)
     k.fireplace(b, 10, 6, 'east', 1, ridge + 1)
-    body.windows(0, 'north', [(2, 2), 6], height=1)
+    body.windows(0, 'north', [1, (5, 2)], height=1)
     body.windows(0, 'south', [2, 5], height=1)
     body.gable_window('west')
     # Brewing corner.
