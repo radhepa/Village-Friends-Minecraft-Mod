@@ -31,7 +31,8 @@ PACKS = {
         "description": "The first resident animation pack: everyday idles, hobbies for every personality, "
                        "work for every profession, greetings, conversations, reactions, weather and children's play.",
         "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
-                    "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime"],
+                    "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
+                    "guards"],
     },
 }
 MAX_ROT, MAX_POS = 400, 12
@@ -41,7 +42,8 @@ MAX_ROT, MAX_POS = 400, 12
 # trade, during their free hour their hobby. Clips from these modules are boosted for that part of the day.
 WORK_HOURS = {"routine:work": 3.0, "routine:prayer": 3.0, "routine:night_watch": 2.0}
 FREE_HOUR = {"routine:hobby": 4.0, "routine:rain_walk": 1.5}
-ROUTINE_BOOSTS = {"work": WORK_HOURS, "trades": WORK_HOURS, "crafts": WORK_HOURS, "hobbies": FREE_HOUR, "pastimes": FREE_HOUR}
+ROUTINE_BOOSTS = {"work": WORK_HOURS, "trades": WORK_HOURS, "crafts": WORK_HOURS, "guards": WORK_HOURS,
+                  "hobbies": FREE_HOUR, "pastimes": FREE_HOUR}
 
 
 def load(pack: str):
