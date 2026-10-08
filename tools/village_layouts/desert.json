@@ -1,0 +1,363 @@
+{
+  "format": 3,
+  "type": "desert",
+  "structure": "village_desert",
+  "villager_type": "minecraft:desert",
+  "weight": 1,
+  "biomes": [
+    "minecraft:desert"
+  ],
+  "start_pool": "desert/town_centers",
+  "start_jigsaw": "town_start",
+  "depth": 6,
+  "max_distance": {
+    "horizontal": 100,
+    "vertical": 20
+  },
+  "terrain": {
+    "radius": 64,
+    "step": 16,
+    "core_radius": 32,
+    "max_height_range": 14,
+    "max_water": 0.2,
+    "max_core_water": 0.25,
+    "min_biome": 0.4
+  },
+  "prune": {
+    "max_buried": 5,
+    "max_floating": 5,
+    "tolerance": 0.25
+  },
+  "min_pieces": 20,
+  "pools": {
+    "desert/town_centers": [
+      {
+        "template": "desert/plaza_oasis",
+        "weight": 2,
+        "processors": "desert_weathered"
+      },
+      {
+        "template": "desert/plaza_bazaar",
+        "weight": 2,
+        "processors": "desert_weathered"
+      },
+      {
+        "template": "desert/plaza_well",
+        "weight": 2,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/tavern": [
+      {
+        "template": "desert/tavern",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/garrison": [
+      {
+        "template": "desert/garrison",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/workshop": [
+      {
+        "template": "desert/workshop",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/chapel": [
+      {
+        "template": "desert/chapel",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/apothecary": [
+      {
+        "template": "desert/apothecary",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/library": [
+      {
+        "template": "desert/library",
+        "weight": 1,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/buildings/market": [
+      {
+        "template": "desert/market_souk",
+        "weight": 3,
+        "processors": "desert_weathered"
+      },
+      {
+        "template": "desert/market_spice",
+        "weight": 2,
+        "processors": "desert_weathered"
+      },
+      {
+        "template": "desert/market_cistern",
+        "weight": 2,
+        "processors": "desert_weathered"
+      }
+    ],
+    "desert/avenues": [
+      {
+        "template": "desert/avenue",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "desert_street"
+      },
+      {
+        "template": "desert/avenue_bend",
+        "weight": 2,
+        "projection": "terrain_matching",
+        "processors": "desert_street"
+      }
+    ],
+    "desert/streets": {
+      "fallback": "desert/street_ends",
+      "elements": [
+        {
+          "template": "desert/street_straight_short",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_straight_long",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_straight_lamp",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_bend_right",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_bend_left",
+          "weight": 4,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_turn_right",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_turn_left",
+          "weight": 3,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_tee_right",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_tee_left",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_fork",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_crossroads",
+          "weight": 1,
+          "projection": "terrain_matching",
+          "processors": "desert_street"
+        },
+        {
+          "template": "desert/street_square",
+          "weight": 1,
+          "processors": "desert_street"
+        }
+      ]
+    },
+    "desert/street_ends": [
+      {
+        "template": "desert/end_gate",
+        "weight": 3,
+        "processors": "desert_weathered"
+      },
+      {
+        "template": "desert/end_lamp",
+        "weight": 3,
+        "projection": "terrain_matching",
+        "processors": "desert_street"
+      },
+      {
+        "template": "desert/end_fade",
+        "weight": 4,
+        "projection": "terrain_matching",
+        "processors": "desert_street"
+      }
+    ]
+  },
+  "required_pools": [
+    "desert/town_centers",
+    "desert/buildings/tavern",
+    "desert/buildings/garrison",
+    "desert/buildings/workshop",
+    "desert/buildings/chapel",
+    "desert/buildings/apothecary",
+    "desert/buildings/library"
+  ],
+  "slot_widths": {
+    "desert/buildings/tavern": 17,
+    "desert/buildings/garrison": 17,
+    "desert/buildings/workshop": 17,
+    "desert/buildings/chapel": 17,
+    "desert/buildings/apothecary": 11,
+    "desert/buildings/library": 11,
+    "desert/buildings/market": 11
+  },
+  "processor_lists": {
+    "desert_weathered": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:smooth_sandstone",
+              "probability": 0.05
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:sandstone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cut_sandstone",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:smooth_sandstone"
+          }
+        ]
+      }
+    ],
+    "desert_street": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:smooth_sandstone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:sandstone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:cut_sandstone"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:sand"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:gravel"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:water"
+            },
+            "output_state": "minecraft:acacia_planks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:smooth_sandstone",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:sandstone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cut_sandstone",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:smooth_sandstone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:sandstone",
+              "probability": 0.04
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:sand"
+          }
+        ]
+      }
+    ]
+  }
+}

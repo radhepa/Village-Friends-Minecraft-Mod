@@ -229,14 +229,14 @@ def awning(b, cells, y, out, colors=STRIPES, start=0, valance='acacia'):
                   waterlogged=False)
 
 
-def canopy(b, x0, z0, x1, z1, y, colors=STRIPES, along='x', posts=None, post='acacia_fence', start=0):
-    """Flat striped cloth canopy on posts (stripes run perpendicular to ``along``)."""
+def canopy(b, x0, z0, x1, z1, y, colors=STRIPES, along='x', posts=None, post='acacia_fence', start=0, base=1):
+    """Flat striped cloth canopy on posts standing on ``base`` (stripes run perpendicular to ``along``)."""
     for x in range(x0, x1 + 1):
         for z in range(z0, z1 + 1):
             i = (x - x0) if along == 'x' else (z - z0)
             b.set(x, y, z, f'{colors[(i + start) % len(colors)]}_wool')
     for (x, z) in posts or ((x0, z0), (x1, z0), (x0, z1), (x1, z1)):
-        for yy in range(1, y):
+        for yy in range(base, y):
             if is_air(b.get(x, yy, z)):
                 b.set(x, yy, z, post)
 

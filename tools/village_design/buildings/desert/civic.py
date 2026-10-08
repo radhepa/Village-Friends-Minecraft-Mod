@@ -520,7 +520,7 @@ def workshop():
     b.room('bedroom', (4, 8, 7))
     dp.lantern(b, 8, 9, 7)
     # Roof: cloth drying line under a little canopy.
-    dp.canopy(b, 2, 11, 5, 13, 13, along='x', colors=('orange', 'white', 'cyan', 'white'))
+    dp.canopy(b, 2, 11, 5, 13, 13, along='x', colors=('orange', 'white', 'cyan', 'white'), base=11)
     for x, c in ((6, 'red'), (7, 'yellow')):
         b.set(x, 11, 12, f'{c}_wool')
     dp.pot(b, 8, 11, 7, 'cactus')

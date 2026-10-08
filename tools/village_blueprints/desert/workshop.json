@@ -63,16 +63,6 @@
    }
   },
   "N": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "false"
-   }
-  },
-  "O": {
    "id": "minecraft:sandstone_wall",
    "properties": {
     "east": "none",
@@ -81,6 +71,16 @@
     "up": "false",
     "waterlogged": "false",
     "west": "none"
+   }
+  },
+  "O": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
    }
   },
   "P": {
@@ -149,16 +149,6 @@
    }
   },
   "a": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "true",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "b": {
    "id": "minecraft:jungle_stairs",
    "properties": {
     "facing": "north",
@@ -167,84 +157,44 @@
     "waterlogged": "false"
    }
   },
-  "c": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "true",
-    "waterlogged": "false",
-    "west": "false"
-   }
-  },
-  "d": {
+  "b": {
    "id": "minecraft:jungle_log",
    "properties": {
     "axis": "z"
    }
   },
-  "e": {
+  "c": {
    "id": "minecraft:lantern",
    "properties": {
     "hanging": "true",
     "waterlogged": "false"
    }
   },
-  "f": {
+  "d": {
    "id": "minecraft:smooth_sandstone_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "g": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "h": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "true",
-    "north": "false",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "false"
-   }
-  },
-  "i": {
+  "e": {
    "id": "minecraft:decorated_pot",
    "properties": {
     "facing": "north"
    }
   },
-  "j": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "true",
-    "north": "false",
-    "south": "true",
-    "waterlogged": "false",
-    "west": "false"
-   }
-  },
-  "k": {
+  "f": {
    "id": "minecraft:cactus",
    "properties": {
     "age": "0"
    }
   },
-  "l": {
+  "g": {
    "id": "minecraft:cyan_carpet"
   },
-  "m": {
+  "h": {
    "id": "minecraft:red_wool"
   },
-  "n": {
+  "i": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "south",
@@ -253,39 +203,29 @@
     "waterlogged": "false"
    }
   },
-  "o": {
+  "j": {
    "id": "minecraft:water_cauldron",
    "properties": {
     "level": "3"
    }
   },
-  "p": {
+  "k": {
    "id": "minecraft:yellow_wool"
   },
-  "q": {
-   "id": "minecraft:acacia_fence",
-   "properties": {
-    "east": "false",
-    "north": "true",
-    "south": "false",
-    "waterlogged": "false",
-    "west": "true"
-   }
-  },
-  "r": {
+  "l": {
    "id": "minecraft:acacia_slab",
    "properties": {
     "type": "bottom"
    }
   },
-  "s": {
+  "m": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up",
     "open": "false"
    }
   },
-  "t": {
+  "n": {
    "id": "minecraft:chest",
    "properties": {
     "facing": "east",
@@ -293,7 +233,7 @@
     "waterlogged": "false"
    }
   },
-  "u": {
+  "o": {
    "id": "minecraft:chest",
    "properties": {
     "facing": "north",
@@ -301,13 +241,13 @@
     "waterlogged": "false"
    }
   },
-  "v": {
+  "p": {
    "id": "minecraft:chiseled_sandstone"
   },
-  "w": {
+  "q": {
    "id": "minecraft:crafting_table"
   },
-  "x": {
+  "r": {
    "id": "minecraft:cyan_bed",
    "properties": {
     "facing": "north",
@@ -315,7 +255,7 @@
     "part": "foot"
    }
   },
-  "y": {
+  "s": {
    "id": "minecraft:cyan_bed",
    "properties": {
     "facing": "north",
@@ -323,19 +263,19 @@
     "part": "head"
    }
   },
-  "z": {
+  "t": {
    "id": "minecraft:cyan_wall_banner",
    "properties": {
     "facing": "north"
    }
   },
-  "0": {
+  "u": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "1": {
+  "v": {
    "id": "minecraft:jungle_door",
    "properties": {
     "facing": "south",
@@ -345,7 +285,7 @@
     "powered": "false"
    }
   },
-  "2": {
+  "w": {
    "id": "minecraft:jungle_door",
    "properties": {
     "facing": "south",
@@ -355,7 +295,7 @@
     "powered": "false"
    }
   },
-  "3": {
+  "x": {
    "id": "minecraft:jungle_door",
    "properties": {
     "facing": "west",
@@ -365,7 +305,7 @@
     "powered": "false"
    }
   },
-  "4": {
+  "y": {
    "id": "minecraft:jungle_door",
    "properties": {
     "facing": "west",
@@ -375,7 +315,7 @@
     "powered": "false"
    }
   },
-  "5": {
+  "z": {
    "id": "minecraft:jungle_trapdoor",
    "properties": {
     "facing": "west",
@@ -385,13 +325,13 @@
     "waterlogged": "false"
    }
   },
-  "6": {
+  "0": {
    "id": "minecraft:loom",
    "properties": {
     "facing": "east"
    }
   },
-  "7": {
+  "1": {
    "id": "minecraft:orange_bed",
    "properties": {
     "facing": "north",
@@ -399,7 +339,7 @@
     "part": "foot"
    }
   },
-  "8": {
+  "2": {
    "id": "minecraft:orange_bed",
    "properties": {
     "facing": "north",
@@ -407,16 +347,16 @@
     "part": "head"
    }
   },
-  "9": {
+  "3": {
    "id": "minecraft:orange_wall_banner",
    "properties": {
     "facing": "north"
    }
   },
-  "!": {
+  "4": {
    "id": "minecraft:potted_cactus"
   },
-  "#": {
+  "5": {
    "id": "minecraft:sandstone_stairs",
    "properties": {
     "facing": "south",
@@ -425,22 +365,22 @@
     "waterlogged": "false"
    }
   },
-  "$": {
+  "6": {
    "id": "minecraft:yellow_carpet"
   },
-  "%": {
+  "7": {
    "id": "villagefriends:house_plaque",
    "properties": {
     "facing": "north"
    }
   },
-  "&": {
+  "8": {
    "id": "villagefriends:sawmill",
    "properties": {
     "facing": "west"
    }
   },
-  "(": {
+  "9": {
    "id": "villagefriends:sewing_table",
    "properties": {
     "facing": "north"
@@ -474,21 +414,21 @@
   {
    "y": 1,
    "rows": [
-    "........0........",
-    ".N..N..i.........",
+    "........u........",
+    ".O..O..e.........",
     ".................",
-    ".koo.............",
-    ".....#%...M.....M",
+    ".fjj.............",
+    ".....57...M.....M",
     ".BBBBBBBBB.....V.",
     ".BCCCCCCCB.F...V.",
     ".BCCCCCCCB.....V.",
-    ".BCCCCCCCB...&...",
+    ".BCCCCCCCB...8...",
     ".BCCCCCCCBM.....M",
     ".BCCCCCCCB......C",
     ".BCCCCCCCB......C",
-    ".BCCCCCCCB...w..C",
-    ".BCCCCCCCB.....sC",
-    ".BBBBBBBBB..ddd.C",
+    ".BCCCCCCCB...q..C",
+    ".BCCCCCCCB.....mC",
+    ".BBBBBBBBB..bbb.C",
     "..........M.....M",
     ".................",
     "................."
@@ -498,20 +438,20 @@
    "y": 2,
    "rows": [
     ".................",
-    ".N..N............",
+    ".O..O............",
     ".................",
-    ".k...............",
-    "...n...n..M.....M",
-    ".IAAA1AAAI.....V.",
-    ".Am......A.r...V.",
-    ".Ap......A.....V.",
+    ".f...............",
+    "...i...i..M.....M",
+    ".IAAAvAAAI.....V.",
+    ".Ah......A.l...V.",
+    ".Ak......A.....V.",
     ".AU.RRR..A.......",
-    ".AX.RlR.TAM.....M",
-    ".A6.RRR.TA......C",
-    ".Aq..N..TA......C",
+    ".AX.RgR.TAM.....M",
+    ".A0.RRR.TA......C",
     ".A......TA......C",
-    ".At.(ci.bA......C",
-    ".IAAAAAAAI...d..C",
+    ".A......TA......C",
+    ".An.9.e.aA......C",
+    ".IAAAAAAAI...b..C",
     "..........M.....M",
     ".................",
     "................."
@@ -521,19 +461,19 @@
    "y": 3,
    "rows": [
     ".................",
-    ".N..N............",
+    ".O..O............",
     ".................",
     ".................",
     "..........M.....M",
-    ".IAZA2AZAI.......",
+    ".IAZAwAZAI.......",
     ".AS......A.....V.",
-    ".A$......A.......",
-    ".Yl......A.......",
+    ".A6......A.......",
+    ".Yg......A.......",
     ".AR.....TAM.....M",
     ".A......TA.......",
-    ".YN..N..TA.......",
-    ".A......bA.......",
-    ".Aa..c...A.......",
+    ".Y......TA.......",
+    ".A......aA.......",
+    ".A.......A.......",
     ".IAAAAAAAI.......",
     "..........M.....M",
     ".................",
@@ -543,20 +483,20 @@
   {
    "y": 4,
    "rows": [
-    "..9z.............",
+    "..3t.............",
     ".HHHH............",
     ".................",
     "..........QXQXQXQ",
     "..........M.....M",
-    ".IAZAvAZAI.......",
+    ".IAZApAZAI.......",
     ".A.......A.......",
     ".A.......A.......",
     ".Y.......A.......",
     ".A......TAM.....M",
-    ".A......TA...e...",
-    ".YN..N..bA.......",
+    ".A......TA...c...",
+    ".Y......aA.......",
     ".A.......A.......",
-    ".Aa..c...A.......",
+    ".A.......A.......",
     ".IAAAAAAAI.......",
     "..........M.....M",
     ".................",
@@ -575,11 +515,11 @@
     ".A.......ALJJJJJL",
     ".A.......AL..L..L",
     ".A.......ALJJJJJL",
-    ".A...e..TALJJLJJL",
-    ".A......bALJJJJJL",
-    ".Ag..N...AL..L..L",
+    ".A...c..TALJJLJJL",
+    ".A......aALJJJJJL",
+    ".A.......AL..L..L",
     ".A.......ALJJJJJL",
-    ".Aa..c...AL..L..L",
+    ".A.......AL..L..L",
     ".IAAAAAAAILJJJJJL",
     "..........HHHHHHH",
     ".................",
@@ -598,7 +538,7 @@
     ".EFFFFFFFE.......",
     ".EFFFFFFFE.......",
     ".EFFFFFFFE.......",
-    ".EFFFFFFbE.......",
+    ".EFFFFFFaE.......",
     ".EFFFFFF.E.......",
     ".EFFFFFF.E.......",
     ".EFFFFFFFE.......",
@@ -619,13 +559,13 @@
     ".................",
     ".IAAAAAAAI.......",
     ".A....A..A.......",
-    ".A....3..A.......",
+    ".A....x..A.......",
     ".ASSSSA..A.......",
     ".ASRRSA..A.......",
     ".ASSSSA..A.......",
-    ".Ag..hA..A.......",
-    ".Ay..8A..A.......",
-    ".Axui7A..A.......",
+    ".A....A..A.......",
+    ".As..2A..A.......",
+    ".Aroe1A..A.......",
     ".IAAAAAAAI.......",
     ".................",
     ".................",
@@ -642,13 +582,13 @@
     ".................",
     ".IAZAAAZAI.......",
     ".A....A..A.......",
-    ".A....4..A.......",
+    ".A....y..A.......",
     ".Y....A..A.......",
     ".A....A..A.......",
     ".A....A..A.......",
-    ".YN..hA..A.......",
-    ".A....A..5.......",
-    ".Aa..jA..A.......",
+    ".Y....A..A.......",
+    ".A....A..z.......",
+    ".A....A..A.......",
     ".IAAAAAAAI.......",
     ".................",
     ".................",
@@ -665,13 +605,13 @@
     ".................",
     ".IAAAAAAAI.......",
     ".A....A..A.......",
-    ".A....A.eA.......",
+    ".A....A.cA.......",
     ".A....A..A.......",
-    ".A.e..A..A.......",
+    ".A.c..A..A.......",
     ".A....A..A.......",
-    ".Ag..hA..A.......",
     ".A....A..A.......",
-    ".Aa..jA..A.......",
+    ".A....A..A.......",
+    ".A....A..A.......",
     ".IAAAAAAAI.......",
     ".................",
     ".................",
@@ -710,14 +650,14 @@
     ".................",
     ".................",
     ".EPPPPPPPE.......",
-    ".O.......O.......",
-    ".O......!O.......",
-    ".O.......O.......",
-    ".O.......O.......",
-    ".O.......O.......",
-    ".ON..N...O.......",
-    ".O....mp.O.......",
-    ".ON..N...O.......",
+    ".N.......N.......",
+    ".N......4N.......",
+    ".N.......N.......",
+    ".N.......N.......",
+    ".N.......N.......",
+    ".NO..O...N.......",
+    ".N....hk.N.......",
+    ".NO..O...N.......",
     ".EPPPPPPPE.......",
     ".................",
     ".................",
@@ -732,16 +672,16 @@
     ".................",
     ".................",
     ".................",
-    ".f.......f.......",
+    ".d.......d.......",
     ".................",
     ".................",
     ".................",
     ".................",
     ".................",
-    "..N..N...........",
+    "..O..O...........",
     ".................",
-    "..N..N...........",
-    ".f.......f.......",
+    "..O..O...........",
+    ".d.......d.......",
     ".................",
     ".................",
     "................."
@@ -872,6 +812,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/desert/civic.py",
-  "checksum": "34efdc80791461fa"
+  "checksum": "026c2f38bac07952"
  }
 }

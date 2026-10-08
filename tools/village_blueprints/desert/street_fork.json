@@ -1,0 +1,251 @@
+{
+ "format": 1,
+ "size": [15, 6, 8],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "C": {
+   "id": "minecraft:sandstone"
+  },
+  "D": {
+   "id": "minecraft:sand"
+  },
+  "E": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "F": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "G": {
+   "id": "minecraft:sandstone_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "H": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "south_up"
+   }
+  },
+  "I": {
+   "id": "minecraft:dead_bush"
+  },
+  "J": {
+   "id": "minecraft:gravel"
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "east_up"
+   }
+  },
+  "L": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "west_up"
+   }
+  },
+  "M": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAABBCAAAAAA",
+    "AAAAAABBCCDAAAA",
+    "DAADDDBBCDDADCD",
+    "CBBEBBCBEBEEEBC",
+    "CEBBBBBBBBCCBEB",
+    "BBBBCCCCJCCCCCB",
+    "ADAAACCCCCCDDAA",
+    "AAAAAAAEAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "AFAAAA.F.AAAAFA",
+    "AAAAAA....IAAAA",
+    ".AA........A...",
+    "...............",
+    "L.............K",
+    "...............",
+    "A.AAA........AA",
+    "AAAHAAAGAAAHAAA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "AAAAAA...AAAAAA",
+    "AAAAAA....AAAAA",
+    ".AA........A...",
+    "...............",
+    "...............",
+    "...............",
+    "A.AAA........AA",
+    "AAAAAAAGAAAAAAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "AAAAAA...AAAAAA",
+    "AAAAAA....AAAAA",
+    ".AA........A...",
+    "...............",
+    "...............",
+    "...............",
+    "A.AAA........AA",
+    "AAAAAAAGAAAAAAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "AAAAAA...AAAAAA",
+    "AAAAAA....AAAAA",
+    ".AA........A...",
+    "...............",
+    "...............",
+    "...............",
+    "A.AAA........AA",
+    "AAAAAAAMAAAAAAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "AAAAAA...AAAAAA",
+    "AAAAAA....AAAAA",
+    ".AA........A...",
+    "...............",
+    "...............",
+    "...............",
+    "A.AAA........AA",
+    "AAAAAAAAAAAAAAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [0, 1, 4],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_out",
+    "target": "villagefriends:street_in",
+    "pool": "villagefriends:village/desert/streets",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 1,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [1, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [3, 1, 7],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [11, 1, 7],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [13, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [14, 1, 4],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_out",
+    "target": "villagefriends:street_in",
+    "pool": "villagefriends:village/desert/streets",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 1,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/streets.py",
+  "checksum": "7ea1562b3fcd3a7b"
+ }
+}

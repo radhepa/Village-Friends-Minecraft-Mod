@@ -1,0 +1,308 @@
+{
+ "format": 1,
+ "size": [8, 6, 14],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:sandstone"
+  },
+  "C": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "D": {
+   "id": "minecraft:sand"
+  },
+  "E": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "F": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "east_up"
+   }
+  },
+  "G": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "west_up"
+   }
+  },
+  "H": {
+   "id": "minecraft:gravel"
+  },
+  "I": {
+   "id": "minecraft:dead_bush"
+  },
+  "J": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "K": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "south_up"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BAAABEEA",
+    "ADABBCCA",
+    "AAAAEBBA",
+    "AAAAHCEA",
+    "AAAAECBA",
+    "AAACCEDA",
+    "AAAECBAA",
+    "AABCCABA",
+    "AABCHDDA",
+    "DBCEDAAA",
+    "ABEHBAAD",
+    "ADBBAAAA",
+    "ABBBAADA",
+    "DBCBAADA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".AAA.J.A",
+    "GIA....A",
+    "AAAA...A",
+    "AAAA...F",
+    "GAAA...A",
+    "AAA....A",
+    "AAA...AF",
+    "GA...A.A",
+    "AA.....A",
+    ".....AAF",
+    "G....AA.",
+    "A...AAAA",
+    "A...AA.F",
+    "..K.AA.A"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".AAA...A",
+    "AAA....A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAA....A",
+    "AAA...AA",
+    "AA...A.A",
+    "AA.....A",
+    ".....AAA",
+    "A....AA.",
+    "A...AAAA",
+    "A...AA.A",
+    "....AA.A"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".AAA...A",
+    "AAA....A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAA....A",
+    "AAA...AA",
+    "AA...A.A",
+    "AA.....A",
+    ".....AAA",
+    "A....AA.",
+    "A...AAAA",
+    "A...AA.A",
+    "....AA.A"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".AAA...A",
+    "AAA....A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAA....A",
+    "AAA...AA",
+    "AA...A.A",
+    "AA.....A",
+    ".....AAA",
+    "A....AA.",
+    "A...AAAA",
+    "A...AA.A",
+    "....AA.A"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".AAA...A",
+    "AAA....A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAAA...A",
+    "AAA....A",
+    "AAA...AA",
+    "AA...A.A",
+    "AA.....A",
+    ".....AAA",
+    "A....AA.",
+    "A...AAAA",
+    "A...AA.A",
+    "....AA.A"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [0, 1, 1],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [0, 1, 4],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [0, 1, 7],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [0, 1, 10],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [2, 1, 13],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_out",
+    "target": "villagefriends:street_in",
+    "pool": "villagefriends:village/desert/streets",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 1,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 3],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 6],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 9],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 12],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/desert/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/desert/streets.py",
+  "checksum": "8195fb1d647d3f65"
+ }
+}

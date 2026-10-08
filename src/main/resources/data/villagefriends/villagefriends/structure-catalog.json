@@ -1320,6 +1320,3507 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/desert/apothecary",
+      "size": [
+        11,
+        16,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "apothecary_bedroom",
+          "min": [
+            2,
+            7,
+            10
+          ],
+          "max": [
+            7,
+            9,
+            12
+          ],
+          "probe": [
+            5,
+            7,
+            11
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          5,
+          7,
+          9
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          7,
+          12
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:alchemical_press",
+          "pos": [
+            2,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            6,
+            2,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:apothecary_cot",
+          "pos": [
+            6,
+            2,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/avenue",
+      "size": [
+        5,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            16
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            18
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            20
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            22
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/avenue_bend",
+      "size": [
+        8,
+        6,
+        26
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            8
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            11
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            14
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            17
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            19
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            20
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            22
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            23
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            25
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/chapel",
+      "size": [
+        17,
+        22,
+        21
+      ],
+      "rooms": [],
+      "doors": [
+        [
+          8,
+          2,
+          7
+        ]
+      ],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            8,
+            1,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/end_fade",
+      "size": [
+        5,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/end_gate",
+      "size": [
+        17,
+        11,
+        7
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/end_lamp",
+      "size": [
+        7,
+        6,
+        5
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            4,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/garrison",
+      "size": [
+        17,
+        20,
+        21
+      ],
+      "rooms": [
+        {
+          "name": "bunk_room",
+          "min": [
+            1,
+            7,
+            14
+          ],
+          "max": [
+            13,
+            9,
+            19
+          ],
+          "probe": [
+            7,
+            7,
+            16
+          ],
+          "beds": 4
+        }
+      ],
+      "doors": [
+        [
+          14,
+          1,
+          6
+        ],
+        [
+          8,
+          2,
+          13
+        ],
+        [
+          14,
+          7,
+          15
+        ]
+      ],
+      "bed_feet": [
+        [
+          1,
+          7,
+          19
+        ],
+        [
+          4,
+          7,
+          19
+        ],
+        [
+          7,
+          7,
+          19
+        ],
+        [
+          10,
+          7,
+          19
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            6,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            3,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            1,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            6,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:command_desk",
+          "pos": [
+            3,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:training_dummy",
+          "pos": [
+            11,
+            2,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/library",
+      "size": [
+        11,
+        19,
+        17
+      ],
+      "rooms": [
+        {
+          "name": "scholar_bedroom",
+          "min": [
+            2,
+            8,
+            11
+          ],
+          "max": [
+            8,
+            10,
+            13
+          ],
+          "probe": [
+            5,
+            8,
+            12
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          4,
+          8,
+          10
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          8,
+          13
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "villagefriends:archives",
+          "pos": [
+            5,
+            2,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/market_cistern",
+      "size": [
+        11,
+        12,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            1,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            9,
+            1,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/market_souk",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            8,
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/market_spice",
+      "size": [
+        11,
+        7,
+        11
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/plaza_bazaar",
+      "size": [
+        33,
+        16,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/garrison"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/library"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/tavern"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/workshop"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/apothecary"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/chapel"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            9,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            23,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            5,
+            1,
+            21
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            23
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            24,
+            2,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/plaza_oasis",
+      "size": [
+        33,
+        16,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/tavern"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/apothecary"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/garrison"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/chapel"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/library"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/workshop"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            6,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            8,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            24,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            24,
+            1,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            26,
+            1,
+            20
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            24
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            5,
+            1,
+            26
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            4,
+            1,
+            27
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            6,
+            1,
+            27
+          ]
+        },
+        {
+          "id": "villagefriends:campfire_bench",
+          "pos": [
+            5,
+            1,
+            28
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            25,
+            2,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/plaza_well",
+      "size": [
+        33,
+        18,
+        33
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/workshop"
+        },
+        {
+          "pos": [
+            19,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            27,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/apothecary"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            8
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/chapel"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            16,
+            1,
+            16
+          ],
+          "direction": "up",
+          "name": "villagefriends:town_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            19
+          ],
+          "direction": "east",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            24
+          ],
+          "direction": "west",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/garrison"
+        },
+        {
+          "pos": [
+            32,
+            1,
+            27
+          ],
+          "direction": "east",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/market"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/library"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:plaza_exit",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/avenues"
+        },
+        {
+          "pos": [
+            24,
+            1,
+            32
+          ],
+          "direction": "south",
+          "name": "villagefriends:slot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/buildings/tavern"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:notice_board",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            10
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            10,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            22,
+            1,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:easel_canvas",
+          "pos": [
+            6,
+            1,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            16,
+            1,
+            22
+          ]
+        },
+        {
+          "id": "villagefriends:music_stand",
+          "pos": [
+            26,
+            2,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/street_bend_left",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            9
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_bend_right",
+      "size": [
+        8,
+        6,
+        14
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            12
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            5,
+            1,
+            13
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_crossroads",
+      "size": [
+        13,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            12,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            9
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_fork",
+      "size": [
+        15,
+        6,
+        8
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            4
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            4
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            7
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_square",
+      "size": [
+        15,
+        8,
+        15
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            1,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            3
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            14,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            13
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            11,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            13,
+            1,
+            14
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            1,
+            3
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/street_straight_lamp",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_straight_long",
+      "size": [
+        5,
+        6,
+        17
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            11
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            14
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            15
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            16
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_straight_short",
+      "size": [
+        5,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            3
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            4,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_tee_left",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_tee_right",
+      "size": [
+        10,
+        6,
+        13
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            2
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            2
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            6
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            6
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            10
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            10
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            2,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            7,
+            1,
+            12
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_turn_left",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            1
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            5
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            7
+          ],
+          "direction": "west",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/street_turn_right",
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "rooms": [],
+      "doors": [],
+      "bed_feet": [],
+      "residents": 0,
+      "connectors": [
+        {
+          "pos": [
+            2,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:street_in",
+          "target": "villagefriends:street_out",
+          "pool": "minecraft:empty"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            1
+          ],
+          "direction": "east",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            0,
+            1,
+            5
+          ],
+          "direction": "west",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            9,
+            1,
+            7
+          ],
+          "direction": "east",
+          "name": "villagefriends:street_out",
+          "target": "villagefriends:street_in",
+          "pool": "villagefriends:village/desert/streets"
+        },
+        {
+          "pos": [
+            3,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        },
+        {
+          "pos": [
+            6,
+            1,
+            9
+          ],
+          "direction": "south",
+          "name": "villagefriends:lot",
+          "target": "villagefriends:building_entrance",
+          "pool": "villagefriends:village/desert/lots"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/desert/tavern",
+      "size": [
+        17,
+        19,
+        29
+      ],
+      "rooms": [
+        {
+          "name": "guest_room_north",
+          "min": [
+            2,
+            8,
+            11
+          ],
+          "max": [
+            5,
+            10,
+            15
+          ],
+          "probe": [
+            4,
+            8,
+            13
+          ],
+          "beds": 2
+        },
+        {
+          "name": "guest_room_south",
+          "min": [
+            2,
+            8,
+            17
+          ],
+          "max": [
+            5,
+            10,
+            21
+          ],
+          "probe": [
+            4,
+            8,
+            19
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          10
+        ],
+        [
+          13,
+          2,
+          22
+        ],
+        [
+          8,
+          2,
+          25
+        ],
+        [
+          6,
+          8,
+          13
+        ],
+        [
+          6,
+          8,
+          19
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          8,
+          12
+        ],
+        [
+          3,
+          8,
+          14
+        ],
+        [
+          3,
+          8,
+          18
+        ],
+        [
+          3,
+          8,
+          20
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            11,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            12,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            13,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            3,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            4,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            5,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            11,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            12,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            13,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            3,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            4,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            11,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            12,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            13,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            9,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            12
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            10,
+            2,
+            13
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            14
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            10,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:tap_stand",
+          "pos": [
+            14,
+            2,
+            15
+          ]
+        },
+        {
+          "id": "villagefriends:drinks_barrel",
+          "pos": [
+            14,
+            2,
+            16
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            3,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            10,
+            2,
+            17
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            2,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            18
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            5,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_table",
+          "pos": [
+            6,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:tavern_chair",
+          "pos": [
+            7,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:bar_stool",
+          "pos": [
+            10,
+            2,
+            19
+          ]
+        },
+        {
+          "id": "villagefriends:kitchen_stove",
+          "pos": [
+            11,
+            2,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/workshop",
+      "size": [
+        17,
+        14,
+        18
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            7,
+            6
+          ],
+          "max": [
+            5,
+            9,
+            13
+          ],
+          "probe": [
+            4,
+            7,
+            7
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          6,
+          7,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          7,
+          13
+        ],
+        [
+          5,
+          7,
+          13
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            6,
+            1,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:sawmill",
+          "pos": [
+            13,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "villagefriends:sewing_table",
+          "pos": [
+            4,
+            2,
+            13
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/end_fade",
       "size": [
         5,
@@ -4930,6 +8431,65 @@
     }
   ],
   "villages": [
+    {
+      "type": "desert",
+      "structure": "villagefriends:village_desert",
+      "start_pool": "villagefriends:village/desert/town_centers",
+      "start_jigsaw": "villagefriends:town_start",
+      "min_pieces": 20,
+      "depth": 6,
+      "max_distance": 100,
+      "biomes": [
+        "minecraft:desert"
+      ],
+      "required_modules": [
+        {
+          "pool": "villagefriends:village/desert/town_centers",
+          "templates": [
+            "villagefriends:village/desert/plaza_oasis",
+            "villagefriends:village/desert/plaza_bazaar",
+            "villagefriends:village/desert/plaza_well"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/tavern",
+          "templates": [
+            "villagefriends:village/desert/tavern"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/garrison",
+          "templates": [
+            "villagefriends:village/desert/garrison"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/workshop",
+          "templates": [
+            "villagefriends:village/desert/workshop"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/chapel",
+          "templates": [
+            "villagefriends:village/desert/chapel"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/apothecary",
+          "templates": [
+            "villagefriends:village/desert/apothecary"
+          ]
+        },
+        {
+          "pool": "villagefriends:village/desert/buildings/library",
+          "templates": [
+            "villagefriends:village/desert/library"
+          ]
+        }
+      ],
+      "resident_minimum": 10
+    },
     {
       "type": "plains",
       "structure": "villagefriends:village",
