@@ -4,13 +4,20 @@
     {"id": "m_daily_summer_tunic", "name": "Summer Villager", "top": "t347_short_sleeved_summer_tunic", "bottom": "b347_summer_knee_breeches"},
     {"id": "m_daily_patched_coat", "name": "Make-Do Villager", "top": "t348_patched_elbow_wool_coat", "bottom": "b348_patched_knee_trousers"},
     {"id": "m_daily_knit_waistcoat", "name": "Knitted Shepherd", "top": "t349_knitted_wool_waistcoat", "bottom": "b349_ribbed_wool_hose"},
-    {"id": "m_daily_quilted_vest", "name": "Kitchen Hand", "top": "t350_quilted_sleeveless_vest", "bottom": "b350_quilted_knee_breeches"}
+    {"id": "m_daily_quilted_vest", "name": "Kitchen Hand", "top": "t350_quilted_sleeveless_vest", "bottom": "b350_quilted_knee_breeches"},
+    {"id": "m_daily_short_cape", "name": "Caped Herdsman", "top": "t351_hooded_short_cape_tunic", "bottom": "b351_simple_wrapped_trousers"},
+    {"id": "m_daily_chore_smock", "name": "Chore Hand", "top": "t352_chore_smock_patch_pockets", "bottom": "b352_chore_trousers"},
+    {"id": "m_daily_open_overshirt", "name": "Easygoing Villager", "top": "t353_open_collar_linen_overshirt", "bottom": "b353_linen_calf_braies"},
+    {"id": "m_daily_side_laced_jerkin", "name": "Thong Lacer", "top": "t354_side_laced_wool_jerkin", "bottom": "b354_side_laced_gaiters"},
+    {"id": "m_daily_double_breasted", "name": "Townsman in Wool", "top": "t355_double_breasted_wool_jacket", "bottom": "b355_straight_trousers_ankle_boots"}
   ],
   "professions": {
-    "NONE": ["m_daily_rolled_shirt", "m_daily_summer_tunic", "m_daily_patched_coat", "m_daily_knit_waistcoat", "m_daily_quilted_vest"],
-    "FARMER": ["m_daily_rolled_shirt"],
+    "NONE": ["m_daily_rolled_shirt", "m_daily_summer_tunic", "m_daily_patched_coat", "m_daily_knit_waistcoat", "m_daily_quilted_vest", "m_daily_short_cape", "m_daily_chore_smock", "m_daily_open_overshirt", "m_daily_side_laced_jerkin", "m_daily_double_breasted"],
+    "FARMER": ["m_daily_rolled_shirt", "m_daily_chore_smock"],
     "NITWIT": ["m_daily_patched_coat"],
-    "SHEPHERD": ["m_daily_knit_waistcoat"],
-    "COOK": ["m_daily_quilted_vest"]
+    "SHEPHERD": ["m_daily_knit_waistcoat", "m_daily_short_cape"],
+    "COOK": ["m_daily_quilted_vest"],
+    "LEATHERWORKER": ["m_daily_side_laced_jerkin"],
+    "MERCHANT": ["m_daily_double_breasted"]
   }
 }
