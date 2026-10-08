@@ -441,7 +441,7 @@
     ".H...........H.",
     ".H.........c.H.",
     ".H....Q.E..LdHE",
-    ".H.....a...b.H.",
+    ".H......a..b.H.",
     ".BAZAZPqPAAZAB.",
     ".A.......A.E.A.",
     ".ir.T....A...g.",
@@ -708,6 +708,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/desert/homes.py",
-  "checksum": "012e5f934943f3db"
+  "checksum": "08e784bd6fd30c7c"
  }
 }

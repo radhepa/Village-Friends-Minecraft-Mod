@@ -651,7 +651,7 @@
    "rows": [
     "...................",
     "........K.K........",
-    ".........M.........",
+    "..........M........",
     ".BAQQAAAVoVAAAQQAB.",
     ".A....A.....A....A.",
     ".A...............A.",
@@ -1142,6 +1142,6 @@
  ],
  "design": {
   "source": "tools/village_design/buildings/desert/homes.py",
-  "checksum": "24037266047a14d9"
+  "checksum": "f5d21009849999b1"
  }
 }

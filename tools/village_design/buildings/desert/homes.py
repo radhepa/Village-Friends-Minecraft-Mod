@@ -89,7 +89,7 @@ def courtyard_house():
     # Front door with a striped awning.
     door(b, 7, 2, 8, 'north', lamp=False, frame='cyan_terracotta')
     awning(b, 6, 6, 8, 7, 4, colors=('orange', 'white'), posts=[(6, 6), (8, 6)])
-    hang(b, 7, 3, 7)
+    hang(b, 8, 3, 7)  # beside the door: a lantern in the doorway blocks it
     # Kitchen loggia.
     kitchen_row(b, [(2, 3), (3, 3), (4, 3), (2, 4), (2, 5), (4, 7)], 2, 'south', rng)
     pot(b, 2, 2, 6, 'east')
@@ -352,7 +352,7 @@ def family_house():
         pot(b, x, 2, z, 'north')
     # Front door canopy and street front.
     awning(b, 8, 1, 10, 2, 4, colors=('cyan', 'white'), posts=[(8, 1), (10, 1)])
-    hang(b, 9, 3, 2)
+    hang(b, 10, 3, 2)  # beside the door, not in the doorway
     path_line(b, 9, 0, 1, rng)
     pot(b, 7, 1, 2, 'north')
     pot(b, 11, 1, 2, 'north')
@@ -736,7 +736,7 @@ def garden_house():
     spouts(b, [(0, 13), (14, 13)], 5)
     door(b, 7, 2, 10, 'north', lamp=False, frame='cyan_terracotta')
     awning(b, 6, 8, 8, 9, 4, colors=('red', 'white'), posts=[(6, 8), (8, 8)])
-    hang(b, 7, 3, 9)
+    hang(b, 8, 3, 9)  # beside the door, not in the doorway
     # Living room.
     kitchen_row(b, [(2, 15), (3, 15), (4, 15), (2, 14), (6, 15), (8, 15)], 2, 'north', rng)
     rug(b, 3, 11, 5, 13, 2, 'red', 'white')
