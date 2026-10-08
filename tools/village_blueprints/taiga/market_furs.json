@@ -1,0 +1,348 @@
+{
+ "format": 1,
+ "size": [11, 7, 11],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:dirt_path"
+  },
+  "B": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "C": {
+   "id": "minecraft:gravel"
+  },
+  "D": {
+   "id": "minecraft:podzol"
+  },
+  "E": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "F": {
+   "id": "minecraft:structure_void"
+  },
+  "G": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:brown_wool"
+  },
+  "J": {
+   "id": "minecraft:white_wool"
+  },
+  "K": {
+   "id": "minecraft:green_wool"
+  },
+  "L": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "M": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "N": {
+   "id": "minecraft:spruce_planks"
+  },
+  "O": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "north",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:spruce_trapdoor",
+   "properties": {
+    "facing": "west",
+    "half": "top",
+    "open": "true",
+    "powered": "false",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "R": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up"
+   }
+  },
+  "S": {
+   "id": "minecraft:brown_wall_banner",
+   "properties": {
+    "facing": "south"
+   }
+  },
+  "T": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "U": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "W": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "Y": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "Z": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "a": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "b": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "c": {
+   "id": "minecraft:spruce_pressure_plate",
+   "properties": {
+    "powered": "false"
+   }
+  },
+  "d": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "e": {
+   "id": "minecraft:sweet_berry_bush",
+   "properties": {
+    "age": "3"
+   }
+  },
+  "f": {
+   "id": "minecraft:white_wall_banner",
+   "properties": {
+    "facing": "south"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "CBACDCADABA",
+    "FDEEAAEBDAC",
+    "AFBBBACDDEA",
+    "BBBACCADFEA",
+    "CFEDEACBDED",
+    "BACCCACFECF",
+    "DFCDBCADDBD",
+    "BBBADAAEBAE",
+    "BFBCAAFCCEA",
+    "BBABACBFDEB",
+    "DDEBDABADCB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".....Y.....",
+    "........GG.",
+    "........GT.",
+    "H...H......",
+    "...........",
+    "..d......Na",
+    ".....B...GG",
+    ".........NV",
+    "...........",
+    ".NGN.......",
+    ".bGV......."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "HSfSH......",
+    "...........",
+    "..c......TL",
+    ".....H...e.",
+    ".........RL",
+    "...........",
+    ".JIR.......",
+    ".M.M......."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "XQQQX......",
+    "...........",
+    ".........WL",
+    ".....H.....",
+    ".........WL",
+    "...........",
+    ".U.U.......",
+    ".M.M......."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "........PKK",
+    ".....Z..PJJ",
+    "........PKK",
+    ".OOO.......",
+    ".IJI.......",
+    ".IJI......."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "...........",
+    "..........."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [5, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/taiga/civic.py",
+  "checksum": "b27125061ba2f54a"
+ }
+}
