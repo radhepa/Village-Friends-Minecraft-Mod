@@ -9,18 +9,26 @@
     {"id": "m_almoner", "name": "Almoner", "top": "t227_almoners_alms_purse_robe", "bottom": "b227_almoners_sandals_and_hose"},
     {"id": "m_pardoner", "name": "Pardoner", "top": "t228_pardoners_relic_hung_coat", "bottom": "b228_pardoners_dusty_hose"},
     {"id": "m_novice_brother", "name": "Novice", "top": "t229_novices_undyed_tunic_and_cord", "bottom": "b229_novices_bare_ankle_robe"},
-    {"id": "m_lay_brother", "name": "Lay Brother", "top": "t230_lay_brothers_hitched_work_habit", "bottom": "b230_lay_brothers_field_boots"}
+    {"id": "m_lay_brother", "name": "Lay Brother", "top": "t230_lay_brothers_hitched_work_habit", "bottom": "b230_lay_brothers_field_boots"},
+    {"id": "m_geometer", "name": "Geometer", "top": "t231_geometers_compass_belt_gown", "bottom": "b231_geometers_chalk_dusted_hose"},
+    {"id": "m_notary", "name": "Notary", "top": "t232_notarys_seal_hung_gown", "bottom": "b232_notarys_black_hose"},
+    {"id": "m_schoolmaster", "name": "Schoolmaster", "top": "t233_schoolmasters_birch_rod_gown", "bottom": "b233_schoolmasters_worn_hose_and_shoes"},
+    {"id": "m_interpreter", "name": "Interpreter", "top": "t234_interpreters_two_tongue_tabard", "bottom": "b234_interpreters_travel_breeches"},
+    {"id": "m_herbalist_monk", "name": "Herbalist Monk", "top": "t235_herbalist_monks_garden_habit", "bottom": "b235_herbalist_monks_knee_tied_habit"}
   ],
   "professions": {
-    "APOTHECARY": ["m_physic_doctor", "m_barber_surgeon", "m_hospitaller_brother"],
-    "SCHOLAR": ["m_physic_doctor"],
+    "APOTHECARY": ["m_physic_doctor", "m_barber_surgeon", "m_hospitaller_brother", "m_herbalist_monk"],
+    "SCHOLAR": ["m_physic_doctor", "m_geometer", "m_schoolmaster", "m_interpreter"],
     "BUTCHER": ["m_barber_surgeon"],
-    "CLERIC": ["m_chantry_priest", "m_deacon", "m_choir_cantor", "m_hospitaller_brother", "m_almoner", "m_pardoner", "m_novice_brother", "m_lay_brother"],
+    "CLERIC": ["m_chantry_priest", "m_deacon", "m_choir_cantor", "m_hospitaller_brother", "m_almoner", "m_pardoner", "m_novice_brother", "m_lay_brother", "m_herbalist_monk"],
     "BARD": ["m_choir_cantor"],
     "KNIGHT": ["m_hospitaller_brother"],
     "NITWIT": ["m_pardoner"],
-    "MERCHANT": ["m_pardoner"],
+    "MERCHANT": ["m_pardoner", "m_notary"],
     "NONE": ["m_novice_brother"],
-    "FARMER": ["m_lay_brother"]
+    "FARMER": ["m_lay_brother"],
+    "CARTOGRAPHER": ["m_geometer", "m_interpreter"],
+    "MAGE": ["m_geometer"],
+    "LIBRARIAN": ["m_notary", "m_schoolmaster"]
   }
 }

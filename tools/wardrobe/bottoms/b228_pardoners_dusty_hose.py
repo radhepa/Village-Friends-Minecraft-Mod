@@ -1,7 +1,7 @@
 """Pardoner's Dusty Hose: bright close hose greyed with road dust from the knee down, badged garters with dangling points, and short pointed shoes."""
 from kit import SIDES, waistband
 from kit_male import leg_blk, toe_pieces
-from kit_m05 import fade, hose, soft_shoes
+from kit_m05 import grime, hose, soft_shoes
 
 META = {
     "name": "Pardoner's Dusty Hose",
@@ -17,9 +17,9 @@ def build(g):
     soft_shoes(g, "L", 2, top=10, sole="K1")
     for side in SIDES:
         leg, pants = g.part(f"{side}_leg"), g.part(f"{side}_pants")
-        fade(leg.strip, "S1", 5, 9, start=.1, end=.6)                     # road dust rising from the shoes
+        grime(leg.strip, "S1", 7, 9, speck="S2")                          # road dust rising from the shoes
         leg.strip.hline(0, leg.strip.w - 1, 4, "L2")                       # garter
-        fade(pants.strip, "S1", 10, 10, ox=1, start=.4, end=.4)
+        grime(pants.strip, "S1", 9, 10, ox=5)
         garter = leg_blk(g, f"{side}_garter_badge", side, 3.6, (1, 1, 1), "M", 3, "smooth", 35305,
                          dx=-1.0 if side == "right" else 1.0, dz=-2.2)
         garter.front.fill("M4")

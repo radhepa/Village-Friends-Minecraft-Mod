@@ -105,16 +105,25 @@ def leg_prop(g, pid: str, side: str, pivot, size, role: str, base: int = 2, text
     return box
 
 
-BAYER = ((0, 8, 2, 10), (12, 4, 14, 6), (3, 11, 1, 9), (15, 7, 13, 5))
+TIDE = (1, 0, 0, 1, 2, 1, 1, 0, 1, 2, 2, 1)
 
 
-def fade(face, key: str, y0: int, y1: int, ox: int = 0, start: float = .1, end: float = 1.0):
-    """Ordered (Bayer) dither of `key` that thickens from row y0 to solid-ish at y1: road dust, mud, soot, wet."""
-    for y in range(y0, y1 + 1):
-        t = start + (end - start) * (y - y0) / max(1, y1 - y0)
-        for x in range(face.w):
-            if BAYER[y % 4][(x + ox) % 4] < t * 16:
-                face.set(x, y, key)
+def grime(face, key: str, y0: int, y1: int, ox: int = 0, speck: str | None = None):
+    """Dirt rising from a hem: solid up to a gently uneven tide line between rows y0 and y1, a stray speck above.
+
+    Calm and structured (road dust, mud, soot, wet) rather than random noise."""
+    for x in range(face.w):
+        edge = min(y1, y0 + TIDE[(x + ox) % len(TIDE)])
+        for y in range(edge, y1 + 1):
+            face.set(x, y, key)
+        if (x + ox) % 7 == 3 and edge - 2 >= 0:
+            face.set(x, edge - 2, speck or key)
+
+
+def knee_patch(face, x0: int, y0: int, key: str, lit: str, w: int = 2, h: int = 2):
+    """A worn or stained patch over the knee: a soft block with one lit texel."""
+    face.rect(x0, y0, w, h, key)
+    face.set(x0, y0, lit)
 
 
 def dust(face, key: str, seed: int, rows, density_top: float = .05, density_bottom: float = .3):

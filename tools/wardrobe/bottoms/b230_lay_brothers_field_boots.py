@@ -1,7 +1,7 @@
 """Lay Brother's Field Boots: linen braies bunched at the knee over tall front-laced field boots with turned-down tops, caked in field mud."""
 from kit import SIDES, footwear, waistband
 from kit_male import lacing, leg_rings
-from kit_m05 import fade
+from kit_m05 import grime
 from paint import strip_fabric
 
 META = {
@@ -23,7 +23,7 @@ def build(g):
     footwear(g, "boot", top=5, role="L", base=2, sole="K0")
     for side in SIDES:
         leg, pants = g.part(f"{side}_leg"), g.part(f"{side}_pants")
-        fade(pants.strip, "L0", 7, 10, start=.15, end=.9)                 # furrow mud caked to the ankle
+        grime(pants.strip, "L0", 8, 10, speck="L1")                       # furrow mud caked to the ankle
         lacing(pants.front, 1, 6, 10, "L4", "L1")
         pants.strip.hline(0, pants.strip.w - 1, 11, "K0")
         for x in range(0, pants.strip.w, 2):
