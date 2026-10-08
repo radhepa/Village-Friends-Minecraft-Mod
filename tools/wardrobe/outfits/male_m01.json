@@ -1,0 +1,28 @@
+{
+  "outfits": [
+    {"id": "m_sickle_reaper", "name": "Reaper", "top": "t121_reapers_sleeveless_smock", "bottom": "b121_stubble_field_gaiters"},
+    {"id": "m_haymaker", "name": "Haymaker", "top": "t122_haymakers_open_neck_shirt", "bottom": "b122_hay_rope_tied_trousers"},
+    {"id": "m_flail_thresher", "name": "Thresher", "top": "t123_threshers_flail_strap_jerkin", "bottom": "b123_chaff_dusted_breeches"},
+    {"id": "m_vine_dresser", "name": "Vine Dresser", "top": "t124_vine_dressers_pruning_tunic", "bottom": "b124_grape_stained_rolled_trousers"},
+    {"id": "m_hedge_layer", "name": "Hedge-Layer", "top": "t125_hedge_layers_arm_guard_shirt", "bottom": "b125_thorn_proof_leather_leggings"},
+    {"id": "m_field_ditcher", "name": "Ditcher", "top": "t126_ditchers_mud_smock", "bottom": "b126_turned_down_mud_boots"},
+    {"id": "m_mole_catcher", "name": "Mole Catcher", "top": "t127_mole_catchers_trap_hung_coat", "bottom": "b127_moleskin_breeches"},
+    {"id": "m_cowherd", "name": "Cowherd", "top": "t128_cowherds_horn_slung_tunic", "bottom": "b128_calf_hide_leggings"},
+    {"id": "m_oxherd", "name": "Oxherd", "top": "t129_oxherds_goad_strap_jerkin", "bottom": "b129_yoke_worn_trousers"},
+    {"id": "m_goose_boy", "name": "Goose Boy", "top": "t130_goose_boys_short_tunic", "bottom": "b130_bare_shin_rolled_slops"},
+    {"id": "m_cider_presser", "name": "Cider Presser", "top": "t131_cider_pressers_bib_smock", "bottom": "b131_pressing_floor_clogs_and_hose"},
+    {"id": "m_seed_sower", "name": "Seed Sower", "top": "t132_seed_sowers_seed_lip_tunic", "bottom": "b132_furrow_walkers_knee_wraps"},
+    {"id": "m_field_gleaner", "name": "Gleaner", "top": "t133_gleaners_patched_overshirt", "bottom": "b133_gleaning_bag_trousers"},
+    {"id": "m_yoke_dairyman", "name": "Dairyman", "top": "t134_dairymans_yoke_smock", "bottom": "b134_whey_splashed_clog_trousers"}
+  ],
+  "professions": {
+    "FARMER": ["m_sickle_reaper", "m_haymaker", "m_flail_thresher", "m_vine_dresser", "m_hedge_layer", "m_field_ditcher", "m_mole_catcher", "m_cowherd", "m_oxherd", "m_goose_boy", "m_cider_presser", "m_seed_sower", "m_field_gleaner", "m_yoke_dairyman"],
+    "NONE": ["m_sickle_reaper", "m_flail_thresher", "m_goose_boy", "m_field_gleaner"],
+    "TAVERN_KEEPER": ["m_vine_dresser", "m_cider_presser"],
+    "CARPENTER": ["m_hedge_layer"],
+    "MASON": ["m_field_ditcher"],
+    "NITWIT": ["m_mole_catcher", "m_goose_boy"],
+    "SHEPHERD": ["m_cowherd"],
+    "COOK": ["m_yoke_dairyman"]
+  }
+}
