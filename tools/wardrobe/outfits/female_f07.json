@@ -1,0 +1,19 @@
+{
+  "outfits": [
+    {"id": "f_pedlar_woman", "name": "Pedlar Woman", "top": "tf211_pedlar_womans_tray_pack_bodice", "bottom": "bf211_pedlar_womans_dusty_skirt"},
+    {"id": "f_tinker_woman", "name": "Tinker Woman", "top": "tf212_tinker_womans_pot_hung_jerkin", "bottom": "bf212_tinker_womans_patched_breeches"},
+    {"id": "f_road_wanderer", "name": "Wanderer", "top": "tf213_wanderers_bedroll_mantle", "bottom": "bf213_wanderers_road_skirt_and_boots"},
+    {"id": "f_bramble_forager", "name": "Forager", "top": "tf214_foragers_basket_harness", "bottom": "bf214_foragers_bramble_torn_skirt"},
+    {"id": "f_mushroom_gatherer", "name": "Mushroom Gatherer", "top": "tf215_mushroom_gatherers_moss_green_shawl", "bottom": "bf215_mushroom_gatherers_leaf_litter_skirt"}
+  ],
+  "professions": {
+    "NITWIT": ["f_pedlar_woman"],
+    "NONE": ["f_pedlar_woman", "f_tinker_woman", "f_road_wanderer"],
+    "MERCHANT": ["f_pedlar_woman"],
+    "TOOLSMITH": ["f_tinker_woman"],
+    "ADVENTURER": ["f_road_wanderer"],
+    "APOTHECARY": ["f_bramble_forager", "f_mushroom_gatherer"],
+    "FARMER": ["f_bramble_forager"],
+    "COOK": ["f_mushroom_gatherer"]
+  }
+}
