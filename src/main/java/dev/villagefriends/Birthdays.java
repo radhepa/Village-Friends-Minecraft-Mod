@@ -227,6 +227,7 @@ public final class Birthdays {
         int year = Calendar.year(today);
         var b = bond(v, p);
         if (!b.has("birthday_gift:" + year)) saveBond(v, p, b.flag("birthday_gift:" + year));
+        dev.villagefriends.deed.Deeds.birthdayGift(p, v);
         return new Gift(doubled, reply != null ? reply : "A birthday present! You shouldn't have. Well... I'm glad you did.",
                 "You gave me " + itemName(item) + " for my birthday.", "A birthday gift means twice as much!",
                 loved || card || cake ? Emote.HEART : Emote.SPARKLE);

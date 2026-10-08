@@ -28,7 +28,8 @@ import static dev.villagefriends.VillageFriends.*;
 public final class VillageSocieties {
     /** Newcomers this close to each other may be one household. */
     private static final double HOUSEHOLD_RANGE = 20, TOGETHER_RANGE = 6, CHAT_RANGE = 3.5;
-    private static final Set<String> ANNOUNCED = Set.of("sweethearts", "married", "born", "passed", "cursed", "cured", "grew_up", "birthday");
+    private static final Set<String> ANNOUNCED = Set.of("sweethearts", "married", "born", "passed", "cursed", "cured", "grew_up", "birthday",
+            "deed:raid_won", "deed:revived", "deed:killed_resident", "deed:killed_golem");
     /** "player|resident" to the day that resident last waved a player over. */
     private static final Map<String, Long> nudged = new HashMap<>();
     /** Deaths settle a tick later: a villager killed by a zombie dies first and is converted right after. */
@@ -37,14 +38,14 @@ public final class VillageSocieties {
     public static void clear() { nudged.clear(); deaths.clear(); }
 
     static SocietyBook book(ServerLevel level) { return ((AttachmentTarget) level).getAttachedOrCreate(SOCIETIES); }
-    static void put(ServerLevel level, Society society) {
+    public static void put(ServerLevel level, Society society) {
         var book = book(level); var next = book.put(society);
         if (next == book) return;
         ((AttachmentTarget) level).setAttached(SOCIETIES, next);
         announce(level, book.villages().get(society.village()), society);
     }
     /** The level that keeps an entity's hometown records, or null for residents without a hometown. */
-    static ServerLevel origin(Entity e) {
+    public static ServerLevel origin(Entity e) {
         var home = target(e).getAttached(HOME);
         if (home == null || !(e.level() instanceof ServerLevel level)) return null;
         return level.getServer().getLevel(ResourceKey.create(Registries.DIMENSION, Identifier.parse(home.dimension())));
@@ -55,7 +56,7 @@ public final class VillageSocieties {
         return home == null || origin == null ? null : book(origin).villages().get(home.village());
     }
     public static Society society(ServerLevel level, String village) { return book(level).villages().get(village); }
-    static String id(Entity e) { var p = target(e).getAttached(PROFILE); return p == null ? "" : p.id(); }
+    public static String id(Entity e) { var p = target(e).getAttached(PROFILE); return p == null ? "" : p.id(); }
     static String gender(Villager v) { var look = ResidentLook.parse(profile(v).look()); return look == null ? "NON_BINARY" : look.gender().name(); }
     static String baseName(Villager v) { var home = target(v).getAttached(HOME); return home == null ? name(v) : home.baseName(); }
     private static boolean visited(Villager v) {
@@ -174,14 +175,20 @@ public final class VillageSocieties {
         if (society == null) return;
         society = society.advance(today);
         var chats = new ArrayList<Villager[]>();
+        var pairs = new ArrayList<dev.villagefriends.deed.Deeds.Pair>();
         for (int i = 0; i < residents.size(); i++) for (int j = i + 1; j < residents.size(); j++) {
             var a = residents.get(i); var b = residents.get(j);
             if (a.level() != b.level()) continue;
             double distance = a.distanceToSqr(b);
-            if (distance < TOGETHER_RANGE * TOGETHER_RANGE) society = society.together(id(a), id(b), today);
+            if (distance < TOGETHER_RANGE * TOGETHER_RANGE) {
+                society = society.together(id(a), id(b), today);
+                pairs.add(new dev.villagefriends.deed.Deeds.Pair(id(a), target(a).getAttachedOrElse(ROUTINE, ""), id(b), target(b).getAttachedOrElse(ROUTINE, "")));
+            }
             if (distance < CHAT_RANGE * CHAT_RANGE && chatty(a) && chatty(b)) chats.add(new Villager[]{a, b});
         }
         put(origin, society);
+        // Word of what players did gets around: day by day, and between neighbors standing together.
+        dev.villagefriends.deed.Deeds.gossip(origin, society, pairs, today);
         // Neighbors who stand together sometimes strike up a conversation you can see from afar.
         var random = first.getRandom();
         Collections.shuffle(chats, new Random(random.nextLong()));

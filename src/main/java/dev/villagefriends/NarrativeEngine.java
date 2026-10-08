@@ -20,6 +20,11 @@ public final class NarrativeEngine {
         if (b.has("activity:picnic")) return "I was remembering our picnic. It was nice having time just to be together.";
         String thanks = VillageQuests.thanks(v, p);
         if (thanks != null) return thanks;
+        // The first hello after they learn what you did in their village: "I saw what you did to the golem."
+        String deed = dev.villagefriends.deed.Deeds.reaction(v, p);
+        if (deed != null) return deed;
+        String cold = dev.villagefriends.deed.Deeds.cold(v, p);
+        if (cold != null) return cold;
         String birthday = Birthdays.greeting(v, p);
         if (birthday != null) return birthday;
         String written = TalkWorld.line(v, p, "greet");
@@ -36,6 +41,8 @@ public final class NarrativeEngine {
         var b = bond(v, p);
         if (CompanionController.state(v).downed()) return Emote.SWEAT;
         if (b.has("hurt")) return Emote.GLOOM;
+        var deed = dev.villagefriends.deed.Deeds.mood(v, p);
+        if (deed != null) return deed;
         int level = FriendshipLevels.level(state(v, p), b);
         return level >= FriendshipLevels.HEART_GREETING ? Emote.HEART : level >= 4 ? Emote.NOTE : Emote.EXCLAIM;
     }
@@ -56,6 +63,9 @@ public final class NarrativeEngine {
     }
     public static String conversation(Villager v, ServerPlayer p, String topic) {
         var profile = profile(v); var b = bond(v, p); long today = day(v.level());
+        // Nobody chats warmly (or invites you to a party) when you are Unwelcome in their village.
+        String cold = topic.equals("chat") && !b.has("hurt") ? dev.villagefriends.deed.Deeds.coldChat(v, p) : null;
+        if (cold != null) return cold;
         String birthday = Birthdays.chat(v, p, topic);
         if (birthday != null && !b.has("hurt")) return birthday;
         if (v.isBaby()) {
@@ -125,7 +135,7 @@ public final class NarrativeEngine {
         int level = FriendshipLevels.level(state(v, p), b);
         // Birthday wishes, letters to hand over and notices to turn in come first.
         var extras = new ArrayList<FriendshipPayload.Choice>();
-        if (!tab.equals("plain")) { extras.addAll(Birthdays.choices(v, p)); extras.addAll(VillageQuests.choices(v, p)); }
+        if (!tab.equals("plain")) { extras.addAll(Birthdays.choices(v, p)); extras.addAll(VillageQuests.choices(v, p)); extras.addAll(dev.villagefriends.deed.Deeds.choices(v, p)); }
         if (!extras.isEmpty()) {
             var all = new ArrayList<>(extras.subList(0, Math.min(2, extras.size())));
             all.addAll(choices(v, p, "plain"));
@@ -160,6 +170,7 @@ public final class NarrativeEngine {
             case "apologize" -> {
                 if (!b.has("hurt") && !b.has("broken_promise")) return false;
                 saveBond(v, p, b.trust(b.has("hurt") ? 8 : 5).unflag("hurt").unflag("broken_promise").remember(today, "You apologized, and we began repairing trust."));
+                if (b.has("hurt")) dev.villagefriends.deed.Deeds.apologized(v, p);
                 show(p, v, "talk", "Thank you for saying that. I want to feel safe with you. What happens next will matter more than the words.", "A beginning toward repairing trust.", false);
             }
             case "listen", "pledge" -> {
@@ -209,7 +220,7 @@ public final class NarrativeEngine {
                 show(p, v, "talk", "I'm disappointed, but thank you for telling me. I'd rather know than keep wondering. We can try again when you're ready.", "Trust can be repaired. No deadline penalty.", false);
             }
             default -> {
-                if (Birthdays.handle(p, v, action) || VillageQuests.handle(p, v, action)) return true;
+                if (Birthdays.handle(p, v, action) || VillageQuests.handle(p, v, action) || dev.villagefriends.deed.Deeds.handle(p, v, action)) return true;
                 return (action.startsWith("answer:") || action.equals("skip_question")) && TalkWorld.answer(p, v, action);
             }
         }
@@ -237,7 +248,14 @@ public final class NarrativeEngine {
         show(p, v, "story", r.thanks(), "+" + points + " friendship. Your help is remembered.", false);
     }
     public static String journal(Villager v, ServerPlayer p) {
-        var b = bond(v, p); var text = new StringBuilder("OUR SHARED HISTORY\n");
+        var b = bond(v, p); var text = new StringBuilder();
+        // What they will never forget comes first.
+        if (!b.kept().isEmpty()) {
+            text.append("REMEMBERED ALWAYS\n");
+            // No blank line between the sections: the conversation box stops drawing at an empty line.
+            for (int i = b.kept().size() - 1; i >= 0; i--) text.append(b.kept().get(i)).append('\n');
+        }
+        text.append("OUR SHARED HISTORY\n");
         if (b.memories().isEmpty()) text.append("Our story is just beginning. Talk, listen, and spend time together.\n");
         for (int i = b.memories().size() - 1; i >= 0; i--) text.append(b.memories().get(i)).append('\n');
         return text.toString();

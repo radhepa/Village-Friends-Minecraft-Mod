@@ -29,8 +29,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.gossip.GossipType;
 import net.minecraft.world.entity.npc.villager.Villager;
@@ -79,6 +77,11 @@ public final class VillageQuests {
     static void put(ServerLevel level, Board board) {
         var next = new HashMap<>(boards(level)); next.put(board.village(), board);
         ((AttachmentTarget) level).setAttached(BOARDS, Map.copyOf(next));
+    }
+    /** How many notices a player (UUID) has answered for a village. */
+    public static int favors(ServerLevel level, String village, String player) {
+        var board = boards(level).get(village);
+        return board == null ? 0 : board.favors(player);
     }
     /** A village's board, freshly pinned for today. */
     static Board board(ServerLevel level, VillageRecord record) {
@@ -177,12 +180,14 @@ public final class VillageQuests {
         var society = VillageSocieties.society(level, record.id());
         var log = log(p);
         var cards = new ArrayList<NoticeBoardPayload.Card>();
+        // Nobody offers work to someone Unwelcome; what they already hold can still be turned in.
+        boolean unwelcome = dev.villagefriends.deed.Deeds.unwelcome(level, record.id(), p.getUUID());
         for (var n : board.notices()) {
             String state; int progress = 0;
             var mine = n.taker().equals(me(p)) ? log.find(record.id(), n.id()) : null;
             if (n.taken() && mine == null) state = "taken";
             else if (mine != null) { state = ready(p, mine) ? "ready" : "mine"; progress = progress(p, mine); }
-            else if (n.open(today)) state = "open";
+            else if (n.open(today) && !unwelcome) state = "open";
             else continue;
             String poster = society != null && society.has(n.poster()) ? society.nameOf(n.poster()) : n.posterName();
             cards.add(new NoticeBoardPayload.Card(n.id(), n.kind(), n.title(), n.text(), poster, job(n.posterJob()), objective(n), rewardText(n), icon(n), state,
@@ -197,12 +202,11 @@ public final class VillageQuests {
             int until = Calendar.daysUntil(t.birthday(), today);
             birthdays.add((until == 0 ? "Today! " : Calendar.birthdayDate(t.birthday()) + " · ") + t.name() + (until > 0 && until <= 7 ? " (" + Calendar.when(until) + ")" : ""));
         }
-        int favors = board.favors(me(p)), tier = Board.standing(favors);
-        String hint = tier + 1 < Board.STANDING.length ? (Board.STANDING[tier + 1] - favors) + " more to become " + Board.title(tier + 1, record.name())
-                : "Everyone here knows your name. Trades are cheaper all over the village.";
-        ServerPlayNetworking.send(p, new NoticeBoardPayload(record.id(), record.name(), Calendar.longDate(today),
-                Board.title(tier, record.name()) + " · " + favors + (favors == 1 ? " notice" : " notices") + " answered", hint, pos.asLong(),
-                cards, tasks, birthdays, message == null ? "" : message));
+        // Standing is notices answered plus what you did here (see Deeds).
+        String line = dev.villagefriends.deed.Deeds.boardLine(level, record.id(), record.name(), me(p));
+        String hint = dev.villagefriends.deed.Deeds.boardHint(level, record.id(), record.name(), me(p));
+        ServerPlayNetworking.send(p, new NoticeBoardPayload(record.id(), record.name(), Calendar.longDate(today), line, hint, pos.asLong(),
+                cards, tasks, birthdays, message != null && !message.isEmpty() ? message : unwelcome ? dev.villagefriends.deed.Deeds.boardRefusal(p, record.name()) : ""));
     }
     private static String job(String job) {
         return job.equals("none") ? "Neighbor" : job.equals("nitwit") ? "Free Spirit" : VillageProfessions.label(job);
@@ -281,6 +285,7 @@ public final class VillageQuests {
     static String accept(ServerPlayer p, ServerLevel level, VillageRecord record, String id) {
         var board = board(level, record); var n = board.find(id); long today = day(level);
         if (n == null || !n.open(today)) return "Someone else got to that notice first.";
+        if (dev.villagefriends.deed.Deeds.unwelcome(level, record.id(), p.getUUID())) return dev.villagefriends.deed.Deeds.boardRefusal(p, record.name());
         var log = log(p);
         if (log.full()) return "You already have " + QuestLog.MAX + " notices in hand. Finish or drop one first.";
         put(level, board.take(id, me(p)));
@@ -336,7 +341,7 @@ public final class VillageQuests {
         if (!r.item().isEmpty() && r.count() > 0) giveItem(p, r.item(), r.count());
         p.giveExperiencePoints(3 + r.emeralds());
         var board = boards(origin).get(q.village());
-        int before = board == null ? 0 : board.favors(me(p));
+        int before = dev.villagefriends.deed.Deeds.score10(origin, q.village(), me(p));
         if (board != null) put(origin, board.remove(n.id()).favor(me(p)));
         var society = VillageSocieties.society(origin, q.village());
         if (society != null) VillageSocieties.put(origin, society.helped(n.poster(), p.getName().getString(), today));
@@ -347,7 +352,9 @@ public final class VillageQuests {
             if (celebrant != null) { reward(celebrant, p, 8); saveBond(celebrant, p, bond(celebrant, p).remember(today, "You helped make my birthday special.")); }
         }
         log(p, log(p).done(q.village(), n.id(), poster == null ? n.poster() : "", THANKS));
-        standing(p, q.village(), q.villageName(), before, before + 1);
+        // Residents talk about it, and the standing it earns is announced (rewards on a new best only).
+        dev.villagefriends.deed.Deeds.answered(p, origin, q.village(), n.poster(), poster);
+        dev.villagefriends.deed.Deeds.changed(new dev.villagefriends.deed.Deeds.Place(origin, q.village()), p.getUUID(), before);
         p.level().playSound(null, p.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, .5F, 1.6F);
         var parts = new ArrayList<String>();
         if (r.emeralds() > 0) parts.add("+" + r.emeralds() + (r.emeralds() == 1 ? " emerald" : " emeralds"));
@@ -364,21 +371,6 @@ public final class VillageQuests {
         // Word gets around: the poster gives you better prices.
         poster.getGossips().add(p.getUUID(), GossipType.MINOR_POSITIVE, 15);
     }
-    /** A new standing in the village: a message, better prices from everyone there, and for its hero, Hero of the Village. */
-    private static void standing(ServerPlayer p, String village, String villageName, int before, int after) {
-        int was = Board.standing(before), now = Board.standing(after);
-        if (now <= was) return;
-        p.sendSystemMessage(Component.literal("★ " + villageName + ": you are now " + (now == Board.STANDING.length - 1 ? "the " : "a ") + Board.title(now, villageName) + "!")
-                .withStyle(ChatFormatting.GOLD), false);
-        int gossip = switch (now) { case 2 -> 5; case 3 -> 10; case 4 -> 20; default -> 0; };
-        if (gossip > 0) for (var v : CompanionController.loaded) {
-            var home = target(v).getAttached(HOME);
-            if (home != null && home.village().equals(village) && v.isAlive()) v.getGossips().add(p.getUUID(), GossipType.MAJOR_POSITIVE, gossip);
-        }
-        if (now == 3) giveItem(p, "minecraft:emerald", 8);
-        if (now == 4) p.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 48000, 0));
-    }
-
     // -- letters ------------------------------------------------------------------------------------
 
     private static ItemStack letter(Notice n, String village) {

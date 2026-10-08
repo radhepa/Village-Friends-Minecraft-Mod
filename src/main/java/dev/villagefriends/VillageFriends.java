@@ -86,6 +86,7 @@ public final class VillageFriends implements ModInitializer {
         ResidentNames.register();
         Birthdays.register();
         VillageQuests.register();
+        dev.villagefriends.deed.Deeds.register();
         dev.villagefriends.pet.VillagerPets.register();
         dev.villagefriends.home.Homes.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
@@ -97,7 +98,7 @@ public final class VillageFriends implements ModInitializer {
         ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); GuardPatrols.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); dev.villagefriends.deed.Deeds.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
