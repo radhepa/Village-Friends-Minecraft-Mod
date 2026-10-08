@@ -83,6 +83,8 @@ public final class VillageItems {
         for (String tool : List.of("broom", "paintbrush", "lute", "carpenter_hammer", "field_journal"))
             add(tool, p -> new Item(p.stacksTo(1)), SUPPLIES);
         add("village_ledger", p -> new VillageLedgerItem(p.stacksTo(1)), SUPPLIES);
+        // The ball the village children toss about when they play catch.
+        add("leather_ball", p -> new Item(p.stacksTo(16)), SUPPLIES);
         guardEgg("knight"); guardEgg("archer");
     }
     private VillageItems() {}

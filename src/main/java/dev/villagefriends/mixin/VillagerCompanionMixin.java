@@ -39,5 +39,7 @@ public abstract class VillagerCompanionMixin {
         if (Knockouts.drive(villager, level)) ci.cancel();
         else if (CompanionController.state(villager).active()) { CompanionController.drive(villager, level); ci.cancel(); }
         else if (GuardController.drive(villager, level, false)) ci.cancel();
+        // Children in a game (or tagging along after a player) are moved by the playground.
+        else if (dev.villagefriends.play.Playground.busy(villager)) ci.cancel();
     }
 }

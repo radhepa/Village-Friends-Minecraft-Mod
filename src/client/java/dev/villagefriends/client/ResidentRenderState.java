@@ -23,4 +23,9 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public final net.minecraft.client.renderer.item.ItemStackRenderState tableItem = new net.minecraft.client.renderer.item.ItemStackRenderState();
     public double tableX, tableY, tableZ;
     public float tableYaw;
+    /** The leather ball in a game of catch, in flight or lying where it was fumbled, relative to this child. */
+    public boolean ballShown;
+    public final net.minecraft.client.renderer.item.ItemStackRenderState ball = new net.minecraft.client.renderer.item.ItemStackRenderState();
+    public double ballX, ballY, ballZ;
+    public float ballSpin;
 }

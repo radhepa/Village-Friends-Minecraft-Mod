@@ -76,6 +76,7 @@ public final class VillageFriends implements ModInitializer {
         VillageMarkerBlock.register();
         VillageFoundation.register();
         dev.villagefriends.tavern.Taverns.register();
+        dev.villagefriends.play.Playground.register();
         NarrativeContent.register();
         dev.villagefriends.talk.DialogueBank.register();
         ResidentNames.register();

@@ -50,7 +50,7 @@ public final class ResidentLife {
     private final Playing activity = new Playing(), reaction = new Playing();
     private int stillTicks, nextActivity, lastHurt, greetAt = -1, greetCooldown, partnerId = -1, partnerCheck, lastTick = -1;
     private boolean unhappy, greeted, talking, speaking;
-    private String recent, previous;
+    private String recent, previous, playing;
 
     private ResidentLife(Villager villager) {
         int seed = ResidentMotion.seed(villager.getUUID());
@@ -122,6 +122,17 @@ public final class ResidentLife {
         boolean sad = v.getUnhappyCounter() > 0;
         if (sad && !unhappy) react(v, "decline");
         unhappy = sad;
+
+        // In a game, the game's clips take over: one each time their part changes, repeated while it lasts.
+        String play = PlaytimeClient.state(v);
+        if (play != null) {
+            boolean changed = !play.equals(playing);
+            playing = play;
+            if (changed || !reaction.active() && !PlaytimeClient.once(play)) react(v, "play");
+            activity.fade(now);
+            return;
+        }
+        if (playing != null) { playing = null; if ("play".equals(reaction.trigger)) reaction.fade(now); }
 
         var screen = client.gui.screen() instanceof FriendshipScreen open && open.residentId() == v.getId() ? open : null;
         talking = screen != null;
@@ -210,6 +221,7 @@ public final class ResidentLife {
         if (!v.getMainHandItem().isEmpty()) tags.add("holding");
         if (partner >= 0) tags.add("social");
         TavernClient.tags(v, tags);
+        PlaytimeClient.tags(v, tags);
         return tags;
     }
     private static String personality(Villager v) { return ((AttachmentTarget) v).getAttached(VillageFriends.TEMPERAMENT); }

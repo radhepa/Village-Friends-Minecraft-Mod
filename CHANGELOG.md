@@ -1,3 +1,11 @@
+# Village Friends 2.20.0 — Children at play
+
+- **Children play together.** When a child gets bored of playing on their own (sooner for lively personalities), they round up the children nearby for a game or join one already going: **tag**, **hide-and-seek** (the seeker counts with eyes covered while the others hide behind walls, houses and trees, then goes looking), **ring-around-the-rosie** (round and round, and they all fall down), **follow the leader** (the line copies the leader's hops, star jumps, spins, bird flaps, stomps and salutes one after another), and **catch** with a leather ball that flies in an arc between them and is sometimes fumbled. Groups choose by headcount and by what each child likes, and rarely play the same game twice in a row.
+- **Curious children follow you around.** Now and then a bored child (curious ones most of all) tags along behind a nearby player to see what they're up to, tiptoeing after them and watching closely when they stop. Turn round and look at them and they freeze and act innocent until you look away. They wave goodbye after a minute or two, or give up if you sprint off.
+- Games stop for lessons, meals and storms, the moment a monster comes near or a raid starts, and for any child who gets hurt; the status line says what each child is up to ("Playing tag", "Hiding", "Following you around").
+- **37 new animations** for the games and for following a player (Village Life now has 396 clips), on a new `play` trigger, and a new item, the **Leather Ball**.
+- Add `PlayTest` and `PlaygroundGameTest` (`-Ptests=PlaygroundGameTest`, screenshots `playground-*`). See [PLAYTIME.md](PLAYTIME.md).
+
 # Village Friends 2.19.0 — The tavern
 
 - **Lunch, supper and evenings at the tavern.** About a third of adults are tavern regulars who lunch there most days; the rest go now and then. A new part of the day, "Supper at the tavern" (17:15–18:30), comes about one evening in five and nearly half on Market Day. Evenings out stay about one in three, and Market Day evening is now two in three instead of the whole village. Sociable personalities go out more, reserved ones less; a wet lunch hour moves the bell's lunch crowd into the tavern. The tavern keeper works until 21:00, the cook comes back for a supper service, and the bard stays for a drink after the show.

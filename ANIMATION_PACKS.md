@@ -8,7 +8,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
-359 clips (350 distinct motions; a few serve two situations):
+396 clips (387 distinct motions; a few serve two situations):
 
 | Situation | Clips |
 |---|---|
@@ -21,6 +21,7 @@ The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for eve
 | Reactions | **a joke**: belly laugh, giggles, slaps a knee laughing, snorts with laughter, wheezes with laughter, shakes with silent laughter, points and laughs; **a loved gift**: cheers, hugs the gift, jumps for joy, spins with joy, happy shimmy, gasps with joy, raises the gift like a trophy; **a gift**: bashful thanks, grateful nod, bows with a hand on the heart, two-handed handshake, tips their hat, says you shouldn't have, presses the gift to their heart; **a refused gift or trade**: shakes head, wags a finger, crosses arms in an X, pushes it back, turns up their nose, hands up: not for me, shakes head apologetically; **happy sparkles**: cheers, claps, fist pump, hops and claps, thumbs up, wiggle dance, beams with arms wide open, skips in place; **hearts**: bashful thanks, lovestruck, swoons with hands on cheeks, blows a kiss, heart flutters, dreamy sigh, shy toe twist; **angry clouds**: huffs, shakes a fist, stomps both feet, rants and flails, points and scolds, gives the cold shoulder, shakes with clenched fists; **raid sweat**: nervous glances, bites their nails, wrings their hands, glances over a shoulder, tugs at a sweaty collar, knees knocking; **harm**: flinches, staggers, clutches a hurt arm, doubles over winded, hops on one foot clutching a toe |
 | Weather and time of day | hunches in the rain, catches raindrops, shakes off the rain, shivers, shelters head from the rain, wrings out a sleeve, splashes in a puddle, looks glumly up at the clouds, jumps at a thunderclap, covers ears in the thunder, stamps feet to keep warm, hugs self against the cold, blows into cupped hands, rubs sleepy eyes, greets the morning sun, nods off standing up, wishes on a star, watches the fireflies |
 | Children | hops, twirls, plays airplane, peekaboo!, watches a bug, wants to play tag, skips rope, plays hopscotch, spins until dizzy, rides a hobby horse, builds a sandcastle, blows a dandelion, plays at swords with a stick, pretends to be a monster, plays pat-a-cake, tosses a ball up and catches it, counts for hide-and-seek, throws a stomping tantrum, measures their height, flaps like a bird, makes silly faces, marches like a soldier |
+| Games together (`play`) | tag, hide-and-seek, ring-around-the-rosie, follow the leader (six copied moves), catch with a leather ball, and following a player around: 37 clips, listed in [PLAYTIME.md](PLAYTIME.md#animations) |
 
 ## How the director chooses
 
@@ -35,6 +36,7 @@ Each resident is ticked on the client. When they have stood still for a second a
 | `laugh`, `delighted`, `thanks`, `decline` | Conversation outcomes: a joke, a loved gift, an accepted gift, a declined gift. `decline` also plays when a resident refuses to trade. |
 | `happy`, `love`, `angry`, `nervous` | Vanilla villager events: happy sparkles, hearts, angry clouds, raid sweat. |
 | `hurt` | The resident takes damage. |
+| `play` | A child's part in a game changes, and again each time the clip ends while it lasts (throws, falls, leader moves and the like play once). See [PLAYTIME.md](PLAYTIME.md). |
 
 Reactions play on a second layer and briefly replace the current activity. While walking, reactions keep their upper body and leave the stride alone; activity clips fade out when a resident starts moving.
 
@@ -48,6 +50,7 @@ Clips are eligible by **tags** describing the resident and the moment:
 | `morning`, `day`, `evening`, `night` | Overworld time. |
 | `rain`, `thunder`, `cold` | Rain falling on the resident, a thunderstorm, a snowy biome. |
 | `holding`, `social` | Something in the main hand; a chat partner nearby. |
+| `play:<game>`, `play:<game>:<role>`, `moving` | A child's part in a game (`play:tag:it`, `play:catch:throw`, `play:follow_the_leader:do:hop`...), and being on the move. |
 
 A resident never repeats their last two clips if anything else fits. About one resident in nine is left-handed and mirrors one-handed gestures.
 
@@ -134,6 +137,7 @@ python tools/animations/film.py                   # titles, crossfades and an H.
 | `reactions.py`, `feelings.py` | Reactions to jokes, gifts, refusals, vanilla events and harm. |
 | `weather.py`, `skies.py` | Rain, thunder, cold, dawn and dusk. |
 | `children.py`, `playtime.py` | Children's games. |
+| `games.py` | Games children play together and following a player (`play` trigger). |
 
 Weights keep each resident's trade and hobbies visible among the everyday idles: work clips weigh 3–6 (the two raid-muster clips, which require `routine:defend`, weigh 40 so mustered guards mostly stand ready), hobbies 3–4, everyday idles 1–5 (most of the newer moments about 1), and weather clips only compete when their weather applies. Every greeting requires an age (`adult`, `child` or `adult|child`). Clip names never contain commas.
 
