@@ -4,6 +4,15 @@
     {
       "weight": 1,
       "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/garden_house",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
         "element_type": "minecraft:empty_pool_element"
       }
     }

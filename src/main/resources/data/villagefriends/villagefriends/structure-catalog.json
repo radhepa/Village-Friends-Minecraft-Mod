@@ -1320,6 +1320,751 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/desert/adobe_house",
+      "size": [
+        11,
+        12,
+        13
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            6,
+            6
+          ],
+          "max": [
+            4,
+            8,
+            9
+          ],
+          "probe": [
+            3,
+            6,
+            6
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          6,
+          8
+        ],
+        [
+          4,
+          6,
+          8
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            6,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/courtyard_house",
+      "size": [
+        15,
+        10,
+        16
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            9,
+            2,
+            9
+          ],
+          "max": [
+            12,
+            4,
+            13
+          ],
+          "probe": [
+            10,
+            2,
+            11
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          7,
+          2,
+          8
+        ],
+        [
+          8,
+          2,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          10,
+          2,
+          12
+        ],
+        [
+          12,
+          2,
+          12
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            12,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            5,
+            2,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/dome_house",
+      "size": [
+        13,
+        13,
+        14
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            8,
+            2,
+            5
+          ],
+          "max": [
+            10,
+            5,
+            11
+          ],
+          "probe": [
+            9,
+            2,
+            9
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          7,
+          2,
+          6
+        ]
+      ],
+      "bed_feet": [
+        [
+          8,
+          2,
+          10
+        ],
+        [
+          10,
+          2,
+          10
+        ]
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            4,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            8,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/family_house",
+      "size": [
+        19,
+        16,
+        19
+      ],
+      "rooms": [
+        {
+          "name": "children_room",
+          "min": [
+            2,
+            2,
+            11
+          ],
+          "max": [
+            5,
+            4,
+            16
+          ],
+          "probe": [
+            3,
+            2,
+            12
+          ],
+          "beds": 2
+        },
+        {
+          "name": "parents_room",
+          "min": [
+            13,
+            2,
+            11
+          ],
+          "max": [
+            16,
+            4,
+            16
+          ],
+          "probe": [
+            15,
+            2,
+            12
+          ],
+          "beds": 2
+        },
+        {
+          "name": "guest_room",
+          "min": [
+            2,
+            6,
+            14
+          ],
+          "max": [
+            6,
+            8,
+            16
+          ],
+          "probe": [
+            4,
+            6,
+            14
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          9,
+          2,
+          3
+        ],
+        [
+          6,
+          2,
+          11
+        ],
+        [
+          12,
+          2,
+          11
+        ],
+        [
+          14,
+          6,
+          13
+        ],
+        [
+          7,
+          6,
+          14
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          2,
+          15
+        ],
+        [
+          4,
+          2,
+          15
+        ],
+        [
+          14,
+          2,
+          15
+        ],
+        [
+          16,
+          2,
+          15
+        ],
+        [
+          2,
+          6,
+          15
+        ],
+        [
+          5,
+          6,
+          15
+        ]
+      ],
+      "residents": 3,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            12,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            16,
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/garden_house",
+      "size": [
+        15,
+        11,
+        18
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            10,
+            2,
+            11
+          ],
+          "max": [
+            12,
+            4,
+            15
+          ],
+          "probe": [
+            11,
+            2,
+            13
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          7,
+          2,
+          10
+        ],
+        [
+          9,
+          2,
+          13
+        ]
+      ],
+      "bed_feet": [
+        [
+          10,
+          2,
+          14
+        ],
+        [
+          12,
+          2,
+          14
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            9,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/plaster_house",
+      "size": [
+        15,
+        11,
+        14
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            10,
+            2,
+            6
+          ],
+          "max": [
+            12,
+            4,
+            11
+          ],
+          "probe": [
+            11,
+            2,
+            8
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          7,
+          2,
+          5
+        ],
+        [
+          9,
+          2,
+          8
+        ]
+      ],
+      "bed_feet": [
+        [
+          10,
+          2,
+          10
+        ],
+        [
+          12,
+          2,
+          10
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            3,
+            2,
+            4
+          ]
+        },
+        {
+          "id": "villagefriends:village_bench",
+          "pos": [
+            11,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/terrace_house",
+      "size": [
+        13,
+        14,
+        15
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            6,
+            4
+          ],
+          "max": [
+            7,
+            8,
+            11
+          ],
+          "probe": [
+            5,
+            6,
+            9
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          4
+        ],
+        [
+          8,
+          6,
+          6
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          6,
+          10
+        ],
+        [
+          4,
+          6,
+          10
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            8,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            10,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/desert/tower_house",
+      "size": [
+        12,
+        18,
+        14
+      ],
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            2,
+            6,
+            4
+          ],
+          "max": [
+            8,
+            8,
+            10
+          ],
+          "probe": [
+            6,
+            6,
+            9
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          3
+        ],
+        [
+          9,
+          6,
+          8
+        ]
+      ],
+      "bed_feet": [
+        [
+          2,
+          6,
+          9
+        ],
+        [
+          4,
+          6,
+          9
+        ]
+      ],
+      "residents": 2,
+      "connectors": [
+        {
+          "pos": [
+            5,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:house_plaque",
+          "pos": [
+            7,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            8,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            8,
+            2,
+            7
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/end_fade",
       "size": [
         5,
