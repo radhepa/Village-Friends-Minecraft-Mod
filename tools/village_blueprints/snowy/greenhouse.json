@@ -1,0 +1,454 @@
+{
+ "format": 1,
+ "size": [13, 11, 14],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:cobblestone"
+  },
+  "C": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "D": {
+   "id": "minecraft:glass"
+  },
+  "E": {
+   "id": "minecraft:farmland",
+   "properties": {
+    "moisture": "7"
+   }
+  },
+  "F": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "G": {
+   "id": "minecraft:spruce_planks"
+  },
+  "H": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "I": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "J": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "K": {
+   "id": "minecraft:water",
+   "properties": {
+    "level": "0"
+   }
+  },
+  "L": {
+   "id": "minecraft:potatoes",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "M": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "N": {
+   "id": "minecraft:carrots",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "O": {
+   "id": "minecraft:dirt_path"
+  },
+  "P": {
+   "id": "minecraft:beetroots",
+   "properties": {
+    "age": "3"
+   }
+  },
+  "Q": {
+   "id": "minecraft:carrots",
+   "properties": {
+    "age": "5"
+   }
+  },
+  "R": {
+   "id": "minecraft:wheat",
+   "properties": {
+    "age": "7"
+   }
+  },
+  "S": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "T": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y",
+    "waterlogged": "false"
+   }
+  },
+  "U": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "V": {
+   "id": "minecraft:potatoes",
+   "properties": {
+    "age": "5"
+   }
+  },
+  "W": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "X": {
+   "id": "minecraft:wheat",
+   "properties": {
+    "age": "5"
+   }
+  },
+  "Y": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "Z": {
+   "id": "minecraft:composter",
+   "properties": {
+    "level": "5"
+   }
+  },
+  "a": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "b": {
+   "id": "minecraft:glass_pane",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "c": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "d": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "e": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "lower",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "f": {
+   "id": "minecraft:spruce_door",
+   "properties": {
+    "facing": "south",
+    "half": "upper",
+    "hinge": "left",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "g": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAAAOAAAAAA",
+    "AAAAAAWAAAAAA",
+    "AAAAAAWAAAAAA",
+    "ABBBBBBBBBBBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEKEEOEEKEBA",
+    "ABEBEEOEEBEBA",
+    "ABBBBBBBBBBBA",
+    "AAAAAAAAAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "......c......",
+    ".........g...",
+    ".............",
+    ".FBBBBeBBBBF.",
+    ".BN.LP.XN.LB.",
+    ".BN.LP.XQ.LB.",
+    ".FN.LP.RN.LF.",
+    ".BQ.VP.RQ.LB.",
+    ".BQ.LP.RQ.LB.",
+    ".FN.LP.RN.LF.",
+    ".BN.VP.RQ.LB.",
+    ".BQZVP.RNYLB.",
+    ".FBBBBFBBBBF.",
+    "............."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".............",
+    ".........d...",
+    ".............",
+    ".FCCCafbCCCF.",
+    ".H.........H.",
+    ".H.........H.",
+    ".F.........F.",
+    ".H.........H.",
+    ".H.........H.",
+    ".F.........F.",
+    ".H.........H.",
+    ".H.........H.",
+    ".FCCCCFCCCCF.",
+    "............."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    ".FCCCCFCCCCF.",
+    ".H.........H.",
+    ".H.........H.",
+    ".F.........F.",
+    ".H.........H.",
+    ".H.........H.",
+    ".F.........F.",
+    ".H.........H.",
+    ".H.........H.",
+    ".FCCCCFCCCCF.",
+    "............."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    ".SIIIIIIIIIS.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".J.........J.",
+    ".SIIIIIIIIIS.",
+    "............."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    "..GCCCCCCCG..",
+    "..D.......D..",
+    "..D.......D..",
+    "..D.......D..",
+    "..G.......G..",
+    "..D.......D..",
+    "..D.......D..",
+    "..D.......D..",
+    "..D.......D..",
+    "..GCCCCCCCG..",
+    "............."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    "...GCCCCCG...",
+    "...D.....D...",
+    "...D.....D...",
+    "...D.....D...",
+    "...G.....G...",
+    "...D.....D...",
+    "...D.....D...",
+    "...D.....D...",
+    "...D.....D...",
+    "...GCCCCCG...",
+    "............."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    "....GCCCG....",
+    "....D...D....",
+    "....D...D....",
+    "....D...D....",
+    "....G...G....",
+    "....D...D....",
+    "....D...D....",
+    "....D...D....",
+    "....D...D....",
+    "....GCCCG....",
+    "............."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    ".....GCG.....",
+    ".....D.D.....",
+    ".....DUD.....",
+    ".....D.D.....",
+    ".....G.G.....",
+    ".....DUD.....",
+    ".....D.D.....",
+    ".....DUD.....",
+    ".....D.D.....",
+    ".....GCG.....",
+    "............."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    "......G......",
+    "......D......",
+    "......T......",
+    "......D......",
+    "......G......",
+    "......T......",
+    "......D......",
+    "......T......",
+    "......D......",
+    "......G......",
+    "............."
+   ]
+  },
+  {
+   "y": 10,
+   "rows": [
+    ".............",
+    ".............",
+    ".............",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "......M......",
+    "............."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [6, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/farms.py",
+  "checksum": "43ac8f392493f7d1"
+ }
+}

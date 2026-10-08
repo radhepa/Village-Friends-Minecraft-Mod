@@ -1,0 +1,141 @@
+{
+ "format": 1,
+ "size": [5, 6, 4],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:spruce_leaves",
+   "properties": {
+    "distance": "1",
+    "persistent": "true",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "villagefriends:village_bench",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "E": {
+   "id": "minecraft:cobblestone"
+  },
+  "F": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "G": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "1"
+   }
+  },
+  "I": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "2"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "AAAAA",
+    "AAAAA",
+    "AAEAA",
+    "AAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..F..",
+    ".....",
+    ".DBD.",
+    "C...C"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    "..B..",
+    "I...H"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    "..B..",
+    "....."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    ".....",
+    ".....",
+    "..G..",
+    "....."
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "....."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/snowy/decor.py",
+  "checksum": "8399a7db9e959dc2"
+ }
+}
