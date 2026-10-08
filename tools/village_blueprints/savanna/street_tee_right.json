@@ -1,0 +1,306 @@
+{
+ "format": 1,
+ "size": [10, 6, 13],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:dirt_path"
+  },
+  "C": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "D": {
+   "id": "minecraft:grass_block"
+  },
+  "E": {
+   "id": "minecraft:gravel"
+  },
+  "F": {
+   "id": "minecraft:packed_mud"
+  },
+  "G": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "east_up"
+   }
+  },
+  "I": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "west_up"
+   }
+  },
+  "J": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "south_up"
+   }
+  },
+  "K": {
+   "id": "minecraft:red_sand"
+  },
+  "L": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "M": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "ABBBAAAAAA",
+    "ABBBBAAAAA",
+    "DBEBDAAAAA",
+    "DBEBFAAAAA",
+    "ABBKKCDBCB",
+    "CBEBBBCCBB",
+    "DBBEBBBBBB",
+    "ABEEBBBBBB",
+    "ABFBBCCCAA",
+    "CBFBDAAAAA",
+    "DBFBAAAAAA",
+    "DBEBCAAAAA",
+    "ABBBDAAAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "A.L.AAAAAA",
+    "A....AAAAA",
+    "I....AAAAH",
+    "....GAAAAA",
+    "A.........",
+    "..........",
+    "I........H",
+    "A.........",
+    "A.......AA",
+    ".....AAAAA",
+    "I...AAAAAH",
+    ".....AAAAA",
+    "A.J..AAJAA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "A...AAAAAA",
+    "A....AAAAA",
+    ".....AAAAA",
+    "....GAAAAA",
+    "A.........",
+    "..........",
+    "..........",
+    "A.........",
+    "A.......AA",
+    ".....AAAAA",
+    "....AAAAAA",
+    ".....AAAAA",
+    "A....AAAAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "A...AAAAAA",
+    "A....AAAAA",
+    ".....AAAAA",
+    "....GAAAAA",
+    "A.........",
+    "..........",
+    "..........",
+    "A.........",
+    "A.......AA",
+    ".....AAAAA",
+    "....AAAAAA",
+    ".....AAAAA",
+    "A....AAAAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "A...AAAAAA",
+    "A....AAAAA",
+    ".....AAAAA",
+    "....MAAAAA",
+    "A.........",
+    "..........",
+    "..........",
+    "A.........",
+    "A.......AA",
+    ".....AAAAA",
+    "....AAAAAA",
+    ".....AAAAA",
+    "A....AAAAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "A...AAAAAA",
+    "A....AAAAA",
+    ".....AAAAA",
+    "....AAAAAA",
+    "A.........",
+    "..........",
+    "..........",
+    "A.........",
+    "A.......AA",
+    ".....AAAAA",
+    "....AAAAAA",
+    ".....AAAAA",
+    "A....AAAAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [0, 1, 2],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [0, 1, 6],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [0, 1, 10],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [2, 1, 12],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_out",
+    "target": "villagefriends:street_in",
+    "pool": "villagefriends:village/savanna/streets",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 1,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [7, 1, 12],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [9, 1, 2],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [9, 1, 6],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_out",
+    "target": "villagefriends:street_in",
+    "pool": "villagefriends:village/savanna/streets",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 1,
+    "placement_priority": 0
+   }
+  },
+  {
+   "pos": [9, 1, 10],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:lot",
+    "target": "villagefriends:building_entrance",
+    "pool": "villagefriends:village/savanna/lots",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/streets.py",
+  "checksum": "5a9309436ebed61f"
+ }
+}

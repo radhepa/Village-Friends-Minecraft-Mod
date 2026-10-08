@@ -1,0 +1,113 @@
+{
+ "format": 1,
+ "size": [5, 6, 5],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:structure_void"
+  },
+  "B": {
+   "id": "minecraft:dirt_path"
+  },
+  "C": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "D": {
+   "id": "minecraft:grass_block"
+  },
+  "E": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "F": {
+   "id": "minecraft:red_sand"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "BBBBA",
+    "ABFBD",
+    "ADBBA",
+    "AADCA",
+    "CCAAA"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "..E.A",
+    "A....",
+    "A...A",
+    "AA..A",
+    "..AAA"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "....A",
+    "A....",
+    "A...A",
+    "AA..A",
+    "..AAA"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "....A",
+    "A....",
+    "A...A",
+    "AA..A",
+    "..AAA"
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "....A",
+    "A....",
+    "A...A",
+    "AA..A",
+    "..AAA"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "....A",
+    "A....",
+    "A...A",
+    "AA..A",
+    "..AAA"
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [2, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:street_in",
+    "target": "villagefriends:street_out",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/streets.py",
+  "checksum": "41d9d5e66a2688f3"
+ }
+}
