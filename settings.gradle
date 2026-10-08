@@ -6,3 +6,4 @@ pluginManagement {
     }
 }
 rootProject.name = 'village-friends'
+include 'rpg'
