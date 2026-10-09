@@ -149,7 +149,8 @@ class DialogueBankTest {
                 Map.entry("weekday", "Bellday"), Map.entry("celebrant", "Mira"), Map.entry("birthday", "Summer 12"), Map.entry("when", "in 3 days"),
                 Map.entry("mobs", "5 zombies"), Map.entry("wanted", "12 wheat"), Map.entry("recipient", "Tobin"), Map.entry("sender", "Mira"),
                 Map.entry("season", "Summer"), Map.entry("victim", "Liora"), Map.entry("kin", "sister"), Map.entry("teller", "Pell"),
-                Map.entry("house", "The Ashford House"), Map.entry("place", "Blackthorn House"), Map.entry("spouse", "wife"));
+                Map.entry("house", "The Ashford House"), Map.entry("place", "Blackthorn House"), Map.entry("spouse", "wife"),
+                Map.entry("dish", "onion pottage"), Map.entry("meal", "beef stew"), Map.entry("special", "mutton pie"), Map.entry("gift", "honey cake"));
         for (var pool : BANK.pools().entrySet()) for (var line : pool.getValue()) {
             String filled = Talk.fill(line, all);
             assertNotNull(filled, "Fillable: " + line);

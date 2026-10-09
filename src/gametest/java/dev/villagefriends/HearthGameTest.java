@@ -124,6 +124,15 @@ public final class HearthGameTest implements FabricClientGameTest {
         });
     }
 
+    /** The RPG add-on's Cooking experience, read without depending on the add-on. */
+    private static long rpgCooking(ServerPlayer p) {
+        try {
+            var sheet = Class.forName("dev.villagefriends.rpg.Rpg").getMethod("sheet", net.minecraft.world.entity.player.Player.class).invoke(null, p);
+            @SuppressWarnings("unchecked") var skills = (java.util.Map<String, Long>) sheet.getClass().getMethod("skills").invoke(sheet);
+            return skills.getOrDefault("cooking", 0L);
+        } catch (ReflectiveOperationException e) { throw new AssertionError("RPG sheet unreadable", e); }
+    }
+
     @Override public void runTest(ClientGameTestContext c) {
         c.getInput().resizeWindow(1280, 800); c.runOnClient(client -> { client.options.guiScale().set(2); client.resizeGui(); });
         boolean rpg = FabricLoader.getInstance().isModLoaded("villagefriends_rpg");
@@ -175,12 +184,13 @@ public final class HearthGameTest implements FabricClientGameTest {
             });
             c.takeScreenshot("hearth-pot-screen");
             close(c);
-            c.runOnClient(client -> { client.player.setYRot(0); client.player.setXRot(35); });
+            c.runOnClient(client -> { client.player.setYRot(32); client.player.setXRot(18); });
             c.waitTicks(30); c.takeScreenshot("hearth-pot-steam");
             c.waitTicks(150); flush(w);
             check(w.getServer().computeOnServer(s -> station(w, pot).getItem(Station.POT.output()).is(item("onion_pottage"))), "Ten seconds later: a bowl of onion pottage");
             open(c, w, pot); takeOutput(c, w); close(c);
             check(count(w, item("onion_pottage")) == 1, "Taken out of the pot");
+            if (rpg) check(w.getServer().computeOnServer(s -> rpgCooking(player(w))) > 0, "With the RPG add-on, taking it out trains Cooking");
 
             // -- the clay oven: a wastel loaf on coal ------------------------------------------------------
             give(w, new ItemStack(item("flour"), 3), new ItemStack(Items.EGG, 1));
@@ -193,7 +203,8 @@ public final class HearthGameTest implements FabricClientGameTest {
                 check(station(w, oven).data().get(StationBlockEntity.DATA_PROGRESS) > 0, "and bakes");
             });
             c.takeScreenshot("hearth-oven-screen");
-            close(c); c.waitTicks(10); c.takeScreenshot("hearth-oven-lit");
+            close(c); c.runOnClient(client -> { client.player.setYRot(0); client.player.setXRot(25); });
+            c.waitTicks(10); c.takeScreenshot("hearth-oven-lit");
             c.waitTicks(200); flush(w);
             check(w.getServer().computeOnServer(s -> station(w, oven).getItem(Station.OVEN.output()).is(item("wastel"))), "A wastel loaf comes out of the oven");
 
@@ -264,7 +275,7 @@ public final class HearthGameTest implements FabricClientGameTest {
             w.getServer().runCommand("gamemode creative @a");
 
             // -- a favorite dish as a gift ---------------------------------------------------------------
-            UUID farmer = resident(w, 0, 6, VillagerProfession.FARMER, false), friend = resident(w, -2.5, 6.5, VillagerProfession.LIBRARIAN, false);
+            UUID farmer = resident(w, 0, 5.5, VillagerProfession.FARMER, false), friend = resident(w, -3.5, 4.8, VillagerProfession.LIBRARIAN, false);
             String favorite = w.getServer().computeOnServer(s -> {
                 var v = villager(w, farmer); var fav = HearthVillage.favorite(v);
                 var p = player(w); p.getInventory().setSelectedSlot(0);
@@ -297,7 +308,7 @@ public final class HearthGameTest implements FabricClientGameTest {
             c.clickScreenButton("Goodbye"); c.waitForScreen(null);
 
             // -- the tavern keeper sells the cook's dish of the day ----------------------------------------
-            UUID keeper = resident(w, 2.5, 6.5, ResourceKey.create(Registries.VILLAGER_PROFESSION, VillageBlocks.id("tavern_keeper")), false);
+            UUID keeper = resident(w, 3.5, 4.8, ResourceKey.create(Registries.VILLAGER_PROFESSION, VillageBlocks.id("tavern_keeper")), false);
             String special = w.getServer().computeOnServer(s -> {
                 var v = villager(w, keeper); var p = player(w);
                 String dish = Patronage.dishOfTheDay(day(level(w)));
@@ -322,7 +333,7 @@ public final class HearthGameTest implements FabricClientGameTest {
             });
 
             // -- supper at home: a resident eats a real dish, dish in hand ---------------------------------
-            UUID diner = resident(w, 0, 4, VillagerProfession.FARMER, true);
+            UUID diner = resident(w, -4.5, 4.0, VillagerProfession.FARMER, true);
             long supper = w.getServer().computeOnServer(s -> {
                 var day = ResidentRoutines.day(villager(w, diner));
                 for (int t = Routine.at(15, 0); t < Routine.at(22, 0); t += 100) if (day.at(t) == Routine.Block.SUPPER) return (long) t + 200;
@@ -342,8 +353,8 @@ public final class HearthGameTest implements FabricClientGameTest {
             c.waitTicks(10);
             c.runOnClient(client -> check(((net.fabricmc.fabric.api.attachment.v1.AttachmentTarget) client.level.getEntity(dinerEntity)).getAttached(HomeMeals.STATE) != null,
                     "Clients see what they're eating"));
-            c.runOnClient(client -> { client.player.setXRot(20); });
-            c.takeScreenshot("hearth-home-meal");
+            c.runOnClient(client -> { client.player.setYRot(46); client.player.setXRot(12); });
+            c.waitTicks(20); c.takeScreenshot("hearth-home-meal");
         }
         LOGGER.info("HEARTH PASSED{}: pot, oven and prep table cooking through the recipe book, Well Fed tiers and no stacking, a family recipe locked then learned, "
                 + "a favorite-dish gift, a Friend's recipe card, the tavern keeper's dish of the day, supper at home", rpg ? " (with the RPG add-on)" : "");

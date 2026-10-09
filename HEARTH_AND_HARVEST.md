@@ -18,7 +18,7 @@ Version 2.27 adds cooking. Three kitchen stations (a cooking pot over a fire, a 
 | Stations | `hearth/HearthBlocks`, `hearth/StationBlock` (`Pot`, `Oven`, `Prep`), `hearth/StationBlockEntity`, `hearth/StationMenu`; client `client/StationScreen` |
 | Well Fed | `hearth/WellFed` (the effect and the `villagefriends:well_fed` consume effect every dish carries), `mixin/WellFedHungerMixin` |
 | The village | `hearth/HearthVillage` (favorites, gifts, family recipes, picnics, the party cake, the keeper's dish of the day), `hearth/HomeMeals`, `hearth/HearthFarms`, `mixin/TavernSpecialMixin` |
-| Other mods | `hearth/HearthCompat` (Not-So-Vanilla Mobs drops), `hearth/HearthApi` and `hearth/HearthEvents` (hooks), the RPG add-on's `rpg/Cooking` |
+| Other mods | `hearth/HearthCompat` (Not-So-Vanilla Mobs drops), `hearth/HearthSeasons` (Turning Seasons), `hearth/HearthApi` and `hearth/HearthEvents` (hooks), the RPG add-on's `rpg/Cooking` |
 | Dialogue | `tools/dialogue/lines/hearth.txt` (282 lines) |
 | Animations | `tools/animations/village_life/meals.py` (standing home meals; seated meals use the Tavern pack) |
 
@@ -86,7 +86,7 @@ It never stacks: a better meal replaces a lesser one and another helping of the 
 - **Hooks** (`HearthEvents`): `COOKED` (a station finished a batch; change the result), `TAKEN` (a player took food out), `EATEN` (a factor for the Well Fed time). `HearthApi.makeFine`, `isFine`, `dish`, `known`, `learn`, `favorite`.
 - **RPG add-on:** the **Cooking** skill. Taking food out of a station trains it (1 per kitchen ingredient, 8–16 per dish by tier); each level makes Well Fed last 1% longer (50% at 50) and gives your dishes a 0.8% chance to come out fine (40% at 50).
 - **Not-So-Vanilla Mobs:** its loot tables drop only vanilla items, so with NSV installed Village Friends adds three ingredients: a Raw Boar Haunch from Wild Boars, Brineclaw Meat from the Brineclaw and a Sporecap from Sporelings (`HearthCompat`, through Fabric's loot drop hook, only when `nsvmobs` is loaded). Their four dishes (Boar and Barley Stew, Roast Boar with Apples, Brineclaw Bisque, Sporecap Pottage) load only with NSV and never become anyone's favorite.
-- **Turning Seasons:** the crops are in `#minecraft:crops`, which its seasonal growth already covers.
+- **Turning Seasons** (optional): the crops are in `#minecraft:crops`, which its seasonal growth already covers. `HearthSeasons` reads its season through its public API by reflection (no dependency): in winter one home meal in three comes from the winter larder (dishes with the `winter` meal: sauerkraut, pickled onions, smoked fish, mulled cider, spice cake), and those dishes keep you Well Fed half as long again in winter. Without it nothing changes.
 
 ## Verification
 

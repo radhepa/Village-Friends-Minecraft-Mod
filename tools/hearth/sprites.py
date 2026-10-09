@@ -2454,7 +2454,16 @@ def outputs():
     for crop in crops:
         for stage in range(4):
             files[ASSETS / f'textures/block/{crop}_stage{stage}.png'] = png(CROPS[crop](stage))
+    files[ASSETS / 'textures/mob_effect/well_fed.png'] = png(well_fed_icon())
     return files
+
+
+def well_fed_icon():
+    """The Well Fed effect's 18px icon: a bowl of onion pottage, the way vanilla's effect icons sit in their frame."""
+    icon = Image.new('RGBA', (18, 18))
+    bowl = ITEMS['onion_pottage']()
+    icon.paste(bowl, (1, 1), bowl)
+    return icon
 
 
 def require_all():

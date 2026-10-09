@@ -8,7 +8,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
-431 clips (422 distinct motions; a few serve two situations). Version 2.20 added eleven birthday-party clips, 2.21 twenty-four for playing with pets, and 2.22 thirty-seven for children's games.
+443 clips (434 distinct motions; a few serve two situations). Version 2.20 added eleven birthday-party clips, 2.21 twenty-four for playing with pets, 2.22 thirty-seven for children's games, and 2.27 twelve for eating a meal at home standing up (Hearth & Harvest).
 
 | Situation | Clips |
 |---|---|
@@ -145,6 +145,7 @@ python tools/animations/film.py                   # titles, crossfades and an H.
 | `pets.py` | Playing with a cat or dog and befriending a stray (`pet` trigger). |
 | `party.py` | Birthday parties: guests and children at the party, and the guest of honor. |
 | `games.py` | Games children play together and following a player (`play` trigger). |
+| `meals.py` | Eating a dish at home, standing (`dining:eat` with `food:<kind>`, then `dining:done`; never while `seated`, where the Tavern pack's dining clips play). See [HEARTH_AND_HARVEST.md](HEARTH_AND_HARVEST.md). |
 
 Weights keep each resident's trade and hobbies visible among the everyday idles: work clips weigh 3–6 (the two raid-muster clips, which require `routine:defend`, weigh 40 so mustered guards mostly stand ready), hobbies 3–4, everyday idles 1–5 (most of the newer moments about 1), and weather clips only compete when their weather applies. Every greeting requires an age (`adult`, `child` or `adult|child`). Clip names never contain commas.
 

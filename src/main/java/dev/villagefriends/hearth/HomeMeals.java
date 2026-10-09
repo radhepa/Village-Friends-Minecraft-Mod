@@ -67,7 +67,7 @@ public final class HomeMeals {
         if (key.equals(fed.get(v.getUUID()))) return false;
         // Home first: they eat once they're back at their own house (or wherever they are, if they have none).
         if (dev.villagefriends.home.Homes.homeward(v, level) != null || v.getNavigation().isInProgress() && v.getRandom().nextInt(4) != 0) return false;
-        var dish = Tastes.homeMeal(HearthVillage.eater(v), meal, dev.villagefriends.VillageFriends.day(level), Dishes.all());
+        var dish = Tastes.homeMeal(HearthVillage.eater(v), meal, dev.villagefriends.VillageFriends.day(level), Dishes.all(), HearthSeasons.winter(level));
         if (dish == null) return false;
         fed.put(v.getUUID(), key);
         eat(v, dish.id(), 18 + v.getRandom().nextInt(14), key);

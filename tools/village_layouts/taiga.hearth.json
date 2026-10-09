@@ -55,8 +55,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:onion_crop",
-              "Properties": {
+              "id": "villagefriends:onion_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -71,8 +71,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:cabbage_crop",
-              "Properties": {
+              "id": "villagefriends:cabbage_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -87,8 +87,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:barley_crop",
-              "Properties": {
+              "id": "villagefriends:barley_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -103,8 +103,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:leek_crop",
-              "Properties": {
+              "id": "villagefriends:leek_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -119,8 +119,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:herbs_crop",
-              "Properties": {
+              "id": "villagefriends:herbs_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -135,8 +135,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:onion_crop",
-              "Properties": {
+              "id": "villagefriends:onion_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -151,8 +151,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:cabbage_crop",
-              "Properties": {
+              "id": "villagefriends:cabbage_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -167,8 +167,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:barley_crop",
-              "Properties": {
+              "id": "villagefriends:barley_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -183,8 +183,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:leek_crop",
-              "Properties": {
+              "id": "villagefriends:leek_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -199,8 +199,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:herbs_crop",
-              "Properties": {
+              "id": "villagefriends:herbs_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -215,8 +215,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:onion_crop",
-              "Properties": {
+              "id": "villagefriends:onion_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -231,8 +231,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:cabbage_crop",
-              "Properties": {
+              "id": "villagefriends:cabbage_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -247,8 +247,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:barley_crop",
-              "Properties": {
+              "id": "villagefriends:barley_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -263,8 +263,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:leek_crop",
-              "Properties": {
+              "id": "villagefriends:leek_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -279,8 +279,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:herbs_crop",
-              "Properties": {
+              "id": "villagefriends:herbs_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -295,8 +295,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:onion_crop",
-              "Properties": {
+              "id": "villagefriends:onion_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -311,8 +311,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:cabbage_crop",
-              "Properties": {
+              "id": "villagefriends:cabbage_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -327,8 +327,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:barley_crop",
-              "Properties": {
+              "id": "villagefriends:barley_crop",
+              "properties": {
                 "age": "5"
               }
             }
@@ -343,8 +343,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:leek_crop",
-              "Properties": {
+              "id": "villagefriends:leek_crop",
+              "properties": {
                 "age": "7"
               }
             }
@@ -359,8 +359,8 @@
               "predicate_type": "minecraft:always_true"
             },
             "output_state": {
-              "Name": "villagefriends:herbs_crop",
-              "Properties": {
+              "id": "villagefriends:herbs_crop",
+              "properties": {
                 "age": "7"
               }
             }

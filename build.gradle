@@ -101,6 +101,12 @@ tasks.matching { it.name == 'runClientGameTest' }.configureEach {
     if (providers.gradleProperty('testHeap').isPresent()) maxHeapSize = providers.gradleProperty('testHeap').get()
 }
 
+// -PwithRpg runs the client game tests with the optional RPG add-on loaded too (its jar from rpg/build/libs).
+if (providers.gradleProperty('withRpg').isPresent()) {
+    dependencies { gametestRuntimeOnly fileTree('rpg/build/libs') { include 'villagefriends-rpg-*.jar'; exclude '*-sources.jar' } }
+    tasks.matching { it.name == 'runClientGameTest' }.configureEach { dependsOn ':rpg:jar' }
+}
+
 // Development runs use a separate world folder and a recognizable player name.
 loom.runs {
     client { programArgs '--username', 'VillageTester' }

@@ -65,9 +65,12 @@ public final class WellFed extends MobEffect {
             var dish = Dishes.get(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString());
             boolean fine = HearthApi.isFine(stack);
             double bonus = dish != null && entity instanceof ServerPlayer p ? HearthEvents.EATEN.invoker().wellFedFactor(p, dish, stack) : 1;
+            // Turning Seasons: preserved winter food does most good in winter.
+            if (dish != null && dish.meal("winter") && HearthSeasons.winter(level)) bonus *= HearthSeasons.WINTER_FOOD;
             int ticks = (int) Math.round(seconds * 20 * (fine ? Tastes.FINE_DURATION : 1) * Math.max(0, bonus));
             if (ticks <= 0) return false;
-            return entity.addEffect(new MobEffectInstance(EFFECT, ticks, Math.clamp(tier - 1, 0, 2), false, true, true), entity);
+            // A quiet buff: no swirling particles for minutes on end, just the icon.
+            return entity.addEffect(new MobEffectInstance(EFFECT, ticks, Math.clamp(tier - 1, 0, 2), true, false, true), entity);
         }
     }
 }

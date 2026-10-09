@@ -123,14 +123,18 @@ public final class StationMenu extends AbstractContainerMenu {
             @Override public boolean mayPlace(ItemStack stack) { return false; }
             @Override public void onTake(Player player, ItemStack stack) {
                 super.onTake(player, stack);
-                if (player instanceof ServerPlayer p && !stack.isEmpty()) {
-                    HearthEvents.TAKEN.invoker().taken(p, station, stack);
-                    p.level().playSound(null, p.blockPosition(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, .3F, 1.4F);
-                }
+                taken(player, stack);
             }
         });
         addStandardInventorySlots(inventory, 8, 84);
         addDataSlots(data);
+    }
+
+    /** Food a player took out of the output: the RPG add-on's Cooking skill and anyone else listening hear of it. */
+    private void taken(Player player, ItemStack stack) {
+        if (!(player instanceof ServerPlayer p) || stack.isEmpty()) return;
+        HearthEvents.TAKEN.invoker().taken(p, station, stack);
+        p.level().playSound(null, p.blockPosition(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, .3F, 1.4F);
     }
 
     public int data(int i) { return data.get(i); }
@@ -153,6 +157,10 @@ public final class StationMenu extends AbstractContainerMenu {
         if (index == output) {
             if (!moveItemStackTo(stack, own, end, true)) return ItemStack.EMPTY;
             slot.onQuickCraft(stack, copy);
+            // Shift-click: report what actually moved (onTake would only see what's left in the slot).
+            taken(player, copy.copyWithCount(copy.getCount() - stack.getCount()));
+            if (stack.isEmpty()) slot.setByPlayer(ItemStack.EMPTY); else slot.setChanged();
+            return copy;
         } else if (index < own) {
             if (!moveItemStackTo(stack, own, end, false)) return ItemStack.EMPTY;
         } else {

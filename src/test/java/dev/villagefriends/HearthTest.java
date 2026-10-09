@@ -154,6 +154,12 @@ class HearthTest {
                 assertNotNull(d, meal);
                 assertTrue(d.meal(meal), d.id() + " for " + meal);
             }
+        int larder = 0, summerLarder = 0;
+        for (long day = 0; day < 90; day++) {
+            if (Tastes.homeMeal(e, "supper", day, Dishes.all(), true).meal("winter")) larder++;
+            if (Tastes.homeMeal(e, "supper", day, Dishes.all(), false).meal("winter")) summerLarder++;
+        }
+        assertTrue(larder > 15 && larder > summerLarder + 10, "in winter (Turning Seasons) suppers often come from the larder: " + larder + " vs " + summerLarder);
         var cake = Tastes.partyCake(e, Dishes.all());
         assertTrue(cake.cake(), "the party cake is a cake: " + cake.id());
     }

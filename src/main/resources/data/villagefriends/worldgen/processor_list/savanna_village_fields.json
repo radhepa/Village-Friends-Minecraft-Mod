@@ -13,8 +13,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:onion_crop",
-            "Properties": {
+            "id": "villagefriends:onion_crop",
+            "properties": {
               "age": "5"
             }
           }
@@ -29,8 +29,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:barley_crop",
-            "Properties": {
+            "id": "villagefriends:barley_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -45,8 +45,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:garlic_crop",
-            "Properties": {
+            "id": "villagefriends:garlic_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -61,8 +61,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:onion_crop",
-            "Properties": {
+            "id": "villagefriends:onion_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -77,8 +77,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:barley_crop",
-            "Properties": {
+            "id": "villagefriends:barley_crop",
+            "properties": {
               "age": "5"
             }
           }
@@ -93,8 +93,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:garlic_crop",
-            "Properties": {
+            "id": "villagefriends:garlic_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -109,8 +109,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:onion_crop",
-            "Properties": {
+            "id": "villagefriends:onion_crop",
+            "properties": {
               "age": "5"
             }
           }
@@ -125,8 +125,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:barley_crop",
-            "Properties": {
+            "id": "villagefriends:barley_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -141,8 +141,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:garlic_crop",
-            "Properties": {
+            "id": "villagefriends:garlic_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -157,8 +157,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:onion_crop",
-            "Properties": {
+            "id": "villagefriends:onion_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -173,8 +173,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:barley_crop",
-            "Properties": {
+            "id": "villagefriends:barley_crop",
+            "properties": {
               "age": "7"
             }
           }
@@ -189,8 +189,8 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "villagefriends:garlic_crop",
-            "Properties": {
+            "id": "villagefriends:garlic_crop",
+            "properties": {
               "age": "5"
             }
           }

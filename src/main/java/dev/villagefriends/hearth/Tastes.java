@@ -43,11 +43,17 @@ public final class Tastes {
         return weighted(pool, d -> appetite(e, d), seed(e.id(), 0xFA417));
     }
     /** What they eat at home for this meal ("breakfast", "lunch" or "supper") today: now and then their favorite. */
-    public static Dish homeMeal(Eater e, String meal, long day, Collection<Dish> dishes) {
+    public static Dish homeMeal(Eater e, String meal, long day, Collection<Dish> dishes) { return homeMeal(e, meal, day, dishes, false); }
+    /** The same, and in winter (with Turning Seasons) one meal in three comes out of the winter larder. */
+    public static Dish homeMeal(Eater e, String meal, long day, Collection<Dish> dishes, boolean winter) {
         var pool = dishes.stream().filter(Dish::dish).filter(Tastes::everywhere).filter(d -> d.meal(meal))
                 .sorted(Comparator.comparing(Dish::id)).toList();
         if (pool.isEmpty()) return null;
         long s = seed(e.id(), meal.hashCode() * 31L + day);
+        if (winter && Math.floorMod(s >>> 7, 3) == 0) {
+            var larder = dishes.stream().filter(Dish::dish).filter(Tastes::everywhere).filter(d -> d.meal("winter")).sorted(Comparator.comparing(Dish::id)).toList();
+            if (!larder.isEmpty()) return weighted(larder, d -> appetite(e, d), s >>> 11);
+        }
         var favorite = favorite(e, dishes);
         if (favorite != null && favorite.meal(meal) && Math.floorMod(s, 5) == 0) return favorite;
         return weighted(pool, d -> appetite(e, d), s >>> 3);

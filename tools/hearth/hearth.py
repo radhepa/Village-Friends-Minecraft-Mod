@@ -392,7 +392,7 @@ def field_rules(crop_ids):
         for n, crop in enumerate(crop_ids):
             rules.append({'input_predicate': {'predicate_type': 'minecraft:random_block_match', 'block': vanilla, 'probability': round(share, 4)},
                           'location_predicate': {'predicate_type': 'minecraft:always_true'},
-                          'output_state': {'Name': f'{NS}:{crop}_crop', 'Properties': {'age': '7' if (n + len(vanilla)) % 3 else '5'}}})
+                          'output_state': {'id': f'{NS}:{crop}_crop', 'properties': {'age': '7' if (n + len(vanilla)) % 3 else '5'}}})
     return {'processor_type': 'minecraft:rule', 'rules': rules}
 
 
