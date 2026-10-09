@@ -23,7 +23,7 @@ import static dev.villagefriends.VillageFriends.*;
  * Every homestead, placed for real with {@code /place structure}: its residents settle in with the right role,
  * nameplate and personality (the farmstead couple as husband and wife with one surname), never join a village,
  * talk only from their own dialogue on every topic, turn back for home when they wander, and the veteran walks
- * the watch at night. Screenshots: {@code homestead-<name>-1/2}. Run with {@code -Ptests=HomesteadGameTest}.
+ * the watch at night, and a click on a resident opens their conversation even with a shelf between your faces. Screenshots: {@code homestead-<name>-1/2}. Run with {@code -Ptests=HomesteadGameTest}.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class HomesteadGameTest implements FabricClientGameTest {
@@ -134,6 +134,39 @@ public final class HomesteadGameTest implements FabricClientGameTest {
                     }
                 });
             }
+            // Talking across the clutter: with a shelf between your faces, a click on the herbalist (who has trades) opens
+            // her conversation, never the vanilla trade window.
+            int cottage = 300 + ORDER.indexOf("herbalist_cottage") * SPACING, cz = -44;
+            var herbalist = w.getServer().computeOnServer(s -> residents(w, cottage).getFirst().getUUID());
+            w.getServer().runOnServer(s -> {
+                var level = w.getConnection().getServerLevel();
+                for (int x = cottage - 2; x <= cottage + 2; x++) for (int z = cz - 1; z <= cz + 5; z++) for (int y = GROUND + 1; y <= GROUND + 4; y++)
+                    level.setBlock(new net.minecraft.core.BlockPos(x, y, z), net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 3);
+                level.setBlock(new net.minecraft.core.BlockPos(cottage, GROUND + 2, cz + 2), net.minecraft.world.level.block.Blocks.BOOKSHELF.defaultBlockState(), 3);
+                var v = (Villager) level.getEntity(herbalist);
+                v.setNoAi(true);
+                v.teleportTo(cottage + .5, GROUND + 1, cz + 3.5);
+            });
+            w.getServer().runCommand("tp @a " + (cottage + .5) + " " + (GROUND + 1) + " " + (cz + .5) + " 0 0");
+            c.waitTicks(20);
+            int herbalistId = w.getServer().computeOnServer(s -> {
+                var p = w.getConnection().getServerPlayer(); var v = (Villager) w.getConnection().getServerLevel().getEntity(herbalist);
+                check(!p.hasLineOfSight(v), "The shelf hides her face from yours");
+                check(validTarget(p, v), "But you can still see her, so you can still talk");
+                return v.getId();
+            });
+            c.runOnClient(client -> {
+                var e = client.level.getEntity(herbalistId);
+                client.gameMode.interact(client.player, e, new net.minecraft.world.phys.EntityHitResult(e), net.minecraft.world.InteractionHand.MAIN_HAND);
+            });
+            for (int i = 0; i < 20 && c.computeOnClient(client -> client.gui.screen() == null); i++) c.waitTicks(5);
+            c.runOnClient(client -> {
+                check(!(client.gui.screen() instanceof net.minecraft.client.gui.screens.inventory.MerchantScreen), "Clicking the herbalist doesn't open the trade window");
+                check(client.gui.screen() instanceof dev.villagefriends.client.FriendshipScreen, "Clicking the herbalist opens her conversation: " + client.gui.screen());
+                client.gui.setScreen(null);
+            });
+            w.getServer().runOnServer(s -> ((Villager) w.getConnection().getServerLevel().getEntity(herbalist)).setNoAi(false));
+
             // At night the veteran keeps the watch, walking the corners of the tower.
             w.getServer().runCommand("time set 15500");
             int tower = 300 + ORDER.indexOf("watchtower") * SPACING;

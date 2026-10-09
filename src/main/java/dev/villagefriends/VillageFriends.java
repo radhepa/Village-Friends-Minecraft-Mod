@@ -145,11 +145,13 @@ public final class VillageFriends implements ModInitializer {
             if (held.is(Items.NAME_TAG) || held.getItem() instanceof SpawnEggItem) return InteractionResult.PASS;
             // A downed companion can't talk: the window only offers to help them up or take them home.
             if (CompanionController.state(villager).downed()) {
-                if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !validTarget(sp, villager)) return InteractionResult.PASS;
+                if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !reachable(sp, villager)) return InteractionResult.PASS;
                 show(sp, villager, "companion", CompanionController.downedNarration(villager), "Help them up, or take them home.", true, null);
                 return InteractionResult.SUCCESS_SERVER;
             }
-            if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !validTarget(sp, villager)) return InteractionResult.PASS;
+            // The click itself shows they're in the player's sights, so only reach is checked here: a resident must never
+            // fall through to the vanilla trade window because a cauldron or a shelf hides their face.
+            if (world.isClientSide() || !(player instanceof ServerPlayer sp) || !ServerPlayNetworking.canSend(sp, FriendshipPayload.TYPE) || !reachable(sp, villager)) return InteractionResult.PASS;
             if (villager.isSleeping()) { sp.sendSystemMessage(Component.literal("Your neighbor is sleeping. Visit again in the morning!"), true); return InteractionResult.SUCCESS_SERVER; }
             ensureIdentity(villager);
             VillageSettlements.identify(villager,true);
@@ -230,7 +232,24 @@ public final class VillageFriends implements ModInitializer {
         var next = new FriendshipState(old.points() + points, old.talkDay(), old.giftDay(), old.giftsToday(), old.lastGift());
         save(v, p, next); celebrate(v, old, next);
     }
-    public static boolean validTarget(ServerPlayer p, Villager v) { return p.isAlive() && !p.isSpectator() && v.isAlive() && p.level() == v.level() && p.distanceToSqr(v) <= 36 && p.hasLineOfSight(v); }
+    /** Close enough to talk to: both alive, in the same world, within six blocks. */
+    public static boolean reachable(ServerPlayer p, Villager v) { return p.isAlive() && !p.isSpectator() && v.isAlive() && p.level() == v.level() && p.distanceToSqr(v) <= 36; }
+    public static boolean validTarget(ServerPlayer p, Villager v) { return reachable(p, v) && inSight(p, v); }
+    /**
+     * Whether the player can see the resident at all: a clear line from the player's eyes to the resident's eyes,
+     * middle or knees. A cauldron, a press or a shelf between two faces (a herbalist's cottage is full of them)
+     * shouldn't end a conversation.
+     */
+    public static boolean inSight(ServerPlayer p, Villager v) {
+        var eyes = p.getEyePosition();
+        for (double height : new double[]{v.getEyeHeight(), v.getBbHeight() * .5, .3}) {
+            var to = new net.minecraft.world.phys.Vec3(v.getX(), v.getY() + height, v.getZ());
+            if (eyes.distanceToSqr(to) > 128 * 128) return false;
+            if (p.level().clip(new net.minecraft.world.level.ClipContext(eyes, to, net.minecraft.world.level.ClipContext.Block.COLLIDER,
+                    net.minecraft.world.level.ClipContext.Fluid.NONE, p)).getType() == net.minecraft.world.phys.HitResult.Type.MISS) return true;
+        }
+        return false;
+    }
     public static void handleAction(ServerPlayer player, ActionPayload action) {
         Entity entity = player.level().getEntity(action.entityId());
         if (!(entity instanceof Villager v) || !v.getUUID().equals(action.villagerId()) || !validTarget(player, v) || v.isSleeping()) {

@@ -1,3 +1,8 @@
+# Village Friends 2.26.1 — Talking past the clutter
+
+- **Fix:** right-clicking a resident with something between your faces (the herbalist's cauldron or press, a shelf, a lantern stand) opened the vanilla trade window instead of their conversation. A click now always opens the conversation when you're close enough, and a conversation carries on as long as you can see any of them (eyes, middle or knees), not only their face. Sneak and right-click still trades, as before.
+- `HomesteadGameTest` checks it: a click on the herbalist with a bookshelf between your faces.
+
 # Village Friends 2.26.0 — Homesteads in the wild
 
 - **Not everyone lives in a village.** Five kinds of small homestead now turn up out in the wild, well away from any town (at least 10 chunks from a village), each on flat, dry ground in the biomes that suit it: `/locate structure #villagefriends:homesteads`.
