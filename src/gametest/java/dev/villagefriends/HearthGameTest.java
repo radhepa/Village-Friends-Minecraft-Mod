@@ -355,8 +355,29 @@ public final class HearthGameTest implements FabricClientGameTest {
                     "Clients see what they're eating"));
             c.runOnClient(client -> { client.player.setYRot(46); client.player.setXRot(12); });
             c.waitTicks(20); c.takeScreenshot("hearth-home-meal");
+
+            // -- a farmstead out in the wild grows Hearth crops in its fields ------------------------------
+            int fx = 240, gy = w.getServer().computeOnServer(s -> player(w).blockPosition().getY());
+            w.getServer().runOnServer(s -> { for (int cx = (fx - 32) >> 4; cx <= (fx + 32) >> 4; cx++) for (int cz = -3; cz <= 3; cz++) level(w).getChunk(cx, cz); });
+            w.getServer().runCommand("place structure villagefriends:homestead_farmstead " + fx + " " + gy + " 0");
+            c.waitTicks(20);
+            int[] fields = w.getServer().computeOnServer(s -> {
+                var hearth = net.minecraft.tags.TagKey.create(Registries.BLOCK, Hearth.id("hearth/crops"));
+                int ours = 0, vanilla = 0, sx = 0, sz = 0;
+                for (var pos : BlockPos.betweenClosed(fx - 30, gy - 4, -30, fx + 30, gy + 4, 30)) {
+                    var state = level(w).getBlockState(pos);
+                    if (state.is(hearth)) { ours++; sx += pos.getX(); sz += pos.getZ(); } else if (state.is(net.minecraft.tags.BlockTags.CROPS)) vanilla++;
+                }
+                return new int[]{ours, vanilla, ours == 0 ? fx : sx / ours, ours == 0 ? 0 : sz / ours};
+            });
+            check(fields[0] > 0 && fields[1] > 0, "The farmstead's fields mix Hearth crops in with the wheat: " + fields[0] + " Hearth, " + fields[1] + " vanilla");
+            LOGGER.info("Farmstead fields: {} Hearth crops, {} vanilla crops", fields[0], fields[1]);
+            // Hover over the field, looking down at it.
+            w.getServer().runOnServer(s -> { var p = player(w); p.getAbilities().flying = true; p.onUpdateAbilities(); });
+            w.getServer().runCommand("tp @a " + (fields[2] + .5) + " " + (gy + 7) + " " + (fields[3] - 6.5) + " 0 42");
+            c.waitTicks(60); c.takeScreenshot("hearth-farmstead-fields");
         }
         LOGGER.info("HEARTH PASSED{}: pot, oven and prep table cooking through the recipe book, Well Fed tiers and no stacking, a family recipe locked then learned, "
-                + "a favorite-dish gift, a Friend's recipe card, the tavern keeper's dish of the day, supper at home", rpg ? " (with the RPG add-on)" : "");
+                + "a favorite-dish gift, a Friend's recipe card, the tavern keeper's dish of the day, supper at home, Hearth crops in a farmstead's fields", rpg ? " (with the RPG add-on)" : "");
     }
 }
