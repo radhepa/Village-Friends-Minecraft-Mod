@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:leek_pie",
+    "villagefriends:mutton_pie",
+    "villagefriends:pork_pie",
+    "villagefriends:chicken_pie",
+    "villagefriends:fish_pie",
+    "villagefriends:steak_pie",
+    "villagefriends:apple_pie",
+    "villagefriends:berry_pie",
+    "villagefriends:pasty"
+  ]
+}

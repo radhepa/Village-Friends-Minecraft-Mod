@@ -11,7 +11,7 @@ public final class FriendshipLevels {
     private static final String[] NAMES = {"New Neighbor", "Familiar Face", "Acquaintance", "Friendly Neighbor", "Friend",
             "Good Friend", "Close Friend", "Trusted Friend", "Best Friend", "Kindred Spirit", "Lifelong Friend"};
     private static final String[] PERKS = {"", "They'll remember you between visits.", "They share their favorite things, and you can spend time together.",
-            "They tell you the village news.", "Adventures together, and picnic invitations.", "Heart-to-heart talks about love and family.",
+            "They tell you the village news.", "Adventures together, picnic invitations, and their family recipe.", "Heart-to-heart talks about love and family.",
             "They trust you with village secrets.", "They wave you over with a heart.", "Best-friend greetings.",
             "They save you a small gift each day.", "A friend for life."};
     /** Highest level each tier gate allows, and the lowest level an already-earned tier keeps. */

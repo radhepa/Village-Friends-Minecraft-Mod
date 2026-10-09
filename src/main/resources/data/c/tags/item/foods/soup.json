@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:onion_pottage",
+    "villagefriends:green_pottage",
+    "villagefriends:barley_porridge",
+    "villagefriends:leek_broth",
+    "villagefriends:cabbage_soup",
+    "villagefriends:garlic_broth",
+    "villagefriends:mushroom_pottage",
+    "villagefriends:beet_pottage",
+    "villagefriends:hare_stew",
+    "villagefriends:beef_stew",
+    "villagefriends:mutton_stew",
+    "villagefriends:chicken_pottage",
+    "villagefriends:pork_cabbage_stew",
+    "villagefriends:fishermans_stew",
+    "villagefriends:fish_herb_soup",
+    "villagefriends:hunters_stew",
+    "villagefriends:frumenty",
+    "villagefriends:harvest_stew",
+    "villagefriends:stewed_apples",
+    "villagefriends:honey_posset",
+    "villagefriends:leek_cheese_soup",
+    "villagefriends:cabbage_rolls",
+    "villagefriends:boar_stew",
+    "villagefriends:brineclaw_bisque",
+    "villagefriends:sporecap_pottage",
+    "villagefriends:herb_salad"
+  ]
+}

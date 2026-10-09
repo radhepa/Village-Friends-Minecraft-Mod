@@ -1,0 +1,11 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "minecraft:milk_bucket"
+  ],
+  "result": {
+    "id": "villagefriends:butter",
+    "count": 3
+  },
+  "time": 80
+}

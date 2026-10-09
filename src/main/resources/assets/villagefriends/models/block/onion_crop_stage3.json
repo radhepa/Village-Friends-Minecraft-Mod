@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "villagefriends:block/onion_stage3"
+  }
+}

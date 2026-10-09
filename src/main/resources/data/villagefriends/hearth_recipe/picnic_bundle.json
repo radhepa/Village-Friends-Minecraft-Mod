@@ -1,0 +1,14 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "minecraft:bread",
+    "villagefriends:cheese",
+    "minecraft:apple",
+    "minecraft:cooked_chicken"
+  ],
+  "result": {
+    "id": "villagefriends:picnic_bundle",
+    "count": 1
+  },
+  "time": 80
+}

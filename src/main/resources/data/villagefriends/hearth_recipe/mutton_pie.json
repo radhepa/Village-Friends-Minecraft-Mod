@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:mutton",
+    "villagefriends:onion"
+  ],
+  "result": {
+    "id": "villagefriends:mutton_pie",
+    "count": 1
+  },
+  "time": 260
+}

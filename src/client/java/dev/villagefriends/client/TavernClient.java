@@ -51,7 +51,7 @@ public final class TavernClient {
         s.seated = Seat.seated(v);
         s.tableItemShown = false;
         if (portrait) return;
-        String state = ((AttachmentTarget) v).getAttached(Taverns.STATE);
+        String state = state(v);
         var phase = Patronage.phase(state);
         if (phase == null || phase == Phase.WAIT) return;
         var item = stack(Patronage.item(state));
@@ -71,6 +71,11 @@ public final class TavernClient {
         } else if (s.tableItemShown) {
             resolver.updateForTopItem(s.tableItem, item, ItemDisplayContext.FIXED, v.level(), v, v.getId());
         }
+    }
+    /** At the tavern, or eating a meal at home (Hearth & Harvest), in the same "eat:<item>" form. */
+    private static String state(Villager v) {
+        String state = ((AttachmentTarget) v).getAttached(Taverns.STATE);
+        return state != null ? state : ((AttachmentTarget) v).getAttached(dev.villagefriends.hearth.HomeMeals.STATE);
     }
     /** Finds the table in front of a seated diner and where on it their dish goes; false if there's nothing to set it on. */
     private static boolean table(Villager v, ResidentRenderState s) {
@@ -124,7 +129,7 @@ public final class TavernClient {
         if (Seat.seated(v)) tags.add("seated");
         String routine = ((AttachmentTarget) v).getAttached(dev.villagefriends.VillageFriends.ROUTINE);
         if (routine != null && dev.villagefriends.routine.Routine.atTavern(dev.villagefriends.routine.Routine.Block.byId(routine))) tags.add("tavern");
-        String state = ((AttachmentTarget) v).getAttached(Taverns.STATE);
+        String state = state(v);
         var phase = Patronage.phase(state);
         if (phase != null) {
             tags.add("dining:" + phase.id());

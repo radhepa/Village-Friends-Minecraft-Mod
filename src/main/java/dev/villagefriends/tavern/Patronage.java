@@ -4,6 +4,7 @@ import dev.villagefriends.routine.Routine;
 import dev.villagefriends.routine.Routine.Block;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * The tavern's rules of the house, pure and unit-tested: where a resident likes to sit, what is on the
@@ -69,15 +70,26 @@ public final class Patronage {
 
     // -- the menu ----------------------------------------------------------------------------------
 
-    /** The cook's dishes in the order they come round, one a day; the next one is supper. */
+    /** The cook's dishes before Hearth & Harvest supplies the real menu ({@link #menu}). */
     public static final List<String> DISHES = List.of("villagefriends:hearty_stew", "villagefriends:shepherds_pie",
             "villagefriends:fresh_village_bread", "villagefriends:ploughmans_lunch");
     public static final String TART = "villagefriends:apple_tart", CIDER = "villagefriends:mug_of_cider", COFFEE = "villagefriends:steaming_coffee_mug";
+    private static List<String> menu = DISHES;
+    private static Map<String, String> kinds = Map.of();
 
+    /**
+     * The cook's dishes in the order they come round, one a day (the next one is supper), and what each is
+     * called in animations ("stew", "pie"...). Hearth & Harvest sets them from its dish table.
+     */
+    public static void menu(List<String> dishes, Map<String, String> animationKinds) {
+        if (dishes.size() >= 2) menu = List.copyOf(dishes);
+        kinds = Map.copyOf(animationKinds);
+    }
+    public static List<String> menu() { return menu; }
     /** The cook's dish of the day. */
-    public static String dishOfTheDay(long day) { return DISHES.get((int) Math.floorMod(day, DISHES.size())); }
+    public static String dishOfTheDay(long day) { return menu.get((int) Math.floorMod(day, menu.size())); }
     /** Supper is the next dish in the rotation, so lunch and supper differ. */
-    public static String supperDish(long day) { return DISHES.get((int) Math.floorMod(day + 1, DISHES.size())); }
+    public static String supperDish(long day) { return menu.get((int) Math.floorMod(day + 1, menu.size())); }
 
     /**
      * What a resident orders, course by course. Lunch and supper start with the cook's dish (a ploughman's
@@ -109,7 +121,7 @@ public final class Patronage {
             case "villagefriends:hearty_stew" -> "stew"; case "villagefriends:shepherds_pie" -> "pie";
             case "villagefriends:fresh_village_bread" -> "bread"; case "villagefriends:ploughmans_lunch" -> "platter";
             case TART -> "tart"; case CIDER -> "cider"; case COFFEE -> "coffee";
-            default -> "food";
+            default -> kinds.getOrDefault(item, "food");
         };
     }
     /** What is left of it afterwards, on the table or in hand: an empty bowl or mug, or nothing. */

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:onion_seeds",
+    "villagefriends:cabbage_seeds",
+    "villagefriends:barley_seeds",
+    "villagefriends:garlic_clove",
+    "villagefriends:leek_seeds",
+    "villagefriends:herb_seeds"
+  ]
+}

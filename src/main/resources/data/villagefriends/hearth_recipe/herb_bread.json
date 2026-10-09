@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "villagefriends:herbs",
+    "villagefriends:garlic"
+  ],
+  "result": {
+    "id": "villagefriends:herb_bread",
+    "count": 1
+  },
+  "time": 200
+}

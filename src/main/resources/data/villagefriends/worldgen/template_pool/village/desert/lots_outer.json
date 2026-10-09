@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/farm_irrigated",
-        "processors": "villagefriends:desert_lots_weathered",
+        "processors": "villagefriends:desert_desert_lots_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -15,7 +15,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/farm_melons",
-        "processors": "villagefriends:desert_lots_weathered",
+        "processors": "villagefriends:desert_desert_lots_weathered_fields",
         "projection": "rigid"
       }
     },

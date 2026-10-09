@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:mutton",
+    "villagefriends:garlic",
+    "villagefriends:herbs"
+  ],
+  "result": {
+    "id": "villagefriends:roast_mutton",
+    "count": 1
+  },
+  "time": 240
+}

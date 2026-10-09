@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "minecraft:egg"
+  ],
+  "result": {
+    "id": "villagefriends:wastel",
+    "count": 1
+  },
+  "time": 240
+}

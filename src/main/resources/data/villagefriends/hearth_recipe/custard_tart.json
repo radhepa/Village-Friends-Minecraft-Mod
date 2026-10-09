@@ -1,0 +1,16 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:egg",
+    "minecraft:egg",
+    "minecraft:milk_bucket",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "villagefriends:custard_tart",
+    "count": 1
+  },
+  "time": 260,
+  "secret": true
+}

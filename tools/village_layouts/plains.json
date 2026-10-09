@@ -237,12 +237,12 @@
         {
           "template": "house_tall_oak",
           "weight": 4,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "house_tall_brick",
           "weight": 3,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "townhouse",
@@ -257,7 +257,7 @@
         {
           "template": "farmhouse",
           "weight": 2,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "family_house",
@@ -307,7 +307,7 @@
         {
           "template": "farm_wheat",
           "weight": 1,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "paddock",
@@ -336,17 +336,17 @@
         {
           "template": "farm_wheat",
           "weight": 4,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "farm_mixed",
           "weight": 3,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "farm_beets",
           "weight": 2,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "pumpkin_patch",
@@ -396,7 +396,7 @@
         {
           "template": "farmhouse",
           "weight": 2,
-          "processors": "weathered"
+          "processors": "plains_weathered_fields"
         },
         {
           "template": "shepherd",

@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:sweet_berries",
+    "minecraft:sweet_berries",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "villagefriends:berry_pie",
+    "count": 1
+  },
+  "time": 240
+}

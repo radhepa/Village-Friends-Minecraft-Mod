@@ -10,7 +10,7 @@
   "mixins": ["villagefriends.mixins.json", {"config": "villagefriends.client.mixins.json", "environment": "client"}],
   "entrypoints": {
     "main": ["dev.villagefriends.VillageFriends"],
-    "client": ["dev.villagefriends.client.VillageFriendsClient", "dev.villagefriends.client.NoticeBoardClient"]
+    "client": ["dev.villagefriends.client.VillageFriendsClient", "dev.villagefriends.client.NoticeBoardClient", "dev.villagefriends.client.HearthClient"]
   },
   "depends": {
     "fabricloader": ">=0.19.5",

@@ -1,0 +1,15 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:cabbage",
+    "villagefriends:herbs",
+    "villagefriends:leek",
+    "villagefriends:onion",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "villagefriends:herb_salad",
+    "count": 1
+  },
+  "time": 60
+}

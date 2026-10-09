@@ -1,0 +1,17 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:rabbit",
+    "minecraft:mutton",
+    "minecraft:brown_mushroom",
+    "villagefriends:onion",
+    "villagefriends:garlic"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:hunters_stew",
+    "count": 1
+  },
+  "time": 280,
+  "secret": true
+}

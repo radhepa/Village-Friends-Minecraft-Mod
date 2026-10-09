@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:egg",
+    "minecraft:egg",
+    "villagefriends:herbs",
+    "villagefriends:cheese"
+  ],
+  "result": {
+    "id": "villagefriends:herb_omelette",
+    "count": 1
+  },
+  "time": 180
+}

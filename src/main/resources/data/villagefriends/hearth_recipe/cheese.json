@@ -1,0 +1,11 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:milk_bucket"
+  ],
+  "result": {
+    "id": "villagefriends:cheese",
+    "count": 2
+  },
+  "time": 240
+}

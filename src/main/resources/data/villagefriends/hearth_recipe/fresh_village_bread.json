@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "villagefriends:flour"
+  ],
+  "result": {
+    "id": "villagefriends:fresh_village_bread",
+    "count": 2
+  },
+  "time": 200
+}

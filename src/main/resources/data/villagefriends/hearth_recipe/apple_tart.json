@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:apple",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "villagefriends:apple_tart",
+    "count": 1
+  },
+  "time": 200
+}

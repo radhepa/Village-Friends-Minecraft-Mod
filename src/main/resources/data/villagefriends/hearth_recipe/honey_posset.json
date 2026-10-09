@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:milk_bucket",
+    "minecraft:honey_bottle",
+    "minecraft:egg"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:honey_posset",
+    "count": 1
+  },
+  "time": 200,
+  "secret": true
+}

@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "nsvmobs"
+      ]
+    }
+  ],
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:boar_haunch",
+    "minecraft:apple",
+    "minecraft:apple",
+    "villagefriends:herbs"
+  ],
+  "result": {
+    "id": "villagefriends:roast_boar",
+    "count": 1
+  },
+  "time": 320
+}

@@ -50,7 +50,8 @@ public final class TalkWorld {
         var biome = level.getBiome(v.blockPosition());
         if (weather.equals("clear") && biome.value().getBaseTemperature() >= 1.5F && Talk.period(time).matches("noon|afternoon")) weather = "hot";
         String home = v.getVillagerData().type().unwrapKey().map(k -> k.identifier().getPath()).orElse("plains");
-        var held = held(p.getMainHandItem());
+        var dishHeld = dev.villagefriends.hearth.HearthVillage.held(v, p.getMainHandItem());
+        var held = dishHeld != null ? dishHeld : held(p.getMainHandItem());
         var states = states(p, level, time);
         var extra = new HashSet<String>();
         if (!level.getEntitiesOfClass(IronGolem.class, v.getBoundingBox().inflate(16), g -> g.isAlive()).isEmpty()) extra.add("golem");
@@ -98,6 +99,7 @@ public final class TalkWorld {
         fill.put("season", dev.villagefriends.social.Calendar.season(today));
         dev.villagefriends.home.Homes.talk(v, fill);
         dev.villagefriends.homestead.Homesteads.talk(v, fill);
+        dev.villagefriends.hearth.HearthVillage.talk(v, fill);
         return new Talk.Context(topic, v.isBaby(), profile.personality(), job, friendLevel, Talk.period(time), weather,
                 plan.block().id(), Routine.marketDay(today), moon, home, held, states, extra, fill);
     }
@@ -125,7 +127,9 @@ public final class TalkWorld {
         if (s.is(Items.TORCH) || s.is(Items.LANTERN) || s.is(Items.SOUL_TORCH) || s.is(Items.SOUL_LANTERN)) return "torch";
         if (s.is(Items.BUCKET) || s.is(Items.WATER_BUCKET) || s.is(Items.LAVA_BUCKET) || s.is(Items.MILK_BUCKET) || s.is(Items.POWDER_SNOW_BUCKET)) return "bucket";
         if (s.is(Items.WHEAT_SEEDS) || s.is(Items.WHEAT) || s.is(Items.CARROT) || s.is(Items.POTATO) || s.is(Items.BEETROOT) || s.is(Items.BEETROOT_SEEDS)
-                || s.is(Items.PUMPKIN_SEEDS) || s.is(Items.MELON_SEEDS) || s.is(ItemTags.SAPLINGS)) return "crops";
+                || s.is(Items.PUMPKIN_SEEDS) || s.is(Items.MELON_SEEDS) || s.is(ItemTags.SAPLINGS)
+                || s.is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM, VillageBlocks.id("hearth/crops")))
+                || s.is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM, VillageBlocks.id("hearth/seeds")))) return "crops";
         if (s.is(ItemTags.EGGS)) return "egg";
         if (s.is(Items.TOTEM_OF_UNDYING)) return "totem";
         if (s.is(Items.ELYTRA)) return "elytra";

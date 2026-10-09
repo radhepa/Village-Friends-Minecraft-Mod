@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farm_wheat",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -15,7 +15,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farm_mixed",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -24,7 +24,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farm_beets",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -114,7 +114,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farmhouse",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },

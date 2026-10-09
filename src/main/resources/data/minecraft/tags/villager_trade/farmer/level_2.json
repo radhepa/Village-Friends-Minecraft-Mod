@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:farmer/barley_seeds",
+    "villagefriends:farmer/cabbage_emerald",
+    "villagefriends:farmer/garlic_clove",
+    "villagefriends:farmer/herbs_emerald",
+    "villagefriends:farmer/leek_seeds",
+    "villagefriends:farmer/onion_emerald"
+  ]
+}

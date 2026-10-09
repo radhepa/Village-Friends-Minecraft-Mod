@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:beef",
+    "minecraft:potato",
+    "minecraft:carrot",
+    "minecraft:brown_mushroom"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:hearty_stew",
+    "count": 1
+  },
+  "time": 240
+}

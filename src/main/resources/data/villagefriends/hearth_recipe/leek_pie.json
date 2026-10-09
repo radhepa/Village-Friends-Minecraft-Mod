@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "villagefriends:leek",
+    "villagefriends:leek",
+    "villagefriends:cheese"
+  ],
+  "result": {
+    "id": "villagefriends:leek_pie",
+    "count": 1
+  },
+  "time": 240
+}

@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:chicken",
+    "villagefriends:herbs",
+    "villagefriends:leek"
+  ],
+  "result": {
+    "id": "villagefriends:chicken_pie",
+    "count": 1
+  },
+  "time": 260
+}

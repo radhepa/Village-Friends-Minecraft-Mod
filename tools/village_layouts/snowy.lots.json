@@ -94,7 +94,7 @@
         {
           "template": "snowy/greenhouse",
           "weight": 1,
-          "processors": "snowy_lots_frost"
+          "processors": "snowy_snowy_lots_frost_fields"
         },
         {
           "template": "snowy/tree_spruce",
@@ -133,17 +133,17 @@
         {
           "template": "snowy/greenhouse",
           "weight": 3,
-          "processors": "snowy_lots_frost"
+          "processors": "snowy_snowy_lots_frost_fields"
         },
         {
           "template": "snowy/root_cellar",
           "weight": 3,
-          "processors": "snowy_lots_frost"
+          "processors": "snowy_snowy_lots_frost_fields"
         },
         {
           "template": "snowy/frost_field",
           "weight": 3,
-          "processors": "snowy_lots_frost"
+          "processors": "snowy_snowy_lots_frost_fields"
         },
         {
           "template": "snowy/goat_pen",
@@ -153,7 +153,7 @@
         {
           "template": "snowy/rabbit_hutch",
           "weight": 2,
-          "processors": "snowy_lots_frost"
+          "processors": "snowy_snowy_lots_frost_fields"
         },
         {
           "template": "snowy/kennel",

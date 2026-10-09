@@ -1,0 +1,12 @@
+# Hearth & Harvest crops. One row per crop; python tools/hearth/hearth.py compiles them.
+# id: the produce item; the crop block is <id>_crop and the seed item is the seed column.
+# food/sat: the produce eaten raw (0 = not edible). drops: produce per ripe harvest (min-max).
+# biomes: the village types whose farms grow it (plains desert savanna snowy taiga) and homesteads.
+# looks: notes for the sprite tool.
+id	name	seed	seed_name	food	sat	drops	biomes	looks
+onion	Onion	onion_seeds	Onion Seeds	2	0.3	1-3	plains,desert,savanna,taiga,homestead	golden-brown bulb with papery skin and a green sprout
+cabbage	Cabbage	cabbage_seeds	Cabbage Seeds	3	0.4	1-2	plains,snowy,taiga,homestead	round pale green head with darker outer leaves
+barley	Barley	barley_seeds	Barley Seeds	0	0	1-2	plains,savanna,snowy,taiga	a bundle of pale gold bearded ears, longer whiskers than wheat
+garlic	Garlic	garlic_clove	Garlic Clove	1	0.2	1-3	plains,desert,savanna,homestead	white bulb with purple streaks, plump cloves
+leek	Leek	leek_seeds	Leek Seeds	2	0.3	1-2	plains,snowy,taiga,homestead	long white stalk turning to dark green fanned leaves
+herbs	Kitchen Herbs	herb_seeds	Herb Seeds	1	0.2	1-3	plains,desert,taiga,homestead	a tied bunch of parsley, thyme and sage sprigs

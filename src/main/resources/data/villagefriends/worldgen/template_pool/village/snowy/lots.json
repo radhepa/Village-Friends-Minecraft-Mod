@@ -159,7 +159,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/snowy/greenhouse",
-        "processors": "villagefriends:snowy_lots_frost",
+        "processors": "villagefriends:snowy_snowy_lots_frost_fields",
         "projection": "rigid"
       }
     },

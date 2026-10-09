@@ -118,7 +118,7 @@
         {
           "template": "taiga/potato_field",
           "weight": 3,
-          "processors": "weathered"
+          "processors": "taiga_weathered_fields"
         },
         {
           "template": "taiga/berry_patch",

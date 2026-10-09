@@ -1,0 +1,14 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "minecraft:bread",
+    "villagefriends:cheese",
+    "minecraft:apple",
+    "villagefriends:pickled_onions"
+  ],
+  "result": {
+    "id": "villagefriends:ploughmans_lunch",
+    "count": 1
+  },
+  "time": 60
+}

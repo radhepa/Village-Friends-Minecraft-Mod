@@ -89,7 +89,7 @@
         {
           "template": "savanna/farm_wheat",
           "weight": 1,
-          "processors": "village"
+          "processors": "savanna_village_fields"
         },
         {
           "template": "savanna/kraal",
@@ -128,17 +128,17 @@
         {
           "template": "savanna/farm_wheat",
           "weight": 4,
-          "processors": "village"
+          "processors": "savanna_village_fields"
         },
         {
           "template": "savanna/farm_beets_melon",
           "weight": 3,
-          "processors": "village"
+          "processors": "savanna_village_fields"
         },
         {
           "template": "savanna/farm_roots",
           "weight": 2,
-          "processors": "village"
+          "processors": "savanna_village_fields"
         },
         {
           "template": "savanna/kraal",

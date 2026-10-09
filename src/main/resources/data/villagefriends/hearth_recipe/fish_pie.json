@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "#villagefriends:cooking/fish",
+    "minecraft:potato",
+    "villagefriends:cheese"
+  ],
+  "result": {
+    "id": "villagefriends:fish_pie",
+    "count": 1
+  },
+  "time": 260
+}

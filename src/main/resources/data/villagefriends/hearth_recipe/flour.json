@@ -1,0 +1,11 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "minecraft:wheat"
+  ],
+  "result": {
+    "id": "villagefriends:flour",
+    "count": 1
+  },
+  "time": 40
+}

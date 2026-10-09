@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:garlic",
+    "villagefriends:garlic",
+    "villagefriends:onion",
+    "villagefriends:herbs"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:garlic_broth",
+    "count": 1
+  },
+  "time": 180
+}

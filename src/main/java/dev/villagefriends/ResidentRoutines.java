@@ -97,7 +97,7 @@ public final class ResidentRoutines {
         String playing = Playground.doing(v);
         if (playing != null) return playing;
         var plan = plan(v); String own = dev.villagefriends.homestead.Homesteads.doing(v, plan);
-        return own != null ? own : Taverns.doing(v, plan.label());
+        return dev.villagefriends.hearth.HomeMeals.doing(v, own != null ? own : Taverns.doing(v, plan.label()));
     }
 
     // -- applying it -------------------------------------------------------------------------------
@@ -132,6 +132,8 @@ public final class ResidentRoutines {
         if (Playground.update(v, level, plan)) return;
         // At the tavern they find a seat with their friends, order, eat and talk; Taverns stands them up afterwards.
         if (Taverns.update(v, level, plan)) return;
+        // Back home for a meal, they eat a real dish (Hearth & Harvest); birthday guests eat the cake.
+        if (dev.villagefriends.hearth.HomeMeals.update(v, level, plan)) return;
         // Homestead folk stay near home, and the veteran walks the watch round the tower.
         if (dev.villagefriends.homestead.Homesteads.steer(v, level, plan)) return;
         steer(v, level, plan);

@@ -74,6 +74,8 @@ public final class Talk {
             if (c.topic.equals("chat") || c.topic.equals("greet")) {
                 w.put("baby.routine." + c.routine, 2); w.put("baby.time." + c.period, 1);
                 if (c.market) w.put("baby.market", 2);
+                if (c.topic.equals("chat")) w.put("baby.chat.food", 1);
+                if (c.fill.containsKey("meal")) w.put("meal.eating", 6);
                 // A child whose family is short of room talks about the bigger house they asked for.
                 String home = c.fill.get("home_talk");
                 if ("crowded".equals(home) || "homeless".equals(home)) w.put("baby.notice.house", 2);
@@ -93,6 +95,10 @@ public final class Talk {
             }
             case "chat" -> {
                 w.put("chat." + c.personality, 6); w.put("chat.general", 3); w.put("routine." + c.routine, 3); w.put("time." + c.period, 2);
+                // Hearth & Harvest: food talk, the meal in their hands, the tavern's dish of the day.
+                if (c.fill.containsKey("dish")) w.put("chat.food", 2);
+                if (c.fill.containsKey("meal")) w.put("meal.eating", 8);
+                if (c.routine.equals("lunch_tavern") || c.routine.equals("supper_tavern") || c.job.equals("tavern_keeper") || c.job.equals("cook")) w.put("tavern.special", 3);
                 w.put(c.level >= 6 ? "chat.close" : c.level <= 1 ? "chat.new" : "chat.friendly", 2);
                 w.put("weather." + c.weather, weather ? 4 : 1);
                 if (c.night()) w.put("moon." + c.moon, 2);

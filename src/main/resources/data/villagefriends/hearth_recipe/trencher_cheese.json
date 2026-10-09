@@ -1,0 +1,13 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:trencher",
+    "villagefriends:cheese",
+    "villagefriends:herbs"
+  ],
+  "result": {
+    "id": "villagefriends:trencher_cheese",
+    "count": 1
+  },
+  "time": 60
+}

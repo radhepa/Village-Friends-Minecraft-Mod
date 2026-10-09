@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "#villagefriends:cooking/fish",
+    "villagefriends:herbs",
+    "villagefriends:leek"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:fish_herb_soup",
+    "count": 1
+  },
+  "time": 200
+}

@@ -1,0 +1,17 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:milk_bucket",
+    "minecraft:egg",
+    "minecraft:sugar"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:frumenty",
+    "count": 1
+  },
+  "time": 240,
+  "secret": true
+}

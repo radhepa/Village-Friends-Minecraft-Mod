@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=north,filled=false": {
+      "model": "villagefriends:block/cooking_pot",
+      "y": 0
+    },
+    "facing=north,filled=true": {
+      "model": "villagefriends:block/cooking_pot_filled",
+      "y": 0
+    },
+    "facing=east,filled=false": {
+      "model": "villagefriends:block/cooking_pot",
+      "y": 90
+    },
+    "facing=east,filled=true": {
+      "model": "villagefriends:block/cooking_pot_filled",
+      "y": 90
+    },
+    "facing=south,filled=false": {
+      "model": "villagefriends:block/cooking_pot",
+      "y": 180
+    },
+    "facing=south,filled=true": {
+      "model": "villagefriends:block/cooking_pot_filled",
+      "y": 180
+    },
+    "facing=west,filled=false": {
+      "model": "villagefriends:block/cooking_pot",
+      "y": 270
+    },
+    "facing=west,filled=true": {
+      "model": "villagefriends:block/cooking_pot_filled",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "villagefriends:herbs",
+    "count": 20
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16,
+  "xp": 4,
+  "reputation_discount": 0.05
+}

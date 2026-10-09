@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "villagefriends:block/cabbage_stage3"
+  }
+}

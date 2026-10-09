@@ -1,0 +1,16 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "minecraft:sugar",
+    "minecraft:egg",
+    "minecraft:cocoa_beans",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:spice_cake",
+    "count": 1
+  },
+  "time": 260,
+  "secret": true
+}

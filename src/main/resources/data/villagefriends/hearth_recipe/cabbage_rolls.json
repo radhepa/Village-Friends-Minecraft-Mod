@@ -1,0 +1,16 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:cabbage",
+    "minecraft:beef",
+    "villagefriends:barley",
+    "villagefriends:onion"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:cabbage_rolls",
+    "count": 1
+  },
+  "time": 260,
+  "secret": true
+}

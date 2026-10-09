@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:rabbit",
+    "villagefriends:leek",
+    "minecraft:carrot"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:hare_stew",
+    "count": 1
+  },
+  "time": 240
+}

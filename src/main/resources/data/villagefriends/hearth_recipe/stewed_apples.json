@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:honey_bottle"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:stewed_apples",
+    "count": 1
+  },
+  "time": 160
+}

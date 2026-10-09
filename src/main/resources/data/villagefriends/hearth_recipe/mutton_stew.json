@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:mutton",
+    "villagefriends:barley",
+    "villagefriends:leek"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:mutton_stew",
+    "count": 1
+  },
+  "time": 240
+}

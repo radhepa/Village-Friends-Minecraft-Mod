@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:onion",
+    "villagefriends:cabbage",
+    "villagefriends:barley",
+    "villagefriends:garlic",
+    "villagefriends:leek",
+    "villagefriends:herbs"
+  ]
+}

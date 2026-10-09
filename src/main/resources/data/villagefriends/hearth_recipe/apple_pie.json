@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "villagefriends:apple_pie",
+    "count": 1
+  },
+  "time": 240
+}

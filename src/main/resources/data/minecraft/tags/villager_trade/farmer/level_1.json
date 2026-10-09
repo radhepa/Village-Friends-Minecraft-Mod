@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:farmer/cabbage_seeds",
+    "villagefriends:farmer/herb_seeds",
+    "villagefriends:farmer/onion_seeds"
+  ]
+}

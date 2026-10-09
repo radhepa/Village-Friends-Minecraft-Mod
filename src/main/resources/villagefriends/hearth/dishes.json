@@ -1,0 +1,1687 @@
+{
+  "version": 1,
+  "crops": [
+    {
+      "id": "onion",
+      "seed": "onion_seeds",
+      "food": 2,
+      "saturation": 0.3,
+      "biomes": [
+        "plains",
+        "desert",
+        "savanna",
+        "taiga",
+        "homestead"
+      ]
+    },
+    {
+      "id": "cabbage",
+      "seed": "cabbage_seeds",
+      "food": 3,
+      "saturation": 0.4,
+      "biomes": [
+        "plains",
+        "snowy",
+        "taiga",
+        "homestead"
+      ]
+    },
+    {
+      "id": "barley",
+      "seed": "barley_seeds",
+      "food": 0,
+      "saturation": 0.0,
+      "biomes": [
+        "plains",
+        "savanna",
+        "snowy",
+        "taiga"
+      ]
+    },
+    {
+      "id": "garlic",
+      "seed": "garlic_clove",
+      "food": 1,
+      "saturation": 0.2,
+      "biomes": [
+        "plains",
+        "desert",
+        "savanna",
+        "homestead"
+      ]
+    },
+    {
+      "id": "leek",
+      "seed": "leek_seeds",
+      "food": 2,
+      "saturation": 0.3,
+      "biomes": [
+        "plains",
+        "snowy",
+        "taiga",
+        "homestead"
+      ]
+    },
+    {
+      "id": "herbs",
+      "seed": "herb_seeds",
+      "food": 1,
+      "saturation": 0.2,
+      "biomes": [
+        "plains",
+        "desert",
+        "taiga",
+        "homestead"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "boar_haunch",
+      "food": 3,
+      "saturation": 0.3,
+      "raw_effect": null,
+      "needs": "nsvmobs",
+      "source": "nsvmobs:wild_boar",
+      "drops": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "brineclaw_meat",
+      "food": 2,
+      "saturation": 0.3,
+      "raw_effect": null,
+      "needs": "nsvmobs",
+      "source": "nsvmobs:brineclaw",
+      "drops": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "sporecap",
+      "food": 1,
+      "saturation": 0.1,
+      "raw_effect": {
+        "effect": "minecraft:nausea",
+        "seconds": 6
+      },
+      "needs": "nsvmobs",
+      "source": "nsvmobs:sporeling",
+      "drops": [
+        1,
+        2
+      ]
+    }
+  ],
+  "dishes": [
+    {
+      "id": "flour",
+      "station": "prep",
+      "existing": false,
+      "ingredient": true,
+      "secret": false,
+      "needs": null,
+      "food": 0,
+      "saturation": 0.0,
+      "tier": 0,
+      "buff": 0,
+      "serve": "-",
+      "vessel": "-",
+      "meals": [],
+      "likes": []
+    },
+    {
+      "id": "butter",
+      "station": "prep",
+      "existing": false,
+      "ingredient": true,
+      "secret": false,
+      "needs": null,
+      "food": 2,
+      "saturation": 0.2,
+      "tier": 0,
+      "buff": 0,
+      "serve": "-",
+      "vessel": "-",
+      "meals": [],
+      "likes": []
+    },
+    {
+      "id": "cheese",
+      "station": "pot",
+      "existing": false,
+      "ingredient": true,
+      "secret": false,
+      "needs": null,
+      "food": 3,
+      "saturation": 0.4,
+      "tier": 0,
+      "buff": 0,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [],
+      "likes": []
+    },
+    {
+      "id": "pastry",
+      "station": "prep",
+      "existing": false,
+      "ingredient": true,
+      "secret": false,
+      "needs": null,
+      "food": 0,
+      "saturation": 0.0,
+      "tier": 0,
+      "buff": 0,
+      "serve": "-",
+      "vessel": "-",
+      "meals": [],
+      "likes": []
+    },
+    {
+      "id": "trencher",
+      "station": "oven",
+      "existing": false,
+      "ingredient": true,
+      "secret": false,
+      "needs": null,
+      "food": 4,
+      "saturation": 0.4,
+      "tier": 0,
+      "buff": 0,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [],
+      "likes": []
+    },
+    {
+      "id": "onion_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "steadfast",
+        "pragmatic",
+        "farmer"
+      ]
+    },
+    {
+      "id": "green_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "lunch"
+      ],
+      "likes": [
+        "gentle",
+        "thoughtful",
+        "cleric"
+      ]
+    },
+    {
+      "id": "barley_porridge",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "breakfast"
+      ],
+      "likes": [
+        "warmhearted",
+        "child"
+      ]
+    },
+    {
+      "id": "leek_broth",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "reserved",
+        "librarian"
+      ]
+    },
+    {
+      "id": "cabbage_soup",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "pragmatic",
+        "mason"
+      ]
+    },
+    {
+      "id": "garlic_broth",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "protective",
+        "apothecary"
+      ]
+    },
+    {
+      "id": "mushroom_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "curious",
+        "imaginative"
+      ]
+    },
+    {
+      "id": "beet_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "playful"
+      ]
+    },
+    {
+      "id": "hare_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "adventurous",
+        "leatherworker"
+      ]
+    },
+    {
+      "id": "beef_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "protective",
+        "steadfast",
+        "knight"
+      ]
+    },
+    {
+      "id": "mutton_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "shepherd",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "chicken_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "gentle",
+        "warmhearted"
+      ]
+    },
+    {
+      "id": "pork_cabbage_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "butcher",
+        "pragmatic"
+      ]
+    },
+    {
+      "id": "fishermans_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "fisherman",
+        "reserved"
+      ]
+    },
+    {
+      "id": "fish_herb_soup",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "fisherman",
+        "thoughtful"
+      ]
+    },
+    {
+      "id": "hunters_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 11,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 210,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "adventurous",
+        "archer",
+        "knight"
+      ]
+    },
+    {
+      "id": "frumenty",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "breakfast",
+        "party"
+      ],
+      "likes": [
+        "warmhearted",
+        "cook"
+      ]
+    },
+    {
+      "id": "harvest_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 12,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 240,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "farmer",
+        "warmhearted",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "stewed_apples",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "tart",
+      "vessel": "bowl",
+      "meals": [
+        "breakfast",
+        "picnic"
+      ],
+      "likes": [
+        "child",
+        "playful"
+      ]
+    },
+    {
+      "id": "mulled_cider",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 4,
+      "saturation": 0.4,
+      "tier": 1,
+      "buff": 120,
+      "serve": "cider",
+      "vessel": "bottle",
+      "meals": [
+        "winter",
+        "party"
+      ],
+      "likes": [
+        "bard",
+        "imaginative"
+      ]
+    },
+    {
+      "id": "honey_posset",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "breakfast"
+      ],
+      "likes": [
+        "gentle",
+        "thoughtful"
+      ]
+    },
+    {
+      "id": "leek_cheese_soup",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "thoughtful",
+        "librarian",
+        "cartographer"
+      ]
+    },
+    {
+      "id": "cabbage_rolls",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "meticulous",
+        "tailor"
+      ]
+    },
+    {
+      "id": "boar_stew",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": "nsvmobs",
+      "food": 11,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 210,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "adventurous",
+        "protective"
+      ]
+    },
+    {
+      "id": "brineclaw_bisque",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": "nsvmobs",
+      "food": 12,
+      "saturation": 1.0,
+      "tier": 3,
+      "buff": 240,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "fisherman",
+        "curious"
+      ]
+    },
+    {
+      "id": "sporecap_pottage",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": "nsvmobs",
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "curious",
+        "imaginative"
+      ]
+    },
+    {
+      "id": "barley_loaf",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 90,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [
+        "breakfast",
+        "lunch"
+      ],
+      "likes": [
+        "pragmatic",
+        "farmer"
+      ]
+    },
+    {
+      "id": "herb_bread",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [
+        "breakfast",
+        "tavern"
+      ],
+      "likes": [
+        "imaginative",
+        "cook"
+      ]
+    },
+    {
+      "id": "wastel",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 120,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [
+        "breakfast"
+      ],
+      "likes": [
+        "meticulous",
+        "librarian",
+        "cleric"
+      ]
+    },
+    {
+      "id": "honey_loaf",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 110,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [
+        "breakfast",
+        "picnic"
+      ],
+      "likes": [
+        "warmhearted",
+        "child"
+      ]
+    },
+    {
+      "id": "onion_tart",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "thoughtful",
+        "meticulous"
+      ]
+    },
+    {
+      "id": "leek_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "gentle",
+        "reserved"
+      ]
+    },
+    {
+      "id": "mutton_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "shepherd",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "pork_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "lunch",
+        "picnic"
+      ],
+      "likes": [
+        "butcher",
+        "adventurous"
+      ]
+    },
+    {
+      "id": "chicken_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "gentle",
+        "warmhearted",
+        "cleric"
+      ]
+    },
+    {
+      "id": "fish_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "fisherman",
+        "reserved"
+      ]
+    },
+    {
+      "id": "steak_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 11,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 210,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "knight",
+        "protective",
+        "armorer"
+      ]
+    },
+    {
+      "id": "apple_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "picnic"
+      ],
+      "likes": [
+        "child",
+        "playful"
+      ]
+    },
+    {
+      "id": "berry_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "picnic"
+      ],
+      "likes": [
+        "playful",
+        "child"
+      ]
+    },
+    {
+      "id": "honey_cake",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party",
+        "picnic"
+      ],
+      "likes": [
+        "warmhearted",
+        "child",
+        "bard"
+      ]
+    },
+    {
+      "id": "seed_cake",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party"
+      ],
+      "likes": [
+        "reserved",
+        "thoughtful",
+        "scholar"
+      ]
+    },
+    {
+      "id": "spice_cake",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 180,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party",
+        "winter"
+      ],
+      "likes": [
+        "curious",
+        "imaginative",
+        "painter"
+      ]
+    },
+    {
+      "id": "celebration_cake",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 240,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party"
+      ],
+      "likes": [
+        "child",
+        "warmhearted",
+        "playful"
+      ]
+    },
+    {
+      "id": "pasty",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "lunch",
+        "picnic"
+      ],
+      "likes": [
+        "pragmatic",
+        "mason",
+        "toolsmith"
+      ]
+    },
+    {
+      "id": "roast_chicken",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "gentle",
+        "cook"
+      ]
+    },
+    {
+      "id": "roast_pork",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "butcher",
+        "pragmatic"
+      ]
+    },
+    {
+      "id": "roast_mutton",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "shepherd",
+        "protective"
+      ]
+    },
+    {
+      "id": "roast_boar",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": "nsvmobs",
+      "food": 12,
+      "saturation": 1.0,
+      "tier": 3,
+      "buff": 240,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "adventurous",
+        "knight"
+      ]
+    },
+    {
+      "id": "baked_apples",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "breakfast",
+        "picnic"
+      ],
+      "likes": [
+        "child",
+        "gentle"
+      ]
+    },
+    {
+      "id": "custard_tart",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": true,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party"
+      ],
+      "likes": [
+        "gentle",
+        "meticulous",
+        "cleric"
+      ]
+    },
+    {
+      "id": "roast_potatoes",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 100,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper"
+      ],
+      "likes": [
+        "farmer",
+        "pragmatic"
+      ]
+    },
+    {
+      "id": "herb_omelette",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 110,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "breakfast"
+      ],
+      "likes": [
+        "meticulous",
+        "curious"
+      ]
+    },
+    {
+      "id": "honey_wafers",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 3,
+      "saturation": 0.4,
+      "tier": 1,
+      "buff": 90,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party",
+        "picnic"
+      ],
+      "likes": [
+        "child",
+        "bard",
+        "playful"
+      ]
+    },
+    {
+      "id": "smoked_fish",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 120,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "winter",
+        "lunch"
+      ],
+      "likes": [
+        "fisherman",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "trencher_roast",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "knight",
+        "butcher",
+        "protective"
+      ]
+    },
+    {
+      "id": "trencher_cheese",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 110,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "lunch"
+      ],
+      "likes": [
+        "thoughtful",
+        "reserved"
+      ]
+    },
+    {
+      "id": "trencher_mushroom",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 110,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "lunch"
+      ],
+      "likes": [
+        "curious",
+        "imaginative"
+      ]
+    },
+    {
+      "id": "herb_salad",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.5,
+      "tier": 1,
+      "buff": 100,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "lunch"
+      ],
+      "likes": [
+        "gentle",
+        "meticulous",
+        "apothecary"
+      ]
+    },
+    {
+      "id": "sauerkraut",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 4,
+      "saturation": 0.5,
+      "tier": 1,
+      "buff": 100,
+      "serve": "stew",
+      "vessel": "bottle",
+      "meals": [
+        "winter"
+      ],
+      "likes": [
+        "steadfast",
+        "pragmatic"
+      ]
+    },
+    {
+      "id": "pickled_onions",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 3,
+      "saturation": 0.4,
+      "tier": 1,
+      "buff": 90,
+      "serve": "stew",
+      "vessel": "bottle",
+      "meals": [
+        "winter",
+        "lunch"
+      ],
+      "likes": [
+        "pragmatic",
+        "reserved"
+      ]
+    },
+    {
+      "id": "cheese_board",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 110,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "lunch",
+        "picnic"
+      ],
+      "likes": [
+        "reserved",
+        "thoughtful",
+        "librarian"
+      ]
+    },
+    {
+      "id": "cold_cuts",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "lunch",
+        "picnic"
+      ],
+      "likes": [
+        "adventurous",
+        "pragmatic"
+      ]
+    },
+    {
+      "id": "picnic_bundle",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 10,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "picnic"
+      ],
+      "likes": [
+        "playful",
+        "warmhearted",
+        "adventurous"
+      ]
+    },
+    {
+      "id": "hearty_stew",
+      "station": "pot",
+      "existing": true,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "steadfast",
+        "protective"
+      ]
+    },
+    {
+      "id": "fresh_village_bread",
+      "station": "oven",
+      "existing": true,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 90,
+      "serve": "bread",
+      "vessel": "-",
+      "meals": [
+        "breakfast",
+        "lunch",
+        "tavern"
+      ],
+      "likes": [
+        "pragmatic",
+        "farmer"
+      ]
+    },
+    {
+      "id": "shepherds_pie",
+      "station": "oven",
+      "existing": true,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 180,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "shepherd",
+        "warmhearted"
+      ]
+    },
+    {
+      "id": "ploughmans_lunch",
+      "station": "prep",
+      "existing": true,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 7,
+      "saturation": 0.7,
+      "tier": 1,
+      "buff": 120,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "lunch",
+        "tavern",
+        "picnic"
+      ],
+      "likes": [
+        "farmer",
+        "pragmatic",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "apple_tart",
+      "station": "oven",
+      "existing": true,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 5,
+      "saturation": 0.5,
+      "tier": 1,
+      "buff": 90,
+      "serve": "tart",
+      "vessel": "-",
+      "meals": [
+        "party",
+        "picnic"
+      ],
+      "likes": [
+        "child",
+        "playful"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:sugar",
+    "minecraft:sweet_berries"
+  ],
+  "vessel": "minecraft:glass_bottle",
+  "result": {
+    "id": "villagefriends:mulled_cider",
+    "count": 1
+  },
+  "time": 200,
+  "secret": true
+}

@@ -1,0 +1,763 @@
+{
+  "format": 3,
+  "type": "plains",
+  "part": "Hearth & Harvest: farm processors written by tools/hearth/hearth.py (never edit by hand)",
+  "processor_lists": {
+    "plains_weathered_fields": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:cobblestone",
+              "probability": 0.15
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_cobblestone"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.1
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:mossy_stone_bricks"
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:stone_bricks",
+              "probability": 0.08
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": "minecraft:cracked_stone_bricks"
+          }
+        ]
+      },
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:barley_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:barley_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:barley_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:barley_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0623
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "homestead_fields": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:wheat",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:carrots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:potatoes",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:onion_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:cabbage_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:garlic_crop",
+              "Properties": {
+                "age": "5"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:leek_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:beetroots",
+              "probability": 0.0742
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "villagefriends:herbs_crop",
+              "Properties": {
+                "age": "7"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

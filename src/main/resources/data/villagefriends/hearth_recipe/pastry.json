@@ -1,0 +1,12 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:pastry",
+    "count": 2
+  },
+  "time": 60
+}

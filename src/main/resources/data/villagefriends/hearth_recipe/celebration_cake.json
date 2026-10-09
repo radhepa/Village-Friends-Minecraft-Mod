@@ -1,0 +1,17 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:egg",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:celebration_cake",
+    "count": 1
+  },
+  "time": 320,
+  "secret": true
+}

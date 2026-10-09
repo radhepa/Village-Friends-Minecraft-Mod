@@ -42,7 +42,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/house_tall_oak",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -51,7 +51,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/house_tall_brick",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -78,7 +78,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farmhouse",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },
@@ -168,7 +168,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/farm_wheat",
-        "processors": "villagefriends:weathered",
+        "processors": "villagefriends:plains_weathered_fields",
         "projection": "rigid"
       }
     },

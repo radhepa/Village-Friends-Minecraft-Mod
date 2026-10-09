@@ -1,0 +1,15 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "villagefriends:onion",
+    "villagefriends:onion",
+    "villagefriends:cheese",
+    "minecraft:egg"
+  ],
+  "result": {
+    "id": "villagefriends:onion_tart",
+    "count": 1
+  },
+  "time": 240
+}

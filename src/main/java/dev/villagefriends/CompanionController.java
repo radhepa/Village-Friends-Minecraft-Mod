@@ -125,12 +125,13 @@ public final class CompanionController {
                 if (v.isBaby() || s.active() || !claimable(v, p) || VillageFriends.state(v, p).points() < 15 || bond(v, p).trust() < 30 || !v.level().dimension().equals(Level.OVERWORLD)) return false;
                 if (action.equals("picnic") || action.equals("gathering")) {
                     var held = p.getMainHandItem();
-                    if (!(held.is(Items.BREAD) || held.is(Items.APPLE) || held.is(Items.COOKIE))) {
-                        show(p, v, "together", "Bring bread, an apple, or a cookie so we can share something.", "Hold picnic food in your main hand.", false); break;
+                    if (!dev.villagefriends.hearth.HearthVillage.picnicFood(held)) {
+                        show(p, v, "together", "Bring bread, an apple, a cookie, or something you've cooked so we can share it.", "Hold picnic food in your main hand.", false); break;
                     }
                     if (action.equals("gathering") && loaded.stream().filter(n -> n != v && n.level() == v.level() && n.distanceToSqr(v) < 144 && !n.isBaby() && !state(n).active()).count() < 2) {
                         show(p, v, "together", "Let's invite the neighbors when at least two of them are nearby.", "Gatherings need three adult residents nearby.", false); break;
                     }
+                    dev.villagefriends.hearth.HearthVillage.brought(v, held);
                     if (!p.getAbilities().instabuild) held.shrink(1);
                 }
                 begin(v, p, action);
@@ -161,13 +162,17 @@ public final class CompanionController {
                     show(p, v, "together", "I'd like a little more time together before we call this finished. Walks need eight blocks; exploration needs thirty-two. Picnics and gatherings just need a little time.", "Keep spending time together, then try again.", false); break;
                 }
                 finish(v, p, outing.type);
+                var guests = new java.util.ArrayList<Villager>();
                 if (outing.type.equals("gathering")) {
                     for (var guest : List.copyOf(loaded)) if (state(guest).owner().equals(p.getUUID().toString()) && state(guest).mode().equals("gathering_guest")) {
-                        finish(guest, p, "gathering"); releaseHere(guest, p);
+                        finish(guest, p, "gathering"); releaseHere(guest, p); guests.add(guest);
                     }
                 }
                 releaseHere(v, p);
-                show(p, v, "talk", "I enjoyed that. Thank you for making time for me. I'll remember this when we talk again.", "A shared experience, remembered in your journal.", false);
+                // Hearth & Harvest: a dish brought to a picnic or gathering is worth a little extra.
+                String shared = dev.villagefriends.hearth.HearthVillage.finished(v, p, outing.type, guests);
+                show(p, v, "talk", shared != null ? shared : "I enjoyed that. Thank you for making time for me. I'll remember this when we talk again.",
+                        shared != null ? "A shared meal, remembered in your journal. A little extra friendship for the dish." : "A shared experience, remembered in your journal.", false);
             }
             default -> { return false; }
         }

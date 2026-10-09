@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:prep_table",
+    "count": 1
+  },
+  "pattern": [
+    "I  ",
+    "SSS",
+    "F F"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "S": "#minecraft:wooden_slabs",
+    "F": "#minecraft:wooden_fences"
+  }
+}

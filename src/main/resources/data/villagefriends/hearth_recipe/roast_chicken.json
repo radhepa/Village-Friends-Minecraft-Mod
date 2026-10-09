@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:chicken",
+    "villagefriends:herbs",
+    "villagefriends:garlic"
+  ],
+  "result": {
+    "id": "villagefriends:roast_chicken",
+    "count": 1
+  },
+  "time": 240
+}

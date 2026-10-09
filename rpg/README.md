@@ -35,7 +35,8 @@ Each level gives 3 attribute points (5 on every 10th): 317 by level 100. Ten att
 - The action bar shows the share, e.g. `+6 XP (Zombie, 50%)`.
 
 ## Skills (0–50, rise by doing)
-Swordsmanship, Axe Mastery, Archery, Defense, Mining, Woodcutting, Excavation, Farming, Fishing, Husbandry, Athletics, Swimming, Acrobatics, Arcana, Bartering.
+Swordsmanship, Axe Mastery, Archery, Defense, Mining, Woodcutting, Excavation, Farming, Fishing, Husbandry, Athletics, Swimming, Acrobatics, Arcana, Bartering, Cooking.
+Cooking trains when you take food out of a Hearth & Harvest cooking pot, clay oven or prep table (more for better dishes): +1% Well Fed time and a 0.8% chance of a "fine" dish per level (`Cooking.java`, through `HearthEvents`).
 At 50: +20% sword/axe damage, +30% projectiles, +50% tool speed, 20% double ore, 30% double logs, 50% extra harvest, +1.5 luck, +10% speed, −30% fall damage, +50% vanilla XP, +50% job rewards, and so on (exact numbers on the sheet).
 
 ## Bestiary (22 monster families)

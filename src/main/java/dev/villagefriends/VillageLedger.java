@@ -107,6 +107,8 @@ public final class VillageLedger {
         if (level >= FriendshipLevels.PREFERENCES && loaded != null) {
             var profile = profile(loaded);
             about.add("Favorite gift: " + itemName(profile.love()) + " · Dislikes: " + itemName(profile.dislike()));
+            String dish = dev.villagefriends.hearth.HearthVillage.favoriteLabel(loaded);
+            if (!dish.isEmpty()) about.add(dish);
         } else if (level < FriendshipLevels.PREFERENCES) about.add("Become acquaintances to learn their favorite things.");
         about.add(level < 0 ? "You haven't met yet." : "Your friendship: Lv. " + level + " " + FriendshipLevels.name(level));
         var ties = new ArrayList<LedgerPayload.Tie>();

@@ -132,14 +132,17 @@ public final class Birthdays {
         VillageSocieties.emote(host, Emote.HEART, 0);
         for (var guest : party) VillageSocieties.emote(guest, random.nextBoolean() ? Emote.EXCLAIM : Emote.SPARKLE, 4 + random.nextInt(16));
         int year = Calendar.year(today);
+        // Hearth & Harvest: the cake is served, and everyone at the party has a slice.
+        String cake = dev.villagefriends.hearth.HearthVillage.serveCake(host, party);
+        String cakeName = new net.minecraft.world.item.ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(cake))).getHoverName().getString();
         for (var player : level.players()) {
             if (player.isSpectator() || player.distanceToSqr(host) > 16 * 16) continue;
             var b = bond(host, player);
             if (b.has("birthday_party:" + year)) continue;
             saveBond(host, player, b.flag("birthday_party:" + year).trust(3).remember(today, "You came to my birthday party."));
             reward(host, player, 10);
-            giveItem(player, "villagefriends:birthday_cake_slice", 1);
-            player.sendSystemMessage(Component.literal(name(host) + " blows out the candles! You get a slice of birthday cake. (+10 friendship)").withStyle(ChatFormatting.LIGHT_PURPLE), false);
+            giveItem(player, cake, 1);
+            player.sendSystemMessage(Component.literal(name(host) + " blows out the candles! You get a slice of " + cakeName + ". (+10 friendship)").withStyle(ChatFormatting.LIGHT_PURPLE), false);
         }
     }
 
@@ -211,7 +214,7 @@ public final class Birthdays {
      * for a birthday card, which is sweet but early (or late).
      */
     static Gift gift(Villager v, ServerPlayer p, String item, int value, boolean loved) {
-        boolean card = item.equals("villagefriends:birthday_card"), cake = item.equals("minecraft:cake");
+        boolean card = item.equals("villagefriends:birthday_card"), cake = item.equals("minecraft:cake") || dev.villagefriends.hearth.HearthVillage.cake(item);
         long today = day(v.level());
         if (!celebrating(v)) {
             if (!card) return null;

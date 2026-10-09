@@ -1,0 +1,16 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:butter",
+    "minecraft:egg",
+    "minecraft:sugar",
+    "villagefriends:herb_seeds"
+  ],
+  "result": {
+    "id": "villagefriends:seed_cake",
+    "count": 1
+  },
+  "time": 240,
+  "secret": true
+}

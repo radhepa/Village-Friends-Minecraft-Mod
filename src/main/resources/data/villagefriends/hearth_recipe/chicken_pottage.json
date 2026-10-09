@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:chicken",
+    "villagefriends:leek",
+    "villagefriends:herbs"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:chicken_pottage",
+    "count": 1
+  },
+  "time": 240
+}

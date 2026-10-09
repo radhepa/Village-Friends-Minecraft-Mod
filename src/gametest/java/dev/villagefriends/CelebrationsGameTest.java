@@ -99,7 +99,11 @@ public final class CelebrationsGameTest implements FabricClientGameTest {
             // Cake time: everyone nearby gets a slice.
             w.getServer().runCommand("time set " + (birthdayDay * 24000 + Routine.at(17, 50)));
             c.waitTicks(60); flush(w);
-            check(count(w, VillageItems.get("birthday_cake_slice")) == 1, "Cake time hands the player a slice of birthday cake");
+            // Hearth & Harvest: the cake is a real dish (the guest of honor's favorite cake), and the party eats it too.
+            var cake = w.getServer().computeOnServer(s -> dev.villagefriends.hearth.HearthVillage.partyCake(villager(w, residents.getFirst())).id());
+            check(count(w, net.minecraft.core.registries.BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(cake))) == 1, "Cake time hands the player a slice of the party cake: " + cake);
+            check(w.getServer().computeOnServer(s -> ("eat:" + cake).equals(target(villager(w, residents.getFirst())).getAttached(dev.villagefriends.hearth.HomeMeals.STATE))),
+                    "and the guest of honor eats a slice");
             c.takeScreenshot("celebrations-cake-time");
             // Wish them a happy birthday, then give a cake: twice the friendship.
             talk(c, w, residents.getFirst());

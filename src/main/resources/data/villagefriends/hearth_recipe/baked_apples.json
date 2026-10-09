@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:apple",
+    "minecraft:honey_bottle"
+  ],
+  "result": {
+    "id": "villagefriends:baked_apples",
+    "count": 1
+  },
+  "time": 180
+}

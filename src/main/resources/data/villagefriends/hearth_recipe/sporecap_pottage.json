@@ -1,0 +1,22 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "nsvmobs"
+      ]
+    }
+  ],
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:sporecap",
+    "villagefriends:barley",
+    "villagefriends:herbs"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:sporecap_pottage",
+    "count": 1
+  },
+  "time": 220
+}

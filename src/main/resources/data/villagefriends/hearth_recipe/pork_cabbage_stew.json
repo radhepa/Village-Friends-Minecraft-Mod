@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:porkchop",
+    "villagefriends:cabbage",
+    "villagefriends:onion"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:pork_cabbage_stew",
+    "count": 1
+  },
+  "time": 240
+}

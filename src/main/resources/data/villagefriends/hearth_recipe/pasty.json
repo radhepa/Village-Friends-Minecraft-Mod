@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:beef",
+    "minecraft:potato",
+    "villagefriends:onion"
+  ],
+  "result": {
+    "id": "villagefriends:pasty",
+    "count": 1
+  },
+  "time": 260
+}

@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:leek",
+    "villagefriends:leek",
+    "villagefriends:barley"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:leek_broth",
+    "count": 1
+  },
+  "time": 180
+}

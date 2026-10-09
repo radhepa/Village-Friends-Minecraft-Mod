@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "minecraft:honey_bottle",
+    "minecraft:egg",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:honey_cake",
+    "count": 1
+  },
+  "time": 240
+}

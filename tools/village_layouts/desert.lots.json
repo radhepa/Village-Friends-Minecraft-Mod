@@ -159,12 +159,12 @@
         {
           "template": "desert/farm_irrigated",
           "weight": 4,
-          "processors": "desert_lots_weathered"
+          "processors": "desert_desert_lots_weathered_fields"
         },
         {
           "template": "desert/farm_melons",
           "weight": 3,
-          "processors": "desert_lots_weathered"
+          "processors": "desert_desert_lots_weathered_fields"
         },
         {
           "template": "desert/cane_channel",

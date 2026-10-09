@@ -1,0 +1,13 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:cheese",
+    "minecraft:apple",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "villagefriends:cheese_board",
+    "count": 1
+  },
+  "time": 60
+}

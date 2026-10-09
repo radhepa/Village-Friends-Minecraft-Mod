@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:mulled_cider",
+    "villagefriends:spice_cake",
+    "villagefriends:smoked_fish",
+    "villagefriends:sauerkraut",
+    "villagefriends:pickled_onions"
+  ]
+}

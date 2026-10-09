@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:onion_crop",
+    "villagefriends:cabbage_crop",
+    "villagefriends:barley_crop",
+    "villagefriends:garlic_crop",
+    "villagefriends:leek_crop",
+    "villagefriends:herbs_crop"
+  ]
+}

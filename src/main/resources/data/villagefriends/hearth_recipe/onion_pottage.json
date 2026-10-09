@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:onion",
+    "villagefriends:onion",
+    "villagefriends:barley",
+    "villagefriends:herbs"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:onion_pottage",
+    "count": 1
+  },
+  "time": 200
+}

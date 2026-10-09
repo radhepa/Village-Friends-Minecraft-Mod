@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:beef",
+    "villagefriends:onion",
+    "villagefriends:onion",
+    "minecraft:potato"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:beef_stew",
+    "count": 1
+  },
+  "time": 240
+}

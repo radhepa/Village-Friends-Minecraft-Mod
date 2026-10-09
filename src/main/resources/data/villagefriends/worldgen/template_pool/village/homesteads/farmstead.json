@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/homesteads/farmstead",
-        "processors": "villagefriends:village",
+        "processors": "villagefriends:homestead_fields",
         "projection": "rigid"
       }
     }

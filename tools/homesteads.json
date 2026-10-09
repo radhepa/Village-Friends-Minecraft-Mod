@@ -13,11 +13,13 @@
   "homesteads": {
     "farmstead": {
       "weight": 3,
+      "processors": "homestead_fields",
       "roles": ["homesteader", "homesteader"],
       "biomes": ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:forest", "minecraft:birch_forest", "minecraft:flower_forest"]
     },
     "pariah_house": {
       "weight": 2,
+      "processors": "homestead_fields",
       "roles": ["pariah"],
       "biomes": ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:forest", "minecraft:dark_forest", "minecraft:birch_forest", "minecraft:taiga"]
     },

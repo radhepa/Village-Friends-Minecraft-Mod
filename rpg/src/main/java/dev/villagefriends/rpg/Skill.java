@@ -16,7 +16,8 @@ public enum Skill {
     SWIMMING("Swimming", "Swim"),
     ACROBATICS("Acrobatics", "Survive falls"),
     ARCANA("Arcana", "Enchant, brew, use anvils, gather experience"),
-    BARTERING("Bartering", "Trade with villagers and finish their jobs");
+    BARTERING("Bartering", "Trade with villagers and finish their jobs"),
+    COOKING("Cooking", "Cook dishes at a cooking pot, clay oven or prep table");
 
     public final String label, howToTrain;
     Skill(String label, String howToTrain) { this.label = label; this.howToTrain = howToTrain; }
@@ -40,6 +41,7 @@ public enum Skill {
             case ACROBATICS -> "+" + num(Balance.ACRO_SAFE_FALL * s) + " safe fall, " + pct(-Balance.ACRO_FALL_DAMAGE * s) + " fall damage";
             case ARCANA -> pct(Balance.ARCANA_XP * s) + " vanilla experience";
             case BARTERING -> pct(Balance.BARTER_REWARD * s) + " quest rewards";
+            case COOKING -> pct(Balance.COOK_WELL_FED * s) + " Well Fed time, " + chance(Balance.COOK_FINE * s) + " fine dish";
         };
     }
     static String pct(double v) { return (v >= 0 ? "+" : "") + Math.round(v * 1000) / 10.0 + "%"; }

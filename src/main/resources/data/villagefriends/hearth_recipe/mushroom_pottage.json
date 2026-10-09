@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "villagefriends:onion",
+    "villagefriends:garlic"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:mushroom_pottage",
+    "count": 1
+  },
+  "time": 200
+}

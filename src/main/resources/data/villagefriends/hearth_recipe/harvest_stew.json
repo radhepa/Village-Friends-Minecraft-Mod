@@ -1,0 +1,18 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:onion",
+    "villagefriends:cabbage",
+    "villagefriends:leek",
+    "villagefriends:garlic",
+    "minecraft:carrot",
+    "minecraft:potato"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:harvest_stew",
+    "count": 1
+  },
+  "time": 300,
+  "secret": true
+}

@@ -1,0 +1,14 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:potato",
+    "minecraft:potato",
+    "villagefriends:garlic",
+    "villagefriends:herbs"
+  ],
+  "result": {
+    "id": "villagefriends:roast_potatoes",
+    "count": 1
+  },
+  "time": 200
+}

@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/savanna/farm_wheat",
-        "processors": "villagefriends:village",
+        "processors": "villagefriends:savanna_village_fields",
         "projection": "rigid"
       }
     },
@@ -15,7 +15,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/savanna/farm_beets_melon",
-        "processors": "villagefriends:village",
+        "processors": "villagefriends:savanna_village_fields",
         "projection": "rigid"
       }
     },
@@ -24,7 +24,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/savanna/farm_roots",
-        "processors": "villagefriends:village",
+        "processors": "villagefriends:savanna_village_fields",
         "projection": "rigid"
       }
     },

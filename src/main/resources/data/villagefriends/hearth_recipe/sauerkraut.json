@@ -1,0 +1,13 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:cabbage",
+    "villagefriends:cabbage",
+    "minecraft:glass_bottle"
+  ],
+  "result": {
+    "id": "villagefriends:sauerkraut",
+    "count": 1
+  },
+  "time": 80
+}

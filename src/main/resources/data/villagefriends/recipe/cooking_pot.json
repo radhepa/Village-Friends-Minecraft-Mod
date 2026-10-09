@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "result": {
+    "id": "villagefriends:cooking_pot",
+    "count": 1
+  },
+  "pattern": [
+    "N N",
+    "I I",
+    " I "
+  ],
+  "key": {
+    "N": "minecraft:iron_nugget",
+    "I": "minecraft:iron_ingot"
+  }
+}

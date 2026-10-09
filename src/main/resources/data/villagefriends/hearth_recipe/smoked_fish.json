@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "#villagefriends:cooking/fish",
+    "#villagefriends:cooking/fish",
+    "villagefriends:herbs"
+  ],
+  "result": {
+    "id": "villagefriends:smoked_fish",
+    "count": 2
+  },
+  "time": 240
+}

@@ -1,0 +1,14 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:onion",
+    "villagefriends:onion",
+    "minecraft:sugar",
+    "minecraft:glass_bottle"
+  ],
+  "result": {
+    "id": "villagefriends:pickled_onions",
+    "count": 1
+  },
+  "time": 80
+}

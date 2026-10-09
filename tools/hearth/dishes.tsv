@@ -1,0 +1,90 @@
+# Hearth & Harvest: every dish, kitchen ingredient and station recipe. python tools/hearth/hearth.py compiles this table.
+#
+# station     pot (on a lit campfire or fire), oven (burns fuel) or prep (the prep table, no heat)
+# ingredients one per grid slot, separated by ";". Bare names are Village Friends items when one exists
+#             (onion, flour, cheese...) and Minecraft items otherwise; "x*2" takes two slots; "#fish" is the
+#             item tag villagefriends:cooking/fish; other tags are written "#namespace:path".
+# vessel      bowl or bottle: the pot's container slot (oven and prep recipes take it as one more ingredient),
+#             and what you keep after eating. "-" for none.
+# makes       how many one batch makes. time: seconds to cook.
+# food/sat    nutrition and saturation modifier. tier: Well Fed I-III (0 = a plain ingredient, no buff).
+# buff        Well Fed seconds. serve: what residents' animations call it (stew pie bread platter tart cider).
+# meals       where residents eat it: breakfast lunch supper (at home), tavern (the cook's dish of the day),
+#             picnic, party (the birthday cake), winter (keeps well).
+# likes       who tends to have it as their favourite: personalities, jobs, or child.
+# flags       ingredient (a kitchen ingredient, not a dish), existing (an item Village Friends already had),
+#             secret (a family recipe: hidden until you learn it from a recipe card), needs:<modid>.
+id	name	station	ingredients	vessel	makes	time	food	sat	tier	buff	serve	meals	likes	flags	text
+flour	Flour	prep	wheat	-	1	2	0	0	0	0	-	-	-	ingredient	Wheat ground fine on the prep table.
+butter	Butter	prep	milk_bucket	-	3	4	2	0.2	0	0	-	-	-	ingredient	Churned from a bucket of milk. The bucket comes back.
+cheese	Farmhouse Cheese	pot	milk_bucket	-	2	12	3	0.4	0	0	platter	-	-	ingredient	A soft round of cheese, set from warm milk.
+pastry	Pastry	prep	flour;butter	-	2	3	0	0	0	0	-	-	-	ingredient	Short pastry for pies and tarts.
+trencher	Trencher	oven	flour*2;barley	-	2	8	4	0.4	0	0	bread	-	-	ingredient	A thick slab of coarse bread to eat your dinner off, and then eat.
+onion_pottage	Onion Pottage	pot	onion*2;barley;herbs	bowl	1	10	6	0.6	1	120	stew	supper,tavern	steadfast,pragmatic,farmer	-	Thick and golden. Every hearth in the land knows this one.
+green_pottage	Green Pottage	pot	cabbage;leek;herbs	bowl	1	10	6	0.6	1	120	stew	supper,lunch	gentle,thoughtful,cleric	-	Whatever is green in the garden, simmered soft.
+barley_porridge	Barley Porridge	pot	barley*2;milk_bucket;honey_bottle	bowl	1	10	6	0.7	1	120	stew	breakfast	warmhearted,child	-	Creamy barley sweetened with honey. A breakfast to start a long day.
+leek_broth	Leek and Barley Broth	pot	leek*2;barley	bowl	1	9	5	0.6	1	100	stew	supper	reserved,librarian	-	A thin, clean broth for a cold evening.
+cabbage_soup	Cabbage Soup	pot	cabbage;onion;carrot	bowl	1	9	6	0.6	1	100	stew	supper,tavern	pragmatic,mason	-	Plain, hot and filling.
+garlic_broth	Garlic Broth	pot	garlic*2;onion;herbs	bowl	1	9	5	0.6	1	120	stew	supper	protective,apothecary	-	The apothecary swears by it for a chill.
+mushroom_pottage	Mushroom Pottage	pot	brown_mushroom;red_mushroom;onion;garlic	bowl	1	10	7	0.6	1	120	stew	supper,tavern	curious,imaginative	-	Earthy, dark and rich, with a whisper of garlic.
+beet_pottage	Beet and Barley Pottage	pot	beetroot*2;barley	bowl	1	9	6	0.6	1	100	stew	supper	playful	-	Bright red and sweet. It stains everything.
+hare_stew	Hare and Leek Stew	pot	rabbit;leek;carrot	bowl	1	12	9	0.8	2	150	stew	supper	adventurous,leatherworker	-	A huntsman's stew of hare, leeks and carrots.
+beef_stew	Beef and Onion Stew	pot	beef;onion*2;potato	bowl	1	12	10	0.8	2	180	stew	supper,tavern	protective,steadfast,knight	-	Slow-cooked beef that falls apart on the spoon.
+mutton_stew	Mutton and Barley Stew	pot	mutton;barley;leek	bowl	1	12	9	0.8	2	150	stew	supper,tavern	shepherd,steadfast	-	The shepherd's supper: mutton, barley and leeks.
+chicken_pottage	Chicken and Leek Pottage	pot	chicken;leek;herbs	bowl	1	12	8	0.8	2	150	stew	supper	gentle,warmhearted	-	Soothing and simple, the cure for most things.
+pork_cabbage_stew	Pork and Cabbage Stew	pot	porkchop;cabbage;onion	bowl	1	12	9	0.8	2	150	stew	supper	butcher,pragmatic	-	Salt pork and cabbage, the way grandmothers make it.
+fishermans_stew	Fisherman's Stew	pot	#fish*2;onion;potato	bowl	1	12	9	0.8	2	150	stew	supper,tavern	fisherman,reserved	-	The day's catch with onions and potatoes.
+fish_herb_soup	Fish and Herb Soup	pot	#fish;herbs;leek	bowl	1	10	7	0.7	1	120	stew	supper	fisherman,thoughtful	-	Light, green and fragrant.
+hunters_stew	Hunter's Stew	pot	rabbit;mutton;brown_mushroom;onion;garlic	bowl	1	14	11	0.9	3	210	stew	supper	adventurous,archer,knight	secret	Whatever the hunt brought home, with mushrooms and garlic. A family recipe.
+frumenty	Frumenty	pot	wheat*2;milk_bucket;egg;sugar	bowl	1	12	8	0.8	2	180	stew	breakfast,party	warmhearted,cook	secret	Wheat boiled in milk with egg and sugar: feast-day porridge. A family recipe.
+harvest_stew	Harvest Stew	pot	onion;cabbage;leek;garlic;carrot;potato	bowl	1	15	12	0.9	3	240	stew	supper,tavern	farmer,warmhearted,steadfast	secret	Six vegetables from six rows of the garden. A family recipe.
+stewed_apples	Honeyed Stewed Apples	pot	apple*2;honey_bottle	bowl	1	8	6	0.6	1	100	tart	breakfast,picnic	child,playful	-	Soft apples in warm honey.
+mulled_cider	Mulled Cider	pot	apple*2;sugar;sweet_berries	bottle	1	10	4	0.4	1	120	cider	winter,party	bard,imaginative	secret	Hot cider with berries and sugar for winter nights. A family recipe.
+honey_posset	Honey Posset	pot	milk_bucket;honey_bottle;egg	bowl	1	10	5	0.6	1	120	stew	breakfast	gentle,thoughtful	secret	A warm, sweet cup of milk and honey before bed. A family recipe.
+leek_cheese_soup	Leek and Cheese Soup	pot	leek*2;cheese;potato	bowl	1	12	9	0.8	2	150	stew	supper	thoughtful,librarian,cartographer	secret	Velvety and rich. A family recipe.
+cabbage_rolls	Cabbage Rolls	pot	cabbage;beef;barley;onion	bowl	1	13	10	0.8	2	180	stew	supper	meticulous,tailor	secret	Beef and barley wrapped in cabbage leaves, simmered slowly. A family recipe.
+boar_stew	Boar and Barley Stew	pot	boar_haunch;barley;onion;garlic	bowl	1	14	11	0.9	3	210	stew	supper	adventurous,protective	needs:nsvmobs	Wild boar from the deep woods, stewed with barley.
+brineclaw_bisque	Brineclaw Bisque	pot	brineclaw_meat;milk_bucket;leek;garlic	bowl	1	15	12	1.0	3	240	stew	supper	fisherman,curious	needs:nsvmobs	A creamy soup of giant crab claw. A feast for whoever brought it down.
+sporecap_pottage	Sporecap Pottage	pot	sporecap;barley;herbs	bowl	1	11	7	0.7	2	150	stew	supper	curious,imaginative	needs:nsvmobs	Boiled long enough, a Sporeling's cap is perfectly safe. Mostly.
+barley_loaf	Barley Loaf	oven	barley*2;flour	-	1	10	5	0.6	1	90	bread	breakfast,lunch	pragmatic,farmer	-	Dense, dark and honest.
+herb_bread	Herb Bread	oven	flour*2;herbs;garlic	-	1	10	6	0.6	1	100	bread	breakfast,tavern	imaginative,cook	-	Warm bread flecked with herbs and garlic.
+wastel	Wastel Loaf	oven	flour*3;egg	-	1	12	7	0.7	1	120	bread	breakfast	meticulous,librarian,cleric	-	The finest white bread, for best.
+honey_loaf	Honey Loaf	oven	flour*2;honey_bottle;butter	-	1	11	6	0.7	1	110	bread	breakfast,picnic	warmhearted,child	-	A sticky golden loaf with a honey glaze.
+onion_tart	Onion Tart	oven	pastry;onion*2;cheese;egg	-	1	12	8	0.8	2	150	tart	supper,tavern	thoughtful,meticulous	-	Sweet, slow onions in a cheese custard.
+leek_pie	Leek Pie	oven	pastry;leek*2;cheese	-	1	12	8	0.8	2	150	pie	supper,tavern	gentle,reserved	-	Buttery leeks under a golden lid.
+mutton_pie	Mutton Pie	oven	pastry;mutton;onion	-	1	13	9	0.8	2	150	pie	supper,tavern	shepherd,steadfast	-	A raised pie of minced mutton and onion.
+pork_pie	Pork Pie	oven	pastry;porkchop;herbs	-	1	13	9	0.8	2	150	pie	lunch,picnic	butcher,adventurous	-	Good cold, better warm, best on a hillside.
+chicken_pie	Chicken and Herb Pie	oven	pastry;chicken;herbs;leek	-	1	13	9	0.8	2	150	pie	supper,tavern	gentle,warmhearted,cleric	-	Chicken and leeks in a herby sauce.
+fish_pie	Fish Pie	oven	pastry;#fish;potato;cheese	-	1	13	9	0.8	2	150	pie	supper	fisherman,reserved	-	Flaked fish and potato under a cheese crust.
+steak_pie	Steak and Onion Pie	oven	pastry;beef;onion;brown_mushroom	-	1	15	11	0.9	3	210	pie	supper,tavern	knight,protective,armorer	secret	A great deep pie of beef, onions and mushrooms. A family recipe.
+apple_pie	Deep Apple Pie	oven	pastry;apple*2;sugar	-	1	12	8	0.7	2	150	pie	supper,picnic	child,playful	-	Tall and full of apples, unlike that thin little tart.
+berry_pie	Berry Pie	oven	pastry;sweet_berries*2;sugar	-	1	12	8	0.7	2	150	pie	picnic	playful,child	-	Purple to the elbows. Worth it.
+honey_cake	Honey Cake	oven	flour;honey_bottle;egg;butter	-	1	12	7	0.7	2	150	tart	party,picnic	warmhearted,child,bard	-	A soft, golden cake soaked in honey.
+seed_cake	Seed Cake	oven	flour;butter;egg;sugar;herb_seeds	-	1	12	7	0.7	2	150	tart	party	reserved,thoughtful,scholar	secret	A plain cake speckled with seeds, for afternoons. A family recipe.
+spice_cake	Spice Cake	oven	flour;sugar;egg;cocoa_beans;butter	-	1	13	8	0.7	2	180	tart	party,winter	curious,imaginative,painter	secret	Dark, spiced and sweet. A family recipe.
+celebration_cake	Celebration Cake	oven	flour*2;sugar*2;egg;butter	-	1	16	10	0.9	3	240	tart	party	child,warmhearted,playful	secret	Layers of sponge and cream for a birthday. A family recipe.
+pasty	Miner's Pasty	oven	pastry;beef;potato;onion	-	1	13	10	0.8	2	180	pie	lunch,picnic	pragmatic,mason,toolsmith	-	A whole dinner folded in pastry, to carry down the mine.
+roast_chicken	Roast Chicken with Herbs	oven	chicken;herbs;garlic	-	1	12	9	0.8	2	150	platter	supper	gentle,cook	-	Crisp skin, herbs and garlic.
+roast_pork	Roast Pork with Apples	oven	porkchop;apple;onion	-	1	12	9	0.8	2	150	platter	supper	butcher,pragmatic	-	Pork roasted over apples and onions.
+roast_mutton	Roast Mutton with Garlic	oven	mutton;garlic;herbs	-	1	12	9	0.8	2	150	platter	supper	shepherd,protective	-	A leg of mutton studded with garlic.
+roast_boar	Roast Boar with Apples	oven	boar_haunch;apple*2;herbs	-	1	16	12	1.0	3	240	platter	supper	adventurous,knight	needs:nsvmobs	A haunch of wild boar roasted with apples: a lord's dinner.
+baked_apples	Baked Apples	oven	apple*2;honey_bottle	-	1	9	5	0.6	1	100	tart	breakfast,picnic	child,gentle	-	Soft, wrinkled and full of honey.
+custard_tart	Custard Tart	oven	pastry;egg*2;milk_bucket;sugar	-	1	13	8	0.7	2	150	tart	party	gentle,meticulous,cleric	secret	A wobbling yellow custard in pastry. A family recipe.
+roast_potatoes	Garlic Roast Potatoes	oven	potato*2;garlic;herbs	-	1	10	7	0.6	1	100	platter	supper	farmer,pragmatic	-	Crisp outside, soft inside, garlic everywhere.
+herb_omelette	Herb Omelette	oven	egg*2;herbs;cheese	-	1	9	7	0.7	1	110	platter	breakfast	meticulous,curious	-	Eggs baked flat with herbs and cheese.
+honey_wafers	Honey Wafers	oven	flour;honey_bottle;egg	-	2	9	3	0.4	1	90	tart	party,picnic	child,bard,playful	-	Thin, crisp wafers pressed with a honeycomb pattern.
+smoked_fish	Smoked Fish	oven	#fish*2;herbs	-	2	12	6	0.7	1	120	platter	winter,lunch	fisherman,steadfast	-	Smoked slow over the oven fire. It keeps all winter.
+trencher_roast	Trencher of Roast Beef	prep	trencher;cooked_beef;onion	-	1	4	10	0.8	2	150	platter	supper,tavern	knight,butcher,protective	-	Roast beef and onions on a trencher. Eat the plate, too.
+trencher_cheese	Cheese and Herb Trencher	prep	trencher;cheese;herbs	-	1	3	7	0.6	1	110	platter	lunch	thoughtful,reserved	-	Soft cheese and green herbs on a trencher.
+trencher_mushroom	Mushroom Trencher	prep	trencher;brown_mushroom;garlic;butter	-	1	3	7	0.6	1	110	platter	lunch	curious,imaginative	-	Buttery garlic mushrooms soaking into the bread.
+herb_salad	Herb Salad	prep	cabbage;herbs;leek;onion	bowl	1	3	5	0.5	1	100	stew	lunch	gentle,meticulous,apothecary	-	A salat of raw greens and herbs, as the old books say.
+sauerkraut	Sauerkraut	prep	cabbage*2	bottle	1	4	4	0.5	1	100	stew	winter	steadfast,pragmatic	-	Cabbage packed tight in a jar. It keeps all winter.
+pickled_onions	Pickled Onions	prep	onion*2;sugar	bottle	1	4	3	0.4	1	90	stew	winter,lunch	pragmatic,reserved	-	Sharp little onions in a jar, for a cold larder.
+cheese_board	Cheese and Apple Board	prep	cheese;apple;bread	-	1	3	7	0.6	1	110	platter	lunch,picnic	reserved,thoughtful,librarian	-	A wedge of cheese, an apple and a hunk of bread.
+cold_cuts	Cold Cuts and Cheese	prep	cooked_porkchop;cheese;bread	-	1	3	9	0.7	2	150	platter	lunch,picnic	adventurous,pragmatic	-	Sliced pork, cheese and bread: dinner on the road.
+picnic_bundle	Picnic Bundle	prep	bread;cheese;apple;cooked_chicken	-	1	4	10	0.8	2	180	platter	picnic	playful,warmhearted,adventurous	-	A cloth tied round enough for two. Made for sharing.
+hearty_stew	Hearty Stew	pot	beef;potato;carrot;brown_mushroom	bowl	1	12	8	0.8	2	150	stew	supper,tavern	steadfast,protective	existing	The village's own stew, now cooked in a proper pot.
+fresh_village_bread	Fresh Village Bread	oven	flour*3	-	2	10	6	0.6	1	90	bread	breakfast,lunch,tavern	pragmatic,farmer	existing	Everyday bread from the village oven.
+shepherds_pie	Shepherd's Pie	oven	mutton;potato;carrot;onion	-	1	14	9	0.8	2	180	pie	supper,tavern	shepherd,warmhearted	existing	Lamb and gravy under mashed potato.
+ploughmans_lunch	Ploughman's Lunch	prep	bread;cheese;apple;pickled_onions	-	1	3	7	0.7	1	120	platter	lunch,tavern,picnic	farmer,pragmatic,steadfast	existing	Bread, cheese, an apple and a pickle on a board.
+apple_tart	Apple Tart	oven	pastry;apple;sugar	-	1	10	5	0.5	1	90	tart	party,picnic	child,playful	existing	A little lattice-top tart, for afters.

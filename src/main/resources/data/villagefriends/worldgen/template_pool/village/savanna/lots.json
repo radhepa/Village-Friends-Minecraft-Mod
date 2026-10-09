@@ -150,7 +150,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/savanna/farm_wheat",
-        "processors": "villagefriends:village",
+        "processors": "villagefriends:savanna_village_fields",
         "projection": "rigid"
       }
     },

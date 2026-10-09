@@ -48,6 +48,7 @@ public final class Rpg implements ModInitializer {
         PlayerBlockBreakEvents.AFTER.register(Hunt::broke);
         CommandRegistrationCallback.EVENT.register((dispatcher, registry, env) -> RpgCommands.register(dispatcher));
         ServerLifecycleEvents.SERVER_STOPPED.register(server -> { Life.clear(); Hunt.clear(); Quests.clear(); });
+        Cooking.register();
         // Development check (-Dvillagefriends_rpg.audit=true): apply every mixin once the server is up, then stop.
         if (Boolean.getBoolean("villagefriends_rpg.audit")) ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             org.spongepowered.asm.mixin.MixinEnvironment.getCurrentEnvironment().audit();

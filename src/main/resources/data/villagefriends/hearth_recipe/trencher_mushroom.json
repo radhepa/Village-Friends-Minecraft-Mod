@@ -1,0 +1,14 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:trencher",
+    "minecraft:brown_mushroom",
+    "villagefriends:garlic",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:trencher_mushroom",
+    "count": 1
+  },
+  "time": 60
+}

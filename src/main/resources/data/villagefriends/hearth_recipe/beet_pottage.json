@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "minecraft:beetroot",
+    "minecraft:beetroot",
+    "villagefriends:barley"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:beet_pottage",
+    "count": 1
+  },
+  "time": 180
+}

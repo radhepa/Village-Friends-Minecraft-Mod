@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:barley",
+    "villagefriends:barley",
+    "minecraft:milk_bucket",
+    "minecraft:honey_bottle"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:barley_porridge",
+    "count": 1
+  },
+  "time": 200
+}

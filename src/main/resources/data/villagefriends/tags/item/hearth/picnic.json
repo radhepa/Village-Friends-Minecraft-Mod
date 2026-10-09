@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:stewed_apples",
+    "villagefriends:honey_loaf",
+    "villagefriends:pork_pie",
+    "villagefriends:apple_pie",
+    "villagefriends:berry_pie",
+    "villagefriends:honey_cake",
+    "villagefriends:pasty",
+    "villagefriends:baked_apples",
+    "villagefriends:honey_wafers",
+    "villagefriends:cheese_board",
+    "villagefriends:cold_cuts",
+    "villagefriends:picnic_bundle",
+    "villagefriends:ploughmans_lunch",
+    "villagefriends:apple_tart"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:leek",
+    "villagefriends:leek",
+    "villagefriends:cheese",
+    "minecraft:potato"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:leek_cheese_soup",
+    "count": 1
+  },
+  "time": 240,
+  "secret": true
+}

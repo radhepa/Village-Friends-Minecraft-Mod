@@ -1,0 +1,8 @@
+# Hearth & Harvest: ingredients that come from somewhere other than a crop or a station.
+# source: where it drops. "nsvmobs:<mob>" rows only drop (and only show in the creative tab) when
+# Not-So-Vanilla Mobs is installed; drops are count min-max, looting adds up to one more.
+# food/sat: eaten raw. raw_effect: a vanilla effect id and seconds when eaten raw ("-" for none).
+id	name	food	sat	raw_effect	source	drops	looks
+boar_haunch	Raw Boar Haunch	3	0.3	-	nsvmobs:wild_boar	1-2	a thick pink haunch of wild boar with a white bone end and a dark bristly rind
+brineclaw_meat	Brineclaw Meat	2	0.3	-	nsvmobs:brineclaw	2-4	a chunk of white crab meat streaked with orange, in a cracked red claw shell
+sporecap	Sporecap	1	0.1	minecraft:nausea:6	nsvmobs:sporeling	1-2	a puffy grey-violet mushroom cap with pale spots and a short stalk

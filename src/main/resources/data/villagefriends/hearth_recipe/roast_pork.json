@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "minecraft:porkchop",
+    "minecraft:apple",
+    "villagefriends:onion"
+  ],
+  "result": {
+    "id": "villagefriends:roast_pork",
+    "count": 1
+  },
+  "time": 240
+}

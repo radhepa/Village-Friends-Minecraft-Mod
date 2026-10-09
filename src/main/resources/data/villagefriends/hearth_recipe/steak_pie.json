@@ -1,0 +1,15 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "minecraft:beef",
+    "villagefriends:onion",
+    "minecraft:brown_mushroom"
+  ],
+  "result": {
+    "id": "villagefriends:steak_pie",
+    "count": 1
+  },
+  "time": 300,
+  "secret": true
+}

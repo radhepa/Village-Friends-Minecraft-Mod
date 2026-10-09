@@ -1,0 +1,13 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "minecraft:cooked_porkchop",
+    "villagefriends:cheese",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "villagefriends:cold_cuts",
+    "count": 1
+  },
+  "time": 60
+}

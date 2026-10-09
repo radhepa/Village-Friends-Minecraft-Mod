@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:flour",
+    "villagefriends:flour",
+    "villagefriends:barley"
+  ],
+  "result": {
+    "id": "villagefriends:trencher",
+    "count": 2
+  },
+  "time": 160
+}

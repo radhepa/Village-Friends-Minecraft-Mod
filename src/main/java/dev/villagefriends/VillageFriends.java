@@ -90,6 +90,7 @@ public final class VillageFriends implements ModInitializer {
         dev.villagefriends.pet.VillagerPets.register();
         dev.villagefriends.home.Homes.register();
         dev.villagefriends.homestead.Homesteads.register();
+        dev.villagefriends.hearth.Hearth.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> dev.villagefriends.pet.VillagerPets.loaded(entity));
@@ -297,14 +298,19 @@ public final class VillageFriends implements ModInitializer {
             show(p, v, "talk", reply, "Gift declined. Your item and gift allowance were kept.", false, stack.isEmpty() ? Emote.QUESTION : Emote.SWEAT); return;
         }
         int value = item.equals(profile.love()) ? 14 : GiftPreferences.value(profession(v), v.isBaby(), item);
+        // Hearth & Harvest: a home-cooked dish, and above all their favorite dish.
+        var dish = dev.villagefriends.hearth.HearthVillage.gift(v, p, stack);
+        if (dish != null) value = Math.max(value, dish.value());
+        boolean loved = item.equals(profile.love()) || dish != null && dish.favorite();
         // Birthdays: presents count double, and cake or a birthday card are everyone's favorite.
-        var birthday = Birthdays.gift(v, p, item, value, item.equals(profile.love()));
+        var birthday = Birthdays.gift(v, p, item, value, loved);
         if (birthday != null) value = birthday.value();
         if (value == 0) { show(p, v, "talk", "That's thoughtful, but perhaps a flower, treat, or something for my hobby?", "Your item was kept.", false, Emote.QUESTION); return; }
         var next = old.gift(today, item, value); if (!p.getAbilities().instabuild) stack.shrink(1); save(v, p, next);
-        saveBond(v, p, bond(v, p).trust(item.equals(profile.love()) || birthday != null ? 2 : 1).remember(today, birthday != null ? birthday.memory() : "You gave me " + itemName(item) + "."));
+        saveBond(v, p, bond(v, p).trust(loved || birthday != null ? 2 : 1).remember(today, birthday != null ? birthday.memory() : dish != null ? dish.memory() : "You gave me " + itemName(item) + "."));
         celebrate(v, old, next);
         if (birthday != null) { show(p, v, "talk", birthday.reply(), "+" + (next.points() - old.points()) + " friendship. " + birthday.status(), false, birthday.mood()); return; }
+        if (dish != null) { show(p, v, "talk", dish.reply(), "+" + (next.points() - old.points()) + " friendship. " + dish.status(), false, dish.mood()); return; }
         show(p, v, "talk", item.equals(profile.love()) ? "You remembered! " + itemName(item) + " is one of my favorites. Thank you for paying attention."
                 : "What a lovely surprise. Thank you for thinking of me!", "+" + (next.points() - old.points()) + " friendship. Gifts help; shared experiences deepen our bond.", false,
                 item.equals(profile.love()) ? Emote.HEART : Emote.NOTE);
@@ -343,6 +349,11 @@ public final class VillageFriends implements ModInitializer {
         boolean levelUp = seen >= 0 && friendLevel > seen;
         if (seen != friendLevel) { b = b.unflag("seen_level:" + seen).flag("seen_level:" + friendLevel); saveBond(v, p, b); }
         if (levelUp) { status = "Friendship Lv. " + friendLevel + "! " + FriendshipLevels.perk(friendLevel); emote = Emote.SPARKLE; }
+        // Hearth & Harvest: a Friend hands over their family recipe the first time you talk.
+        if (opening || levelUp) {
+            String recipe = dev.villagefriends.hearth.HearthVillage.familyRecipeFor(p, v, friendLevel);
+            if (recipe != null) { dialogue = recipe; status = "They gave you a family recipe card. Use it to learn the recipe."; emote = Emote.HEART; b = bond(v, p); }
+        }
         var known = target(p).getAttachedOrCreate(ACQUAINTANCES);
         if (known.getOrDefault(profile.id(), -1) != friendLevel) {
             var next = new java.util.HashMap<>(known); next.put(profile.id(), friendLevel); target(p).setAttached(ACQUAINTANCES, java.util.Map.copyOf(next));
@@ -355,7 +366,8 @@ public final class VillageFriends implements ModInitializer {
         ServerPlayNetworking.send(p, new FriendshipPayload(v.getId(), v.getUUID(), name(v), label, personality,
                 affinity.points(), b.level(affinity), FriendshipLevels.threshold(Math.min(FriendshipLevels.MAX, friendLevel + 1)), affinity.giftsLeft(day(v.level())), affinity.canTalk(day(v.level())),
                 !v.isBaby() && !job.equals("none") && !job.equals("nitwit"), dialogue, status,
-                "Hobby: " + profile.hobby() + ". Loves " + itemName(profile.love()) + "; dislikes " + itemName(profile.dislike()) + ". " + GiftPreferences.hint(job, v.isBaby()),
+                "Hobby: " + profile.hobby() + ". Loves " + itemName(profile.love()) + "; dislikes " + itemName(profile.dislike()) + ". " + GiftPreferences.hint(job, v.isBaby())
+                        + (friendLevel >= FriendshipLevels.PREFERENCES ? " " + dev.villagefriends.hearth.HearthVillage.favoriteLabel(v) + "." : ""),
                 opening, tab, journal, NarrativeEngine.choices(v, p, tab), b.trustLabel(),
                 friendLevel, FriendshipLevels.name(friendLevel), FriendshipLevels.threshold(friendLevel), FriendshipLevels.goal(affinity, b), levelUp,
                 emote == null ? "" : emote.name(), town == null ? "" : town.name(), family));

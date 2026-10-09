@@ -1,0 +1,14 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:cabbage",
+    "villagefriends:leek",
+    "villagefriends:herbs"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:green_pottage",
+    "count": 1
+  },
+  "time": 200
+}

@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "villagefriends:alchemical_press",
+    "villagefriends:clay_oven",
+    "villagefriends:cooking_pot",
     "villagefriends:kitchen_stove"
   ]
 }
