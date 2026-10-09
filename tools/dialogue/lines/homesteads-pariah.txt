@@ -1,0 +1,348 @@
+# Homesteads: the Pariah, who lives alone at a once-fine timber house going to seed, far from any village.
+# Cast out of a village years ago: once a councillor, asked for judgement and advice, with friends, a seat of honour
+# at the tavern and their name on the bell rope. Then an accusation, a vote, and friends who looked at their boots.
+# What they were accused of is never spelled out: a lie, half a lie, or something they'd do again. Never resolved.
+# Voice: mostly scorn, pride and dry wit. Rare cracks of loneliness. Warmer (but still prickly) in .friend and .close.
+# Old names, used consistently: Aldous (oldest friend, kept bees, studied his boots at the vote), Merrit (council
+# rival, took the seat), Wenna (tavern keeper who kept their chair by the hearth), Tobin (the clerk they trained, who
+# cast the last vote). The one they nearly married stays unnamed.
+# Keys: pariah.greet, pariah.greet.stranger, pariah.greet.friend, pariah.greet.morning/evening/night,
+# pariah.weather.rain/thunder/snow/clearing/hot, pariah.chat, pariah.chat.new, pariah.chat.close, pariah.past,
+# pariah.night, pariah.work, pariah.adventure, pariah.joke, pariah.news, pariah.heart, pariah.player.hurt/hungry/dark/wet,
+# pariah.held.sword/flower/food/emerald.
+# Placeholders: {place} (their homestead), {village} (nearest village, or "the village"), {player}, {moon}, {weekday},
+# and {item} in held.* only. Gender-neutral throughout.
+
+## pariah.greet
+Oh. It's you. I'd ask what you want, but I suspect you'll tell me anyway.
+You're standing on my porch. Most people have the decency to stand on the road and stare.
+Well? Speak, or move along. The day isn't getting any longer.
+Welcome to {place}. Mind the step, it's rotten. Like most things that were once good.
+If {village} sent you, you can carry my answer back: no.
+I don't get callers. I've arranged my whole life around not getting callers.
+Ah, a visitor. How novel. Shall I ring a bell? I used to have one, you know.
+Mind the gate. It sticks, and so do I.
+You've come a long way to be disappointed. Come in, then.
+Hello, {player}. Don't make that face. I said hello, didn't I?
+Another day, another wanderer who took the wrong path and found me at the end of it.
+I was enjoying the quiet. I'll enjoy it again when you leave.
+If you're selling something, I've nothing to buy with. If you're preaching, I've heard it.
+What is it? Lost? Curious? Sent? Those are the only three reasons anyone comes up this road.
+Good day, you say. I'll be the judge of that. I used to be the judge of a great many things.
+You knocked. Nobody knocks anymore. I'd almost forgotten the sound.
+Come to see the hermit of {place}? Look your fill. No charge. It's the only thing I give away.
+Don't hover in the doorway like a debt collector. In or out.
+Hello. There. That was the last courtesy I had left in the cupboard.
+I see you found {place}. Congratulations. Most people make a point of not finding it.
+Speak up. The wind out here takes words, and I've no patience left to chase them.
+Whatever they told you about me in {village}, it was worse than the truth. Or better. I forget which.
+Oh, good. Company. Just what the cracked window and I were missing.
+Wipe your boots. I may be disgraced, but my floor isn't.
+You've got a village look about you. All hope and gossip. Wipe it off before you come any closer.
+Hmph. You again, or someone very like you. You all blur together after a while.
+Ah. A face. I'd forgotten how much they move about.
+
+## pariah.greet.stranger
+Who sent you? Don't lie. I sat on a council for eleven years. I know what a lie looks like coming up a path.
+I don't know you. Let's keep it that way a little longer.
+Stop there. That's close enough for a stranger.
+If you've come to gawk at the one they threw out, gawk quickly. I've wood to chop.
+Are you from {village}? You've the same way of not quite meeting my eye.
+Strangers on my path are either lost or up to something. Which are you?
+I'll have your name before you have anything of mine. Not that I've much left.
+Nobody walks this far by accident. So what's the errand?
+You're new. You'll learn. Everyone does, eventually, and then they stop coming.
+Don't smile at me like that. I've been smiled at by better liars than you.
+I keep a list of who comes up this road. You're on it now. Congratulations.
+Go on, ask. Everyone wants to ask what I did. I'm not telling you.
+Keep your hands where I can see them and your pity where I can't.
+
+## pariah.greet.friend
+Oh, it's you, {player}. Fine. Sit. Not in that chair.
+Back again? People will start to talk. Well, they already do. Let them.
+I saw you coming from the ridge. I didn't hide. Make of that what you like.
+{player}. I suppose I'm not entirely sorry to see you.
+You again. The kettle happens to be on. That's a coincidence, nothing more.
+I left the gate unlatched. The wind must have done it. Come in.
+Ah, my one regular caller. You'll ruin my reputation. Such as it is.
+Hmph. You're late. Not that I was expecting you. Not that I keep a clock for it.
+There you are. I'd started to think you'd come to your senses.
+You look half frozen. Sit by the fire and stop dripping on my good floor.
+{player}. Good. I've been saving up a complaint, and there's nobody else to give it to.
+Well, if it isn't the only person in the world with worse judgement than {village}.
+I swept the step this morning. For no one in particular. Come up, then.
+
+## pariah.greet.morning
+Morning. The bells in {village} will be ringing about now. I can just hear them, if I'm feeling cruel to myself.
+You're up early. So am I. Bitterness makes a fine alarm.
+Morning. The dew's on the fence, the porridge is burnt, and here you are. A full set.
+Good morning, people used to say to me, and bow. Now it's the crows, and they don't bow.
+It's early for visiting. Early for anything, really, except grudges. Those keep any hour.
+Morning. The council will be sitting about now. Somewhere a chair is warm, and it isn't mine.
+
+## pariah.greet.evening
+Evening. This is when the tavern fills up. I had a seat by the hearth once. They'll have given it to someone duller.
+You've come at supper. I'm not sharing. Well. Perhaps a crust.
+The sun's going down over {village}. Best view I have of the place. From a distance.
+Evening. The lanterns are lit down there. I can count them from here. I do, most nights.
+Come to watch the sunset with the outcast? There are worse seats, I suppose. Not many.
+
+## pariah.greet.night
+It's dark, {player}. Decent folk are abed. So what does that make us?
+At this hour? Either you're in trouble or you're trouble. Come in before the zombies decide which.
+Night callers. In {village} that meant bad news. Out here it means nothing at all, which is worse.
+Couldn't sleep either? Don't look so surprised. Even outcasts have that much in common with people.
+Shut the door quickly. Things walk about at night, and only some of them are honest.
+
+## pariah.weather.rain
+Rain again. It comes in through the cracked window and I let it. We understand each other.
+Wet weather. At least nobody expects me at market in this.
+Listen to it on the roof. The only thing that visits me without being asked.
+Rain washes {village} clean, they used to say. It hasn't managed yet.
+Rain's good for the garden. The weeds, mostly. They're the only things that thrive up here.
+
+## pariah.weather.thunder
+Thunder. The sky shouting at everyone at once. I used to do that in council. Very satisfying.
+Let it storm. This house has stood worse. So have I.
+Hear that? That's the only applause I get these days.
+A storm like this, the whole of {village} will be huddled together. I'll be huddled with myself. Better company.
+
+## pariah.weather.snow
+Snow. Everything looks clean and forgiven. Don't be fooled.
+Snowed in again. As if I needed another excuse to see nobody.
+My first winter out here, someone left firewood at my gate. I never found out who. I never thanked them. Snow always reminds me.
+Snow on the fence posts. It hides the rot nicely. I could use a coat of it myself.
+
+## pariah.weather.clearing
+Rain's stopped. The world goes back to pretending it never cried.
+There. The sky's done sulking. I could learn from it, I'm told. I won't.
+Clearing up. The puddles show the house upside down. It looks better that way.
+
+## pariah.weather.hot
+Hot enough to wilt a council. Not that mine needed much help.
+This heat. The garden's sulking, the well's low and I'm in no mood. Nothing new, then.
+Too hot to hold a grudge. Almost. I'm managing.
+
+## pariah.chat
+I fixed the shutter today. Nobody will see it. That's rather the point.
+People in {village} think I sit up here plotting. I sit up here darning socks. Plotting takes company.
+I grow my own beans, draw my own water and keep my own counsel. Nobody votes on any of it.
+Do you know what I like about living alone? Nobody changes their mind about me overnight.
+The house was handsome once. So was I. We've both settled into character.
+I talk to the chickens now. They're better listeners than a council, and they've never once voted.
+Pity is a cheap coin. Spend it somewhere else.
+I keep the good chair for guests. Nobody has ever sat in it. You won't either.
+They think I'm lonely out here. I'm not lonely. I'm selective. There's a difference, and I've made it my life's work.
+The fence is sagging. I'll fix it when I feel like keeping visitors out properly.
+You're bold, walking up to {place} like it's an inn. I almost admire it.
+I've counted the cracks in the window. Four. One for each person who ought to have spoken up.
+Some days I don't speak a single word. Then you come along and I find I've saved up a few hundred.
+Self-sufficient. That's the word. Not abandoned. Self-sufficient. Write it down if you must remember something.
+Everyone in {village} has an opinion of me. Not one of them has had the courage to bring it up the hill.
+I baked bread this morning. It came out flat and bitter. Like a portrait of the baker.
+The garden's gone wild. I let it. Somebody around here ought to do as they please without a vote.
+I could go back, you know. Walk right down the high street. I won't, but I could.
+People mistake my manners for sorrow. They're just manners. Sharpened.
+What do I do all day? I outlast people. It's slow work, but steady.
+I mended my coat at the elbows. Twice. I'll mend it again. Everything here gets a second chance except me.
+They say I keep to myself. Somebody has to. Nobody else would have me.
+A traveller once asked me the way to {village}. I gave it. The right way, even. I'm quite proud of my restraint.
+You're very persistent. It's either a virtue or a sickness. I've not decided.
+Don't tell anyone in {village} you've been here. Or do. Watch them go pale. That would be worth something.
+Out here, a day is just a day. No market, no feast, no seat to defend. It's restful, in a dreadful sort of way.
+I chopped enough firewood for two winters. I'm not expecting company. I'm just very angry at logs.
+Once, people bowed when I passed. Now the sheep don't even look up.
+The roof leaks over the good bed, so I sleep in the bad one. There's a lesson in that I refuse to learn.
+If you've come to do good, do it quietly and somewhere else.
+I don't need anything. I've told the wind, I've told the crows, and now I'm telling you.
+A peddler comes by twice a year and overcharges me for salt. It's the closest thing I have to a friendship.
+You don't flinch when I'm rude. That's either kindness or foolishness. Both are rare up here.
+I polished the brass on the door. Old habits. A councillor's door should shine, even when the councillor doesn't.
+People say this house is going to seed. So is everyone in {village}. They just have more chairs to hide it under.
+I read the same three books, over and over. Not one of them has ever turned against me.
+The quiet up here isn't empty. It's full of things I'd say if anyone were worth saying them to.
+They wanted me gone. I went. That's more obedience than they ever got from me in council.
+There's a cat who visits. Not mine. Nobody's. We respect each other's independence.
+I've weeded half the garden. The other half has earned the right to stay.
+You keep calling it lonely out here. I call it uninterrupted. Well, I did, until you started walking up my path.
+On market days I watch the carts go down the far road. I knew every driver by name once. One of them still waves. Badly.
+I have exactly one cup. Guests drink from the ladle. That tells you how often I plan for guests.
+There's an honest kind of loneliness and a dishonest kind of company. I've had both. I'll take the first.
+Respect is heavy, you know. You don't notice the weight until it's gone and you nearly fall over.
+I'm told I have a sharp tongue. I'm told it by people with blunt minds, so I take it as a compliment.
+I could tell you about my day, but it's the same as yesterday, and you didn't ask about that one either.
+
+## pariah.chat.new
+You're new to this road. Let me save you the trouble: I'm exactly as unpleasant as they say.
+I don't do small talk. I did enough of it in council to last three lifetimes.
+If you're hoping to hear the story, you'll be disappointed. I'm not a ballad.
+Ask me about the weather, the soil or the price of salt. Ask me about {village} and you can find the gate yourself.
+I'll tell you how my day is when I know why you're asking.
+What's the matter? Never met someone a whole village agreed on? It was the one thing they ever managed to agree on.
+Don't mistake an answer for a welcome. They look alike from a distance.
+You've got questions all over your face. Keep them there.
+Strangers think I'll be grateful for the company. Gratitude went down the hill with everything else.
+
+## pariah.chat.close
+You know what I miss? Not the council. Not the bowing. Being asked. Someone coming to my door because they thought I'd know.
+Don't tell anyone, but I set out a second cup now. Just in case. It's a waste of a cup most days.
+Sometimes I rehearse what I'd say if they asked me back. Then I rehearse saying no. The second speech is better.
+I'll tell you something, {player}, and then we'll never speak of it. Some nights I walk to the ridge just to hear the bell.
+You're the first person in years who's come back a second time. I noticed. I'm not pleased about it. But I noticed.
+I was good at it, you know. Judging. Weighing things up. I was fair. Mostly. Fairer than they were to me.
+I left my name off the gate when I built it. I didn't want anyone to know who lived here. Now I wonder if anyone would care.
+Was it a lie, what they said? Some of it. Would I do the rest again? Yes. Don't ask me which part is which. I've stopped asking myself.
+You sit in the good chair now. Don't let it go to your head. Nobody else has earned it.
+If I ever go soft, it'll be your fault. I want that understood.
+I've been angry for so long I'm not sure what I'd be without it. Tired, probably. Just tired.
+I'd like it understood that I don't need you to visit. Come again next {weekday}.
+You remind me of Aldous, before he learned to be careful. Don't learn it. It doesn't suit anyone.
+The window's still cracked. I could mend it. I think I've kept it so I'd have something to be angry at that isn't a person.
+There. I've laughed. Don't tell {village}. They'll think I've been replaced.
+I'm not a good person, {player}. But I was a useful one, once. I'd forgotten how much I liked being useful until you came along.
+If anything happens to me out here, you'll be the only one who notices. That's a heavy thing to hand someone. Sorry. Not very sorry. A bit.
+
+## pariah.past
+Aldous and I learned our letters on the same slate. Forty years of friendship, and at the vote he studied his boots like they owed him money.
+Merrit always wanted my seat on the council. He has it now. I hope it pinches.
+My name was on the bell rope. Carved in, right under the founder's. I wonder if they sanded it off, or if they just pull past it.
+People used to stop me in the street. Not to chat. To ask. Should we dig the well here, should we let the stranger stay. I'd tell them, and they'd do it.
+Wenna kept my chair by the tavern hearth for twenty years. Nobody else dared sit in it. I hear Merrit sits there now. I hope it wobbles.
+Tobin was a scrawny boy when I took him on as clerk. I taught him to read a ledger and stand up straight. He stood up very straight indeed to cast the last vote.
+The day of the vote it rained. Everyone remembers the rain. Nobody remembers who spoke for me, because nobody did.
+I'll tell you what I was accused of when you tell me what you'd have done in my place. No? Then we're square.
+Was it true? Half of it. The wrong half. The half they could prove.
+It was a lie. A good one. Merrit always did tell a lie well. It's the only thing he does well.
+I'd do it again. Don't ask me what. Just know I'd do it again, and sleep fine after.
+When I walked down the high street that last day, nobody threw anything. That was worse, somehow. They just closed their shutters, one after another, like a row of eyelids.
+Aldous came to see me once, the first spring. Stood at the gate, didn't come in. Said he was sorry. I told him sorry was for the vote, and he'd missed it.
+Eleven years on the council. I settled boundaries, fed the poor through the hard winter, faced down a pillager captain with a lantern and bad manners. One vote, and none of it counted.
+Respect isn't loud. That's what nobody tells you. It's quiet. A nod. A door held. You only hear it when it stops.
+I had friends, you know. Real ones. We used to sit up past midnight at Wenna's, arguing about the harvest like it was a war.
+Merrit sent me a letter after. Very gracious. Wishing me well in my new life. I used it to light the stove. It burned beautifully.
+Tobin's on the council now, I hear. Good. He'll learn what it costs. Everybody learns.
+Aldous kept bees. He brought me honey every autumn. I still catch myself watching the road around harvest.
+They gave me three days to pack. I needed one. It turns out you can fit a whole respected life into one cart, if you leave out the people.
+I used to stand at the front of the hall when the lanterns were lit, and the room would go quiet before I'd said a word. You don't forget that. You try.
+I'm told Wenna still lays a cloth on my old table at the harvest feast. She says it's habit. I say it's guilt. Probably it's both.
+
+## pariah.night
+Can't sleep. Never can, under a clear sky. All those stars watching, and not one of them gets a vote.
+Look at the {moon}. Thrown out of the sky every morning, and back every night like it owns the place. I respect that.
+From the ridge I can see the lanterns of {village}. I tell myself I'm counting them to see who's burning oil they can't afford.
+The stars don't care who you were. It's the most restful thing about them.
+I lie awake and argue the vote again. I win, every night. Then the sun comes up.
+Late, isn't it. The hour when everyone tells the truth, or goes to bed to avoid it.
+Some nights I say their names out loud. Aldous. Wenna. Tobin. Just to check I still can. Never Merrit. Merrit I save for the daytime, with feeling.
+
+## pariah.work
+Work? I keep this house standing. Nobody visits it, but it stands. That's spite, and spite is a trade.
+I used to weigh disputes over boundaries and wells and stolen hens. Now I weigh firewood. The firewood never appeals.
+I keep a ledger. Every slight, every turned back, every shutter closed. It's very well kept. I was always good with ledgers.
+I tend the garden. The roses have thorns and the herbs are bitter. I grow what suits me.
+Chopping wood is good work. Every log has a face, if you're imaginative. I'm very imaginative.
+I mend things. The fence, the roof, the chair legs. If you can't fix what happened, you fix what's in front of you.
+Once I told a whole village when to plant. Now I plant my own beans, and I'm right about them every single year.
+I copy out my old council notes. Every judgement I made. So someone, someday, can see I was right more often than they were.
+Busy? I'm always busy. Being disliked properly takes upkeep.
+I sell eggs to the peddler. He cheats me, and I let him think he's getting away with it. It keeps me in practice.
+I hauled stones up from the creek today to fix the wall. My back aches and my mind is clear. Fair trade.
+They took my seat, my name, my friends. They didn't take my hands. I can still build a better wall than anyone in {village}.
+What did I do for a living? I listened. Then I decided. Then people did as I said. It was a fine job, until they decided about me.
+I patch the roof before every storm. Not because anyone would mourn the house. Because I won't give them the satisfaction.
+My work these days is mostly remembering. It's harder than it sounds, keeping every grievance polished.
+I keep bees now. Aldous taught me, years ago. They sting when you're careless. Fair creatures.
+
+## pariah.adventure
+Adventures. I had one. A long walk out of {village} with a cart and nobody waving. I don't recommend it.
+Heroes. Every one of them comes home expecting a feast. I've seen how fast a feast becomes a trial.
+Go off slaying things and they'll sing songs about you. Then one day they'll sing something else. Trust me.
+I don't need the world. The world made that very clear, and I've returned the favour.
+The road out of {village} is four days' walk if you're sad, two if you're angry. I made it in two.
+You want treasure? Go on. Bring it back to a village and see how many friends it buys you. Then see how long they stay bought.
+I faced down pillagers once, when I had a village behind me. They gave me a cup at the feast for it. They took it back at the vote.
+Adventure is for people with somewhere to come home to. I've got {place}. That'll do. It'll have to.
+Don't tell me about mountains and far seas. I've seen enough of the world from the wrong side of a closed door.
+Brave is easy. Brave is one afternoon. Try being right for twenty years with everyone watching. That's the hard road.
+
+## pariah.joke
+How many councillors does it take to light a lantern? Seven. One to hold it, and six to vote on whether it was ever lit at all.
+Why do they ring the bell in {village} every morning? To remind everyone what they've agreed to think today.
+I told the council a joke once. They laughed. Then they voted. Nobody laughs anymore, but the voting never stopped.
+They say the truth will set you free. Well, here I am. Free as a crow. Freer, really. Crows have each other.
+A joke? My life is a joke. A long one, with the bad ending stuck in the middle.
+Merrit walks into the tavern and everyone stands up. Out of respect, he thinks. They're leaving.
+What do you call a village with only one honest person in it? Empty. They threw that one out.
+Here's one. A zombie wanders into {village} and nobody notices. They're used to people with nothing behind the eyes.
+Why did the councillor cross the road? Because everyone else was crossing it, and heaven forbid he think for himself.
+My garden has more backbone than the whole of {village}. That's not a joke. It's a measurement.
+What's the quickest way to empty a room? Be right, out loud, in front of people who'd rather not be wrong.
+I'd tell you the one about the loyal friend, but I've forgotten how it ends. I'm not sure I ever heard it.
+
+## pariah.news
+News? Nobody brings me news. I hear it anyway. The wind carries the bell, and the peddler carries everything else.
+The peddler says {village} is arguing over the new well. Good. I told them where to dig it twelve years ago.
+I hear Merrit's raised the market tax. Of course he has. I'd have wagered on it, if I had anything left to wager.
+Someone's moved into my old house. They've painted the door yellow. Yellow. I want you to understand how much that hurts.
+News? A crow brought me a button this morning. That's the most anyone's given me in a year.
+Nobody tells me anything. But I can see the smoke from {village}, and I can tell a feast from a fire. It's been feasts lately. Pity.
+I hear there's a new councillor. Young, full of ideas. Give it a few years. They'll vote someone out too.
+They're saying pillagers have been seen on the far road. I hope {village} remembers who used to organise the watch. I hope they remember slowly.
+My news is that the beans are up and the fence is down. Theirs is probably that I'm still alive. Disappointing all round.
+
+## pariah.heart
+Anyone special? There was. They sat three seats down at the vote and said nothing. I'm told silence is golden. It isn't. It's just silence.
+Romance. A promise made in good weather. I've seen how people keep their promises when it rains.
+Aldous. Not like that. But he was the one person I'd have trusted with my life, and I did, and he set it down on the floor and walked away.
+I was going to be married once. Then I was going to be exiled. One of those plans worked out.
+Love is wonderful, I'm sure. So is a seat on the council. Ask me how long either one lasts.
+Don't look at me with that soft face. Some people get a sweetheart. Some people get a very good fence.
+The one I'd have married sent me a letter, after. No signature. Just a pressed flower. I've kept it. I'll deny it if you tell anyone.
+There's no one. There's been no one for years. It's easier that way. Easier isn't the same as good, I know. Don't say it.
+I loved that village, {player}. That's the trouble. You can't be thrown out of somewhere you didn't love. You just leave.
+
+## pariah.player.hurt
+You look half dead. Sit down before you fall down, and don't mistake this for kindness.
+Look at the state of you. The world's been unkind. Welcome. There are bandages in the drawer.
+Hurt, are you? Sit. I've patched worse. I patched up a whole village once, and look where it got me.
+Don't you dare collapse on my porch. {village} would say I did it.
+You're limping. Lean on the fence. It's rotten, but it's held me up for years.
+
+## pariah.player.hungry
+You look hungry. There's bread. It's hard and it's bitter, but it's honest.
+When did you last eat? Never mind. Sit. I'm not feeding you, I'm getting rid of soup before it turns.
+Your stomach's louder than the bell in {village}. Eat something and stop looking so pitiful. Looking pitiful is my job up here.
+
+## pariah.player.dark
+Wandering about under the stars like that? The night isn't kind to people who think the world owes them a safe road.
+It's dark, {player}. Go home, or come in. Don't stand in between. That's where I live, and it's crowded enough.
+Out after dark? Creepers don't care who you are. That's the only fair thing about them.
+
+## pariah.player.wet
+You're soaked through. Stand by the fire, and drip on the stone, not on the rug.
+Wet as a drowned hen. Here's a blanket. It's moth-eaten. So is my patience. Take both.
+You walked through a storm to reach a house nobody visits. Either you're very loyal or very lost. Dry off while you decide.
+
+## pariah.held.sword
+Put the {item} away. If I wanted to be threatened, I'd go back to {village}.
+That's a fine {item}. I've been cut deeper by a show of hands.
+Swords. Everyone's so proud of swords. A vote does more damage, and nobody has to sharpen it.
+Come to run me through with that {item}? Join the queue. It's a long one, and they all use words.
+
+## pariah.held.flower
+That {item}. For me? Don't be absurd. Put it in the cup on the sill. Not because I want it.
+Flowers. People bring them to graves and to sweethearts. I hope you know which you think I am.
+Wenna used to keep flowers like that {item} on my table at the tavern. Put that away. I'm not in the mood for remembering.
+Don't wave that {item} about. The bees will think you're the only sweet thing up here, and they'd be right.
+
+## pariah.held.food
+That {item} smells better than anything I've cooked this year. Don't tell me where you got it.
+Food from {village}, I suppose. I can smell the market on it. Keep it. I'd only choke on the gossip.
+If that {item} is a peace offering, you've misjudged the size of the war.
+Set that {item} on the table, then. I'll eat it later. Resentfully.
+
+## pariah.held.emerald
+Emeralds. Put that {item} away. I was bought cheaper than that once, and by people I trusted.
+Keep your {item}. Merrit had pockets full of those, the season of the vote. I always wondered where they went.
+What would I buy with that {item}? A friend? They're sold out in {village}.
+They gave me a purse of those on the way out. Compensation, as if a seat by the hearth had a price. I threw it in the creek. Some days I'd like it back.

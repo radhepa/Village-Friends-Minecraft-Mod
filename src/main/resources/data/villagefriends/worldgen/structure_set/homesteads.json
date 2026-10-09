@@ -1,0 +1,34 @@
+{
+  "structures": [
+    {
+      "structure": "villagefriends:homestead_farmstead",
+      "weight": 3
+    },
+    {
+      "structure": "villagefriends:homestead_pariah_house",
+      "weight": 2
+    },
+    {
+      "structure": "villagefriends:homestead_shepherd_fold",
+      "weight": 2
+    },
+    {
+      "structure": "villagefriends:homestead_herbalist_cottage",
+      "weight": 2
+    },
+    {
+      "structure": "villagefriends:homestead_watchtower",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 6,
+    "salt": 1468203581,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 10
+    }
+  }
+}

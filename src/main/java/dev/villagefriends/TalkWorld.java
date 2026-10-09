@@ -97,6 +97,7 @@ public final class TalkWorld {
         }
         fill.put("season", dev.villagefriends.social.Calendar.season(today));
         dev.villagefriends.home.Homes.talk(v, fill);
+        dev.villagefriends.homestead.Homesteads.talk(v, fill);
         return new Talk.Context(topic, v.isBaby(), profile.personality(), job, friendLevel, Talk.period(time), weather,
                 plan.block().id(), Routine.marketDay(today), moon, home, held, states, extra, fill);
     }
@@ -205,6 +206,9 @@ public final class TalkWorld {
     /** Sometimes, on "How's your day?", a resident asks you something or offers to help instead. */
     public static DialogueBank.Question ask(Villager v, ServerPlayer p) {
         var bank = DialogueBank.current(); var b = bond(v, p);
+        // The pariah asks nobody anything and offers nothing.
+        var dweller = dev.villagefriends.homestead.Homesteads.dweller(v);
+        if (dweller != null && dweller.kind() == dev.villagefriends.homestead.Dwelling.Role.PARIAH) return null;
         var c = context(v, p, "chat");
         long today = day(v.level());
         var done = new HashSet<String>();

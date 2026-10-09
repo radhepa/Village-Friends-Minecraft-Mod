@@ -89,16 +89,17 @@ public final class VillageFriends implements ModInitializer {
         dev.villagefriends.deed.Deeds.register();
         dev.villagefriends.pet.VillagerPets.register();
         dev.villagefriends.home.Homes.register();
+        dev.villagefriends.homestead.Homesteads.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> dev.villagefriends.pet.VillagerPets.loaded(entity));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> {
-            if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); if (Knockouts.knockedOut(villager)) Knockouts.lieDown(villager); }
+            if (entity instanceof Villager villager) { GuardProgression.loaded(villager); ensureIdentity(villager); dev.villagefriends.homestead.Homesteads.settle(villager); CompanionController.loaded.add(villager); VillageSettlements.identify(villager,false); GuardController.initializeEquipment(villager); if (Knockouts.knockedOut(villager)) Knockouts.lieDown(villager); }
         });
-        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); VillageAlarm.unload(v); GuardPatrols.unload(v); } });
+        ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { GuardProgression.unload(entity); dev.villagefriends.pet.VillagerPets.unloaded(entity); if (entity instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); ResidentRoutines.unload(v); Knockouts.unload(v); VillageAlarm.unload(v); GuardPatrols.unload(v); dev.villagefriends.homestead.Homesteads.unload(v); } });
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> CompanionController.resetParty(handler.getPlayer()));
         ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> CompanionController.resetParty(handler.getPlayer()));
-        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); VillageAlarm.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); dev.villagefriends.deed.Deeds.clear(); });
+        ServerLifecycleEvents.SERVER_STOPPED.register(server -> { CompanionController.clear(); VillageSettlements.clear(); GuardController.clear(); GuardProgression.clear(); VillageSocieties.clear(); VillageLedger.clear(); ResidentRoutines.clear(); Workstations.clear(); Knockouts.clear(); VillageAlarm.clear(); GuardPatrols.clear(); Birthdays.clear(); VillageQuests.clear(); dev.villagefriends.pet.VillagerPets.clear(); dev.villagefriends.deed.Deeds.clear(); dev.villagefriends.homestead.Homesteads.clear(); });
         ServerTickEvents.END_SERVER_TICK.register(CompanionController::tick);
         ServerTickEvents.END_SERVER_TICK.register(VillageSettlements::tick);
         ServerTickEvents.END_SERVER_TICK.register(GuardController::tick);
@@ -207,7 +208,7 @@ public final class VillageFriends implements ModInitializer {
         if (before instanceof Villager v) { CompanionController.unload(v); GuardController.unload(v); }
         copy(before, after, PROFILE); copy(before, after, LOOK);
         copy(before, after, FRIENDSHIPS); copy(before, after, BONDS); copy(before, after, SHARED);
-        copy(before, after, HOME); copy(before, after, HOME_LABEL);
+        copy(before, after, HOME); copy(before, after, HOME_LABEL); copy(before, after, dev.villagefriends.homestead.Homesteads.DWELLER);
         copy(before, after, GUARD_EQUIPPED);
         copy(before, after, GUARD_PROGRESS); copy(before, after, GUARD_OBSERVED); copy(before, after, dev.villagefriends.pet.VillagerPets.LINK);
         GuardProgression.converted(after);

@@ -111,6 +111,22 @@ class DialogueBankTest {
         }
     }
 
+    @Test void homesteadFolkHaveSomethingToSayOnEveryTopic() {
+        var always = Map.of("name", "Mira", "player", "Alex", "village", "the village", "place", "Blackthorn House", "item", "iron sword",
+                "time", "8:30", "weekday", "Bellday", "season", "Summer", "moon", "full moon");
+        for (var role : dev.villagefriends.homestead.Dwelling.Role.values()) {
+            String r = role.id() + ".";
+            for (String key : List.of("greet", "greet.stranger", "greet.friend", "greet.morning", "greet.evening", "greet.night", "weather.rain",
+                    "weather.thunder", "weather.snow", "weather.clearing", "weather.hot", "chat", "chat.new", "chat.close", "past", "night", "work",
+                    "adventure", "joke", "news", "heart", "player.hurt", "held.sword", "held.flower")) has(r + key);
+            assertTrue(BANK.pool(r + "chat").size() >= 35, role + " has plenty to chat about: " + BANK.pool(r + "chat").size());
+            // A widowed homesteader (no {partner}, no {spouse}) still has something to say in every pool.
+            for (var pool : BANK.pools().entrySet()) if (pool.getKey().startsWith(r))
+                assertTrue(pool.getValue().stream().anyMatch(line -> Talk.fill(line, always) != null), pool.getKey() + " can speak without a spouse");
+        }
+        has("homesteader.work.farmer"); has("homesteader.work.cook");
+    }
+
     @Test void questionsAreWellFormedAndAnswersAreRemembered() {
         var ids = new HashSet<String>();
         for (var q : BANK.questions()) {
@@ -133,7 +149,7 @@ class DialogueBankTest {
                 Map.entry("weekday", "Bellday"), Map.entry("celebrant", "Mira"), Map.entry("birthday", "Summer 12"), Map.entry("when", "in 3 days"),
                 Map.entry("mobs", "5 zombies"), Map.entry("wanted", "12 wheat"), Map.entry("recipient", "Tobin"), Map.entry("sender", "Mira"),
                 Map.entry("season", "Summer"), Map.entry("victim", "Liora"), Map.entry("kin", "sister"), Map.entry("teller", "Pell"),
-                Map.entry("house", "The Ashford House"));
+                Map.entry("house", "The Ashford House"), Map.entry("place", "Blackthorn House"), Map.entry("spouse", "wife"));
         for (var pool : BANK.pools().entrySet()) for (var line : pool.getValue()) {
             String filled = Talk.fill(line, all);
             assertNotNull(filled, "Fillable: " + line);

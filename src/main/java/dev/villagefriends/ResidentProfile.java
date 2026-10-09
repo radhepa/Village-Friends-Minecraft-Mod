@@ -23,6 +23,14 @@ public record ResidentProfile(String id, String personality, String hobby, Strin
                 archetype.dislikes().get(pick(id, 131, archetype.dislikes().size())), arc.id(),
                 dev.villagefriends.outfit.ResidentLook.parse(look) == null ? ResidentAppearance.generate(id) : look);
     }
+    /** The same resident with another personality (and look): hobby, values, loves and dislikes follow the personality; the story stays. */
+    public static ResidentProfile withPersonality(ResidentProfile p, String personality, String look) {
+        var archetype = NarrativeContent.current().personality(personality);
+        var id = UUID.fromString(p.id());
+        return new ResidentProfile(p.id(), archetype.id(), archetype.hobby(), archetype.value(),
+                archetype.loves().get(pick(id, 97, archetype.loves().size())),
+                archetype.dislikes().get(pick(id, 131, archetype.dislikes().size())), p.story(), look);
+    }
     private static int pick(UUID id, int salt, int bound) {
         long bits = id.getMostSignificantBits() ^ Long.rotateLeft(id.getLeastSignificantBits(), salt & 63) ^ salt;
         return Math.floorMod(Long.hashCode(bits), bound);

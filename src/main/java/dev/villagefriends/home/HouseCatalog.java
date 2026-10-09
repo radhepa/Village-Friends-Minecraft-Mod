@@ -68,14 +68,14 @@ public final class HouseCatalog {
         return catalog;
     }
 
-    /** Reads a structure catalog, keeping only the templates with beds. */
+    /** Reads a structure catalog, keeping only the templates with beds (homesteads stand alone, outside any village). */
     public static HouseCatalog parse(Reader reader) {
         var root = JsonParser.parseReader(reader).getAsJsonObject();
         var out = new LinkedHashMap<String, Template>();
         for (var e : root.getAsJsonArray("templates")) {
             var t = e.getAsJsonObject();
             var feet = positions(t.getAsJsonArray("bed_feet"));
-            if (feet.isEmpty()) continue;
+            if (feet.isEmpty() || "homestead".equals(string(t, "use"))) continue;
             String id = t.get("id").getAsString();
             var rooms = new ArrayList<RoomSpec>();
             for (var r : t.getAsJsonArray("rooms")) {

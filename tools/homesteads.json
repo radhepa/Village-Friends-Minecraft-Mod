@@ -1,0 +1,40 @@
+{
+  "format": 1,
+  "about": "Homesteads: small places out in the wild where a few people live on their own (HOMESTEADS.md). Each is one template, tools/village_blueprints/homesteads/<name>.json, placed by the villagefriends:village structure type with a small terrain survey. They share one structure set that keeps its distance from villages.",
+  "structure_set": "villagefriends:homesteads",
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 6,
+    "salt": 1468203581,
+    "exclusion_zone": {"other_set": "minecraft:villages", "chunk_count": 10}
+  },
+  "terrain": {"radius": 16, "step": 8, "core_radius": 16, "max_height_range": 6, "max_water": 0.0, "max_core_water": 0.0, "min_biome": 0.6},
+  "homesteads": {
+    "farmstead": {
+      "weight": 3,
+      "roles": ["homesteader", "homesteader"],
+      "biomes": ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:forest", "minecraft:birch_forest", "minecraft:flower_forest"]
+    },
+    "pariah_house": {
+      "weight": 2,
+      "roles": ["pariah"],
+      "biomes": ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:forest", "minecraft:dark_forest", "minecraft:birch_forest", "minecraft:taiga"]
+    },
+    "shepherd_fold": {
+      "weight": 2,
+      "roles": ["shepherd"],
+      "biomes": ["minecraft:meadow", "minecraft:plains", "minecraft:sunflower_plains", "minecraft:windswept_hills", "minecraft:cherry_grove", "minecraft:taiga", "minecraft:snowy_plains"]
+    },
+    "herbalist_cottage": {
+      "weight": 2,
+      "roles": ["herbalist"],
+      "biomes": ["minecraft:forest", "minecraft:flower_forest", "minecraft:birch_forest", "minecraft:old_growth_birch_forest", "minecraft:dark_forest", "minecraft:taiga", "minecraft:old_growth_spruce_taiga", "minecraft:swamp"]
+    },
+    "watchtower": {
+      "weight": 2,
+      "roles": ["veteran"],
+      "biomes": ["minecraft:plains", "minecraft:sunflower_plains", "minecraft:meadow", "minecraft:savanna", "minecraft:savanna_plateau", "minecraft:windswept_hills", "minecraft:taiga", "minecraft:snowy_plains", "minecraft:forest"]
+    }
+  }
+}

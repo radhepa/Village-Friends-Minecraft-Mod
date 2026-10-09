@@ -1,3 +1,15 @@
+# Village Friends 2.26.0 — Homesteads in the wild
+
+- **Not everyone lives in a village.** Five kinds of small homestead now turn up out in the wild, well away from any town (at least 10 chunks from a village), each on flat, dry ground in the biomes that suit it: `/locate structure #villagefriends:homesteads`.
+  - **The farmstead:** a husband and wife farming on their own, with a porched farmhouse, a field and scarecrow, a hen run, a kitchen garden, a well and the farm cat.
+  - **The pariah's house:** a once-fine house gone to seed (holes in the slate, a boarded window, a dry basin, a dead tree, a fallen yard wall and *Turn back. No visitors. No pity.* on the gate), home to someone their village cast out.
+  - **The shepherd's fold:** a stone bothy, a round sheepfold with six sheep and a lookout rock.
+  - **The herbalist's cottage:** a crooked, mossy cottage with a cauldron over the fire, an herb garden, a beehive and a fairy ring.
+  - **The old watchtower:** a three-storey stone tower with a crenellated deck, a brazier and a flag, kept by an old soldier.
+- **They live their own lives.** Homestead folk belong to no village; their nameplate names their home (*Edwin Hale of Cloverbrook Farm*), or for the pariah nothing at all (*Corvin Vane, the Outcast*). The farmstead couple are always husband and wife with one surname, and everyone's personality fits their life. Their days have no tavern, bell or market in them, they don't wander far from home, and the veteran walks the watch round the tower every night until midnight, whatever the weather.
+- **They talk about how they live.** About 1,290 new lines (8,717 pieces of dialogue in all), and homestead folk speak only their own on every topic. The pariah is scornful above all: of the village, of pity and of you, while remembering the council seat, the vote and the old friends who stood by and said nothing; they never ask you anything or offer you anything. The couple talk about the farm and each other, the shepherd about the flock and the stars, the herbalist about the villagers who call them a witch and knock after dark, and the veteran about the Lantern Company and the friends they lost.
+- Add `HomesteadTest` and `HomesteadGameTest` (`-Ptests=HomesteadGameTest`, with screenshots). See [HOMESTEADS.md](HOMESTEADS.md).
+
 # Village Friends 2.25.0 — The village raises the alarm
 
 - **Neighbors panic.** When a player knocks out a resident, everyone awake in the village drops what they're doing (work, the tavern, a game of tag), runs home to their own house and stays indoors for a minute. Residents with no home run away from the player instead.

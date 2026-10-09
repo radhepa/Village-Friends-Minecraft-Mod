@@ -94,3 +94,7 @@ A main layout names its `structure`, `villager_type`, `biomes`, `start_pool`, `s
 Each type keeps the plains contract: three or so 33×33 town centres with the same slot and exit positions (use `plazas.base(..., prefix='desert/')`), the six civic buildings with the same residents and workstations (tavern keeper and cook, knight and archer, carpenter and tailor, apothecary, scholar, and the chapel), a market slot pool, the painter, bard, bell and notice board in the square, homes with enclosed bedrooms and unemployed residents, vanilla trade workshops without residents, farms, decorations and a street kit. `tools/village_design/buildings/<type>/palette.py` holds the type's art direction, materials and its street `Theme`; `streets.kit(THEME)` draws the whole street kit in those materials.
 
 Check a type with `python tools/create_village_structures.py --check` and `python tools/village_design/simulate.py --type desert --seeds 200 --map 3 --out build`, look at it in Minecraft with `-PvillageGallery -Pgallery=desert/tavern -PgalleryStructures=village_desert`, and survey it with `-PsurveyTypes=village_desert`.
+
+## Homesteads
+
+The five homesteads (a farmstead, the pariah's house, a shepherd's fold, a herbalist's cottage and an old watchtower) are single templates placed on their own out in the wild, not lots: they use the same design kit and compiler, with their placement in `tools/homesteads.json` instead of a layout. See [HOMESTEADS.md](HOMESTEADS.md).

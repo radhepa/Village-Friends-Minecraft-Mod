@@ -248,18 +248,34 @@ class Build:
         """The drop-in contract: north-facing ``building_entrance`` that becomes air."""
         self.jigsaw(x, y, z, 'north_up', 'building_entrance')
 
-    def resident(self, x, y, z, job='none', child=False):
+    def resident(self, x, y, z, job='none', child=False, tags=()):
+        """A villager; ``tags`` become entity tags (a homestead's role, such as ``villagefriends.dweller.pariah``)."""
         profession = 'minecraft:none' if job == 'none' else (job if ':' in job else f'{NS}:{job}')
-        self.entities.append({'pos': [x + .5, float(y), z + .5], 'blockPos': [x, y, z], 'nbt': {
-            'id': 'minecraft:villager', 'PersistenceRequired': True, 'Age': -24000 if child else 0,
-            'VillagerData': {'type': 'minecraft:plains', 'profession': profession, 'level': 1},
-            'Xp': 1 if job != 'none' else 0}})
+        nbt = {'id': 'minecraft:villager', 'PersistenceRequired': True, 'Age': -24000 if child else 0,
+               'VillagerData': {'type': 'minecraft:plains', 'profession': profession, 'level': 1},
+               'Xp': 1 if job != 'none' else 0}
+        if tags:
+            nbt['Tags'] = list(tags)
+        self.entities.append({'pos': [x + .5, float(y), z + .5], 'blockPos': [x, y, z], 'nbt': nbt})
 
-    def animal(self, x, y, z, kind, baby=False):
-        nbt = {'id': full_id(kind), 'PersistenceRequired': True}
+    def animal(self, x, y, z, kind, baby=False, **extra):
+        """A persistent animal; ``extra`` adds entity NBT such as a sheep's ``Color``."""
+        nbt = {'id': full_id(kind), 'PersistenceRequired': True, **extra}
         if baby:
             nbt['Age'] = -24000
         self.entities.append({'pos': [x + .5, float(y), z + .5], 'blockPos': [x, y, z], 'nbt': nbt})
+
+    def sign(self, x, y, z, lines, facing='north', wood='spruce', wall=True, color='black'):
+        """A sign reading ``lines`` (up to four) on its front. ``facing`` is the side the text faces."""
+        text = (list(lines) + [''] * 4)[:4]
+        sides = {'messages': text, 'color': color, 'has_glowing_text': False}
+        nbt = {'id': 'minecraft:sign', 'front_text': sides,
+               'back_text': {'messages': [''] * 4, 'color': 'black', 'has_glowing_text': False}, 'is_waxed': True}
+        if wall:
+            self.set(x, y, z, f'{wood}_wall_sign', nbt=nbt, facing=facing, waterlogged=False)
+        else:
+            rotation = {'south': 0, 'west': 4, 'north': 8, 'east': 12}[facing]
+            self.set(x, y, z, f'{wood}_sign', nbt=nbt, rotation=rotation, waterlogged=False)
 
     def room(self, name, probe):
         """Record an enclosed room: ``probe`` is a standing-height air cell inside it."""

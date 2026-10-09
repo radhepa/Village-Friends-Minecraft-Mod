@@ -7568,6 +7568,424 @@
       ]
     },
     {
+      "id": "villagefriends:village/homesteads/farmstead",
+      "size": [
+        28,
+        14,
+        23
+      ],
+      "use": "homestead",
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            9,
+            2,
+            6
+          ],
+          "max": [
+            11,
+            4,
+            10
+          ],
+          "probe": [
+            10,
+            2,
+            7
+          ],
+          "beds": 2
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          8,
+          2,
+          8
+        ],
+        [
+          6,
+          2,
+          11
+        ]
+      ],
+      "exterior_doors": [
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          6,
+          2,
+          11
+        ]
+      ],
+      "bed_feet": [
+        [
+          9,
+          2,
+          10
+        ],
+        [
+          11,
+          2,
+          10
+        ]
+      ],
+      "bed_facing": [
+        "north",
+        "north"
+      ],
+      "bed_room": [
+        0,
+        0
+      ],
+      "residents": 6,
+      "connectors": [
+        {
+          "pos": [
+            14,
+            1,
+            9
+          ],
+          "direction": "up",
+          "name": "villagefriends:homestead_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:kitchen_stove",
+          "pos": [
+            3,
+            2,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/homesteads/herbalist_cottage",
+      "size": [
+        21,
+        16,
+        21
+      ],
+      "use": "homestead",
+      "rooms": [
+        {
+          "name": "cottage",
+          "min": [
+            6,
+            2,
+            7
+          ],
+          "max": [
+            11,
+            4,
+            11
+          ],
+          "probe": [
+            9,
+            2,
+            9
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          8,
+          2,
+          6
+        ]
+      ],
+      "exterior_doors": [
+        [
+          8,
+          2,
+          6
+        ]
+      ],
+      "bed_feet": [
+        [
+          10,
+          2,
+          11
+        ]
+      ],
+      "bed_facing": [
+        "west"
+      ],
+      "bed_room": [
+        0
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            10,
+            1,
+            10
+          ],
+          "direction": "up",
+          "name": "villagefriends:homestead_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:alchemical_press",
+          "pos": [
+            11,
+            2,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/homesteads/pariah_house",
+      "size": [
+        21,
+        17,
+        21
+      ],
+      "use": "homestead",
+      "rooms": [
+        {
+          "name": "bedroom",
+          "min": [
+            6,
+            6,
+            7
+          ],
+          "max": [
+            11,
+            8,
+            13
+          ],
+          "probe": [
+            9,
+            6,
+            10
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          10,
+          2,
+          7
+        ],
+        [
+          10,
+          2,
+          14
+        ],
+        [
+          12,
+          6,
+          8
+        ]
+      ],
+      "exterior_doors": [
+        [
+          10,
+          2,
+          7
+        ],
+        [
+          10,
+          2,
+          14
+        ],
+        [
+          12,
+          6,
+          8
+        ]
+      ],
+      "bed_feet": [
+        [
+          7,
+          6,
+          12
+        ]
+      ],
+      "bed_facing": [
+        "north"
+      ],
+      "bed_room": [
+        0
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            10,
+            1,
+            10
+          ],
+          "direction": "up",
+          "name": "villagefriends:homestead_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:fireside_armchair",
+          "pos": [
+            7,
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/homesteads/shepherd_fold",
+      "size": [
+        24,
+        13,
+        22
+      ],
+      "use": "homestead",
+      "rooms": [
+        {
+          "name": "hut",
+          "min": [
+            3,
+            2,
+            5
+          ],
+          "max": [
+            7,
+            4,
+            10
+          ],
+          "probe": [
+            4,
+            2,
+            6
+          ],
+          "beds": 1
+        }
+      ],
+      "doors": [
+        [
+          5,
+          2,
+          4
+        ]
+      ],
+      "exterior_doors": [
+        [
+          5,
+          2,
+          4
+        ]
+      ],
+      "bed_feet": [
+        [
+          3,
+          2,
+          10
+        ]
+      ],
+      "bed_facing": [
+        "north"
+      ],
+      "bed_room": [
+        0
+      ],
+      "residents": 7,
+      "connectors": [
+        {
+          "pos": [
+            15,
+            1,
+            11
+          ],
+          "direction": "up",
+          "name": "villagefriends:homestead_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": []
+    },
+    {
+      "id": "villagefriends:village/homesteads/watchtower",
+      "size": [
+        19,
+        24,
+        19
+      ],
+      "use": "homestead",
+      "rooms": [],
+      "doors": [
+        [
+          9,
+          2,
+          6
+        ]
+      ],
+      "exterior_doors": [
+        [
+          9,
+          2,
+          6
+        ]
+      ],
+      "bed_feet": [
+        [
+          7,
+          2,
+          11
+        ]
+      ],
+      "bed_facing": [
+        "north"
+      ],
+      "bed_room": [
+        -1
+      ],
+      "residents": 1,
+      "connectors": [
+        {
+          "pos": [
+            9,
+            1,
+            9
+          ],
+          "direction": "up",
+          "name": "villagefriends:homestead_start",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:archery_target",
+          "pos": [
+            15,
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/house_tall_brick",
       "size": [
         13,
@@ -27515,6 +27933,121 @@
         }
       ],
       "resident_minimum": 10
+    }
+  ],
+  "homesteads": [
+    {
+      "name": "farmstead",
+      "structure": "villagefriends:homestead_farmstead",
+      "template": "villagefriends:village/homesteads/farmstead",
+      "roles": [
+        "homesteader",
+        "homesteader"
+      ],
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:meadow",
+        "minecraft:forest",
+        "minecraft:birch_forest",
+        "minecraft:flower_forest"
+      ],
+      "size": [
+        28,
+        14,
+        23
+      ]
+    },
+    {
+      "name": "pariah_house",
+      "structure": "villagefriends:homestead_pariah_house",
+      "template": "villagefriends:village/homesteads/pariah_house",
+      "roles": [
+        "pariah"
+      ],
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:meadow",
+        "minecraft:forest",
+        "minecraft:dark_forest",
+        "minecraft:birch_forest",
+        "minecraft:taiga"
+      ],
+      "size": [
+        21,
+        17,
+        21
+      ]
+    },
+    {
+      "name": "shepherd_fold",
+      "structure": "villagefriends:homestead_shepherd_fold",
+      "template": "villagefriends:village/homesteads/shepherd_fold",
+      "roles": [
+        "shepherd"
+      ],
+      "biomes": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:windswept_hills",
+        "minecraft:cherry_grove",
+        "minecraft:taiga",
+        "minecraft:snowy_plains"
+      ],
+      "size": [
+        24,
+        13,
+        22
+      ]
+    },
+    {
+      "name": "herbalist_cottage",
+      "structure": "villagefriends:homestead_herbalist_cottage",
+      "template": "villagefriends:village/homesteads/herbalist_cottage",
+      "roles": [
+        "herbalist"
+      ],
+      "biomes": [
+        "minecraft:forest",
+        "minecraft:flower_forest",
+        "minecraft:birch_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:swamp"
+      ],
+      "size": [
+        21,
+        16,
+        21
+      ]
+    },
+    {
+      "name": "watchtower",
+      "structure": "villagefriends:homestead_watchtower",
+      "template": "villagefriends:village/homesteads/watchtower",
+      "roles": [
+        "veteran"
+      ],
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:meadow",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:windswept_hills",
+        "minecraft:taiga",
+        "minecraft:snowy_plains",
+        "minecraft:forest"
+      ],
+      "size": [
+        19,
+        24,
+        19
+      ]
     }
   ]
 }

@@ -4,7 +4,9 @@ Reads ``tools/village_blueprints/**`` and ``tools/village_layouts/*.json`` (see
 ``village_design/layouts.py``) and writes native, compressed templates, template
 pools, processor lists, one ``villagefriends:village`` structure per type, their
 biome tags, the ``minecraft:villages`` structure set that replaces the vanilla
-villages, and the structure catalog the tests read.
+villages, and the structure catalog the tests read. It also places the homesteads
+(``tools/homesteads.json``, HOMESTEADS.md): single-template structures out in the wild
+with their own structure set, kept away from the villages.
 
 Only Python's standard library is required. Rooms, beds and connectors are checked
 before writing. The catalog is also read at runtime by the housing index (HOMES.md):
@@ -23,6 +25,9 @@ ROOT = Path(__file__).resolve().parent.parent / 'src/main/resources'
 NS = 'villagefriends'
 DATA_VERSION = 5023  # The project's Minecraft 26.3 world format.
 BLUEPRINTS = Path(__file__).resolve().parent / 'village_blueprints'
+HOMESTEADS = Path(__file__).resolve().parent / 'homesteads.json'
+HOMESTEAD_START = f'{NS}:homestead_start'
+DWELLER_TAG = f'{NS}.dweller.'
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from village_design import layouts as village_layouts  # noqa: E402
 
@@ -363,6 +368,15 @@ def main():
         for name, spec in layout.get('processor_lists', {}).items():
             assert name not in lists or lists[name] == spec, f'{kind}: processor list {name} differs from another type'
             lists[name] = spec
+    # Each homestead is a one-template pool of its own; its template lives in village_blueprints/homesteads/.
+    homesteads = json.loads(HOMESTEADS.read_text(encoding='utf-8'))
+    assert homesteads['format'] == 1, 'tools/homesteads.json uses format 1'
+    for name, spec in homesteads['homesteads'].items():
+        key = f'homesteads/{name}'
+        assert key not in pools, f'Pool {key} is defined twice'
+        pools[key] = {'elements': [{'template': key, 'weight': 1, 'processors': spec.get('processors', 'village')}],
+                      'fallback': 'minecraft:empty'}
+        owner[key] = 'homesteads'
     used, kind_of = set(), {}
     for name, spec in pools.items():
         kind = owner[name]
@@ -432,7 +446,23 @@ def main():
 
     def villager_type(t):
         kind = kind_of[t.name]
-        return layouts[kind].get('villager_type', 'minecraft:' + kind)
+        # Homestead residents take their biome's villager type when they first load (HOMESTEADS.md).
+        return layouts[kind].get('villager_type', 'minecraft:' + kind) if kind in layouts else 'minecraft:plains'
+
+    # A homestead anchors on one homestead_start jigsaw and houses only tagged residents of the roles it lists.
+    homestead_catalog = []
+    for name, spec in homesteads['homesteads'].items():
+        t = by_name[f'homesteads/{name}']
+        starts = [c for c in t.connectors if c['name'] == HOMESTEAD_START]
+        assert len(starts) == 1 and starts[0]['pos'][1] == 1, f'{t.name}: homesteads need one homestead_start jigsaw at Y=1'
+        assert t.blocks[tuple(starts[0]['pos'])]['Properties']['orientation'] == 'up_north', f'{t.name}: homestead_start faces up_north'
+        roles = sorted(tag[len(DWELLER_TAG):] for e in t.entities if e['nbt'].get('id') == 'minecraft:villager'
+                       for tag in e['nbt'].get('Tags', []) if tag.startswith(DWELLER_TAG))
+        assert roles == sorted(spec['roles']), f'{t.name}: residents are {roles}, homesteads.json says {spec["roles"]}'
+        assert all(any(tag.startswith(DWELLER_TAG) for tag in e['nbt'].get('Tags', []))
+                   for e in t.entities if e['nbt'].get('id') == 'minecraft:villager'), f'{t.name}: every resident needs a dweller tag'
+        homestead_catalog.append({'name': name, 'structure': f'{NS}:homestead_{name}', 'template': location(t.name),
+                                  'roles': roles, 'biomes': spec['biomes'], 'size': list(t.size)})
 
     # A building's role comes from the pools it is drawn from: guest rooms at the tavern, the garrison's
     # barracks, a civic building's quarters (the apothecary sleeps above the shop), or a home on a lot.
@@ -443,6 +473,7 @@ def main():
 
     def use(t):
         names = pools_of.get(t.name, set())
+        if any(n.startswith('/homesteads/') for n in names): return 'homestead'  # never part of a village's housing
         if any(n.endswith('/buildings/tavern') for n in names): return 'inn'
         if any(n.endswith('/buildings/garrison') for n in names): return 'barracks'
         if any('/buildings/' in n for n in names): return 'quarters'
@@ -451,9 +482,10 @@ def main():
 
     catalog = {'templates': [t.save(write=not args.check and (not args.only or args.only == t.name), villager_type=villager_type(t), use=use(t))
                              for t in templates],
-               'villages': [v['catalog'] for v in villages]}
+               'villages': [v['catalog'] for v in villages], 'homesteads': homestead_catalog}
     if args.check:
-        print(f'Validated {len(templates)} independent blueprints, {len(pools)} pools and {len(villages)} village types; no files changed.')
+        print(f'Validated {len(templates)} independent blueprints, {len(pools)} pools, {len(villages)} village types and '
+              f'{len(homestead_catalog)} homesteads; no files changed.')
         return
     write_json(f'data/{NS}/villagefriends/structure-catalog.json', catalog)
     if args.only:
@@ -482,6 +514,26 @@ def main():
     for folder in (ROOT / f'data/{NS}/worldgen/structure', ROOT / f'data/{NS}/tags/worldgen/biome/has_structure'):
         for stale in folder.glob('village*.json'):
             if stale.name not in written: stale.unlink()
+    # The homesteads: one structure each, all in one structure set that keeps its distance from villages.
+    # Depth 1, not 0: 26.3's jigsaw placement adds no pieces at all, not even the start, at depth 0.
+    written_homesteads, homestead_sets = set(), []
+    for entry in homestead_catalog:
+        name, spec = entry['name'], homesteads['homesteads'][entry['name']]
+        structure = f'homestead_{name}'
+        write_json(f'data/{NS}/worldgen/structure/{structure}.json', {
+            'type': f'{NS}:village', 'biomes': f'#{NS}:has_structure/{structure}', 'step': 'surface_structures',
+            'spawn_overrides': {}, 'terrain_adaptation': spec.get('terrain_adaptation', 'beard_thin'),
+            'start_pool': pool_name(f'homesteads/{name}'), 'start_jigsaw_name': HOMESTEAD_START, 'size': 1,
+            'max_distance_from_center': {'horizontal': 32, 'vertical': 32}, 'terrain': spec.get('terrain', homesteads['terrain'])})
+        write_json(f'data/{NS}/tags/worldgen/biome/has_structure/{structure}.json', {'replace': False, 'values': spec['biomes']})
+        written_homesteads.add(f'{structure}.json')
+        homestead_sets.append({'structure': entry['structure'], 'weight': spec.get('weight', 1)})
+    for folder in (ROOT / f'data/{NS}/worldgen/structure', ROOT / f'data/{NS}/tags/worldgen/biome/has_structure'):
+        for stale in folder.glob('homestead_*.json'):
+            if stale.name not in written_homesteads: stale.unlink()
+    space, set_path = homesteads['structure_set'].split(':')
+    write_json(f'data/{space}/worldgen/structure_set/{set_path}.json', {'structures': homestead_sets, 'placement': homesteads['placement']})
+    write_json(f'data/{NS}/tags/worldgen/structure/homesteads.json', {'replace': False, 'values': [e['structure'] for e in homestead_catalog]})
     # Our types replace the vanilla villages under the vanilla set's name, so pillager
     # outposts and anything else that keeps its distance from villages still does.
     world = village_layouts.world()
@@ -495,7 +547,7 @@ def main():
     tag['values'] = sorted({v for v in tag['values'] if not v.startswith(NS + ':')} | ours)
     write_json('data/minecraft/tags/worldgen/structure/village.json', tag)
     print(f'Generated {len(templates)} templates, {len(pools)} pools and {len(villages)} village types '
-          f'({", ".join(v["type"] for v in villages)}) replacing the vanilla villages.')
+          f'({", ".join(v["type"] for v in villages)}) replacing the vanilla villages, and {len(homestead_catalog)} homesteads.')
 
 
 if __name__ == '__main__': main()

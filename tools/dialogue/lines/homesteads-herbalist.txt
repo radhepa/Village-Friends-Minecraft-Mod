@@ -1,0 +1,305 @@
+# Homesteads: the hedge-herbalist who lives alone at {place} (a crooked, moss-roofed cottage at the forest's edge,
+# herbs drying from the rafters, a cauldron and brewing stand, a fenced herb garden and a beehive).
+# Wry, sharp, a little cryptic, kind underneath. The village calls them a witch behind their back, knocks at night for
+# remedies, and pretends not to know them at market. Taught by old Sorrel, who kept the cottage before them and lies
+# under the elder tree. Gender-neutral in their own lines; Sorrel is never given a pronoun either.
+# Pools: herbalist.greet, .greet.stranger (friendship 0-2), .greet.friend (3+), .greet.morning/.evening/.night,
+# herbalist.weather.rain/.thunder/.snow/.clearing/.hot, herbalist.chat, .chat.new, .chat.close (6+), herbalist.past,
+# herbalist.night, herbalist.work, herbalist.adventure, herbalist.joke, herbalist.news, herbalist.heart,
+# herbalist.player.hurt/.hungry/.dark/.wet, herbalist.held.sword/.flower/.food/.emerald/.potion.
+# Placeholders: {name}, {player}, {place}, {village} (may be the literal "the village"), {time}, {weekday}, {season},
+# {moon}, and {item} in held.* only (lower-case item name, so lines say "that {item}", never "a {item}").
+
+## herbalist.greet
+Ah. {player}. The kettle's on and the nettles are drying. Mind your head on the rafters.
+Welcome to {place}. Don't touch anything purple.
+You walk like someone with a question. Most people who come up this path do.
+Back again? Either you like my company or something's ailing you. I'll guess which.
+The bees told me someone was coming. They're terrible gossips.
+Wipe your boots. Moss is lovely on a roof and dreadful on a floor.
+Hello, {player}. You smell of the road. Sit; I'll find you something that smells better.
+You came in daylight. That alone makes you rarer than most of my visitors.
+Come in, come in. Duck under the elderflower; it's drying, and it bruises if you look at it wrong.
+Good. A visitor who knocks. You'd be surprised how many just stand at the gate and whisper.
+{player}. I wondered when the forest would send you back.
+The cauldron's simmering, so keep your voice down. It sulks if you shout.
+Hello. Whatever it is, I've heard worse, and I've cured most of it.
+Mind the third step. It's been crooked longer than I have.
+You've burrs on your hem and a question on your face. Out with the question; the burrs can wait.
+Come to see the witch at the edge of the woods? Only teasing. Mostly.
+Ah, it's you. The hive went quiet when you came up the path. From bees, that's a compliment.
+Another visitor! At this rate I'll have to own a second chair.
+Come in. Leave your troubles by the door with the muddy boots. Collect them on the way out, if you still want them.
+Hello, {player}. The garden says it's {season}. My knees say it's always winter.
+You found {place} again. Most people only manage to find it in the dark.
+Hm. You look well. That's either good luck or good sense, and I only keep a remedy for the lack of one.
+Welcome back. Sit anywhere that isn't drying, steeping or asleep.
+{weekday} already? The week runs faster up here, with no bells to count it by.
+
+## herbalist.greet.stranger
+A stranger at my gate. Lost, curious or sent? Don't answer. Your boots already told me.
+I don't know you. The bees don't know you. Stand still a moment and let us all have a look.
+You're not from {village}. Their folk come at night and won't meet my eye. You're looking straight at me.
+Hm. A new face. Most people find {place} when they need something. What is it you need?
+Stay on the path, stranger. The garden bites, and not all of it is nettles.
+Name's {name}. You'll have heard other names for me, I expect. They're less accurate.
+Strangers who come by day want directions. Strangers who come by night want something else. Which are you?
+You've wandered a long way from anywhere. So did I, on purpose. Did you?
+Don't fret, stranger. Whatever they told you down the hill, I've never turned anyone into anything.
+
+## herbalist.greet.friend
+{player}! Come in. I saved you the good honey. The bees argued; I won.
+There you are. I set out two cups this morning without thinking. Now I know why.
+My favourite visitor. Don't tell the moths; they think it's them.
+Ah, {player}. Sit by the fire. You're the only one who calls in daylight and isn't ashamed of it.
+Good to see you, friend. The garden's been asking after you. Well. The weeds have.
+You came back. People don't, usually, once they're cured. I'm glad you're not the usual sort.
+Hello, you. I've a jar with your name on it. Truly; I wrote it on the lid.
+Friend! Mind the rafters, mind the cauldron, mind nothing else. Make yourself at home.
+{player}, you're a sight. A good one. Better than foxglove in bloom, and a great deal safer.
+
+## herbalist.greet.morning
+Morning. The dew's still on the yarrow, so I'm picking. Talk while I work.
+Early, aren't you? Good. Herbs picked before the sun is high keep their tempers.
+Morning, {player}. The bees were up before both of us, and they want you to know it.
+Dawn's the honest hour. Nobody comes asking for anything they're ashamed of before breakfast.
+Good morning. I've been up since the owls went to bed. Tea?
+
+## herbalist.greet.evening
+Evening. The lanterns will be lit down in {village} soon, and then this path gets busy.
+Good evening. Sit a while. Soon I'll be answering the door to people who'll swear tomorrow they never came.
+Evening, {player}. Dusk is when the moths visit the garden. They're the only callers I never charge.
+Evening. The light's gone golden. That's the herbs' favourite hour, and mine.
+
+## herbalist.greet.night
+Oh, it's you. I thought you were another one from {village}, come for something they'll pretend they never needed.
+Knocking at {time}? You'd fit right in with my usual callers. What ails you?
+Night callers get the back door and no questions. You can have the front door, {player}. You're not ashamed of me.
+Come in quickly. There are things on the path at this hour, and only some of them are customers.
+Shh. I've a pot on for someone's broken heart. They'll be back for it any moment, and they won't want an audience.
+It's late, so I'll assume you need something. Everyone who comes after dark does.
+
+## herbalist.weather.rain
+Rain! The moss on my roof is having the time of its life.
+Let it pour. The garden's been sulking for a week; this will cheer it right up.
+Wet weather brings out the mushrooms and the slugs. One of those I'm pleased to see.
+Rain on the roof and something on the boil. There are worse ways to spend a day.
+Come under the eaves. Nettles gathered in the rain sting less, but you're not a nettle.
+
+## herbalist.weather.thunder
+Folk say lightning once struck a farmer out by the swamp and they woke up a witch. Folk say a lot of things about me, too.
+Thunder sours milk and sweetens elderflower. Or so Sorrel swore. I've never managed to prove either.
+Stay in till it passes. The cauldron hates thunder; it rattles its lid like it wants to answer back.
+Storms bring the night callers early. Fear makes people remember their coughs.
+
+## herbalist.weather.snow
+Snow. The garden's asleep, and so should I be. Instead I'm grinding dried yarrow by the fire.
+Everything's under white. Good. The bees are snug, and the gossip from the village can't climb the hill.
+Snow's a blanket for the roots. Under it, everything's quietly planning for spring.
+
+## herbalist.weather.clearing
+There, it's lifting. Go and smell the garden now; it won't smell this good again till the next rain.
+Sky's clearing. The bees will be out in a moment, cross about the delay.
+The clouds are breaking. Wet petals bruise, so I'll wait an hour before I pick. You can wait with me.
+
+## herbalist.weather.hot
+Hot enough to dry herbs on the doorstep. Saves me climbing to the rafters.
+Too warm for the cauldron. Too warm for anything but sitting in the shade and judging the bees.
+Drink something. In this heat a body wilts faster than lettuce, and it's harder to revive.
+
+## herbalist.chat
+Folk in {village} call me a witch behind my back. To my face they call me "please" and "it's only a little cough".
+Never eat a mushroom somebody else picked unless you'd trust them with your life. That's not a saying. That's a rule.
+A bee never visits the same flower twice in a morning. Don't go back for more from what's already given you everything.
+Pick leaves by the waxing moon and roots by the waning. Does it matter? It matters to me, and I'm the one picking.
+Old saying: "Where nettles grow, good soil lies below." Same's true of some people.
+Foxglove is beautiful and it will stop your heart. I grow it at the back of the garden so I always know exactly where it is.
+Dandelions are a weed to everyone but me. Leaves for salad, root for the liver, seeds for wishing. Nothing wasted.
+The trouble with being needed is that people resent you for it.
+Yarrow stops bleeding. Honey keeps a wound clean. A kind word does neither, but it doesn't hurt to have one handy.
+My roof's more moss than slate. I keep it that way. It holds the warmth, and the wrens love it.
+Lily of the valley smells like heaven and is poison from root to bell. Never eat it. Never let a child near it.
+A saying of mine: "Sweet berries, sour thorns, and the bush apologises for neither."
+The village buys honey from me at market and swears it came from someone else's hive. My bees know their own work.
+Glow berries are the only lamp that needs no oil. I've strung them in the cellar. It's like living under a small, soft sky.
+Every remedy is half plant and half listening. Most people can't get the listening anywhere else.
+Poppies for sleep, but only a little. Too much and you'll sleep through things you'd rather have been awake for.
+Elderflower in spring, elderberries in autumn. The same tree gives you a cordial and a cough syrup. Generous thing.
+Want to know whether a stranger's honest? Offer them nettle tea. Liars always say they love it.
+I talk to the plants. Not because they listen. Because nobody else up here does.
+Cornflowers for tired eyes. I steep them for the scribes in {village}. They squint at me less, after.
+Oxeye daisies grow where nobody wants them, and they bloom anyway. I've taken a lesson from that.
+The bees and I have an arrangement. I don't take more than I need, and they don't sting more than I deserve.
+"Moss grows on the north side," they say. Moss grows wherever it likes. Navigate by the stars, or by sense.
+Alliums keep the pests off the roses. Some people are like alliums. They smell a bit odd and the garden's better for them.
+Azure bluets are small and plain, and they ease a headache better than anything showy. Remember that.
+Brown mushrooms like the dark, the damp, and being left alone. I've always felt we understood each other.
+Someone left a basket of eggs at my gate last week. No note. That's how the village says thank you.
+A garden is just a long argument with the weather that you occasionally win.
+Don't mistake cryptic for wise. I'm cryptic because it makes people leave sooner.
+The moon pulls at the water, and every leaf is mostly water. So yes, the moon has opinions about my garden.
+Honey never spoils. I've a jar older than some of my visitors. Still sweet.
+Sorrel used to say, "Heal the body, then mind your tongue about the rest." I'm still learning the second half.
+I hang a sprig of yarrow over the door. Not for luck. It's just where I keep the yarrow.
+You'd be amazed what a cup of something warm and a closed door can cure.
+"A weed is only a flower nobody has bothered to learn." My own saying. You may borrow it.
+If the bees are cross, rain's coming. If I'm cross, someone from the village has been gossiping again.
+Zombies leave my garden alone. I'd like to say it's the herbs. It's probably the compost heap.
+Moss on the roof, mushrooms in the cellar, bees in the hive. I'm never as alone as people think.
+Real witches live in swamp huts and throw bottles and cackle. I've never cackled in my life. Well. Once. It was a good joke.
+I could live in {village} if I wanted to. I don't want to. The quiet up here is a remedy too.
+
+## herbalist.chat.new
+New to these woods? Here's your first piece of advice, free: not every red berry is a sweet berry.
+First time at {place}? It's crooked by accident and kept crooked on purpose. Straight houses blow down.
+You'll hear stories about me. Half of them are true. I'll not tell you which half.
+I'm {name}. I mend what ails people and I keep a garden. The rest of what they say is decoration.
+Newcomers always ask two things: "Are you a witch?" and "What's that smell?" No, and elderflower.
+If you're staying in these parts, learn where my gate is. You'll need it someday. Everyone does.
+Welcome. The rules are simple: knock, don't pick anything, and don't tell the village I was nice to you.
+
+## herbalist.chat.close
+The one who taught me was called Sorrel. Lived in this very cottage. Knew every plant by name and every person by their cough.
+Sorrel used to say the cottage chose who lived in it. When Sorrel died, I came up the path with my bag and the door wasn't locked. I took that as an answer.
+I nursed a whole street through a fever one winter. One old man didn't pull through, and he's the only one they remember.
+Why do I live apart? A village needs someone to blame and someone to thank. It's easier for them if I'm far enough away to be both.
+It costs something, living like this. Nobody brings soup when I'm poorly. I bring it to myself, and I'm a terrible patient.
+Some nights I sit on the step and watch the lanterns in {village}, and I think about walking down. Then I think about the faces, and I put the kettle on instead.
+Sorrel's hands smelled of yarrow till the very end. Mine are starting to. I didn't expect to be glad of it.
+I keep a book of everyone who's come to my door. Not names; just what they needed. It's a thick book, {player}. It's a lonely book.
+You're the first person in years who's come up the path without needing anything. Do you know what a gift that is?
+I could have been a healer in a big town, with a sign over the door and people who said good morning. I chose the bees. Most days I'd choose them again.
+Sorrel's buried under the elder tree. I talk to that tree more than I talk to people. Don't look at me like that; you would too.
+The worst part isn't being called a witch. It's someone I sat up all night with crossing the street at market so as not to be seen near me.
+If anything happens to me, the recipes are in the tin behind the third jar. You'd know who to give them to. I trust that you would.
+
+## herbalist.past
+I learned my letters from seed packets and my sums from counting bees. Not the usual schooling.
+My first remedy was for my own nettle stings. I was seven and furious, and I've been mixing things ever since.
+When I was young I wanted to be a sailor. Then I got seasick on a duck pond. Plants don't rock.
+I came to this cottage as an apprentice with one bag and a great many opinions. The opinions got sorted out first.
+Sorrel made me weed the garden for a whole year before I was allowed near a pot. I was so cross. I understand now.
+The first night someone knocked for a remedy, I was so nervous I gave them the wrong jar. It worked anyway. Faith's strong medicine.
+I once spent a whole summer learning the mushrooms of this wood. Don't ask me about them; we'd be here till winter.
+There was a time I lived in {village}. Long ago. I had a window box and three friends. I still have the window box.
+My mother said I'd grow up strange. She was right, but she said it fondly, and I've held on to that.
+Years back a wolf limped into the garden and lay down by the hive and wouldn't leave. I splinted its leg. It visited every winter after, until one winter it didn't.
+The first hive I kept swarmed within a week and left me for a hollow oak. Bees, like people, won't be kept against their will.
+Before the beehive, before the cauldron, I had a mortar and a mean streak. The mortar's still here. The mean streak's mellowed.
+I once walked three days to a market town for a single pot of seeds. Half of them came up foxglove. I've never been so annoyed or so careful.
+
+## herbalist.night
+Night's when the garden really breathes. Smell that? That's the elder, showing off where nobody can see.
+Moths on the window, an owl in the wood, a knock at the door any minute now. That's my night.
+It's a {moon} tonight. Sorrel had a rule for every phase. For this one, I think it was "dig the roots and hold your tongue."
+Something's shuffling past the garden fence. Zombies, likely. They never come in. I've never asked why.
+At night the village forgets it's afraid of me. Funny how that works.
+I hear skeletons rattling in the trees some nights. I tell them to keep it down. They never listen.
+The bees are asleep. The village is asleep. Just me and the cauldron awake, and it's not much of a talker.
+
+## herbalist.work
+I'm turning the herbs in the rafters. Leave them hanging one way too long and they dry sulky.
+Today's work: nettles for the soup, yarrow for the cuts, poppies for someone who can't sleep and won't say why.
+Someone came at midnight for a cough syrup and someone at one for a cure for heartbreak. I gave them both honey. Only one of them knew.
+There's a cough working its way through {village}, so the cauldron's full. Elderflower, honey and patience.
+Picking dandelions before the rabbits get them. It's a race I lose more often than I'd like.
+The brewing stand's bubbling. Don't ask what's in it. You'd only want some.
+I'm grinding cornflower petals. Fiddly work. It calms the hands and empties the head.
+Three remedies for bad dreams this week. Something's troubling {village}, and it isn't the wolves.
+Jars to wash, labels to write, and mushrooms to sort into "stew" and "absolutely not". A busy day.
+Smoking the hive to take the honey. The bees know it's coming. We've reached an understanding about how much.
+A farmer came this morning for a salve for blistered hands, then asked if I made one for a blistered heart. That one takes longer.
+Tying yarrow to dry. Nine stems to a bunch. Sorrel always did nine. I don't know why, and I don't dare change it.
+Packing a basket for the old folk down in the valley. They can't climb the hill any more, so the hill goes down to them.
+Moss to pack the wound, honey to keep the moss clean. An old trick. Works better than it ought to.
+Weeding. The garden grows faster than I can pull, and it's been winning since spring.
+Someone wanted a love potion. I gave them a cup of tea and told them to try talking first. That one's free.
+
+## herbalist.adventure
+Off into the wilds? Take yarrow for cuts and sweet berries for the walk. And come back.
+If you find glow berries in a cave, bring me some. I'll trade you a remedy you'll be glad of one day.
+There's a swamp a few valleys west with a real witch's hut in it. Don't knock. Unlike me, that one bites.
+Out there, every plant is food, medicine or a mistake. Learn which before you're hungry.
+Adventure's just a long walk with more bandages. I'll pack you some.
+I went after a rare mushroom in a deep cave once. Found it. Also found a creeper. Kept the mushroom, lost an eyebrow.
+Bring back stories. And seeds. Mostly seeds.
+I don't wander far any more. Everything I need either grows here or comes knocking.
+Lost in the woods? Follow the bees. Bees lead to flowers, and tended flowers mean someone's home.
+
+## herbalist.joke
+Why was the mushroom asked to every feast? Because it was a fun guy. Sorrel told me that one. I've hated it for thirty years and I tell it anyway.
+What do you call a bee that can't make up its mind? A maybee. Don't groan; it curdles the honey.
+I told the beehive a secret once. By evening the whole garden knew. Never trust anything that buzzes.
+Nettle tea: tastes like a meadow, stings like a grudge, and does you more good than either.
+Two witches walk into a tavern. I wouldn't know the rest; I've never been invited.
+The village says my cottage leans because I cursed it. It leans because the builder liked cider.
+People ask why I talk to my plants. Because when I talk to people, they repeat it at market.
+Someone asked for a cure for their spouse's snoring. I gave them wool for their ears and the spouse a bowl of nettle soup. Both slept like stones.
+
+## herbalist.news
+Somebody in {village} is in love and doesn't know how to say it. I won't say who. Their cough was entirely made up.
+Three people this week came up for something to help them sleep. Something's keeping the village up at night, and it isn't the bells.
+A secret came up the path last night with a bad tooth. I fixed the tooth. The secret stays here.
+Someone's planning a proposal on market day. I know because they asked me for something to stop their hands shaking.
+There's a quarrel in the village over a fence. Both sides came to me for a headache remedy. Neither knows about the other.
+A traveller passing through said pillagers were camped two valleys over. Keep your eyes open on the roads.
+Someone's been sneaking honey from my hive at night. It's either a fox or a child. Given the footprints, I'm hoping fox.
+I won't name names. But if a certain someone at market tomorrow smells of elderflower, you'll know who couldn't sleep.
+
+## herbalist.heart
+Remedies for broken hearts are the ones I make most and believe in least. Time's the only real ingredient. The honey's just so it goes down easier.
+You're good company, {player}. I don't say that. Ask the bees; they'll tell you I never say that.
+I've spent my life listening to everyone else's troubles. It's strange, and lovely, to have someone ask about mine.
+When I'm gone, plant something where I used to sit. Not foxglove. Something kind.
+Everyone who's knocked on that door at midnight has been at their very worst. I've loved them anyway. That's the work, I think.
+Being alone and being lonely are different ailments. I've had both. You've helped with the second.
+I've started setting out the second cup before you arrive. Don't let it go to your head.
+
+## herbalist.player.hurt
+You're bleeding on my floor. Sit. Yarrow first, then the lecture.
+Look at the state of you. Hold still. This will sting, and no, I'm not sorry.
+Honey on that cut, a clean cloth over it, and stop picking at it. Only children pick, and you're not a child.
+What did that to you? Wolves? Skeletons? Your own clumsiness? I'll treat all three, but the last one I'll charge for.
+You look like a hedge fought you and won. Come by the fire and let me see.
+
+## herbalist.player.hungry
+Your stomach's louder than my cauldron. There's nettle soup on the hob. Don't make that face; it's good for you.
+You've gone pale round the edges. Eat something, even if it's only sweet berries from the bush by the gate.
+A hungry body heals slow and thinks slower. Take some bread and honey before you go anywhere.
+
+## herbalist.player.dark
+You're blundering about in the dark like a moth that's lost its lamp. Take a sprig of glow berries.
+It's black as a cellar out here. Light something, before something else finds you first.
+Don't wander about without a light. The things that like the dark don't like visitors.
+
+## herbalist.player.wet
+You're soaked through. Stand by the fire before you catch something I'll have to cure.
+Dripping on my floor like a wet hound. Here, a blanket. And elderflower tea for the chill.
+Wet clothes and a cold wind are how most of my winter callers start. Dry off, quickly.
+
+## herbalist.held.sword
+Put that {item} away in my garden. The bees think it's rude.
+That {item} has its uses. Pruning isn't one of them, so keep it off my roses.
+You carry that {item} like someone who's needed it. I've cleaned enough wounds to know the look.
+
+## herbalist.held.flower
+Oh, that {item}. Did you pick it, or did it pick you? Either way, it suits you.
+That {item} would dry beautifully, hung upside down by the stem. Or you could just enjoy it. I forget that's allowed.
+Keep that {item} in water and out of the sun. Flowers bruise like people do.
+You've brought that {item} to a herbalist's door. Like bringing a song to a bard. I'm touched anyway.
+Is that {item} for me? No? Then I'll admire it from here.
+
+## herbalist.held.food
+Eat that {item} slowly. Gulped food sits in the belly like a stone, and I've no remedy for haste.
+That {item} is fine, but you'd do better with greens. When did you last eat a nettle? Don't answer.
+Don't offer the bees any of that {item}; they'd only complain. Eat it yourself. You look like you need it.
+
+## herbalist.held.emerald
+Put that {item} away. I don't take money for remedies. I take gossip, eggs and good manners.
+That {item} is pretty, but it won't cure a cough. Keep it for market; they'll pretend not to know me there, too.
+Folk slip me the odd {item} after dark, then spend the rest in daylight on tonics that don't work.
+
+## herbalist.held.potion
+Let me see that {item}. Hm. Who brewed this? The colour's off. Shake it before you drink it. Better yet, don't.
+That {item} came out of somebody's cauldron, and not mine. Mine would be clearer.
+Every bottle like that {item} is a little piece of somebody's garden. Drink it with respect.

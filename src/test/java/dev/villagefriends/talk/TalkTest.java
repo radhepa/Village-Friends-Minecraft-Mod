@@ -47,6 +47,44 @@ class TalkTest {
         assertTrue(greet.containsKey("greet.night") && greet.containsKey("greet.band.stranger") && greet.containsKey("held.sword") && greet.containsKey("player.hurt"));
     }
 
+    @Test void homesteadFolkTalkOnlyAboutTheirOwnLives() {
+        for (var role : dev.villagefriends.homestead.Dwelling.Role.values()) {
+            for (String topic : List.of("greet", "chat", "work", "adventure", "joke", "news", "heart")) {
+                var fill = new java.util.HashMap<>(Map.of("name", "Corvin", "player", "Alex", "village", "the village", "place", "Blackthorn House",
+                        "time", "9:00", "weekday", "Moonday", "season", "Summer", "moon", "new moon", "item", "iron sword", "dweller", role.id()));
+                String job = role == dev.villagefriends.homestead.Dwelling.Role.HOMESTEADER ? "cook" : "none";
+                var c = new Talk.Context(topic, false, "reserved", job, 2, "night", "rain", "evening", false, "new", "plains", "sword", Set.of("hurt"),
+                        Set.of("golem"), fill);
+                var pools = Talk.pools(c);
+                assertTrue(pools.keySet().stream().allMatch(k -> k.startsWith(role.id() + ".")), role + " " + topic + ": " + pools.keySet());
+                var line = Talk.pick(BANK, c, new Random(topic.hashCode()), Set.of());
+                assertNotNull(line, role + " has something to say about " + topic);
+                assertTrue(line.key().startsWith(role.id() + ".") && !line.text().contains("{"), line.key() + ": " + line.text());
+            }
+        }
+        var c = new Talk.Context("chat", false, "reserved", "none", 7, "noon", "clear", "hobby", false, "new", "plains", "", Set.of(), Set.of(),
+                Map.of("dweller", "shepherd", "place", "Windy Fold", "name", "Ada", "player", "Alex", "village", "the village"));
+        var keys = Talk.pools(c).keySet();
+        assertTrue(keys.contains("shepherd.chat.close") && !keys.contains("shepherd.chat.new") && !keys.contains("shepherd.night"), "Close friends at noon: " + keys);
+    }
+
+    @Test void homesteadFolkNeverAskAboutVillageLife() {
+        var fill = Map.ofEntries(Map.entry("dweller", "herbalist"), Map.entry("place", "Nettlebank Cottage"), Map.entry("name", "Wren"),
+                Map.entry("player", "Alex"), Map.entry("village", "the village"), Map.entry("job", "apothecary"), Map.entry("hobby", "collecting"),
+                Map.entry("time", "9:00"), Map.entry("weekday", "Moonday"), Map.entry("market", "today"), Map.entry("biome", "the plains"),
+                Map.entry("moon", "new moon"));
+        var c = new Talk.Context("chat", false, "meticulous", "apothecary", 5, "morning", "clear", "work", false, "new", "plains", "", Set.of("hungry", "hurt"),
+                Set.of(), fill);
+        var random = new Random(5); int asked = 0;
+        for (int i = 0; i < 300; i++) for (boolean offers : new boolean[]{true, false}) {
+            var q = Talk.question(BANK, c, Set.of(), offers, random);
+            if (q == null) continue;
+            asked++;
+            assertFalse(Talk.aboutVillageLife(q), "Not a village question: " + q.id());
+        }
+        assertTrue(asked > 0, "They still ask and offer things");
+    }
+
     @Test void picksCompleteLinesFromTheRightPools() {
         var c = context("work", false, "tavern_keeper", 4, "evening", "clear", "work", "", Set.of());
         var keys = new HashSet<String>(); var random = new Random(3);

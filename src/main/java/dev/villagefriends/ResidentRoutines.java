@@ -87,14 +87,17 @@ public final class ResidentRoutines {
         // Guard duty outranks the schedule: a raid calls every guard out, and a short-handed watch calls up the next guard.
         if (GuardPatrols.defending(v)) return new Routine.Plan(Block.DEFEND, plan.scheduled(), plan.weather(), plan.day());
         if (GuardPatrols.drafted(v, timeOfDay(level)) && plan.block() != Block.NIGHT_WATCH) return new Routine.Plan(Block.NIGHT_WATCH, plan.scheduled(), plan.weather(), plan.day());
-        return Birthdays.party(v, plan, timeOfDay(level));
+        // Out in the wild there is no tavern, bell or market; the veteran keeps the watch ({@link dev.villagefriends.homestead.Homesteads}).
+        return dev.villagefriends.homestead.Homesteads.plan(v, Birthdays.party(v, plan, timeOfDay(level)), timeOfDay(level));
     }
     /** What a resident is doing, as shown to players: "At work", "Sheltering from the rain"... */
     public static String doing(Villager v) {
         if (Knockouts.knockedOut(v)) return Knockouts.status(v);
         if (v.isSleeping()) return "Asleep";
         String playing = Playground.doing(v);
-        return playing != null ? playing : Taverns.doing(v, plan(v).label());
+        if (playing != null) return playing;
+        var plan = plan(v); String own = dev.villagefriends.homestead.Homesteads.doing(v, plan);
+        return own != null ? own : Taverns.doing(v, plan.label());
     }
 
     // -- applying it -------------------------------------------------------------------------------
@@ -129,6 +132,8 @@ public final class ResidentRoutines {
         if (Playground.update(v, level, plan)) return;
         // At the tavern they find a seat with their friends, order, eat and talk; Taverns stands them up afterwards.
         if (Taverns.update(v, level, plan)) return;
+        // Homestead folk stay near home, and the veteran walks the watch round the tower.
+        if (dev.villagefriends.homestead.Homesteads.steer(v, level, plan)) return;
         steer(v, level, plan);
     }
     private static Activity activity(Villager v, ServerLevel level, Block block) {

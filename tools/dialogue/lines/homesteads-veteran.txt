@@ -1,0 +1,323 @@
+# Homesteads: the old soldier who lives alone in {place}, a crumbling stone watchtower on a rise in the wild. Built to
+# watch a border that no longer matters; the garrison was disbanded long ago; nobody ordered them to stay, but they keep
+# the watch every night (old bow, polishing kit, practice target in the yard, a brazier on the battlements).
+# Disciplined, dry, gruffly kind, sleeps badly, quietly proud, a bit lonely, protective of travellers, no time for pillagers.
+# Gender-neutral in their own lines; the captain is never given a pronoun.
+# Shared lore, keep it consistent: the Lantern Company ("the Lanterns", "Lantern lit, nobody lost": they never let the camp
+# fire go out, hence the brazier). Captain Varre (disbanded them: "Go home, Lanterns"). Comrades: Tamsin (closest friend,
+# lost at the Greywater crossing in spring flood, the veteran had their hand), Wren (archer who taught them the bow,
+# "breathe out, then loose", fell in the last week of the siege), Hollis (cook, now keeps a tavern down south),
+# Cork (Corwin, the joker), Marla (quartermaster, sends three lines every midwinter). The siege of Harrowmere lasted
+# a hundred and twelve days. The war's cause nobody remembers (a toll bridge, or a duke's insult).
+# Pools: veteran.greet, .greet.stranger (friendship 0-2), .greet.friend (3+), .greet.morning/.evening/.night,
+# veteran.weather.rain/.thunder/.snow/.clearing/.hot, veteran.chat, .chat.new, .chat.close (6+), veteran.past,
+# veteran.night, veteran.work, veteran.adventure, veteran.joke, veteran.news, veteran.heart,
+# veteran.player.hurt/.hungry/.dark/.wet, veteran.held.sword/.bow/.shield/.flower/.food/.emerald.
+# Placeholders: {name}, {player}, {place}, {village} (may be the literal "the village"), {time}, {weekday}, {season},
+# {moon}, and {item} in held.* only (lower-case item name, so lines say "that {item}", never "a {item}").
+
+## veteran.greet
+{player}. Approach slow and keep your hands where I can see them. Habit. You're welcome here.
+Ah, it's you. Come up. Mind the sixth stair; it's been loose since before I was posted.
+A traveller on the road. Good. The brazier's lit; warm your hands.
+Welcome to {place}. It's not much of a fort these days, but the walls still stop the wind.
+At ease, {player}. Nobody salutes here. There's nobody left to salute.
+You made good time along that ridge. I watched you most of the way. Old habit.
+Report. No, I'm joking. Mostly. How was the road?
+Come in out of the open. Out there you're a target. In here you're a guest.
+Morning, noon or night, the watch is kept. Pull up a crate.
+Hm. Boots muddy, cloak torn, still smiling. You'd have done well in the company.
+Good to see a face that isn't a zombie's. They're poor conversation.
+Ho there. Stand easy. The kettle's on the brazier, such as it is.
+{player}. I saw your dust from the battlements an hour ago. You walk like you've somewhere to be.
+Welcome back. I swept the yard. Don't make anything of it.
+You again. Good. The target in the yard is tired of only me.
+Halt and be recognised. ...Recognised. Come on up.
+Come up, come up. I've been talking to the crows all week and they've stopped answering.
+Don't mind the arrows in the doorframe. Practice. Mostly.
+Wipe your feet. I've only the one broom, and it was issued to me.
+Hail, {player}. The watch reports nothing on the road but you. A good report.
+Steady. Let me look at you. Right. All limbs present. Welcome.
+Another {season} on watch, and here you are in the middle of it. Good.
+{weekday}. In the company the day never mattered; every day was a drill day. Come in.
+A friendly face on the road. Rarer than you'd think, out here.
+
+## veteran.greet.stranger
+Halt! Who goes there? State your name and business, and step into the light where I can see you.
+That's close enough, stranger. Hand off the hilt. Now, what brings you to {place}?
+Hold. You're on watched ground. Friend or foe?
+Stop there. I've an arrow nocked and nothing better to do with it. Who are you?
+Who sent you? Nobody? Good answer. Nobody sends anybody here any more.
+Stranger on the rise. Keep walking slow and keep talking. I'm listening.
+The name's {name}, and this is my watch. You'll want to tell me yours.
+You don't look like a pillager. You don't look like a messenger either. What are you, then?
+Easy. I've not shot anyone in years. Let's not end the streak.
+
+## veteran.greet.friend
+{player}! Come up, friend. I'd have built the brazier higher if I'd known.
+There's my favourite traveller. Sit. You've earned the good crate.
+Ah, {player}. The watch is better kept with company.
+Friend! Good. I was starting to argue with the practice target, and it was winning.
+You're a welcome sight. Welcomer than a relief column, and I've seen a few.
+{player}. Old soldiers don't say they missed anyone. So I'll just say I kept the kettle warm.
+There you are. I was beginning to think you'd enlisted somewhere else.
+Come here, you. Still in one piece? Good. Keep it that way.
+Back safe. That's all I ask of anyone, and you keep managing it.
+
+## veteran.greet.morning
+Morning. The watch is over, so I'm allowed to yawn. Don't tell anyone.
+Dawn report: one fox, two rabbits, no pillagers. And now you. Good morning.
+Morning, {player}. There's porridge in the pot. It's grey, but it's honest.
+Sun's up, brazier's out. That's another night survived. Good morning.
+Up early? Good habit. The best of the day comes before breakfast.
+
+## veteran.greet.evening
+Evening. I'm about to go up and light the brazier. Walk with me.
+Sun's going. In an hour I'll be on the battlements, so say your piece before then.
+Evening, {player}. This is the hour the company used to change the watch. I still feel it in my bones.
+Good evening. Last light's the worst for archers. Everything looks like something.
+
+## veteran.greet.night
+Quiet, now. I'm on watch. Come up and stand on my left; that's the blind side.
+Who's that on the stair? Ah. {player}. I took you for a skeleton with manners.
+Night watch, {time}, all quiet. Or it was, till you came clanking up.
+You're out late. Come and stand by the brazier. What's on the road tonight is worse than the cold.
+Keep your voice low. Sound carries at night, and so do arrows.
+It's {time} and the road's empty. Or it was. Welcome to the watch, {player}.
+
+## veteran.weather.rain
+Rain. Bowstrings go slack and tempers go short. Come in under the arch.
+We marched forty days in rain like this once. I didn't see a dry sock till Harrowmere.
+Good weather for staying in and oiling leather. Bad weather for everything else.
+Rain on stone sounds like a column on the march. I still wake up reaching for my boots.
+
+## veteran.weather.thunder
+Thunder. Keep low and stay off the battlements. Lightning likes a tall fool.
+Hear that? Same as the siege engines at Harrowmere. My hands still go cold.
+Storm's on us. The brazier will be out within the hour, and there's nothing to be done about it.
+Lightning shows you the whole road in one flash. Best scouting you'll ever get, and the shortest.
+Thunder doesn't trouble me. It's the quiet between the claps I mind.
+
+## veteran.weather.snow
+Snow on the battlements. I'll be up there with a broom before the watch starts.
+Snow means tracks. Anything that comes near the tower tonight, I'll know about it by dawn.
+The winter at Harrowmere, the snow came to our knees and the bread ran out in a month. This is nothing. Still cold, mind.
+
+## veteran.weather.clearing
+Sky's clearing. The road's coming back into view. Good. I don't like not seeing the road.
+There. Rain's done. Time to dry the bowstrings and check the arrows for warp.
+Clouds are breaking up. You can see three valleys from the top now. Go up and look; I'll wait.
+
+## veteran.weather.hot
+Hot one. Drink before you're thirsty. A soldier who waits for thirst is a soldier who faints.
+In heat like this the old garrison slept in the cellar. I'd join them, if the stairs were kinder.
+Too hot for armour. I've hung mine on the target. It wears it better than I do.
+
+## veteran.chat
+This tower was built to watch a border. The border moved, or stopped mattering, or both. I'm still here.
+Nobody ordered me to stay. That's the funny part. Nobody ordered me to leave, either.
+I don't sleep much. Haven't since the war. So I might as well be useful at night.
+Pillagers. Banners, crossbows, and not one honest day's work among them. I've no time for them.
+I respect anyone who carries a blade properly. And anyone who doesn't need to carry one at all. The second sort are rarer.
+Every morning I polish a breastplate I'll never wear again. It's not about the breastplate.
+Folk in {village} think I'm daft, keeping watch on nothing. Then something comes over the hill, and they're glad somebody saw it first.
+A soldier's first lesson: keep your feet dry. Second: keep your mouth shut. Third: share your bread. I never did learn the second.
+The war? Couldn't tell you what it was about. A toll bridge, or a duke's insult. Nobody who fought in it ever knew.
+I put new feathers on every arrow each spring. Do they need it? No. Do I? Probably.
+The road below is quieter than it used to be. That's either peace or neglect. Hard to tell from up here.
+I keep the brazier lit for travellers. If you can see a fire, you know where the walls are.
+A good bow's like a good friend. Look after it and it looks after you. Leave it in the rain and it sulks for a week.
+Zombies come over the ridge some nights. Slow, stupid and stubborn. Like recruits, except you can't shout them into shape.
+Creepers. No battle plan ever written accounts for a bush that hisses at you.
+Skeletons can shoot, I'll give them that. Better than half the recruits I ever trained.
+Discipline isn't shouting. It's doing the dull thing every day, so that on the bad day your hands know what to do.
+My knees forecast the weather better than any shepherd. Left knee for drizzle, right for storms, both for snow.
+I count the arrows every evening. It's always the same number. That's a comfort, in a way little else is.
+I talk to the practice target sometimes. It's got a lot of holes in its argument.
+Merchants come by and ask if I'm the garrison. I tell them I'm the garrison, the cook and the band.
+The walls lose a stone here and there. I put back what I can. The tower and I are about even.
+Witches are clever. Never fight one in the open; they always have one more bottle than you have patience.
+A traveller once asked me what I was guarding. I said, "You, right now." They had no answer to that.
+Wolves and I have an understanding. I don't go into their woods at night, and they don't come up my hill by day.
+I've seen sunsets over the Greywater and over Harrowmere and over half the border. Best one's still from my own battlements.
+Keep your blade oiled, your boots laced and your temper in its scabbard. Three rules. They've served me forty years.
+I mend my own boots, darn my own socks and cook my own stew. The army made me useless at everything else, so I got good at those.
+The company had a saying: "Lantern lit, nobody lost." I still light one. Old habits.
+Some days nothing comes up the road at all. I watch anyway. Quiet's when you watch hardest.
+I've buried more good friends than I'd like to count. I've had more good days than that, though. I make sure to count those.
+If you carry a shield, carry it like you mean it. Half a shield is no shield.
+Peace is a strange thing. You wait your whole life for it, and when it comes you don't know what to do with your hands.
+Folk from the village bring up bread now and then. I pay them in arrows. Seems fair to both sides.
+I don't hate many things. Pillagers, wet bowstrings and soup with no salt. In that order.
+I've kept this watch so long the crows think I'm part of the wall.
+Being alone isn't hard. Remembering to talk out loud is hard. Thank you for helping with that.
+Young folk ask what war was like. Mostly cold, mostly walking, mostly waiting. Then a few minutes you never forget.
+I salute the sunrise every morning. Somebody has to, and the sun outranks me.
+
+## veteran.chat.new
+I'm {name}. I was a soldier in the Lantern Company once. Now I'm the one who lives in the tower.
+First time up the rise? You'll want to know: the yard's safe, the tower's safe, the woods aren't.
+You'll have heard I'm the mad old soldier who keeps watch on nothing. I'm not mad. The rest is true enough.
+New faces get the tour. That's the tower. That's the target. That's me. Tour's over.
+If you ever see the brazier dark at night, something's wrong. Come running, or run the other way. Your choice.
+Rules of {place}: knock before you climb, no pillager talk, and sit where I can see the door. Welcome.
+Don't mind the gruffness. I've been talking to stones for years. I'll warm up.
+
+## veteran.chat.close
+Tamsin. That was the name. My closest friend in the company. We went into the Greywater side by side. Only one of us came out on the far bank.
+I had Tamsin's hand in that river. I had it, {player}. The current was stronger than I was. I've been trying to be stronger ever since.
+Why did I stay? When the captain disbanded us, everyone went home. I looked around and realised this tower was the nearest thing I had to one.
+I light the brazier every night because the Lanterns always kept a fire for stragglers. Some stragglers are a long time coming. I keep it lit anyway.
+Tamsin laughed at everything. Bad food, bad weather, bad officers. I've tried to laugh for both of us. I'm not as good at it.
+Some nights I hear the river in the wind. Then I go up and count stars until it stops. It always stops, eventually.
+Captain Varre told me, "Go home, soldier." I didn't have one. So I picked a post and made it home. I think the captain would understand.
+You're the first person I've told about the Greywater. Out loud, anyway. I tell the target most nights.
+I've got Tamsin's knife. Never used it. I oil it every week with the others. Seems right to keep it sharp.
+On watch, somebody's safe because you didn't sleep. I couldn't keep Tamsin safe. I can keep this road safe. It's not the same, but it's something.
+I'm not lonely, exactly. I'm the last of something. That's its own particular kind of quiet.
+If I ever stop lighting the brazier, {player}, come and check on me. Will you? Promise me that.
+People think I'm guarding the border. I'm guarding the memory of a lot of good people. Somebody ought to.
+
+## veteran.past
+The Lantern Company. Forty of us at the start, the best and worst soldiers you ever met. We got the name because we never let the camp fire go out.
+Captain Varre could hear a pillager sneeze across a valley. Strict as a gate, fair as a scale. Best officer I ever served under.
+The siege of Harrowmere lasted a hundred and twelve days. We held the walls. By the end we were boiling boot leather and calling it soup.
+Hollis was our cook. Biggest soldier in the company, gentlest hands. Could make a feast out of a turnip and an argument.
+Wren taught me the bow. Patient as frost. "Breathe out, then loose," Wren said. I still hear it every time I draw.
+Cork was the company joker. Real name Corwin. Told a joke at every roll call, and the captain pretended not to laugh for six years.
+Marla was our quartermaster. Counted every arrow, every biscuit, every boot. Lose a spoon, and Marla knew before you did.
+The night we crossed the Greywater, the river was in spring flood. The captain said we couldn't wait. The captain was right. It cost us anyway.
+At Harrowmere, Cork kept us going with stories. Terrible stories. Every one ended with somebody falling down a well. We laughed every time.
+We lost Wren in the last week of the siege. A hundred and five days held, and the best archer I ever knew fell seven days short. I've never forgiven those seven days.
+When the war ended, nobody told us for a fortnight. We spent two weeks guarding a bridge for a war that was already over.
+Hollis opened a tavern after the war, way down south. Last I heard, the stew was famous and the portions were shameful.
+Marla still sends a letter every midwinter. Three lines, always the same: "Alive. Well. Count your arrows." I always do.
+Captain Varre's last order was "Go home, Lanterns." Then the captain turned and walked off down the road without looking back. None of us ever saw that face again.
+I joined up at sixteen because the recruiting sergeant had a splendid hat. That's the honest truth. I never got a hat.
+The captain gave me this bow on the walls of Harrowmere. Said I'd earned it. I've kept it strung and dry every day since.
+
+## veteran.night
+See that bright star over the ridge? The company called it the Sentry. If you can see it, you know which way is home.
+Skeletons along the treeline tonight. Hear them rattling? They never come up the hill. They know I've the high ground.
+Night's when I'm most at peace. Strange, for a soldier. But the dark asks less of you.
+Something big moved in the woods an hour ago. Not a zombie; too quiet. I'll be watching that patch till dawn.
+It's a {moon} tonight. Good light or bad, the watch is the same. You just squint more.
+The night has its own sounds. Owls. Wind in the arrow slits. Zombies groaning down on the road. You learn which is which.
+I count stars when I can't sleep. Got to four thousand once. Then a creeper hissed at the gate and I lost my place.
+You'd be surprised how much moves in the dark. Foxes, mostly. Sometimes worse. Never mind; that's what the watch is for.
+The brazier's the only light for three valleys. Somewhere out there, somebody lost can see it. That's enough for me.
+
+## veteran.work
+Fletching arrows. Goose feathers, three to a shaft. Wren always said two was for amateurs.
+Re-pointing the north wall. Mortar and patience. The tower's older than me and in about the same repair.
+Polishing the old kit. Breastplate, helmet, buckle. None of it fits any more, but it'll shine.
+Drill time. Draw, hold, loose. Draw, hold, loose. Same as forty years ago, only slower.
+Carrying wood up for the brazier. Ninety-two steps. I counted them the first day and I've counted them every day since.
+Checking the bowstring for fraying. A string that snaps mid-draw will take your eye out. Don't ask how I know.
+Patrolling the yard. Yes, it's a small yard. Yes, it still needs patrolling.
+Sharpening every blade in the tower. There are eleven. I'm the only one who uses any of them.
+Mending the target. I've shot it so many times it's more patch than straw.
+Fixing the trapdoor to the battlements. The hinge squeals, and a squealing hinge gives a sentry away.
+Writing up the watch log. "Night quiet. One owl. Two foxes. No pillagers." Nobody reads it. I write it anyway.
+Sweeping the battlements. Leaves, snow, crow feathers. The tower collects everything but visitors.
+Oiling leather. Belts, straps, bracers. Cracked leather fails you at the worst moment, and there's never a good one.
+I've been fletching with crow feathers lately. They fly a bit crooked. So do I, these days.
+Restacking the woodpile, dry logs on top. If the alarm fire's slow to light, it's no alarm at all.
+Walking the perimeter. Counting fence posts, checking for tracks. Finding mostly rabbit.
+
+## veteran.adventure
+Heading out? Tell someone where you're going. Then go there. Then come back. That's the whole art of it.
+If you're crossing a river in flood, don't. Wait for the water to drop. Whatever's on the far bank will still be there tomorrow. You might not be.
+Pillager outposts are tall wooden towers flying banners. Don't go near one alone. Don't go near one with friends either, unless they're very good friends.
+Carry more arrows than you think you need, and more bread than that. A hungry squad is a beaten squad.
+Out in the wilds, pick your camp before dark, not after. A camp picked in the dark is a camp picked by the enemy.
+If you find an old fort out there, test the walls before you trust them. Mine are older than they look, and they look old.
+When you're lost, climb. Up high you can see where you've been, and that's half of knowing where you're going.
+Strange places out there. Ruins with no names, roads to nowhere. We marched past plenty and never had time to look. You do. Look for me.
+Never chase a fleeing enemy into a forest. That isn't them running away. That's an invitation.
+Meet a witch's hut in the swamp? Give it a wide berth. I've seen what one bottle does to a whole squad.
+Go and see the world, {player}. And when you're tired of it, the brazier will be lit.
+
+## veteran.joke
+Hollis's stew was so thick we used it to patch the walls at Harrowmere. Held better than the mortar.
+The captain once asked a recruit why the fire had gone out. "Captain, I was watching it the whole time." Best excuse I ever heard. Worst, too.
+What's the difference between a pillager and a clod of mud? You can scrape the mud off your boot.
+Army breakfast: a biscuit hard enough to stop an arrow. We tested it. Twice.
+I asked the quartermaster for new boots. Marla said, "Your feet aren't worn out yet." Couldn't fault the logic.
+A skeleton walks into a tavern and orders a drink and a mop. Cork's favourite. Cork never once reached the end without laughing.
+Recruits ask me how to stand guard properly. One foot, then the other, then repeat for forty years.
+Our drill sergeant was so loud the enemy used to fall in line by mistake.
+Why do old soldiers never get lost? We argue with the map until it gives in.
+
+## veteran.news
+Pillager scouts on the eastern road two nights back. I loosed one arrow over their heads. They found themselves another road.
+A merchant came by last week. Said there's a new bridge going up near {village}. About time; the old ford's a menace in spring.
+Watch report: there's a new wolf pack on the north ridge. Leave them be and they'll leave you be.
+Lanterns moving on the road to {village} last night, and singing. A wedding party, I'd wager. Good. That road could use more of that.
+Zombies have been thick on the low road since the new moon. Take the high road if you travel by night.
+A creeper's taken to lurking by the old border stone. I've given it a name. I won't tell you what.
+Smoke on the far hills two days running. Charcoal burners, most likely. Most likely. I'm keeping an eye on it.
+A family passed through on their way to {village}, children and all. I walked them as far as the bend. Felt good, escorting someone again.
+
+## veteran.heart
+I don't say this easily, {player}. But it's good to have someone to keep watch for. Someone in particular.
+You remind me of the company. Not any one of them. All of them, somehow. That's high praise from me.
+When you leave, I watch the road until I can't see you. Then I watch a little longer.
+I've had commanders and comrades and recruits. I haven't had many friends. I'm counting you.
+There's a spare cot in the guardroom, whenever you want it. It's been spare too long.
+If anyone ever asks what the watch was for, I'll tell them: so that people like you could walk home safe.
+Lately I've caught myself lighting the brazier a little early, in case it's you on the road.
+
+## veteran.player.hurt
+You're bleeding. Press on it, hard, and keep it above your heart. Sit. I'll fetch a clean strip of cloth.
+That wants binding. Clean it first, then wrap it firm but not tight. If your fingers go cold, it's too tight.
+Sit down before you fall down. First rule of the field: the wounded don't walk if they can help it.
+Don't look at it. Look at me. Breathe. A wound always looks worse to the one wearing it.
+Who did that? Never mind. Wash it, bind it, rest it. Getting even can wait till you can stand straight.
+
+## veteran.player.hungry
+You're running on empty. A soldier who doesn't eat is a soldier who doesn't think. Have some bread.
+When did you last eat? Don't answer; I can see it. There's stew on the fire. It's mostly turnip.
+March, eat, sleep. That's the order, and you've been skipping the middle one.
+
+## veteran.player.dark
+Out in the dark without a light? That's how sentries end up as stories. Get yourself a torch.
+Night's no time for wandering. Come into the light of the brazier, where I can keep an eye on you.
+Can't see your hand in front of your face out there. Get somewhere lit before something else finds you.
+
+## veteran.player.wet
+You're soaked. Off with the cloak and over by the fire. Wet wool's cold wool, and cold soldiers fall sick.
+Dripping like a drowned rat. Dry your feet first; wet feet have ended more campaigns than swords ever did.
+Wet through? Dry your bowstring before anything else. Then yourself. In that order, recruit.
+
+## veteran.held.sword
+Let me see that {item}. Your grip's too tight. Hold it like a bird: firm enough it can't fly, soft enough you don't crush it.
+That {item} wants an edge. Bring it to the whetstone; ten strokes a side, same angle every time.
+Thumb off the flat, wrist straight. There. Now that {item} looks like it belongs to someone.
+That {item}'s good steel. Keep it oiled. A rusted edge is a promise you can't keep.
+Don't wave that {item} about. A blade's not for showing. It's for when there's no other choice.
+
+## veteran.held.bow
+That {item} shouldn't be left strung all day. Ease the string off when you're not shooting, or it'll lose its spring.
+Nice {item}. Breathe out, then loose. Best advice I was ever given. Now it's yours.
+Draw to the cheek, not the chin. And keep that {item} dry; a wet bow shoots like a wet rope.
+
+## veteran.held.shield
+Good, you carry that {item}. Most travellers think they don't need one until the moment they do.
+Hold that {item} higher. Rim at your eyes, not your chin. A low shield is a fine door with no lock.
+Every dent in that {item} is a blow that didn't land on you. Be grateful for each one.
+
+## veteran.held.flower
+That {item}. Wren used to tuck a flower in a helmet strap before every march. Said it confused the enemy.
+That {item}'s the brightest thing that's been up this hill in a month. Including me.
+Put that {item} on the guardroom sill, would you? The place could do with something that isn't iron.
+
+## veteran.held.food
+That {item} smells better than anything I've cooked this year. Don't tell me where you got it. I'll only be jealous.
+Eat that {item} sitting down. Soldiers who eat standing up get indigestion and a reputation.
+You carry that {item} like rations. Good. Never trust a traveller without something in the pack.
+
+## veteran.held.emerald
+Put that {item} away. You'll draw the wrong sort out here, and I'm the only right sort for miles.
+That {item} would have paid a soldier for a month, in my day. Most of it went on boots.
+Money's no use in a siege. You can't eat that {item}, and you can't shoot it.

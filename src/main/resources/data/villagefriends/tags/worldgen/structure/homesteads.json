@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:homestead_farmstead",
+    "villagefriends:homestead_pariah_house",
+    "villagefriends:homestead_shepherd_fold",
+    "villagefriends:homestead_herbalist_cottage",
+    "villagefriends:homestead_watchtower"
+  ]
+}

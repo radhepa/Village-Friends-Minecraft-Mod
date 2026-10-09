@@ -51,6 +51,8 @@ def color(name, face, props):
                    base.replace('_tile', '_tiles'), base.replace('brick', 'bricks'), base + '_block']
     if base in WOODS:
         candidates.insert(0, base + '_planks')
+    # Crops and berry bushes are coloured by their ripest stage.
+    candidates += [name + '_stage7', name + '_stage3', name + '_bottom']
     if name.startswith('potted_'):
         candidates = [name[7:], 'flower_pot']
     if name.startswith('stripped_') and (name.endswith('_log') or name.endswith('_wood')):

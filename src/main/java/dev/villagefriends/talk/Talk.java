@@ -64,6 +64,9 @@ public final class Talk {
     public static Map<String, Integer> pools(Context c) {
         var w = new LinkedHashMap<String, Integer>();
         boolean weather = !c.weather.equals("clear");
+        // Homestead folk (the pariah, the shepherd...) live out in the wild: they talk from their own pools.
+        String dweller = c.fill.get("dweller");
+        if (dweller != null && !c.child) return dweller(dweller, c, weather);
         if (c.child) {
             String t = c.topic.equals("greet") ? "greet" : c.topic;
             w.put("baby." + t, 6);
@@ -117,6 +120,40 @@ public final class Talk {
                 if (weather) w.put("joke.weather", 1);
             }
             default -> w.put("chat.general", 1);
+        }
+        return w;
+    }
+    /**
+     * A homestead resident's pools, all under their role ({@code pariah.chat}, {@code shepherd.greet.night}...):
+     * greetings by how well they know you and the time of day, weather, the life they lead and the one they left,
+     * late-night thoughts, their work (and their own trade, {@code homesteader.work.farmer}), and reactions to you.
+     */
+    private static Map<String, Integer> dweller(String role, Context c, boolean weather) {
+        var w = new LinkedHashMap<String, Integer>();
+        String r = role + ".";
+        switch (c.topic) {
+            case "greet" -> {
+                w.put(r + "greet", 6);
+                w.put(r + "greet." + (c.level >= 3 ? "friend" : "stranger"), 4);
+                String time = dev.villagefriends.homestead.Dwelling.greetingTime(c.period);
+                if (time != null) w.put(r + "greet." + time, 3);
+                if (weather) w.put(r + "weather." + c.weather, 5);
+                if (!c.held.isEmpty()) w.put(r + "held." + c.held, 2);
+                for (var s : c.states) w.put(r + "player." + s, 3);
+            }
+            case "chat" -> {
+                w.put(r + "chat", 8);
+                if (c.level <= 1) w.put(r + "chat.new", 3);
+                if (c.level >= 6) w.put(r + "chat.close", 4);
+                w.put(r + "past", c.level >= 3 ? 3 : 2);
+                if (c.night()) w.put(r + "night", 3);
+                if (weather) w.put(r + "weather." + c.weather, 3);
+                if (!c.held.isEmpty()) w.put(r + "held." + c.held, 2);
+                for (var s : c.states) w.put(r + "player." + s, 2);
+            }
+            case "work" -> { w.put(r + "work", 6); w.put(r + "work." + c.job, 8); }
+            case "adventure", "joke", "news", "heart" -> w.put(r + c.topic, 8);
+            default -> w.put(r + "chat", 1);
         }
         return w;
     }
@@ -185,11 +222,20 @@ public final class Talk {
         }
         return true;
     }
+    /** Questions about village life, which nobody living out in the wild would ask. */
+    private static final Pattern VILLAGE_TALK = Pattern.compile("(?i)village|tavern|market|bell|neighbo|square");
+    static boolean aboutVillageLife(DialogueBank.Question q) {
+        for (var ask : q.ask()) if (VILLAGE_TALK.matcher(ask).find()) return true;
+        for (var a : q.answers()) if (VILLAGE_TALK.matcher(a.reply()).find() || VILLAGE_TALK.matcher(a.label()).find()) return true;
+        return false;
+    }
     /** A question to ask (or an offer to make) now, avoiding ones already done; null if none fit. */
     public static DialogueBank.Question question(DialogueBank bank, Context c, Set<String> done, boolean offers, Random random) {
         var tags = c.tags(); var fit = new ArrayList<DialogueBank.Question>();
+        boolean wild = c.fill.containsKey("dweller");
         for (var q : bank.questions()) {
             if (q.offer() != offers || done.contains(q.id()) || !eligible(q, tags, c.level)) continue;
+            if (wild && aboutVillageLife(q)) continue;
             boolean fillable = true;
             for (var ask : q.ask()) if (fill(ask, c.fill) == null) fillable = false;
             if (fillable) fit.add(q);

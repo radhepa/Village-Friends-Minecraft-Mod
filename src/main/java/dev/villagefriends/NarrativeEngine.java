@@ -81,6 +81,11 @@ public final class NarrativeEngine {
                     + " " + VillageSettlements.reference(v,topic,today)).strip();
         }
         if (b.has("hurt")) return "I'd like to talk about what happened before we pretend everything is fine. An apology would be a beginning.";
+        // Homestead folk talk about the life they lead out there, from their own lines, on every topic.
+        if (dev.villagefriends.homestead.Homesteads.dwells(v)) {
+            String said = TalkWorld.line(v, p, topic);
+            if (said != null) return said;
+        }
         var society = VillageSocieties.of(v); int salt = salt(v, p, today);
         if (topic.equals("news")) return society == null || !society.has(profile.id()) ? "I haven't settled anywhere yet, so I don't hear much news. Ask me again once I have a hometown."
                 : Gossip.news(society, profile.id(), today, salt, FriendshipLevels.level(state(v, p), b) >= FriendshipLevels.SECRETS);
@@ -269,7 +274,8 @@ public final class NarrativeEngine {
     private static String about(Villager v, ServerPlayer p) {
         var profile = profile(v); var b = bond(v, p);
         return name(v) + "\n" + NarrativeContent.current().personality(profile.personality()).label() + "\nHobby: " + profile.hobby()
-                + "\nHome village: " + (VillageSettlements.home(v)==null?"Not yet settled":VillageSettlements.home(v).name())
+                + (dev.villagefriends.homestead.Homesteads.dwells(v) ? dev.villagefriends.homestead.Homesteads.about(v)
+                        : "\nHome village: " + (VillageSettlements.home(v)==null?"Not yet settled":VillageSettlements.home(v).name()))
                 + (dev.villagefriends.home.Homes.homeName(v).isEmpty() ? "" : "\nHome: " + dev.villagefriends.home.Homes.homeName(v))
                 + "\nValues: " + profile.value() + "\nLoves: " + itemName(profile.love()) + "\nDislikes: " + itemName(profile.dislike())
                 + "\nTrust: " + b.trustLabel() + "\nVisits on different days: " + b.visits()

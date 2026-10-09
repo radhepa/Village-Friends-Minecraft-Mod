@@ -1,0 +1,295 @@
+# Homesteads: the Shepherd. A hill shepherd living alone at {place} (such as "Windy Fold"): a stone hut with a
+# turf-and-spruce roof, a dry-stone sheepfold, a loom, a lookout rock. Gender-neutral, content in solitude, not
+# lonely. Gentle, slow, wry, a little mystical about the hills. Reads clouds, knows the stars and the moon,
+# spins and weaves on long evenings, keeps watch for wolves, walks down to market twice a year.
+# The flock (keep these consistent): Bramble (stubborn ewe, disapproves of everything), Old Hob (the old ram),
+# Thimble (the smallest, last-born lamb, she), Moss (grey, wanders off, he), Dulcie (vain, finest fleece, she),
+# Pickle (eats everything, an orphan lamb hand-reared, he). The shepherd learned the trade from old Gammer Rook.
+# Pools: shepherd.greet (+ .stranger .friend .morning .evening .night), shepherd.weather.*, shepherd.chat
+# (+ .new .close), shepherd.past, shepherd.night, shepherd.work, shepherd.adventure, shepherd.joke, shepherd.news,
+# shepherd.heart, shepherd.player.*, shepherd.held.*. Placeholders: {name} {player} {place} {village} {time}
+# {weekday} {season} {moon} {item} (held.* only).
+
+## shepherd.greet
+Hello. You've come up a long way. The hills don't let just anyone up.
+Ah. A visitor. Bramble saw you first. She doesn't approve, but then she rarely does.
+Hello, {player}. Sit on the wall if you like. The stones are warm.
+Mind the fold gate. Moss can slip through a gap you couldn't post a letter through.
+Well met. The wind said someone was coming. It's usually right.
+Hello. Speak softly, if you would. Thimble startles.
+Good to see you. Not many faces up here. Plenty of woolly ones.
+Hello there. Old Hob's watching you. He watches everyone. He's never once done anything about it.
+Ah, it's you. Welcome to {place}. Knock the hill off your boots.
+Hello, traveller. You've the look of someone who's been climbing. Catch your breath first.
+Don't mind the sheep staring. You're the most interesting thing to happen since last Market Day.
+Hello. I was just talking to Pickle about the grass. You can join in. Pickle doesn't say much.
+Welcome up. The view's free, the water's cold, and the company's mostly sheep.
+Hello, {player}. You came up quietly. The hills approve of that.
+Oh, hello. I didn't hear you over the wind. Nobody hears anything over the wind.
+Come up, come up. Dulcie will want you to admire her fleece. Best get it over with.
+Hello. It's {time} by the sun, or near enough. A fine time for a visitor.
+Well, now. Someone climbed all this way. Either you're lost or you're curious. Both are welcome.
+Hello. I'm {name}. These are the sheep. They have names too, but they'd rather tell you themselves.
+Ah, company. Let me put the spindle down.
+Hello. You're standing where the wind's kindest. Good instinct.
+Peace to you. Up here that's less a greeting than a description.
+
+## shepherd.greet.stranger
+Stop there a moment. ...No, you're not a wolf. Come on, then.
+A stranger, up here? You must have wanted to find this place very badly. Or not at all.
+I don't get visitors. I'm not sure I remember how it goes. Hello. Is that right?
+Who are you, then? The sheep would like to know. So would I, a little.
+Careful on the scree. People from below always forget to look down.
+You're far from any road. Sit, if you want. Go, if you want. The hills won't mind either way.
+Hm. Strangers mean news, and news means noise. Still. Hello.
+I'll not ask your business. Up here everyone's business is their own. There's water in the spring.
+You've startled Thimble. She'll forgive you. Bramble won't, but Bramble forgives no one.
+
+## shepherd.greet.friend
+{player}! The sheep knew you were coming before I did. Dulcie's been preening all morning.
+There you are. I kept a seat warm on the lookout rock.
+My friend. Come and sit. There's a new blanket off the loom and nobody to show it to but you.
+Ah, {player}. Even Bramble looks pleased to see you. Almost.
+Welcome back. The hills have been too quiet without your footsteps.
+You came. I said you would. Old Hob didn't believe me.
+Hello, friend. I saw you from the lookout an hour ago and set the kettle on the stones.
+Good, you're back. Pickle ate the apple you left last time. He'd like you to know he enjoyed it very much.
+{player}. I've been saving up things to tell you. Mostly about clouds.
+
+## shepherd.greet.morning
+Morning. The mist's still lying in the valley like milk in a bowl.
+Good morning. The sheep are already up and complaining. As am I.
+Morning, {player}. Red sky at dawn. I'd keep a cloak handy, if I were you.
+Early, aren't you? Good. The best of the hills is before breakfast.
+Morning. I've counted them twice. All six. That's a good start to any day.
+
+## shepherd.greet.evening
+Evening. The light goes gold on the far ridge about now. Worth stopping for.
+Good evening. Time to bring them in. Bramble will make it difficult. She always does.
+Evening, {player}. The loom's waiting and the fire's lit. A quiet night ahead, I hope.
+Evening. Listen. That's the curlew. Means the day's properly done.
+
+## shepherd.greet.night
+You're out late. The wolves walk the ridge at this hour. Come near the fire.
+Shh. They're all asleep in the fold. Even Pickle, finally.
+Good evening, or good night, or whatever it is at {time}. Sit where I can see you.
+Night on the hill. Look up, {player}. That's why I live here.
+Still about? It's a {moon} tonight. I'll be keeping watch till it's down.
+
+## shepherd.weather.rain
+Rain coming sideways off the hill. The sheep turn their backs to it. Wise creatures.
+Wool keeps the wet off a sheep. Nothing keeps it off a shepherd.
+I saw this rain coming yesterday in the mackerel clouds. Nobody listens to a shepherd.
+Rain. Good for the grass, good for the spring, bad for my temper.
+Come under the turf roof. It only leaks in one place, and I've put a pot there.
+
+## shepherd.weather.thunder
+Thunder in the hills sounds like giants moving furniture. Old Hob hates it.
+Off the high ground, {player}! Lightning likes the tallest thing, and up here that's us.
+Thimble's hiding behind my legs. I'd hide behind someone's legs too, if there were any going.
+
+## shepherd.weather.snow
+Snow. I'll have to dig the fold out by morning. The sheep will look at me like it's my fault.
+Snow on the hills. Quiet as a held breath.
+Sheep don't mind snow, their wool's thick. I've woven myself nearly the same coat.
+When the snow comes, I count them every hour. A sheep under a drift makes no sound.
+Look at Moss. Grey sheep, white hill. I'll be counting him by his shadow.
+
+## shepherd.weather.clearing
+There. The clouds are lifting off the ridge like a lid off a pot.
+Cleared up. The whole hill smells of wet heather and second chances.
+Rain's gone. Look, a rainbow over the valley. It ends in somebody else's field, as always.
+
+## shepherd.weather.hot
+Hot. The sheep are lying in the shade of the wall like spilled wool.
+Too warm for the low slopes. I've moved them up near the spring.
+This heat makes the stones shimmer. On days like this I sit very still and envy the lizards.
+
+## shepherd.chat
+Bramble got out again. I found her on the lookout rock, staring at the sky like she'd paid for the view.
+Old Hob slept in the sun all afternoon. He's earned it. He's earned most things, at his age.
+I spun a whole basket of wool today. My fingers think in thread now.
+The clouds this morning were like fish scales. Rain by tomorrow. You'll see.
+Pickle ate a thistle, then looked betrayed by it. He'll eat another tomorrow.
+I've been weaving a blanket the colour of the hill at dusk. Grey, with a little gold.
+The wind's from the west. It brings the smell of the sea, if you know how to listen with your nose.
+Thimble followed me all the way to the spring and back. She thinks I'm her mother. I've stopped correcting her.
+Moss wandered off again. Found him two valleys over, eating someone else's clover.
+Dulcie's fleece is the finest on the hill. She knows it. She stands in the wind so it ruffles nicely.
+Up here a day is long and full and nothing happens in it. That's the gift.
+I sat on the lookout rock and watched a hawk for an hour. He caught nothing. Neither did I. We were both content.
+I sing to the flock in the evenings. Bramble yawns, but Bramble yawns at everything.
+The spring above the fold is running sweet and cold. Have a drink before you go.
+Mended the fold wall today. Dry stone, no mortar. Every stone has to agree with its neighbours.
+I counted them this morning: six. I count them every morning. It's never been seven, but I live in hope.
+A sheep can't tell you what's wrong. You learn to read the ears.
+People down in {village} talk all day and say nothing. Sheep say nothing all day and you learn everything.
+The heather's coming purple on the south side. The bees will be up soon, humming like a loom.
+I've been dyeing wool with onion skins. It comes out the colour of a good sunset.
+Pickle got his head stuck in the feed bucket. Wore it like a helmet for an hour. Very dignified.
+I watched the cloud shadows cross the valley today, like a flock moving on to new grass.
+There's an old standing stone past the ridge. I leave it a tuft of wool every season. For luck. Or for manners.
+The hills aren't empty. They're full. You just have to be quiet enough to notice.
+Old Hob butted the fold gate this morning. Not to get out. Just to remind it who's in charge.
+I talk to the sheep more than to people. The sheep have better manners and worse breath.
+Long day. Good day. The two often go together up here.
+I wove a strip of blue into the new cloak. Just one. A little bit of sky to take about with me.
+Bramble and I have an understanding. I pretend to be in charge, and she lets me.
+The wind dropped at noon. It was so quiet I could hear the grass growing. Or Pickle eating it.
+It's {weekday}. Down below, that means something. Up here it's another day of clouds.
+The lambs came late this year. Thimble came last and smallest, and she's my favourite. Don't tell the others.
+Wool, water, grass and sky. You'd be surprised how far those four go.
+Today I followed a beetle along the wall for a while. It knew exactly where it was going. I admired that.
+My loom has a voice. Clack, hush, clack. Better company than most people I met at market.
+I patched the turf roof. Now the grass grows on my house too. Pickle keeps eyeing it.
+The sheep know the weather before I do, and I know it before anyone else. There's an order to these things.
+
+## shepherd.chat.new
+I'm {name}. I keep the sheep at {place}. That's all there is to know, mostly.
+You'll be wondering why anyone lives up here. Sit a while. You'll stop wondering.
+Six sheep, one hut, one loom and a great deal of sky. That's {place}.
+You've come up from {village}, maybe? Is it still as loud as I remember?
+I'm not much for talking. But I'm glad of a voice that isn't mine or a sheep's.
+Don't be shy of the flock. Except Bramble. Be a little shy of Bramble.
+Visitors are rare. You'll forgive me if I stare. I'm learning your face.
+
+## shepherd.chat.close
+People think I'm lonely up here. I'm not. Lonely was standing in a crowded room in {village}.
+Some nights I worry I'll grow old up here and nobody will know. Then I think: the sheep will know. That helps more than it should.
+When Old Hob goes, and he'll go before long, I don't know what I'll do. He's been with me longer than anyone.
+I've never told anyone this, but I'm afraid of the dark under trees. Not the open dark. The hills, I trust.
+I had a brother once. We don't speak. I weave him a scarf every winter and never send it. There's a chest full of them now.
+You're the only one I'd let shear Dulcie. That's the highest honour this hill has to give.
+I think the hills are alive, in a slow way. I think they know who loves them. Does that sound foolish? Good. Only to you, then.
+When my time comes, I'd like to be buried by the lookout rock, facing east. I've told the sheep, but they'll forget.
+I was a loud child, you know. It took a lot of years on this hill to get this quiet.
+I'm glad you come up here, {player}. I didn't know I'd been waiting for someone until you started coming.
+Some market days I stand at the edge of the square and think about staying. Then a bell rings and I'm back up the hill by dark.
+I keep a lantern in the window on stormy nights. Not for me. In case anyone's lost on the hill. Nobody ever has been. I keep it lit anyway.
+The flock are my family. I know how that sounds. It isn't sad. They're very good family.
+
+## shepherd.past
+I grew up in {village}, the third of five. Nobody noticed when I took the old crook off the wall and walked uphill.
+The old shepherd who taught me was called Gammer Rook. She knew every star and never once used its proper name.
+My first winter here I lost two sheep to the snow. I learned to count every hour after that.
+Gammer Rook gave me Old Hob when he was a lamb. Said he'd outlive us both. He's halfway there.
+I built the fold wall myself, stone by stone, one long summer. Every stone has a story. Most of the stories are "ouch".
+After Gammer Rook died, I tried living down in {village}. I lasted one season. The bells rang right through my head.
+Bramble was born in a hailstorm. She's been cross about it ever since.
+My grandmother taught me to weave. She said a loom teaches you patience or it teaches you to swear. I learned both.
+The year the wolves came, I slept in the fold with my crook across my knees for a whole month.
+My first night alone up here, I didn't sleep at all. The stars kept me company. They still do.
+When I was small I thought the hills were sleeping giants. I'm older now. I'm less sure they aren't.
+Pickle was an orphan lamb. I fed him from a cloth soaked in milk. He's been hungry ever since.
+I walked to the coast once, years ago, and saw the sea. It was like the hills, only restless. I came home.
+
+## shepherd.night
+Look up. That bright one low in the west is the Shepherd's Lamp. Gammer Rook named it, so that's its name.
+It's a {moon} tonight. Gammer Rook could read a month's weather from that. I can read about a week.
+I'll sit up a while. Wolves were calling over the ridge at dusk.
+The stars all wheel round the still one. Everything up there has its fold, same as down here.
+There's the {moon}, or what shows of it. Gammer Rook said the moon's a shepherd too, counting the stars home.
+Hush. Listen to them breathing in the fold. Six little clouds of breath. That's the sound of all being well.
+Some nights I see lights moving on the far ridge. Pillagers, maybe. Or something older. I keep the fire low.
+The Plough's tipping over the ridge. That means it's late. That means you should be sleeping, and so should I.
+I don't need a lantern up here. The sky's lantern enough, most nights.
+Night watch is long, but it's never empty. There's always another star to learn.
+
+## shepherd.work
+Shearing's in early summer. Dulcie stands still for it. Bramble makes it a wrestling match.
+I move the flock to new grass every few days. Keep them moving and the hill keeps giving.
+Spinning is thinking with your hands. The thread gets smoother as the mind does.
+A good crook is half the job. Mine's older than I am. It's hooked more sheep out of brambles than I can count, including a Bramble.
+The fold wall needs mending after every frost. Stones heave in the cold, like old bones.
+Every week I check each foot, each eye, each ear. Sheep hide it when they're poorly. You have to look.
+A blanket takes me most of a month of evenings to weave. Selling it takes a moment, and I always regret it.
+I take the wool down to market twice a year, spring and autumn. Both times I'm home before dark if I can help it.
+At lambing time I barely sleep. Every cry might be the one that needs you.
+Keeping sheep is mostly keeping watch. The rest is walking and worrying.
+I wash the fleeces in the spring and lay them out on the heather to dry. The hill looks snowed on in summer.
+Wolves are the worst of it. On bad nights I keep a fire at the fold gate and sing loud. Wolves don't like singing. Neither does Bramble.
+I've dyed wool with heather, onion, lichen and walnut. The hills give you every colour if you ask nicely.
+The loom's for the long evenings. The crook's for the long days. The hut's for whatever's left over.
+Pickle has to be fed apart from the others or he eats everyone's share. Every flock has one.
+A shepherd's job is simple: know where every sheep is, always. It's the "always" that's hard.
+
+## shepherd.adventure
+If you're crossing high ground, watch the clouds on the peaks. When they come down, you go down.
+I went to the sea once. That was enough adventure for one life.
+Take wool socks. Two pairs. Adventurers always forget their feet.
+If you're lost in the hills, follow the water downhill. It always knows where the people are.
+Wolves follow more than they chase. If you hear them behind you, keep walking, and keep a fire at night.
+You go and see the world, {player}. Then come up and tell me about it. That's my favourite way to travel.
+Mind the pillagers' towers. On clear days I can see their banners from the lookout rock. I keep well wide.
+Every road you walk, a sheep probably walked it first. They're very good at finding the easy way.
+There's a cave under the eastern crag. I've never gone in. Some places are better left as mysteries.
+
+## shepherd.joke
+What do you call a sheep with no legs? A cloud. Pickle doesn't find that one funny.
+I tried counting sheep to get to sleep last night. I only have six. I was wide awake by seven.
+Bramble walked into the hut once, looked at me, looked at the loom, and walked out again. I've never felt so judged.
+I told Old Hob a joke this morning. He didn't laugh. He's heard it before. He's heard all of them before.
+Moss isn't lost. Moss is exploring. Moss has been exploring for three days now.
+A wolf once dressed up as a sheep to sneak into my fold. I knew straight away. Too quiet. My sheep never stop talking.
+Where does a sheep go for a trim? The baa-baa's, of course. Bramble won't go. Bramble cuts her own.
+What do you get if you cross a sheep with a thundercloud? A very wet blanket. No? The sheep didn't laugh either.
+Why did the ram run off the cliff? He didn't see the ewe-turn. I'm sorry. The hills make you do it.
+
+## shepherd.news
+News? Bramble has a new favourite rock. That's all I've got.
+Last time I was down at market, everyone was arguing about the price of salt. I expect they still are.
+I saw a column of smoke past the far valley three days ago. Pillagers, or somebody's supper. I hope supper.
+You'd know the news better than me. I only hear what the wind brings, and the wind exaggerates.
+A lost peddler came up the hill last season. Told me the council down in {village} had a shouting match over the well. Nothing changes.
+The swallows came back early. That's news up here. That's big news.
+The wolves on the north ridge have a new pup. I heard it trying to howl. It squeaked.
+
+## shepherd.heart
+Anyone special? Six of them. Woolly, stubborn, and mine.
+I loved someone once, down in {village}. They wanted the town and I wanted the hills. We both got what we wanted, mostly.
+The hills. Don't laugh. They've never let me down, and they never talk over me.
+Old Hob, if you ask him. He seems to think we're married.
+Love? I think it's mostly paying attention. I pay a great deal of attention to six sheep.
+Special? You, maybe, a little, for climbing all this way. Don't make it strange.
+I'm content. Not every heart needs another beside it. Some just need a view.
+
+## shepherd.player.hurt
+You're hurt. Sit on the wall. I've a salve for sheep that works on people, more or less.
+That's a nasty cut. Wolves? Come here, I'll bind it with clean wool.
+You're limping like Bramble did after she kicked the gate. Let me look.
+
+## shepherd.player.hungry
+You look hungry. There's cheese and oatcake in the hut. Not much, but it's honest.
+Hungry? There's barley and turnip in the pot on the stones. Don't ask for mutton up here. The flock might hear.
+Climbing makes you hungry. Sit, eat, and then tell me how you are.
+
+## shepherd.player.dark
+It's dark, {player}. The hill has edges you can't see at night. Stay by the fire.
+Walking in the dark up here? Follow my lantern, not your feet.
+Night on the hills isn't for wandering. That's wolf time.
+
+## shepherd.player.wet
+You're soaked through. Here, a fleece. It still smells of Dulcie, but it's dry.
+Wet to the bone! Stand by the fire and steam a while.
+You look like a sheep that fell in the spring. I'd know. Moss does it every month.
+
+## shepherd.held.sword
+Lower that {item} near the fold, would you? The sheep don't trust steel.
+That {item} might keep the wolves off. Singing works too, and it doesn't need sharpening.
+I've a crook and a loud voice. You've that {item}. Between us, the wolves don't stand a chance.
+
+## shepherd.held.flower
+Keep that {item} away from Pickle or it won't last a breath.
+I could dye wool with that {item}. A whole cloak the colour of it. Imagine.
+You picked that {item} for someone? Lucky someone.
+That {item} looks like it came from lower down. Not much blooms this high but heather and stubbornness.
+
+## shepherd.held.food
+That {item} smells better than oatcake. Most things do.
+Mind Pickle. He'll have that {item} out of your hand before you've blinked.
+Eating that {item} up here? Sit on the rock with the view. Food tastes better with a view.
+
+## shepherd.held.emerald
+That {item} would buy a winter's salt at market. I'd still rather have a good fleece.
+Shiny thing, that {item}. Dulcie would like it. She likes anything that gets admired.
+Keep that {item} out of sight on the road down. Not everyone you meet is a sheep.

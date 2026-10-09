@@ -28,6 +28,9 @@ as "Summer 12"), {when} ("today", "tomorrow", "in 3 days"), {season} ("Summer"),
 such as "5 zombies"), {wanted} (an item request such as "12 wheat"), {recipient} (who a letter is for)
 and {sender} (who wrote it).
 
+Homesteads (residents who live alone out in the wild, HOMESTEADS.md) add: {place} (the name of their homestead,
+such as "Blackthorn House") and {spouse} ("husband" or "wife", for a homestead couple; {partner} is their first name).
+
 Deeds and homes add: {victim} (the resident a deed was done to or for; for a pet, its owner), {kin} (the
 speaker's family word for them in lower case, such as "sister"), {teller} (who passed the news on) and {house}
 (a house name such as "The Ashford House").
@@ -47,7 +50,7 @@ PROJECT = ROOT.parents[1]
 OUT = PROJECT / 'src/main/resources/data/villagefriends/villagefriends/dialogue.json'
 PLACEHOLDERS = {'name', 'player', 'village', 'job', 'hobby', 'love', 'friend', 'partner', 'rival', 'time', 'day', 'item', 'biome', 'moon', 'market', 'neighbor', 'weekday',
                 'celebrant', 'birthday', 'when', 'mobs', 'wanted', 'recipient', 'sender', 'season',
-                'victim', 'kin', 'teller', 'house'}
+                'victim', 'kin', 'teller', 'house', 'place', 'spouse'}
 MOODS = {'EXCLAIM', 'QUESTION', 'HEART', 'NOTE', 'ANGER', 'SWEAT', 'DOTS', 'SLEEP', 'SPARKLE', 'IDEA', 'GLOOM', 'BLUSH'}
 EFFECTS = {'heal', 'meal', 'shelter', 'torch', 'cook_held', 'mend_held', 'directions', 'fish', 'study', 'flower', 'apple', 'bread', 'cookie', 'seeds', 'emerald_tip'}
 MAX_LINE, MAX_LABEL = 300, 30

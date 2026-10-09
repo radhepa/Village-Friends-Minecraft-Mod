@@ -55,6 +55,7 @@ public final class VillageSettlements {
     }
     public static void identify(Villager v,boolean discover) {
         if(!(v.level() instanceof ServerLevel level))return;
+        if(dev.villagefriends.homestead.Homesteads.dwells(v))return; // Homestead folk live out in the wild and belong to no village.
         var membership=target(v).getAttached(HOME);
         if(membership==null) {
             if(CompanionController.state(v).active())return; // An outing does not change someone's hometown.

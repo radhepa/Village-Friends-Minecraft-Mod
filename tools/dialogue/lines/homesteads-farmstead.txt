@@ -1,0 +1,383 @@
+# Homesteads: the Farmstead couple. A husband and wife farming on their own at {place} (such as "Cloverbrook Farm"),
+# far from any village: farmhouse, fenced wheat and carrot field, hen coop, well, haystack. One works the fields
+# (homesteader.work.farmer), the other keeps the house, the kitchen and the hens (homesteader.work.cook).
+# Every other pool is shared, so a shared line must work from either spouse's mouth: {partner} is the other
+# spouse's first name, {spouse} is "husband" or "wife". Those can be missing (a widowed homesteader), so at least
+# half of every shared pool uses neither, and no line uses a pronoun for the partner.
+# Recurring cast: the hens Duchess (bossy, runs the coop), Pudding (round, the best layer) and Nettle (escapes
+# everything); Barnaby the scarecrow (wears an old hat); Mistress Hobb, the gossip they left behind in {village}.
+# The couple never had children. They met at a harvest dance and walked out here a week after the wedding.
+# Pools: greet (+ .stranger .friend .morning .evening .night), weather.*, chat (+ .new .close), past, night, work
+# (+ .farmer .cook), adventure, joke, news, heart, player.*, held.*. Placeholders: {name} {player} {place} {village}
+# {time} {weekday} {season} {moon} {item} (held.* only) {partner} {spouse}.
+
+## homesteader.greet
+Welcome to {place}. Mind the hens, they think they own the path.
+Oh! A visitor. We get more foxes than visitors out here.
+Hello, {player}. Wipe your boots if you're going anywhere near the kitchen.
+Morning, noon or night, you're welcome at {place}.
+Ah, a face that isn't covered in feathers. Hello!
+Hello there. You've walked a long way to find us, I'd wager.
+Good to see you. Pull up a hay bale and sit.
+Hello! You've caught me between one chore and the next. That's where I always am.
+Welcome. Mind the well, the rope's older than I am.
+Well, look at that. Company!
+Hello, {player}. The kettle's on. It's always on.
+If you've come for the quiet, you've found the right farm.
+Hello! Step round the carrots, would you? They're shy.
+Ah, {player}. The road's brought you round to us again.
+You'll stay a while? It's a long walk back to anywhere.
+Hello. If you hear shouting, that's just me arguing with the scarecrow.
+Good day! I'd wave, but my hands are full of something. They usually are.
+Hello. {place} is a lot of chickens and not many people. Glad you're here to even it up.
+Hello! {partner}'s about somewhere. Follow the sound of grumbling.
+Welcome to {place}. My {spouse} and I built it, mostly out of stubbornness.
+Hello, {player}! {partner} saw you coming from the top field and sent me to say so.
+Oh, hello. Don't tell {partner}, but I was having a sit-down.
+Welcome! My {spouse} will be glad of a new face. So will I. We've worn ours out on each other.
+If {partner} offers you pie, say yes. If {partner} offers you advice, also say yes, then do as you like.
+Hello! You've just missed {partner}. Or {partner}'s just missed you. Hard to say which.
+Ah, a visitor! My {spouse} will want every word you say repeated at supper, so speak slowly.
+Hello. The gate sticks. Lift it and mutter at it, that's how my {spouse} does it.
+
+## homesteader.greet.stranger
+Oh. A stranger. We don't see many folk out this way. What brings you?
+Hello... You're not lost, are you? Nobody comes out here unless they're lost.
+Stay where I can see you a moment. Right. You look honest enough. Welcome.
+A traveller? You'll have walked far. There's water in the well, help yourself.
+I don't know you, but you look like you could use a sit-down.
+We don't get callers. You'll forgive me for staring.
+Hello, stranger. Close the gate behind you, the hens are plotting something.
+You're not a peddler, are you? We've nothing to buy and less to spend.
+Who's there? Oh. Just a traveller. My heart was going like a butter churn.
+Come in off the road, then. Nobody should be out here alone after dark.
+{partner}! Someone at the gate! ...It's all right, they look harmless.
+{partner} says I'm too trusting with strangers. Please don't prove {partner} right.
+
+## homesteader.greet.friend
+{player}! I was hoping you'd come by. I saved you the brown egg.
+There's my favourite traveller. Come in, come in.
+Back again! You're practically a neighbour now. Our only one.
+{partner} bet me a turnip you'd turn up this week. I've lost a turnip, and I don't mind a bit.
+Ah, it's you. Even the hens stopped squawking. They know you now.
+Good to see you, friend. There's a dent in the bench by the well that's yours by rights.
+{player}! Sit, sit. Tell me everything the world's been up to.
+My {spouse} lit an extra lantern at the gate last night, in case you came. And here you are.
+Hello, dear friend. You've the look of someone who hasn't eaten. We'll fix that.
+Ha! I knew that walk. Nobody else crosses a field quite like you do.
+Look who it is! {place} feels a lot less far from everywhere when you visit.
+You came back. I never quite believe it till I see you at the gate.
+
+## homesteader.greet.morning
+Morning! The hens beat you to it. They always do.
+Good morning. I've been up since before the birds. The birds were rude about it.
+Morning, {player}. There's porridge if you're quick and {partner} isn't.
+Fresh morning, fresh eggs. Couldn't ask for more.
+Morning. The dew's still on the wheat. Best hour of the day, this.
+Good morning! It's {time} and I've already fed, watered and argued with everything that lives here.
+
+## homesteader.greet.evening
+Evening, {player}. The field goes gold about now. Stand here and look.
+Good evening. Day's work done, or near enough to lie about it.
+Evening! Supper's on. You could smell it from the gate, I expect.
+Evening. {partner} and I sit on the step about now and say nothing at all. Come and join us.
+Good evening. The swallows are flying low, so the weather will turn.
+Evening. I'll be lighting the lanterns soon. Out here, you light them early.
+
+## homesteader.greet.night
+It's dark, {player}. Come inside the fence, quick.
+You're out late. Wolves were howling up on the ridge an hour ago.
+Hush, {partner}'s asleep. One creak of that gate and the whole farm's awake.
+Goodness, it's {time}! What are you doing out in the dark?
+Come in by the lantern. Nothing good walks the fields at this hour.
+Oh, {player}. I was just making sure the coop's barred. Twice. Three times.
+
+## homesteader.weather.rain
+Rain! The wheat's been begging for it. Me, less so.
+Listen to that on the roof. Best sound in the world, once the hay's in.
+Rain again. {partner} will be in soon, dripping all over my clean floor.
+The well will be glad of this. So will the carrots. So will I, once I'm dry.
+Rain's good for the field and bad for the knees. Mine know it's coming before the clouds do.
+Wet hens are the angriest creatures alive. Mind yourself near the coop today.
+
+## homesteader.weather.thunder
+Thunder! Get under a roof, {player}. The open field's no place to be in this.
+The hens are under the cart and I'd quite like to join them.
+My {spouse} counts the seconds between the flash and the rumble. I count the hens.
+A storm like this, you pray it doesn't set the haystack alight.
+Every crack of that, I think of the old oak by the stream. It's been struck twice already.
+
+## homesteader.weather.snow
+Snow on the field. Nothing to do but mend things and eat stew.
+Snow! It'll be a cold walk to the well tomorrow.
+Our first winter here, the snow came up to the windowsills. This is nothing.
+I love the snow. Everything goes quiet, even the hens.
+Snow brings the wolves down closer. Keep near the house tonight.
+
+## homesteader.weather.clearing
+There's the sun again. Everything smells of wet earth and good luck.
+Rain's done. Out we go. The weeds will have grown an inch while we weren't looking.
+Look at the field shine! Worth every drop.
+Cleared up nicely. I'll put the washing back out and dare it to rain again.
+
+## homesteader.weather.hot
+Hot as a bread oven out there. The hens are lying flat as pancakes.
+Days like this I haul water till my arms ache. The wheat drinks it faster than I can pour.
+Too hot to work, too much work to stop. That's farming in a nutshell.
+Find some shade, {player}. The north side of the haystack's cool, if you don't mind the itch.
+
+## homesteader.chat
+I counted the carrot rows this morning. Still the same number. I check anyway.
+Duchess laid in my boot again. She's the boss of that coop and she knows it.
+It's a long walk to market. Long enough to forget what you went for, which I always do.
+The quiet out here takes some getting used to. Then you can't live without it.
+Mended the fence, fed the hens, drew the water. Now I'm talking to you. A good day, all told.
+I spent the whole morning chasing Nettle. That hen could escape from a locked chest.
+Nobody rings a bell to wake me out here. The sun does it, and it's much politer about it.
+There's a fox been sniffing round the coop. I've sat up two nights with a lantern.
+Some days the work never ends. Some days it ends and I go looking for more.
+Warm bread and a full well. I've stopped asking for more than that.
+I talk to the carrots. They grow better for it. Don't tell anyone.
+The haystack's leaning again. I've propped it with a plank and a prayer.
+The well bucket came up with a frog in it this morning. I put him back. He seemed offended.
+It's {weekday}, they tell me. Out here every day's called Workday.
+I miss the tavern singing back in {village}. I don't miss the tavern singer.
+Saw a deer at the edge of the wheat at dawn. We looked at each other for a long while.
+I've been mending the hen house roof. The hens supervised. Badly.
+You can see the weather coming for miles out here. Doesn't make it come any slower.
+Barnaby the scarecrow lost his hat in the wind. The crows have been laughing at him all day.
+There's a crack in the big jug. It's been there twenty years. It'll outlast me.
+My hands smell of onions and earth. Honest smells, both.
+Nobody out here knows my business. Nobody but the hens, and they only gossip among themselves.
+I've been saving seed from the best ears of wheat. Next year's field is in a sack up in the loft.
+Pudding laid three eggs this week. She's very proud. We're all very proud.
+Washing day. Every sheet's on the line and the sky's thinking about rain. Typical.
+I made a new handle for the hoe. It's crooked, but then so am I these days.
+A day like this, I wouldn't swap {place} for a castle.
+Found an old arrowhead in the furrow. Somebody's adventure ended here, a long time ago.
+The wild bees have found the clover by the well. If I can find their nest, there'll be honey.
+It's {season}, and the field knows it before I do.
+I sang to the hens this morning. Duchess walked out halfway through. Everyone's a critic.
+Out here you learn to fix things. Or you learn to live with them broken.
+Scraps go to the hens, and the eggs come back. Nothing's wasted on a farm, not even the peelings.
+I sat on the step after supper and watched a storm pass three valleys over. Better than any play.
+My back aches, my feet ache, and the field looks wonderful. A fair trade.
+{partner} and I had a row about where the new fence post goes. It went exactly where I said. Then we moved it.
+My {spouse} has been whistling all morning. Either the wheat's looking good or something's been broken and hidden.
+{partner} burnt the porridge. I said nothing. I'm saving it for a later argument.
+My {spouse} snores like a pig in clover. I'd miss it if it stopped.
+{partner} found a four-leafed clover by the well and gave it to me. It's pressed in the almanac now.
+I caught {partner} talking to the scarecrow again. Barnaby was winning the argument.
+{partner} wants a second hen house. We have one hen house. It's full of opinions already.
+Some evenings {partner} reads the almanac aloud, and I'm asleep by the second page. Every time.
+My {spouse} swears the moon makes the carrots grow. I swear it's the muck. We're both half right.
+{partner} and I don't say much while we work. After all these years, you don't need to.
+{partner} has been in a mood since the fox got in. Can't blame anybody but the fox.
+My {spouse} has started naming the carrots. I've said it'll only end in tears at supper.
+
+## homesteader.chat.new
+We don't get many visitors. You'll have to forgive my manners, they've gone rusty.
+What brings you all the way out here? Lost, or looking?
+This is {place}. It's not much, but we carried every stone of it ourselves.
+Just a little farm. Wheat, carrots, hens, and more mud than you'd think possible.
+You've come from {village}, maybe? Is the old bell still ringing everyone awake at dawn?
+I'm {name}, and my {spouse} is {partner}. That's the whole household, if you don't count the hens. You should count the hens.
+Don't mind me asking questions. News doesn't walk out this far on its own.
+You're welcome to water from the well. Just don't drop the bucket, it took a whole day to fish out last time.
+We came out here for the quiet. You're the least noisy thing that's happened all week.
+Are you a trader? A wanderer? We get one of each a year, if that.
+
+## homesteader.chat.close
+Some nights I lie awake and wonder what happens to this farm when we're too old to work it.
+We never had children. Some years that sits lighter than others. This is a light year, with you about.
+I left {village} because I was tired of being who everyone there thought I was. Out here I'm just me.
+The truth? The dark frightens me. The dark beyond the fence, every night. You don't stop being scared. You just bar the door.
+Sometimes I think we were fools to leave. Then the sun comes up over the wheat and I know we weren't.
+You're the nearest thing to family we've got out here, {player}. I hope you know that.
+I'm getting slower. The field's the same size it always was, but somehow it's grown.
+When I was young I wanted adventures. Now I want the hens to lay and the roof to hold. Funny how that goes.
+If anything ever happens to us, would you look in on the hens? Daft thing to ask. I'm asking anyway.
+My hands shake a little in the mornings now. I hide it. I'm telling you because you won't fuss.
+I keep a little box of letters from home. Nobody writes any more, so I read the old ones.
+I hope I go first. Selfish, I know. I couldn't bear {place} without {partner} in it.
+{partner} still holds my hand on the walk back from the well. Every single time. Don't tell anyone.
+We wanted little ones, {partner} and I. It never happened. We poured it all into this place instead.
+Some winter nights I watch {partner} asleep by the fire and think: we did it. We actually did it.
+Leaving {village} was {partner}'s idea. I was frightened. I'd have followed {partner} off a cliff, though, and this was only a hill.
+I worry about my {spouse}'s cough. Every winter it comes back a little worse.
+When we're old and grey, {partner} and I will sit on that step and argue about which of us is greyer.
+
+## homesteader.past
+Our first winter here, the well froze solid. We melted snow in the stewpot for six weeks.
+The hard winter, we burned the spare chair. Then the other spare chair. We hadn't many chairs to begin with.
+I grew up in {village}. The bell every morning, the bell every evening, and gossip in between.
+The council in {village} spent a whole season arguing about one fence. That's when I knew I had to go.
+When we first came out here, there was nothing but grass and a stream. We slept under the cart for a month.
+The first carrot we ever pulled from this field was the size of my little finger. We cut it in half and ate it like a feast.
+The first year, wolves took two of our hens. I learned to sleep with one ear open.
+I carried the stones for the farmhouse up from the riverbed, two at a time. My shoulders still remember.
+Old Mistress Hobb back in {village} knew what you'd had for supper before you'd finished eating it. I do not miss Mistress Hobb.
+The baker in {village} used to slip me a sweet roll every market day. I still miss that roll.
+That first harvest, we had so little wheat we could count the sheaves on our fingers. We cried anyway. The good sort of crying.
+The hard winter was the year we learned what we were made of. Turnips, mostly. Turnips were all we had.
+Folk in {village} said we'd be back within the year. That was a long time ago now.
+The hard winter, wolves circled the house three nights running. Nobody slept. The hens didn't even lay.
+{partner} and I met at a harvest dance. One of us stepped on the other's feet all night. We still argue about which.
+We were married in {village} in the spring, and the very next week {partner} and I pushed one cart out here with everything we owned on it.
+My {spouse} built the hen house that first summer. It leaned. It still leans. The hens don't seem to mind.
+The hard winter, {partner} walked to {village} through snow up to the knees for a sack of flour. I've never been so frightened, nor so glad to see anyone come home.
+
+## homesteader.night
+Listen. That's an owl. That's the wind. And that... that's a zombie. Inside, now.
+I check the coop door every night before bed. Then I check it again. Then {partner} checks it.
+Nights out here are darker than any you'll have seen in {village}. No lanterns but ours for miles.
+Every night I bar the door and think: one more day done. One more day kept.
+Something hissed out by the haystack. I've decided it was a cat. I've decided very firmly.
+The stars are so thick out here you could spread them on bread.
+My {spouse} sleeps with the pitchfork by the bed. I've stopped asking why.
+At night the wheat whispers. It's the wind, probably. Probably.
+
+## homesteader.work
+A farm's like a clock with a hundred hands. Something always needs winding.
+Wheat, carrots, eggs, bread. Everything we eat, we grew it or coaxed it out of a hen.
+We split the work down the middle. The middle moves about, depending on who's tired.
+The fence takes more mending than anything. Wolves test it, the wind tests it, and Nettle tests it daily.
+Everything here does two jobs. The haystack's a windbreak, the well keeps the butter cool, and the cart's a table on market day.
+We take the cart to market twice a season. Wheat and eggs go out. Salt, nails and news come back.
+You don't own a farm. It owns you. It just lets you sleep in it.
+If the well, the field and the hens are all happy, it's a good day. Two out of three, I'll take.
+{partner} and I meet by the well at noon. Bread, cheese, and a report on everything that's gone wrong.
+My {spouse} and I have a rule: no quarrels till the work's done. So we quarrel at supper.
+
+## homesteader.work.farmer
+Ploughed the top field today. The ground's heavy this year. The plough came up with half the hill on it.
+Barnaby the scarecrow has my old hat now. He wears it better than I ever did.
+The wheat's coming in tall. Another fortnight and it'll be up to my belt.
+Sowing's a matter of faith. You put good seed into the dark and trust it.
+Crows took a whole row of seed. I've moved Barnaby closer. He looks a little more fearsome now. A little.
+Carrots want loose soil and patience. I can manage one of those.
+Harvest's the best week of the year and the worst week for my back.
+I walk the field end to end every evening. Looking for blight, mostly. Mostly just looking.
+My {spouse} says I'd sleep in the field if I could. I have. Twice. Both harvest moons.
+I saved the best seed from last year in a clay pot. It's the most precious thing we own.
+The soil here was all roots and stones when we came. Took three years to turn it sweet.
+Hoe in the morning, water at noon, weed at dusk. A field's never finished. Only resting.
+A good rain at the right time is worth more than a sack of emeralds to a farmer.
+{partner} brings me bread out in the field at noon. It's the bit of the day I look forward to most.
+I've moved the carrots to the lower field this year. Wheat wears the ground out if you let it.
+
+## homesteader.work.cook
+The oven's been going since dawn. Three loaves, a pie, and something I'm calling an experiment.
+Duchess has stopped laying in the coop and started laying in my bread basket. We're negotiating.
+I've put up forty jars of carrot preserve. Forty. We'll be orange by spring.
+Bread needs warmth, time and a firm hand. Same as most things worth having.
+The hearth fire hasn't gone out in a year. I bank it every night like I'm tucking in a sleeping child.
+I make bread from wheat {partner} grew, in an oven we built, on a farm that's ours. Every loaf tastes of that.
+Pudding's been laying like she's being paid for it. There are eggs in every bowl in the house.
+Keeping house out here means sweeping half the field out of the door every evening. It walks in on boots.
+Stew today. It's always stew on washing day, and nobody's allowed to argue on washing day.
+I'm salting down the last of the carrots for winter. A full larder's the best lock on any door.
+My {spouse} tracks mud straight across a floor I've just scrubbed, then compliments me on the floor.
+I keep the honey cakes in a tin with a stiff lid. It stops the mice, and it slows down {partner}.
+The hens know the sound of the scrap bucket from the far end of the field. They come running like it's market day.
+I found wild thyme growing by the stream. The soup's never been happier.
+Churned butter all morning. My arms are tired, but the bread won't be lonely tonight.
+
+## homesteader.adventure
+If you're crossing the hills, stop by a stream before dark. Water and a fire, and you'll live to tell it.
+Adventures? Mine is getting the cart to market without losing a wheel. Yours sound grander.
+Take some eggs for the road. Hard-boiled. They travel better than you'd think.
+When I was young I wanted to see the sea. I still might. Once the harvest's in. It's always once the harvest's in.
+Mind the pillagers on the high road. They've banners and crossbows and no manners at all.
+Wherever you end up, there's a bed at {place} if you need one.
+Bring me back a seed from somewhere strange. I'll find a corner of the field for it.
+I followed a stream once, just to see where it went. It went to a bog. Very educational.
+Don't go into the caves without a lantern and a way back. The dark down there doesn't give things back easily.
+{partner} says an adventure is just a bad day you tell well afterwards. Coming out to {place} was one of those.
+My {spouse} and I had our adventure. We walked out of {village} with a cart and never walked back.
+If you pass a peddler in a green hat, tell them {partner} is still waiting on the needles we paid for.
+
+## homesteader.joke
+Why did the scarecrow get a medal? He was outstanding in his field. Barnaby's still waiting on his.
+I tried telling the carrots a joke this morning. Nothing. Tough crowd, root vegetables.
+Duchess crossed the road once. Never mind why. She came back and told the other hens it wasn't worth it.
+What did the wheat say to the farmer? "Stop staring. I'm growing as fast as I can."
+Why do hens make poor secret-keepers? They can't hold anything in. They just lay it all out.
+What's the hardest thing about farming? The ground. Ha! I've been waiting all week to say that.
+Our well is so deep the bucket comes up with yesterday's water in it.
+The fox asked if he could join the hens for supper. "As a guest," he said. The hens still said no. Clever hens.
+How many farmers does it take to mend a fence? Two. One to mend it, and one to say it was fine the way it was.
+{partner} lost a needle in the haystack once. Looked all afternoon. Found three other needles, a spoon and Nettle.
+My {spouse} says I'm the finest singer in the valley. I'm also the only singer in the valley.
+
+## homesteader.news
+News? Out here? A hen laid a double yolk. That's been the biggest thing all month.
+The last peddler through here said {village} has a new baker. I'm too far off to try the bread, so it hardly matters.
+I heard at market that pillagers were seen on the north road. Mind how you go.
+No news is good news, my mother used to say. We get a great deal of good news out here.
+You tell me the news, {player}. You're the one who's been somewhere.
+Market day's coming. I'll hear a month's gossip in one afternoon and spend a week sorting out what's true.
+A wandering tinker said there'd been a wedding in {village}. Couldn't remember whose. Told us all about the cake, though.
+The fox is back. That's the news. That's all the news there is.
+My {spouse} came home from market with three stories, two rumours and no salt. We had to go back for the salt.
+{partner} swears the peddler said the council in {village} has banned whistling on {weekday}s. I'll believe it when I hear the silence.
+
+## homesteader.heart
+Anyone special? There's only ever been one. Still is.
+Ha! You've met the other half of this farm. That's my answer.
+Special? I married the most stubborn soul in the valley. I'd do it again tomorrow.
+Love isn't flowers out here. It's someone carrying the water when your back's bad.
+You'll find my answer in the field or in the kitchen, depending on the hour.
+Who do you think? The one who's been shouting my name across the yard all morning.
+{partner}. It's always been {partner}. Who else would put up with me?
+My {spouse}, of course. Even when we're quarrelling. Especially then, oddly.
+I still go pink when {partner} looks at me a certain way. At my age! Don't laugh.
+I knew {partner} was the one when we split our last heel of bread and neither of us would take the bigger half.
+My {spouse} is the reason I get up before the sun. Well. That and the hens.
+
+## homesteader.player.hurt
+You're bleeding! Sit down on the step. I've clean cloth and a strong opinion about this.
+What happened to you? Wolves? Come here, let me see.
+You look like you lost a fight with a hedge. Or with something worse than a hedge.
+There's honey and yarrow in the kitchen. Good for cuts. Come on, in you go.
+Hold still. I've patched up {partner} more times than I can count. You're in safe hands.
+
+## homesteader.player.hungry
+You look half-starved. There's bread in the oven and nobody's allowed to argue with me about it.
+Hungry? On a farm? Not while I'm standing. Sit.
+Your stomach's louder than our hens. Let's put something in it.
+You've got that hollow look. There's stew on the hearth and an egg with your name on it.
+
+## homesteader.player.dark
+It's black as a cellar out there. Stay by the lanterns.
+Out here the dark's thicker than in any village. Keep near the house.
+Don't wander off the path at night. The field looks different in the dark, and so does whatever's in it.
+
+## homesteader.player.wet
+You're dripping like a washing line! Stand by the hearth.
+Soaked through! Give me that cloak, I'll hang it by the fire.
+Wet as a hen in a ditch. Come in before you catch your death.
+
+## homesteader.held.sword
+Put that {item} away, you'll frighten the hens off laying.
+That {item} looks sharp. Use it on the wolves, mind, not on my fence.
+Out here, a friend with that {item} is a welcome sight after dark.
+I've never held anything sharper than a scythe. That {item} looks a good deal less friendly.
+
+## homesteader.held.flower
+Oh, that {item} is lovely. I'll put it in a cup on the windowsill, if you're giving it away.
+Where did you find that {item}? The meadow past the stream? I always mean to go and look.
+That {item} would brighten the kitchen. Nothing grows that pretty out here except the weeds.
+My {spouse} picked me flowers the day we arrived here. That {item} puts me in mind of them.
+
+## homesteader.held.food
+That {item} smells good. Not as good as fresh bread, but nothing does.
+Eating on the walk? Sit down and eat that {item} properly, you'll give yourself hiccups.
+Is that {item} from market? We grow our own, but I'll not turn up my nose at a bite.
+That {item}'s all very well, but wait till you taste what comes out of our oven.
+
+## homesteader.held.emerald
+Put that {item} away. There's nothing out here to spend it on but eggs, and eggs are free to friends.
+That {item} would buy a lot of nails at market. We always need nails.
+Careful flashing that {item} about out here. Pillagers can smell it, I swear.
+We once traded a whole cart of wheat for less than that {item}. Shiny, isn't it?
