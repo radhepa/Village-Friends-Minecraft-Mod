@@ -14,6 +14,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.Containers;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
@@ -75,7 +76,9 @@ public final class WorkstationBlockEntity extends BlockEntity {
             if (++e.progress[slot] < e.total[slot]) continue;
             var input = new SingleRecipeInput(stack);
             var result = level.recipeAccess().getRecipeFor(RecipeType.CAMPFIRE_COOKING, input, level).map(r -> r.value().assemble(input)).orElse(stack);
-            Containers.dropItemStack(level, pos.getX(), pos.getY() + .75, pos.getZ(), result);
+            // Out on top of the stove with a little hop. (Containers.dropItemStack floors y, so the food started inside the
+            // stove and vanilla shoved it out of a random side; it could skid two or three blocks across the floor.)
+            level.addFreshEntity(new ItemEntity(level, pos.getX() + .5, pos.getY() + 1, pos.getZ() + .5, result, 0, .15, 0));
             e.items.set(slot, ItemStack.EMPTY); e.progress[slot] = 0;
             level.playSound(null, pos, SoundEvents.SMOKER_SMOKE, SoundSource.BLOCKS, .8F, 1.2F);
             changed = true;

@@ -181,12 +181,16 @@ public final class Mounts {
         if (horse.level() != v.level() || !horse.isAlive() || horse.isRemoved() || horse.isBaby() || !horse.isTamed() || horse.isVehicle()) return false;
         if (v.isSleeping()) v.stopSleeping();
         if (v.isPassenger()) { if (v.getVehicle() instanceof AbstractHorse old) reach(old, false); v.stopRiding(); }
+        // Whatever they were walking to on foot is not where the horse should go. Their own path is dropped now, while
+        // getNavigation() is still theirs: once seated it returns the horse's, but vanilla keeps ticking the rider's own
+        // navigation, which steers through the horse's move control and would walk the horse back along the old path.
+        v.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
+        v.getNavigation().stop();
         if (!v.startRiding(horse, true, true)) return false;
         reach(horse, true);
         target(v).setAttached(StableData.MOUNT_ORDER, order);
         fetching.remove(v.getUUID()); rideHomeUntil.remove(v.getUUID());
-        // Whatever they were walking to on foot is not where the horse should go.
-        v.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
+        // And the horse's own wandering path (getNavigation() is the horse's now).
         v.getNavigation().stop();
         return true;
     }

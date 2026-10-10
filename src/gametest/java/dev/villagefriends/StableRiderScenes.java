@@ -162,6 +162,9 @@ final class StableRiderScenes {
         c.waitTicks(10);
         w.getServer().runOnServer(s -> {
             var k = resident(w, kit, guard);
+            // Seated while still walking somewhere on foot (a caller seats whoever is about): that walk must not steer the horse.
+            Vec3 errand = at(kit.origin.offset(-8, 0, 2));
+            kit.check(k.getNavigation().moveTo(errand.x, errand.y, errand.z, .6), "the knight sets off on foot first");
             kit.check(PackAnimals.mountGuard(k, horse(w, kit, mount)), "PackAnimals.mountGuard seats the knight");
             kit.check(Mounts.caravan(k) && Riders.order(k).equals(Mounts.CARAVAN), "the knight rides with the caravan order");
             k.getNavigation().moveTo(goal.x, goal.y, goal.z, 1.2);
