@@ -30,5 +30,21 @@ public final class MountedPace {
     /** Patrol gap multiplier: wider on horseback. */
     public static double spacing(boolean mounted) { return mounted ? MOUNTED_SPACING : 1.0; }
 
+    /** An errand's time allowance: a head start plus this many ticks per block (a walker covers one in about 7 to 10). */
+    public static final long ERRAND_START = 200;
+    public static final double TICKS_PER_BLOCK = 12;
+    /** Farther than any village reaches: a longer allowance would only keep a resident stuck on a hopeless errand. */
+    public static final double ERRAND_BLOCKS = 400;
+
+    /**
+     * Ticks a resident gets to walk or ride {@code blocks} (straight-line) to a horse or a stall before giving up:
+     * never less than {@code least}, and more for a far one, so a stable on the village's outer streets is still in
+     * reach. A distance that isn't a number gets {@code least}.
+     */
+    public static long errandTicks(double blocks, long least) {
+        if (!(blocks > 0)) return least;
+        return Math.max(least, ERRAND_START + Math.round(Math.min(blocks, ERRAND_BLOCKS) * TICKS_PER_BLOCK));
+    }
+
     private MountedPace() {}
 }

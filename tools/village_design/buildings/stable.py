@@ -2,7 +2,9 @@
 
 Stablehand's building (STABLEHAND in the mod). It favours the outer streets (``plains/lots_outer``) like the
 paddock. Each stall has a Horse Stall block against the back wall and its own Hay Trough; the Saddle Rack in the
-tack corner is the stablehand's workstation. The three horses carry the ``villagefriends.stable_horse`` entity tag:
+tack corner is the stablehand's workstation. The yard's street side has a gap, not a gate: villagers can't open
+fence gates, so a gate would shut the stablehand in and keep the knights from the horses (the stalls already keep
+the horses within six blocks). The three horses carry the ``villagefriends.stable_horse`` entity tag:
 when they first load, each settles into a free stall nearby, takes a breed the village keeps and becomes the
 village's horse (their coats and stats are rolled then, so the template doesn't set them). No beds: the stable is
 a workplace, so it stays out of housing.
@@ -30,7 +32,6 @@ class Materials:
     roof: Roof
     gable: str                # the roof's end triangles
     fence: str
-    gate: str
     floor: tuple              # the stall row's floor, picked at random per block
     yard: tuple               # the yard's ground, picked at random per block
     plant: str = ''           # an occasional plant in the yard ('' for none)
@@ -39,12 +40,12 @@ class Materials:
 
 
 PLAINS = Materials(post='stripped_spruce_log', wall='spruce_planks', roof=ROOFS['spruce'], gable='spruce_planks', fence='spruce_fence',
-                   gate='spruce_fence_gate', floor=('coarse_dirt', 'coarse_dirt', 'rooted_dirt', 'packed_mud'), yard=('grass_block',),
+                   floor=('coarse_dirt', 'coarse_dirt', 'rooted_dirt', 'packed_mud'), yard=('grass_block',),
                    plant='short_grass')
 
 
 def build(name, m, seed):
-    """Three stalls with troughs, a tack corner with the saddle rack, hay and water, and a fenced yard in front."""
+    """Three stalls with troughs, a tack corner with the saddle rack and hay, and a fenced yard with water in front."""
     rng = random.Random(seed)
     b = Build(name, (15, 10 if m.pitch == 1 else 14, 14))
     post = {'axis': 'y'} if m.log_post else {}
@@ -76,21 +77,21 @@ def build(name, m, seed):
         b.custom(x, 1, BACK - 1, 'horse_stall', facing='north')
         b.set(x + 1, 1, BACK - 1, 'villagefriends:hay_trough', facing='north', hay=4)
         parts.lantern(b, x, rafter, BACK - 2, chain=rafter - 3)
-    # The tack corner: the stablehand's Saddle Rack, hay bales, a barrel and water.
+    # The tack corner: the stablehand's Saddle Rack, hay bales and a barrel. The corner is one block wide between the
+    # last divider and the side wall, so its front cells (z 7 and 8) stay clear: they are the stablehand's only way
+    # out, under the front beam (anything there they would have to climb, and the beam leaves no headroom to).
     b.custom(13, 1, 9, 'saddle_rack', facing='west')
     b.set(13, 1, BACK - 1, 'hay_block', axis='y')
     b.set(13, 2, BACK - 1, 'hay_block', axis='x')
     b.set(13, 1, BACK - 2, 'barrel', facing='up', open=False)
-    b.set(13, 1, FRONT + 1, 'water_cauldron', level=3)
     b.resident(13, 1, 8, job='stablehand')
-    # The yard in front: open ground behind a fence with a gate on the street side, water and a hay bale for the horses.
+    # The yard in front: open ground behind a fence with a gap on the street side (see the module note), water and
+    # hay for the horses.
     for x in range(0, 15):
         for z in range(1, FRONT):
             edge = x in (0, 14) or z == 1
             if edge:
-                if x == 7 and z == 1:
-                    b.set(x, 1, z, m.gate, facing='north', open=False, in_wall=False, powered=False)
-                else:
+                if not (x == 7 and z == 1):
                     b.set(x, 1, z, m.fence)
             else:
                 b.set(x, 0, z, rng.choice(m.yard))
@@ -98,6 +99,7 @@ def build(name, m, seed):
                     b.set(x, 1, z, m.plant)
     b.set(2, 1, 2, 'water_cauldron', level=3)
     b.set(12, 1, 2, 'hay_block', axis='z')
+    b.set(13, 1, 2, 'water_cauldron', level=3)
     for x in STALL_X:
         b.animal(x, 1, BACK - 3, 'horse', **HORSE)
     b.set(7, 0, 0, 'dirt_path')

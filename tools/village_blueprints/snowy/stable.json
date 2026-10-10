@@ -70,6 +70,12 @@
    }
   },
   "M": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "N": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -77,12 +83,6 @@
     "south": "false",
     "waterlogged": "false",
     "west": "true"
-   }
-  },
-  "N": {
-   "id": "minecraft:spruce_log",
-   "properties": {
-    "axis": "x"
    }
   },
   "O": {
@@ -160,12 +160,32 @@
    "properties": {
     "east": "false",
     "north": "false",
-    "south": "true",
+    "south": "false",
     "waterlogged": "false",
     "west": "true"
    }
   },
   "a": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "b": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "c": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -175,7 +195,7 @@
     "west": "false"
    }
   },
-  "b": {
+  "d": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -185,16 +205,7 @@
     "west": "true"
    }
   },
-  "c": {
-   "id": "minecraft:spruce_fence_gate",
-   "properties": {
-    "facing": "north",
-    "in_wall": "false",
-    "open": "false",
-    "powered": "false"
-   }
-  },
-  "d": {
+  "e": {
    "id": "villagefriends:saddle_rack",
    "properties": {
     "facing": "west"
@@ -225,15 +236,15 @@
    "y": 1,
    "rows": [
     ".......Y.......",
-    "aMMMMMMcMMMMbMZ",
-    "J.T.........X.J",
+    "cNNNNNZ.bNNNdNa",
+    "J.T.........XTJ",
     "J.............J",
     "J.............J",
     "J.............J",
     "I...I...I...I.I",
-    "A...J...J...JTA",
     "A...J...J...J.A",
-    "A...J...J...JdA",
+    "A...J...J...J.A",
+    "A...J...J...JeA",
     "A...J...J...SUA",
     "A.QPJ.QPJ.QPSWA",
     "IAAAIAAAIAAAIAI",
@@ -268,7 +279,7 @@
     "...............",
     "...............",
     "...............",
-    "INNNINNNINNNINI",
+    "IMMMIMMMIMMMIMI",
     "A.............A",
     "A.............A",
     "A.............A",
@@ -558,6 +569,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/snowy/stable.py",
-  "checksum": "ab78c398bd6e35a3"
+  "checksum": "0ca75ec003accb99"
  }
 }

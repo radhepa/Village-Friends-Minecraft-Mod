@@ -4,7 +4,7 @@ from ..stable import Materials, build
 from .palette import ROOFS
 
 SAVANNA = Materials(post='stripped_acacia_log', wall='acacia_planks', roof=ROOFS['acacia'], gable='orange_terracotta', fence='acacia_fence',
-                    gate='acacia_fence_gate', floor=('coarse_dirt', 'packed_mud', 'coarse_dirt'), yard=('coarse_dirt', 'grass_block', 'grass_block'),
+                    floor=('coarse_dirt', 'packed_mud', 'coarse_dirt'), yard=('coarse_dirt', 'grass_block', 'grass_block'),
                     plant='short_grass')
 
 

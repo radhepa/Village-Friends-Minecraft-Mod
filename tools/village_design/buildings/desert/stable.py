@@ -4,7 +4,7 @@ from ..stable import Materials, build
 from .palette import ROOFS
 
 DESERT = Materials(post='cut_sandstone', wall='smooth_sandstone', roof=ROOFS['acacia'], gable='smooth_sandstone', fence='acacia_fence',
-                   gate='acacia_fence_gate', floor=('sand', 'coarse_dirt', 'sand'), yard=('sand', 'sand', 'coarse_dirt'),
+                   floor=('sand', 'coarse_dirt', 'sand'), yard=('sand', 'sand', 'coarse_dirt'),
                    plant='dead_bush', log_post=False)
 
 

@@ -40,7 +40,8 @@ import org.jspecify.annotations.Nullable;
  * Stable horses that belong to a resident or the village, and the players around them ({@link TheftRule} decides):
  * riding or leading one far from its stall is Stole a Horse, bringing a lost or stolen one home is Returned a
  * Horse, and a loose one that wandered (or that a knight left after the watch) drifts back beside its stall when
- * nobody is near enough to see it move.
+ * nobody is near enough to see it move. Who took a horse out is saved on it ({@link StallHome#takenBy}), so neither
+ * a restart nor a long wait turns its taker into its finder.
  *
  * <p>Cheap by construction: every 40 ticks it looks only at the horses players ride or lead; every 200 ticks it
  * lists the loaded stalled horses once per level, for what needs a horse with no player around (lost, home,
@@ -52,14 +53,8 @@ public final class HorseDeeds {
     private static final Map<UUID, Long> attended = new HashMap<>();
     /** Horses a player rode or led at the last check (the sweep leaves those to the player check). */
     private static Set<UUID> carried = new HashSet<>();
-    /**
-     * Last game time a player rode or led each stalled horse, forgotten after {@link TheftRule#ALONE} ticks: a horse
-     * a player takes up far from home when nobody has had it that long was found, not stolen. Kept when the horse
-     * unloads, so logging out and back in on it is no way round theft either.
-     */
-    private static final Map<UUID, Long> held = new HashMap<>();
 
-    public static void clear() { attended.clear(); carried = new HashSet<>(); held.clear(); }
+    public static void clear() { attended.clear(); carried = new HashSet<>(); }
     public static void unload(Entity e) { if (e instanceof AbstractHorse) { attended.remove(e.getUUID()); carried.remove(e.getUUID()); } }
 
     static void tick(MinecraftServer server) {
@@ -72,8 +67,6 @@ public final class HorseDeeds {
 
     private static void players(MinecraftServer server) {
         var now = new HashSet<UUID>();
-        long clock = server.overworld().getGameTime();
-        held.values().removeIf(t -> clock - t > TheftRule.ALONE);
         for (var p : server.getPlayerList().getPlayers()) {
             if (p.isSpectator()) continue;
             for (var horse : with(p)) {
@@ -82,12 +75,16 @@ public final class HorseDeeds {
                 long time = horse.level().getGameTime();
                 now.add(horse.getUUID());
                 attended.put(horse.getUUID(), time);
-                Long last = held.put(horse.getUUID(), time);
                 // Creative players build and test; Deeds ignores them too.
                 if (p.isCreative()) continue;
-                boolean found = TheftRule.found(last == null ? -1 : last, time);
-                var seen = Seen.withPlayer(distance(horse, home), found, p.getUUID().toString().equals(home.stolenBy()));
-                apply(horse, home, TheftRule.assess(seen, !home.stolenBy().isEmpty(), home.awaySince(), home.returnedAt(), time), p, time);
+                String me = p.getUUID().toString();
+                double distance = distance(horse, home);
+                if (TheftRule.takes(distance, home.flagged()) && !me.equals(home.takenBy())) save(horse, home = home.withTakenBy(me));
+                var seen = Seen.withPlayer(distance, me.equals(home.stolenBy()) || me.equals(home.takenBy()));
+                var verdict = TheftRule.assess(seen, !home.stolenBy().isEmpty(), home.awaySince(), !home.takenBy().isEmpty(), home.returnedAt(), time);
+                // Just taken up a lost horse: tell the finder whose it is, so they know where to take it.
+                if (verdict == Verdict.NONE && home.awaySince() > 0 && !seen.byTaker() && !carried.contains(horse.getUUID())) found(p, horse, home);
+                apply(horse, home, verdict, p, time);
             }
         }
         carried = now;
@@ -115,7 +112,7 @@ public final class HorseDeeds {
                 if (!loose) attended.put(horse.getUUID(), time);
                 long alone = time - attended.computeIfAbsent(horse.getUUID(), k -> time);
                 var seen = Seen.withoutPlayer(distance(horse, home), loose, alone, nearestPlayer(level, horse));
-                apply(horse, home, TheftRule.assess(seen, !home.stolenBy().isEmpty(), home.awaySince(), home.returnedAt(), time), null, time);
+                apply(horse, home, TheftRule.assess(seen, !home.stolenBy().isEmpty(), home.awaySince(), !home.takenBy().isEmpty(), home.returnedAt(), time), null, time);
             }
         }
     }
@@ -130,25 +127,19 @@ public final class HorseDeeds {
     private static void apply(AbstractHorse horse, StallHome home, Verdict verdict, @Nullable ServerPlayer p, long time) {
         switch (verdict) {
             case NONE -> {}
-            case LOST -> {
-                save(horse, home.withAwaySince(time));
-                // Found far from home: tell the finder whose it is, so they know where to take it.
-                String village = villageName(horse, home);
-                if (p != null) p.sendSystemMessage(Component.literal("This horse is a long way from its stable" + (village == null ? "." : " in " + village + ".")
-                        + " Bring it home and they'll be glad of it."), false);
-            }
-            case HOME -> save(horse, home.withStolenBy("").withAwaySince(0));
+            case LOST -> save(horse, home.withAwaySince(time));
+            case HOME -> save(horse, home.home());
             case DRIFT -> drift(horse, home);
             case STOLEN -> {
                 if (p == null) return;
-                save(horse, known(horse, home).withStolenBy(p.getUUID().toString()));
+                save(horse, known(horse, home).withStolenBy(p.getUUID().toString()).withTakenBy(p.getUUID().toString()));
                 Deeds.record(p, DeedKind.STOLE_HORSE, place(horse, home), "horse:" + horse.getUUID(), name(horse), involved(home), 1, false, horse);
                 String village = villageName(horse, home);
                 p.sendSystemMessage(Component.literal("This horse belongs to " + (village == null ? "a village stable" : village) + ". Taking it this far from its stable is theft."), false);
             }
             case RETURNED -> {
-                if (p == null) { save(horse, home.withStolenBy("").withAwaySince(0)); return; }
-                save(horse, known(horse, home).withStolenBy("").withAwaySince(0).withReturnedAt(time));
+                if (p == null) { save(horse, home.home()); return; }
+                save(horse, known(horse, home).home().withReturnedAt(time));
                 Deeds.record(p, DeedKind.RETURNED_HORSE, place(horse, home), "horse:" + horse.getUUID(), name(horse), involved(home), 1, false, horse);
                 String village = villageName(horse, home);
                 String who = horse.hasCustomName() ? name(horse) : "their " + name(horse).toLowerCase(java.util.Locale.ROOT);
@@ -157,6 +148,11 @@ public final class HorseDeeds {
         }
     }
     private static void save(AbstractHorse horse, StallHome home) { target(horse).setAttached(StableData.STALL, home); }
+    private static void found(ServerPlayer p, AbstractHorse horse, StallHome home) {
+        String village = villageName(horse, home);
+        p.sendSystemMessage(Component.literal("This horse is a long way from its stable" + (village == null ? "." : " in " + village + ".")
+                + " Bring it home and they'll be glad of it."), false);
+    }
     /** Fills in the stall's village id the first time it is known (stables from templates may not know it yet). */
     private static StallHome known(AbstractHorse horse, StallHome home) {
         if (!home.village().isEmpty()) return home;
@@ -166,7 +162,7 @@ public final class HorseDeeds {
 
     /** Moves a wandering horse back to a free standing spot beside its stall, never into a wall or water. */
     private static void drift(AbstractHorse horse, StallHome home) {
-        if (!(horse.level() instanceof ServerLevel level) || !level.isLoaded(home.stall())) return;
+        if (!(horse.level() instanceof ServerLevel level) || !home.dimension().equals(level.dimension().identifier().toString()) || !level.isLoaded(home.stall())) return;
         var spot = standing(level, horse, home.stall());
         if (spot == null) return;
         horse.teleportTo(spot.x, spot.y, spot.z);

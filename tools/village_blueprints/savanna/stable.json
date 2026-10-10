@@ -63,6 +63,12 @@
    }
   },
   "L": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "M": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -70,12 +76,6 @@
     "south": "false",
     "waterlogged": "false",
     "west": "true"
-   }
-  },
-  "M": {
-   "id": "minecraft:stripped_acacia_log",
-   "properties": {
-    "axis": "x"
    }
   },
   "N": {
@@ -132,12 +132,32 @@
    "properties": {
     "east": "false",
     "north": "false",
-    "south": "true",
+    "south": "false",
     "waterlogged": "false",
     "west": "true"
    }
   },
   "W": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "X": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "Y": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -147,7 +167,7 @@
     "west": "false"
    }
   },
-  "X": {
+  "Z": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -157,47 +177,38 @@
     "west": "true"
    }
   },
-  "Y": {
-   "id": "minecraft:acacia_fence_gate",
-   "properties": {
-    "facing": "north",
-    "in_wall": "false",
-    "open": "false",
-    "powered": "false"
-   }
-  },
-  "Z": {
+  "a": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up",
     "open": "false"
    }
   },
-  "a": {
+  "b": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "x"
    }
   },
-  "b": {
+  "c": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "y"
    }
   },
-  "c": {
+  "d": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "z"
    }
   },
-  "d": {
+  "e": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "e": {
+  "f": {
    "id": "villagefriends:saddle_rack",
    "properties": {
     "facing": "west"
@@ -227,18 +238,18 @@
   {
    "y": 1,
    "rows": [
-    ".......d.......",
-    "WLLLLLLYLLLLXLV",
-    "IOU.........cOI",
+    ".......e.......",
+    "YMMMMMV.XMMMZMW",
+    "IOU.........dUI",
     "I.......O...OOI",
     "I.............I",
     "I....OOO.....OI",
     "H...H...H...H.H",
-    "B...I...I...IUB",
     "B...I...I...I.B",
-    "B...I...I...IeB",
-    "B...I...I...SZB",
-    "B.RQI.RQI.RQSbB",
+    "B...I...I...I.B",
+    "B...I...I...IfB",
+    "B...I...I...SaB",
+    "B.RQI.RQI.RQScB",
     "HBBBHBBBHBBBHBH",
     "..............."
    ]
@@ -257,7 +268,7 @@
     "B.............B",
     "B.............B",
     "B.............B",
-    "B............aB",
+    "B............bB",
     "HBBBHBBBHBBBHBH",
     "..............."
    ]
@@ -271,7 +282,7 @@
     "...............",
     "...............",
     "...............",
-    "HMMMHMMMHMMMHMH",
+    "HLLLHLLLHLLLHLH",
     "B.............B",
     "B.............B",
     "B.............B",
@@ -485,6 +496,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/savanna/stable.py",
-  "checksum": "24cbfc1f3ca032c6"
+  "checksum": "6798d2210e37d876"
  }
 }

@@ -57,109 +57,131 @@ class StableRidersTest {
         assertTrue(2.5 * MountedPace.spacing(true) > 1.4 * 2, "two horses side by side never overlap at the follow distance");
     }
 
+    @Test void aFarErrandGetsMoreTimeThanANearOne() {
+        assertEquals(600, MountedPace.errandTicks(10, 600), "a short walk keeps the floor");
+        assertEquals(600, MountedPace.errandTicks(0, 600));
+        assertEquals(600, MountedPace.errandTicks(Double.NaN, 600), "no distance known: the floor");
+        assertEquals(1200, MountedPace.errandTicks(40, 1200));
+        long previous = 0;
+        for (double d = 0; d <= 600; d += 5) {
+            long t = MountedPace.errandTicks(d, 600);
+            assertTrue(t >= previous && t >= 600, "never shrinks with distance: " + d);
+            previous = t;
+        }
+        // A stable on the outer streets (80 to 160 blocks from the bell): a walker covers a block in 7 to 10 ticks
+        // on a straight road, so the allowance leaves room for a winding one.
+        for (double d : new double[]{80, 110, 160}) assertTrue(MountedPace.errandTicks(d, 600) >= d * 10 * 1.15, "time to walk " + d + " blocks");
+        assertEquals(MountedPace.errandTicks(MountedPace.ERRAND_BLOCKS, 0), MountedPace.errandTicks(Double.POSITIVE_INFINITY, 0), "capped, never endless");
+    }
+
     // -- TheftRule -------------------------------------------------------------------------------------
 
-    private static Verdict ridden(double distance, boolean found, boolean byThief, String stolenBy, long awaySince, long returnedAt, long now) {
-        return TheftRule.assess(Seen.withPlayer(distance, found, byThief), !stolenBy.isEmpty(), awaySince, returnedAt, now);
+    /** A player rides or leads it. {@code byTaker}: they stole it or took it out; {@code takenBy}: some player took it. */
+    private static Verdict ridden(double distance, boolean byTaker, String stolenBy, long awaySince, String takenBy, long returnedAt, long now) {
+        return TheftRule.assess(Seen.withPlayer(distance, byTaker), !stolenBy.isEmpty(), awaySince, !takenBy.isEmpty(), returnedAt, now);
     }
-    private static Verdict alone(double distance, boolean loose, long alone, double nearestPlayer, String stolenBy, long awaySince, long now) {
-        return TheftRule.assess(Seen.withoutPlayer(distance, loose, alone, nearestPlayer), !stolenBy.isEmpty(), awaySince, 0, now);
+    private static Verdict alone(double distance, boolean loose, long alone, double nearestPlayer, String stolenBy, long awaySince, String takenBy, long now) {
+        return TheftRule.assess(Seen.withoutPlayer(distance, loose, alone, nearestPlayer), !stolenBy.isEmpty(), awaySince, !takenBy.isEmpty(), 0, now);
     }
 
     @Test void aHorseIsStolenOnlyWhenAPlayerTakesItBeyondFortyEightBlocks() {
-        for (double d : new double[]{0, 5, 8, 20, 47.9, 48}) assertEquals(Verdict.NONE, ridden(d, false, false, "", 0, 0, 1000), "still near home at " + d);
-        assertEquals(Verdict.STOLEN, ridden(48.1, false, false, "", 0, 0, 1000));
-        assertEquals(Verdict.STOLEN, ridden(500, false, false, "", 0, 0, 1000));
-        assertEquals(Verdict.STOLEN, ridden(INF, false, false, "", 0, 0, 1000), "taken to another dimension");
-        assertEquals(Verdict.NONE, ridden(60, false, true, "thief", 0, 0, 1000), "already flagged: one deed per theft");
+        for (double d : new double[]{0, 5, 8, 20, 47.9, 48}) assertEquals(Verdict.NONE, ridden(d, false, "", 0, "", 0, 1000), "still near home at " + d);
+        assertEquals(Verdict.STOLEN, ridden(48.1, false, "", 0, "", 0, 1000));
+        assertEquals(Verdict.STOLEN, ridden(500, true, "", 0, "me", 0, 1000));
+        assertEquals(Verdict.STOLEN, ridden(INF, false, "", 0, "", 0, 1000), "taken to another dimension");
+        assertEquals(Verdict.NONE, ridden(60, true, "thief", 0, "thief", 0, 1000), "already flagged: one deed per theft");
         // Without a player it is never theft, however far it goes (a knight's patrol, a horse that bolted).
-        for (double d : new double[]{49, 100, INF}) assertNotEquals(Verdict.STOLEN, alone(d, false, 0, INF, "", 0, 1000));
+        for (double d : new double[]{49, 100, INF}) assertNotEquals(Verdict.STOLEN, alone(d, false, 0, INF, "", 0, "", 1000));
     }
 
-    @Test void aHorseFoundFarFromHomeIsLostNotStolen() {
-        assertEquals(Verdict.LOST, ridden(60, true, false, "", 0, 0, 1000), "picked up out there: the finder is not a thief");
-        assertEquals(Verdict.NONE, ridden(60, true, false, "", 500, 0, 1000), "already known to be lost");
-        assertEquals(Verdict.NONE, ridden(30, true, false, "", 0, 0, 1000), "picked up near home is just a ride");
+    @Test void aPlayerTakesAHorseByRidingOrLeadingItOutOfItsStableYard() {
+        assertFalse(TheftRule.takes(8, false), "within 8 blocks it is still at home");
+        assertTrue(TheftRule.takes(8.1, false));
+        assertTrue(TheftRule.takes(INF, false));
+        assertFalse(TheftRule.takes(30, true), "who took a stolen or lost horse stays as it was");
     }
 
-    @Test void onlyAHorseNoPlayerHasHadForAMinuteIsFound() {
-        long now = 90_000;
-        assertTrue(TheftRule.found(-1, now), "no player has had it since the server started (a knight left it out)");
-        assertTrue(TheftRule.found(now - TheftRule.ALONE - 1, now), "nobody has had it for over a minute");
-        assertFalse(TheftRule.found(now - TheftRule.ALONE, now), "exactly a minute is not over a minute");
-        assertFalse(TheftRule.found(now - 40, now), "let go a moment ago");
-        // Riding a village horse to 47 blocks, hopping off and straight back on, then riding on is still theft.
-        for (long off : new long[]{0, 40, 80, 600, TheftRule.ALONE}) {
-            boolean found = TheftRule.found(now - off, now);
-            assertEquals(Verdict.STOLEN, ridden(49, found, false, "", 0, 0, now), "back in the saddle after " + off + " ticks");
-        }
+    @Test void thereIsNoFindingAHorseNobodyLostYet() {
+        // Tempted out past 48 blocks with a golden carrot (no ride, no lead, so nobody took it), then mounted: theft.
+        assertEquals(Verdict.STOLEN, ridden(55, false, "", 0, "", 0, 9000), "coaxed out, then ridden off");
+        // Ridden to 47, hopped off, coaxed past 48 and left for a while: the taker picking it up again is still theft.
+        assertEquals(Verdict.STOLEN, ridden(55, true, "", 0, "me", 0, 9000), "before the sweep calls it lost");
+        assertEquals(Verdict.STOLEN, ridden(55, true, "", 4000, "me", 0, 9000), "even after the sweep called it lost");
+        assertEquals(Verdict.NONE, ridden(55, false, "", 4000, "me", 0, 9000), "but a finder may take up a lost horse");
     }
 
-    @Test void aHorseLeftAloneFarAwayIsLostAfterAMinute() {
-        assertEquals(Verdict.NONE, alone(60, true, TheftRule.ALONE, INF, "", 0, 5000), "exactly a minute is not over a minute");
-        assertEquals(Verdict.LOST, alone(60, true, TheftRule.ALONE + 1, INF, "", 0, 5000));
-        assertEquals(Verdict.LOST, alone(60, true, TheftRule.ALONE + 1, 5, "", 0, 5000), "a player standing nearby doesn't change that");
-        assertEquals(Verdict.LOST, alone(60, true, 5000, INF, "thief", 0, 6000), "a stolen horse left far away is lost too");
-        assertEquals(Verdict.NONE, alone(60, true, 5000, INF, "", 3000, 9000), "lost once, not again");
-        assertEquals(Verdict.DRIFT, alone(30, true, 5000, 40, "", 0, 9000), "within 48 blocks it isn't lost: it drifts home when nobody is near");
-        assertEquals(Verdict.NONE, alone(30, true, 5000, 10, "", 0, 9000), "and waits while a player is close");
+    @Test void onlyAHorseAPlayerTookAndLeftFarAwayIsLost() {
+        assertEquals(Verdict.NONE, alone(60, true, TheftRule.ALONE, 40, "", 0, "me", 5000), "exactly a minute is not over a minute");
+        assertEquals(Verdict.LOST, alone(60, true, TheftRule.ALONE + 1, INF, "", 0, "me", 5000));
+        assertEquals(Verdict.LOST, alone(60, true, TheftRule.ALONE + 1, 5, "", 0, "me", 5000), "the taker standing by doesn't change that");
+        assertEquals(Verdict.LOST, alone(60, true, 5000, INF, "thief", 0, "thief", 6000), "a stolen horse left far away is lost too");
+        assertEquals(Verdict.NONE, alone(60, true, 5000, INF, "", 3000, "me", 9000), "lost once, not again");
+        assertEquals(Verdict.DRIFT, alone(60, true, 5000, 40, "", 0, "", 9000), "nobody took it (a knight left it): it drifts home from any distance");
+        assertEquals(Verdict.DRIFT, alone(300, true, 5000, INF, "", 0, "", 9000));
+        assertEquals(Verdict.NONE, alone(60, true, 5000, 10, "", 0, "", 9000), "and waits while a player is close");
+        assertEquals(Verdict.NONE, alone(INF, true, 5000, INF, "", 0, "", 9000), "never across dimensions");
+        assertEquals(Verdict.DRIFT, alone(30, true, 5000, 40, "", 0, "me", 9000), "within 48 blocks a taken horse drifts home too");
     }
 
-    @Test void aNonThiefBringingItHomeEarnsReturnedAHorse() {
-        assertEquals(Verdict.RETURNED, ridden(8, false, false, "thief", 0, 0, 10_000), "a stolen horse brought within 8 blocks");
-        assertEquals(Verdict.RETURNED, ridden(3, false, false, "", 4000, 0, 10_000), "a lost horse brought home");
-        assertEquals(Verdict.NONE, ridden(8.5, false, false, "thief", 0, 0, 10_000), "not quite home yet");
-        assertEquals(Verdict.NONE, ridden(4, false, false, "", 0, 0, 10_000), "an unflagged horse ridden home is nothing special");
+    @Test void aNonTakerBringingItHomeEarnsReturnedAHorse() {
+        assertEquals(Verdict.RETURNED, ridden(8, false, "thief", 0, "thief", 0, 10_000), "a stolen horse brought within 8 blocks");
+        assertEquals(Verdict.RETURNED, ridden(3, false, "", 4000, "someone", 0, 10_000), "a lost horse brought home");
+        assertEquals(Verdict.NONE, ridden(8.5, false, "thief", 0, "thief", 0, 10_000), "not quite home yet");
+        assertEquals(Verdict.NONE, ridden(4, false, "", 0, "", 0, 10_000), "an unflagged horse ridden home is nothing special");
     }
 
-    @Test void theThiefBringingItBackOnlyClearsTheFlags() {
-        assertEquals(Verdict.HOME, ridden(5, false, true, "thief", 0, 0, 10_000));
-        assertEquals(Verdict.HOME, ridden(5, false, true, "thief", 4000, 0, 10_000), "even after it was also lost");
+    @Test void theThiefOrTakerBringingItBackOnlyClearsTheFlags() {
+        assertEquals(Verdict.HOME, ridden(5, true, "thief", 0, "thief", 0, 10_000));
+        assertEquals(Verdict.HOME, ridden(5, true, "thief", 4000, "thief", 0, 10_000), "even after it was also lost");
+        assertEquals(Verdict.HOME, ridden(5, true, "", 4000, "me", 0, 10_000), "the player who left it out there earns nothing for fetching it");
     }
 
     @Test void oneReturnedAHorsePerHorsePerDay() {
         long first = 50_000;
-        assertEquals(Verdict.RETURNED, ridden(2, false, false, "", 1, 0, first));
-        assertEquals(Verdict.HOME, ridden(2, false, false, "", 1, first, first + 1), "led out and straight back: no second deed");
-        assertEquals(Verdict.HOME, ridden(2, false, false, "thief", 0, first, first + TheftRule.COOLDOWN - 1), "a day minus a tick");
-        assertEquals(Verdict.RETURNED, ridden(2, false, false, "thief", 0, first, first + TheftRule.COOLDOWN), "a full day later it counts");
+        assertEquals(Verdict.RETURNED, ridden(2, false, "", 1, "a", 0, first));
+        assertEquals(Verdict.HOME, ridden(2, false, "", 1, "a", first, first + 1), "led out and straight back: no second deed");
+        assertEquals(Verdict.HOME, ridden(2, false, "thief", 0, "thief", first, first + TheftRule.COOLDOWN - 1), "a day minus a tick");
+        assertEquals(Verdict.RETURNED, ridden(2, false, "thief", 0, "thief", first, first + TheftRule.COOLDOWN), "a full day later it counts");
         assertTrue(TheftRule.cooled(0, 5) && !TheftRule.cooled(10, 10 + TheftRule.COOLDOWN - 1) && TheftRule.cooled(10, 10 + TheftRule.COOLDOWN));
     }
 
-    @Test void aFlaggedHorseBackHomeWithoutAPlayerIsHome() {
-        assertEquals(Verdict.HOME, alone(6, true, 0, INF, "", 3000, 9000));
-        assertEquals(Verdict.HOME, alone(6, true, 0, 2, "thief", 0, 9000));
-        assertEquals(Verdict.NONE, alone(6, true, 0, INF, "", 0, 9000), "an unflagged horse at home needs nothing");
+    @Test void aFlaggedOrTakenHorseBackHomeWithoutAPlayerIsHome() {
+        assertEquals(Verdict.HOME, alone(6, true, 0, INF, "", 3000, "me", 9000));
+        assertEquals(Verdict.HOME, alone(6, true, 0, 2, "thief", 0, "thief", 9000));
+        assertEquals(Verdict.HOME, alone(6, true, 0, 2, "", 0, "me", 9000), "ridden out and back: the taker is forgotten once it is home");
+        assertEquals(Verdict.NONE, alone(6, true, 0, INF, "", 0, "", 9000), "an untouched horse at home needs nothing");
     }
 
     @Test void onlyAnUnflaggedLooseHorseWithNobodyNearDrifts() {
-        for (double d : new double[]{8.1, 20, 48}) assertEquals(Verdict.DRIFT, alone(d, true, 0, 32.1, "", 0, 9000), "drifts from " + d);
-        assertEquals(Verdict.DRIFT, alone(20, true, 0, INF, "", 0, 9000), "no player in the world at all");
-        assertEquals(Verdict.NONE, alone(8, true, 0, INF, "", 0, 9000), "within 8 blocks it is home");
-        assertEquals(Verdict.NONE, alone(20, true, 0, 32, "", 0, 9000), "a player 32 blocks away would see it move");
-        assertEquals(Verdict.NONE, alone(20, false, 0, INF, "", 0, 9000), "a knight is riding it, or it is tied up");
-        assertEquals(Verdict.NONE, alone(20, true, 0, INF, "thief", 0, 9000), "a stolen horse doesn't sneak home");
-        assertEquals(Verdict.NONE, alone(20, true, 0, INF, "", 3000, 9000), "nor does a lost one");
-        assertNotEquals(Verdict.DRIFT, alone(48.1, true, 0, INF, "", 0, 9000), "beyond 48 blocks it waits to be found");
-        assertNotEquals(Verdict.DRIFT, ridden(20, false, false, "", 0, 0, 9000), "never while a player rides it");
+        for (double d : new double[]{8.1, 20, 48}) assertEquals(Verdict.DRIFT, alone(d, true, 0, 32.1, "", 0, "me", 9000), "drifts from " + d);
+        assertEquals(Verdict.DRIFT, alone(20, true, 0, INF, "", 0, "", 9000), "no player in the world at all");
+        assertEquals(Verdict.NONE, alone(8, true, 0, INF, "", 0, "", 9000), "within 8 blocks it is home");
+        assertEquals(Verdict.NONE, alone(20, true, 0, 32, "", 0, "", 9000), "a player 32 blocks away would see it move");
+        assertEquals(Verdict.NONE, alone(20, false, 0, INF, "", 0, "", 9000), "a knight is riding it, or it is tied up");
+        assertEquals(Verdict.NONE, alone(20, true, 0, INF, "thief", 0, "thief", 9000), "a stolen horse doesn't sneak home");
+        assertEquals(Verdict.NONE, alone(20, true, 0, INF, "", 3000, "me", 9000), "nor does a lost one");
+        assertNotEquals(Verdict.DRIFT, alone(48.1, true, 0, INF, "", 0, "me", 9000), "a horse a player took waits beyond 48 blocks to be found");
+        assertNotEquals(Verdict.DRIFT, ridden(20, false, "", 0, "", 0, 9000), "never while a player rides it");
     }
 
     @Test void everyCombinationGivesOneSensibleVerdict() {
         var r = new Random(7);
         for (int i = 0; i < 20_000; i++) {
-            double d = r.nextInt(10) == 0 ? INF : r.nextDouble() * 120;
-            boolean player = r.nextBoolean(), found = r.nextBoolean(), thief = r.nextBoolean(), loose = r.nextBoolean();
+            double d = r.nextInt(10) == 0 ? INF : r.nextDouble() * 160;
+            boolean player = r.nextBoolean(), byTaker = r.nextBoolean(), taken = byTaker || r.nextBoolean(), loose = r.nextBoolean();
             boolean stolen = r.nextBoolean(); long away = r.nextBoolean() ? 0 : 1 + r.nextInt(50_000);
             long returned = r.nextBoolean() ? 0 : 1 + r.nextInt(50_000), now = 60_000 + r.nextInt(50_000), aloneFor = r.nextInt(3000);
-            var seen = player ? Seen.withPlayer(d, found, thief && stolen) : Seen.withoutPlayer(d, loose, aloneFor, r.nextDouble() * 80);
-            var v = TheftRule.assess(seen, stolen, away, returned, now);
+            double nearest = r.nextDouble() * 80;
+            var seen = player ? Seen.withPlayer(d, byTaker) : Seen.withoutPlayer(d, loose, aloneFor, nearest);
+            var v = TheftRule.assess(seen, stolen, away, taken, returned, now);
             boolean flagged = stolen || away > 0;
-            if (v == Verdict.STOLEN) assertTrue(player && !flagged && !found && d > TheftRule.FAR);
-            if (v == Verdict.RETURNED) assertTrue(player && flagged && !(thief && stolen) && d <= TheftRule.NEAR && TheftRule.cooled(returned, now));
-            if (v == Verdict.DRIFT) assertTrue(!player && !flagged && loose && d > TheftRule.NEAR && d <= TheftRule.FAR);
-            if (v == Verdict.HOME) assertTrue(flagged && d <= TheftRule.NEAR);
-            if (v == Verdict.LOST) assertTrue(away == 0 && d > TheftRule.FAR);
+            if (v == Verdict.STOLEN) assertTrue(player && !stolen && d > TheftRule.FAR && (away == 0 || byTaker));
+            if (v == Verdict.RETURNED) assertTrue(player && flagged && !byTaker && d <= TheftRule.NEAR && TheftRule.cooled(returned, now));
+            if (v == Verdict.DRIFT) assertTrue(!player && !flagged && loose && d > TheftRule.NEAR && Double.isFinite(d) && (!taken || d <= TheftRule.FAR) && nearest > TheftRule.QUIET);
+            if (v == Verdict.HOME) assertTrue((flagged || !player && taken) && d <= TheftRule.NEAR);
+            if (v == Verdict.LOST) assertTrue(!player && away == 0 && taken && d > TheftRule.FAR);
             if (flagged && d <= TheftRule.NEAR) assertTrue(v == Verdict.HOME || v == Verdict.RETURNED, "a flagged horse at home always clears");
+            if (player && byTaker) assertNotEquals(Verdict.RETURNED, v, "a thief or taker never earns the deed");
         }
     }
 

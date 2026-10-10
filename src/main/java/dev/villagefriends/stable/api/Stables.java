@@ -32,7 +32,7 @@ public final class Stables {
      * when a player stables a horse there).
      */
     public static void stall(AbstractHorse horse, BlockPos stall, String village, String keeper) {
-        target(horse).setAttached(StableData.STALL, new StallHome(stall.immutable(), horse.level().dimension().identifier().toString(), village, keeper, "", 0, 0));
+        target(horse).setAttached(StableData.STALL, new StallHome(stall.immutable(), horse.level().dimension().identifier().toString(), village, keeper, "", "", 0, 0));
         horse.setHomeTo(stall, 6);
     }
     /**

@@ -117,12 +117,32 @@
    "properties": {
     "east": "false",
     "north": "false",
-    "south": "true",
+    "south": "false",
     "waterlogged": "false",
     "west": "true"
    }
   },
   "T": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "U": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "V": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -132,7 +152,7 @@
     "west": "false"
    }
   },
-  "U": {
+  "W": {
    "id": "minecraft:acacia_fence",
    "properties": {
     "east": "true",
@@ -142,47 +162,38 @@
     "west": "true"
    }
   },
-  "V": {
-   "id": "minecraft:acacia_fence_gate",
-   "properties": {
-    "facing": "north",
-    "in_wall": "false",
-    "open": "false",
-    "powered": "false"
-   }
-  },
-  "W": {
+  "X": {
    "id": "minecraft:barrel",
    "properties": {
     "facing": "up",
     "open": "false"
    }
   },
-  "X": {
+  "Y": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "x"
    }
   },
-  "Y": {
+  "Z": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "y"
    }
   },
-  "Z": {
+  "a": {
    "id": "minecraft:hay_block",
    "properties": {
     "axis": "z"
    }
   },
-  "a": {
+  "b": {
    "id": "minecraft:jigsaw",
    "properties": {
     "orientation": "north_up"
    }
   },
-  "b": {
+  "c": {
    "id": "villagefriends:saddle_rack",
    "properties": {
     "facing": "west"
@@ -212,18 +223,18 @@
   {
    "y": 1,
    "rows": [
-    ".......a.......",
-    "TJJJJJJVJJJJUJS",
-    "H.R......L..Z.H",
+    ".......b.......",
+    "VJJJJJS.UJJJWJT",
+    "H.R......L..aRH",
     "H.......L..L..H",
     "H..L...L......H",
     "H............LH",
     "G...G...G...G.G",
-    "B...H...H...HRB",
     "B...H...H...H.B",
-    "B...H...H...HbB",
-    "B...H...H...PWB",
-    "B.ONH.ONH.ONPYB",
+    "B...H...H...H.B",
+    "B...H...H...HcB",
+    "B...H...H...PXB",
+    "B.ONH.ONH.ONPZB",
     "GBBBGBBBGBBBGBG",
     "..............."
    ]
@@ -242,7 +253,7 @@
     "B.............B",
     "B.............B",
     "B.............B",
-    "B............XB",
+    "B............YB",
     "GBBBGBBBGBBBGBG",
     "..............."
    ]
@@ -470,6 +481,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/desert/stable.py",
-  "checksum": "01d00a50c9a71a27"
+  "checksum": "0e729b97f48013d4"
  }
 }

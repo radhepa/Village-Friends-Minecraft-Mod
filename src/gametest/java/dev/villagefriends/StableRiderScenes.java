@@ -11,6 +11,7 @@ import dev.villagefriends.stable.data.StableBlocks;
 import dev.villagefriends.stable.data.StallHome;
 import dev.villagefriends.stable.ride.Mounts;
 import dev.villagefriends.stable.ride.Spook;
+import dev.villagefriends.stable.ride.SpookRule;
 import java.util.UUID;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
@@ -234,8 +235,12 @@ final class StableRiderScenes {
         // its 6-block home; freeing it here makes the run easy to see. It still counts as cared for: its stall stays.)
         w.getServer().runOnServer(s -> { kit.player().stopRiding(); horse(w, kit, cared).clearHome(); });
         long reared = w.getServer().computeOnServer(s -> Spook.last(horse(w, kit, cared)));
-        Vec3 start = w.getServer().computeOnServer(s -> horse(w, kit, cared).position());
-        kit.until(c, () -> kit.onServer(w, () -> Spook.last(horse(w, kit, cared)) > reared), 320, "riderless, the cared-for horse bolts after the cooldown");
+        // Left alone through the cooldown it may well stroll off past the 4 blocks a monster frightens it from, so it is
+        // put back beside the husk (closer than it started, with room to drift a step) once the cooldown is over.
+        kit.until(c, () -> kit.onServer(w, () -> kit.level().getGameTime() - reared >= SpookRule.COOLDOWN), (int) SpookRule.COOLDOWN + 40, "the spook cooldown runs out");
+        Vec3 start = at(kit.origin.offset(-2, 0, 1));
+        w.getServer().runOnServer(s -> { var h = horse(w, kit, cared); h.getNavigation().stop(); h.teleportTo(start.x, start.y, start.z); });
+        kit.until(c, () -> kit.onServer(w, () -> Spook.last(horse(w, kit, cared)) > reared), 120, "riderless, the cared-for horse bolts after the cooldown");
         kit.until(c, () -> kit.onServer(w, () -> horse(w, kit, cared).position().distanceTo(start) > 2), 100, "the bolting horse runs off");
         kit.expect(kit.onServer(w, () -> Spook.last(horse(w, kit, village)) < 0), "the village's horse never spooked");
     }

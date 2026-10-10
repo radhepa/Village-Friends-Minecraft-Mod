@@ -46,15 +46,9 @@ For battle testing, **Knight Spawn Egg** and **Archer Spawn Egg** are in Creativ
 
 Some residents long for a cat or a dog. In their free time they befriend a stray (one wanders into the village if there isn't one about), name it, and from then on it follows them everywhere, naps by their bed and keeps watch if they're hurt. Now and then they stop to play: fetch, belly rubs, shaking paws and chase with dogs; string, strokes, chin scratches and a feather with cats. Right-click a resident's pet to see their card (owner, age, breed, nature and favorite things), pat them and give them treats. See [PETS.md](PETS.md).
 
-## Horses and stables
-
-Every horse now belongs to one of eight medieval breeds, picked by where it lives: the big **destrier**, the smooth **palfrey**, the fast **courser**, the everyday **rouncey**, the strong **draft horse**, the **desert horse** (in herds on the sand), the springy **steppe pony** and the **fjord** of the snowy north. Each has its own health, speed and jump and its own painted coat, and foals take after their parents. Ride, feed and brush your horse (with a **Grooming Brush**) and it grows a bond with you, from Wary to Devoted: a little faster, a little tougher, calmer around monsters, and from Loyal on it comes when you blow the **Horse Whistle**.
-
-Kit it out with **Saddlebags** (six extra slots), a **Bridle** (ride without a saddle; the bond grows faster), a **Pack Saddle** for donkeys and mules, and barding that shows on the horse: a dyeable cloth **Caparison**, **Leather**, **Mail** or **Plate**. Give it a home with a **Horse Stall** and a **Hay Trough**; villages build stables of their own, where a **Stablehand** looks after the horses and sells gear and **Horse Papers** (a horse of your choice, ready on the spot). Charge with the **Jousting Lance**, which hits harder the faster you gallop, and shoot steadier from the saddle. Knights ride their night patrols from the village stable, your companion rides a spare horse beside you, and residents remember who rode off on the village's horse and who brought a lost one home. See [STABLEHAND.md](STABLEHAND.md).
-
 ## Village Friends RPG (optional add-on)
 
-A separate mod that lives in this repository's `rpg/` folder and builds its own jar. It turns the game into a slow-burn RPG: you start weak and grow over 100 levels, with 10 attributes, 17 skills that level by use (Cooking and Riding among them), kill milestones and Legend abilities for 22 monster families, and jobs from residents ("Any work for me?" in their conversation window). It needs Village Friends; Village Friends never needs it. Build it with `gradlew.bat :rpg:build` (output `rpg/build/libs/villagefriends-rpg-<version>.jar`) and see [rpg/README.md](rpg/README.md).
+A separate mod that lives in this repository's `rpg/` folder and builds its own jar. It turns the game into a slow-burn RPG: you start weak and grow over 100 levels, with 10 attributes, 16 skills that level by use (Cooking among them), kill milestones and Legend abilities for 22 monster families, and jobs from residents ("Any work for me?" in their conversation window). It needs Village Friends; Village Friends never needs it. Build it with `gradlew.bat :rpg:build` (output `rpg/build/libs/villagefriends-rpg-<version>.jar`) and see [rpg/README.md](rpg/README.md).
 
 ## Play on this computer
 

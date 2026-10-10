@@ -11,7 +11,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
  */
 public final class RideFeature {
     public static void register() {
-        ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> Spook.loaded(entity));
+        ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> { Spook.loaded(entity); Mounts.loaded(entity); });
         ServerEntityEvents.ENTITY_UNLOAD.register((entity, level) -> { Mounts.unload(entity); HorseDeeds.unload(entity); Spook.unload(entity); });
         ServerTickEvents.END_SERVER_TICK.register(server -> { HorseDeeds.tick(server); Spook.tick(server); });
         ServerLifecycleEvents.SERVER_STOPPED.register(server -> { Mounts.clear(); HorseDeeds.clear(); Spook.clear(); });

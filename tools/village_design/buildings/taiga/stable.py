@@ -4,7 +4,7 @@ from ..stable import Materials, build
 from .palette import ROOFS
 
 TAIGA = Materials(post='spruce_log', wall='spruce_planks', roof=ROOFS['dark_oak'], gable='spruce_planks', fence='spruce_fence',
-                  gate='spruce_fence_gate', floor=('coarse_dirt', 'podzol', 'rooted_dirt'), yard=('podzol', 'grass_block', 'coarse_dirt'),
+                  floor=('coarse_dirt', 'podzol', 'rooted_dirt'), yard=('podzol', 'grass_block', 'coarse_dirt'),
                   plant='fern')
 
 

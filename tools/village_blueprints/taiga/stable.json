@@ -63,6 +63,19 @@
    }
   },
   "L": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "M": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y",
+    "waterlogged": "false"
+   }
+  },
+  "N": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -70,19 +83,6 @@
     "south": "false",
     "waterlogged": "false",
     "west": "true"
-   }
-  },
-  "M": {
-   "id": "minecraft:spruce_log",
-   "properties": {
-    "axis": "x"
-   }
-  },
-  "N": {
-   "id": "minecraft:iron_chain",
-   "properties": {
-    "axis": "y",
-    "waterlogged": "false"
    }
   },
   "O": {
@@ -163,12 +163,32 @@
    "properties": {
     "east": "false",
     "north": "false",
-    "south": "true",
+    "south": "false",
     "waterlogged": "false",
     "west": "true"
    }
   },
   "b": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "c": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "d": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -178,7 +198,7 @@
     "west": "false"
    }
   },
-  "c": {
+  "e": {
    "id": "minecraft:spruce_fence",
    "properties": {
     "east": "true",
@@ -188,16 +208,7 @@
     "west": "true"
    }
   },
-  "d": {
-   "id": "minecraft:spruce_fence_gate",
-   "properties": {
-    "facing": "north",
-    "in_wall": "false",
-    "open": "false",
-    "powered": "false"
-   }
-  },
-  "e": {
+  "f": {
    "id": "villagefriends:saddle_rack",
    "properties": {
     "facing": "west"
@@ -228,15 +239,15 @@
    "y": 1,
    "rows": [
     ".......Z.......",
-    "bLLLLLLdLLLLcLa",
-    "J.U......OO.Y.J",
+    "dNNNNNa.cNNNeNb",
+    "J.U......OO.YUJ",
     "J.............J",
     "J...O.........J",
     "J..........O..J",
     "H...H...H...H.H",
-    "A...J...J...JUA",
     "A...J...J...J.A",
-    "A...J...J...JeA",
+    "A...J...J...J.A",
+    "A...J...J...JfA",
     "A...J...J...TVA",
     "A.RQJ.RQJ.RQTXA",
     "HAAAHAAAHAAAHAH",
@@ -271,7 +282,7 @@
     "...............",
     "...............",
     "...............",
-    "HMMMHMMMHMMMHMH",
+    "HLLLHLLLHLLLHLH",
     "A.............A",
     "A.............A",
     "A.............A",
@@ -294,7 +305,7 @@
     "...............",
     "...............",
     "...............",
-    "..N...N...N....",
+    "..M...M...M....",
     "...............",
     "...............",
     "BBBBBBBBBBBBBBB"
@@ -313,7 +324,7 @@
     "A.............A",
     "A.............A",
     "A.............A",
-    "A.N...N...N...A",
+    "A.M...M...M...A",
     "A.............A",
     "BBBBBBBBBBBBBBB",
     "..............."
@@ -332,7 +343,7 @@
     "CCCCCCCCCCCCCCC",
     "A.............A",
     "A.............A",
-    "A.N...N...N...A",
+    "A.M...M...M...A",
     "BBBBBBBBBBBBBBB",
     "...............",
     "..............."
@@ -485,6 +496,6 @@
  "rooms": [],
  "design": {
   "source": "tools/village_design/buildings/taiga/stable.py",
-  "checksum": "b7503fbb8394d040"
+  "checksum": "1f3ddcc45fb49904"
  }
 }
