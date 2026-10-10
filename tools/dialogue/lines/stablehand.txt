@@ -1,0 +1,124 @@
+# Stablehand: the stablehand's work talk, station hints and jokes, what anyone says near the village's stabled
+# horses (village.horses), and how residents react to horse deeds.
+# Deed kinds: stole_horse (riding or leading a village horse far from its stall), returned_horse (bringing a lost
+# or stolen village horse home). {victim} is the resident who keeps the horse; a communal stable horse has no
+# keeper, so most lines here need only {player}, {name} and {village}.
+
+## work.stablehand
+I mucked out every stall before breakfast. The horses watched me do it. Not one of them offered to help.
+Hay in the troughs, water in the cauldron, straw on the floor. That's a stable morning.
+A horse that's brushed every day trusts you. A horse that's brushed once a month tolerates you.
+I top up the troughs once a day. Any more and the horses get round and lazy.
+The Saddle Rack is mine. Touch the saddle if you like, but put it back how you found it.
+Every horse in the stable has its own stall and its own name. I won't tell you which one's my favorite.
+Destriers are big, brave and greedy. Mostly greedy.
+A Palfrey's gait is so smooth you could carry a full mug of cider and not spill a drop.
+Coursers are built for speed. They'd race the wind if the wind ever agreed to it.
+The Rouncey is the everyday horse. Not grand, not fast, but it never lets you down.
+Draft horses pull carts and plows all day and then ask for an apple like they did nothing.
+The Desert Horse can go a long way on very little. I could learn something from it.
+Steppe Ponies jump like they've got springs in their hooves. Short legs, big hearts.
+The Fjord Horse has a mane like a broom and a temper like a summer afternoon.
+Hurt horses and foals find the trough on their own. They're cleverer than people think.
+A stall is a horse's home. Lead one in and it'll stay close to it from then on.
+I sell papers for horses. Hand them over somewhere with room and your new horse is there to meet you.
+Don't feed a horse from your palm with your fingers out. Flat hand. Trust me.
+I check every hoof every morning. Stones get in, and a horse can't tell you where it hurts.
+The knights ride the night watch from our stalls. I have the horses saddled before they ask.
+Leather tack needs oil or it cracks. Saddles, bridles, all of it. Every week.
+Mail barding is heavy. A horse wearing it needs more hay and more patience.
+Plate barding is for war horses. I hope ours never need it.
+A bridle lets you ride bareback, if you're brave. I recommend a saddle.
+Saddlebags hold more than you'd think. More than you should carry, honestly.
+Donkeys are cleverer than horses and they know it. Mules know it twice as much.
+A pack saddle on a mule and you can move half a house in one trip.
+Wheat for a snack, a hay bale for a feast. Golden carrots for horses who've been very, very good.
+The foals are the best part of the job. And the worst part, when they get out.
+I talk to the horses while I work. They're good listeners. They never interrupt.
+Rain doesn't stop stable work. Horses still eat when it's wet. So do I.
+Some horses love the brush. Some pretend they don't and then lean into it.
+A horse that trusts you will come when you whistle. It takes time to earn that.
+I can tell a horse's mood from its ears. Forward is curious. Pinned back means leave.
+The barn cats sleep in the hay. The horses don't mind. I've given up minding.
+Someone left the gate open once. We spent a whole afternoon chasing horses through the wheat.
+When a horse is hurt I bring it hay and stay a while. Company helps more than you'd think.
+The best saddle is the one that fits. A pretty saddle that pinches is worse than none.
+Every morning the horses hear me coming and start stamping for breakfast. It's a nice welcome.
+
+## station.stablehand
+My Saddle Rack is where I work. Put one near a free resident and you might find yourself a stablehand.
+Ride or lead a horse you own to a Horse Stall and use it. That stall is its home from then on.
+Fill a Hay Trough with wheat for one serving, or a hay bale to fill it right up.
+A hurt horse or a foal will eat from a trough near its stall. Keep the hay coming.
+Use Horse Papers on the ground and the horse they're for comes to meet you, tame and yours.
+Use an empty stall with an empty hand and it'll tell you whose it is.
+
+## joke.job.stablehand
+Why did the horse eat with its mouth open? Bad stable manners.
+What do you call a horse that lives next door? A neigh-bor.
+Why did the pony need a drink of water? It was a little hoarse.
+Why don't horses ever win at cards? They always show their hand. Well. Their hoof.
+
+## village.horses
+The horses are restless today. Maybe they know something we don't.
+I love the sound of the stable at night. All that slow, warm breathing.
+That grey one in the end stall always watches me go by. I think it likes me.
+You can smell the hay from here. It smells like summer, even in winter.
+Our stablehand knows every horse by name. I can barely remember my neighbors'.
+I rode one of the stable horses once, as a child. Fell off twice. Got back on twice.
+The knights' horses are bigger than my cottage. Well. Nearly.
+The foals in the stable are trying to stand up straight. It's like watching a table learn to walk.
+I bring the horses an apple when nobody's looking. Don't tell the stablehand.
+A village with a stable feels safer, somehow. Horses notice things before we do.
+
+## deed.stole_horse.seen
+I saw you ride off on one of our horses, {player}. Those horses belong to the stable.
+I watched you lead a village horse away. Everyone in {village} needs those horses.
+I saw you take a horse from our stable. The stablehand nearly cried.
+I saw you gallop off on a horse that wasn't yours. I hope you're bringing it back.
+I saw you take {victim}'s horse. Right out of its stall, as if it were yours.
+
+## deed.stole_horse.heard
+{teller} says you rode off with one of our horses.
+I heard a horse went missing from the stable, and that you were riding it.
+Word is you took a village horse and never brought it back. That's a big thing to take.
+Somebody told me a horse left {village} with you on its back. Was it worth it?
+I heard {victim}'s horse went missing. People are saying your name.
+
+## deed.stole_horse.self
+You took my horse, {player}. I raised that horse from a foal.
+My horse is gone, and everyone says you rode it away. Bring it home.
+I went out to the stall this morning and it was empty. You know why.
+That horse is my livelihood. I can't work without it. Please bring it back.
+
+## deed.stole_horse.family
+You took our family's horse. My {kin} has been looking at that empty stall all day.
+{victim} says our horse is gone, and that you took it. We need that horse.
+Our horse was part of the family. You'd better be treating it well.
+We've been worried sick about our horse. You could at least bring it home.
+
+## deed.returned_horse.seen
+I saw you bring one of our horses home, {player}. Thank you.
+I watched you lead a lost horse back to its stall. The stablehand will be so relieved.
+I saw you bring back a horse that had gone missing. Good of you.
+I saw you walk a horse all the way home to {village}. That's kindness.
+I saw you bring {victim}'s horse back. It went straight to its stall like it had missed it.
+
+## deed.returned_horse.heard
+{teller} says you brought one of our lost horses home.
+I heard a horse came back to the stable, and that you brought it.
+Word is you found a lost horse and led it home. {village} owes you one.
+Somebody told me you returned a horse you could easily have kept. That says a lot.
+I heard {victim}'s horse is back in its stall, thanks to you.
+
+## deed.returned_horse.self
+You brought my horse home, {player}. I didn't think I'd see it again.
+My horse is back in its stall. Thank you. I owe you more than I can say.
+When I saw my horse walk back in, I nearly cried. Thank you for bringing it home.
+You found my horse. I've been looking for days. Thank you, truly.
+
+## deed.returned_horse.family
+You brought our family's horse home. My {kin} hasn't stopped smiling.
+{victim} says you brought our horse back. Thank you, from all of us.
+Our horse is home, and we know who to thank. You're always welcome at our table.
+We'd given up on ever seeing our horse again. Thank you for bringing it back.

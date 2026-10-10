@@ -1,0 +1,15 @@
+{
+  "trades": [
+    "villagefriends:stablehand/level_4_leather_barding",
+    "villagefriends:stablehand/level_4_mail_barding",
+    "villagefriends:stablehand/level_4_horse_whistle",
+    "villagefriends:stablehand/level_4_papers_courser",
+    "villagefriends:stablehand/level_4_papers_desert",
+    "villagefriends:stablehand/level_4_papers_steppe_pony",
+    "villagefriends:stablehand/level_4_papers_fjord",
+    "villagefriends:stablehand/level_4_papers_draft",
+    "villagefriends:stablehand/level_4_golden_carrot"
+  ],
+  "amount": 3,
+  "random_sequence": "villagefriends:trade_set/stablehand/level_4"
+}

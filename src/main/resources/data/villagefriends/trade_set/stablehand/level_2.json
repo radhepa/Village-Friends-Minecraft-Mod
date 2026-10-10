@@ -1,0 +1,11 @@
+{
+  "trades": [
+    "villagefriends:stablehand/level_2_papers_rouncey",
+    "villagefriends:stablehand/level_2_saddle",
+    "villagefriends:stablehand/level_2_hay_trough",
+    "villagefriends:stablehand/level_2_leather",
+    "villagefriends:stablehand/level_2_apple"
+  ],
+  "amount": 3,
+  "random_sequence": "villagefriends:trade_set/stablehand/level_2"
+}

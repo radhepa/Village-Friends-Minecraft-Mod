@@ -1,0 +1,17 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 10
+  },
+  "gives": {
+    "id": "villagefriends:horse_papers",
+    "components": {
+      "villagefriends:horse_papers": {
+        "breed": "rouncey"
+      }
+    }
+  },
+  "max_uses": 3,
+  "xp": 5,
+  "reputation_discount": 0.05
+}

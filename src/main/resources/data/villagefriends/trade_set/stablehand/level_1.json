@@ -1,0 +1,10 @@
+{
+  "trades": [
+    "villagefriends:stablehand/level_1_grooming_brush",
+    "villagefriends:stablehand/level_1_bridle",
+    "villagefriends:stablehand/level_1_wheat",
+    "villagefriends:stablehand/level_1_carrot"
+  ],
+  "amount": 3,
+  "random_sequence": "villagefriends:trade_set/stablehand/level_1"
+}

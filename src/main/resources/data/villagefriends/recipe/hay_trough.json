@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:hay_trough",
+    "count": 1
+  },
+  "pattern": [
+    "PHP",
+    "PPP"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "H": "minecraft:hay_block"
+  }
+}

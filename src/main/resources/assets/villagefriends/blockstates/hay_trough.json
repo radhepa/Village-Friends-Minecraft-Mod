@@ -1,0 +1,84 @@
+{
+  "variants": {
+    "facing=north,hay=0": {
+      "model": "villagefriends:block/hay_trough_0",
+      "y": 0
+    },
+    "facing=north,hay=1": {
+      "model": "villagefriends:block/hay_trough_1",
+      "y": 0
+    },
+    "facing=north,hay=2": {
+      "model": "villagefriends:block/hay_trough_2",
+      "y": 0
+    },
+    "facing=north,hay=3": {
+      "model": "villagefriends:block/hay_trough_3",
+      "y": 0
+    },
+    "facing=north,hay=4": {
+      "model": "villagefriends:block/hay_trough_4",
+      "y": 0
+    },
+    "facing=east,hay=0": {
+      "model": "villagefriends:block/hay_trough_0",
+      "y": 90
+    },
+    "facing=east,hay=1": {
+      "model": "villagefriends:block/hay_trough_1",
+      "y": 90
+    },
+    "facing=east,hay=2": {
+      "model": "villagefriends:block/hay_trough_2",
+      "y": 90
+    },
+    "facing=east,hay=3": {
+      "model": "villagefriends:block/hay_trough_3",
+      "y": 90
+    },
+    "facing=east,hay=4": {
+      "model": "villagefriends:block/hay_trough_4",
+      "y": 90
+    },
+    "facing=south,hay=0": {
+      "model": "villagefriends:block/hay_trough_0",
+      "y": 180
+    },
+    "facing=south,hay=1": {
+      "model": "villagefriends:block/hay_trough_1",
+      "y": 180
+    },
+    "facing=south,hay=2": {
+      "model": "villagefriends:block/hay_trough_2",
+      "y": 180
+    },
+    "facing=south,hay=3": {
+      "model": "villagefriends:block/hay_trough_3",
+      "y": 180
+    },
+    "facing=south,hay=4": {
+      "model": "villagefriends:block/hay_trough_4",
+      "y": 180
+    },
+    "facing=west,hay=0": {
+      "model": "villagefriends:block/hay_trough_0",
+      "y": 270
+    },
+    "facing=west,hay=1": {
+      "model": "villagefriends:block/hay_trough_1",
+      "y": 270
+    },
+    "facing=west,hay=2": {
+      "model": "villagefriends:block/hay_trough_2",
+      "y": 270
+    },
+    "facing=west,hay=3": {
+      "model": "villagefriends:block/hay_trough_3",
+      "y": 270
+    },
+    "facing=west,hay=4": {
+      "model": "villagefriends:block/hay_trough_4",
+      "y": 270
+    }
+  }
+}

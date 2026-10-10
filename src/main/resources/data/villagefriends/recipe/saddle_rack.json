@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:saddle_rack",
+    "count": 1
+  },
+  "pattern": [
+    " L ",
+    "PPP",
+    "S S"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick"
+  }
+}

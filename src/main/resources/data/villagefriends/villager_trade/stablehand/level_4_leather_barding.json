@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 10
+  },
+  "gives": {
+    "id": "villagefriends:leather_barding"
+  },
+  "max_uses": 6,
+  "xp": 15,
+  "reputation_discount": 0.05
+}

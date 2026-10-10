@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "result": {
+    "id": "villagefriends:horse_stall",
+    "count": 1
+  },
+  "pattern": [
+    "F F",
+    "PHP",
+    "PPP"
+  ],
+  "key": {
+    "F": "#minecraft:wooden_fences",
+    "P": "#minecraft:planks",
+    "H": "minecraft:hay_block"
+  }
+}

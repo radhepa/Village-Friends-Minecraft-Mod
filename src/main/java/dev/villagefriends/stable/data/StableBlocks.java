@@ -27,9 +27,9 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 /**
- * The stable's blocks, their points of interest and the stablehand's job. Boxes are written facing north in
- * sixteenths (the {@code tools/tavern/furniture.py} convention; the stables package may refine them with
- * {@code tools/stablehand/yard.py --boxes}).
+ * The stable's blocks, their points of interest and the stablehand's job. Collision boxes are written facing north
+ * in sixteenths and match the models drawn by {@code tools/stablehand/yard.py} (print them with {@code --boxes};
+ * the tool refuses to write the art while they differ).
  *
  * <p>The Horse Stall is a point of interest (not a job site) so stables can be found by a POI search. The
  * Saddle Rack is the stablehand's job site. The stablehand is a normal villager profession but is deliberately
@@ -55,9 +55,9 @@ public final class StableBlocks {
     }
 
     public static void register() {
-        HORSE_STALL = add("horse_stall", new double[][]{{0,0,0,16,4,16},{1,4,12,15,14,16},{0,0,0,2,16,2},{14,0,0,16,16,2}}, FoundationBlock::new);
+        HORSE_STALL = add("horse_stall", new double[][]{{0,0,0,16,2,16},{0,2,12,16,16,16},{3,6,9,13,10.5,12}}, FoundationBlock::new);
         HAY_TROUGH = add("hay_trough", new double[][]{{0,0,2,16,8,14}}, HayTroughBlock::new);
-        SADDLE_RACK = add("saddle_rack", new double[][]{{2,0,6,14,2,10},{6,0,7,10,12,9},{3,10,4,13,14,12}}, FoundationBlock::new);
+        SADDLE_RACK = add("saddle_rack", new double[][]{{2,0,2,14,2,14},{6,2,6,10,10,10},{3,7,2,13,15,14}}, FoundationBlock::new);
         PoiHelper.register(STALL_POI.identifier(), 1, 1, HORSE_STALL.getStateDefinition().getPossibleStates());
         PoiHelper.register(STABLEHAND_POI.identifier(), 1, 1, SADDLE_RACK.getStateDefinition().getPossibleStates());
         var trades = new Int2ObjectOpenHashMap<ResourceKey<TradeSet>>();

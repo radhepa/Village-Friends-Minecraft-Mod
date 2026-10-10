@@ -16,19 +16,19 @@ class DialogueBankTest {
             "reserved", "imaginative", "pragmatic", "curious", "protective", "gentle");
     static final List<String> JOBS = List.of("farmer", "librarian", "fisherman", "fletcher", "cleric", "cartographer", "armorer", "toolsmith",
             "weaponsmith", "leatherworker", "mason", "shepherd", "butcher", "knight", "archer", "cook", "tavern_keeper", "apothecary", "painter",
-            "bard", "tailor", "carpenter", "scholar", "nitwit", "none");
+            "bard", "tailor", "carpenter", "scholar", "stablehand", "nitwit", "none");
     static final List<String> PERIODS = List.of("dawn", "morning", "noon", "afternoon", "evening", "night", "late");
     static final List<String> HOMES = List.of("plains", "desert", "savanna", "snow", "taiga", "jungle", "swamp");
     static final Set<String> EFFECTS = Set.of("heal", "meal", "shelter", "torch", "cook_held", "mend_held", "directions", "fish", "study",
             "flower", "apple", "bread", "cookie", "seeds", "emerald_tip");
 
     static final List<String> GOOD_DEEDS = List.of("raid_defended", "raid_won", "revived", "bandaged", "saved_from_monster", "rescued_companion",
-            "notice_answered", "birthday_gift", "pet_kindness");
+            "notice_answered", "birthday_gift", "pet_kindness", "returned_horse");
     static final List<String> BAD_DEEDS = List.of("hit_resident", "knocked_out_resident", "killed_resident", "hit_golem", "killed_golem", "hurt_pet",
-            "killed_pet", "broke_home", "stole");
+            "killed_pet", "broke_home", "stole", "stole_horse");
     /** Deeds done to or for a resident who lives to talk about it (raids and golems involve nobody; the killed can't speak). */
     static final List<String> SELF_DEEDS = List.of("revived", "bandaged", "saved_from_monster", "rescued_companion", "notice_answered", "birthday_gift",
-            "pet_kindness", "hit_resident", "knocked_out_resident", "hurt_pet", "killed_pet", "broke_home", "stole");
+            "pet_kindness", "hit_resident", "knocked_out_resident", "hurt_pet", "killed_pet", "broke_home", "stole", "returned_horse", "stole_horse");
 
     private static void has(String key) { assertTrue(BANK.has(key), "Missing dialogue pool " + key); }
 

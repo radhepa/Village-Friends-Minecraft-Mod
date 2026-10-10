@@ -1,0 +1,11 @@
+{
+  "trades": [
+    "villagefriends:stablehand/level_5_plate_barding",
+    "villagefriends:stablehand/level_5_jousting_lance",
+    "villagefriends:stablehand/level_5_papers_destrier",
+    "villagefriends:stablehand/level_5_pack_saddle",
+    "villagefriends:stablehand/level_5_papers_mule"
+  ],
+  "amount": 3,
+  "random_sequence": "villagefriends:trade_set/stablehand/level_5"
+}

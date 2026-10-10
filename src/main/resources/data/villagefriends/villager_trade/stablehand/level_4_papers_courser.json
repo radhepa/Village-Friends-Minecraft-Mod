@@ -1,0 +1,30 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 18
+  },
+  "gives": {
+    "id": "villagefriends:horse_papers",
+    "components": {
+      "villagefriends:horse_papers": {
+        "breed": "courser"
+      }
+    }
+  },
+  "max_uses": 3,
+  "xp": 15,
+  "reputation_discount": 0.05,
+  "merchant_predicate": {
+    "type": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "minecraft:predicates": {
+        "minecraft:villager/variant": [
+          "minecraft:plains",
+          "minecraft:jungle",
+          "minecraft:swamp"
+        ]
+      }
+    }
+  }
+}

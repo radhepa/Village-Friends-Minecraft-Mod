@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 8
+  },
+  "gives": {
+    "id": "villagefriends:pack_saddle"
+  },
+  "max_uses": 6,
+  "xp": 30,
+  "reputation_discount": 0.05
+}
