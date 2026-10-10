@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:grooming_brush",
+    "count": 1
+  },
+  "pattern": [
+    "  W",
+    " T ",
+    "S  "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "T": "minecraft:string",
+    "W": "minecraft:wheat"
+  }
+}
