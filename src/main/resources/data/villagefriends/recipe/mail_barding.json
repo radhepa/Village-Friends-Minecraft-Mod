@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:mail_barding",
+    "count": 1
+  },
+  "pattern": [
+    "C C",
+    "III",
+    "C C"
+  ],
+  "key": {
+    "C": "minecraft:iron_chain",
+    "I": "minecraft:iron_ingot"
+  }
+}

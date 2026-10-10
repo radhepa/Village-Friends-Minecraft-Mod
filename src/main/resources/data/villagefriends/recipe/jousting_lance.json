@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:jousting_lance",
+    "count": 1
+  },
+  "pattern": [
+    "  I",
+    " S ",
+    "SL "
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "S": "minecraft:stick",
+    "L": "minecraft:leather"
+  }
+}

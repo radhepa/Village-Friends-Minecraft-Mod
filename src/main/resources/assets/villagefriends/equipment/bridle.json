@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_saddle": [
+      {
+        "texture": "villagefriends:bridle"
+      }
+    ],
+    "donkey_saddle": [
+      {
+        "texture": "villagefriends:bridle"
+      }
+    ],
+    "mule_saddle": [
+      {
+        "texture": "villagefriends:bridle"
+      }
+    ]
+  }
+}

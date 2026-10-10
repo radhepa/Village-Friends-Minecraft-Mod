@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:caparison",
+    "count": 1
+  },
+  "pattern": [
+    "W W",
+    "WSW",
+    "W W"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "S": "minecraft:string"
+  }
+}

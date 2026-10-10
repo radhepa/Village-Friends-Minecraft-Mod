@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "villagefriends:item/caparison",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -6537410
+      }
+    ]
+  }
+}

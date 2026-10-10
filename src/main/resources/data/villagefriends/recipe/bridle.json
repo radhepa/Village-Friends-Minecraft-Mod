@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:bridle",
+    "count": 1
+  },
+  "pattern": [
+    " L ",
+    "LNL",
+    " S "
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "N": "minecraft:iron_nugget",
+    "S": "minecraft:string"
+  }
+}

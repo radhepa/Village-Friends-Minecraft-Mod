@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:leather_barding",
+    "count": 1
+  },
+  "pattern": [
+    "LSL",
+    "LLL",
+    "LSL"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "S": "minecraft:string"
+  }
+}
