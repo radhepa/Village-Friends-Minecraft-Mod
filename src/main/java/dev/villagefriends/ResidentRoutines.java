@@ -114,8 +114,9 @@ public final class ResidentRoutines {
         boolean duty = plan.block() == Block.DEFEND;
         routine.villagefriends$duty(duty);
         // Companions on an outing, guards in a fight and trading residents follow other rules.
-        if (v.isNoAi() || v.isPassenger() && !Seat.seated(v) || CompanionController.state(v).active() || CompanionController.hasActivity(v)
-                || GuardController.fighting(v) || VillageAlarm.fleeing(v) || v.isTrading()) { routine.villagefriends$routine(null, true); return; }
+        // Riders keep their routine (Stablehand steers the horse through them), except caravan guards, whom only their caller steers.
+        if (v.isNoAi() || v.isPassenger() && !Seat.seated(v) && !dev.villagefriends.stable.ride.Mounts.mounted(v) || CompanionController.state(v).active() || CompanionController.hasActivity(v)
+                || GuardController.fighting(v) || VillageAlarm.fleeing(v) || v.isTrading() || dev.villagefriends.stable.ride.Mounts.caravan(v)) { routine.villagefriends$routine(null, true); return; }
         var activity = Taverns.activity(v, activity(v, level, plan.block()));
         routine.villagefriends$routine(activity, plan.block().sleep);
         var current = brain.getActiveNonCoreActivity().orElse(Activity.IDLE);
@@ -128,6 +129,9 @@ public final class ResidentRoutines {
             brain.setActiveActivityIfPossible(activity);
         if (v.isSleeping() && !plan.block().sleep) v.stopSleeping();
         if (Knockouts.tend(v, level)) return;
+        // Knights fetch a stable horse for the night watch and ride it home after; the stablehand tends the stable.
+        if (dev.villagefriends.stable.ride.Mounts.update(v, level, plan)) return;
+        if (dev.villagefriends.stable.yard.StableWork.update(v, level, plan)) return;
         // Bored children start games with each other, or follow a player around to see what they're up to.
         if (Playground.update(v, level, plan)) return;
         // At the tavern they find a seat with their friends, order, eat and talk; Taverns stands them up afterwards.
@@ -180,6 +184,7 @@ public final class ResidentRoutines {
         }
     }
     public static void walk(Villager v, BlockPos pos, float speed, int closeEnough) {
+        speed = (float) (speed * dev.villagefriends.stable.ride.Mounts.pace(v));
         var brain = v.getBrain();
         var existing = brain.getMemory(MemoryModuleType.WALK_TARGET);
         if (existing.isPresent() && existing.get().getTarget().currentBlockPosition().closerThan(pos, closeEnough + 1)) return;

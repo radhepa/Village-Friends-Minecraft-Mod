@@ -24,6 +24,8 @@ public enum DeedKind {
     NOTICE_ANSWERED(true, 0, 0, 0, 0, Size.SMALL, 0, 0),
     BIRTHDAY_GIFT(true, 5, 0, 5, 0, Size.SMALL, 4, 24000),
     PET_KINDNESS(true, 1, 0, 1, 0, Size.SMALL, 1, 24000),
+    /** Bringing a lost or stolen stable horse home; once a day per horse, so leading one out and back earns nothing. */
+    RETURNED_HORSE(true, 10, 0, 10, 0, Size.NOTABLE, 6, 24000),
     /** Vanilla already prices hitting a villager (VILLAGER_HURT gossip), so this adds nothing to prices. */
     HIT_RESIDENT(false, -10, -3, -25, 7, Size.NOTABLE, 0, 1200),
     KNOCKED_OUT_RESIDENT(false, -30, 0, -30, 14, Size.BIG, -20, 0),
@@ -34,7 +36,9 @@ public enum DeedKind {
     KILLED_PET(false, -40, 0, -40, 14, Size.BIG, -25, 0),
     BROKE_HOME(false, -10, 0, -10, 7, Size.NOTABLE, -8, 24000),
     /** {@code count} is the number of items taken: -1 more per 8 items. */
-    STOLE(false, -10, 0, -30, 10, Size.NOTABLE, -10, 24000);
+    STOLE(false, -10, 0, -30, 10, Size.NOTABLE, -10, 24000),
+    /** Riding or leading a resident's or the village's horse far from its stall. */
+    STOLE_HORSE(false, -25, 0, -25, 14, Size.NOTABLE, -15, 0);
 
     /** How far word travels: small deeds are told person to person, big ones become village news. */
     public enum Size { SMALL, NOTABLE, BIG }
@@ -58,7 +62,7 @@ public enum DeedKind {
     }
     public boolean big() { return size == Size.BIG; }
     /** Violence (anger in a witness's bubble) as opposed to breaking or taking things (gloom). */
-    public boolean violent() { return !good && this != BROKE_HOME && this != STOLE; }
+    public boolean violent() { return !good && this != BROKE_HOME && this != STOLE && this != STOLE_HORSE; }
 
     /**
      * What a deed done {@code count} times (or with {@code count} raiders, or items) is worth, in tenths.

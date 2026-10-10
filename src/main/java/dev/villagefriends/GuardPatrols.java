@@ -147,10 +147,12 @@ public final class GuardPatrols {
     }
     /** Followers keep a pace behind the leader, side by side. */
     private static void follow(Villager v, Villager leader, int slot) {
-        if (v.distanceToSqr(leader) < 2.5 * 2.5) return;
+        // Horses are wider than people: mounted followers keep wider gaps.
+        double gap = dev.villagefriends.stable.ride.Mounts.spacing(v);
+        if (v.distanceToSqr(leader) < 2.5 * gap * 2.5 * gap) return;
         var facing = Vec3.directionFromRotation(0, leader.getYRot());
-        var side = new Vec3(-facing.z, 0, facing.x).scale(slot % 2 == 1 ? 1.3 : -1.3);
-        var spot = leader.position().subtract(facing.scale(1.8)).add(side);
+        var side = new Vec3(-facing.z, 0, facing.x).scale(slot % 2 == 1 ? 1.3 * gap : -1.3 * gap);
+        var spot = leader.position().subtract(facing.scale(1.8 * gap)).add(side);
         ResidentRoutines.walk(v, BlockPos.containing(spot), v.distanceToSqr(leader) > 12 * 12 ? .7F : .55F, 1);
     }
     /** A guard without a partner tonight keeps watch at the bell. */

@@ -91,6 +91,7 @@ public final class VillageFriends implements ModInitializer {
         dev.villagefriends.home.Homes.register();
         dev.villagefriends.homestead.Homesteads.register();
         dev.villagefriends.hearth.Hearth.register();
+        dev.villagefriends.stable.Stablehand.register();
         net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry.register(net.minecraft.world.entity.EntityTypes.VILLAGER,
                 Villager.createAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE, 1).add(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_KNOCKBACK, 0));
         ServerEntityEvents.ENTITY_LOAD.register((entity, level) -> dev.villagefriends.pet.VillagerPets.loaded(entity));

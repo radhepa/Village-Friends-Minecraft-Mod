@@ -195,11 +195,14 @@ public final class CompanionController {
         if (reward) reward(v, p, 8);
     }
     private static void releaseHere(Villager v, ServerPlayer p) {
+        dev.villagefriends.stable.ride.Mounts.dismount(v);
         GuardController.unload(v);
         var s = state(v); outings.remove(v.getUUID()); v.getNavigation().stop(); v.setNoAi(s.originalNoAi()); state(v, CompanionState.NONE);
         if (target(p).getAttachedOrElse(VillageFriends.PARTY, "").equals(profile(v).id())) target(p).setAttached(VillageFriends.PARTY, "");
     }
     public static void returnHome(Villager v, ServerPlayer p, boolean record) {
+        // Off the horse first: a teleported passenger snaps back to its vehicle.
+        dev.villagefriends.stable.ride.Mounts.dismount(v);
         GuardController.unload(v);
         var s = state(v); if (!s.active()) return;
         if (s.downed()) {
@@ -278,6 +281,8 @@ public final class CompanionController {
                 return;
             }
         }
+        // A companion rides along on a spare horse when the player rides.
+        if (dev.villagefriends.stable.ride.Mounts.companion(v, p, level, s.mode())) return;
         if (s.mode().equals("wait") || s.mode().equals("picnic")) { v.getNavigation().stop(); return; }
         v.getLookControl().setLookAt(p, 30, 30);
         if (v.tickCount % 10 == 0) {

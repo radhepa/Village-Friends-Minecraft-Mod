@@ -58,6 +58,7 @@ public final class TalkWorld {
         if (!level.getEntitiesOfClass(Cat.class, v.getBoundingBox().inflate(10), g -> g.isAlive()).isEmpty()) extra.add("cat");
         if (!level.getEntitiesOfClass(WanderingTrader.class, v.getBoundingBox().inflate(32), g -> g.isAlive()).isEmpty()) extra.add("trader");
         if (!level.getEntitiesOfClass(Villager.class, v.getBoundingBox().inflate(12), o -> o != v && o.isBaby()).isEmpty()) extra.add("children");
+        if (dev.villagefriends.stable.yard.StableSites.horsesNear(v)) extra.add("horses");
         // A couple of things they remember about you, for callbacks.
         var remembered = new ArrayList<String>();
         for (var flag : b.flags()) if (flag.startsWith("a:")) remembered.add(flag);

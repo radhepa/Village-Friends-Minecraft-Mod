@@ -1,0 +1,154 @@
+{
+  "gear": [
+    {
+      "id": "caparison",
+      "kind": "barding",
+      "slot": "body",
+      "animals": [
+        "horse"
+      ],
+      "defense": 2,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 15,
+      "repair": "minecraft:wool",
+      "dyeable": true,
+      "undyed": -6537410,
+      "columns": 0,
+      "bond_ride": 1.0,
+      "calm": 0
+    },
+    {
+      "id": "leather_barding",
+      "kind": "barding",
+      "slot": "body",
+      "animals": [
+        "horse"
+      ],
+      "defense": 4,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 15,
+      "repair": "minecraft:repairs_leather_armor",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 0,
+      "bond_ride": 1.0,
+      "calm": 0
+    },
+    {
+      "id": "mail_barding",
+      "kind": "barding",
+      "slot": "body",
+      "animals": [
+        "horse"
+      ],
+      "defense": 6,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 12,
+      "repair": "minecraft:repairs_chain_armor",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 0,
+      "bond_ride": 1.0,
+      "calm": 0
+    },
+    {
+      "id": "plate_barding",
+      "kind": "barding",
+      "slot": "body",
+      "animals": [
+        "horse"
+      ],
+      "defense": 10,
+      "toughness": 2,
+      "knockback": 0.1,
+      "enchantability": 9,
+      "repair": "minecraft:repairs_iron_armor",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 0,
+      "bond_ride": 1.0,
+      "calm": 0
+    },
+    {
+      "id": "saddlebags",
+      "kind": "tack",
+      "slot": "saddle",
+      "animals": [
+        "horse"
+      ],
+      "defense": 0,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 0,
+      "repair": "",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 2,
+      "bond_ride": 1.0,
+      "calm": 0
+    },
+    {
+      "id": "bridle",
+      "kind": "tack",
+      "slot": "saddle",
+      "animals": [
+        "horse",
+        "donkey",
+        "mule"
+      ],
+      "defense": 0,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 0,
+      "repair": "",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 0,
+      "bond_ride": 1.5,
+      "calm": 1
+    },
+    {
+      "id": "pack_saddle",
+      "kind": "tack",
+      "slot": "saddle",
+      "animals": [
+        "donkey",
+        "mule"
+      ],
+      "defense": 0,
+      "toughness": 0,
+      "knockback": 0,
+      "enchantability": 0,
+      "repair": "",
+      "dyeable": false,
+      "undyed": 0,
+      "columns": 5,
+      "bond_ride": 1.0,
+      "calm": 0
+    }
+  ],
+  "lance": {
+    "id": "jousting_lance",
+    "material": "iron",
+    "attack_duration": 1.25,
+    "damage_multiplier": 1.6,
+    "delay": 0.75,
+    "dismount_time": 3.0,
+    "dismount_threshold": 9.0,
+    "knockback_time": 8.0,
+    "knockback_threshold": 7.0,
+    "damage_time": 10.0,
+    "damage_threshold": 7.0,
+    "reach": [
+      2.0,
+      5.0,
+      2.0,
+      7.0,
+      0.125,
+      0.5
+    ]
+  }
+}

@@ -172,7 +172,7 @@ public final class GuardController {
             c.called = foe.getUUID(); c.calledUntil = now + GuardPolicy.ANGER_TICKS; c.retryAfter = 0;
             if (c.foe == null || priority(foe) < priority(c.foe)) {
                 // Off at once, not on the next scan.
-                c.foe = foe; guard.stopSleeping(); guard.getNavigation().moveTo(foe, speed(c, now));
+                c.foe = foe; guard.stopSleeping(); guard.getNavigation().moveTo(foe, speed(c, now) * dev.villagefriends.stable.ride.Mounts.pace(guard));
             }
         }
     }
@@ -278,7 +278,7 @@ public final class GuardController {
         if (archer(v)) ranged(v, c, level, stationary);
         else {
             if (stationary) v.getNavigation().stop();
-            else if (now % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, now));
+            else if (now % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, now) * dev.villagefriends.stable.ride.Mounts.pace(v));
             if (now >= c.nextAttack && v.hasLineOfSight(c.foe) && v.isWithinMeleeAttackRange(c.foe)) {
                 v.swingForAttack(InteractionHand.MAIN_HAND); c.nextAttack = now + 20;
                 if (v.doHurtTarget(level, c.foe)) {
@@ -307,7 +307,7 @@ public final class GuardController {
                 if (level.hasChunkAt(net.minecraft.core.BlockPos.containing(away))) v.getNavigation().moveTo(away.x, away.y, away.z, .8);
             }
         } else if (distance > 144 || !v.hasLineOfSight(c.foe)) {
-            if (level.getGameTime() % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, level.getGameTime()));
+            if (level.getGameTime() % 10 == 0) v.getNavigation().moveTo(c.foe, speed(c, level.getGameTime()) * dev.villagefriends.stable.ride.Mounts.pace(v));
         } else v.getNavigation().stop();
         if (distance > 256 || !v.hasLineOfSight(c.foe) || !safeShot(v, c.foe, level)) { v.stopUsingItem(); return; }
         if (level.getGameTime() < c.nextAttack) return;

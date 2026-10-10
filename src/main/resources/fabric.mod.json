@@ -7,10 +7,10 @@
   "authors": ["minal"],
   "license": "MIT",
   "environment": "*",
-  "mixins": ["villagefriends.mixins.json", {"config": "villagefriends.client.mixins.json", "environment": "client"}],
+  "mixins": ["villagefriends.mixins.json", {"config": "villagefriends.client.mixins.json", "environment": "client"}, "villagefriends.stablehand.mixins.json", {"config": "villagefriends.stablehand.client.mixins.json", "environment": "client"}],
   "entrypoints": {
     "main": ["dev.villagefriends.VillageFriends"],
-    "client": ["dev.villagefriends.client.VillageFriendsClient", "dev.villagefriends.client.NoticeBoardClient", "dev.villagefriends.client.HearthClient"]
+    "client": ["dev.villagefriends.client.VillageFriendsClient", "dev.villagefriends.client.NoticeBoardClient", "dev.villagefriends.client.HearthClient", "dev.villagefriends.stable.client.StablehandClient"]
   },
   "depends": {
     "fabricloader": ">=0.19.5",
@@ -20,6 +20,7 @@
   },
   "suggests": {
     "turningseasons": "*",
-    "nsvmobs": "*"
+    "nsvmobs": "*",
+    "villagefriends_rpg": "*"
   }
 }

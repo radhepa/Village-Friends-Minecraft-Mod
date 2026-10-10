@@ -135,7 +135,7 @@ public final class Routine {
     }
     /** Outdoor trades keep going through ordinary rain. */
     public static boolean hardy(String job) {
-        return switch (job) { case "farmer", "shepherd", "fisherman", "knight", "archer", "mason" -> true; default -> false; };
+        return switch (job) { case "farmer", "shepherd", "fisherman", "knight", "archer", "mason", "stablehand" -> true; default -> false; };
     }
 
     /** How much a personality likes company, from -1 (keeps to themselves) to 2 (never misses a night out). */

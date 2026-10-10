@@ -1,0 +1,331 @@
+{
+  "breeds": [
+    {
+      "id": "destrier",
+      "name": "Destrier",
+      "health": [
+        26,
+        34
+      ],
+      "speed": [
+        0.2,
+        0.26
+      ],
+      "jump": [
+        0.55,
+        0.75
+      ],
+      "spawns": [
+        {
+          "biome": "plains",
+          "weight": 1
+        }
+      ],
+      "extra_spawns": [],
+      "markings": [
+        "none",
+        "white"
+      ],
+      "coats": 1,
+      "village": [
+        "plains"
+      ]
+    },
+    {
+      "id": "palfrey",
+      "name": "Palfrey",
+      "health": [
+        20,
+        26
+      ],
+      "speed": [
+        0.24,
+        0.3
+      ],
+      "jump": [
+        0.6,
+        0.8
+      ],
+      "spawns": [
+        {
+          "biome": "plains",
+          "weight": 4
+        },
+        {
+          "biome": "meadow",
+          "weight": 3
+        },
+        {
+          "biome": "forest",
+          "weight": 2
+        }
+      ],
+      "extra_spawns": [],
+      "markings": [
+        "white",
+        "white_field"
+      ],
+      "coats": 1,
+      "village": [
+        "plains"
+      ]
+    },
+    {
+      "id": "courser",
+      "name": "Courser",
+      "health": [
+        16,
+        22
+      ],
+      "speed": [
+        0.29,
+        0.3375
+      ],
+      "jump": [
+        0.7,
+        0.95
+      ],
+      "spawns": [
+        {
+          "biome": "plains",
+          "weight": 2
+        },
+        {
+          "biome": "savanna",
+          "weight": 2
+        }
+      ],
+      "extra_spawns": [],
+      "markings": [
+        "none",
+        "white_dots"
+      ],
+      "coats": 1,
+      "village": [
+        "plains",
+        "savanna"
+      ]
+    },
+    {
+      "id": "rouncey",
+      "name": "Rouncey",
+      "health": [
+        18,
+        26
+      ],
+      "speed": [
+        0.2,
+        0.27
+      ],
+      "jump": [
+        0.55,
+        0.8
+      ],
+      "spawns": [
+        {
+          "biome": "plains",
+          "weight": 5
+        },
+        {
+          "biome": "forest",
+          "weight": 3
+        },
+        {
+          "biome": "any",
+          "weight": 3
+        }
+      ],
+      "extra_spawns": [],
+      "markings": [
+        "none",
+        "white",
+        "white_field",
+        "white_dots",
+        "black_dots"
+      ],
+      "coats": 1,
+      "village": [
+        "plains",
+        "taiga"
+      ]
+    },
+    {
+      "id": "draft",
+      "name": "Draft Horse",
+      "health": [
+        28,
+        36
+      ],
+      "speed": [
+        0.15,
+        0.2
+      ],
+      "jump": [
+        0.4,
+        0.55
+      ],
+      "spawns": [
+        {
+          "biome": "plains",
+          "weight": 1
+        },
+        {
+          "biome": "forest",
+          "weight": 1
+        },
+        {
+          "biome": "taiga",
+          "weight": 1
+        }
+      ],
+      "extra_spawns": [],
+      "markings": [
+        "none",
+        "white"
+      ],
+      "coats": 1,
+      "village": [
+        "plains",
+        "taiga",
+        "snowy"
+      ]
+    },
+    {
+      "id": "desert",
+      "name": "Desert Horse",
+      "health": [
+        16,
+        22
+      ],
+      "speed": [
+        0.28,
+        0.34
+      ],
+      "jump": [
+        0.65,
+        0.9
+      ],
+      "spawns": [
+        {
+          "biome": "desert",
+          "weight": 5
+        },
+        {
+          "biome": "badlands",
+          "weight": 3
+        }
+      ],
+      "extra_spawns": [
+        {
+          "biome": "desert",
+          "weight": 2,
+          "min": 2,
+          "max": 3
+        },
+        {
+          "biome": "badlands",
+          "weight": 1,
+          "min": 2,
+          "max": 3
+        }
+      ],
+      "markings": [
+        "none"
+      ],
+      "coats": 1,
+      "village": [
+        "desert"
+      ]
+    },
+    {
+      "id": "steppe_pony",
+      "name": "Steppe Pony",
+      "health": [
+        20,
+        26
+      ],
+      "speed": [
+        0.22,
+        0.28
+      ],
+      "jump": [
+        0.75,
+        1.0
+      ],
+      "spawns": [
+        {
+          "biome": "savanna",
+          "weight": 4
+        },
+        {
+          "biome": "windswept",
+          "weight": 4
+        }
+      ],
+      "extra_spawns": [
+        {
+          "biome": "windswept",
+          "weight": 2,
+          "min": 2,
+          "max": 4
+        }
+      ],
+      "markings": [
+        "none",
+        "black_dots"
+      ],
+      "coats": 1,
+      "village": [
+        "savanna"
+      ]
+    },
+    {
+      "id": "fjord",
+      "name": "Fjord Horse",
+      "health": [
+        22,
+        28
+      ],
+      "speed": [
+        0.18,
+        0.24
+      ],
+      "jump": [
+        0.6,
+        0.8
+      ],
+      "spawns": [
+        {
+          "biome": "taiga",
+          "weight": 4
+        },
+        {
+          "biome": "snowy",
+          "weight": 4
+        }
+      ],
+      "extra_spawns": [
+        {
+          "biome": "taiga",
+          "weight": 2,
+          "min": 2,
+          "max": 4
+        },
+        {
+          "biome": "snowy",
+          "weight": 1,
+          "min": 2,
+          "max": 3
+        }
+      ],
+      "markings": [
+        "none"
+      ],
+      "coats": 1,
+      "village": [
+        "taiga",
+        "snowy"
+      ]
+    }
+  ]
+}

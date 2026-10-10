@@ -44,6 +44,8 @@ public abstract class VillagerCompanionMixin {
         if (Knockouts.drive(villager, level)) ci.cancel();
         else if (CompanionController.state(villager).active()) { CompanionController.drive(villager, level); ci.cancel(); }
         else if (GuardController.drive(villager, level, false)) ci.cancel();
+        // A caravan guard on horseback is steered by whoever seated them; the brain must not walk the horse home.
+        else if (dev.villagefriends.stable.ride.Mounts.caravan(villager)) ci.cancel();
         // Running home after seeing a neighbor struck down.
         else if (dev.villagefriends.VillageAlarm.drive(villager, level)) ci.cancel();
         // Children in a game (or tagging along after a player) are moved by the playground.
