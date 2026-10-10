@@ -76,6 +76,7 @@ public final class Talk {
                 if (c.market) w.put("baby.market", 2);
                 if (c.topic.equals("chat")) w.put("baby.chat.food", 1);
                 if (c.fill.containsKey("meal")) w.put("meal.eating", 6);
+                if (c.topic.equals("chat") && c.fill.containsKey("legend") && !c.fill.containsKey("tale_caught")) w.put("baby.tale.legend", 1);
                 // A child whose family is short of room talks about the bigger house they asked for.
                 String home = c.fill.get("home_talk");
                 if ("crowded".equals(home) || "homeless".equals(home)) w.put("baby.notice.house", 2);
@@ -99,6 +100,7 @@ public final class Talk {
                 if (c.fill.containsKey("dish")) w.put("chat.food", 2);
                 if (c.fill.containsKey("meal")) w.put("meal.eating", 8);
                 if (c.routine.equals("lunch_tavern") || c.routine.equals("supper_tavern") || c.job.equals("tavern_keeper") || c.job.equals("cook")) w.put("tavern.special", 3);
+                fishing(w, c);
                 w.put(c.level >= 6 ? "chat.close" : c.level <= 1 ? "chat.new" : "chat.friendly", 2);
                 w.put("weather." + c.weather, weather ? 4 : 1);
                 if (c.night()) w.put("moon." + c.moon, 2);
@@ -113,6 +115,7 @@ public final class Talk {
             }
             case "work" -> {
                 w.put("work." + c.job, 7); w.put("station." + c.job, 2); w.put("work.general", 1);
+                if (c.job.equals("fisherman")) { w.put("fishmonger.work", 4); w.put("fishing.chat", 2); }
                 w.put(c.routine.equals("work") ? "work.on" : "work.off", 2);
                 if (weather) w.put("work.weather." + c.weather, 1);
             }
@@ -128,6 +131,27 @@ public final class Talk {
             default -> w.put("chat.general", 1);
         }
         return w;
+    }
+    /**
+     * Tall Tales Fishing: tall tales of legendary fish (more from fishermen and anglers), what they make of a
+     * legend the player has landed, the season's contest and who won it, fishing talk, and the dock.
+     */
+    private static void fishing(Map<String, Integer> w, Context c) {
+        boolean angler = c.job.equals("fisherman") || "fishing".equals(c.fill.get("hobby"));
+        if (c.fill.containsKey("legend")) {
+            if (c.fill.containsKey("tale_caught")) w.put("tale.caught", 3);
+            else {
+                w.put("tale.legend", angler ? 3 : 1); w.put("tale.legend." + c.personality, 1);
+                if (c.job.equals("fisherman")) w.put("tale.legend.fisherman", 3);
+            }
+        }
+        String contest = c.fill.get("contest_when");
+        if (contest != null) w.put(contest.equals("today") ? "contest.today" : "contest.soon", angler ? 4 : 2);
+        String won = c.fill.get("contest_won");
+        if (won != null) w.put(won.equals("player") ? "contest.won.player" : "contest.won.resident", 3);
+        if (angler) w.put("fishing.chat", 3);
+        if (c.fill.containsKey("angling")) w.put("fishing.dock", 8);
+        if (c.fill.containsKey("landed")) w.put("fishing.catch", 5);
     }
     /**
      * A homestead resident's pools, all under their role ({@code pariah.chat}, {@code shepherd.greet.night}...):

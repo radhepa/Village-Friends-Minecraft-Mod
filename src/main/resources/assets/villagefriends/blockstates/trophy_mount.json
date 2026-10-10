@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "villagefriends:block/trophy_mount",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "villagefriends:block/trophy_mount",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "villagefriends:block/trophy_mount",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "villagefriends:block/trophy_mount",
+      "y": 270
+    }
+  }
+}

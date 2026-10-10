@@ -1,0 +1,198 @@
+{
+ "format": 1,
+ "size": [5, 4, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:spruce_planks"
+  },
+  "B": {
+   "id": "minecraft:dark_oak_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "C": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:dark_oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:dark_oak_planks"
+  },
+  "F": {
+   "id": "minecraft:moss_carpet"
+  },
+  "G": {
+   "id": "minecraft:cobblestone"
+  },
+  "H": {
+   "id": "minecraft:dirt_path"
+  },
+  "I": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "J": {
+   "id": "minecraft:dark_oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:dark_oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "L": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "N": {
+   "id": "minecraft:podzol"
+  },
+  "O": {
+   "id": "minecraft:spruce_pressure_plate",
+   "properties": {
+    "powered": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:dark_oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "Q": {
+   "id": "minecraft:pumpkin"
+  },
+  "R": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:stripped_spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "NHHHN",
+    "MGGGM",
+    "CAAAC",
+    "BEEEB",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "BEEEB",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "BEEEB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "I...Q",
+    "I...S",
+    "D..RP",
+    "BF..B",
+    "D..FD",
+    "D...D",
+    "D...D",
+    "B...B",
+    "D...D",
+    "D...D",
+    "D...D",
+    "B...B"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "I....",
+    "....O",
+    "...O.",
+    "B...B",
+    ".....",
+    ".....",
+    ".....",
+    "B...B",
+    ".....",
+    ".....",
+    "L...L",
+    "B...B"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "F...F",
+    ".....",
+    ".....",
+    ".....",
+    "F...F",
+    ".....",
+    ".....",
+    "J...J",
+    "K...K"
+   ]
+  }
+ ],
+ "block_entities": [],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/docks.py",
+  "checksum": "82512c3a8c04e296"
+ }
+}

@@ -17,6 +17,6 @@
     "minecraft": "~26.3",
     "java": ">=25",
     "fabric-api": "*",
-    "villagefriends": ">=2.28.0"
+    "villagefriends": ">=2.29.0"
   }
 }

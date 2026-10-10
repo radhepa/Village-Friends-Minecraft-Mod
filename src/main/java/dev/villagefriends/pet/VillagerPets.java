@@ -824,7 +824,9 @@ public final class VillagerPets {
                 }
                 String item = BuiltInRegistries.ITEM.getKey(held.getItem()).toString();
                 boolean first = fondness.treatDay() != today;
-                int gain = !first ? 0 : item.equals(profile.treat()) ? 15 : 10;
+                // Cats and dogs love fish (Tall Tales Fishing): any fish is as good as their favorite.
+                boolean fish = held.is(dev.villagefriends.fishing.FishingApi.TREATS) || held.is(net.minecraft.world.item.Items.COD) || held.is(net.minecraft.world.item.Items.SALMON);
+                int gain = !first ? 0 : item.equals(profile.treat()) || fish ? 15 : 10;
                 var eaten = held.getItem();
                 if (!player.getAbilities().instabuild) held.shrink(1);
                 pet.heal(4);
@@ -834,8 +836,8 @@ public final class VillagerPets {
                 target(pet).setAttached(PROFILE, profile.fondness(player.getUUID(), first ? fondness.add(gain).treated(today) : fondness));
                 if (first) dev.villagefriends.deed.Deeds.petKindness(player, pet);
                 react(pet, profile.cat() ? "tail_up" : "catch", 30);
-                show(player, pet, PetKeeping.treatLine(profile, item, first), first ? "+" + gain + " fondness." : "Treat fondness returns tomorrow.", false,
-                        item.equals(profile.treat()) ? Emote.SPARKLE : Emote.NOTE);
+                show(player, pet, PetKeeping.treatLine(profile, item, first, fish ? held.getHoverName().getString().toLowerCase(java.util.Locale.ROOT) : null),
+                        first ? "+" + gain + " fondness." : "Treat fondness returns tomorrow.", false, item.equals(profile.treat()) || fish ? Emote.SPARKLE : Emote.NOTE);
             }
             default -> show(player, pet, PetKeeping.greeting(random, profile), status(pet, profile), false, null);
         }

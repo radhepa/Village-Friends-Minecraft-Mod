@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:fisherman/brown_trout_emerald",
+    "villagefriends:fisherman/chum",
+    "villagefriends:fisherman/cork_bobber",
+    "villagefriends:fisherman/flounder_emerald",
+    "villagefriends:fisherman/lead_sinker",
+    "villagefriends:fisherman/lobster_emerald",
+    "villagefriends:fisherman/pike_emerald",
+    "villagefriends:fisherman/river_eel_emerald",
+    "villagefriends:fisherman/sea_bass_emerald"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+ "format": 1,
+ "size": [5, 4, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:acacia_planks"
+  },
+  "B": {
+   "id": "minecraft:acacia_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:acacia_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "E": {
+   "id": "minecraft:dark_oak_planks"
+  },
+  "F": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "G": {
+   "id": "minecraft:dirt_path"
+  },
+  "H": {
+   "id": "minecraft:packed_mud"
+  },
+  "I": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "J": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "L": {
+   "id": "minecraft:acacia_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "N": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:mud_bricks"
+  },
+  "P": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "west",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "R": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "S": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "MGGGM",
+    "OHHHO",
+    "BAAAB",
+    "DEEED",
+    "BAAAB",
+    "BAAAB",
+    "BAAAB",
+    "DEEED",
+    "BAAAB",
+    "BAAAB",
+    "BAAAB",
+    "DEEED"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "Q...P",
+    "R....",
+    "D...D",
+    "C..LK",
+    "C..LK",
+    "C...C",
+    "C...C",
+    "F...F",
+    "C...C",
+    "C...C",
+    "C...C",
+    "F...F"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    "DS..D",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "J...J"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    "DIIID",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "N...N"
+   ]
+  }
+ ],
+ "block_entities": [],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/docks.py",
+  "checksum": "23eb083dab7b1c89"
+ }
+}

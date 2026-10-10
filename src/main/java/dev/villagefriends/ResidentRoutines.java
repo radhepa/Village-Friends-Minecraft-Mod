@@ -97,7 +97,7 @@ public final class ResidentRoutines {
         String playing = Playground.doing(v);
         if (playing != null) return playing;
         var plan = plan(v); String own = dev.villagefriends.homestead.Homesteads.doing(v, plan);
-        return dev.villagefriends.hearth.HomeMeals.doing(v, own != null ? own : Taverns.doing(v, plan.label()));
+        return dev.villagefriends.fishing.DockAnglers.doing(v, dev.villagefriends.hearth.HomeMeals.doing(v, own != null ? own : Taverns.doing(v, plan.label())));
     }
 
     // -- applying it -------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ public final class ResidentRoutines {
         // Riders keep their routine (Stablehand steers the horse through them), except caravan guards, whom only their caller steers.
         if (v.isNoAi() || v.isPassenger() && !Seat.seated(v) && !dev.villagefriends.stable.ride.Mounts.mounted(v) || CompanionController.state(v).active() || CompanionController.hasActivity(v)
                 || GuardController.fighting(v) || VillageAlarm.fleeing(v) || v.isTrading() || dev.villagefriends.stable.ride.Mounts.caravan(v)) { routine.villagefriends$routine(null, true); return; }
-        var activity = Taverns.activity(v, activity(v, level, plan.block()));
+        var activity = dev.villagefriends.fishing.DockAnglers.activity(v, Taverns.activity(v, activity(v, level, plan.block())));
         routine.villagefriends$routine(activity, plan.block().sleep);
         var current = brain.getActiveNonCoreActivity().orElse(Activity.IDLE);
         if (duty) {
@@ -138,6 +138,8 @@ public final class ResidentRoutines {
         if (Taverns.update(v, level, plan)) return;
         // Back home for a meal, they eat a real dish (Hearth & Harvest); birthday guests eat the cake.
         if (dev.villagefriends.hearth.HomeMeals.update(v, level, plan)) return;
+        // Fishermen work the village dock in the morning, anglers fish in their free time (Tall Tales Fishing).
+        if (dev.villagefriends.fishing.DockAnglers.update(v, level, plan)) return;
         // Homestead folk stay near home, and the veteran walks the watch round the tower.
         if (dev.villagefriends.homestead.Homesteads.steer(v, level, plan)) return;
         steer(v, level, plan);

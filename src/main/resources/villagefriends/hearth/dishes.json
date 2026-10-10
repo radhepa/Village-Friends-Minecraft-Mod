@@ -1374,6 +1374,116 @@
       ]
     },
     {
+      "id": "jellied_eels",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.7,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "fisherman",
+        "steadfast"
+      ]
+    },
+    {
+      "id": "crayfish_boil",
+      "station": "pot",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 8,
+      "saturation": 0.8,
+      "tier": 2,
+      "buff": 150,
+      "serve": "stew",
+      "vessel": "bowl",
+      "meals": [
+        "supper",
+        "picnic"
+      ],
+      "likes": [
+        "fisherman",
+        "playful"
+      ]
+    },
+    {
+      "id": "stargazy_pie",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 11,
+      "saturation": 0.9,
+      "tier": 3,
+      "buff": 210,
+      "serve": "pie",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "party"
+      ],
+      "likes": [
+        "fisherman",
+        "imaginative"
+      ]
+    },
+    {
+      "id": "pickled_herring",
+      "station": "prep",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 6,
+      "saturation": 0.6,
+      "tier": 1,
+      "buff": 120,
+      "serve": "platter",
+      "vessel": "bottle",
+      "meals": [
+        "winter",
+        "lunch"
+      ],
+      "likes": [
+        "fisherman",
+        "meticulous"
+      ]
+    },
+    {
+      "id": "herb_grilled_trout",
+      "station": "oven",
+      "existing": false,
+      "ingredient": false,
+      "secret": false,
+      "needs": null,
+      "food": 9,
+      "saturation": 0.9,
+      "tier": 2,
+      "buff": 180,
+      "serve": "platter",
+      "vessel": "-",
+      "meals": [
+        "supper",
+        "tavern"
+      ],
+      "likes": [
+        "fisherman",
+        "adventurous"
+      ]
+    },
+    {
       "id": "trencher_roast",
       "station": "prep",
       "existing": false,

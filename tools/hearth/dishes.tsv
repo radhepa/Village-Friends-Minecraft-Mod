@@ -74,6 +74,11 @@ roast_potatoes	Garlic Roast Potatoes	oven	potato*2;garlic;herbs	-	1	10	7	0.6	1	1
 herb_omelette	Herb Omelette	oven	egg*2;herbs;cheese	-	1	9	7	0.7	1	110	platter	breakfast	meticulous,curious	-	Eggs baked flat with herbs and cheese.
 honey_wafers	Honey Wafers	oven	flour;honey_bottle;egg	-	2	9	3	0.4	1	90	tart	party,picnic	child,bard,playful	-	Thin, crisp wafers pressed with a honeycomb pattern.
 smoked_fish	Smoked Fish	oven	#fish*2;herbs	-	2	12	6	0.7	1	120	platter	winter,lunch	fisherman,steadfast	-	Smoked slow over the oven fire. It keeps all winter.
+jellied_eels	Jellied Eels	pot	villagefriends:river_eel*2;herbs;onion	bowl	1	12	8	0.7	2	150	stew	supper,tavern	fisherman,steadfast	-	Eel stewed with herbs and set in its own jelly. A riverside favourite.
+crayfish_boil	Crayfish Boil	pot	villagefriends:crayfish*3;garlic;leek	bowl	1	10	8	0.8	2	150	stew	supper,picnic	fisherman,playful	-	A steaming bowl of red crayfish with garlic and leek. Messy and wonderful.
+stargazy_pie	Stargazy Pie	oven	pastry;villagefriends:sardine*3;egg;potato	-	1	15	11	0.9	3	210	pie	supper,party	fisherman,imaginative	-	Little fish poke their heads up through the crust to look at the stars.
+pickled_herring	Pickled Herring	prep	villagefriends:herring*2;onion;sugar	bottle	2	6	6	0.6	1	120	platter	winter,lunch	fisherman,meticulous	-	Herring rolled up with onion in a sweet-sour pickle. It keeps all winter.
+herb_grilled_trout	Herb-Grilled Trout	oven	#villagefriends:fishing/trout;herbs;butter	-	1	10	9	0.9	2	180	platter	supper,tavern	fisherman,adventurous	-	A whole trout baked with butter and kitchen herbs.
 trencher_roast	Trencher of Roast Beef	prep	trencher;cooked_beef;onion	-	1	4	10	0.8	2	150	platter	supper,tavern	knight,butcher,protective	-	Roast beef and onions on a trencher. Eat the plate, too.
 trencher_cheese	Cheese and Herb Trencher	prep	trencher;cheese;herbs	-	1	3	7	0.6	1	110	platter	lunch	thoughtful,reserved	-	Soft cheese and green herbs on a trencher.
 trencher_mushroom	Mushroom Trencher	prep	trencher;brown_mushroom;garlic;butter	-	1	3	7	0.6	1	110	platter	lunch	curious,imaginative	-	Buttery garlic mushrooms soaking into the bread.

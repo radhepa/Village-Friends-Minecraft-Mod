@@ -10,7 +10,7 @@ public enum Skill {
     WOODCUTTING("Woodcutting", "Chop logs with an axe"),
     EXCAVATION("Excavation", "Dig dirt, sand and gravel with a shovel"),
     FARMING("Farming", "Harvest ripe crops"),
-    FISHING("Fishing", "Catch fish"),
+    FISHING("Fishing", "Catch fish (rarer fish and perfect catches teach more)"),
     HUSBANDRY("Husbandry", "Breed animals and hunt livestock"),
     ATHLETICS("Athletics", "Sprint"),
     SWIMMING("Swimming", "Swim"),
@@ -35,7 +35,7 @@ public enum Skill {
             case WOODCUTTING -> pct(Balance.TOOL_SPEED * s) + " axe speed, " + chance(Balance.WOOD_DOUBLE * s) + " double log";
             case EXCAVATION -> pct(Balance.TOOL_SPEED * s) + " shovel speed, " + chance(Balance.DIG_FIND * s) + " buried find";
             case FARMING -> chance(Balance.FARM_EXTRA * s) + " extra harvest";
-            case FISHING -> "+" + num(Balance.FISH_LUCK * s) + " luck";
+            case FISHING -> "+" + num(Balance.FISH_LUCK * s) + " luck, " + pct(Balance.FISH_REEL * s) + " reel speed";
             case HUSBANDRY -> chance(Balance.HUSBANDRY_EXTRA * s) + " extra meat, hide or wool";
             case ATHLETICS -> pct(Balance.ATHLETICS_SPEED * s) + " move speed, " + pct(-Balance.ATHLETICS_HUNGER * s) + " sprint hunger";
             case SWIMMING -> "+" + num(Balance.SWIM_EFFICIENCY * s) + " water speed, +" + num(Balance.SWIM_BREATH * s) + " breath";

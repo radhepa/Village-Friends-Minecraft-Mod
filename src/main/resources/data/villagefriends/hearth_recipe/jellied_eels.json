@@ -1,0 +1,15 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:river_eel",
+    "villagefriends:river_eel",
+    "villagefriends:herbs",
+    "villagefriends:onion"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:jellied_eels",
+    "count": 1
+  },
+  "time": 240
+}

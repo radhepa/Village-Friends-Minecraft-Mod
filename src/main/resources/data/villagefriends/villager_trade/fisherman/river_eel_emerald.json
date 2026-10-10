@@ -1,0 +1,13 @@
+{
+  "wants": {
+    "id": "villagefriends:river_eel",
+    "count": 3
+  },
+  "gives": {
+    "id": "minecraft:emerald",
+    "count": 1
+  },
+  "max_uses": 16,
+  "xp": 8,
+  "reputation_discount": 0.05
+}

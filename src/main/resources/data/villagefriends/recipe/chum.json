@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#villagefriends:fishing/edible",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "villagefriends:chum",
+    "count": 4
+  }
+}

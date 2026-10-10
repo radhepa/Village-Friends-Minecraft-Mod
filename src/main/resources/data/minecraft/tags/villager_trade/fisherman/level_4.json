@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:fisherman/sturgeon_emerald",
+    "villagefriends:fisherman/swordfish_emerald",
+    "villagefriends:fisherman/treasure_hook",
+    "villagefriends:fisherman/trophy_mount"
+  ]
+}

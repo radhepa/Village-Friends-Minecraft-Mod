@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+  <title id="title">Village Friends</title>
+  <desc id="desc">A village worth coming home to. An illustrated timber cottage with glowing windows sits among trees and wildflowers beneath a warm evening sky.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#203c37"/><stop offset="1" stop-color="#3e6250"/></linearGradient>
+    <linearGradient id="window" x2="0" y2="1"><stop stop-color="#ffe0a0"/><stop offset="1" stop-color="#db9b58"/></linearGradient>
+    <g id="star" fill="#e6c38b"><path d="M0-5h3v3h3v3H3v3H0V1h-3v-3h3z"/></g>
+    <g id="flower"><path d="M0 0v14m0-5h-5" fill="none" stroke="#91a174" stroke-width="3"/><path d="M-4-4h8v8h-8z" fill="#efc984"/><path d="M-1-1h2v2h-2z" fill="#97684e"/></g>
+    <g id="pine"><path d="M-5 0h10v96H-5z" fill="#685747"/><path d="M0-80l-38 54h17l-33 45h23l-38 51H69L31 19h23L21-26h17z" fill="#284b40"/><path d="M0-80v150H69L31 19h23L21-26h17z" fill="#213e37"/></g>
+  </defs>
+  <rect width="1280" height="440" rx="16" fill="url(#sky)"/>
+  <rect x="14" y="14" width="1252" height="412" rx="8" fill="none" stroke="#b4c093" stroke-opacity=".25"/>
+  <circle cx="1074" cy="97" r="43" fill="#ebcc93"/>
+  <circle cx="1058" cy="84" r="40" fill="#28463e"/>
+  <g opacity=".8"><use href="#star" x="750" y="58"/><use href="#star" x="972" y="43"/><use href="#star" x="1178" y="144"/><use href="#star" x="842" y="106"/></g>
+  <path d="M670 285l70-55 47 15 76-54 62 42 70-35 79 39 58-27 148 71v145H670z" fill="#3d5949"/>
+  <path d="M630 336l112-33 100 29 80-25 100 17 94-29 164 34v97H630z" fill="#536a50"/>
+  <use href="#pine" transform="translate(766 278) scale(.75)"/>
+  <use href="#pine" transform="translate(1208 244) scale(1.05)"/>
+  <use href="#pine" transform="translate(1138 274) scale(.65)"/>
+  <g shape-rendering="crispEdges">
+    <path d="M823 258h275v103H823z" fill="#cfb890"/>
+    <path d="M968 258h130v103H968z" fill="#bba27c"/>
+    <path d="M838 243h16v118h-16zm102 0h13v118h-13zm142 0h16v118h-16z" fill="#655346"/>
+    <path d="M813 350h295v15H813z" fill="#777361"/>
+    <path d="M823 284h275v8H823z" fill="#82674e"/>
+    <path d="M844 203h235v-14h-15v-13h-17v-13H875v13h-16v13h-15z" fill="#ad7154"/>
+    <path d="M798 261h319v-14h-16v-15h-18v-14h-18v-14H850v14h-18v14h-17v15h-17z" fill="#a2644f"/>
+    <path d="M807 261h307v10H807z" fill="#584b40"/>
+    <path d="M857 219h212v6H857zm-25 24h260v5H832z" fill="#bc7c59"/>
+    <path d="M1021 148h24v53h-24z" fill="#867f6c"/><path d="M1017 143h32v10h-32z" fill="#a69c83"/>
+    <path d="M866 279h52v52h-52z" fill="#635346"/><path d="M872 285h40v40h-40z" fill="url(#window)"/>
+    <path d="M890 282h4v45h-4zm-18 20h40v4h-40z" fill="#826342"/>
+    <path d="M1006 279h48v52h-48z" fill="#635346"/><path d="M1012 285h36v40h-36z" fill="url(#window)"/>
+    <path d="M1028 283h4v45h-4zm-16 19h36v4h-36z" fill="#826342"/>
+    <path d="M954 294h36v62h-36z" fill="#584a3c"/><path d="M960 301h24v51h-24z" fill="#86674a"/><path d="M977 325h4v4h-4z" fill="#eac989"/>
+    <path d="M950 356h45v9h-45zm-6 9h56v7h-56z" fill="#b6aa89"/>
+    <path d="M860 328h64v8h-64z" fill="#89664d"/><path d="M866 325h8v-9h8v9h14v-7h8v7h13v5h-51z" fill="#668354"/>
+    <path d="M877 313h7v7h-7zm23 2h7v7h-7z" fill="#d9a186"/>
+  </g>
+  <path d="M963 372c-22 12-48 17-71 30-18 10-22 24-28 38h102c-12-20-11-24 0-35 13-13 29-21 24-33z" fill="#c2ad83"/>
+  <path d="M690 398l42-8 51 14 32-9 38 13-6 32H690zm317 8l37-13 44 8 65-17 45 15 47-10v51h-238z" fill="#304c3e"/>
+  <g opacity=".85"><use href="#flower" x="733" y="385"/><use href="#flower" x="805" y="398"/><use href="#flower" x="1082" y="384"/><use href="#flower" x="1140" y="406"/><use href="#flower" x="1171" y="374"/></g>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#f6ecd6">
+    <text x="70" y="103" font-family="Verdana, sans-serif" font-size="13" letter-spacing="4" fill="#d0b98f">A LITTLE MORE LIFE IN YOUR WORLD</text>
+    <text x="65" y="191" font-size="73" font-weight="bold" letter-spacing="-2">Village Friends</text>
+    <text x="70" y="250" font-size="27" fill="#e4d6ba">A village worth coming home to.</text>
+    <path d="M70 282h66" stroke="#c79e72" stroke-width="3"/>
+    <text x="70" y="321" font-family="Verdana, sans-serif" font-size="15" fill="#c9d0b6">Shared stories. Warm suppers. Familiar faces.</text>
+    <text x="70" y="383" font-family="Verdana, sans-serif" font-size="11" letter-spacing="3" fill="#b6c3a7">MINECRAFT JAVA EDITION  /  FABRIC</text>
+  </g>
+</svg>

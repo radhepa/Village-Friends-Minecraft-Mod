@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:fisherman/barbed_hook",
+    "villagefriends:fisherman/catfish_emerald",
+    "villagefriends:fisherman/glow_bait",
+    "villagefriends:fisherman/halibut_emerald",
+    "villagefriends:fisherman/reinforced_rod",
+    "villagefriends:fisherman/spinner",
+    "villagefriends:fisherman/tuna_emerald",
+    "villagefriends:fisherman/zander_emerald"
+  ]
+}

@@ -1473,6 +1473,90 @@ oHho
                    (loaf, LOAF_CRUST, 0, 6))
 
 
+# -- the angler's catch: Tall Tales Fishing's fish dishes, on the same bowl, pie, jar and board -------
+
+@item('jellied_eels')
+def _():
+    # rounds of eel set in their own grey-green jelly: a pale slice inside a ring of dark skin
+    return bowl("""
+qeWeaqqq
+aAaeaaeWea
+aeWeazaeaa
+qaeaaaqq
+""", {'a': 'A2AE8E', 'A': 'C8D2B4', 'q': '7A886E', 'e': '2E3834', 'W': 'E8E2CC', 'z': 'EEF4DE'})
+
+
+@item('crayfish_boil')
+def _():
+    # a heap of little red crayfish (feelers up, one claw over the rim) with leek in the broth
+    heap = """
+....o....o..
+.....o..o...
+.oo..oeeo...
+oRRooRRRRoo.
+oRroRRrRrRRo
+.ooRrRRrRrRo
+"""
+    return bowl("""
+qqqaaqqq
+aaAaaLlaaa
+aLlaaaaLla
+qqaaLlqq
+""", {'a': 'C86A3A', 'A': 'E08A50', 'q': '9A4A26'},
+                (heap, {'o': '4A140C', 'R': 'E2563A', 'r': 'A82A1C', 'e': '1A0806'}, 2, 1))
+
+
+@item('stargazy_pie')
+def _():
+    # three sardines poke their heads up through the lid to look at the sky; the crust lips round each
+    head = """
+.oo.
+oTto
+oeto
+oTto
+oTto
+dCCd
+"""
+    sardine = merged(GOLDEN, {'o': '3A4E5E', 'T': 'D4E2E8', 't': '86A2B2', 'e': '0E1216'})
+    return pie((head, sardine, 1, 3), (head, sardine, 6, 1), (head, sardine, 11, 3))
+
+
+@item('pickled_herring')
+def _():
+    # rollmops: herring fillets rolled up, silver skin out, in a pale vinegar with red onion rings and dill
+    return jar("""
+VvVaAagG
+VaVsbbbs
+aaaWwwwW
+sbbbsVvV
+WwwwWVaV
+agGaaaaA
+""", {'a': 'E2DCA8', 'A': 'F4F0D2', 's': 'B4C2C8', 'b': '5C6E7E', 'W': 'FFFBEA', 'w': 'E8DCC0',
+      'v': '7E3E6E', 'V': 'B06AA0', 'g': '5E8A3A', 'G': '86B456'})
+
+
+@item('herb_grilled_trout')
+def _():
+    # a whole trout, grill-marked and speckled, a sprig of herbs laid along its back
+    trout = """
+....ooooooo.....
+..ooHHHHgHHHo.oo
+.oHHHHkgHHHgkoHo
+oWeHhhgHhkghhhho
+.opppgpppgpphoho
+..oommmmgmmmo.oo
+....oooooooo....
+"""
+    sprig = """
+.Gg.Gg.
+gGgGgGg
+"""
+    return compose((tavern.BOARD, tavern.OAK, 0, 9),
+                   (trout, {'o': '3E1E0C', 'H': 'F0BC6A', 'h': 'D08C40', 'm': 'A0602A', 'p': 'F2C8A0',
+                            'k': '5A3416', 'g': '6A3412', 'W': 'FFF0C0', 'e': '1A1008'}, 0, 4),
+                   (sprig, {'g': '386E28', 'G': '6CAA44'}, 4, 5))
+
+
 # -- kitchen ingredients ----------------------------------------------------------------------------
 
 @item('flour')

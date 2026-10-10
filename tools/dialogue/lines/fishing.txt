@@ -1,0 +1,281 @@
+# Tall Tales Fishing: tall tales about the legendary fish, the season's fishing contest (day 12 of every season: fishing
+# all day, weigh-in at the tavern at five, the biggest single fish wins), fishing chat, residents fishing at the dock,
+# showing off a fresh catch, and the village fisherman selling the day's fish.
+# Keys: tale.legend(.<personality>), tale.legend.fisherman, baby.tale.legend, tale.caught, contest.soon, contest.today,
+# contest.won.player, contest.won.resident, fishing.chat, fishing.dock, fishing.catch, fishmonger.work.
+# Placeholders: {legend} a legendary fish ("Old Whiskers", "the River King"), {legend_where} where it lives ("the deep sea",
+# "the rivers and lakes of the plains"), {legend_when} when it bites ("on rainy nights", "whenever thunder rolls"),
+# {contest_when} "today"/"tomorrow"/"in 3 days", {winner} a resident's first name, {catch} a fish in lower case ("pike").
+# {legend}, {legend_where}, {legend_when}, {contest_when} and {catch} may begin with a small letter, so they never open a
+# sentence and never follow "a" or "the". Tall tales name no time of day, weather or season of their own: {legend_when} does that.
+
+## tale.legend
+My grandad swore {legend} lives in {legend_where} and only bites {legend_when}. He also swore he once arm-wrestled a bear, so make of that what you will.
+They say {legend} is out there in {legend_where}, waiting. It bites {legend_when}, if it bites at all. Most folk who go looking come home with wet boots and a story.
+My cousin swears she had {legend} on her line out in {legend_where}. Snapped the line, the rod and very nearly her arm. She tells it differently every time, but the arm's always in it. The trick, she says, is to go {legend_when}.
+A fellow at the tavern last night, three ciders in, told everyone {legend} lives in {legend_where} and bites {legend_when}. Then he fell off his stool. I've been thinking about it all day. The fish, not the stool.
+If you ever want to catch {legend}, they say you look in {legend_where}, {legend_when}. And you bring a bigger net than you think. Then a bigger one than that.
+My uncle lost a boot to {legend}. Pulled clean off his foot, he says, out in {legend_where}. He still goes back {legend_when} to look for it. The boot, he says. Nobody believes that either.
+You know the story of {legend}? Lives in {legend_where}. Bites {legend_when}. Has eaten, depending on who's telling it, a goose, a goat or a tax collector.
+My gran would never go near {legend_where} {legend_when}. "That's when {legend} is hungry," she'd say. She went every other time, mind. She was a practical woman.
+A wandering trader swore he'd seen {legend} with his own two eyes, out in {legend_where}. It bites {legend_when}, he said. Then he tried to sell me a lucky spoon, so I'm still weighing it up.
+Some say {legend} is just a story to keep children from wandering off. But my neighbor goes to {legend_where} {legend_when} and comes home pale, and she's not a woman who frightens easily.
+They say {legend} only shows itself {legend_when}, and only to someone with a patient heart and a strong line. That's why nobody in {village} has seen it. We're impatient, and we buy cheap line.
+Every angler in {village} has a theory about {legend}. Mine is that it lives in {legend_where} and bites {legend_when}. Mine is also the right one.
+I heard {legend} is so old it remembers when the mountains were hills. It lives in {legend_where}, rises {legend_when}, and has never once been caught. Not properly.
+The miller's wife says her father fished for {legend} his whole life. He'd go out to {legend_where} {legend_when}, year after year. Hooked it once. Says it looked right at him. Then it left.
+They say if you want {legend}, you wait by {legend_where} {legend_when} and don't say a word. My brother tried it. He lasted about a minute. He's a talker.
+My grandmother used to frighten us with {legend}. "It lives in {legend_where}," she'd say, "and it comes up {legend_when}, looking for children who won't eat their greens." I ate every green I was ever given.
+I don't believe in {legend}. I don't. But I'll tell you this: I don't go near {legend_where} {legend_when}. No reason. I just don't.
+Somebody's grandfather's friend caught {legend} once, or so the story goes. It lives in {legend_where} and bites {legend_when}, he said, and it took four oxen to land it. Then it got away anyway.
+A fish as long as a cart, with eyes like dinner plates. That's {legend}, if you believe the stories. It's meant to lurk in {legend_where} and bite {legend_when}. I believe about half.
+The tavern keeper says {legend} is real. Their grandmother's cousin used to see it in {legend_where} {legend_when}. Of course, the tavern keeper also says the cider's watered down for our own good.
+I'll tell you a secret if you promise not to spread it: {legend} bites {legend_when}. In {legend_where}. Now you know as much as I do, which isn't much.
+My aunt says the trick with {legend} is the bait. Go to {legend_where} {legend_when} with a fresh loaf, a lump of cheese and something you love. It only takes the last one. That's the cruel part.
+Two fishermen had a shouting match over {legend} last Market Day. One said it bites {legend_when}. The other said nonsense, it bites {legend_when}. It took them an hour to notice.
+Folk say {legend} has been swimming in {legend_where} since before {village} had a name. It comes up {legend_when} to see if we're still here. We are. It always looks a bit disappointed.
+You'll hear a lot of nonsense about {legend}. Some say it can talk. Some say it grants wishes. The only bit everyone agrees on is that it bites {legend_when}, somewhere in {legend_where}.
+{neighbor} has been after {legend} since they were small. Off to {legend_where} {legend_when}, regular as the bell. Never caught it. Says the looking is the good part.
+There's a song about {legend}. Fifteen verses, fourteen of them about how big it is. The last one says it lives in {legend_where} and bites {legend_when}, but nobody's ever stayed awake long enough to hear it.
+Half of {village} says {legend} is a bedtime story. The other half go to {legend_where} {legend_when} and sit very still. I know which half has the better stories.
+An old sailor swore to me that {legend} swallowed his whole boat, then spat it back out because it didn't care for his cooking. Lives in {legend_where}, he said. Bites {legend_when}. Avoid his stew.
+My great-grandad's rod still hangs over our hearth, snapped clean in half. He said {legend} did it, out in {legend_where}. He'd only fish for it {legend_when}, and he made the whole family come along for luck.
+The children dare each other to go to {legend_where} {legend_when} and shout for {legend}. None of them ever do. Neither would I, and I'm a grown-up.
+{friend} swears {legend} winked at them from the water in {legend_where}. That's the trouble with fishing {legend_when}: you start seeing things. Or the fish starts winking. One of the two.
+Nobody believes my sister caught a glimpse of {legend}. Mostly because she's my sister. But she does go to {legend_where} {legend_when}, and she does come home with a very funny look on her face.
+The old ones say {legend} isn't a fish at all. It's a wish with fins. It swims in {legend_where} and rises {legend_when}, and only for someone who's stopped hoping it will.
+Ask ten fishermen about {legend} and you'll get ten different stories. Ask them where and when, though, and nine say the same thing: {legend_where}, {legend_when}. The tenth changes the subject.
+The old mason kept a tally on his door, one mark for every time he went after {legend}. Hundreds of marks. He'd go to {legend_where} {legend_when}, just like the stories said. Under the last mark he carved "Nearly."
+They reckon {legend} has outlived every angler who ever tried for it. It sits in {legend_where} and comes up {legend_when}, just to see who's new. Then it goes back down, laughing. Fish can laugh. Ask anyone who's lost one.
+The cleric says there's no such thing as {legend}. But I've noticed the cleric takes a rod to {legend_where} {legend_when}, and nowhere else, ever.
+My mother's people had a saying: "Where {legend} swims, keep your toes in your boots." It swims in {legend_where}, mind, and gets bold {legend_when}. I keep my toes well in.
+The fisherman's dog won't go near {legend_where} {legend_when}. Sits down and whines. Folk say it can smell {legend}. I'd take that dog's word over most people's.
+
+## tale.legend.warmhearted
+I worry about anyone who goes after {legend}. They say it bites {legend_when}, out in {legend_where}. If you go, take a warm scarf and a pie. I'll make the pie.
+My old dad chased {legend} for years. He'd go to {legend_where} {legend_when} and come home soaked and happy, and there'd always be soup on for him. I still make too much soup.
+If you're set on finding {legend}, love, they say you try {legend_where}, {legend_when}. Come and tell me how it went. Even if it went badly. Especially then.
+
+## tale.legend.thoughtful
+I sometimes wonder whether {legend} tells stories about us. "There's an odd little creature who comes to {legend_where} {legend_when} and dangles worms at me." We must seem very strange.
+Every village needs a fish that can't be caught, I think. Ours is {legend}. It's said to live in {legend_where} and rise {legend_when}. The not-catching is the point.
+The tales about {legend} change with every teller, except for two things: {legend_where}, and {legend_when}. When a story holds that still, the truth is usually hiding in it.
+
+## tale.legend.playful
+I'm going to catch {legend}! I've got a plan. Step one: go to {legend_where} {legend_when}. Step two: catch it. Step three: I haven't got that far.
+Race you to {legend_where}! First one to catch {legend} gets bragging rights forever. It only bites {legend_when}, so we've loads of time to argue about the rules.
+I tried to catch {legend} with a cookie on a string. Didn't work. Next time I'm going to {legend_where} {legend_when}, like the old stories say. With two cookies.
+
+## tale.legend.adventurous
+Forget dragons. The beast I want is {legend}. Lives in {legend_where}, bites {legend_when}, and has broken every rod that ever touched it. I've packed three.
+I've chased rumors across half the world, and I still can't shake the one about {legend}. It's out there in {legend_where}, rising {legend_when}. One of these days I'll be waiting for it.
+Every great adventure starts with a tall tale. Mine's {legend}. They say it lives in {legend_where} and bites {legend_when}. That's all I need: a place, a time and a strong line.
+
+## tale.legend.meticulous
+I've written down every story about {legend} I've ever heard. Forty-one so far. Thirty-eight put it in {legend_where}. Thirty-six say it bites {legend_when}. The odd ones out were all told by the same man, at the tavern.
+If you're going after {legend}, do it properly. Go to {legend_where} {legend_when}, with a spare line, a spare hook and a spare pair of socks. The socks are not optional.
+The stories about {legend} are terribly imprecise. "Huge." How huge? In feet, please. All I've managed to pin down is {legend_where} and {legend_when}. It's a start.
+
+## tale.legend.steadfast
+My father went after {legend}, and so did his father. Same place, {legend_where}. Same time, {legend_when}. None of them caught it. I'll be going this year too. Somebody has to keep it honest.
+People come and go with their clever new ideas about {legend}. I'll stick with what my family's always said: {legend_where}, {legend_when}, and a great deal of patience.
+I've sat by {legend_where} {legend_when} more times than I can count, waiting for {legend}. It hasn't come yet. I'm not going anywhere.
+
+## tale.legend.reserved
+...They say {legend} lives in {legend_where}. ...Bites {legend_when}. ...I've been. Twice. I didn't tell anyone. ...Don't tell anyone.
+...I go to {legend_where} sometimes, {legend_when}. ...I saw something big there once. People say it was {legend}. ...I didn't say anything.
+...Everyone talks and talks about {legend}. ...I'd rather just go and look. Quietly. It bites {legend_when}, they say. ...That's all I'll say.
+
+## tale.legend.imaginative
+I think {legend} wears a crown under the water and holds court with all the little fish. It lives in {legend_where}, and {legend_when} it comes up to look at its kingdom from above.
+What if {legend} is dreaming us? Down in {legend_where}, fast asleep, dreaming up a whole village. And {legend_when} it stirs a little, and bites. I'd be careful what you dangle.
+I painted {legend} once, from the stories. Eyes like lanterns, a tail like a sail. They say it lives in {legend_where} and bites {legend_when}, so I wrote that in the corner, very small.
+
+## tale.legend.pragmatic
+I don't hold with tall tales, but if {legend} is real it'd feed half the village for a week. It's meant to bite {legend_when} in {legend_where}. Worth a try on a slow day.
+Plenty of folk say {legend} bites {legend_when}. Plenty say it lives in {legend_where}. That's either a fish or a very popular lie. Either way, take a strong line.
+If you're going after {legend}, don't waste good bait. They say it bites {legend_when} in {legend_where} whatever you put on the hook. I wouldn't know. I've got work.
+
+## tale.legend.curious
+Why does {legend} only bite {legend_when}? Is it shy? Is it hungry? Is it waiting for someone? I've asked everyone in {village} and nobody knows. I'll have to ask the fish.
+How big do you think {legend} really is? Everyone says something different. The only thing they agree on is {legend_where}, {legend_when}. Will you measure it if you catch it? Please?
+I've been collecting stories about {legend}. It lives in {legend_where}, and it bites {legend_when}. But what does it do the rest of the time? Nobody ever thinks to ask that.
+
+## tale.legend.protective
+If you're going to {legend_where} {legend_when} after {legend}, you tell someone first. Me. Tell me. I'll come looking if you're not back by supper.
+I don't like all this talk of {legend}. The young ones hear it bites {legend_when}, and off they go to {legend_where} without a word to anyone. Not on my watch.
+They say {legend} has pulled grown men off their feet. If you go to {legend_where} {legend_when}, plant your boots and never wrap the line round your hand. I mean it.
+
+## tale.legend.gentle
+I hope nobody ever catches {legend}. Isn't it nice, knowing something wild is still out there in {legend_where}, coming up {legend_when} to look around?
+If you do go after {legend}, be kind to it. Something that old deserves kindness. They say it rises {legend_when} in {legend_where}. Say hello for me.
+My grandmother told me about {legend} when I couldn't sleep. How it swims slow circles in {legend_where} and comes up {legend_when} to see the world. I always fell asleep before it saw very much.
+
+## tale.legend.fisherman
+I'll tell you what my old master told me: {legend} lives in {legend_where} and feeds {legend_when}. Everything else you hear is decoration.
+Tall tales are mostly wind, but the ones about {legend} have a bit of water in them. Try {legend_where}, {legend_when}. Use your heaviest line and say goodbye to it in advance.
+Every fisherman worth his salt has lost something to {legend}. I lost a good rod and three days of pride, out in {legend_where}. It bites {legend_when}, if you're asking. You're asking.
+Folk ask me if {legend} is real. I tell them: go to {legend_where} {legend_when}, keep your line tight and your mouth shut, and then you tell me.
+Don't listen to the tavern about {legend}. Listen to the water. It's {legend_where} you want, and {legend_when}. When it's about to bite, you'll know. Everything goes quiet first.
+I've seen the wake of {legend}. Not the fish, just the wake. Like a cart going past underwater. That was in {legend_where}. It bites {legend_when}. Bring patience. Then bring more.
+The trick with {legend} isn't the bait or the rod. It's the hour. Go to {legend_where} {legend_when} and not a minute otherwise. Most folk get bored and leave just before it comes.
+My father had {legend} on the line once. Said it was like trying to pull a church out of {legend_where}. He taught me two things after that: it bites {legend_when}, and never tie a knot you haven't tested.
+Everybody in {village} thinks they know where {legend} is. I actually do: {legend_where}, {legend_when}. I tell everyone. Nobody believes the fisherman. They'd rather believe the drunk.
+A big fish doesn't get old by being stupid, and {legend} has been getting old in {legend_where} longer than anyone remembers. It bites {legend_when}, and it bites like it knows exactly what you're up to.
+
+## baby.tale.legend
+My brother says {legend} lives in {legend_where} and bites {legend_when} and it ate a whole cow! I don't think it ate a whole cow. Maybe half a cow.
+Grandpa says {legend} is as big as a house! It lives in {legend_where}! I'm going to catch it when I'm big. I'll need a really big worm.
+Did you know about {legend}? It only comes out {legend_when}! In {legend_where}! My friend told me. Her uncle saw it. Her uncle sees lots of things.
+I'm not scared of {legend}. Even though it bites {legend_when}. Even though it lives in {legend_where}. I'm not scared. I'm just standing over here.
+When I catch {legend} I'm going to keep it in a bucket. A really big bucket. My sister says it lives in {legend_where}, so I'll have to carry the bucket a long way.
+Mum says {legend} is just a story. But my brother says it bites {legend_when}, and my brother knows everything. He says so.
+I saw {legend}! In my dream. It was swimming in {legend_where} and it waved at me with its fin. Then I woke up and it was breakfast.
+Shh! I'm practicing fishing for {legend}. My cousin says you have to go to {legend_where} {legend_when} and you can't even sneeze.
+
+## tale.caught
+Is it true? {player} caught {legend}? I've been hearing that story my whole life, and now someone's gone and finished it.
+You caught {legend}! My grandad spent forty years trying. He's going to be so proud of you and so cross with himself.
+No. No! You didn't. You caught {legend}? Show me. Show me right now, or I'll never believe it.
+They'll be talking about this in {village} for a hundred years. "That was the year {player} caught {legend}." You're in the stories now.
+I heard you landed {legend}! Half the village thinks you're making it up. The other half are already telling it bigger than it was.
+You've caught {legend}? I don't know whether to cheer or sit down. I think I'll sit down. And then cheer.
+My whole life, {legend} was just a story. Now {player} has gone and caught it. What are we going to frighten the children with now?
+Is it as big as they say? Bigger? You caught {legend}, {player}! I want to hear every bit of it. Start from the first nibble.
+I didn't believe {legend} was real. Then I heard you'd caught it. So now I owe the fisherman an apology and a cider.
+Well, that's that, then. {player} caught {legend}. Every angler in the land will want to buy you a drink and pick your brains.
+You caught {legend}, and the old folk at the tavern are crying into their cider. Happy tears. Mostly. One of them's been after it for fifty years.
+I shook your hand once, {player}. Before you caught {legend}. I'm going to tell everybody that. I knew you before.
+
+## contest.soon
+The fishing contest is {contest_when}! I've been practicing my casting on the washing line. The washing has suffered.
+Have you heard? The season's fishing contest is {contest_when}. Weigh-in at the tavern, and the biggest fish wins.
+The contest's {contest_when}, and I've got a secret bait recipe. I'm not telling you what's in it. It's cheese. Don't tell anyone.
+I can't sleep for thinking about the fishing contest. It's {contest_when}. I keep dreaming about scales. The weighing kind and the fish kind.
+Fishing contest {contest_when}, here in {village}! Suddenly everyone's an expert. Even folk who can't tell a hook from a hairpin.
+The fishing contest is {contest_when}. Last time I came second to a man who caught his fish with a bucket. I'm still not over it.
+I've walked every bit of bank around {village} this week, looking for the best spot for the contest. It's {contest_when}. I've found it. I'm not telling you where.
+There's a fishing contest in {village} {contest_when}. The whole place is buzzing. Even the cats are excited, but that might just be the fish.
+The tavern keeper's already polishing the big scale for the weigh-in. The fishing contest's {contest_when}, and they take it very seriously.
+I traded my old hat for a new hook for the contest {contest_when}. I won't need a hat if I win. I'll need a crown.
+Are you entering the fishing contest? It's {contest_when}. Fish all day, bring your biggest one to the tavern by five, and hope.
+My nerves are terrible. The fishing contest is {contest_when}, and I've told everyone I'm going to win. I should not have told everyone.
+Every season it's the same. The contest comes round, {contest_when} this time, and every angler in {village} goes very quiet and very secretive. Like a lot of herons.
+The fishing contest is {contest_when}. I've been soaking my worms in honey. Don't laugh. My great-aunt swore by it, and she won three times.
+I've been bragging all week about the fishing contest {contest_when}. Now I actually have to catch something. That's the part I forgot about.
+
+## contest.today
+It's the fishing contest today! Fish all day, weigh-in at the tavern at five. I've been at the water since first light.
+Contest day! Don't talk to me, I'm concentrating. ...Fine, talk to me. I haven't had a bite since breakfast.
+Today's the day. Fishing all day, then everyone carries their biggest catch to the tavern at five for the weigh-in. Good luck. Not too much luck, mind.
+The whole village is down at the water today for the fishing contest. You can hear the bobbers plopping from the square.
+Are you entering the contest? Then you should be fishing, not talking to me! Go on! Weigh-in's at five, at the tavern.
+The tavern keeper's dusted off the big scale. At five o'clock it decides who's the best angler in {village} for a whole season.
+It's contest day in {village}! Everyone's pretending they aren't nervous. Everyone's nervous.
+I've been fishing since dawn for the contest. My back hurts, my feet are wet and I've never been happier.
+Don't stand there! You're casting a shadow on my water. It's the fishing contest. Every little thing matters today.
+Contest day, and I've a fish in my basket as long as my forearm. Is that good? It feels good. Don't tell anyone. Weigh-in's at five.
+Fishing contest today! Remember, the biggest single fish wins, not the most fish. I learned that the hard way with forty minnows.
+I've changed my bait four times today. Bread, worms, cheese, back to worms. The fish are judging me. The weigh-in's at five, at the tavern, if you're curious.
+All of {village} smells of fish today, and nobody minds. It's the contest. Bring your biggest one to the tavern at five.
+I'm not fishing in the contest this year, I'm watching. It's nearly as nerve-wracking, and I don't have to touch a single worm.
+The tavern will be packed at five for the weigh-in. Everyone wants to see who's caught the biggest. Everyone wants it to be them.
+
+## contest.won.player
+Congratulations, {player}! Winner of the fishing contest! The whole tavern cheered. Even the ones who lost. Well, most of them.
+You beat every angler in {village}, {player}. With a fish like that, I'd have bowed to you too.
+Champion angler! Somebody get {player} a cider. I'd do it myself, but I spent all my emeralds on bait.
+You won the contest! I came in somewhere near the back, but I clapped the loudest. Ask anyone.
+The biggest fish of the season, and it was yours, {player}. The old-timers are already arguing about whether they'd have beaten it in their day.
+Well done, {player}! You won the fishing contest fair and square. Mostly fair. Very square. I'm joking. Well done.
+I can't believe you won the contest! I mean, I can. I saw the fish. That fish was the size of my little brother.
+You won! You actually won the fishing contest! You're going to be unbearable now, aren't you? Go on, you've earned it.
+Every child in {village} wants to be an angler now, {player}. That's what winning the contest does. You'll have a little crowd following you to the water.
+I lost the fishing contest to you, {player}, and I'm glad it was you. Next season, though, that prize is mine. I've already started on my bait.
+
+## contest.won.resident
+Did you hear? {winner} won the fishing contest with the {catch}. Biggest one anyone's seen all season. {winner} hasn't stopped smiling since.
+{winner} won the contest. With the {catch}! I had one nearly as big. Nearly. It got away. They always get away.
+{winner} carried that {catch} into the tavern like a newborn baby. Won the whole contest with it. Good for them. I suppose.
+The fishing contest went to {winner} this season. That {catch} was a beauty, I'll give them that. I'll give them that and nothing else.
+I'm not saying {winner} cheated. I'm saying that's a very big {catch} for someone who goes fishing twice a year.
+{winner} won the contest! The whole tavern cheered when the {catch} went on the scale. The scale creaked. I think it was cheering too.
+{winner} has been telling everyone about winning the fishing contest. Everyone. The {catch} gets an inch longer every time.
+Good for {winner}, winning the contest with the {catch}. I came in last with a boot. A big boot, though. Nobody gave me any credit for the size.
+You missed it! {winner} won the fishing contest. Pulled out the {catch} just before the weigh-in and ran it all the way to the tavern.
+{winner}'s {catch} won the contest, fair and square. I measured it twice myself. Hated every inch.
+
+## fishing.chat
+Worms for the river, bread paste for the lake, and for the sea, whatever the sea's in the mood for.
+Patience isn't waiting. It's waiting and not minding. Took me twenty years of fishing to learn the difference.
+The one that got away was this long. No, longer. It gets longer every year, funnily enough.
+River fish fight. Lake fish sulk. Sea fish do whatever they like. That's my whole philosophy.
+The fishmonger wants three emeralds for a pike. Three! I could catch one myself for nothing. Well, for nothing and a whole day.
+Cloudy days are good for fishing. The fish can't see you looming over the water with that hungry look on your face.
+I lost a good hook to a weed bed this morning. The weeds have more of my hooks than I do.
+Fishing is mostly sitting. The trick is to sit somewhere lovely.
+My best fishing spot is a secret, but I'll give you a hint. It's wet.
+Sea fishing's all very well, but I like a river. A river talks back.
+If they're not biting, change your bait. If they're still not biting, change your spot. If they're still not biting, go home and have supper.
+Rain on the water brings the fish up. Rain down my neck brings me nothing but a cold.
+I keep a little book of every fish I've caught. Size, weather, bait and mood. My mood, not the fish's.
+Dawn and dusk, that's when the fish feed. The middle of the day is for napping on the bank and pretending you're still fishing.
+The fishmonger and I have an arrangement. I don't tell anyone what I'm paid, and the fishmonger doesn't tell anyone how little I bring in.
+Never fish downstream of the leatherworker's yard. Just trust me on that one.
+I had a fish on the line once that towed my little boat right round the lake. I let it. It seemed to have somewhere to be.
+Some folk talk to their bait. I don't. I sing to it. There's a difference.
+Cheap line, lost fish. Good line, lost fish anyway, but at least you feel better about it.
+Nothing all morning, then a beauty in the last minute before I packed up. It's always the last minute. The fish know when you're leaving.
+A herring for breakfast, a trout for supper and a story for the tavern. That's a good day on the water.
+You can tell a real angler by their hands. Little hook scars on every finger, and a smell no soap can shift.
+The sea's for the brave and the river's for the patient. The pond's for children and for old fellows who've stopped needing to prove anything.
+Carp love bread. Trout love flies. Catfish love the worst thing you can find. The smellier the better.
+Ice fishing's a special kind of madness. You cut a hole, you sit on the cold, you wait. Then a fish the size of your hand makes your whole week.
+
+## fishing.dock
+Shh. Something's nosing at my bait. ...No. Gone. Carry on.
+Keep your voice down, would you? They hear everything through the boards.
+Lovely spot, this dock. Water slapping the posts, the village behind me, nothing to do but watch the bobber.
+Mind your feet on the end plank. It wobbles. I've only fallen in twice.
+Nibble! ...Nibble. ...And there goes my worm. Clever little thief.
+Pull up a bit of dock if you like. Just don't drop your shadow on my water.
+I come down to the dock for the fish, mostly. And to get away from everyone, a bit. Not you. You can stay.
+Watch the bobber with me. There. See it twitch? That's somebody down there thinking about it.
+The fish come in under the dock where it's shady. I just drop my line straight down and wait for them to get curious.
+Quiet out here. Just the water, the wind in the reeds and me, not arguing with anybody for once.
+Don't stamp on the boards! You'll frighten off everything for half a mile. Tiptoe. That's it.
+Best view in {village}, this dock. Water on one side, home on the other, and the odd fish, if I'm lucky.
+I've got a bite. I've definitely got a bite. ...I've got a weed. Never mind.
+If you're going to stand there, at least hold the bucket. It's empty so far, but it's full of hope.
+Fish don't care who you are down here. Doesn't matter what sort of day you've had. It's just you and the line.
+
+## fishing.catch
+Look at this {catch}! Fresh out of the water and still flapping. Mind your face.
+See this {catch}? Pulled it in just now. Fought me like it owed me money.
+I've just landed this {catch}, and I want everyone to know. Everyone. Can you tell the whole village? Thanks.
+Feel the weight of this {catch}! No, go on, hold it. ...Not like that. Like a baby. A slippery baby.
+My {catch}! I've been after one all week. Look at it. Just look at it.
+There! This {catch} took me ages. I nearly gave up twice. Good thing I'm stubborn.
+Look what I caught! A fine fat {catch}, and the fishmonger's going to be jealous.
+This {catch} leapt clean out of the water before I got it in. Nearly took my hat with it. I'm keeping it. The fish, not the hat. Well, both.
+I'll be having this {catch} for supper. Or I'll keep it in the barrel and just admire it for a bit. I haven't decided.
+Ha! Got you! ...Sorry, I was talking to the {catch}. Isn't it a beauty?
+That's the best {catch} I've caught all season. I'll have to tell it at the tavern. I'll add a bit. Everyone adds a bit.
+Oh, I'm pleased with this {catch}. Not the biggest in the water, but it's mine, and it put up a proper fight.
+
+## fishmonger.work
+Fresh fish! Caught today, sold today, on your table by supper. You can't get fresher without getting wet.
+Cod, salmon, a nice bit of perch! Step up, step up! Don't mind the smell. That's the smell of quality.
+That one? For you, one emerald. For anyone else, two. Don't tell anyone else.
+Haggle all you like. I've haggled with herons. I always win.
+Every fish here was swimming this morning. Well, most of them. That one was swimming yesterday. It's half price.
+Smell that? That's the sea. Or the river. Depends which basket you're standing next to.
+You want it cleaned? I'll clean it. You want it filleted? I'll fillet it. You want it to sing? That costs extra.
+Fresh fish, honest prices! Well, fresh fish, fairly honest prices. A body's got to make a living.
+Look at the eyes on this one. Bright and clear. That's how you know it's fresh. Never buy a fish that looks sad.
+The cats have been sitting by my baskets since I opened. They don't buy anything. They just stare. It's very unsettling.
+Three emeralds for the big one, and I'll throw in a herring for your trouble. You won't find a better deal in {village}.
+You're right, that's a lot for a pike. But it's a lot of pike. Feel the weight of it.
+I don't sell the little ones. I throw them back so they can grow up and become expensive.
+Fish for supper! Fish for breakfast! Fish for your grandmother! Everyone's grandmother wants fish.
+Somebody tried to pay me in cabbages yesterday. I took them. You can't eat emeralds, can you? You can eat cabbages.

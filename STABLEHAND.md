@@ -1,6 +1,6 @@
 # Stablehand: horses worth caring about
 
-Version 2.28 adds Stablehand. Every horse now belongs to one of eight medieval breeds with its own stats and painted coat; the horse you ride, feed and brush grows a bond with you that makes it a little faster, steadier and finally comes when you whistle; new tack and four barding tiers render on the horse; villages build stables with a stablehand who sells horses and gear; a couched lance rewards a real gallop; knights ride their night patrols; and taking a village's horse is a deed residents remember. There is no new horse entity: breeds and bonds are saved data on vanilla horses, donkeys and mules.
+Version 2.29 adds Stablehand. Every horse now belongs to one of eight medieval breeds with its own stats and painted coat; the horse you ride, feed and brush grows a bond with you that makes it a little faster, steadier and finally comes when you whistle; new tack and four barding tiers render on the horse; villages build stables with a stablehand who sells horses and gear; a couched lance rewards a real gallop; knights ride their night patrols; and taking a village's horse is a deed residents remember. There is no new horse entity: breeds and bonds are saved data on vanilla horses, donkeys and mules.
 
 ## Breeds
 
@@ -101,7 +101,7 @@ Prices are emeralds. The expert's own horse depends on the stablehand's home: a 
 
 ## RPG add-on: the Riding skill
 
-With the Village Friends RPG (1.1.0, which needs Village Friends 2.28.0 or later), **Riding** is the 17th skill. It trains from distance on horseback (a point per 5 blocks, donkeys and mules too), from caring for your horse (half a point for every bond point grooming or feeding earns) and from couched lance hits (6 each). Each level gives +0.2% horse speed while you ride, +1% bond growth, +0.4% lance damage and 0.6% steadier mounted aim (+10%, +50%, +20% and +30% at level 50). Stablehand asks for these through `StablehandEvents.RIDING_BONUS` and applies them itself, so without the add-on nothing changes.
+With the Village Friends RPG (1.1.0, which needs Village Friends 2.29.0 or later), **Riding** is the 17th skill. It trains from distance on horseback (a point per 5 blocks, donkeys and mules too), from caring for your horse (half a point for every bond point grooming or feeding earns) and from couched lance hits (6 each). Each level gives +0.2% horse speed while you ride, +1% bond growth, +0.4% lance damage and 0.6% steadier mounted aim (+10%, +50%, +20% and +30% at level 50). Stablehand asks for these through `StablehandEvents.RIDING_BONUS` and applies them itself, so without the add-on nothing changes.
 
 ## Not-So-Vanilla Mobs (optional): horses that spook
 

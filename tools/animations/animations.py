@@ -32,7 +32,7 @@ PACKS = {
                        "work for every profession, greetings, conversations, reactions, weather, children's play and games.",
         "modules": ["everyday", "hobbies", "work", "social", "reactions", "weather", "children",
                     "moments", "pastimes", "trades", "crafts", "company", "chatter", "feelings", "skies", "playtime",
-                    "guards", "party", "pets", "games", "meals"],
+                    "guards", "party", "pets", "games", "meals", "angling"],
     },
     "tavern": {
         "name": "Tavern",

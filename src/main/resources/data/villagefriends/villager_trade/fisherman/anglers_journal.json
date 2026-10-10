@@ -1,0 +1,13 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 3
+  },
+  "gives": {
+    "id": "villagefriends:anglers_journal",
+    "count": 1
+  },
+  "max_uses": 4,
+  "xp": 5,
+  "reputation_discount": 0.05
+}

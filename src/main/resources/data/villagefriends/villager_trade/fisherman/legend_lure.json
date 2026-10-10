@@ -1,0 +1,13 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 12
+  },
+  "gives": {
+    "id": "villagefriends:legend_lure",
+    "count": 1
+  },
+  "max_uses": 4,
+  "xp": 17,
+  "reputation_discount": 0.05
+}

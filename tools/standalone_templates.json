@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "about": "Templates the mod places from its own code instead of through a pool or a worldgen structure (BUILDING_EDITING.md, Docks). Each entry names a blueprint in tools/village_blueprints/, the structure id it is compiled to (data/<namespace>/structure/<path>.nbt, outside village/) and its size, which the compiler checks. They join no pool, carry no jigsaws or entities, and stay out of the structure catalog.",
+  "templates": {
+    "dock_plains": {"id": "villagefriends:dock/plains", "size": [5, 4, 12]},
+    "dock_desert": {"id": "villagefriends:dock/desert", "size": [5, 4, 12]},
+    "dock_savanna": {"id": "villagefriends:dock/savanna", "size": [5, 4, 12]},
+    "dock_snowy": {"id": "villagefriends:dock/snowy", "size": [5, 4, 12]},
+    "dock_taiga": {"id": "villagefriends:dock/taiga", "size": [5, 4, 12]}
+  }
+}
