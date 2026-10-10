@@ -59,8 +59,8 @@ class StableRidersTest {
 
     // -- TheftRule -------------------------------------------------------------------------------------
 
-    private static Verdict ridden(double distance, boolean pickedUp, boolean byThief, String stolenBy, long awaySince, long returnedAt, long now) {
-        return TheftRule.assess(Seen.withPlayer(distance, pickedUp, byThief), !stolenBy.isEmpty(), awaySince, returnedAt, now);
+    private static Verdict ridden(double distance, boolean found, boolean byThief, String stolenBy, long awaySince, long returnedAt, long now) {
+        return TheftRule.assess(Seen.withPlayer(distance, found, byThief), !stolenBy.isEmpty(), awaySince, returnedAt, now);
     }
     private static Verdict alone(double distance, boolean loose, long alone, double nearestPlayer, String stolenBy, long awaySince, long now) {
         return TheftRule.assess(Seen.withoutPlayer(distance, loose, alone, nearestPlayer), !stolenBy.isEmpty(), awaySince, 0, now);
@@ -80,6 +80,19 @@ class StableRidersTest {
         assertEquals(Verdict.LOST, ridden(60, true, false, "", 0, 0, 1000), "picked up out there: the finder is not a thief");
         assertEquals(Verdict.NONE, ridden(60, true, false, "", 500, 0, 1000), "already known to be lost");
         assertEquals(Verdict.NONE, ridden(30, true, false, "", 0, 0, 1000), "picked up near home is just a ride");
+    }
+
+    @Test void onlyAHorseNoPlayerHasHadForAMinuteIsFound() {
+        long now = 90_000;
+        assertTrue(TheftRule.found(-1, now), "no player has had it since the server started (a knight left it out)");
+        assertTrue(TheftRule.found(now - TheftRule.ALONE - 1, now), "nobody has had it for over a minute");
+        assertFalse(TheftRule.found(now - TheftRule.ALONE, now), "exactly a minute is not over a minute");
+        assertFalse(TheftRule.found(now - 40, now), "let go a moment ago");
+        // Riding a village horse to 47 blocks, hopping off and straight back on, then riding on is still theft.
+        for (long off : new long[]{0, 40, 80, 600, TheftRule.ALONE}) {
+            boolean found = TheftRule.found(now - off, now);
+            assertEquals(Verdict.STOLEN, ridden(49, found, false, "", 0, 0, now), "back in the saddle after " + off + " ticks");
+        }
     }
 
     @Test void aHorseLeftAloneFarAwayIsLostAfterAMinute() {
@@ -135,13 +148,13 @@ class StableRidersTest {
         var r = new Random(7);
         for (int i = 0; i < 20_000; i++) {
             double d = r.nextInt(10) == 0 ? INF : r.nextDouble() * 120;
-            boolean player = r.nextBoolean(), picked = r.nextBoolean(), thief = r.nextBoolean(), loose = r.nextBoolean();
+            boolean player = r.nextBoolean(), found = r.nextBoolean(), thief = r.nextBoolean(), loose = r.nextBoolean();
             boolean stolen = r.nextBoolean(); long away = r.nextBoolean() ? 0 : 1 + r.nextInt(50_000);
             long returned = r.nextBoolean() ? 0 : 1 + r.nextInt(50_000), now = 60_000 + r.nextInt(50_000), aloneFor = r.nextInt(3000);
-            var seen = player ? Seen.withPlayer(d, picked, thief && stolen) : Seen.withoutPlayer(d, loose, aloneFor, r.nextDouble() * 80);
+            var seen = player ? Seen.withPlayer(d, found, thief && stolen) : Seen.withoutPlayer(d, loose, aloneFor, r.nextDouble() * 80);
             var v = TheftRule.assess(seen, stolen, away, returned, now);
             boolean flagged = stolen || away > 0;
-            if (v == Verdict.STOLEN) assertTrue(player && !flagged && !picked && d > TheftRule.FAR);
+            if (v == Verdict.STOLEN) assertTrue(player && !flagged && !found && d > TheftRule.FAR);
             if (v == Verdict.RETURNED) assertTrue(player && flagged && !(thief && stolen) && d <= TheftRule.NEAR && TheftRule.cooled(returned, now));
             if (v == Verdict.DRIFT) assertTrue(!player && !flagged && loose && d > TheftRule.NEAR && d <= TheftRule.FAR);
             if (v == Verdict.HOME) assertTrue(flagged && d <= TheftRule.NEAR);

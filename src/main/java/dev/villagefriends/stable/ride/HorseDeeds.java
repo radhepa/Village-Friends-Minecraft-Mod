@@ -50,10 +50,16 @@ public final class HorseDeeds {
     static final int PLAYER_EVERY = 40, SWEEP_EVERY = 200;
     /** Last game time each stalled horse had anyone in the saddle or on a lead (first sight counts as attended). */
     private static final Map<UUID, Long> attended = new HashMap<>();
-    /** Horses a player rode or led at the last check: one picked up far from home was found, not stolen. */
+    /** Horses a player rode or led at the last check (the sweep leaves those to the player check). */
     private static Set<UUID> carried = new HashSet<>();
+    /**
+     * Last game time a player rode or led each stalled horse, forgotten after {@link TheftRule#ALONE} ticks: a horse
+     * a player takes up far from home when nobody has had it that long was found, not stolen. Kept when the horse
+     * unloads, so logging out and back in on it is no way round theft either.
+     */
+    private static final Map<UUID, Long> held = new HashMap<>();
 
-    public static void clear() { attended.clear(); carried = new HashSet<>(); }
+    public static void clear() { attended.clear(); carried = new HashSet<>(); held.clear(); }
     public static void unload(Entity e) { if (e instanceof AbstractHorse) { attended.remove(e.getUUID()); carried.remove(e.getUUID()); } }
 
     static void tick(MinecraftServer server) {
@@ -66,6 +72,8 @@ public final class HorseDeeds {
 
     private static void players(MinecraftServer server) {
         var now = new HashSet<UUID>();
+        long clock = server.overworld().getGameTime();
+        held.values().removeIf(t -> clock - t > TheftRule.ALONE);
         for (var p : server.getPlayerList().getPlayers()) {
             if (p.isSpectator()) continue;
             for (var horse : with(p)) {
@@ -74,9 +82,11 @@ public final class HorseDeeds {
                 long time = horse.level().getGameTime();
                 now.add(horse.getUUID());
                 attended.put(horse.getUUID(), time);
+                Long last = held.put(horse.getUUID(), time);
                 // Creative players build and test; Deeds ignores them too.
                 if (p.isCreative()) continue;
-                var seen = Seen.withPlayer(distance(horse, home), !carried.contains(horse.getUUID()), p.getUUID().toString().equals(home.stolenBy()));
+                boolean found = TheftRule.found(last == null ? -1 : last, time);
+                var seen = Seen.withPlayer(distance(horse, home), found, p.getUUID().toString().equals(home.stolenBy()));
                 apply(horse, home, TheftRule.assess(seen, !home.stolenBy().isEmpty(), home.awaySince(), home.returnedAt(), time), p, time);
             }
         }
@@ -134,7 +144,7 @@ public final class HorseDeeds {
                 save(horse, known(horse, home).withStolenBy(p.getUUID().toString()));
                 Deeds.record(p, DeedKind.STOLE_HORSE, place(horse, home), "horse:" + horse.getUUID(), name(horse), involved(home), 1, false, horse);
                 String village = villageName(horse, home);
-                p.sendSystemMessage(Component.literal("This horse belongs to " + (village == null ? "a village stable" : village) + ". Riding it this far from its stable is theft."), false);
+                p.sendSystemMessage(Component.literal("This horse belongs to " + (village == null ? "a village stable" : village) + ". Taking it this far from its stable is theft."), false);
             }
             case RETURNED -> {
                 if (p == null) { save(horse, home.withStolenBy("").withAwaySince(0)); return; }
@@ -169,6 +179,8 @@ public final class HorseDeeds {
         spots.sort(Comparator.comparingDouble(pos -> pos.distSqr(stall)));
         var size = horse.getDimensions(horse.getPose());
         for (var pos : spots) {
+            // A spot across an unloaded chunk border is skipped: reading it would load the chunk.
+            if (!level.isLoaded(pos) || !level.isLoaded(pos.below())) continue;
             if (!level.getFluidState(pos).isEmpty() || level.getBlockState(pos.below()).getCollisionShape(level, pos.below()).isEmpty()) continue;
             double x = pos.getX() + .5, y = pos.getY(), z = pos.getZ() + .5;
             if (level.noCollision(horse, size.makeBoundingBox(x, y, z))) return new Vec3(x, y, z);

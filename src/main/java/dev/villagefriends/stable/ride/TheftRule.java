@@ -7,8 +7,10 @@ package dev.villagefriends.stable.ride;
  *
  * <ul>
  * <li>{@link Verdict#STOLEN}: ridden or led by a player more than {@link #FAR} blocks from its stall, and not
- * flagged yet. A horse a player first picks up when it is already that far away was lost, not taken from its
- * stable: it counts as {@link Verdict#LOST} instead, so whoever finds it can bring it home.</li>
+ * flagged yet. A horse a player takes up that far away when no player has had it for over {@link #ALONE} ticks
+ * ({@link #found}: a knight left it out after the watch, say) was lost, not taken from its stable: it counts as
+ * {@link Verdict#LOST} instead, so whoever finds it can bring it home. Hopping off at 47 blocks and straight back
+ * on is no way round theft: the player had it moments ago.</li>
  * <li>{@link Verdict#LOST}: more than {@link #FAR} blocks out with nobody riding or leading it for over
  * {@link #ALONE} ticks.</li>
  * <li>{@link Verdict#RETURNED}: a stolen or lost horse brought within {@link #NEAR} blocks of its stall by a
@@ -37,16 +39,16 @@ public final class TheftRule {
 
     /**
      * How the horse is found. {@code distance}: blocks from its stall (infinite in another dimension).
-     * {@code withPlayer}: ridden by or leashed to a player; {@code pickedUp}: that player had not been riding or
-     * leading it at the previous check; {@code byThief}: that player is the one who stole it. {@code loose}: no
-     * rider (player or resident), no lead, and not itself riding in something (a boat). {@code alone}: ticks since
-     * anyone last rode or led it.
+     * {@code withPlayer}: ridden by or leashed to a player; {@code found}: no player had ridden or led it for over
+     * {@link #ALONE} ticks before this one took it ({@link #found(long, long)}); {@code byThief}: that player is the
+     * one who stole it. {@code loose}: no rider (player or resident), no lead, and not itself riding in something
+     * (a boat). {@code alone}: ticks since anyone last rode or led it.
      * {@code nearestPlayer}: blocks to the nearest player (infinite with none).
      */
-    public record Seen(double distance, boolean withPlayer, boolean pickedUp, boolean byThief, boolean loose, long alone, double nearestPlayer) {
+    public record Seen(double distance, boolean withPlayer, boolean found, boolean byThief, boolean loose, long alone, double nearestPlayer) {
         /** Ridden or led by a player (who is right there). */
-        public static Seen withPlayer(double distance, boolean pickedUp, boolean byThief) {
-            return new Seen(distance, true, pickedUp, byThief, false, 0, 0);
+        public static Seen withPlayer(double distance, boolean found, boolean byThief) {
+            return new Seen(distance, true, found, byThief, false, 0, 0);
         }
         /** Without a player: maybe ridden by a resident or leashed to a post ({@code loose} false), maybe free. */
         public static Seen withoutPlayer(double distance, boolean loose, long alone, double nearestPlayer) {
@@ -62,7 +64,7 @@ public final class TheftRule {
         boolean flagged = stolen || awaySince > 0;
         if (seen.withPlayer()) {
             if (flagged && seen.distance() <= NEAR) return seen.byThief() || !cooled(returnedAt, now) ? Verdict.HOME : Verdict.RETURNED;
-            if (!flagged && seen.distance() > FAR) return seen.pickedUp() ? Verdict.LOST : Verdict.STOLEN;
+            if (!flagged && seen.distance() > FAR) return seen.found() ? Verdict.LOST : Verdict.STOLEN;
             return Verdict.NONE;
         }
         if (flagged && seen.distance() <= NEAR) return Verdict.HOME;
@@ -70,6 +72,13 @@ public final class TheftRule {
         if (!flagged && seen.loose() && seen.distance() > NEAR && seen.distance() <= FAR && seen.nearestPlayer() > QUIET) return Verdict.DRIFT;
         return Verdict.NONE;
     }
+
+    /**
+     * True when a player taking the horse up now finds it rather than keeps it: no player has ridden or led it
+     * ({@code lastHeld}, negative = not since the server started) for over {@link #ALONE} ticks. A player who lets
+     * go and takes it straight back still has it.
+     */
+    public static boolean found(long lastHeld, long now) { return lastHeld < 0 || now - lastHeld > ALONE; }
 
     /** True when a return now may earn the deed: never returned before, or a full day since the last one. */
     public static boolean cooled(long returnedAt, long now) { return returnedAt == 0 || now - returnedAt >= COOLDOWN; }

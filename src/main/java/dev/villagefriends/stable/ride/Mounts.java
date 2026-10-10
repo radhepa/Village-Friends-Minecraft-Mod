@@ -5,6 +5,7 @@ import static dev.villagefriends.VillageFriends.target;
 
 import dev.villagefriends.GuardPatrols;
 import dev.villagefriends.ResidentRoutines;
+import dev.villagefriends.VillageBlocks;
 import dev.villagefriends.routine.Routine;
 import dev.villagefriends.stable.api.Stables;
 import dev.villagefriends.stable.data.StableData;
@@ -17,9 +18,11 @@ import java.util.Set;
 import java.util.UUID;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.animal.equine.AbstractHorse;
@@ -50,8 +53,8 @@ import org.jspecify.annotations.Nullable;
  */
 public final class Mounts {
     public static final String PATROL = "patrol", COMPANION = "companion", CARAVAN = "caravan";
-    /** A knight looks for a stable this far from the bell, then for a horse stalled this far from that stall. */
-    static final int STABLE_REACH = 64, HORSE_REACH = 16;
+    /** A knight looks for horses stalled this far from the bell (the village's stable). */
+    static final int STABLE_REACH = 64;
     /** Close enough to swing up into the saddle. */
     static final double MOUNT_REACH = 2.5;
     /** Close enough to the stall to get off after the watch. */
@@ -60,6 +63,13 @@ public final class Mounts {
     static final double SPARE_REACH = 8;
     /** Ticks to reach a horse before giving up, to ride home before getting off in place, and to wait before looking again. */
     static final int FETCH_TICKS = 600, RIDE_HOME_TICKS = 1200, LOOK_AGAIN = 200, GIVE_UP_REST = 1200;
+    /**
+     * A rider steers through the horse's navigation, which plans paths only as far as the horse's follow range (16
+     * blocks, against a villager's 48), so a patrol leg or the ride home would go in short hops. While a resident
+     * rides, the horse plans as far as a villager does. Transient (never saved) and taken off on dismount.
+     */
+    private static final Identifier RIDER_REACH = VillageBlocks.id("rider_reach");
+    static final double RIDER_REACH_BONUS = 32;
 
     /** Knights on their way to a stable horse: which horse (no one else takes it meanwhile) and since when. */
     private record Fetch(UUID horse, long since) {}
@@ -133,9 +143,10 @@ public final class Mounts {
     }
     /** Takes a resident off a horse and clears their order (teleporting a passenger would snap them back to it). */
     public static void dismount(Villager v) {
-        if (v.getVehicle() instanceof AbstractHorse) v.stopRiding();
+        if (v.getVehicle() instanceof AbstractHorse horse) { v.stopRiding(); reach(horse, false); }
         if (target(v).hasAttached(StableData.MOUNT_ORDER)) target(v).removeAttached(StableData.MOUNT_ORDER);
-        fetching.remove(v.getUUID()); watchEnded.remove(v.getUUID());
+        // Released or sent home: if they are taken along again, they look for a spare horse afresh.
+        fetching.remove(v.getUUID()); watchEnded.remove(v.getUUID()); checked.remove(v.getUUID());
     }
 
     // -- getting on ----------------------------------------------------------------------------------
@@ -148,14 +159,22 @@ public final class Mounts {
         if (v.level().isClientSide() || !v.isAlive() || v.isBaby() || order == null || order.isEmpty()) return false;
         if (horse.level() != v.level() || !horse.isAlive() || horse.isRemoved() || horse.isBaby() || !horse.isTamed() || horse.isVehicle()) return false;
         if (v.isSleeping()) v.stopSleeping();
-        if (v.isPassenger()) v.stopRiding();
+        if (v.isPassenger()) { if (v.getVehicle() instanceof AbstractHorse old) reach(old, false); v.stopRiding(); }
         if (!v.startRiding(horse, true, true)) return false;
+        reach(horse, true);
         target(v).setAttached(StableData.MOUNT_ORDER, order);
         fetching.remove(v.getUUID()); watchEnded.remove(v.getUUID());
         // Whatever they were walking to on foot is not where the horse should go.
         v.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
         v.getNavigation().stop();
         return true;
+    }
+    /** Lets the horse plan paths as far as a villager does while a resident rides it, or puts its own range back. */
+    private static void reach(AbstractHorse horse, boolean ridden) {
+        var range = horse.getAttribute(Attributes.FOLLOW_RANGE);
+        if (range == null) return;
+        if (ridden) range.addOrUpdateTransientModifier(new AttributeModifier(RIDER_REACH, RIDER_REACH_BONUS, AttributeModifier.Operation.ADD_VALUE));
+        else range.removeModifier(RIDER_REACH);
     }
 
     // -- the night watch -----------------------------------------------------------------------------
@@ -185,13 +204,15 @@ public final class Mounts {
         ResidentRoutines.walk(v, horse.blockPosition(), .6F, 1);
         return true;
     }
-    /** The nearest free horse stalled at the stable closest to the knight's bell, or null. */
+    /**
+     * The nearest free horse stalled within {@link #STABLE_REACH} blocks of the knight's bell, or null. The stall
+     * search (a cheap POI lookup) only tells whether there is a stable at all: the stall nearest the bell may be a
+     * player's own, with the village's stable further out, so the horses are looked for around the bell.
+     */
     private static @Nullable AbstractHorse pick(Villager v, ServerLevel level, long now) {
         BlockPos bell = v.getBrain().getMemory(MemoryModuleType.MEETING_POINT).filter(p -> p.dimension() == level.dimension()).map(GlobalPos::pos).orElse(null);
-        if (bell == null) return null;
-        var stable = Stables.stableNear(level, bell, STABLE_REACH);
-        if (stable.isEmpty()) return null;
-        return Stables.stalledHorses(level, stable.get(), HORSE_REACH).stream().filter(h -> free(h, v, now))
+        if (bell == null || Stables.stableNear(level, bell, STABLE_REACH).isEmpty()) return null;
+        return Stables.stalledHorses(level, bell, STABLE_REACH).stream().filter(h -> free(h, v, now))
                 .min(Comparator.comparingDouble(v::distanceToSqr)).orElse(null);
     }
     /**
