@@ -19,6 +19,7 @@ import java.util.function.BooleanSupplier;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
 import net.minecraft.client.renderer.entity.state.HorseRenderState;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityTypes;
@@ -26,13 +27,16 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.equine.Horse;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.storage.TagValueInput;
+import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 /**
  * {@link StablehandGameTest}'s breeds scene: every coat loads, a new horse takes its biome's breed, a lineup of every
  * breed in every coat (adults and foals) for the eye, a destrier x courser foal (breed, stats and its painted foal coat on the
- * client), then the bond: 500 points make a horse Loyal with its bonuses, a carrot from its owner counts, the whistle
+ * client), then the bond: 500 points make a horse Loyal with its bonuses (kept at full health through a save and load),
+ * a carrot from its owner counts, the whistle
  * calls it from 30 blocks (it walks) and from 60 (it is brought behind you), and one brush stroke grows the bond.
  * Written by the breeds package.
  */
@@ -135,6 +139,26 @@ final class StableBreedScenes {
                     && Horses.bondPartner(d).filter(kit.player().getUUID()::equals).isPresent();
         });
         kit.expect(loyal, "500 bond points make a horse Loyal, faster and bonded to its owner");
+
+        // Saved at full health and loaded again, it is still at full health: the tier's extra health isn't saved, so
+        // vanilla clamps the health on load and the bond fills it back up.
+        boolean whole = server.computeOnServer(s -> {
+            var level = kit.level();
+            var d = (Horse) kit.entity(w, destrier);
+            d.setHealth(d.getMaxHealth());
+            var out = TagValueOutput.createWithContext(ProblemReporter.DISCARDING, level.registryAccess());
+            d.saveWithoutId(out);
+            var copy = EntityTypes.HORSE.create(level, EntitySpawnReason.LOAD);
+            if (copy == null) return false;
+            copy.load(TagValueInput.create(ProblemReporter.DISCARDING, level.registryAccess(), out.buildResult()));
+            copy.setUUID(UUID.randomUUID());
+            copy.snapTo(o.getX() - 8.5, o.getY(), o.getZ() - 8.5, 0, 0);
+            level.addFreshEntity(copy);
+            boolean ok = copy.getMaxHealth() > copy.getAttributeBaseValue(Attributes.MAX_HEALTH) && copy.getHealth() >= copy.getMaxHealth();
+            copy.discard();
+            return ok;
+        });
+        kit.expect(whole, "a Loyal horse saved at full health loads with its bond's extra health filled");
 
         // A carrot from its owner counts when the horse really eats it (it is hungry for health here).
         int fed = server.computeOnServer(s -> {

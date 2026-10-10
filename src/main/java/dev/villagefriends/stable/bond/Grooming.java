@@ -54,7 +54,8 @@ public final class Grooming {
         if (BondMath.tier(points) == was) {
             String line = BondMath.describe(name, kind, points, horse.getAttributeValue(Attributes.MOVEMENT_SPEED),
                     horse.getAttributeValue(Attributes.JUMP_STRENGTH), horse.getMaxHealth());
-            player.sendSystemMessage(Component.literal(gained > 0 ? line : line + " Groomed enough for today."), true);
+            // Nothing gained means today's grooms are used up, unless the bond is already full.
+            player.sendSystemMessage(Component.literal(gained > 0 || points >= BondMath.MAX ? line : line + " Groomed enough for today."), true);
         }
         return gained;
     }

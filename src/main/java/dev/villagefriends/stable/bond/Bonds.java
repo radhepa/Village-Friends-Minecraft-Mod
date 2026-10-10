@@ -118,7 +118,17 @@ public final class Bonds {
         modifier(horse, Attributes.JUMP_STRENGTH, JUMP, BondMath.jumpBonus(tier), AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
         modifier(horse, Attributes.MAX_HEALTH, HEALTH, BondMath.healthBonus(tier), AttributeModifier.Operation.ADD_VALUE);
     }
-    public static void loaded(Entity entity) { if (entity instanceof AbstractHorse horse && bondable(horse) && bond(horse).points() > 0) refresh(horse); }
+    /**
+     * A bonded horse loaded: its tier's bonuses go back on. They are transient, so vanilla clamped the saved health to the
+     * maximum without them; a horse that loads exactly at that maximum was at least that healthy when it was saved, so it
+     * is filled up to the bonus again (otherwise a Devoted horse would lose its bonus hearts every time it reloads).
+     */
+    public static void loaded(Entity entity) {
+        if (!(entity instanceof AbstractHorse horse) || !bondable(horse) || bond(horse).points() <= 0) return;
+        boolean full = horse.getHealth() >= horse.getMaxHealth();
+        refresh(horse);
+        if (full && horse.isAlive()) horse.setHealth(horse.getMaxHealth());
+    }
 
     private static void modifier(LivingEntity entity, Holder<Attribute> attribute, Identifier id, double amount, AttributeModifier.Operation operation) {
         var instance = entity.getAttribute(attribute);
