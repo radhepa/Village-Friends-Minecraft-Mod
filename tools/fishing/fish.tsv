@@ -1,0 +1,108 @@
+# Tall Tales Fishing: every fish, compiled by tools/fishing/fishing.py (art: tools/fishing/sprites.py).
+# Tab separated; '#' lines are comments. One row per fish.
+#
+#   id          item id under villagefriends: (for 'existing' rows, the minecraft: item)
+#   name        English name
+#   rarity      common uncommon rare epic legendary
+#   water       where it lives, comma list: river lake swamp ocean warm cold deep cave deepcave, or any
+#               (ocean = any ocean; warm/cold/deep = those oceans only; cave = underground water; deepcave = below y 0)
+#   region      the land around the water, comma list: plains forest desert badlands savanna jungle swamp snowy
+#               taiga mountain mushroom cherry, or any. Read from the biomes around the bobber, so a river
+#               running through the desert is desert water.
+#   time        any, or comma list of dawn day noon dusk night
+#   weather     any clear rain thunder (rain includes thunder)
+#   season      any, or comma list of spring summer autumn winter (only with Turning Seasons installed;
+#               without it the fish bites all year)
+#   size        length range in centimetres, min-max
+#   behavior    how it fights in the catch-bar minigame: smooth mixed dart sinker floater
+#   difficulty  0 (a minnow) to 100 (the hardest legend)
+#   flags       comma list or -: existing (a vanilla item), shellfish, inedible, poison, notreat (pets refuse it)
+#   text        the angler's journal note
+#
+# Legendary fish never stack, aren't food, and residents tell tall tales about where they bite.
+
+id	name	rarity	water	region	time	weather	season	size	behavior	difficulty	flags	text
+cod	Cod	common	ocean,cold	any	any	any	any	20-60	smooth	15	existing	The old reliable of cold seas. Salted, it feeds whole villages through the winter.
+salmon	Salmon	common	river,ocean,cold	any	any	any	any	40-90	mixed	25	existing	Born in rivers, grown in the sea, and home again to spawn. Strong for its size.
+pufferfish	Pufferfish	uncommon	warm	any	day	any	any	15-35	floater	30	existing,notreat	Swells into a spiky ball when it's frightened. Don't eat it raw. Really, don't.
+tropical_fish	Tropical Fish	common	warm	any	day	any	any	5-20	dart	20	existing	A flicker of colour from the warm reefs. Every one is painted a little differently.
+minnow	Minnow	common	river,lake	any	any	any	any	3-9	smooth	5	-	Small, silver and everywhere. Every angler's first catch, and every heron's lunch.
+gudgeon	Gudgeon	common	river	plains,forest,taiga	day	any	any	8-18	smooth	10	-	A whiskered little bottom-feeder that bites at almost anything.
+roach	Roach	common	river,lake	plains,forest,swamp	any	any	any	12-30	mixed	12	-	Red-eyed and bony. Old anglers say a roach can count your hooks.
+dace	Dace	common	river	plains,forest,mountain	day	clear	spring,summer	15-25	dart	18	-	Quick as a dart in clear, running water on bright days.
+chub	Chub	common	river	plains,forest,savanna	any	any	any	20-50	mixed	22	-	A greedy river fish with a mouth like a coin purse. Eats cherries that fall from the bank.
+perch	Perch	common	river,lake	any	day	any	any	15-40	mixed	20	-	Striped and spiny-finned. Where there's one perch there are twenty.
+carp	Carp	common	lake,swamp	plains,forest,swamp,cherry	any	any	spring,summer,autumn	30-80	smooth	18	-	A patient pond fish. Monks keep them in stew ponds for Fridays.
+tench	Tench	common	lake,swamp	swamp,forest,plains	dusk,night	any	summer	25-55	sinker	20	-	The doctor fish: folk say a sick fish rubs against a tench to be healed.
+bluegill	Bluegill	common	lake	plains,forest,savanna	day	clear	summer	10-22	dart	12	-	A round little sunfish that guards its nest in the shallows.
+whitefish	Whitefish	common	lake,river	taiga,snowy,mountain	any	any	any	30-55	smooth	18	-	Pale and mild. Northern villages smoke it by the barrel.
+tilapia	Tilapia	common	lake,river	savanna,jungle,desert	day	any	any	20-45	mixed	15	-	Hardy enough to live in a puddle. Mothers carry their young in their mouths.
+crayfish	Crayfish	common	river,lake,swamp	any	night	any	spring,summer,autumn	8-15	sinker	10	shellfish	A little freshwater lobster that backs away under stones.
+blindfish	Blindfish	common	cave	any	any	any	any	6-14	smooth	20	-	Born in the dark and never needed eyes. Feels its way along the cave floor.
+bream	Bream	uncommon	lake	plains,forest,swamp	dusk,night	any	any	30-60	smooth	28	-	Deep-bodied and slimy. Shoals of bream turn the evening water to bubbles.
+pike	Pike	uncommon	river,lake	plains,forest,taiga	day	any	autumn,winter,spring	45-120	dart	50	-	The freshwater wolf. Waits in the weeds, then strikes like a thrown spear.
+brown_trout	Brown Trout	uncommon	river	forest,plains,mountain	dawn,dusk	any	spring,autumn	30-70	dart	45	-	Spotted gold and red. Rises to a fly at first and last light.
+rainbow_trout	Rainbow Trout	uncommon	river	mountain,taiga,cherry	day	clear	spring,summer	30-65	dart	45	-	A pink stripe down its side, like a rainbow caught in a stream.
+barbel	Barbel	uncommon	river	plains,savanna,forest	night	any	summer,autumn	40-90	sinker	40	-	Four whiskers and a stubborn pull. Hugs the gravel in fast water.
+river_eel	River Eel	uncommon	river,swamp	any	night	rain	any	50-110	mixed	50	-	Wriggles across wet meadows on rainy nights. Nobody knows where they're born.
+largemouth_bass	Largemouth Bass	uncommon	lake	plains,forest,swamp	dawn,dusk	any	summer	30-60	mixed	40	-	All mouth and appetite. Has been known to swallow a duckling.
+smallmouth_bass	Smallmouth Bass	uncommon	river	forest,mountain,taiga	day	any	spring,summer	25-50	dart	42	-	Bronze and spirited. Leaps clean out of the water when hooked.
+arctic_char	Arctic Char	uncommon	lake,river	snowy,mountain	any	any	winter,spring	35-70	mixed	45	-	Lives in water so cold it aches. Its belly turns red as a winter sunset.
+lamprey	Lamprey	uncommon	river	any	night	any	spring	40-90	smooth	38	-	A jawless thing with a mouth full of rings of teeth. Kings once feasted on lamprey pie.
+desert_pupfish	Desert Pupfish	uncommon	lake,river	desert,badlands	day	clear	summer	3-6	dart	35	-	A tiny blue fish that survives where nothing should. Plays like a puppy in warm pools.
+piranha	Piranha	uncommon	river	jungle	any	any	any	15-35	dart	55	-	Teeth like a saw. Mind your fingers when you take the hook out.
+bowfin	Bowfin	uncommon	swamp,lake	swamp	night	any	summer	40-75	mixed	45	-	An ancient swamp fish that can gulp air when the water goes stale.
+mudskipper	Mudskipper	uncommon	swamp	swamp	day	clear	any	10-25	floater	30	-	A fish that walks on its fins and climbs roots to look around.
+stone_loach	Stone Loach	uncommon	cave	any	any	any	any	8-14	sinker	32	-	Hides under pebbles in underground streams and only comes out to eat.
+zander	Zander	rare	river,lake	plains,forest,taiga	night	any	autumn,winter	50-100	dart	60	-	Glassy eyes made for the dark. Hunts when the moon is up.
+grayling	Grayling	rare	river	mountain,snowy	day	clear	winter,spring	30-55	dart	60	-	The lady of the stream, with a sail of a fin. Smells faintly of thyme.
+catfish	Catfish	rare	river,swamp,lake	plains,swamp,savanna	night	rain	spring,summer	60-160	mixed	70	-	Whiskers as long as your arm. Comes up to feed when rain muddies the water.
+golden_carp	Golden Carp	rare	lake	cherry,plains,forest	dawn	clear	spring	30-70	smooth	55	-	A carp the colour of a crown. Rises at dawn in still, clear water.
+burbot	Burbot	rare	river,lake	snowy,taiga	night	any	winter	35-80	sinker	62	-	The only cod of fresh water. Spawns under the ice in the dead of winter.
+arowana	Arowana	rare	river,lake	jungle	day	rain	any	60-110	dart	72	-	Leaps from the water to snatch beetles off low branches.
+nile_perch	Nile Perch	rare	river	savanna	dusk	any	summer,autumn	70-160	mixed	70	-	A silver giant of the savanna rivers. Grows as big as a grown man.
+snakehead	Snakehead	rare	swamp	swamp,jungle	any	rain	summer	50-90	mixed	68	-	Breathes air and shakes off hooks in storms. Swamp folk call it the snake that swims.
+gar	Swamp Gar	rare	swamp,river	swamp	day	any	summer	70-150	dart	66	-	A long beak full of needles and scales like armour. Older than the swamp itself.
+glow_minnow	Glow Minnow	rare	cave	any	any	any	any	4-9	dart	58	-	A minnow that shines like a lantern in the deep dark pools.
+oasis_tetra	Oasis Tetra	rare	lake	desert	dawn,dusk	any	any	3-6	dart	50	-	A jewel of a fish found only in desert pools. Blink and it's gone.
+sturgeon	Sturgeon	epic	river	taiga,plains,forest	dawn	any	spring	100-250	sinker	82	-	A great armoured fish with a snout like a shovel. Its eggs fetch a king's ransom.
+ghost_catfish	Ghost Catfish	epic	deepcave	any	any	any	any	40-110	mixed	85	-	So pale you can see its bones. Lives in the black water below the world.
+herring	Herring	common	ocean,cold	any	any	any	any	20-35	smooth	12	-	Swims in shoals of thousands. Pickled, salted, smoked: herring keeps a coast alive.
+sardine	Sardine	common	ocean,warm	any	day	any	summer,autumn	12-22	dart	12	-	A little oily silver fish, best packed tight and grilled on a fire.
+anchovy	Anchovy	common	warm,ocean	any	any	any	any	8-15	dart	10	-	Tiny, salty and strong-tasting. A spoonful flavours a whole pot.
+mackerel	Mackerel	common	ocean	any	day	clear	summer	25-45	dart	25	-	Striped like the sea on a windy day. Fights hard for its size.
+mullet	Grey Mullet	common	ocean,river	any	day	any	any	30-60	smooth	22	-	Cruises river mouths sipping at the mud. Notoriously fussy about bait.
+pollock	Pollock	common	cold,deep	any	any	any	winter,autumn	40-90	mixed	25	-	A cold-water cod cousin that hunts in packs.
+sea_bream	Sea Bream	common	ocean,warm	any	day	any	any	20-45	mixed	20	-	A silver-pink fish with a gold band between its eyes.
+shore_crab	Shore Crab	common	ocean,warm,cold	any	night	any	any	6-12	sinker	12	shellfish	Scuttles sideways and pinches anything it doesn't like. That's most things.
+shrimp	Shrimp	common	warm,ocean	any	night	any	any	4-9	floater	10	shellfish	See-through and twitchy. Comes up to the light at night.
+sea_cucumber	Sea Cucumber	common	deep,ocean	any	any	any	any	10-30	sinker	8	shellfish	Not a cucumber. Not quite a fish. Mostly a lump that sits on the sea bed.
+arctic_cod	Arctic Cod	common	cold	any	any	any	winter	15-35	smooth	18	-	A small cod with antifreeze in its blood, at home under the ice.
+sea_bass	Sea Bass	uncommon	ocean	any	dawn,dusk	any	summer,autumn	35-80	mixed	40	-	The wolf of the sea. Hunts the surf when the tide turns.
+haddock	Haddock	uncommon	cold,deep	any	day	any	any	35-70	smooth	35	-	A dark thumbprint on each side, from a saint's hand, the fishwives say.
+flounder	Flounder	uncommon	ocean,warm	any	any	any	any	25-50	sinker	38	-	Lies flat in the sand with both eyes on one side, waiting.
+red_snapper	Red Snapper	uncommon	warm	any	day	rain	summer	40-90	mixed	45	-	Red as a rose and snappish with it. Bites best in a warm rain.
+conger_eel	Conger Eel	uncommon	ocean,deep	any	night	any	any	80-200	smooth	48	-	A huge grey eel that lives in shipwrecks. Strong enough to pull a man in.
+dogfish	Dogfish	uncommon	cold,ocean	any	night	any	any	50-100	mixed	42	-	A small spotted shark. Its skin is rough enough to sand wood.
+lobster	Lobster	uncommon	cold,ocean	any	night	any	summer,autumn	25-50	sinker	40	shellfish	Blue-black in the water, red in the pot. Mind both claws.
+oyster	Oyster	uncommon	ocean,warm	any	any	any	autumn,winter	7-12	sinker	25	shellfish	A rough grey shell with a soft heart. Now and then, a pearl.
+moon_jelly	Moon Jelly	uncommon	warm,ocean	any	night	clear	summer	10-30	floater	30	inedible,notreat	A drifting moon of a jellyfish. Beautiful, and not for eating.
+halibut	Halibut	rare	cold,deep	any	any	any	winter,spring	70-200	sinker	65	-	The great flatfish. A big one is heavier than the angler who lands it.
+tuna	Bluefin Tuna	rare	deep	any	day	any	summer	90-250	dart	75	-	Built like a cannonball and faster than a horse. It'll take the line to the horizon.
+mahi_mahi	Mahi-Mahi	rare	warm	any	day	clear	summer	60-130	dart	68	-	Green and gold in the water, it flashes blue the moment it's caught.
+monkfish	Monkfish	rare	deep	any	night	any	winter	50-110	sinker	62	-	All head and mouth, with a little lure on its brow. Delicious, if you can bear to look.
+lionfish	Lionfish	rare	warm	any	day	any	any	15-35	floater	60	poison,notreat	A mane of striped, venomous spines. Handle it like a hedgehog made of nettles.
+octopus	Octopus	rare	ocean,warm	any	night	any	any	40-120	sinker	70	shellfish	Clever enough to unscrew a jar. Holds on to the sea bed with all eight arms.
+stingray	Stingray	rare	warm,ocean	any	day	any	summer	50-140	smooth	64	notreat	Glides over the sand like a cloak in the wind. Keep clear of the tail.
+swordfish	Swordfish	epic	deep,warm	any	day	clear	summer	150-300	dart	88	-	Its bill is a real sword. It leaps, it spins, it will not give up.
+blue_shark	Blue Shark	epic	deep	any	any	rain	any	150-300	mixed	86	notreat	A long blue shark that follows boats in rough weather.
+anglerfish	Anglerfish	epic	deep	any	night	any	any	30-90	sinker	84	-	Fishes for its supper with a glowing lure. Tonight you fished for it.
+old_whiskers	Old Whiskers	legendary	river,lake	plains	night	rain	any	180-260	mixed	92	-	A catfish older than the village bell. The miller's grandfather swore it took his dog.
+sunscale	Sunscale	legendary	lake,river	desert	noon	clear	summer	90-130	dart	95	-	A fish of hammered gold that rises at noon in the desert pools when the sun is fiercest.
+river_king	The River King	legendary	river	savanna	dusk	any	any	200-300	mixed	94	-	A silver giant that rules the savanna rivers. Lions are said to drink upstream of it.
+rimefin	Rimefin	legendary	lake,river	snowy	night	clear	winter	100-160	dart	96	-	A pike of living ice, seen through frozen lakes on still, starry winter nights.
+old_mossback	Old Mossback	legendary	river	taiga	dawn	rain	autumn	250-380	sinker	93	-	A sturgeon so old that moss grows on its back. Moves up the taiga rivers in the autumn rains.
+stormjaw	Stormjaw	legendary	deep	any	any	thunder	any	300-500	dart	100	-	A great shark that hunts the open sea under thunderstorms. Sailors pray never to see its fin.
+bog_lantern	The Bog Lantern	legendary	swamp	swamp	night	any	autumn	60-110	floater	92	-	The light in the marsh that leads travellers astray is no spirit: it's the lure of this fish.
+deepglow	Deepglow	legendary	deepcave	any	any	any	any	70-120	smooth	97	-	A blind white eel that glows blue in the black water at the bottom of the world.
+jade_arowana	Jade Arowana	legendary	river,lake	jungle	day	rain	any	100-150	dart	94	-	A dragon of a fish with jade scales. Jungle folk say it leaps for the rain itself.

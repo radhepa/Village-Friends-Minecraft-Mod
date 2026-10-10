@@ -1,0 +1,2515 @@
+{
+  "version": 1,
+  "regions": {
+    "plains": [
+      "minecraft:plains",
+      "minecraft:sunflower_plains",
+      "minecraft:meadow"
+    ],
+    "forest": [
+      "minecraft:forest",
+      "minecraft:flower_forest",
+      "minecraft:birch_forest",
+      "minecraft:old_growth_birch_forest",
+      "minecraft:dark_forest",
+      "minecraft:pale_garden"
+    ],
+    "cherry": [
+      "minecraft:cherry_grove"
+    ],
+    "desert": [
+      "minecraft:desert"
+    ],
+    "badlands": [
+      "minecraft:badlands",
+      "minecraft:eroded_badlands",
+      "minecraft:wooded_badlands"
+    ],
+    "savanna": [
+      "minecraft:savanna",
+      "minecraft:savanna_plateau",
+      "minecraft:windswept_savanna"
+    ],
+    "jungle": [
+      "minecraft:jungle",
+      "minecraft:sparse_jungle",
+      "minecraft:bamboo_jungle"
+    ],
+    "swamp": [
+      "minecraft:swamp",
+      "minecraft:mangrove_swamp"
+    ],
+    "snowy": [
+      "minecraft:snowy_plains",
+      "minecraft:ice_spikes",
+      "minecraft:snowy_slopes",
+      "minecraft:frozen_peaks",
+      "minecraft:snowy_beach"
+    ],
+    "taiga": [
+      "minecraft:taiga",
+      "minecraft:old_growth_pine_taiga",
+      "minecraft:old_growth_spruce_taiga",
+      "minecraft:snowy_taiga"
+    ],
+    "mountain": [
+      "minecraft:windswept_hills",
+      "minecraft:windswept_gravelly_hills",
+      "minecraft:windswept_forest",
+      "minecraft:stony_peaks",
+      "minecraft:jagged_peaks",
+      "minecraft:stony_shore",
+      "minecraft:grove"
+    ],
+    "mushroom": [
+      "minecraft:mushroom_fields"
+    ]
+  },
+  "region_words": {
+    "plains": "the plains",
+    "forest": "the forests",
+    "cherry": "the cherry groves",
+    "desert": "the desert",
+    "badlands": "the badlands",
+    "savanna": "the savanna",
+    "jungle": "the jungle",
+    "swamp": "the swamps",
+    "snowy": "the snowy north",
+    "taiga": "the taiga",
+    "mountain": "the mountains",
+    "mushroom": "the mushroom isles"
+  },
+  "fish": [
+    {
+      "id": "cod",
+      "item": "minecraft:cod",
+      "name": "Cod",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "cold"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        20,
+        60
+      ],
+      "behavior": "smooth",
+      "difficulty": 15,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [
+        "existing"
+      ],
+      "text": "The old reliable of cold seas. Salted, it feeds whole villages through the winter."
+    },
+    {
+      "id": "salmon",
+      "item": "minecraft:salmon",
+      "name": "Salmon",
+      "rarity": "common",
+      "water": [
+        "river",
+        "ocean",
+        "cold"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        40,
+        90
+      ],
+      "behavior": "mixed",
+      "difficulty": 25,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [
+        "existing"
+      ],
+      "text": "Born in rivers, grown in the sea, and home again to spawn. Strong for its size."
+    },
+    {
+      "id": "pufferfish",
+      "item": "minecraft:pufferfish",
+      "name": "Pufferfish",
+      "rarity": "uncommon",
+      "water": [
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        15,
+        35
+      ],
+      "behavior": "floater",
+      "difficulty": 30,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [
+        "existing",
+        "notreat"
+      ],
+      "text": "Swells into a spiky ball when it's frightened. Don't eat it raw. Really, don't."
+    },
+    {
+      "id": "tropical_fish",
+      "item": "minecraft:tropical_fish",
+      "name": "Tropical Fish",
+      "rarity": "common",
+      "water": [
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        5,
+        20
+      ],
+      "behavior": "dart",
+      "difficulty": 20,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [
+        "existing"
+      ],
+      "text": "A flicker of colour from the warm reefs. Every one is painted a little differently."
+    },
+    {
+      "id": "minnow",
+      "item": "villagefriends:minnow",
+      "name": "Minnow",
+      "rarity": "common",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        3,
+        9
+      ],
+      "behavior": "smooth",
+      "difficulty": 5,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Small, silver and everywhere. Every angler's first catch, and every heron's lunch."
+    },
+    {
+      "id": "gudgeon",
+      "item": "villagefriends:gudgeon",
+      "name": "Gudgeon",
+      "rarity": "common",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "taiga"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        8,
+        18
+      ],
+      "behavior": "smooth",
+      "difficulty": 10,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A whiskered little bottom-feeder that bites at almost anything."
+    },
+    {
+      "id": "roach",
+      "item": "villagefriends:roach",
+      "name": "Roach",
+      "rarity": "common",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "swamp"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        12,
+        30
+      ],
+      "behavior": "mixed",
+      "difficulty": 12,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Red-eyed and bony. Old anglers say a roach can count your hooks."
+    },
+    {
+      "id": "dace",
+      "item": "villagefriends:dace",
+      "name": "Dace",
+      "rarity": "common",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "mountain"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "size": [
+        15,
+        25
+      ],
+      "behavior": "dart",
+      "difficulty": 18,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Quick as a dart in clear, running water on bright days."
+    },
+    {
+      "id": "chub",
+      "item": "villagefriends:chub",
+      "name": "Chub",
+      "rarity": "common",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "savanna"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        20,
+        50
+      ],
+      "behavior": "mixed",
+      "difficulty": 22,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A greedy river fish with a mouth like a coin purse. Eats cherries that fall from the bank."
+    },
+    {
+      "id": "perch",
+      "item": "villagefriends:perch",
+      "name": "Perch",
+      "rarity": "common",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        15,
+        40
+      ],
+      "behavior": "mixed",
+      "difficulty": 20,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Striped and spiny-finned. Where there's one perch there are twenty."
+    },
+    {
+      "id": "carp",
+      "item": "villagefriends:carp",
+      "name": "Carp",
+      "rarity": "common",
+      "water": [
+        "lake",
+        "swamp"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "swamp",
+        "cherry"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "spring",
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        30,
+        80
+      ],
+      "behavior": "smooth",
+      "difficulty": 18,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A patient pond fish. Monks keep them in stew ponds for Fridays."
+    },
+    {
+      "id": "tench",
+      "item": "villagefriends:tench",
+      "name": "Tench",
+      "rarity": "common",
+      "water": [
+        "lake",
+        "swamp"
+      ],
+      "region": [
+        "swamp",
+        "forest",
+        "plains"
+      ],
+      "time": [
+        "dusk",
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        25,
+        55
+      ],
+      "behavior": "sinker",
+      "difficulty": 20,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The doctor fish: folk say a sick fish rubs against a tench to be healed."
+    },
+    {
+      "id": "bluegill",
+      "item": "villagefriends:bluegill",
+      "name": "Bluegill",
+      "rarity": "common",
+      "water": [
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "savanna"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        10,
+        22
+      ],
+      "behavior": "dart",
+      "difficulty": 12,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A round little sunfish that guards its nest in the shallows."
+    },
+    {
+      "id": "whitefish",
+      "item": "villagefriends:whitefish",
+      "name": "Whitefish",
+      "rarity": "common",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "taiga",
+        "snowy",
+        "mountain"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        30,
+        55
+      ],
+      "behavior": "smooth",
+      "difficulty": 18,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Pale and mild. Northern villages smoke it by the barrel."
+    },
+    {
+      "id": "tilapia",
+      "item": "villagefriends:tilapia",
+      "name": "Tilapia",
+      "rarity": "common",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "savanna",
+        "jungle",
+        "desert"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        20,
+        45
+      ],
+      "behavior": "mixed",
+      "difficulty": 15,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Hardy enough to live in a puddle. Mothers carry their young in their mouths."
+    },
+    {
+      "id": "crayfish",
+      "item": "villagefriends:crayfish",
+      "name": "Crayfish",
+      "rarity": "common",
+      "water": [
+        "river",
+        "lake",
+        "swamp"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "spring",
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        8,
+        15
+      ],
+      "behavior": "sinker",
+      "difficulty": 10,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "A little freshwater lobster that backs away under stones."
+    },
+    {
+      "id": "blindfish",
+      "item": "villagefriends:blindfish",
+      "name": "Blindfish",
+      "rarity": "common",
+      "water": [
+        "cave"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        6,
+        14
+      ],
+      "behavior": "smooth",
+      "difficulty": 20,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Born in the dark and never needed eyes. Feels its way along the cave floor."
+    },
+    {
+      "id": "bream",
+      "item": "villagefriends:bream",
+      "name": "Bream",
+      "rarity": "uncommon",
+      "water": [
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "swamp"
+      ],
+      "time": [
+        "dusk",
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        30,
+        60
+      ],
+      "behavior": "smooth",
+      "difficulty": 28,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Deep-bodied and slimy. Shoals of bream turn the evening water to bubbles."
+    },
+    {
+      "id": "pike",
+      "item": "villagefriends:pike",
+      "name": "Pike",
+      "rarity": "uncommon",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "taiga"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "autumn",
+        "winter",
+        "spring"
+      ],
+      "size": [
+        45,
+        120
+      ],
+      "behavior": "dart",
+      "difficulty": 50,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The freshwater wolf. Waits in the weeds, then strikes like a thrown spear."
+    },
+    {
+      "id": "brown_trout",
+      "item": "villagefriends:brown_trout",
+      "name": "Brown Trout",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "forest",
+        "plains",
+        "mountain"
+      ],
+      "time": [
+        "dawn",
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [
+        "spring",
+        "autumn"
+      ],
+      "size": [
+        30,
+        70
+      ],
+      "behavior": "dart",
+      "difficulty": 45,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Spotted gold and red. Rises to a fly at first and last light."
+    },
+    {
+      "id": "rainbow_trout",
+      "item": "villagefriends:rainbow_trout",
+      "name": "Rainbow Trout",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "mountain",
+        "taiga",
+        "cherry"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "size": [
+        30,
+        65
+      ],
+      "behavior": "dart",
+      "difficulty": 45,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A pink stripe down its side, like a rainbow caught in a stream."
+    },
+    {
+      "id": "barbel",
+      "item": "villagefriends:barbel",
+      "name": "Barbel",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "plains",
+        "savanna",
+        "forest"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        40,
+        90
+      ],
+      "behavior": "sinker",
+      "difficulty": 40,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Four whiskers and a stubborn pull. Hugs the gravel in fast water."
+    },
+    {
+      "id": "river_eel",
+      "item": "villagefriends:river_eel",
+      "name": "River Eel",
+      "rarity": "uncommon",
+      "water": [
+        "river",
+        "swamp"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "rain",
+      "season": [],
+      "size": [
+        50,
+        110
+      ],
+      "behavior": "mixed",
+      "difficulty": 50,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Wriggles across wet meadows on rainy nights. Nobody knows where they're born."
+    },
+    {
+      "id": "largemouth_bass",
+      "item": "villagefriends:largemouth_bass",
+      "name": "Largemouth Bass",
+      "rarity": "uncommon",
+      "water": [
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "swamp"
+      ],
+      "time": [
+        "dawn",
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        30,
+        60
+      ],
+      "behavior": "mixed",
+      "difficulty": 40,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "All mouth and appetite. Has been known to swallow a duckling."
+    },
+    {
+      "id": "smallmouth_bass",
+      "item": "villagefriends:smallmouth_bass",
+      "name": "Smallmouth Bass",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "forest",
+        "mountain",
+        "taiga"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "size": [
+        25,
+        50
+      ],
+      "behavior": "dart",
+      "difficulty": 42,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Bronze and spirited. Leaps clean out of the water when hooked."
+    },
+    {
+      "id": "arctic_char",
+      "item": "villagefriends:arctic_char",
+      "name": "Arctic Char",
+      "rarity": "uncommon",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "snowy",
+        "mountain"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "winter",
+        "spring"
+      ],
+      "size": [
+        35,
+        70
+      ],
+      "behavior": "mixed",
+      "difficulty": 45,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Lives in water so cold it aches. Its belly turns red as a winter sunset."
+    },
+    {
+      "id": "lamprey",
+      "item": "villagefriends:lamprey",
+      "name": "Lamprey",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "spring"
+      ],
+      "size": [
+        40,
+        90
+      ],
+      "behavior": "smooth",
+      "difficulty": 38,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A jawless thing with a mouth full of rings of teeth. Kings once feasted on lamprey pie."
+    },
+    {
+      "id": "desert_pupfish",
+      "item": "villagefriends:desert_pupfish",
+      "name": "Desert Pupfish",
+      "rarity": "uncommon",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "desert",
+        "badlands"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        3,
+        6
+      ],
+      "behavior": "dart",
+      "difficulty": 35,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A tiny blue fish that survives where nothing should. Plays like a puppy in warm pools."
+    },
+    {
+      "id": "piranha",
+      "item": "villagefriends:piranha",
+      "name": "Piranha",
+      "rarity": "uncommon",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "jungle"
+      ],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        15,
+        35
+      ],
+      "behavior": "dart",
+      "difficulty": 55,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Teeth like a saw. Mind your fingers when you take the hook out."
+    },
+    {
+      "id": "bowfin",
+      "item": "villagefriends:bowfin",
+      "name": "Bowfin",
+      "rarity": "uncommon",
+      "water": [
+        "swamp",
+        "lake"
+      ],
+      "region": [
+        "swamp"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        40,
+        75
+      ],
+      "behavior": "mixed",
+      "difficulty": 45,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "An ancient swamp fish that can gulp air when the water goes stale."
+    },
+    {
+      "id": "mudskipper",
+      "item": "villagefriends:mudskipper",
+      "name": "Mudskipper",
+      "rarity": "uncommon",
+      "water": [
+        "swamp"
+      ],
+      "region": [
+        "swamp"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [],
+      "size": [
+        10,
+        25
+      ],
+      "behavior": "floater",
+      "difficulty": 30,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A fish that walks on its fins and climbs roots to look around."
+    },
+    {
+      "id": "stone_loach",
+      "item": "villagefriends:stone_loach",
+      "name": "Stone Loach",
+      "rarity": "uncommon",
+      "water": [
+        "cave"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        8,
+        14
+      ],
+      "behavior": "sinker",
+      "difficulty": 32,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Hides under pebbles in underground streams and only comes out to eat."
+    },
+    {
+      "id": "zander",
+      "item": "villagefriends:zander",
+      "name": "Zander",
+      "rarity": "rare",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "forest",
+        "taiga"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "autumn",
+        "winter"
+      ],
+      "size": [
+        50,
+        100
+      ],
+      "behavior": "dart",
+      "difficulty": 60,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Glassy eyes made for the dark. Hunts when the moon is up."
+    },
+    {
+      "id": "grayling",
+      "item": "villagefriends:grayling",
+      "name": "Grayling",
+      "rarity": "rare",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "mountain",
+        "snowy"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "winter",
+        "spring"
+      ],
+      "size": [
+        30,
+        55
+      ],
+      "behavior": "dart",
+      "difficulty": 60,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The lady of the stream, with a sail of a fin. Smells faintly of thyme."
+    },
+    {
+      "id": "catfish",
+      "item": "villagefriends:catfish",
+      "name": "Catfish",
+      "rarity": "rare",
+      "water": [
+        "river",
+        "swamp",
+        "lake"
+      ],
+      "region": [
+        "plains",
+        "swamp",
+        "savanna"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "rain",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "size": [
+        60,
+        160
+      ],
+      "behavior": "mixed",
+      "difficulty": 70,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Whiskers as long as your arm. Comes up to feed when rain muddies the water."
+    },
+    {
+      "id": "golden_carp",
+      "item": "villagefriends:golden_carp",
+      "name": "Golden Carp",
+      "rarity": "rare",
+      "water": [
+        "lake"
+      ],
+      "region": [
+        "cherry",
+        "plains",
+        "forest"
+      ],
+      "time": [
+        "dawn"
+      ],
+      "weather": "clear",
+      "season": [
+        "spring"
+      ],
+      "size": [
+        30,
+        70
+      ],
+      "behavior": "smooth",
+      "difficulty": 55,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A carp the colour of a crown. Rises at dawn in still, clear water."
+    },
+    {
+      "id": "burbot",
+      "item": "villagefriends:burbot",
+      "name": "Burbot",
+      "rarity": "rare",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "snowy",
+        "taiga"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "winter"
+      ],
+      "size": [
+        35,
+        80
+      ],
+      "behavior": "sinker",
+      "difficulty": 62,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The only cod of fresh water. Spawns under the ice in the dead of winter."
+    },
+    {
+      "id": "arowana",
+      "item": "villagefriends:arowana",
+      "name": "Arowana",
+      "rarity": "rare",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "jungle"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "rain",
+      "season": [],
+      "size": [
+        60,
+        110
+      ],
+      "behavior": "dart",
+      "difficulty": 72,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Leaps from the water to snatch beetles off low branches."
+    },
+    {
+      "id": "nile_perch",
+      "item": "villagefriends:nile_perch",
+      "name": "Nile Perch",
+      "rarity": "rare",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "savanna"
+      ],
+      "time": [
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        70,
+        160
+      ],
+      "behavior": "mixed",
+      "difficulty": 70,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A silver giant of the savanna rivers. Grows as big as a grown man."
+    },
+    {
+      "id": "snakehead",
+      "item": "villagefriends:snakehead",
+      "name": "Snakehead",
+      "rarity": "rare",
+      "water": [
+        "swamp"
+      ],
+      "region": [
+        "swamp",
+        "jungle"
+      ],
+      "time": [],
+      "weather": "rain",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        50,
+        90
+      ],
+      "behavior": "mixed",
+      "difficulty": 68,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Breathes air and shakes off hooks in storms. Swamp folk call it the snake that swims."
+    },
+    {
+      "id": "gar",
+      "item": "villagefriends:gar",
+      "name": "Swamp Gar",
+      "rarity": "rare",
+      "water": [
+        "swamp",
+        "river"
+      ],
+      "region": [
+        "swamp"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        70,
+        150
+      ],
+      "behavior": "dart",
+      "difficulty": 66,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A long beak full of needles and scales like armour. Older than the swamp itself."
+    },
+    {
+      "id": "glow_minnow",
+      "item": "villagefriends:glow_minnow",
+      "name": "Glow Minnow",
+      "rarity": "rare",
+      "water": [
+        "cave"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        4,
+        9
+      ],
+      "behavior": "dart",
+      "difficulty": 58,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A minnow that shines like a lantern in the deep dark pools."
+    },
+    {
+      "id": "oasis_tetra",
+      "item": "villagefriends:oasis_tetra",
+      "name": "Oasis Tetra",
+      "rarity": "rare",
+      "water": [
+        "lake"
+      ],
+      "region": [
+        "desert"
+      ],
+      "time": [
+        "dawn",
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        3,
+        6
+      ],
+      "behavior": "dart",
+      "difficulty": 50,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A jewel of a fish found only in desert pools. Blink and it's gone."
+    },
+    {
+      "id": "sturgeon",
+      "item": "villagefriends:sturgeon",
+      "name": "Sturgeon",
+      "rarity": "epic",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "taiga",
+        "plains",
+        "forest"
+      ],
+      "time": [
+        "dawn"
+      ],
+      "weather": "any",
+      "season": [
+        "spring"
+      ],
+      "size": [
+        100,
+        250
+      ],
+      "behavior": "sinker",
+      "difficulty": 82,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A great armoured fish with a snout like a shovel. Its eggs fetch a king's ransom."
+    },
+    {
+      "id": "ghost_catfish",
+      "item": "villagefriends:ghost_catfish",
+      "name": "Ghost Catfish",
+      "rarity": "epic",
+      "water": [
+        "deepcave"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        40,
+        110
+      ],
+      "behavior": "mixed",
+      "difficulty": 85,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "So pale you can see its bones. Lives in the black water below the world."
+    },
+    {
+      "id": "herring",
+      "item": "villagefriends:herring",
+      "name": "Herring",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "cold"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        20,
+        35
+      ],
+      "behavior": "smooth",
+      "difficulty": 12,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Swims in shoals of thousands. Pickled, salted, smoked: herring keeps a coast alive."
+    },
+    {
+      "id": "sardine",
+      "item": "villagefriends:sardine",
+      "name": "Sardine",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        12,
+        22
+      ],
+      "behavior": "dart",
+      "difficulty": 12,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A little oily silver fish, best packed tight and grilled on a fire."
+    },
+    {
+      "id": "anchovy",
+      "item": "villagefriends:anchovy",
+      "name": "Anchovy",
+      "rarity": "common",
+      "water": [
+        "warm",
+        "ocean"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        8,
+        15
+      ],
+      "behavior": "dart",
+      "difficulty": 10,
+      "food": 1,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Tiny, salty and strong-tasting. A spoonful flavours a whole pot."
+    },
+    {
+      "id": "mackerel",
+      "item": "villagefriends:mackerel",
+      "name": "Mackerel",
+      "rarity": "common",
+      "water": [
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        25,
+        45
+      ],
+      "behavior": "dart",
+      "difficulty": 25,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Striped like the sea on a windy day. Fights hard for its size."
+    },
+    {
+      "id": "mullet",
+      "item": "villagefriends:mullet",
+      "name": "Grey Mullet",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "river"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        30,
+        60
+      ],
+      "behavior": "smooth",
+      "difficulty": 22,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Cruises river mouths sipping at the mud. Notoriously fussy about bait."
+    },
+    {
+      "id": "pollock",
+      "item": "villagefriends:pollock",
+      "name": "Pollock",
+      "rarity": "common",
+      "water": [
+        "cold",
+        "deep"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "winter",
+        "autumn"
+      ],
+      "size": [
+        40,
+        90
+      ],
+      "behavior": "mixed",
+      "difficulty": 25,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A cold-water cod cousin that hunts in packs."
+    },
+    {
+      "id": "sea_bream",
+      "item": "villagefriends:sea_bream",
+      "name": "Sea Bream",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        20,
+        45
+      ],
+      "behavior": "mixed",
+      "difficulty": 20,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A silver-pink fish with a gold band between its eyes."
+    },
+    {
+      "id": "shore_crab",
+      "item": "villagefriends:shore_crab",
+      "name": "Shore Crab",
+      "rarity": "common",
+      "water": [
+        "ocean",
+        "warm",
+        "cold"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        6,
+        12
+      ],
+      "behavior": "sinker",
+      "difficulty": 12,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "Scuttles sideways and pinches anything it doesn't like. That's most things."
+    },
+    {
+      "id": "shrimp",
+      "item": "villagefriends:shrimp",
+      "name": "Shrimp",
+      "rarity": "common",
+      "water": [
+        "warm",
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        4,
+        9
+      ],
+      "behavior": "floater",
+      "difficulty": 10,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "See-through and twitchy. Comes up to the light at night."
+    },
+    {
+      "id": "sea_cucumber",
+      "item": "villagefriends:sea_cucumber",
+      "name": "Sea Cucumber",
+      "rarity": "common",
+      "water": [
+        "deep",
+        "ocean"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        10,
+        30
+      ],
+      "behavior": "sinker",
+      "difficulty": 8,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "Not a cucumber. Not quite a fish. Mostly a lump that sits on the sea bed."
+    },
+    {
+      "id": "arctic_cod",
+      "item": "villagefriends:arctic_cod",
+      "name": "Arctic Cod",
+      "rarity": "common",
+      "water": [
+        "cold"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "winter"
+      ],
+      "size": [
+        15,
+        35
+      ],
+      "behavior": "smooth",
+      "difficulty": 18,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A small cod with antifreeze in its blood, at home under the ice."
+    },
+    {
+      "id": "sea_bass",
+      "item": "villagefriends:sea_bass",
+      "name": "Sea Bass",
+      "rarity": "uncommon",
+      "water": [
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "dawn",
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        35,
+        80
+      ],
+      "behavior": "mixed",
+      "difficulty": 40,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The wolf of the sea. Hunts the surf when the tide turns."
+    },
+    {
+      "id": "haddock",
+      "item": "villagefriends:haddock",
+      "name": "Haddock",
+      "rarity": "uncommon",
+      "water": [
+        "cold",
+        "deep"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        35,
+        70
+      ],
+      "behavior": "smooth",
+      "difficulty": 35,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A dark thumbprint on each side, from a saint's hand, the fishwives say."
+    },
+    {
+      "id": "flounder",
+      "item": "villagefriends:flounder",
+      "name": "Flounder",
+      "rarity": "uncommon",
+      "water": [
+        "ocean",
+        "warm"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        25,
+        50
+      ],
+      "behavior": "sinker",
+      "difficulty": 38,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Lies flat in the sand with both eyes on one side, waiting."
+    },
+    {
+      "id": "red_snapper",
+      "item": "villagefriends:red_snapper",
+      "name": "Red Snapper",
+      "rarity": "uncommon",
+      "water": [
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "rain",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        40,
+        90
+      ],
+      "behavior": "mixed",
+      "difficulty": 45,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Red as a rose and snappish with it. Bites best in a warm rain."
+    },
+    {
+      "id": "conger_eel",
+      "item": "villagefriends:conger_eel",
+      "name": "Conger Eel",
+      "rarity": "uncommon",
+      "water": [
+        "ocean",
+        "deep"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        80,
+        200
+      ],
+      "behavior": "smooth",
+      "difficulty": 48,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A huge grey eel that lives in shipwrecks. Strong enough to pull a man in."
+    },
+    {
+      "id": "dogfish",
+      "item": "villagefriends:dogfish",
+      "name": "Dogfish",
+      "rarity": "uncommon",
+      "water": [
+        "cold",
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        50,
+        100
+      ],
+      "behavior": "mixed",
+      "difficulty": 42,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "A small spotted shark. Its skin is rough enough to sand wood."
+    },
+    {
+      "id": "lobster",
+      "item": "villagefriends:lobster",
+      "name": "Lobster",
+      "rarity": "uncommon",
+      "water": [
+        "cold",
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "summer",
+        "autumn"
+      ],
+      "size": [
+        25,
+        50
+      ],
+      "behavior": "sinker",
+      "difficulty": 40,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "Blue-black in the water, red in the pot. Mind both claws."
+    },
+    {
+      "id": "oyster",
+      "item": "villagefriends:oyster",
+      "name": "Oyster",
+      "rarity": "uncommon",
+      "water": [
+        "ocean",
+        "warm"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "autumn",
+        "winter"
+      ],
+      "size": [
+        7,
+        12
+      ],
+      "behavior": "sinker",
+      "difficulty": 25,
+      "food": 2,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "A rough grey shell with a soft heart. Now and then, a pearl."
+    },
+    {
+      "id": "moon_jelly",
+      "item": "villagefriends:moon_jelly",
+      "name": "Moon Jelly",
+      "rarity": "uncommon",
+      "water": [
+        "warm",
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        10,
+        30
+      ],
+      "behavior": "floater",
+      "difficulty": 30,
+      "food": 0,
+      "saturation": 0,
+      "flags": [
+        "inedible",
+        "notreat"
+      ],
+      "text": "A drifting moon of a jellyfish. Beautiful, and not for eating."
+    },
+    {
+      "id": "halibut",
+      "item": "villagefriends:halibut",
+      "name": "Halibut",
+      "rarity": "rare",
+      "water": [
+        "cold",
+        "deep"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [
+        "winter",
+        "spring"
+      ],
+      "size": [
+        70,
+        200
+      ],
+      "behavior": "sinker",
+      "difficulty": 65,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "The great flatfish. A big one is heavier than the angler who lands it."
+    },
+    {
+      "id": "tuna",
+      "item": "villagefriends:tuna",
+      "name": "Bluefin Tuna",
+      "rarity": "rare",
+      "water": [
+        "deep"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        90,
+        250
+      ],
+      "behavior": "dart",
+      "difficulty": 75,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Built like a cannonball and faster than a horse. It'll take the line to the horizon."
+    },
+    {
+      "id": "mahi_mahi",
+      "item": "villagefriends:mahi_mahi",
+      "name": "Mahi-Mahi",
+      "rarity": "rare",
+      "water": [
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        60,
+        130
+      ],
+      "behavior": "dart",
+      "difficulty": 68,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Green and gold in the water, it flashes blue the moment it's caught."
+    },
+    {
+      "id": "monkfish",
+      "item": "villagefriends:monkfish",
+      "name": "Monkfish",
+      "rarity": "rare",
+      "water": [
+        "deep"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "winter"
+      ],
+      "size": [
+        50,
+        110
+      ],
+      "behavior": "sinker",
+      "difficulty": 62,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "All head and mouth, with a little lure on its brow. Delicious, if you can bear to look."
+    },
+    {
+      "id": "lionfish",
+      "item": "villagefriends:lionfish",
+      "name": "Lionfish",
+      "rarity": "rare",
+      "water": [
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        15,
+        35
+      ],
+      "behavior": "floater",
+      "difficulty": 60,
+      "food": 2,
+      "saturation": 0.1,
+      "flags": [
+        "notreat",
+        "poison"
+      ],
+      "text": "A mane of striped, venomous spines. Handle it like a hedgehog made of nettles."
+    },
+    {
+      "id": "octopus",
+      "item": "villagefriends:octopus",
+      "name": "Octopus",
+      "rarity": "rare",
+      "water": [
+        "ocean",
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        40,
+        120
+      ],
+      "behavior": "sinker",
+      "difficulty": 70,
+      "food": 3,
+      "saturation": 0.2,
+      "flags": [
+        "shellfish"
+      ],
+      "text": "Clever enough to unscrew a jar. Holds on to the sea bed with all eight arms."
+    },
+    {
+      "id": "stingray",
+      "item": "villagefriends:stingray",
+      "name": "Stingray",
+      "rarity": "rare",
+      "water": [
+        "warm",
+        "ocean"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "any",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        50,
+        140
+      ],
+      "behavior": "smooth",
+      "difficulty": 64,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [
+        "notreat"
+      ],
+      "text": "Glides over the sand like a cloak in the wind. Keep clear of the tail."
+    },
+    {
+      "id": "swordfish",
+      "item": "villagefriends:swordfish",
+      "name": "Swordfish",
+      "rarity": "epic",
+      "water": [
+        "deep",
+        "warm"
+      ],
+      "region": [],
+      "time": [
+        "day"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        150,
+        300
+      ],
+      "behavior": "dart",
+      "difficulty": 88,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Its bill is a real sword. It leaps, it spins, it will not give up."
+    },
+    {
+      "id": "blue_shark",
+      "item": "villagefriends:blue_shark",
+      "name": "Blue Shark",
+      "rarity": "epic",
+      "water": [
+        "deep"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "rain",
+      "season": [],
+      "size": [
+        150,
+        300
+      ],
+      "behavior": "mixed",
+      "difficulty": 86,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [
+        "notreat"
+      ],
+      "text": "A long blue shark that follows boats in rough weather."
+    },
+    {
+      "id": "anglerfish",
+      "item": "villagefriends:anglerfish",
+      "name": "Anglerfish",
+      "rarity": "epic",
+      "water": [
+        "deep"
+      ],
+      "region": [],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        30,
+        90
+      ],
+      "behavior": "sinker",
+      "difficulty": 84,
+      "food": 3,
+      "saturation": 0.1,
+      "flags": [],
+      "text": "Fishes for its supper with a glowing lure. Tonight you fished for it."
+    },
+    {
+      "id": "old_whiskers",
+      "item": "villagefriends:old_whiskers",
+      "name": "Old Whiskers",
+      "rarity": "legendary",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "plains"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "rain",
+      "season": [],
+      "size": [
+        180,
+        260
+      ],
+      "behavior": "mixed",
+      "difficulty": 92,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A catfish older than the village bell. The miller's grandfather swore it took his dog."
+    },
+    {
+      "id": "sunscale",
+      "item": "villagefriends:sunscale",
+      "name": "Sunscale",
+      "rarity": "legendary",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "desert"
+      ],
+      "time": [
+        "noon"
+      ],
+      "weather": "clear",
+      "season": [
+        "summer"
+      ],
+      "size": [
+        90,
+        130
+      ],
+      "behavior": "dart",
+      "difficulty": 95,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A fish of hammered gold that rises at noon in the desert pools when the sun is fiercest."
+    },
+    {
+      "id": "river_king",
+      "item": "villagefriends:river_king",
+      "name": "The River King",
+      "rarity": "legendary",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "savanna"
+      ],
+      "time": [
+        "dusk"
+      ],
+      "weather": "any",
+      "season": [],
+      "size": [
+        200,
+        300
+      ],
+      "behavior": "mixed",
+      "difficulty": 94,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A silver giant that rules the savanna rivers. Lions are said to drink upstream of it."
+    },
+    {
+      "id": "rimefin",
+      "item": "villagefriends:rimefin",
+      "name": "Rimefin",
+      "rarity": "legendary",
+      "water": [
+        "lake",
+        "river"
+      ],
+      "region": [
+        "snowy"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "clear",
+      "season": [
+        "winter"
+      ],
+      "size": [
+        100,
+        160
+      ],
+      "behavior": "dart",
+      "difficulty": 96,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A pike of living ice, seen through frozen lakes on still, starry winter nights."
+    },
+    {
+      "id": "old_mossback",
+      "item": "villagefriends:old_mossback",
+      "name": "Old Mossback",
+      "rarity": "legendary",
+      "water": [
+        "river"
+      ],
+      "region": [
+        "taiga"
+      ],
+      "time": [
+        "dawn"
+      ],
+      "weather": "rain",
+      "season": [
+        "autumn"
+      ],
+      "size": [
+        250,
+        380
+      ],
+      "behavior": "sinker",
+      "difficulty": 93,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A sturgeon so old that moss grows on its back. Moves up the taiga rivers in the autumn rains."
+    },
+    {
+      "id": "stormjaw",
+      "item": "villagefriends:stormjaw",
+      "name": "Stormjaw",
+      "rarity": "legendary",
+      "water": [
+        "deep"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "thunder",
+      "season": [],
+      "size": [
+        300,
+        500
+      ],
+      "behavior": "dart",
+      "difficulty": 100,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A great shark that hunts the open sea under thunderstorms. Sailors pray never to see its fin."
+    },
+    {
+      "id": "bog_lantern",
+      "item": "villagefriends:bog_lantern",
+      "name": "The Bog Lantern",
+      "rarity": "legendary",
+      "water": [
+        "swamp"
+      ],
+      "region": [
+        "swamp"
+      ],
+      "time": [
+        "night"
+      ],
+      "weather": "any",
+      "season": [
+        "autumn"
+      ],
+      "size": [
+        60,
+        110
+      ],
+      "behavior": "floater",
+      "difficulty": 92,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "The light in the marsh that leads travellers astray is no spirit: it's the lure of this fish."
+    },
+    {
+      "id": "deepglow",
+      "item": "villagefriends:deepglow",
+      "name": "Deepglow",
+      "rarity": "legendary",
+      "water": [
+        "deepcave"
+      ],
+      "region": [],
+      "time": [],
+      "weather": "any",
+      "season": [],
+      "size": [
+        70,
+        120
+      ],
+      "behavior": "smooth",
+      "difficulty": 97,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A blind white eel that glows blue in the black water at the bottom of the world."
+    },
+    {
+      "id": "jade_arowana",
+      "item": "villagefriends:jade_arowana",
+      "name": "Jade Arowana",
+      "rarity": "legendary",
+      "water": [
+        "river",
+        "lake"
+      ],
+      "region": [
+        "jungle"
+      ],
+      "time": [
+        "day"
+      ],
+      "weather": "rain",
+      "season": [],
+      "size": [
+        100,
+        150
+      ],
+      "behavior": "dart",
+      "difficulty": 94,
+      "food": 0,
+      "saturation": 0,
+      "flags": [],
+      "text": "A dragon of a fish with jade scales. Jungle folk say it leaps for the rain itself."
+    }
+  ],
+  "gear": [
+    {
+      "id": "reinforced_rod",
+      "kind": "rod"
+    },
+    {
+      "id": "anglers_rod",
+      "kind": "rod"
+    },
+    {
+      "id": "bait_worms",
+      "kind": "bait"
+    },
+    {
+      "id": "chum",
+      "kind": "bait"
+    },
+    {
+      "id": "glow_bait",
+      "kind": "bait"
+    },
+    {
+      "id": "legend_lure",
+      "kind": "bait"
+    },
+    {
+      "id": "cork_bobber",
+      "kind": "tackle"
+    },
+    {
+      "id": "lead_sinker",
+      "kind": "tackle"
+    },
+    {
+      "id": "barbed_hook",
+      "kind": "tackle"
+    },
+    {
+      "id": "treasure_hook",
+      "kind": "tackle"
+    },
+    {
+      "id": "spinner",
+      "kind": "tackle"
+    },
+    {
+      "id": "anglers_journal",
+      "kind": "item"
+    },
+    {
+      "id": "message_in_a_bottle",
+      "kind": "item"
+    },
+    {
+      "id": "grilled_fish",
+      "kind": "item"
+    },
+    {
+      "id": "trophy_mount",
+      "kind": "block"
+    }
+  ]
+}

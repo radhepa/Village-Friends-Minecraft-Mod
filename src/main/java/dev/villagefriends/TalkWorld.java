@@ -100,6 +100,7 @@ public final class TalkWorld {
         dev.villagefriends.home.Homes.talk(v, fill);
         dev.villagefriends.homestead.Homesteads.talk(v, fill);
         dev.villagefriends.hearth.HearthVillage.talk(v, fill);
+        dev.villagefriends.fishing.FishingVillage.talk(v, p, fill);
         return new Talk.Context(topic, v.isBaby(), profile.personality(), job, friendLevel, Talk.period(time), weather,
                 plan.block().id(), Routine.marketDay(today), moon, home, held, states, extra, fill);
     }
@@ -180,6 +181,8 @@ public final class TalkWorld {
         var line = Talk.pick(bank, c, RANDOM, recent);
         if (line == null) return null;
         saveBond(v, p, bond(v, p).line("t:" + line.id()));
+        // A tall tale about a legendary fish goes in the player's angler's journal.
+        if (line.key().startsWith("tale.legend") || line.key().equals("baby.tale.legend")) dev.villagefriends.fishing.FishingVillage.heard(p, c.fill().get("legend_id"));
         return line.text();
     }
 

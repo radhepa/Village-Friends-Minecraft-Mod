@@ -298,7 +298,8 @@ def tags(crops, dishes):
     files[DATA / f'{NS}/tags/block/hearth/crops.json'] = tag(blocks)
     files[DATA / f'{NS}/tags/block/hearth/heat_sources.json'] = tag(['minecraft:campfire', 'minecraft:soul_campfire', 'minecraft:fire',
                                                                      'minecraft:soul_fire', 'minecraft:lava', 'minecraft:magma_block'])
-    files[DATA / f'{NS}/tags/item/cooking/fish.json'] = tag(['minecraft:cod', 'minecraft:salmon', 'minecraft:cooked_cod', 'minecraft:cooked_salmon'])
+    files[DATA / f'{NS}/tags/item/cooking/fish.json'] = tag(['minecraft:cod', 'minecraft:salmon', 'minecraft:cooked_cod', 'minecraft:cooked_salmon',
+                                                         f'#{NS}:fishing/edible', f'{NS}:grilled_fish'])
     files[DATA / f'{NS}/tags/item/hearth/crops.json'] = tag(produce)
     files[DATA / f'{NS}/tags/item/hearth/seeds.json'] = tag(seeds)
     files[DATA / f'{NS}/tags/item/hearth/dishes.json'] = tag([f'{NS}:{d["id"]}' for d in meals])

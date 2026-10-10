@@ -31,4 +31,7 @@ public final class ResidentRenderState extends HumanoidRenderState {
     public final net.minecraft.client.renderer.item.ItemStackRenderState ball = new net.minecraft.client.renderer.item.ItemStackRenderState();
     public double ballX, ballY, ballZ;
     public float ballSpin;
+    /** Fishing (Tall Tales Fishing): a line from the rod tip to the bobber, both relative to the resident. */
+    public boolean lineShown;
+    public double bobberX, bobberY, bobberZ, rodX, rodY, rodZ;
 }

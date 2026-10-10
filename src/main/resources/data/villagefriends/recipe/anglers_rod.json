@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "villagefriends:reinforced_rod",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:prismarine_shard"
+  ],
+  "result": {
+    "id": "villagefriends:anglers_rod",
+    "count": 1
+  }
+}

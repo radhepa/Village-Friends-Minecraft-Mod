@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "villagefriends:fisherman/anglers_journal",
+    "villagefriends:fisherman/bait_worms",
+    "villagefriends:fisherman/carp_emerald",
+    "villagefriends:fisherman/herring_emerald",
+    "villagefriends:fisherman/minnow_emerald",
+    "villagefriends:fisherman/perch_emerald",
+    "villagefriends:fisherman/roach_emerald",
+    "villagefriends:fisherman/sardine_emerald"
+  ]
+}

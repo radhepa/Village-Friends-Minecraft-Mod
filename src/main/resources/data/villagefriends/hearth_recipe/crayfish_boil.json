@@ -1,0 +1,16 @@
+{
+  "station": "pot",
+  "ingredients": [
+    "villagefriends:crayfish",
+    "villagefriends:crayfish",
+    "villagefriends:crayfish",
+    "villagefriends:garlic",
+    "villagefriends:leek"
+  ],
+  "vessel": "minecraft:bowl",
+  "result": {
+    "id": "villagefriends:crayfish_boil",
+    "count": 1
+  },
+  "time": 200
+}

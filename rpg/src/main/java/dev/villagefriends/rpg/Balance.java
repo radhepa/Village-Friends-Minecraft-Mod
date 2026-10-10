@@ -65,6 +65,13 @@ public final class Balance {
     public static final double COOK_WELL_FED = .01, COOK_FINE = .008;
     /** Cooking experience per item taken from a station: a little for flour and butter, more for better dishes. */
     public static double cookXp(int tier) { return tier <= 0 ? 1 : 4 + 4 * tier; }
+    /** Fishing (Tall Tales Fishing's minigame): catch-zone pixels (of a 568-pixel track) and reel speed per level. */
+    public static final double FISH_ZONE = 1.2, FISH_REEL = .006;
+    /** Extra Fishing experience for landing a fish of this rarity (0 common to 4 legendary), on top of the usual 15. */
+    public static double fishXp(int rarity, boolean perfect) {
+        double xp = switch (rarity) { case 0 -> 0; case 1 -> 10; case 2 -> 25; case 3 -> 50; default -> 150; };
+        return perfect ? xp * 1.25 + 5 : xp;
+    }
     /** Skill experience to go from skill level {@code s} to the next. */
     public static long skillNeed(int s) { return 20 + Math.round(6 * Math.pow(s, 1.5)); }
     public static int skillLevel(long xp) {

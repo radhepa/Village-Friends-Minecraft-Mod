@@ -153,9 +153,12 @@ public final class Routine {
         int chance = (regular ? 70 : 12) + sociable(personality) * 4 + (marketDay(day) ? 15 : 0);
         return roll(seed, day, 0x4C55) < chance;
     }
-    /** Supper at the tavern instead of at home: about one evening in five, nearly half on Market Day. */
+    /**
+     * Supper at the tavern instead of at home: about one evening in five, nearly half on Market Day, and more
+     * still on fishing contest day, when the results are read out there at five.
+     */
     public static boolean tavernSupper(int seed, String personality, long day) {
-        int chance = 18 + sociable(personality) * 5 + (marketDay(day) ? 25 : 0);
+        int chance = 18 + sociable(personality) * 5 + (marketDay(day) ? 25 : 0) + (dev.villagefriends.fishing.Contest.contestDay(day) ? 30 : 0);
         return roll(seed, day, 0x5099) < chance;
     }
     /** An evening at the tavern: about one night in three, two in three on Market Day. */

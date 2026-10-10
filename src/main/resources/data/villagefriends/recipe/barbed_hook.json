@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:iron_nugget",
+    "minecraft:iron_nugget",
+    "minecraft:flint"
+  ],
+  "result": {
+    "id": "villagefriends:barbed_hook",
+    "count": 1
+  }
+}

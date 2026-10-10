@@ -224,14 +224,19 @@ public final class PetKeeping {
                 : List.of("{name}'s tail goes wild. Best. Pat. Ever.", "{name} rolls over for a belly rub, just in case.", "{name} licks your hand and grins.");
         return fill(lines.get(random.nextInt(lines.size())), pet);
     }
-    public static String treatLine(PetProfile pet, String item, boolean first) {
+    public static String treatLine(PetProfile pet, String item, boolean first) { return treatLine(pet, item, first, null); }
+    /** {@code fish} is the fish's name when the treat is a fish: cats and dogs love fish. */
+    public static String treatLine(PetProfile pet, String item, boolean first, String fish) {
         if (!first) return fill("{name} happily eats it, though they've already had a treat from you today.", pet);
         if (item.equals(pet.treat())) return fill(treatLabel(item) + "! {name}'s favorite. Gone in three bites, and they look up for more.", pet);
+        String a = fish == null || fish.isEmpty() || "aeiou".indexOf(fish.charAt(0)) < 0 ? "A " : "An ";
+        if (fish != null) return fill(pet.cat() ? a + fish + "! {name} purrs so loudly the whole street can hear, and eats every scrap."
+                : a + fish + "! {name} wolfs it down, tail going like a windmill, and licks your fingers clean.", pet);
         return fill("{name} gobbles it up and gives you a grateful look.", pet);
     }
     public static String refusedLine(PetProfile pet, boolean emptyHand) {
-        if (emptyHand) return "Hold a treat in your main hand first: fish for cats, meat for dogs.";
-        return fill(pet.cat() ? "{name} sniffs it and turns away. Cats would rather have cod or salmon." : "{name} sniffs it politely. Dogs would rather have meat.", pet);
+        if (emptyHand) return "Hold a treat in your main hand first: fish for cats, meat or fish for dogs.";
+        return fill(pet.cat() ? "{name} sniffs it and turns away. Cats would rather have fish." : "{name} sniffs it politely. Dogs would rather have meat or fish.", pet);
     }
     static String fill(String line, PetProfile pet) {
         return line.replace("{name}", pet.name()).replace("{owner}", pet.ownerName().isEmpty() ? "the village" : pet.ownerName());

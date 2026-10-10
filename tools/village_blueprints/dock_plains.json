@@ -1,0 +1,201 @@
+{
+ "format": 1,
+ "size": [5, 4, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:oak_planks"
+  },
+  "B": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:oak_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:oak_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "E": {
+   "id": "minecraft:spruce_planks"
+  },
+  "F": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "G": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "H": {
+   "id": "minecraft:cobblestone"
+  },
+  "I": {
+   "id": "minecraft:dirt_path"
+  },
+  "J": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "K": {
+   "id": "minecraft:mossy_cobblestone"
+  },
+  "L": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:oak_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "N": {
+   "id": "minecraft:oak_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "east",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "Q": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "x",
+    "waterlogged": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y",
+    "waterlogged": "false"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "JIIIJ",
+    "KHHHK",
+    "CAAAC",
+    "DEEED",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "DEEED",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "DEEED"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "P....",
+    "B...L",
+    "B..NM",
+    "B..NM",
+    "BO..B",
+    "B...B",
+    "B...B",
+    "B...B",
+    "B...D",
+    "B...Q",
+    "B...L",
+    "D...D"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    "G...G",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "....R",
+    ".....",
+    ".....",
+    "G...G"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    "F...F",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "F...F"
+   ]
+  }
+ ],
+ "block_entities": [],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/docks.py",
+  "checksum": "25e347b941d1f69c"
+ }
+}

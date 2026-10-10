@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dirt",
+    "minecraft:bone_meal"
+  ],
+  "result": {
+    "id": "villagefriends:bait_worms",
+    "count": 6
+  }
+}

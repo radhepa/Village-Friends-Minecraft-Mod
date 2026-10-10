@@ -1,0 +1,13 @@
+{
+  "wants": {
+    "id": "villagefriends:halibut",
+    "count": 1
+  },
+  "gives": {
+    "id": "minecraft:emerald",
+    "count": 2
+  },
+  "max_uses": 16,
+  "xp": 11,
+  "reputation_discount": 0.05
+}

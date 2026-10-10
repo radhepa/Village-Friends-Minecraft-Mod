@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:glow_berries",
+    "villagefriends:bait_worms",
+    "villagefriends:bait_worms"
+  ],
+  "result": {
+    "id": "villagefriends:glow_bait",
+    "count": 2
+  }
+}

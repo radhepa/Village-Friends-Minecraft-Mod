@@ -150,7 +150,9 @@ class DialogueBankTest {
                 Map.entry("mobs", "5 zombies"), Map.entry("wanted", "12 wheat"), Map.entry("recipient", "Tobin"), Map.entry("sender", "Mira"),
                 Map.entry("season", "Summer"), Map.entry("victim", "Liora"), Map.entry("kin", "sister"), Map.entry("teller", "Pell"),
                 Map.entry("house", "The Ashford House"), Map.entry("place", "Blackthorn House"), Map.entry("spouse", "wife"),
-                Map.entry("dish", "onion pottage"), Map.entry("meal", "beef stew"), Map.entry("special", "mutton pie"), Map.entry("gift", "honey cake"));
+                Map.entry("dish", "onion pottage"), Map.entry("meal", "beef stew"), Map.entry("special", "mutton pie"), Map.entry("gift", "honey cake"),
+                Map.entry("legend", "the River King"), Map.entry("legend_where", "the rivers of the savanna"), Map.entry("legend_when", "at dusk"),
+                Map.entry("contest_when", "tomorrow"), Map.entry("winner", "Pell"), Map.entry("catch", "pike"));
         for (var pool : BANK.pools().entrySet()) for (var line : pool.getValue()) {
             String filled = Talk.fill(line, all);
             assertNotNull(filled, "Fillable: " + line);

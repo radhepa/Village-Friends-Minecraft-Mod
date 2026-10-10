@@ -4,6 +4,8 @@
     "minecraft:cod",
     "minecraft:salmon",
     "minecraft:cooked_cod",
-    "minecraft:cooked_salmon"
+    "minecraft:cooked_salmon",
+    "#villagefriends:fishing/edible",
+    "villagefriends:grilled_fish"
   ]
 }

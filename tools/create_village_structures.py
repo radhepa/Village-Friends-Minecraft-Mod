@@ -6,7 +6,9 @@ pools, processor lists, one ``villagefriends:village`` structure per type, their
 biome tags, the ``minecraft:villages`` structure set that replaces the vanilla
 villages, and the structure catalog the tests read. It also places the homesteads
 (``tools/homesteads.json``, HOMESTEADS.md): single-template structures out in the wild
-with their own structure set, kept away from the villages.
+with their own structure set, kept away from the villages. Templates the mod places from
+its own code, such as the fishing docks, are listed in ``tools/standalone_templates.json``:
+they are checked and compiled to their own ids but join no pool and no catalog.
 
 Only Python's standard library is required. Rooms, beds and connectors are checked
 before writing. The catalog is also read at runtime by the housing index (HOMES.md):
@@ -26,6 +28,7 @@ NS = 'villagefriends'
 DATA_VERSION = 5023  # The project's Minecraft 26.3 world format.
 BLUEPRINTS = Path(__file__).resolve().parent / 'village_blueprints'
 HOMESTEADS = Path(__file__).resolve().parent / 'homesteads.json'
+STANDALONE = Path(__file__).resolve().parent / 'standalone_templates.json'
 HOMESTEAD_START = f'{NS}:homestead_start'
 DWELLER_TAG = f'{NS}.dweller.'
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -263,7 +266,8 @@ class Template:
             if self.escapes((x+dx, y, z+dz)) or self.escapes((x-dx, y, z-dz)): exterior.append([x, y, z])
         return facings, rooms, exterior
 
-    def save(self, write=True, villager_type='minecraft:plains', use='other'):
+    def save(self, write=True, villager_type='minecraft:plains', use='other', path=None):
+        """Validate and (when ``write``) write the template, by default as ``village/<name>``; returns its catalog entry."""
         self.validate()
         for entity in self.entities:
             if entity['nbt'].get('id') == 'minecraft:villager':
@@ -282,7 +286,7 @@ class Template:
             blocks.append(entry)
         data = {'DataVersion': DATA_VERSION, 'size': list(self.size), 'palette': palette,
                 'blocks': blocks, 'entities': self.entities}
-        target = ROOT / f'data/{NS}/structure/village/{self.name}.nbt'
+        target = ROOT / f'data/{NS}/structure/{path or "village/" + self.name}.nbt'
         target.parent.mkdir(parents=True, exist_ok=True)
         if write:
             packed = gzip.compress(b'\x0a\x00\x00' + payload(data), mtime=0)
@@ -402,7 +406,21 @@ def main():
                     target = village_layouts.short_pool(c['pool'])
                     assert target in pools, f'{t.name}: jigsaw at {c["pos"]} names unknown pool {c["pool"]}'
                     assert owner[target] == kind, f'{t.name}: a {kind} template may not reach the {owner[target]} pool {target}'
-    unused = names - used
+    # Templates the mod places from its own code: compiled to their own ids, never pooled, outside the catalog.
+    standalone = json.loads(STANDALONE.read_text(encoding='utf-8'))
+    assert standalone['format'] == 1, 'tools/standalone_templates.json uses format 1'
+    placed_by_code = {}
+    for name, spec in standalone['templates'].items():
+        assert name in names, f'{STANDALONE.name}: no blueprint for {name}'
+        assert name not in used, f'{name} is placed by code, so no pool may use it'
+        space, _, path = spec['id'].partition(':')
+        assert space == NS and '/' in path and not path.startswith('village/'), f'{name}: ids are {NS}:<folder>/<name>, outside village/'
+        t = by_name[name]
+        assert not t.connectors and not t.entities, f'{name}: templates placed by code carry no jigsaws or entities'
+        assert list(t.size) == spec['size'], f'{name}: size is {list(t.size)}, {STANDALONE.name} says {spec["size"]}'
+        placed_by_code[name] = path
+    assert len(set(placed_by_code.values())) == len(placed_by_code), f'{STANDALONE.name}: two templates share an id'
+    unused = names - used - set(placed_by_code)
     assert not unused, f'Blueprints not referenced by any pool: {sorted(unused)}'
     populations = {t.name: len(t.entities) for t in templates}
     villages = []
@@ -480,18 +498,27 @@ def main():
         if any(n.endswith('/lots') or n.endswith('/lots_outer') for n in names): return 'home'
         return 'other'
 
-    catalog = {'templates': [t.save(write=not args.check and (not args.only or args.only == t.name), villager_type=villager_type(t), use=use(t))
-                             for t in templates],
+    def write(t):
+        return not args.check and (not args.only or args.only == t.name)
+
+    catalog = {'templates': [t.save(write=write(t), villager_type=villager_type(t), use=use(t))
+                             for t in templates if t.name not in placed_by_code],
                'villages': [v['catalog'] for v in villages], 'homesteads': homestead_catalog}
+    for name, path in placed_by_code.items():
+        by_name[name].save(write=write(by_name[name]), path=path)
     if args.check:
-        print(f'Validated {len(templates)} independent blueprints, {len(pools)} pools, {len(villages)} village types and '
-              f'{len(homestead_catalog)} homesteads; no files changed.')
+        print(f'Validated {len(templates)} independent blueprints, {len(pools)} pools, {len(villages)} village types, '
+              f'{len(homestead_catalog)} homesteads and {len(placed_by_code)} templates placed by code; no files changed.')
         return
     write_json(f'data/{NS}/villagefriends/structure-catalog.json', catalog)
     if args.only:
         print(f'Updated {args.only}.nbt and room catalog; other templates and pools unchanged.')
         return
-    remove_stale(ROOT / f'data/{NS}/structure/village', {f'{name}.nbt' for name in names}, '*.nbt')
+    remove_stale(ROOT / f'data/{NS}/structure/village', {f'{name}.nbt' for name in names - set(placed_by_code)}, '*.nbt')
+    # A folder of templates placed by code keeps only the templates listed for it.
+    for folder in {path.split('/')[0] for path in placed_by_code.values()}:
+        remove_stale(ROOT / f'data/{NS}/structure/{folder}', {path.split('/', 1)[1] + '.nbt'
+                     for path in placed_by_code.values() if path.split('/')[0] == folder}, '*.nbt')
     remove_stale(ROOT / f'data/{NS}/worldgen/template_pool/village', {f'{name}.json' for name in pools})
     for name, spec in pools.items(): pool(name, spec)
     for name, processors in lists.items():
@@ -547,7 +574,8 @@ def main():
     tag['values'] = sorted({v for v in tag['values'] if not v.startswith(NS + ':')} | ours)
     write_json('data/minecraft/tags/worldgen/structure/village.json', tag)
     print(f'Generated {len(templates)} templates, {len(pools)} pools and {len(villages)} village types '
-          f'({", ".join(v["type"] for v in villages)}) replacing the vanilla villages, and {len(homestead_catalog)} homesteads.')
+          f'({", ".join(v["type"] for v in villages)}) replacing the vanilla villages, {len(homestead_catalog)} homesteads '
+          f'and {len(placed_by_code)} templates placed by code.')
 
 
 if __name__ == '__main__': main()

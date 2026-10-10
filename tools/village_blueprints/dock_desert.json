@@ -1,0 +1,207 @@
+{
+ "format": 1,
+ "size": [5, 4, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:jungle_planks"
+  },
+  "B": {
+   "id": "minecraft:jungle_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "C": {
+   "id": "minecraft:cut_sandstone"
+  },
+  "D": {
+   "id": "minecraft:jungle_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:acacia_planks"
+  },
+  "F": {
+   "id": "minecraft:orange_wool"
+  },
+  "G": {
+   "id": "minecraft:sandstone_wall",
+   "properties": {
+    "east": "none",
+    "north": "none",
+    "south": "none",
+    "up": "true",
+    "waterlogged": "false",
+    "west": "none"
+   }
+  },
+  "H": {
+   "id": "minecraft:white_wool"
+  },
+  "I": {
+   "id": "minecraft:jungle_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "J": {
+   "id": "minecraft:smooth_sandstone"
+  },
+  "K": {
+   "id": "minecraft:chiseled_sandstone"
+  },
+  "L": {
+   "id": "minecraft:jungle_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "N": {
+   "id": "minecraft:smooth_sandstone_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "east",
+    "waterlogged": "false"
+   }
+  },
+  "P": {
+   "id": "minecraft:decorated_pot",
+   "properties": {
+    "cracked": "false",
+    "facing": "west",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "minecraft:jungle_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "R": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "S": {
+   "id": "minecraft:potted_cactus"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "CJJJC",
+    "KCCCK",
+    "BAAAB",
+    "GEEEG",
+    "BAAAB",
+    "BAAAB",
+    "BAAAB",
+    "GEEEG",
+    "BAAAB",
+    "BAAAB",
+    "BAAAB",
+    "GEEEG"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "....P",
+    "S....",
+    "LO..L",
+    "C..NC",
+    "D..NQ",
+    "D...D",
+    "D...D",
+    "C...C",
+    "D...D",
+    "D...D",
+    "D...D",
+    "C...C"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    ".....",
+    ".....",
+    "IR..I",
+    ".....",
+    "I...I",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "G...G"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    "FHFHF",
+    "FHFHF",
+    "FHFHF",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    ".....",
+    "M...M"
+   ]
+  }
+ ],
+ "block_entities": [],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/docks.py",
+  "checksum": "57e127f6f2a7a285"
+ }
+}

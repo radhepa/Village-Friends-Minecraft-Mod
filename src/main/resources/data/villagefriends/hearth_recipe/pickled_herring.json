@@ -1,0 +1,15 @@
+{
+  "station": "prep",
+  "ingredients": [
+    "villagefriends:herring",
+    "villagefriends:herring",
+    "villagefriends:onion",
+    "minecraft:sugar",
+    "minecraft:glass_bottle"
+  ],
+  "result": {
+    "id": "villagefriends:pickled_herring",
+    "count": 2
+  },
+  "time": 120
+}

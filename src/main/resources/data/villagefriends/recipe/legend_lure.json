@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:feather",
+    "minecraft:emerald",
+    "villagefriends:glow_bait"
+  ],
+  "result": {
+    "id": "villagefriends:legend_lure",
+    "count": 1
+  }
+}

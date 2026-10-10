@@ -1,0 +1,13 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "#villagefriends:fishing/trout",
+    "villagefriends:herbs",
+    "villagefriends:butter"
+  ],
+  "result": {
+    "id": "villagefriends:herb_grilled_trout",
+    "count": 1
+  },
+  "time": 200
+}

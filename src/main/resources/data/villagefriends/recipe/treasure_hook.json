@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:iron_nugget",
+    "minecraft:iron_nugget",
+    "minecraft:gold_ingot",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "id": "villagefriends:treasure_hook",
+    "count": 1
+  }
+}

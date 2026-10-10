@@ -88,6 +88,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         ResidentLife.of(villager).extract(villager, state, portrait);
         TavernClient.extract(villager, state, portrait);
         PlaytimeClient.extract(villager, state, portrait);
+        AnglingClient.extract(villager, state, portrait, delta);
         var bubble = portrait ? null : EmoteBubbles.get(villager.getId());
         state.bubble = bubble;
         state.bubbleAge = bubble == null ? 0 : bubble.age(delta);
@@ -97,6 +98,7 @@ public final class ResidentRenderer extends HumanoidMobRenderer<Villager, Reside
         super.submit(state, pose, collector, camera);
         TavernClient.submit(state, pose, collector);
         PlaytimeClient.submit(state, pose, collector);
+        AnglingClient.submit(state, pose, collector, camera);
         if (state.bubble != null && state.distanceToCameraSq < 40 * 40) submitBubble(state, pose, collector, camera);
     }
     /** Draws the emote bubble as a camera-facing card above the head (and above the name, when shown). */

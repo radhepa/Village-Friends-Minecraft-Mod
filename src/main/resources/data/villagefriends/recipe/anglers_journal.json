@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "#villagefriends:fishing/fish"
+  ],
+  "result": {
+    "id": "villagefriends:anglers_journal",
+    "count": 1
+  }
+}

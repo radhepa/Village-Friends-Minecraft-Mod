@@ -1,0 +1,203 @@
+{
+ "format": 1,
+ "size": [5, 4, 12],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:spruce_planks"
+  },
+  "B": {
+   "id": "minecraft:spruce_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "C": {
+   "id": "minecraft:spruce_slab",
+   "properties": {
+    "type": "top",
+    "waterlogged": "false"
+   }
+  },
+  "D": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "E": {
+   "id": "minecraft:dark_oak_planks"
+  },
+  "F": {
+   "id": "minecraft:cobblestone"
+  },
+  "G": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "2"
+   }
+  },
+  "H": {
+   "id": "minecraft:stone_bricks"
+  },
+  "I": {
+   "id": "minecraft:dirt_path"
+  },
+  "J": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "false",
+    "waterlogged": "false"
+   }
+  },
+  "K": {
+   "id": "minecraft:snow",
+   "properties": {
+    "layers": "1"
+   }
+  },
+  "L": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "M": {
+   "id": "minecraft:blue_ice"
+  },
+  "N": {
+   "id": "minecraft:campfire",
+   "properties": {
+    "facing": "east",
+    "lit": "true",
+    "signal_fire": "false",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:light_blue_carpet"
+  },
+  "P": {
+   "id": "minecraft:packed_ice"
+  },
+  "Q": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "R": {
+   "id": "minecraft:spruce_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "S": {
+   "id": "minecraft:spruce_stairs",
+   "properties": {
+    "facing": "east",
+    "half": "bottom",
+    "shape": "straight",
+    "waterlogged": "false"
+   }
+  },
+  "T": {
+   "id": "minecraft:white_wool"
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "FIIIF",
+    "HFFFH",
+    "CAAAC",
+    "BEEEB",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "BEEEB",
+    "CAAAC",
+    "CAAAC",
+    "CAAAC",
+    "BEEEB"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    "H...H",
+    "K...G",
+    "Q..SR",
+    "BP..B",
+    "DM..D",
+    "D...D",
+    "D...D",
+    "B...B",
+    "D...D",
+    "D...T",
+    "D...D",
+    "B...B"
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "N...J",
+    ".....",
+    ".....",
+    "BK..B",
+    ".....",
+    ".....",
+    ".....",
+    "B...B",
+    ".....",
+    "....O",
+    ".....",
+    "L...L"
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    ".....",
+    ".....",
+    ".....",
+    "G...G",
+    ".....",
+    ".....",
+    ".....",
+    "G...G",
+    ".....",
+    ".....",
+    ".....",
+    "J...J"
+   ]
+  }
+ ],
+ "block_entities": [],
+ "entities": [],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/docks.py",
+  "checksum": "8f6624b968db679f"
+ }
+}

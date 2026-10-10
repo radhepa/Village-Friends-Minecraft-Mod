@@ -39,6 +39,11 @@ Hearth & Harvest (HEARTH_AND_HARVEST.md) adds: {dish} (the speaker's favorite di
 {meal} (what they are eating at home right now), {special} (the tavern's dish of the day) and {gift} (the dish
 you just gave them).
 
+Tall Tales Fishing adds: {legend} (a legendary fish, such as "Old Whiskers" or "the River King"), {legend_where} (where it
+lives, such as "the deep sea"), {legend_when} (when it bites, such as "on rainy nights"), {contest_when} (when the
+season's fishing contest is: "today", "tomorrow", "in 3 days"), {winner} (who won it) and {catch} (a fish in lower case,
+such as "pike").
+
     python tools/dialogue/dialogue.py           # compile
     python tools/dialogue/dialogue.py --check   # validate and confirm the compiled file is current
     python tools/dialogue/dialogue.py --stats   # counts by pool family
@@ -54,7 +59,8 @@ PROJECT = ROOT.parents[1]
 OUT = PROJECT / 'src/main/resources/data/villagefriends/villagefriends/dialogue.json'
 PLACEHOLDERS = {'name', 'player', 'village', 'job', 'hobby', 'love', 'friend', 'partner', 'rival', 'time', 'day', 'item', 'biome', 'moon', 'market', 'neighbor', 'weekday',
                 'celebrant', 'birthday', 'when', 'mobs', 'wanted', 'recipient', 'sender', 'season',
-                'victim', 'kin', 'teller', 'house', 'place', 'spouse', 'dish', 'meal', 'special', 'gift'}
+                'victim', 'kin', 'teller', 'house', 'place', 'spouse', 'dish', 'meal', 'special', 'gift',
+                'legend', 'legend_where', 'legend_when', 'contest_when', 'winner', 'catch'}
 MOODS = {'EXCLAIM', 'QUESTION', 'HEART', 'NOTE', 'ANGER', 'SWEAT', 'DOTS', 'SLEEP', 'SPARKLE', 'IDEA', 'GLOOM', 'BLUSH'}
 EFFECTS = {'heal', 'meal', 'shelter', 'torch', 'cook_held', 'mend_held', 'directions', 'fish', 'study', 'flower', 'apple', 'bread', 'cookie', 'seeds', 'emerald_tip'}
 MAX_LINE, MAX_LABEL = 300, 30

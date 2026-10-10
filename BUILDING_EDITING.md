@@ -65,7 +65,7 @@ To look at it in Minecraft, run `gradlew.bat runClientGameTest -PvillageGallery 
 
 ## Replace or add variants
 
-To swap a building, change its pool entry in `village_layout.json` and run the full generator (without `--only`). To add a variant, add another entry with a positive weight. The catalog derives required pools from `required_pools`, so tests accept replacements without hard-coded names. Every blueprint must be referenced by some pool. The compiler deletes stale NBT and pool files.
+To swap a building, change its pool entry in `village_layout.json` and run the full generator (without `--only`). To add a variant, add another entry with a positive weight. The catalog derives required pools from `required_pools`, so tests accept replacements without hard-coded names. Every blueprint must be referenced by some pool, unless the mod places it from its own code (see [Docks](#docks)). The compiler deletes stale NBT and pool files.
 
 Balance a layout before testing in Minecraft:
 
@@ -98,3 +98,11 @@ Check a type with `python tools/create_village_structures.py --check` and `pytho
 ## Homesteads
 
 The five homesteads (a farmstead, the pariah's house, a shepherd's fold, a herbalist's cottage and an old watchtower) are single templates placed on their own out in the wild, not lots: they use the same design kit and compiler, with their placement in `tools/homesteads.json` instead of a layout. See [HOMESTEADS.md](HOMESTEADS.md).
+
+## Docks
+
+A village with water nearby gets a small fishing dock. The fishing feature places it from its own code at a suitable shoreline, rotated to point out over the water, and drives its pilings down to the bed; it is in no pool and no structure. Each type has its own, designed in `tools/village_design/buildings/docks.py` (`dock_plains`, `dock_desert`, `dock_savanna`, `dock_snowy`, `dock_taiga`) and compiled to `villagefriends:dock/<type>` (`data/villagefriends/structure/dock/<type>.nbt`).
+
+- **Contract** (the Java code relies on it; `docks.check` enforces it on every design): 5 wide (X 0..4), 12 long (Z 0..11), 4 high. Z 0..1 is the land end on the shore and the deck runs from Z 2 to Z 11 toward +Z. The walking surface is Y 0 all along, with nothing below it; rails, posts, lanterns and props stand on Y 1..3. The pilings are one block (a log or a wall) at Y 0 on X 0 and 4 at Z 3, 7 and 11; the game extends every log or wall on Y 0 down to the ground, so no other log or wall may sit on Y 0. The walkway (X 1..3) is solid underfoot with two clear blocks above along its whole length (props only on X 1 or 3 at Z 2..4, X 2 always clear), and the fishing end (X 1..3, Z 11) is open above the deck. No jigsaws, entities, loot or job-site blocks (a barrel would make a fisher of an unemployed villager).
+- **Compiling:** `tools/standalone_templates.json` lists templates placed by code: each blueprint's structure id (`villagefriends:<folder>/<name>`, outside `village/`) and size. The compiler checks that they join no pool, carry no jigsaws or entities and have that size, writes them to their own ids (deleting stale templates in those folders), and leaves them out of the structure catalog. `--check` covers them.
+- **Edit one:** `python tools/design_village.py dock_desert --preview`, then `python tools/create_village_structures.py --check` and `python tools/create_village_structures.py --only dock_desert`.

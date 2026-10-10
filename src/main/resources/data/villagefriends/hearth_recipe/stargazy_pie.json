@@ -1,0 +1,16 @@
+{
+  "station": "oven",
+  "ingredients": [
+    "villagefriends:pastry",
+    "villagefriends:sardine",
+    "villagefriends:sardine",
+    "villagefriends:sardine",
+    "minecraft:egg",
+    "minecraft:potato"
+  ],
+  "result": {
+    "id": "villagefriends:stargazy_pie",
+    "count": 1
+  },
+  "time": 300
+}

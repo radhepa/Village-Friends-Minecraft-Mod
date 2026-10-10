@@ -53,7 +53,7 @@ public final class ResidentLife {
     private boolean unhappy, greeted, talking, speaking;
     private String recent, previous, playing;
     /** Playing with their pet: the part they're acting out ("throw", "belly_rub"...) and whether it's a cat or a dog. */
-    private String petPhase, petSpecies;
+    private String petPhase, petSpecies, anglePhase;
 
     private ResidentLife(Villager villager) {
         int seed = ResidentMotion.seed(villager.getUUID());
@@ -146,6 +146,7 @@ public final class ResidentLife {
         if (speaking && !wasSpeaking && activity.active() && !"talk".equals(activity.trigger)) { activity.fade(now); nextActivity = now + 2; }
         noticePlayer(v, client, now);
         if (playWithPet(v, now, moving)) return;
+        if (angle(v, now, moving)) return;
         if (activity.active() && moving && !talking) activity.fade(now);
         if (activity.active() || reaction.active() || now < nextActivity) return;
 
@@ -193,6 +194,30 @@ public final class ResidentLife {
         if (clip == null) return true;
         if (activity.active()) { outgoing.copy(activity); outgoing.fade(now); }
         start(activity, clip, now, "pet");
+        return true;
+    }
+
+    /**
+     * Fishing from the dock or the bank: the server says which part they're on (cast, wait, bite, reel, catch,
+     * lost) and they act it out with an {@code angling} clip tagged {@code angling:<phase>}, a new one from the
+     * same part whenever one ends.
+     */
+    private boolean angle(Villager v, int now, boolean moving) {
+        String phase = AnglingClient.phase(v);
+        boolean changed = !java.util.Objects.equals(phase, anglePhase);
+        anglePhase = phase;
+        if (phase == null) {
+            if (changed && "angling".equals(activity.trigger)) activity.fade(now);
+            return false;
+        }
+        if (!changed && activity.active() && "angling".equals(activity.trigger) && activity.fadeFrom < 0) return true;
+        if (moving) return true;
+        var tags = tags(v, -1);
+        tags.add("angling:" + phase);
+        var clip = AnimationLibrary.current().pick("angling", tags, random);
+        if (clip == null) return true;
+        if (activity.active()) { outgoing.copy(activity); outgoing.fade(now); }
+        start(activity, clip, now, "angling");
         return true;
     }
 

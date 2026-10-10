@@ -8,7 +8,7 @@ Packs are client resources. A resource pack can add new packs, replace the bundl
 
 The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for every profession, three hobbies per personality, more everyday moments, greetings, conversation gestures, neighbor chats and reactions, thunder, dawn and dusk, and twice as many children's games.
 
-443 clips (434 distinct motions; a few serve two situations). Version 2.20 added eleven birthday-party clips, 2.21 twenty-four for playing with pets, 2.22 thirty-seven for children's games, and 2.27 twelve for eating a meal at home standing up (Hearth & Harvest).
+462 clips (453 distinct motions; a few serve two situations). Version 2.20 added eleven birthday-party clips, 2.21 twenty-four for playing with pets, 2.22 thirty-seven for children's games, 2.27 twelve for eating a meal at home standing up (Hearth & Harvest), and 2.28 nineteen for fishing from a dock or the water's edge (Tall Tales Fishing).
 
 | Situation | Clips |
 |---|---|
@@ -23,6 +23,7 @@ The pack grew in 2.15.0 from 99 to 349 clips: three or more work motions for eve
 | Birthday parties | **guests at the party**: claps along, raises a cup in a toast, sways to the music, dances a jig, laughs, waves both arms in a cheer, hums along; **children at the party**: bouncy hops with flapping arms; **the guest of honor**, all day: makes a wish and blows out the candles, bows thanks with a hand on the heart, beams and rocks on their heels |
 | Children | hops, twirls, plays airplane, peekaboo!, watches a bug, wants to play tag, skips rope, plays hopscotch, spins until dizzy, rides a hobby horse, builds a sandcastle, blows a dandelion, plays at swords with a stick, pretends to be a monster, plays pat-a-cake, tosses a ball up and catches it, counts for hide-and-seek, throws a stomping tantrum, measures their height, flaps like a bird, makes silly faces, marches like a soldier |
 | Pets | coaxes a stray with a treat, takes the stray home, sighs as the stray backs away, pats their knees: come here!, claps for the pet, laughs with hands on knees, watches the cat fondly; **dogs**: teases with a stick, throws the stick, watches the dog run, takes the stick back, pats the dog's head, rubs the dog's belly, holds up a treat: sit!, tosses the treat, shakes the dog's paw, twirls a finger: spin!, tags the dog: you're it!; **cats**: dangles a bit of string, strokes the cat, scratches the cat's chin, swishes a feather, offers a fish, pats the cat gently |
+| Fishing (`angling`) | **casting**: casts the line overhead, flicks a sidearm cast; **waiting**: waits for a bite, glances along the bank, tugs the hat and scratches the head, stretches the free arm, yawns over the water, taps a foot, jiggles the rod tip to tempt a fish; **a bite**: jolts at the bite, leans in and grips the rod with both hands; **reeling in**: hauls back and reels in, cranks the reel with the rod tip high, fights the fish side to side; **a catch**: holds the catch up and admires it, shows off the catch, weighs it in hand and nods; **the one that got away**: slumps as the line goes slack, shrugs it off |
 | Games together (`play`) | tag, hide-and-seek, ring-around-the-rosie, follow the leader (six copied moves), catch with a leather ball, and following a player around: 37 clips, listed in [PLAYTIME.md](PLAYTIME.md#animations) |
 
 ## How the director chooses
@@ -39,6 +40,7 @@ Each resident is ticked on the client. When they have stood still for a second a
 | `happy`, `love`, `angry`, `nervous` | Vanilla villager events: happy sparkles, hearts, angry clouds, raid sweat. |
 | `hurt` | The resident takes damage. |
 | `pet` | Playing with their cat or dog, or befriending a stray: the server says which part of the game they're on (`play:<phase>`, with `pet:cat` or `pet:dog`). See [PETS.md](PETS.md). |
+| `angling` | Fishing from a dock or the water's edge: the server says which part of it they're on (`angling:<phase>`: `cast`, `wait`, `bite`, `reel`, then `catch` or `lost`), a new clip from the same part starts whenever one ends (so the long wait loops through its variants), and a change of part cross-fades. |
 | `play` | A child's part in a game changes, and again each time the clip ends while it lasts (throws, falls, leader moves and the like play once). See [PLAYTIME.md](PLAYTIME.md). |
 
 Reactions play on a second layer and briefly replace the current activity. While walking, reactions keep their upper body and leave the stride alone; activity clips fade out when a resident starts moving.
@@ -146,6 +148,7 @@ python tools/animations/film.py                   # titles, crossfades and an H.
 | `party.py` | Birthday parties: guests and children at the party, and the guest of honor. |
 | `games.py` | Games children play together and following a player (`play` trigger). |
 | `meals.py` | Eating a dish at home, standing (`dining:eat` with `food:<kind>`, then `dining:done`; never while `seated`, where the Tavern pack's dining clips play). See [HEARTH_AND_HARVEST.md](HEARTH_AND_HARVEST.md). |
+| `angling.py` | Fishing (`angling` trigger with `angling:<phase>`). The rod is in the right hand (the fish during `catch`), so no clip mirrors and the rod arm is written with `held()` as the total angle it reaches over vanilla's held-item pose; `rod()` keeps the rod still while the waist leans. |
 
 Weights keep each resident's trade and hobbies visible among the everyday idles: work clips weigh 3–6 (the two raid-muster clips, which require `routine:defend`, weigh 40 so mustered guards mostly stand ready), hobbies 3–4, everyday idles 1–5 (most of the newer moments about 1), and weather clips only compete when their weather applies. Every greeting requires an age (`adult`, `child` or `adult|child`). Clip names never contain commas.
 
