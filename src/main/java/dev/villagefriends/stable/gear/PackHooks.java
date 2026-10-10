@@ -87,7 +87,10 @@ public final class PackHooks {
             if (!spilled.isEmpty()) horse.spawnAtLocation(level, spilled);
         }
         // Vanilla's createInventory copies every slot that still fits into the new container and drops nothing itself.
+        // The old container is emptied afterwards: a horse menu still open on it (it closes on the next tick) must not
+        // be able to hand out the originals of the copies.
         ((AbstractHorseAccessor) horse).villagefriends$createInventory();
+        if (inventory(horse) != pack) pack.clearContent();
     }
 
     /** The animal's container (saddle-free in 26.3: only pack slots), or null while it is being built. */
