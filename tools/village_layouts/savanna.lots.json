@@ -152,7 +152,7 @@
         },
         {
           "template": "savanna/stable",
-          "weight": 2,
+          "weight": 4,
           "processors": "village"
         },
         {

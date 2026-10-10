@@ -14,8 +14,9 @@ Version 2.24 makes a village notice what players do there. Saving a resident, fi
 | Everything in the world: hooks, witnesses, bubbles, reactions, apologies, the board and Ledger lines, prices | `deed/Deeds` |
 | Prices through vanilla reputation | `mixin/VillagerReputationMixin` |
 | Theft from a resident's chest (menu closed) | `mixin/ContainerCloseMixin` |
+| Horse theft and returns (Stablehand) | `stable/ride/HorseDeeds`, the pure `stable/ride/TheftRule` ([STABLEHAND.md](STABLEHAND.md)) |
 | Which house a block belongs to (installed by Homes) | `home/HouseBounds` |
-| Dialogue | `tools/dialogue/lines/deeds.txt` |
+| Dialogue | `tools/dialogue/lines/deeds.txt` (the horse deeds' pools are in `stablehand.txt`) |
 | Tests | `DeedScoringTest`, `RumorTest`, `ReputationTest`; client `DeedsGameTest` (`-Ptests=DeedsGameTest -PtestHeap=2560m`, screenshots `deeds-*`) |
 
 Each level keeps a `villagefriends:deeds` attachment (`DeedBook`, `format` 1): village id, then player UUID, then that player's `DeedLog`. It lives on the village's origin level next to the societies and notice boards; absent means nobody has done anything yet. Old worlds are not migrated (2.24 starts in a new world).
@@ -35,6 +36,7 @@ Worth is in tenths of a notice (`points10`; answering one notice is 10). Bad dee
 | Notice answered | 0 (counted in the board's favors) | - | small | 0 | - | `VillageQuests.complete` |
 | Birthday gift | +5 | - | small | +4 | a day | `Birthdays.gift` |
 | Kindness to a pet (first pat or treat of the day) | +1 | - | small | +1 | a day per pet | `VillagerPets.handleAction` |
+| Returned a horse (Stablehand) | +10 | - | notable | +6 | a day per horse | `HorseDeeds` (every 40 ticks, `TheftRule`): a stolen or lost resident's or village horse brought within 8 blocks of its stall by a player who is not the thief. The thief bringing it back, or a second return of the same horse within a game day, only clears its flags. A horse is lost, not stolen, when it is more than 48 blocks out and nobody has ridden or led it for over a minute (a knight left it out, say) |
 | Hit a resident | -10, -3 per hit, at most -25 | 7 days | notable | 0 (vanilla prices it) | a minute | `CompanionController.allowDamage` (once a second) |
 | Knocked a resident out | -30 | 14 | big | -20 | - | `Knockouts.allowDeath`; `KnockoutState.by` remembers who |
 | A resident died of it | -80 | 28 | big | -40 | - | `Knockouts.expire`, charged to `KnockoutState.by`, even offline |
@@ -44,6 +46,7 @@ Worth is in tenths of a notice (`points10`; answering one notice is 10). Bad dee
 | Killed a resident's pet | -40 | 14 | big | -25 | - | `AFTER_DEATH`, same pets |
 | Broke a resident's bed, door or workstation | -10 | 7 | notable | -8 | a day per house | `PlayerBlockBreakEvents.AFTER` where `HouseBounds.owners(pos)` names residents |
 | Stole from a resident's house | -10, -1 per 8 items, at most -30 | 10 | notable | -10 | a day per house | Opening a container inside a lived-in house (`UseBlockCallback`) snapshots it and the player's pack; closing that container's menu (`ContainerCloseMixin`) counts what left it and ended up with the player. Breaking a full container there counts too |
+| Stole a horse (Stablehand) | -25 | 14 | notable | -15 | - (once per theft: the horse stays flagged until it is home) | `HorseDeeds` (every 40 ticks, `TheftRule`): a player riding or leading a resident's or the village's stalled horse more than 48 blocks from its stall. The player is told at once. Hopping off at 47 blocks and straight back on is still theft, because the player had it moments before; a horse a player stabled themselves is theirs to ride anywhere |
 
 Creative and spectator players never do deeds. A pet's deeds belong to the village it is in, or its owner's village when it has wandered off.
 

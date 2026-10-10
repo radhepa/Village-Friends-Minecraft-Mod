@@ -40,6 +40,19 @@ public final class StallRules {
     /** Is a stalled horse due a visit from the stablehand? {@code last} is -1 when it has never had one. */
     public static boolean visitDue(long last, long now) { return last < 0 || now - last >= VISIT_TICKS; }
 
+    /** How near its stall a parent must be for its foal to share the stall: born at home, not out on the road. */
+    public static final int FOAL_REACH = 32;
+    /**
+     * Whose stall a newborn foal shares: 0 the first parent's, 1 the partner's, -1 neither. Only a parent at home
+     * counts ({@code aHome}: it has a stall in this dimension within {@link #FOAL_REACH} blocks). A player's horse
+     * wins over a resident's or the village's: residents never breed horses, so a player who bred their own horse
+     * with a village horse keeps the foal, and walking it home is never theft.
+     */
+    public static int foalStall(boolean aHome, boolean aPlayerKept, boolean bHome, boolean bPlayerKept) {
+        if (aHome && (aPlayerKept || !bHome || !bPlayerKept)) return 0;
+        return bHome ? 1 : -1;
+    }
+
     /** What a horse from a stable template does next: take the stall it found, look again later, or stop looking. */
     public static Settle settle(boolean stallFound, int triesSoFar) {
         if (stallFound) return Settle.STALL;

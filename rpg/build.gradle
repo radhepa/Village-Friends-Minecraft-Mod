@@ -3,7 +3,7 @@ plugins {
 }
 
 // Village Friends RPG is its own mod and jar; it needs Village Friends (the root project) to run.
-version = '1.0.0'
+version = '1.1.0'
 group = 'dev.villagefriends'
 base { archivesName = 'villagefriends-rpg' }
 evaluationDependsOn(':')

@@ -16,6 +16,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.equine.AbstractHorse;
 import net.minecraft.world.entity.animal.equine.Donkey;
 import net.minecraft.world.entity.animal.equine.Mule;
@@ -23,6 +25,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import org.jspecify.annotations.Nullable;
 
 /**
  * The Horse Stall block in use. Right-click it while riding a horse you own, or while leading one on a lead
@@ -77,6 +80,27 @@ public final class Stalls {
         String moved = gone == null ? "" : gone.hasCustomName() ? " " + label(gone) + " moved out." : " The " + label(gone) + " that lived here moved out.";
         player.sendOverlayMessage(Component.literal(yours(horse) + " is stabled here now. It will stay close to this stall." + moved));
         return InteractionResult.SUCCESS_SERVER;
+    }
+
+    /**
+     * A foal born to a stalled horse shares its parent's stall ({@link StallRules#foalStall} picks which), so it grows
+     * up at home: it stays near the stall, eats from the trough (a minute off growing up per serving) and the
+     * stablehand looks in on it. Runs from {@code BreedHooks.bred}, before the foal joins the world. Knights and
+     * companions never take a foal, so it is left alone until it is grown.
+     */
+    public static void foaled(Animal parent, Animal partner, @Nullable AgeableMob child) {
+        if (!(child instanceof AbstractHorse foal) || !(parent instanceof AbstractHorse a) || !(partner instanceof AbstractHorse b)
+                || !(foal.level() instanceof ServerLevel level)) return;
+        StallHome ha = atHome(a, level), hb = atHome(b, level);
+        int pick = StallRules.foalStall(ha != null, ha != null && ha.playerKept(), hb != null, hb != null && hb.playerKept());
+        if (pick < 0) return;
+        var home = pick == 0 ? ha : hb;
+        Stables.stall(foal, home.stall(), home.village(), home.keeper());
+    }
+    /** A parent's stall when it is at home (same dimension, within {@link StallRules#FOAL_REACH} blocks), else null. */
+    private static @Nullable StallHome atHome(AbstractHorse parent, ServerLevel level) {
+        StallHome home = target(parent).getAttached(StableData.STALL);
+        return home != null && home.dimension().equals(dimension(level)) && parent.blockPosition().closerThan(home.stall(), StallRules.FOAL_REACH) ? home : null;
     }
 
     /** "player:&lt;uuid&gt;", the keeper of a horse a player stabled. */

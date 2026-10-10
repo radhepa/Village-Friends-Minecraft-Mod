@@ -1,5 +1,6 @@
 """Horse breeds: the data table Java reads (stablehand/breeds.json), the painted coats (an adult and a foal
-texture per breed), and the Grooming Brush and Horse Whistle with their sprites and recipes.
+texture per breed), the Grooming Brush and Horse Whistle with their sprites and recipes, and the optional
+Turning Seasons spring spawn boost (seasonal_spawns/horses.json).
 
 Each row: stat ranges (vanilla wild horses: health 15-30, speed 0.1125-0.3375 where x42.16 is blocks per
 second, jump 0.4-1.0), where the breed is picked (biome keyword and weight; `any` matches every biome),
@@ -456,8 +457,19 @@ def table():
     return {'breeds': rows}
 
 
+# Turning Seasons (optional, data only): more horses, donkeys and mules turn up in spring, the foaling season,
+# and fewer in winter. The mod reads data/<ns>/seasonal_spawns/*.json and multiplies these spawns' weights by
+# the season's number; without Turning Seasons nothing reads the file. Format: Turning-Seasons/API.md.
+SEASONAL_SPAWNS = {
+    'requires_mod': 'turningseasons',
+    'entities': ['minecraft:horse', 'minecraft:donkey', 'minecraft:mule'],
+    'weights': {'spring': 1.6, 'summer': 1.0, 'autumn': 0.9, 'winter': 0.6},
+}
+
+
 def outputs():
     files = {TABLES / 'breeds.json': dump(table())}
+    files[DATA / f'{NS}/seasonal_spawns/horses.json'] = dump(SEASONAL_SPAWNS)
     for name, image in coats().items():
         files[ASSETS / f'textures/entity/horse/{name}.png'] = png_bytes(image)
     for name, sprite in SPRITES.items():

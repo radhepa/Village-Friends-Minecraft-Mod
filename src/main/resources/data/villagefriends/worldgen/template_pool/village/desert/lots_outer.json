@@ -47,7 +47,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/stable",

@@ -39,6 +39,17 @@ class StableYardTest {
         assertFalse(StallRules.mayEvict(true), "a village horse keeps its stall");
     }
 
+    @Test void aFoalSharesTheStallOfAParentAtHomeAndAPlayersHorseWins() {
+        assertEquals(-1, StallRules.foalStall(false, false, false, false), "neither parent is stalled at home: no stall");
+        assertEquals(0, StallRules.foalStall(true, false, false, false), "the first parent's stall");
+        assertEquals(1, StallRules.foalStall(false, true, true, false), "the partner's when only the partner is home");
+        assertEquals(0, StallRules.foalStall(true, false, true, false), "two village horses: the first parent's");
+        assertEquals(0, StallRules.foalStall(true, true, true, true), "two of a player's horses: the first parent's");
+        assertEquals(1, StallRules.foalStall(true, false, true, true), "a player's horse with a village horse: the player keeps the foal");
+        assertEquals(0, StallRules.foalStall(true, true, true, false));
+        assertEquals(1, StallRules.foalStall(false, true, true, true), "a parent away from home doesn't count, even a player's");
+    }
+
     // -- troughs ------------------------------------------------------------------------------------
 
     @Test void troughsFillToFourAndNeverPastIt() {

@@ -1,6 +1,6 @@
 """Stables: the Horse Stall, Hay Trough and Saddle Rack (models, blockstates, item models, the few painted
-textures, recipes and the loot tables that make them drop themselves), the Horse Papers sprite and the
-stablehand's trades.
+textures, recipes, the loot tables that make them drop themselves and their place in the axe's mineable
+tag), the Horse Papers sprite and the stablehand's trades.
 
 Built on the workstation model kit (tools/workstations/workstations.py), the way tools/tavern/furniture.py
 is: each block is a small program of cuboids, wood comes from vanilla textures, and only the hay, the
@@ -39,7 +39,7 @@ import paint  # noqa: E402
 import workstations as ws  # noqa: E402
 from breeds import BREEDS  # noqa: E402
 from gear import NAMES as GEAR_NAMES  # noqa: E402  (every gear id; lang.py relies on it too)
-from kit import ASSETS, DATA, NS, PROJECT, dump, item_files, png_bytes, raster  # noqa: E402
+from kit import ASSETS, DATA, NS, PROJECT, dump, item_files, merge_tag, png_bytes, raster  # noqa: E402
 
 JAVA = PROJECT / 'src/main/java/dev/villagefriends/stable/data/StableBlocks.java'
 put, rect, noise = paint.put, paint.rect, paint.noise
@@ -479,6 +479,9 @@ def outputs():
     for name, recipe in RECIPES.items():
         files[DATA / f'{NS}/recipe/{name}.json'] = dump(recipe)
         files[DATA / f'{NS}/loot_table/blocks/{name}.json'] = dump(loot(name))
+    # All three are wood, so an axe breaks them faster (they still break by hand and drop themselves).
+    axe = DATA / 'minecraft/tags/block/mineable/axe.json'
+    files[axe] = merge_tag(axe, [f'{NS}:{name}' for name in RECIPES])
     offers, sets = trades()
     for name, trade in offers.items():
         files[DATA / f'{NS}/villager_trade/stablehand/{name}.json'] = dump(trade)

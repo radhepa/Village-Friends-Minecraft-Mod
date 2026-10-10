@@ -152,7 +152,7 @@
         },
         {
           "template": "snowy/stable",
-          "weight": 2,
+          "weight": 4,
           "processors": "snowy_lots_frost"
         },
         {

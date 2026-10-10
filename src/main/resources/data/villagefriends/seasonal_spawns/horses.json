@@ -1,0 +1,14 @@
+{
+  "requires_mod": "turningseasons",
+  "entities": [
+    "minecraft:horse",
+    "minecraft:donkey",
+    "minecraft:mule"
+  ],
+  "weights": {
+    "spring": 1.6,
+    "summer": 1.0,
+    "autumn": 0.9,
+    "winter": 0.6
+  }
+}

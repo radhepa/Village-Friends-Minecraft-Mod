@@ -183,7 +183,7 @@
         },
         {
           "template": "desert/stable",
-          "weight": 2,
+          "weight": 4,
           "processors": "desert_lots_weathered"
         },
         {

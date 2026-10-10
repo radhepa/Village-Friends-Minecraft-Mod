@@ -1,7 +1,7 @@
 # Village Friends RPG
 
 A separate mod (`villagefriends_rpg`, its own jar) that turns a Village Friends world into a slow-burn RPG.
-It **requires Village Friends 2.23.0+**; Village Friends still works fine without it.
+It **requires Village Friends 2.28.0+** (1.1.0 adds Riding, which listens to Village Friends' Stablehand); Village Friends still works fine without it.
 
 Build: `gradlew :rpg:build` → `rpg/build/libs/villagefriends-rpg-<version>.jar`. Put it in `mods/` next to the Village Friends jar.
 
@@ -35,8 +35,9 @@ Each level gives 3 attribute points (5 on every 10th): 317 by level 100. Ten att
 - The action bar shows the share, e.g. `+6 XP (Zombie, 50%)`.
 
 ## Skills (0–50, rise by doing)
-Swordsmanship, Axe Mastery, Archery, Defense, Mining, Woodcutting, Excavation, Farming, Fishing, Husbandry, Athletics, Swimming, Acrobatics, Arcana, Bartering, Cooking.
+Swordsmanship, Axe Mastery, Archery, Defense, Mining, Woodcutting, Excavation, Farming, Fishing, Husbandry, Athletics, Swimming, Acrobatics, Arcana, Bartering, Cooking, Riding (17 in all).
 Cooking trains when you take food out of a Hearth & Harvest cooking pot, clay oven or prep table (more for better dishes): +1% Well Fed time and a 0.8% chance of a "fine" dish per level (`Cooking.java`, through `HearthEvents`).
+Riding trains on horseback (a point per 5 blocks ridden, donkeys and mules too), from grooming and feeding your own horse (half a point per bond point earned) and from couched Jousting Lance hits (6 each): per level +0.2% horse speed while you ride, +1% bond growth, +0.4% lance damage and 0.6% steadier mounted aim (`Riding.java`, through Village Friends' `StablehandEvents`; Stablehand applies the bonuses itself).
 At 50: +20% sword/axe damage, +30% projectiles, +50% tool speed, 20% double ore, 30% double logs, 50% extra harvest, +1.5 luck, +10% speed, −30% fall damage, +50% vanilla XP, +50% job rewards, and so on (exact numbers on the sheet).
 
 ## Bestiary (22 monster families)
@@ -92,5 +93,5 @@ Each villager offers one job a day; you can hold 3 (4 at level 30, 5 at level 60
 ## Code map
 Pure (unit-tested in `RpgBalanceTest`): `Balance` (every number), `Attr`, `Skill`, `Bestiary`, `QuestBook`, `Sheet`, `Quest`.
 World: `Rpg` (init, synced player attachment), `Life` (attributes, pulse, buttons), `Hunt` (damage, kills, blocks), `Abilities` (Legend actives), `Progress` (XP and celebrations), `Quests` (conversation glue).
-Village Friends is hooked from outside with mixins on `NarrativeEngine.choices` and `VillageFriends.handleAction`; no Village Friends code is changed.
+Village Friends is hooked from outside with mixins on `NarrativeEngine.choices` and `VillageFriends.handleAction`; no Village Friends code is changed. `Cooking` and `Riding` listen to Village Friends' public events (`HearthEvents`, `StablehandEvents`); Riding's distance comes from vanilla's horse statistic through `Life`'s tracked stats.
 `gradlew :rpg:runServer -Paudit=true` boots a dev server, applies every mixin and stops (a quick wiring check).
