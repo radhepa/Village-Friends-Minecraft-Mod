@@ -62,6 +62,16 @@ class RpgBalanceTest {
         assertEquals(50, Balance.skillLevel(all * 10));
         for (var sk : Skill.values()) assertFalse(sk.effect(25).isBlank());
     }
+    @Test void ridingAtTheCapHelpsWithoutTakingOver() {
+        int cap = Balance.SKILL_CAP;
+        assertEquals(.10, Riding.bonus(cap, dev.villagefriends.stable.api.StablehandEvents.Aspect.HORSE_SPEED), 1e-9);
+        assertEquals(.50, Riding.bonus(cap, dev.villagefriends.stable.api.StablehandEvents.Aspect.BOND_GAIN), 1e-9);
+        assertEquals(.20, Riding.bonus(cap, dev.villagefriends.stable.api.StablehandEvents.Aspect.LANCE_DAMAGE), 1e-9);
+        assertEquals(.30, Riding.bonus(cap, dev.villagefriends.stable.api.StablehandEvents.Aspect.MOUNTED_AIM), 1e-9);
+        for (var a : dev.villagefriends.stable.api.StablehandEvents.Aspect.values()) assertEquals(0, Riding.bonus(0, a), 1e-9);
+        assertEquals("+2.0% horse speed, +10.0% bond growth, +4.0% lance damage, +6.0% steadier mounted aim", Skill.RIDING.effect(10));
+        assertEquals("riding", Skill.RIDING.id());
+    }
     @Test void bestiaryTiersAndPerks() {
         assertEquals(22, Bestiary.FAMILIES.size());
         for (var f : Bestiary.FAMILIES) {

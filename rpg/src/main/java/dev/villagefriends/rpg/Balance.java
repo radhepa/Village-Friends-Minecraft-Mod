@@ -63,6 +63,8 @@ public final class Balance {
             ACRO_FALL_DAMAGE = .006, ARCANA_XP = .01, BARTER_REWARD = .01;
     /** Cooking (Hearth & Harvest): longer Well Fed from food you eat, and a chance your dishes come out fine. */
     public static final double COOK_WELL_FED = .01, COOK_FINE = .008;
+    /** Riding (Stablehand): horse speed, bond growth, couched lance damage and steadier aim from horseback, per level. */
+    public static final double RIDING_SPEED = .002, RIDING_BOND = .01, RIDING_LANCE = .004, RIDING_AIM = .006;
     /** Cooking experience per item taken from a station: a little for flour and butter, more for better dishes. */
     public static double cookXp(int tier) { return tier <= 0 ? 1 : 4 + 4 * tier; }
     /** Skill experience to go from skill level {@code s} to the next. */
