@@ -33,6 +33,11 @@ import org.jspecify.annotations.Nullable;
 public final class Whistle {
     public static final double REACH = 96, FAR = 40, ARRIVED = 3, CANTER = 2.2;
     public static final int COOLDOWN = 60, FOLLOW_TICKS = 400;
+    /**
+     * How far a called horse may plan its path. Vanilla plans only as far as a mob's follow range (16 for a horse), so a
+     * horse 30 blocks off would never find a whole path; this is set while it is called and put back afterwards.
+     */
+    private static final float CALLED_PATH = (float) FAR + 8, USUAL_PATH = 16;
     /** Horses on their way to a whistle, by horse id. */
     private static final Map<UUID, Call> CALLS = new HashMap<>();
     private record Call(ResourceKey<Level> dimension, UUID player, long until) {}
@@ -61,16 +66,17 @@ public final class Whistle {
         String who = BondMath.call(Bonds.customName(horse), Bonds.kind(horse), true);
         horse.setEating(false);
         horse.playAmbientSound();
-        var path = horse.distanceTo(player) > FAR ? null : horse.getNavigation().createPath(player, 1);
+        boolean near = horse.distanceTo(player) <= FAR;
+        if (near) horse.getNavigation().setRequiredPathLength(CALLED_PATH);
+        var path = near ? horse.getNavigation().createPath(player, 1) : null;
         if (path != null && path.canReach()) {
             horse.getNavigation().moveTo(path, CANTER);
             CALLS.put(horse.getUUID(), new Call(level.dimension(), player.getUUID(), level.getGameTime() + FOLLOW_TICKS));
             player.sendSystemMessage(Component.literal(who + " heard you and is on the way."), true);
-        } else if (fetch(horse, player, level)) {
-            player.sendSystemMessage(Component.literal(who + " comes at your whistle."), true);
-        } else {
-            player.sendSystemMessage(Component.literal(who + " heard you, but can't find a way to you."), true);
+            return horse;
         }
+        horse.getNavigation().setRequiredPathLength(USUAL_PATH);
+        player.sendSystemMessage(Component.literal(fetch(horse, player, level) ? who + " comes at your whistle." : who + " heard you, but can't find a way to you."), true);
         return horse;
     }
 
@@ -133,10 +139,15 @@ public final class Whistle {
     private static boolean follow(MinecraftServer server, UUID id, Call call) {
         var level = server.getLevel(call.dimension());
         var player = server.getPlayerList().getPlayer(call.player());
-        if (level == null || player == null || player.level() != level || level.getGameTime() > call.until()) return false;
-        if (!(level.getEntity(id) instanceof AbstractHorse horse) || !horse.isAlive() || horse.isVehicle()) return false;
+        if (level == null) return false;
+        if (!(level.getEntity(id) instanceof AbstractHorse horse)) return false;
+        if (player == null || player.level() != level || level.getGameTime() > call.until() || !horse.isAlive() || horse.isVehicle()) {
+            horse.getNavigation().setRequiredPathLength(USUAL_PATH);
+            return false;
+        }
         if (horse.distanceToSqr(player) <= ARRIVED * ARRIVED) {
             horse.getNavigation().stop();
+            horse.getNavigation().setRequiredPathLength(USUAL_PATH);
             horse.getLookControl().setLookAt(player);
             return false;
         }
