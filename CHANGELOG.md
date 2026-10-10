@@ -10,7 +10,7 @@
 - **Not-So-Vanilla Mobs** (optional): its challenger bosses frighten every horse nearby; a low-bond horse bolts or throws its rider, a Devoted one stands its ground. **Turning Seasons** (optional): more horses in spring.
 - Fixes: cooked food pops out on top of the Kitchen Stove instead of sometimes skidding off across the floor, and a resident who gets on a horse no longer walks it back along the path they were taking on foot.
 - For developers: `PackAnimals` (fit pack saddles, load and unload goods, spawn pack animals and horses, seat caravan guards that only the caller steers), `Horses`, `Stables`, `Riders`, `StablehandEvents` and the `villagefriends:challengers` tag. Breeds, gear and trades come from data tables in `tools/stablehand/`. 95 new lines of dialogue (9,094 pieces in all).
-- Add `StableTableTest`, `StableBreedsTest`, `StableBondTest`, `StableGearTest`, `StableYardTest`, `StableRidersTest` and `StablehandGameTest` (`-Ptests=StablehandGameTest -PtestHeap=2560m`; written and compiled, not yet run). See [STABLEHAND.md](STABLEHAND.md).
+- Add `StableTableTest`, `StableBreedsTest`, `StableBondTest`, `StableGearTest`, `StableYardTest`, `StableRidersTest` and `StablehandGameTest` (`-Ptests=StablehandGameTest -PtestHeap=2560m`, with screenshots). See [STABLEHAND.md](STABLEHAND.md).
 
 # Village Friends 2.28.0 — Tall Tales Fishing
 
