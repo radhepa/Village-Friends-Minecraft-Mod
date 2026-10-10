@@ -1,0 +1,17 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 32
+  },
+  "gives": {
+    "id": "villagefriends:horse_papers",
+    "components": {
+      "villagefriends:horse_papers": {
+        "breed": "destrier"
+      }
+    }
+  },
+  "max_uses": 3,
+  "xp": 30,
+  "reputation_discount": 0.05
+}

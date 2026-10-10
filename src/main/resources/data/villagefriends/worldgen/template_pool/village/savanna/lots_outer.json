@@ -50,6 +50,15 @@
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/savanna/stable",
+        "processors": "villagefriends:village",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/savanna/coop",
         "processors": "villagefriends:village",
         "projection": "rigid"

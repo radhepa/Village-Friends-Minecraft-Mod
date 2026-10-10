@@ -136,6 +136,11 @@
           "processors": "weathered"
         },
         {
+          "template": "taiga/stable",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
           "template": "taiga/apiary",
           "weight": 2,
           "processors": "weathered"

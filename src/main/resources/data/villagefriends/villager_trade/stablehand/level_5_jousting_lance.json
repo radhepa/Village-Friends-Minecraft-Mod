@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 16
+  },
+  "gives": {
+    "id": "villagefriends:jousting_lance"
+  },
+  "max_uses": 6,
+  "xp": 30,
+  "reputation_discount": 0.05
+}

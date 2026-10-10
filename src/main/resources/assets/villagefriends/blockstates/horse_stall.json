@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "villagefriends:block/horse_stall",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "villagefriends:block/horse_stall",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "villagefriends:block/horse_stall",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "villagefriends:block/horse_stall",
+      "y": 270
+    }
+  }
+}

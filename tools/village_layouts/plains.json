@@ -359,6 +359,11 @@
           "processors": "weathered"
         },
         {
+          "template": "stable",
+          "weight": 2,
+          "processors": "weathered"
+        },
+        {
           "template": "apiary",
           "weight": 2,
           "processors": "weathered"

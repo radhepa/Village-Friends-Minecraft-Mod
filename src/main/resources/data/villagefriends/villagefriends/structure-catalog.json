@@ -4558,6 +4558,93 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/desert/stable",
+      "size": [
+        15,
+        10,
+        14
+      ],
+      "use": "home",
+      "rooms": [],
+      "doors": [],
+      "exterior_doors": [],
+      "bed_feet": [],
+      "bed_facing": [],
+      "bed_room": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:saddle_rack",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            2,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            6,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            10,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/desert/street_bend_left",
       "size": [
         8,
@@ -12153,6 +12240,93 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/savanna/stable",
+      "size": [
+        15,
+        10,
+        14
+      ],
+      "use": "home",
+      "rooms": [],
+      "doors": [],
+      "exterior_doors": [],
+      "bed_feet": [],
+      "bed_facing": [],
+      "bed_room": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:saddle_rack",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            2,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            6,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            10,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/savanna/street_bend_left",
       "size": [
         8,
@@ -17600,6 +17774,93 @@
       "anchors": []
     },
     {
+      "id": "villagefriends:village/snowy/stable",
+      "size": [
+        15,
+        14,
+        14
+      ],
+      "use": "home",
+      "rooms": [],
+      "doors": [],
+      "exterior_doors": [],
+      "bed_feet": [],
+      "bed_facing": [],
+      "bed_room": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:saddle_rack",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            2,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            6,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            10,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    {
       "id": "villagefriends:village/snowy/stone_cottage",
       "size": [
         14,
@@ -20001,6 +20262,93 @@
             4,
             2,
             10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villagefriends:village/stable",
+      "size": [
+        15,
+        10,
+        14
+      ],
+      "use": "home",
+      "rooms": [],
+      "doors": [],
+      "exterior_doors": [],
+      "bed_feet": [],
+      "bed_facing": [],
+      "bed_room": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:saddle_rack",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            2,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            6,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            10,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            11,
+            1,
+            11
           ]
         }
       ]
@@ -24481,6 +24829,93 @@
         }
       ],
       "anchors": []
+    },
+    {
+      "id": "villagefriends:village/taiga/stable",
+      "size": [
+        15,
+        10,
+        14
+      ],
+      "use": "home",
+      "rooms": [],
+      "doors": [],
+      "exterior_doors": [],
+      "bed_feet": [],
+      "bed_facing": [],
+      "bed_room": [],
+      "residents": 4,
+      "connectors": [
+        {
+          "pos": [
+            7,
+            1,
+            0
+          ],
+          "direction": "north",
+          "name": "villagefriends:building_entrance",
+          "target": "villagefriends:unused",
+          "pool": "minecraft:empty"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "villagefriends:saddle_rack",
+          "pos": [
+            13,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            2,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            3,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            6,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            7,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:horse_stall",
+          "pos": [
+            10,
+            1,
+            11
+          ]
+        },
+        {
+          "id": "villagefriends:hay_trough",
+          "pos": [
+            11,
+            1,
+            11
+          ]
+        }
+      ]
     },
     {
       "id": "villagefriends:village/taiga/stone_cottage",

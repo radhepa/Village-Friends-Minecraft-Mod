@@ -1,0 +1,11 @@
+{
+  "trades": [
+    "villagefriends:stablehand/level_3_saddlebags",
+    "villagefriends:stablehand/level_3_caparison",
+    "villagefriends:stablehand/level_3_papers_palfrey",
+    "villagefriends:stablehand/level_3_papers_donkey",
+    "villagefriends:stablehand/level_3_hay_block"
+  ],
+  "amount": 3,
+  "random_sequence": "villagefriends:trade_set/stablehand/level_3"
+}

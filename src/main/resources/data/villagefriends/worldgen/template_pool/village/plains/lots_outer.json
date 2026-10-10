@@ -50,6 +50,15 @@
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/stable",
+        "processors": "villagefriends:weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/apiary",
         "processors": "villagefriends:weathered",
         "projection": "rigid"

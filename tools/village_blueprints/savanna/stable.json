@@ -1,0 +1,490 @@
+{
+ "format": 1,
+ "size": [15, 10, 14],
+ "palette": {
+  ".": {
+   "id": "minecraft:air"
+  },
+  "A": {
+   "id": "minecraft:coarse_dirt"
+  },
+  "B": {
+   "id": "minecraft:acacia_planks"
+  },
+  "C": {
+   "id": "minecraft:acacia_stairs",
+   "properties": {
+    "facing": "north",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "D": {
+   "id": "minecraft:acacia_stairs",
+   "properties": {
+    "facing": "south",
+    "half": "bottom",
+    "shape": "straight"
+   }
+  },
+  "E": {
+   "id": "minecraft:structure_void"
+  },
+  "F": {
+   "id": "minecraft:grass_block"
+  },
+  "G": {
+   "id": "minecraft:packed_mud"
+  },
+  "H": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "I": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "J": {
+   "id": "minecraft:orange_terracotta"
+  },
+  "K": {
+   "id": "minecraft:acacia_slab",
+   "properties": {
+    "type": "bottom",
+    "waterlogged": "false"
+   }
+  },
+  "L": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "false",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "M": {
+   "id": "minecraft:stripped_acacia_log",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "N": {
+   "id": "minecraft:iron_chain",
+   "properties": {
+    "axis": "y",
+    "waterlogged": "false"
+   }
+  },
+  "O": {
+   "id": "minecraft:short_grass"
+  },
+  "P": {
+   "id": "minecraft:lantern",
+   "properties": {
+    "hanging": "true",
+    "waterlogged": "false"
+   }
+  },
+  "Q": {
+   "id": "villagefriends:hay_trough",
+   "properties": {
+    "facing": "north",
+    "hay": "4"
+   }
+  },
+  "R": {
+   "id": "villagefriends:horse_stall",
+   "properties": {
+    "facing": "north"
+   }
+  },
+  "S": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "true",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "T": {
+   "id": "minecraft:dirt_path"
+  },
+  "U": {
+   "id": "minecraft:water_cauldron",
+   "properties": {
+    "level": "3"
+   }
+  },
+  "V": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "false",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "W": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "false"
+   }
+  },
+  "X": {
+   "id": "minecraft:acacia_fence",
+   "properties": {
+    "east": "true",
+    "north": "false",
+    "south": "true",
+    "waterlogged": "false",
+    "west": "true"
+   }
+  },
+  "Y": {
+   "id": "minecraft:acacia_fence_gate",
+   "properties": {
+    "facing": "north",
+    "in_wall": "false",
+    "open": "false",
+    "powered": "false"
+   }
+  },
+  "Z": {
+   "id": "minecraft:barrel",
+   "properties": {
+    "facing": "up",
+    "open": "false"
+   }
+  },
+  "a": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "x"
+   }
+  },
+  "b": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "y"
+   }
+  },
+  "c": {
+   "id": "minecraft:hay_block",
+   "properties": {
+    "axis": "z"
+   }
+  },
+  "d": {
+   "id": "minecraft:jigsaw",
+   "properties": {
+    "orientation": "north_up"
+   }
+  },
+  "e": {
+   "id": "villagefriends:saddle_rack",
+   "properties": {
+    "facing": "west"
+   }
+  }
+ },
+ "layers": [
+  {
+   "y": 0,
+   "rows": [
+    "EEEEEEETEEEEEEE",
+    "EEEEEEETEEEEEEE",
+    "EFAFFFFFAFFAFAE",
+    "EFFFFAFAFAAFFAE",
+    "EFAFFAFFFFAAFAE",
+    "EFFAFAFFFAAAAAE",
+    "AAGAAAAAGAAAAGA",
+    "AGGAGAGAGAAAAAA",
+    "AGAAAGAAAGAAAAA",
+    "AAGAAAAGGAGAAAG",
+    "AAGGGAAGGGAAAAA",
+    "AAAAAAGGGGAAAAG",
+    "AAAAAAGGAGAAAAA",
+    "EEEEEEEEEEEEEEE"
+   ]
+  },
+  {
+   "y": 1,
+   "rows": [
+    ".......d.......",
+    "WLLLLLLYLLLLXLV",
+    "IOU.........cOI",
+    "I.......O...OOI",
+    "I.............I",
+    "I....OOO.....OI",
+    "H...H...H...H.H",
+    "B...I...I...IUB",
+    "B...I...I...I.B",
+    "B...I...I...IeB",
+    "B...I...I...SZB",
+    "B.RQI.RQI.RQSbB",
+    "HBBBHBBBHBBBHBH",
+    "..............."
+   ]
+  },
+  {
+   "y": 2,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "H...H...H...H.H",
+    "B.............B",
+    "B.............B",
+    "B.............B",
+    "B.............B",
+    "B............aB",
+    "HBBBHBBBHBBBHBH",
+    "..............."
+   ]
+  },
+  {
+   "y": 3,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "HMMMHMMMHMMMHMH",
+    "B.............B",
+    "B.............B",
+    "B.............B",
+    "B.P...P...P...B",
+    "B.............B",
+    "HBBBHBBBHBBBHBH",
+    "..............."
+   ]
+  },
+  {
+   "y": 4,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "DDDDDDDDDDDDDDD",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..N...N...N....",
+    "...............",
+    "...............",
+    "CCCCCCCCCCCCCCC"
+   ]
+  },
+  {
+   "y": 5,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "DDDDDDDDDDDDDDD",
+    "J.............J",
+    "J.............J",
+    "J.............J",
+    "J.N...N...N...J",
+    "J.............J",
+    "CCCCCCCCCCCCCCC",
+    "..............."
+   ]
+  },
+  {
+   "y": 6,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "DDDDDDDDDDDDDDD",
+    "J.............J",
+    "J.............J",
+    "J.N...N...N...J",
+    "CCCCCCCCCCCCCCC",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 7,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "DDDDDDDDDDDDDDD",
+    "J.............J",
+    "CCCCCCCCCCCCCCC",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 8,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "KKKKKKKKKKKKKKK",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  },
+  {
+   "y": 9,
+   "rows": [
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "...............",
+    "..............."
+   ]
+  }
+ ],
+ "block_entities": [
+  {
+   "pos": [7, 1, 0],
+   "nbt": {
+    "id": "minecraft:jigsaw",
+    "name": "villagefriends:building_entrance",
+    "target": "villagefriends:unused",
+    "pool": "minecraft:empty",
+    "final_state": "minecraft:air",
+    "joint": "aligned",
+    "selection_priority": 0,
+    "placement_priority": 0
+   }
+  }
+ ],
+ "entities": [
+  {
+   "pos": [13.5, 1.0, 8.5],
+   "blockPos": [13, 1, 8],
+   "nbt": {
+    "id": "minecraft:villager",
+    "PersistenceRequired": true,
+    "Age": 0,
+    "VillagerData": {
+     "type": "minecraft:plains",
+     "profession": "villagefriends:stablehand",
+     "level": 1
+    },
+    "Xp": 1
+   }
+  },
+  {
+   "pos": [2.5, 1.0, 9.5],
+   "blockPos": [2, 1, 9],
+   "nbt": {
+    "id": "minecraft:horse",
+    "PersistenceRequired": true,
+    "Tame": true,
+    "Tags": [
+     "villagefriends.stable_horse"
+    ],
+    "equipment": {
+     "saddle": {
+      "id": "minecraft:saddle",
+      "count": 1
+     }
+    }
+   }
+  },
+  {
+   "pos": [6.5, 1.0, 9.5],
+   "blockPos": [6, 1, 9],
+   "nbt": {
+    "id": "minecraft:horse",
+    "PersistenceRequired": true,
+    "Tame": true,
+    "Tags": [
+     "villagefriends.stable_horse"
+    ],
+    "equipment": {
+     "saddle": {
+      "id": "minecraft:saddle",
+      "count": 1
+     }
+    }
+   }
+  },
+  {
+   "pos": [10.5, 1.0, 9.5],
+   "blockPos": [10, 1, 9],
+   "nbt": {
+    "id": "minecraft:horse",
+    "PersistenceRequired": true,
+    "Tame": true,
+    "Tags": [
+     "villagefriends.stable_horse"
+    ],
+    "equipment": {
+     "saddle": {
+      "id": "minecraft:saddle",
+      "count": 1
+     }
+    }
+   }
+  }
+ ],
+ "rooms": [],
+ "design": {
+  "source": "tools/village_design/buildings/savanna/stable.py",
+  "checksum": "24cbfc1f3ca032c6"
+ }
+}

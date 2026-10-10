@@ -182,6 +182,11 @@
           "processors": "desert_lots_weathered"
         },
         {
+          "template": "desert/stable",
+          "weight": 2,
+          "processors": "desert_lots_weathered"
+        },
+        {
           "template": "desert/goat_pen",
           "weight": 2,
           "processors": "desert_lots_weathered"
