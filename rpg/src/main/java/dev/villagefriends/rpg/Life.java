@@ -109,7 +109,8 @@ public final class Life {
             new Tracked("anvil", Stats.INTERACT_WITH_ANVIL, Skill.ARCANA, 5, 0, 1, ""),
             new Tracked("brew", Stats.INTERACT_WITH_BREWINGSTAND, Skill.ARCANA, 3, 0, 1, ""),
             new Tracked("sprint", Stats.SPRINT_ONE_CM, Skill.ATHLETICS, 1, 0, 400, ""),
-            new Tracked("swim", Stats.SWIM_ONE_CM, Skill.SWIMMING, 1, 0, 300, ""));
+            new Tracked("swim", Stats.SWIM_ONE_CM, Skill.SWIMMING, 1, 0, 300, ""),
+            new Tracked("ride", Stats.HORSE_ONE_CM, Skill.RIDING, 1, 0, 500, ""));
 
     private static void pulse(ServerPlayer p) {
         apply(p);

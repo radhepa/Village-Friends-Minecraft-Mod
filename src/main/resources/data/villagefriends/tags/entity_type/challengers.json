@@ -1,0 +1,45 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "nsvmobs:broodmother",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:sandmaw",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:cinderhulk",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:crag_troll",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:prowler",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:stormcaller",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:brineclaw",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:rimewraith",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:riftstalker",
+      "required": false
+    },
+    {
+      "id": "nsvmobs:oregorger",
+      "required": false
+    }
+  ]
+}
