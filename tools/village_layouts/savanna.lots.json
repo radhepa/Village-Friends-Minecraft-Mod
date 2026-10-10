@@ -151,6 +151,11 @@
           "processors": "village"
         },
         {
+          "template": "savanna/stable",
+          "weight": 2,
+          "processors": "village"
+        },
+        {
           "template": "savanna/coop",
           "weight": 2,
           "processors": "village"

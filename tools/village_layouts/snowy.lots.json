@@ -151,6 +151,11 @@
           "processors": "snowy_lots_frost"
         },
         {
+          "template": "snowy/stable",
+          "weight": 2,
+          "processors": "snowy_lots_frost"
+        },
+        {
           "template": "snowy/rabbit_hutch",
           "weight": 2,
           "processors": "snowy_snowy_lots_frost_fields"

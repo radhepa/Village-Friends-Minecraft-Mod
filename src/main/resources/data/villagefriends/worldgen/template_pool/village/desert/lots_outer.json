@@ -50,6 +50,15 @@
       "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "villagefriends:village/desert/stable",
+        "processors": "villagefriends:desert_lots_weathered",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
         "location": "villagefriends:village/desert/goat_pen",
         "processors": "villagefriends:desert_lots_weathered",
         "projection": "rigid"
