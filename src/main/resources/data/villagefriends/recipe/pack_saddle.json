@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:pack_saddle",
+    "count": 1
+  },
+  "pattern": [
+    "SLS",
+    "BLB"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "L": "minecraft:leather",
+    "B": "minecraft:barrel"
+  }
+}

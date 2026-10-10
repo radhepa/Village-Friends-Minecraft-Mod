@@ -1,0 +1,15 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "villagefriends:caparison",
+        "dyeable": {
+          "color_when_undyed": -6537410
+        }
+      },
+      {
+        "texture": "villagefriends:caparison_overlay"
+      }
+    ]
+  }
+}

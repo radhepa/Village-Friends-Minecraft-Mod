@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/spear_in_hand",
+  "textures": {
+    "layer0": "villagefriends:item/jousting_lance_in_hand"
+  }
+}

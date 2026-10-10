@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:saddlebags",
+    "count": 1
+  },
+  "pattern": [
+    "LSL",
+    "B B"
+  ],
+  "key": {
+    "L": "minecraft:leather",
+    "S": "minecraft:saddle",
+    "B": "#minecraft:bundles"
+  }
+}

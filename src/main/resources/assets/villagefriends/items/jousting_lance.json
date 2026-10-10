@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": [
+          "gui",
+          "ground",
+          "fixed",
+          "on_shelf"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "villagefriends:item/jousting_lance"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "villagefriends:item/jousting_lance_in_hand"
+    }
+  },
+  "swap_animation_scale": 1.95
+}
