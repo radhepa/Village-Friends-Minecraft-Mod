@@ -25,22 +25,22 @@ from kit import ASSETS, DATA, NS, PROJECT, TABLES, dump, item_files, png_bytes, 
 
 BREEDS = [
     {'id': 'destrier', 'name': 'Destrier', 'health': [26, 34], 'speed': [0.20, 0.26], 'jump': [0.55, 0.75],
-     'spawns': [('plains', 1)], 'extra_spawns': [], 'markings': ['none', 'white'], 'coats': 1, 'village': ['plains']},
+     'spawns': [('plains', 1)], 'extra_spawns': [], 'markings': ['none', 'white'], 'coats': 2, 'village': ['plains']},
     {'id': 'palfrey', 'name': 'Palfrey', 'health': [20, 26], 'speed': [0.24, 0.30], 'jump': [0.60, 0.80],
      'spawns': [('plains', 4), ('meadow', 3), ('forest', 2)], 'extra_spawns': [], 'markings': ['white', 'white_field'],
-     'coats': 1, 'village': ['plains']},
+     'coats': 2, 'village': ['plains']},
     {'id': 'courser', 'name': 'Courser', 'health': [16, 22], 'speed': [0.29, 0.3375], 'jump': [0.70, 0.95],
      'spawns': [('plains', 2), ('savanna', 2)], 'extra_spawns': [], 'markings': ['none', 'white_dots'],
-     'coats': 1, 'village': ['plains', 'savanna']},
+     'coats': 2, 'village': ['plains', 'savanna']},
     {'id': 'rouncey', 'name': 'Rouncey', 'health': [18, 26], 'speed': [0.20, 0.27], 'jump': [0.55, 0.80],
      'spawns': [('plains', 5), ('forest', 3), ('any', 3)], 'extra_spawns': [],
-     'markings': ['none', 'white', 'white_field', 'white_dots', 'black_dots'], 'coats': 1, 'village': ['plains', 'taiga']},
+     'markings': ['none', 'white', 'white_field', 'white_dots', 'black_dots'], 'coats': 2, 'village': ['plains', 'taiga']},
     {'id': 'draft', 'name': 'Draft Horse', 'health': [28, 36], 'speed': [0.15, 0.20], 'jump': [0.40, 0.55],
      'spawns': [('plains', 1), ('forest', 1), ('taiga', 1)], 'extra_spawns': [], 'markings': ['none', 'white'],
-     'coats': 1, 'village': ['plains', 'taiga', 'snowy']},
+     'coats': 2, 'village': ['plains', 'taiga', 'snowy']},
     {'id': 'desert', 'name': 'Desert Horse', 'health': [16, 22], 'speed': [0.28, 0.34], 'jump': [0.65, 0.90],
      'spawns': [('desert', 5), ('badlands', 3)], 'extra_spawns': [('desert', 2, 2, 3), ('badlands', 1, 2, 3)],
-     'markings': ['none'], 'coats': 1, 'village': ['desert']},
+     'markings': ['none'], 'coats': 2, 'village': ['desert']},
     {'id': 'steppe_pony', 'name': 'Steppe Pony', 'health': [20, 26], 'speed': [0.22, 0.28], 'jump': [0.75, 1.00],
      'spawns': [('savanna', 4), ('windswept', 4)], 'extra_spawns': [('windswept', 2, 2, 4)], 'markings': ['none', 'black_dots'],
      'coats': 1, 'village': ['savanna']},
@@ -82,7 +82,7 @@ PALETTES = {
     'desert': {  # golden buckskin with black points and a fine metallic sheen
         'coat': ['8A6233', '9F743E', 'B3864B', 'C4985A', 'D3AA6D', 'DFBB83'],
         'mane': ['241A13', '33261C', '443428', '584535'], 'hoof': ['2C2520', '463C33'],
-        'muzzle': ['3E2E22', '54402F', '6B533F'], 'eye': ['130D08', 'F2E6CC'], 'sheen': 'F2DCA4', 'points': True},
+        'muzzle': ['3E2E22', '54402F', '6B533F'], 'eye': ['130D08', 'F2E6CC'], 'sheen': 'EECD8E', 'points': True},
     'steppe_pony': {  # yellow dun: dark legs, upright dark mane, dorsal stripe, mealy muzzle and belly
         'coat': ['74552F', '876439', 'A07849', 'B48B57', 'C49C68', 'D1AD7C'],
         'mane': ['2B2119', '3A2D22', '4B3B2D', '5E4B3A'], 'hoof': ['2C2620', '443B32'],
@@ -95,6 +95,41 @@ PALETTES = {
         'feather': ['C6B9A0', 'DAD0BB', 'ECE5D6'], 'eye': ['16100B', 'F4EEE1'],
         'stripe': True, 'two_tone': True, 'feather_rows': 2},
 }
+
+# Extra coats (coat 1, 2...): whole palettes of their own, in the same keys. A row's `coats` must match.
+VARIANTS = {
+    'destrier': [{  # dapple grey, the knight's grey charger
+        'coat': ['4A4C50', '5E6166', '75787D', '8D9094', 'A6A8AB', 'BEC0C2'],
+        'mane': ['3A3B3E', '55575B', '7A7C80', '9EA0A3'], 'hoof': ['2E2C2A', '47433F'],
+        'muzzle': ['2F3033', '404145', '55575B'], 'feather': ['B8B8B4', 'D2D2CE', 'E8E8E4'],
+        'eye': ['0E0F11', 'E4E2DC'], 'dapple': True, 'feather_rows': 2}],
+    'palfrey': [{  # palomino: gold with a white-cream mane
+        'coat': ['9A6E2C', 'B08236', 'C4963F', 'D4A94E', 'E0BA62', 'EAC979'],
+        'mane': ['D9CDB0', 'E7DDC4', 'F1EADA', 'F8F4EA'], 'hoof': ['5A4632', '7A634C'],
+        'muzzle': ['7D5A2C', '94703A', 'AA854A'], 'eye': ['1E1309', 'EFE5CF']}],
+    'courser': [{  # liver chestnut: dark red-brown all over
+        'coat': ['3E1E10', '4E2615', '5F2F1B', '713922', '834429', '954F31'],
+        'mane': ['2E160C', '3D1E11', '4C2717', '5C301D'], 'hoof': ['2E2622', '463B34'],
+        'muzzle': ['341A0F', '452316', '572D1C'], 'eye': ['120A06', 'E2D5C0']}],
+    'rouncey': [{  # sorrel: chestnut with a mane of the same red
+        'coat': ['6A3216', '7E3E1D', '924A24', 'A5572C', 'B76535', 'C77440'],
+        'mane': ['5A2A13', '70351A', '874222', '9E5029'], 'hoof': ['4A3B2E', '675243'],
+        'muzzle': ['552815', '6B341C', '824124'], 'eye': ['1C0F08', 'E8DCC6']}],
+    'draft': [{  # dark dapple grey with white feathers
+        'coat': ['3C3E42', '4F5256', '63666B', '797C80', '8F9296', 'A5A8AB'],
+        'mane': ['2A2B2E', '3A3C3F', '4D4F53', '616367'], 'hoof': ['3B3530', '5A5149'],
+        'muzzle': ['2C2D30', '3B3C40', '4E5054'], 'feather': ['B5B6B2', 'D0D1CD', 'E8E8E5'],
+        'eye': ['0F1012', 'E6E4DE'], 'dapple': True, 'feather_rows': 3}],
+    'desert': [{  # flea-bitten grey: near-white with fine dark flecks and a dark skin muzzle
+        'coat': ['8E8E8A', 'A2A29E', 'B5B5B1', 'C7C7C3', 'D8D8D4', 'E6E6E2'],
+        'mane': ['6F6F6C', '868683', '9E9E9B', 'B6B6B3'], 'hoof': ['3A3633', '55504B'],
+        'muzzle': ['4A4A4C', '5E5E60', '737375'], 'eye': ['141414', 'F2F0EA'], 'flecks': '6A5A4C'}],
+}
+
+
+def palettes(breed):
+    """A breed's coats in order: its main palette, then its variants."""
+    return [PALETTES[breed]] + VARIANTS.get(breed, [])
 
 # -- the vanilla horse's boxes on its 64x64 texture --------------------------------------------------------
 # (part, texOffs u, v, size W, H, D). Adult: AbstractEquineModel.createBodyMesh; foal: BabyHorseModel.createBabyMesh
@@ -178,9 +213,9 @@ class Coat:
     """A breed's painted coat on the vanilla horse UV layout: the adult texture, or the foal's (a shade lighter, with a
     short fluffy mane on the neck because the foal model has no mane box)."""
 
-    def __init__(self, breed, baby=False):
-        self.p, self.baby = PALETTES[breed], baby
-        self.seed = zlib.crc32(f'{breed}:{"foal" if baby else "adult"}'.encode()) & 0xFFFF
+    def __init__(self, breed, baby=False, coat=0):
+        self.p, self.baby = palettes(breed)[coat], baby
+        self.seed = zlib.crc32(f'{breed}:{coat}:{"foal" if baby else "adult"}'.encode()) & 0xFFFF
         self.lift = .07 if baby else 0.0
         # The dark used for the dorsal stripe and a two-tone mane's centre.
         self.dark = self.p.get('centre', self.p['mane'][:2])
@@ -203,7 +238,7 @@ class Coat:
         for key, value in self.p.items():
             if isinstance(value, list):
                 colours.update(value)
-            elif key == 'sheen':
+            elif key in ('sheen', 'flecks'):
                 colours.add(value)
         return colours
 
@@ -238,7 +273,7 @@ class Coat:
         p = self.p
         if p.get('stripe') and abs(t.fx - .5) < .15 and (t.face == 'top' or t.face == 'south' and t.fy < .3):
             return step(self.dark, .5, self.grain(t, .5, 1))
-        if p.get('mealy') and (t.face == 'bottom' or t.face in SIDES and t.fy > .78):
+        if p.get('mealy') and (t.face == 'bottom' or t.face in SIDES and t.fy > .88):
             return step(p['pale'], .55 if t.face == 'bottom' else .3, self.grain(t, .5, 2))
         level = light(t.face, t.fy)
         if t.face in SIDES and t.fy < .12:
@@ -247,8 +282,10 @@ class Coat:
             level -= .1  # shadow under the tail
         if p.get('dapple') and t.face in ('top', 'west', 'east') and t.fy < .7 and self.dapple(t):
             level += .2
-        if p.get('sheen') and t.face in ('top', 'west', 'east') and t.fy < .6 and noise(t.x, t.y, self.seed + 4) > .9:
+        if p.get('sheen') and t.face in ('top', 'west', 'east') and t.fy < .6 and noise(t.x, t.y, self.seed + 4) > .955:
             return p['sheen']
+        if p.get('flecks') and t.face in ('top', 'west', 'east', 'north', 'south') and noise(t.x, t.y, self.seed + 15) > .93:
+            return p['flecks']
         return self.hair(t, level)
 
     def neck(self, t):
@@ -340,13 +377,14 @@ def coats():
     """Every coat texture: {file name: image}, after checking each uses only its breed's palette."""
     out = {}
     for b in BREEDS:
-        assert b['coats'] == 1, f"{b['id']}: paint its extra coats before raising 'coats'"
-        for baby in (False, True):
-            coat = Coat(b['id'], baby)
-            image = coat.paint()
-            used = {'%02X%02X%02X' % px[:3] for px in image.getdata() if px[3]}
-            assert used <= coat.palette(), (b['id'], baby, used - coat.palette())
-            out[coat_name(b['id'], baby)] = image
+        assert b['coats'] == len(palettes(b['id'])), f"{b['id']}: 'coats' is {b['coats']} but it has {len(palettes(b['id']))} palettes"
+        for n in range(b['coats']):
+            for baby in (False, True):
+                coat = Coat(b['id'], baby, n)
+                image = coat.paint()
+                used = {'%02X%02X%02X' % px[:3] for px in image.getdata() if px[3]}
+                assert used <= coat.palette(), (b['id'], n, baby, used - coat.palette())
+                out[coat_name(b['id'], baby, n)] = image
     return out
 
 
@@ -473,7 +511,8 @@ def preview():
     PREVIEWS.mkdir(parents=True, exist_ok=True)
     rows = [('vanilla horse_brown (reference)', vanilla('horse_brown'), vanilla('horse_brown_baby'))]
     images = coats()
-    rows += [(b['name'], images[coat_name(b['id'], False)], images[coat_name(b['id'], True)]) for b in BREEDS]
+    rows += [(b['name'] + (f' (coat {n})' if n else ''), images[coat_name(b['id'], False, n)], images[coat_name(b['id'], True, n)])
+             for b in BREEDS for n in range(b['coats'])]
     size, gap, title = 64 * SCALE, 16, 22
     sheet = Image.new('RGBA', (gap * 3 + size * 2, len(rows) * (size + title + gap) + gap), (40, 40, 44, 255))
     draw = ImageDraw.Draw(sheet)
@@ -487,5 +526,121 @@ def preview():
     for k, sprite in enumerate(SPRITES.values()):
         items.alpha_composite(sprite().resize((128, 128), Image.NEAREST), (8 + k * 136, 8))
     items.save(PREVIEWS / 'stablehand_bond_items.png')
-    print(f'breeds: {PREVIEWS.relative_to(PROJECT)}/stablehand_coats.png and stablehand_bond_items.png')
+    models(images)
+    print(f'breeds: {PREVIEWS.relative_to(PROJECT)}/stablehand_coats.png, stablehand_coats_3d.png and stablehand_bond_items.png')
+
+
+# -- 3D preview: every coat on the vanilla horse model, next to vanilla's own horse ------------------------------
+# part: (parent, pivot, rotation in radians, [(uv, origin, size, mirrored)]), from the same two vanilla mesh methods,
+# posed as setupAnim leaves a horse standing still (head and adult tail at 30 degrees, the foal's tail at -60).
+TILT = 0.5235988
+
+
+def horse_parts(baby):
+    if baby:
+        leg = [(3, 9, 3)]
+        return {
+            'body': (None, (0, 12.5, 0), (0, 0, 0), [((0, 13), (-4, -3.5, -7), (8, 7, 14), False)]),
+            'tail': ('body', (0, -1, 7), (-2 * TILT, 0, 0), [((24, 34), (-1.5, -1.5, -1), (3, 3, 8), False)]),
+            'left_hind_leg': (None, (2.4, 16, 5.4), (0, 0, 0), [((12, 46), (-1.5, -1, -1.5), leg[0], False)]),
+            'right_hind_leg': (None, (-2.4, 16, 5.4), (0, 0, 0), [((0, 46), (-1.5, -1, -1.5), leg[0], False)]),
+            'left_front_leg': (None, (2.4, 16, -5.4), (0, 0, 0), [((12, 34), (-1.5, -1, -1.5), leg[0], False)]),
+            'right_front_leg': (None, (-2.4, 16, -5.4), (0, 0, 0), [((0, 34), (-1.5, -1, -1.5), leg[0], False)]),
+            'head_parts': (None, (0, 10, -6), (TILT, 0, 0), [((30, 0), (-2, -6, -2), (4, 8, 4), False)]),
+            'head': ('head_parts', (0, -6.0516, -.2951), (0, 0, 0), [((0, 0), (-3, -3.9484, -6.705), (6, 4, 9), False)]),
+            'left_ear': ('head', (2, -4.2484, 1.9451), (0, 0, .2618), [((0, 4), (-1, -2.5, -.8), (2, 3, 1), False)]),
+            'right_ear': ('head', (-2, -4.2484, 1.645), (0, 0, -.2618), [((0, 0), (-1, -2.5, -.5), (2, 3, 1), False)]),
+        }
+    leg = (48, 21)
+    return {
+        'body': (None, (0, 11, 5), (0, 0, 0), [((0, 32), (-5, -8, -17), (10, 10, 22), False)]),
+        'tail': ('body', (0, -5, 2), (TILT, 0, 0), [((42, 36), (-1.5, 0, 0), (3, 14, 4), False)]),
+        'head_parts': (None, (0, 4, -12), (TILT, 0, 0), [((0, 35), (-2.05, -6, -2), (4, 12, 7), False)]),
+        'head': ('head_parts', (0, 0, 0), (0, 0, 0), [((0, 13), (-3, -11, -2), (6, 5, 7), False)]),
+        'mane': ('head_parts', (0, 0, 0), (0, 0, 0), [((56, 36), (-1, -11, 5.01), (2, 16, 2), False)]),
+        'upper_mouth': ('head_parts', (0, 0, 0), (0, 0, 0), [((0, 25), (-2, -11, -7), (4, 5, 5), False)]),
+        'left_ear': ('head', (0, 0, 0), (0, 0, 0), [((19, 16), (.55, -13, 4), (2, 3, 1), False)]),
+        'right_ear': ('head', (0, 0, 0), (0, 0, 0), [((19, 16), (-2.55, -13, 4), (2, 3, 1), False)]),
+        'left_hind_leg': (None, (4, 14, 7), (0, 0, 0), [(leg, (-3, -1.01, -1), (4, 11, 4), True)]),
+        'right_hind_leg': (None, (-4, 14, 7), (0, 0, 0), [(leg, (-1, -1.01, -1), (4, 11, 4), False)]),
+        'left_front_leg': (None, (4, 14, -10), (0, 0, 0), [(leg, (-3, -1.01, -1.9), (4, 11, 4), True)]),
+        'right_front_leg': (None, (-4, 14, -10), (0, 0, 0), [(leg, (-1, -1.01, -1.9), (4, 11, 4), False)]),
+    }
+
+
+def renderer():
+    """The wardrobe's tiny box-UV renderer (Canvas, cube_quads), loaded by path as tools/pets/preview.py does."""
+    import importlib.util
+    import sys
+    folder = Path(__file__).resolve().parents[1] / 'wardrobe'
+    sys.path.insert(0, str(folder))
+    spec = importlib.util.spec_from_file_location('wardrobe_preview', folder / 'preview.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def rotation(x, y, z):
+    """ModelPart rotation (Z @ Y @ X)."""
+    import math
+    import numpy as np
+    cx, sx, cy, sy, cz, sz = math.cos(x), math.sin(x), math.cos(y), math.sin(y), math.cos(z), math.sin(z)
+    return (np.array([[cz, -sz, 0], [sz, cz, 0], [0, 0, 1]]) @ np.array([[cy, 0, sy], [0, 1, 0], [-sy, 0, cy]])
+            @ np.array([[1, 0, 0], [0, cx, -sx], [0, sx, cx]]))
+
+
+def draw_horse(P, canvas, tex, baby, cx, cy, scale, yaw, pitch=-12):
+    import math
+    import numpy as np
+    parts = horse_parts(baby)
+    view = rotation(math.radians(pitch), 0, 0) @ rotation(0, math.radians(yaw), 0)
+
+    def transform(name):
+        parent, pivot, angles, _ = parts[name]
+        r = rotation(*angles)
+        if parent is None:
+            return (lambda v: np.array(pivot, float) + r @ v), r
+        pf, pr = transform(parent)
+        return (lambda v: pf(np.array(pivot, float) + r @ v)), pr @ r
+
+    for name, (_, _, _, cubes) in parts.items():
+        f, r = transform(name)
+        for uv, origin, size, mirrored in cubes:
+            middle = origin[0] + size[0] / 2
+            for verts, uvs, normal in P.cube_quads(origin, size, uv, 0):
+                if mirrored:  # ModelPart.Cube swaps min and max x: the same texture, reflected across the box
+                    verts = [np.array((2 * middle - v[0], v[1], v[2])) for v in verts]
+                    normal = (-normal[0], normal[1], normal[2])
+                n = view @ (r @ np.array(normal, float))
+                if n[2] >= -1e-6:
+                    continue
+                light = 0.58 + 0.30 * max(0, -n[1]) + 0.12 * max(0, -n[2]) + 0.06 * max(0, -n[0])
+                pts = []
+                for v in verts:
+                    w = view @ (f(np.array(v, float)) - np.array((0, 24, 0)))
+                    pts.append(np.array([cx + w[0] * scale, cy + w[1] * scale, w[2]]))
+                canvas.quad(pts, uvs, tex, min(1.0, light))
+
+
+def models(images):
+    """build/previews/stablehand_coats_3d.png: each coat on the model from two sides, adult and foal."""
+    import numpy as np
+    from PIL import Image, ImageDraw
+    P = renderer()
+    rows = [('vanilla horse_brown', vanilla('horse_brown'), vanilla('horse_brown_baby'))]
+    rows += [(b['name'] + (f' (coat {n})' if n else ''), images[coat_name(b['id'], False, n)], images[coat_name(b['id'], True, n)])
+             for b in BREEDS for n in range(b['coats'])]
+    cell_w, cell_h, scale = 230, 205, 5
+    views = [(False, -125), (False, 55), (True, -125), (True, 55)]
+    canvas = P.Canvas(cell_w * len(views), cell_h * len(rows), bg=(214, 222, 205))
+    for r, (_, adult, baby) in enumerate(rows):
+        for k, (is_baby, yaw) in enumerate(views):
+            tex = np.array((baby if is_baby else adult).convert('RGBA'))
+            draw_horse(P, canvas, tex, is_baby, cell_w * k + cell_w / 2, cell_h * r + cell_h - (25 if not is_baby else 40),
+                       scale if not is_baby else scale * 1.25, yaw)
+    sheet = Image.fromarray(np.clip(canvas.img, 0, 255).astype(np.uint8))
+    draw = ImageDraw.Draw(sheet)
+    for r, (name, _, _) in enumerate(rows):
+        draw.text((6, cell_h * r + 4), name, fill=(40, 40, 40))
+    sheet.save(PREVIEWS / 'stablehand_coats_3d.png')
 

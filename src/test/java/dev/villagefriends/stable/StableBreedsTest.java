@@ -96,11 +96,16 @@ class StableBreedsTest {
     @Test void sameBreedFoalsKeepTheBreedAndAParentsCoat() {
         var random = new Random(7);
         var d = breed("destrier");
+        assertTrue(d.coats() >= 2, "destriers come in more than one coat");
+        int greys = 0;
         for (int i = 0; i < 1000; i++) {
-            var foal = Inheritance.foal(d, BreedRolls.roll(d, random), 0, d, BreedRolls.roll(d, random), 0, random);
+            var foal = Inheritance.foal(d, BreedRolls.roll(d, random), 0, d, BreedRolls.roll(d, random), 1, random);
             assertEquals("destrier", foal.breed());
-            assertEquals(0, foal.coat());
+            assertTrue(foal.coat() == 0 || foal.coat() == 1, "a parent's coat: " + foal.coat());
+            if (foal.coat() == 1) greys++;
+            assertEquals(1, Inheritance.foal(d, BreedRolls.roll(d, random), 1, d, BreedRolls.roll(d, random), 1, random).coat(), "two greys have a grey");
         }
+        assertTrue(greys > 400 && greys < 600, "either parent's coat, about evenly: " + greys);
     }
 
     @Test void mixedFoalsSplitAboutEvenly() {

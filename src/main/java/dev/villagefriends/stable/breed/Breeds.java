@@ -219,7 +219,8 @@ public final class Breeds {
 
     private static void herd(ServerLevel level, Fresh fresh) {
         var random = level.getRandom();
-        int x = fresh.x() + 2 + random.nextInt(12), z = fresh.z() + 2 + random.nextInt(12);
+        // Kept 3 blocks inside the chunk, so the herd (within 3 blocks of here) never reaches into an unloaded neighbour.
+        int x = fresh.x() + 3 + random.nextInt(10), z = fresh.z() + 3 + random.nextInt(10);
         if (!level.hasChunkAt(new BlockPos(x, 0, z))) return;
         int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
         var keywords = keywords(level.getBiome(new BlockPos(x, y, z)));

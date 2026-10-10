@@ -7,6 +7,8 @@ import dev.villagefriends.stable.bond.Whistle;
 import dev.villagefriends.stable.breed.Breeds;
 import dev.villagefriends.stable.breed.Inheritance;
 import dev.villagefriends.stable.client.breed.HorseCoats;
+import dev.villagefriends.stable.data.HorseBreed;
+import dev.villagefriends.stable.data.StableData;
 import dev.villagefriends.stable.data.StableItems;
 import dev.villagefriends.stable.data.StableTable;
 import java.util.ArrayList;
@@ -28,8 +30,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 /**
- * {@link StablehandGameTest}'s breeds scene: every coat loads, a new horse takes its biome's breed, a lineup of all
- * eight breeds (adults and foals) for the eye, a destrier x courser foal (breed, stats and its painted foal coat on the
+ * {@link StablehandGameTest}'s breeds scene: every coat loads, a new horse takes its biome's breed, a lineup of every
+ * breed in every coat (adults and foals) for the eye, a destrier x courser foal (breed, stats and its painted foal coat on the
  * client), then the bond: 500 points make a horse Loyal with its bonuses, a carrot from its owner counts, the whistle
  * calls it from 30 blocks (it walks) and from 60 (it is brought behind you), and one brush stroke grows the bond.
  * Written by the breeds package.
@@ -46,8 +48,8 @@ final class StableBreedScenes {
         // Every breed's coat is loaded on the client, adult and foal.
         var missing = c.computeOnClient(client -> {
             var out = new ArrayList<String>();
-            for (var b : StableTable.breeds()) for (boolean baby : new boolean[]{false, true}) {
-                var id = VillageBlocks.id(HorseCoats.path(b.id(), 0, baby));
+            for (var b : StableTable.breeds()) for (int n = 0; n < b.coats(); n++) for (boolean baby : new boolean[]{false, true}) {
+                var id = VillageBlocks.id(HorseCoats.path(b.id(), n, baby));
                 if (!HorseCoats.has(id)) out.add(id.toString());
             }
             return out;
@@ -67,13 +69,14 @@ final class StableBreedScenes {
         String wildBreed = server.computeOnServer(s -> kit.entity(w, wild) instanceof Horse h ? Horses.breed(h).orElse("none") : "gone");
         kit.expect(PLAINS.contains(wildBreed), "a plains horse is a plains breed, not " + wildBreed);
 
-        // All eight breeds, adult and foal, standing still for a picture.
+        // Every breed in every coat, adult behind and foal in front, standing still for a picture.
         List<UUID> lineup = server.computeOnServer(s -> {
             var ids = new ArrayList<UUID>();
-            int x = -11;
-            for (var b : StableTable.breeds()) {
+            int x = -21;
+            for (var b : StableTable.breeds()) for (int n = 0; n < b.coats(); n++) {
                 for (boolean baby : new boolean[]{false, true}) {
                     var horse = kit.horse(kit.level(), new Vec3(o.getX() + x + .5, o.getY(), o.getZ() + (baby ? 7.5 : 10.5)), b.id(), null);
+                    VillageFriends.target(horse).setAttached(StableData.BREED, new HorseBreed(b.id(), n));
                     if (baby) horse.setBaby(true);
                     horse.setNoAi(true);
                     horse.setYRot(90);
@@ -84,7 +87,7 @@ final class StableBreedScenes {
             }
             return ids;
         });
-        kit.view(c, w, new Vec3(o.getX() + .5, o.getY() + 2.5, o.getZ() - 4), 0, 15, "breeds-lineup");
+        kit.view(c, w, new Vec3(o.getX() + .5, o.getY() + 6, o.getZ() - 13), 0, 18, "breeds-lineup");
         server.runOnServer(s -> lineup.forEach(id -> { var e = kit.entity(w, id); if (e != null) e.discard(); }));
         server.runCommand("tp @a " + (o.getX() + .5) + " " + o.getY() + " " + (o.getZ() + .5));
 
