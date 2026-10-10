@@ -65,11 +65,13 @@ public final class StableWork {
         if (rack == null || !rack.closerToCenterThan(v.position(), HORSE_REACH * 2)) { chores.remove(v.getUUID()); return false; }
         long now = level.getGameTime(), today = VillageFriends.day(level);
         var chore = chores.get(v.getUUID());
-        if (chore == null || now - chore.since() > StallRules.CHORE_TICKS || !current(level, chore, rack, now, today)) chore = next(v, level, rack, now, today);
+        if (chore != null && now - chore.since() > StallRules.CHORE_TICKS) { setAside(level, chore, now, today); chore = null; }
+        if (chore == null || !current(level, chore, rack, now, today)) chore = next(v, level, rack, now, today);
         if (chore == null) { chores.remove(v.getUUID()); return false; }
         chores.put(v.getUUID(), chore);
         var horse = chore.kind() == Kind.HORSE ? level.getEntity(chore.horse()) instanceof AbstractHorse h ? h : null : null;
         var spot = horse != null ? horse.blockPosition() : chore.trough();
+        if (spot == null) { chores.remove(v.getUUID()); return false; }
         if (!spot.closerToCenterThan(v.position(), CLOSE)) { ResidentRoutines.walk(v, spot, .5F, 1); return true; }
         if (horse != null) groom(v, level, horse, now); else topUp(v, level, chore.trough(), today);
         chores.remove(v.getUUID());
@@ -82,8 +84,16 @@ public final class StableWork {
             var state = level.getBlockState(chore.trough());
             return state.is(StableBlocks.HAY_TROUGH) && StallRules.refill(state.getValue(HayTroughBlock.HAY), refills.getOrDefault(key(level, chore.trough()), -1L), today);
         }
-        return level.getEntity(chore.horse()) instanceof AbstractHorse h && h.isAlive() && Stables.stallOf(h).filter(s -> s.stall().closerThan(rack, HORSE_REACH)).isPresent()
+        return level.getEntity(chore.horse()) instanceof AbstractHorse h && h.isAlive() && !h.isVehicle() && Stables.stallOf(h).filter(s -> s.stall().closerThan(rack, HORSE_REACH)).isPresent()
                 && StallRules.visitDue(visits.getOrDefault(h.getUUID(), -1L), now);
+    }
+    /**
+     * A chore that took too long (a trough they can't reach, a horse that keeps wandering off or was ridden away)
+     * waits its turn as if it were done: the trough until tomorrow, the horse until its next visit is due.
+     * Otherwise the same chore would be picked again at once and the stablehand would chase it all day.
+     */
+    private static void setAside(ServerLevel level, Chore chore, long now, long today) {
+        if (chore.kind() == Kind.TROUGH) refills.put(key(level, chore.trough()), today); else visits.put(chore.horse(), now);
     }
 
     /** A trough that needs topping up today, else the horse most in need of a visit, else nothing. */
