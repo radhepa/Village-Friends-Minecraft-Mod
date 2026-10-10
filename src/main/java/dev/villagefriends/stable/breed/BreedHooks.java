@@ -13,7 +13,9 @@ public final class BreedHooks {
      * has mixed the parents' stats into the child and before the child is added to the world, so a foal never
      * reaches ENTITY_LOAD without its breed. Called for every animal; the breeds package acts on horses only.
      */
-    public static void bred(Animal parent, ServerLevel level, Animal partner, AgeableMob child) {}
+    public static void bred(Animal parent, ServerLevel level, Animal partner, AgeableMob child) {
+        Breeds.bred(parent, level, partner, child);
+    }
 
     private BreedHooks() {}
 }

@@ -26,7 +26,7 @@
         "none",
         "white"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "plains"
       ]
@@ -65,7 +65,7 @@
         "white",
         "white_field"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "plains"
       ]
@@ -100,7 +100,7 @@
         "none",
         "white_dots"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "plains",
         "savanna"
@@ -143,7 +143,7 @@
         "white_dots",
         "black_dots"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "plains",
         "taiga"
@@ -183,7 +183,7 @@
         "none",
         "white"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "plains",
         "taiga",
@@ -232,7 +232,7 @@
       "markings": [
         "none"
       ],
-      "coats": 1,
+      "coats": 2,
       "village": [
         "desert"
       ]

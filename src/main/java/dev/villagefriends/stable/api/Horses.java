@@ -3,6 +3,8 @@ package dev.villagefriends.stable.api;
 import static dev.villagefriends.VillageFriends.target;
 
 import dev.villagefriends.stable.bond.BondMath;
+import dev.villagefriends.stable.bond.Bonds;
+import dev.villagefriends.stable.breed.Breeds;
 import dev.villagefriends.stable.data.HorseBond;
 import dev.villagefriends.stable.data.HorseBreed;
 import dev.villagefriends.stable.data.StableData;
@@ -28,10 +30,14 @@ public final class Horses {
         return Optional.ofNullable(target(horse).getAttached(StableData.BREED)).map(HorseBreed::breed);
     }
     /** The breed a horse born or found here would be (by the biome at {@code pos}). */
-    public static String pickBreed(ServerLevel level, BlockPos pos, RandomSource random) { return "rouncey"; }
-    /** Makes a horse this breed: its stats, markings and coat. Does nothing for animals that are not horses. */
+    public static String pickBreed(ServerLevel level, BlockPos pos, RandomSource random) { return Breeds.pick(level, pos, random); }
+    /**
+     * Makes a horse this breed: its stats (rolled from the breed's ranges and saved as base values), one of its
+     * markings and a coat; it is healed to its new full health. Does nothing for animals that are not horses or for an
+     * unknown breed id.
+     */
     public static void assignBreed(AbstractHorse horse, String breed, RandomSource random) {
-        if (horse instanceof Horse) target(horse).setAttached(StableData.BREED, new HorseBreed(breed, 0));
+        if (horse instanceof Horse h) Breeds.assign(h, breed, random);
     }
     /** Bond points with its partner, 0 to {@link BondMath#MAX}. */
     public static int bondPoints(AbstractHorse horse) { return target(horse).getAttachedOrElse(StableData.BOND, HorseBond.NONE).points(); }
@@ -43,10 +49,22 @@ public final class Horses {
         try { return partner.isEmpty() ? Optional.empty() : Optional.of(UUID.fromString(partner)); }
         catch (IllegalArgumentException e) { return Optional.empty(); }
     }
-    /** Adds bond points from {@code player} (source "groom", "feed", "ride" or "api"; tests and add-ons use "api"). */
-    public static void addBond(AbstractHorse horse, ServerPlayer player, int points, String source) {}
+    /**
+     * Adds bond points from {@code player} (source "groom", "feed", "ride" or "api"; tests and add-ons use "api").
+     * The points are added as given (no daily cap, only {@link BondMath#MAX}) and {@code source} is what
+     * {@code StablehandEvents.BOND_GAINED} reports. Like every gain, it only counts from the horse's owner, for a
+     * horse, donkey or mule, and a different owner than the last partner starts the bond again from 0.
+     */
+    public static void addBond(AbstractHorse horse, ServerPlayer player, int points, String source) {
+        Bonds.gain(horse, player, BondMath.Source.API, points, source == null || source.isBlank() ? "api" : source);
+    }
     /** Every breed id, in table order. */
     public static List<String> breeds() { return StableTable.breeds().stream().map(StableTable.Breed::id).toList(); }
+
+    /** A breed's name for players ("Draft Horse"); the id itself for an unknown breed. */
+    public static String breedName(String breed) { return Breeds.name(breed); }
+    /** Whether a horse, donkey or mule can bond (camels, llamas and undead horses can't). */
+    public static boolean bondable(AbstractHorse horse) { return Bonds.bondable(horse); }
 
     private Horses() {}
 }

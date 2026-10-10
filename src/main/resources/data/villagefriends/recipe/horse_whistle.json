@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "result": {
+    "id": "villagefriends:horse_whistle",
+    "count": 1
+  },
+  "ingredients": [
+    "minecraft:copper_ingot",
+    "minecraft:iron_nugget",
+    "minecraft:iron_nugget"
+  ]
+}
