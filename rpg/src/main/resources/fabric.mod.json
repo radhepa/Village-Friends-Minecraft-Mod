@@ -3,7 +3,7 @@
   "id": "villagefriends_rpg",
   "version": "${version}",
   "name": "Village Friends RPG",
-  "description": "A slow-burn RPG for Village Friends: levels, attributes, skills, monster masteries and villager quests.",
+  "description": "A slow-burn RPG for Village Friends: levels, attributes, skills, monster masteries, villager quests and an Atlas of the modpack's places. Knows the whole Village Friends modpack.",
   "authors": ["minal"],
   "license": "MIT",
   "environment": "*",
@@ -18,5 +18,16 @@
     "java": ">=25",
     "fabric-api": "*",
     "villagefriends": ">=2.29.0"
+  },
+  "suggests": {
+    "nsvmobs": "*",
+    "plataclan": "*",
+    "caveexpansion": "*",
+    "oceanexpansion": "*",
+    "seafriends": "*",
+    "skyfriends": "*",
+    "netherfriends": "*",
+    "endexpansion": "*",
+    "turningseasons": "*"
   }
 }

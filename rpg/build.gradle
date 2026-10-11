@@ -3,7 +3,7 @@ plugins {
 }
 
 // Village Friends RPG is its own mod and jar; it needs Village Friends (the root project) to run.
-version = '1.1.0'
+version = '1.2.0'
 group = 'dev.villagefriends'
 base { archivesName = 'villagefriends-rpg' }
 evaluationDependsOn(':')
@@ -44,7 +44,23 @@ java {
     targetCompatibility = JavaVersion.VERSION_25
 }
 test { useJUnitPlatform() }
+// gradlew :rpg:runServer -Paudit=true -PpackMods=<folder> also loads the other modpack jars in <folder> (e.g. the
+// Village Friends instance's mods folder), so the audit checks every cross-mod name against the real game.
+// Fabric API, Village Friends and this add-on's own jars are skipped: the dev builds are used instead.
+tasks.matching { it.name == 'runServer' }.configureEach {
+    doFirst {
+        def mods = file('run/mods')
+        delete(fileTree(mods) { include '*.jar' })
+        if (project.hasProperty('packMods')) {
+            copy {
+                from(project.property('packMods')) { include '*.jar'; exclude 'fabric-api*', 'village-friends-*', 'villagefriends-rpg-*' }
+                into mods
+            }
+            println 'Modpack run with: ' + fileTree(mods).files*.name.sort()
+        }
+    }
+}
 loom.runs {
     client { programArgs '--username', 'VillageTester' }
-    server { programArgs 'nogui'; vmArg '-Xmx1024m'; vmArg '-Dvillagefriends_rpg.audit=' + providers.gradleProperty('audit').getOrElse('false') }
+    server { programArgs 'nogui'; vmArg '-Xmx' + providers.gradleProperty('serverHeap').getOrElse('1024m'); vmArg '-Dvillagefriends_rpg.audit=' + providers.gradleProperty('audit').getOrElse('false') }
 }

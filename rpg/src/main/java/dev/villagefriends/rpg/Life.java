@@ -119,6 +119,7 @@ public final class Life {
         if (s.special("night_eyes") && p.getY() < 63 && !p.level().canSeeSky(p.blockPosition())) keep(p, MobEffects.NIGHT_VISION);
         if (s.special("village_hero")) keep(p, MobEffects.HERO_OF_THE_VILLAGE);
         if (s.special("no_phantoms")) p.resetStat(Stats.CUSTOM.get(Stats.TIME_SINCE_REST));
+        if (s.special("plata_sight")) keenEye(p);
         int interval = Balance.recoveryInterval(s.attr(Attr.RECOVERY));
         if (interval > 0 && p.getHealth() < p.getMaxHealth() && p.getFoodData().getFoodLevel() >= 10) {
             int acc = RECOVERY.merge(p.getUUID(), 20, Integer::sum);
@@ -142,6 +143,19 @@ public final class Life {
             if (!t.quest().isEmpty()) Quests.advance(p, t.quest(), "", (int) gains[i]);
         }
         Quests.track(p);
+        Discoveries.look(p);
+    }
+    /** Keen Eye (Slayer of The Plata Clan): disguised Plata within 24 blocks give off a silver shimmer only this player sees. */
+    private static void keenEye(ServerPlayer p) {
+        if (!(p.level() instanceof net.minecraft.server.level.ServerLevel level)) return;
+        for (var v : level.getEntitiesOfClass(net.minecraft.world.entity.npc.villager.Villager.class, p.getBoundingBox().inflate(24), Life::disguisedPlata))
+            level.sendParticles(p, net.minecraft.core.particles.ParticleTypes.WAX_OFF, true, false, v.getX(), v.getY() + 1.2, v.getZ(), 5, .3, .5, .3, 0);
+    }
+    /** A Plata Clan member still in disguise: a lone Village Friends dweller with the clan's role. */
+    private static boolean disguisedPlata(net.minecraft.world.entity.npc.villager.Villager v) {
+        if (!v.isAlive() || !dev.villagefriends.homestead.Homesteads.dwells(v)) return false;
+        var d = dev.villagefriends.homestead.Homesteads.dweller(v);
+        return d != null && "plata".equals(d.role());
     }
     private static Holder<MobEffect> effect(String id) {
         return switch (id) {

@@ -8,18 +8,31 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /** The promises the balance makes: a weak start, a long climb, builds, and bosses that stay bosses. */
 class RpgBalanceTest {
-    @Test void weakStartReachesVanillaThenGrows() {
-        assertEquals(12, Balance.baseHealth(1));
-        assertEquals(20, Balance.baseHealth(20));
-        assertEquals(36, Balance.baseHealth(100));
-        assertEquals(1.4, Balance.hungerRate(1), 1e-9);
-        assertEquals(1.0, Balance.hungerRate(20), 1e-9);
+    @Test void weakStartIsEarnedBackByThirtyThenGrows() {
+        // Level 1: 5 hearts, half damage, half breaking speed, 50% hungrier.
+        assertEquals(10, Balance.baseHealth(1));
+        assertEquals(.5, Balance.meleeBase(1), 1e-9);
+        assertEquals(.5, Balance.rangedBase(1), 1e-9);
+        assertEquals(.5, Balance.mineBase(1), 1e-9);
+        assertEquals(1.5, Balance.hungerRate(1), 1e-9);
+        // Still below vanilla at 20, vanilla at 30.
+        assertTrue(Balance.baseHealth(20) < 20 && Balance.meleeBase(20) < 1 && Balance.mineBase(20) < 1);
+        assertEquals(20, Balance.baseHealth(30));
+        assertEquals(1, Balance.meleeBase(30), 1e-9);
+        assertEquals(1, Balance.mineBase(30), 1e-9);
+        assertEquals(1.0, Balance.hungerRate(30), 1e-9);
+        // Level 100: 15 hearts before Vitality and perks, +14% base damage and breaking, 15% less hunger.
+        assertEquals(30, Balance.baseHealth(100));
+        assertEquals(1.14, Balance.meleeBase(100), 1e-9);
+        assertEquals(1.14, Balance.mineBase(100), 1e-9);
         assertEquals(.85, Balance.hungerRate(100), 1e-9);
-        assertEquals(.75, Balance.meleeBase(1), 1e-9);
-        assertEquals(.6, Balance.mineBase(1), 1e-9);
-        assertEquals(1, Balance.mineBase(15), 1e-9);
-        assertEquals(1, Balance.meleeBase(15), 1e-9);
-        for (int l = 1; l < 100; l++) assertTrue(Balance.need(l + 1) > Balance.need(l));
+        // A full-Vitality, fully mastered tank stays near 25 hearts.
+        double tank = Balance.baseHealth(100) + Balance.VIT_HEALTH * Balance.ATTR_CAP + 4 + 2 + 4;
+        assertTrue(tank >= 40 && tank <= 52, "tank " + tank);
+        for (int l = 1; l < 100; l++) {
+            assertTrue(Balance.need(l + 1) > Balance.need(l));
+            assertTrue(Balance.baseHealth(l + 1) >= Balance.baseHealth(l) && Balance.meleeBase(l + 1) > Balance.meleeBase(l), "level " + l);
+        }
     }
     @Test void levelHundredIsALongRoad() {
         long total = Balance.total(100);
@@ -42,7 +55,7 @@ class RpgBalanceTest {
         assertTrue(200 / Balance.outgoing(sharpVCrit, m, true, 200) >= 7);
         // Ordinary mobs get the full bonus, and the weak start applies to bosses too.
         assertEquals(sharpVCrit * m, Balance.outgoing(sharpVCrit, m, false, 20), 1e-3);
-        assertEquals(10 * .75F, Balance.outgoing(10, Balance.meleeBase(1), true, 500), 1e-3);
+        assertEquals(10 * .5F, Balance.outgoing(10, Balance.meleeBase(1), true, 500), 1e-3);
         assertEquals(2.5F, Balance.incoming(10, 2), 1e-3);
     }
     @Test void repeatKillsAndMassKillsPayLess() {
@@ -73,7 +86,7 @@ class RpgBalanceTest {
         assertEquals("riding", Skill.RIDING.id());
     }
     @Test void bestiaryTiersAndPerks() {
-        assertEquals(22, Bestiary.FAMILIES.size());
+        assertEquals(25, Bestiary.FAMILIES.size());
         for (var f : Bestiary.FAMILIES) {
             for (int t = 1; t < 5; t++) assertTrue(f.rarity().tiers[t] > f.rarity().tiers[t - 1]);
             assertEquals(List.of(3, 5, 5), f.perks().stream().map(Bestiary.Perk::tier).toList(), f.id());
@@ -82,6 +95,7 @@ class RpgBalanceTest {
             assertEquals(0, f.tier(0)); assertEquals(5, f.tier(1_000_000)); assertEquals(-1, f.next(1_000_000));
         }
         assertEquals("zombie", Bestiary.ofMob("husk").id());
+        assertEquals("zombie", Bestiary.of("minecraft:husk").id());
         var s = Sheet.NEW.kill("creeper", 1500).kill("enderman", 180);
         assertEquals(.6, s.perk("resist", "explosion"), 1e-9);
         assertEquals(1, s.perk("resist", "pearl"), 1e-9);

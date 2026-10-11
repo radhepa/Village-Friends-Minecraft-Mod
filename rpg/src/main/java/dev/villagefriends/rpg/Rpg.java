@@ -35,6 +35,7 @@ public final class Rpg implements ModInitializer {
     public static void set(ServerPlayer p, Sheet s) { ((AttachmentTarget) p).setAttached(SHEET, s); }
 
     @Override public void onInitialize() {
+        Modpack.detect(net.fabricmc.loader.api.FabricLoader.getInstance()::isModLoaded);
         RpgConfig.load();
         PayloadTypeRegistry.serverboundPlay().register(RpgActionPayload.TYPE, RpgActionPayload.CODEC);
         ServerPlayNetworking.registerGlobalReceiver(RpgActionPayload.TYPE, (payload, context) -> Life.action(context.player(), payload));
@@ -54,9 +55,11 @@ public final class Rpg implements ModInitializer {
         // Development check (-Dvillagefriends_rpg.audit=true): apply every mixin once the server is up, then stop.
         if (Boolean.getBoolean("villagefriends_rpg.audit")) ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             org.spongepowered.asm.mixin.MixinEnvironment.getCurrentEnvironment().audit();
+            ModpackAudit.run(server);
             LOGGER.info("RPG audit finished");
             server.halt(false);
         });
-        LOGGER.info("Village Friends RPG ready: {} attributes, {} skills, {} monster families.", Attr.values().length, Skill.values().length, Bestiary.FAMILIES.size());
+        LOGGER.info("Village Friends RPG ready: {} attributes, {} skills, {} monster families, {} Atlas places; modpack mods found: {}.",
+                Attr.values().length, Skill.values().length, Bestiary.shown().size(), Atlas.shown().size(), Modpack.present());
     }
 }

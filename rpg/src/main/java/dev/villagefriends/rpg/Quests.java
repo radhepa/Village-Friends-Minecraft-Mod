@@ -72,7 +72,7 @@ public final class Quests {
                 if (pools.isEmpty()) { show(p, v, "I don't have any work for you, but thank you for asking.", "", Emote.NOTE); return; }
                 if (s.mark("took:" + who) == today + 1) { show(p, v, "That's all the work I have today. Come back tomorrow?", "One job per villager per day.", Emote.DOTS); return; }
                 long seed = v.getUUID().getMostSignificantBits() ^ v.getUUID().getLeastSignificantBits() * 31 ^ today * 0x9E3779B97F4A7C15L ^ p.getUUID().hashCode();
-                var offer = QuestBook.offer(pools, seed, s.level(), who + ":" + today, who, VillageFriends.name(v), VillageFriends.profession(v));
+                var offer = QuestBook.offer(pools, seed, s.level(), who + ":" + today, who, VillageFriends.name(v), VillageFriends.profession(v), Seasons.season(v.level()));
                 if (offer == null) { show(p, v, "Nothing I'd trust you with yet. Come back when you've seen a bit more of the world.", "", Emote.DOTS); return; }
                 OFFERS.put(p.getUUID(), offer);
                 double barter = 1 + Balance.BARTER_REWARD * s.skill(Skill.BARTERING);

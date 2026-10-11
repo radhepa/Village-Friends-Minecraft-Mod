@@ -49,11 +49,22 @@ public final class Hunt {
     /** Per player: kind -> {streak, game time of the last kill}, and game times of recent kills of anything. */
     static final Map<UUID, Map<String, long[]>> STREAKS = new HashMap<>();
     static final Map<UUID, java.util.ArrayDeque<Long>> BURSTS = new HashMap<>();
-    private static final Set<String> FLYING = Set.of("ghast", "phantom", "blaze", "breeze", "vex", "bat", "bee", "allay");
+    private static final Set<String> FLYING = Set.of("ghast", "phantom", "blaze", "breeze", "vex", "bat", "bee", "allay", "gloomwing", "vulture");
     static void clear() { STREAKS.clear(); BURSTS.clear(); }
 
     static String path(LivingEntity e) { return BuiltInRegistries.ENTITY_TYPE.getKey(e.getType()).getPath(); }
-    static Bestiary.Family family(LivingEntity e) { return Bestiary.ofMob(path(e)); }
+    /** The full entity id, e.g. "minecraft:husk" or "nsvmobs:sporeling". */
+    static String id(net.minecraft.world.entity.Entity e) { return BuiltInRegistries.ENTITY_TYPE.getKey(e.getType()).toString(); }
+    static Bestiary.Family family(LivingEntity e) { return Bestiary.of(id(e)); }
+    /** Silverfish, endermites and anything of The Plata Clan (members, the Silver Mother, their shards): Brood Ward's domain. */
+    static boolean silver(DamageSource src) {
+        for (var e : new net.minecraft.world.entity.Entity[]{src.getEntity(), src.getDirectEntity()}) {
+            if (e == null) continue;
+            String id = id(e);
+            if (id.startsWith("plataclan:") || id.equals("minecraft:silverfish") || id.equals("minecraft:endermite")) return true;
+        }
+        return false;
+    }
 
     // -- damage ------------------------------------------------------------------------------------
     /** Called at the start of every hurt: scales damage dealt by players and damage taken by them. */
@@ -70,6 +81,8 @@ public final class Hunt {
         if (src.is(DamageTypeTags.IS_FIRE)) r += s.perk("resist", "fire");
         if (src.is(DamageTypes.MAGIC) || src.is(DamageTypes.INDIRECT_MAGIC)) r += s.perk("resist", "magic");
         if (src.is(DamageTypeTags.IS_FALL)) r += s.perk("resist", "fall");
+        if (src.is(DamageTypeTags.IS_PROJECTILE)) r += s.perk("resist", "projectile");
+        if (silver(src)) r += s.perk("resist", "silver");
         if (src.is(DamageTypes.SONIC_BOOM)) r += s.perk("resist", "sonic");
         if (src.is(DamageTypes.DRAGON_BREATH) || src.getEntity() instanceof EnderDragon) r += s.perk("resist", "dragon");
         return r <= 0 ? amount : Balance.incoming(amount, r);
@@ -93,7 +106,7 @@ public final class Hunt {
                 level.playSound(null, target.blockPosition(), SoundEvents.PLAYER_ATTACK_CRIT, SoundSource.PLAYERS, 1, 1.3F);
             }
         } else {
-            m = 1 + Balance.PRE_PROJECTILE * s.attr(Attr.PRECISION) + Balance.ARCHERY_DAMAGE * s.skill(Skill.ARCHERY) + s.perk("damage", "projectile");
+            m = Balance.rangedBase(s.level()) + Balance.PRE_PROJECTILE * s.attr(Attr.PRECISION) + Balance.ARCHERY_DAMAGE * s.skill(Skill.ARCHERY) + s.perk("damage", "projectile");
             if (src.getDirectEntity() instanceof ThrownTrident) m += s.perk("damage", "trident");
         }
         var f = family(target);
@@ -174,6 +187,7 @@ public final class Hunt {
         }
         if (hostile && p.getRandom().nextDouble() < Balance.LUCK_LOOT * s.attr(Attr.LUCK)) rollLoot(dead, level, source);
         if (f == null) return;
+        if (f.id().equals("challenger") && s.special("trophy_hunter")) rollLoot(dead, level, source);
         int before = s.tier(f);
         var next = s.kill(f.id(), 1);
         Rpg.set(p, next);
@@ -184,6 +198,13 @@ public final class Hunt {
             var item = BuiltInRegistries.ITEM.getValue(Identifier.parse(perk.key()));
             if (item != Items.AIR) dead.spawnAtLocation(level, new ItemStack(item, perk.count()));
         }
+    }
+    /** Taming any animal (vanilla, Not-So-Vanilla Mobs' pets, End Friends' Driftrays...): Husbandry, a little experience, "tame" jobs. */
+    public static void tamed(ServerPlayer p, Animal animal) {
+        if (p.isSpectator()) return;
+        Progress.skill(p, Skill.HUSBANDRY, Balance.TAME_SKILL);
+        Progress.xp(p, Balance.TAME_XP, "(tamed " + animal.getName().getString() + ")");
+        Quests.advance(p, "tame", "", 1);
     }
     /** Rolls the mob's own loot table once more (Luck's bonus loot, Husbandry's extra meat). */
     private static void rollLoot(LivingEntity dead, ServerLevel level, DamageSource source) {
@@ -222,7 +243,7 @@ public final class Hunt {
             }
         }
         if (ripe(state)) {
-            Progress.skill(p, Skill.FARMING, 3);
+            Progress.skill(p, Skill.FARMING, 3 * Seasons.farming(level));
             Progress.xp(p, 1, null);
             Quests.advance(p, "harvest", "crops", 1);
             if (p.getRandom().nextDouble() < Balance.FARM_EXTRA * s.skill(Skill.FARMING)) Block.dropResources(state, level, pos, be, p, held);

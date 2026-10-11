@@ -147,6 +147,22 @@ public final class Abilities {
                 level.sendParticles(ParticleTypes.REVERSE_PORTAL, p.getX(), p.getY() + 1, p.getZ(), 80, 3, .5, 3, .02); sound(p, SoundEvents.ENDER_DRAGON_GROWL, .6F);
             }
             case "elder_guardian" -> { buff(p, MobEffects.RESISTANCE, 160, 1); sound(p, SoundEvents.ELDER_GUARDIAN_CURSE, .5F); }
+            // -- the modpack's families ----------------------------------------------------------------
+            case "challenger" -> {
+                buff(p, MobEffects.ABSORPTION, 400, 1); buff(p, MobEffects.SPEED, 200, 0);
+                level.sendParticles(ParticleTypes.HEART, p.getX(), p.getY() + 1.2, p.getZ(), 6, .5, .4, .5, 0); sound(p, SoundEvents.PLAYER_BREATH, .8F);
+            }
+            case "plata" -> {
+                for (var e : new ArrayList<>(p.getActiveEffects())) if (e.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) p.removeEffect(e.getEffect());
+                buff(p, MobEffects.INVISIBILITY, 100, 0); buff(p, MobEffects.SPEED, 100, 1);
+                level.sendParticles(ParticleTypes.WAX_OFF, p.getX(), p.getY() + 1, p.getZ(), 30, .4, .7, .4, .2); sound(p, SoundEvents.SILVERFISH_AMBIENT, .6F);
+            }
+            case "silver_mother" -> {
+                var near = monsters(p, 10);
+                if (near.isEmpty()) return "No monsters nearby.";
+                for (var e : near) { e.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 160, 1)); e.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 160, 0)); }
+                level.sendParticles(ParticleTypes.WAX_OFF, p.getX(), p.getY() + 1, p.getZ(), 60, 3, .4, 3, .1); sound(p, SoundEvents.SILVERFISH_HURT, .5F);
+            }
             default -> { return "Nothing happens."; }
         }
         return null;

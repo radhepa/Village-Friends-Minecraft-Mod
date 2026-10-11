@@ -3,8 +3,10 @@ package dev.villagefriends.rpg;
 /**
  * Every number the RPG runs on, in one place. Pure: no Minecraft types, so it can be unit tested.
  *
- * <p>The shape: a new character is weaker than vanilla (6 hearts, 40% hungrier, 75% melee damage,
- * 60% mining speed), reaches vanilla around level 15-20, and keeps growing to level 100. Attribute points
+ * <p>The shape: a new character is half as strong as vanilla (5 hearts, 50% hungrier, half melee and
+ * projectile damage, half block-breaking speed) and earns its way back to vanilla by level 30. After that
+ * it keeps growing slowly to level 100: 15 hearts before Vitality and perks (a full-Vitality, fully
+ * mastered tank tops out near 25), and 14% more base damage and breaking speed. Attribute points
  * (317 by level 100) can't max all ten attributes (500), so every character is a build. Against
  * bosses only half of any damage bonus counts, and the bonus on one hit can't pass a small share
  * of the boss's health, so even a maxed character fights the Warden and the dragon for real.
@@ -31,24 +33,43 @@ public final class Balance {
                 : level >= 35 ? "Champion" : level >= 20 ? "Veteran" : level >= 10 ? "Adventurer" : "Wanderer";
     }
 
-    // -- the weak start, fading out with level ------------------------------------------------------
-    /** Base max health: 12 at level 1, vanilla's 20 at level 20, 36 at level 100. */
+    // -- the weak start, earned back by level 30, then slow growth to 100 ------------------------------
+    /** How strong a level 1 character is (damage, block breaking), its health, and the level where it matches vanilla. */
+    public static final double START_POWER = .5;
+    public static final int START_HEALTH = 10, VANILLA_LEVEL = 30;
+    /** Base damage and breaking speed gained per level past {@link #VANILLA_LEVEL} (+14% by level 100). */
+    public static final double LATE_GROWTH = .002;
+    /** 0 at level 1, rising evenly to 1 at {@link #VANILLA_LEVEL}. */
+    static double startShare(int level) { return Math.clamp((level - 1) / (double) (VANILLA_LEVEL - 1), 0, 1); }
+    /** Levels past {@link #VANILLA_LEVEL}, never below 0. */
+    static int past(int level) { return Math.max(0, level - VANILLA_LEVEL); }
+    /**
+     * Base max health: 10 (5 hearts) at level 1, a heart every 6 levels to vanilla's 20 at level 30, then a
+     * heart every 14 levels to 30 (15 hearts) at level 100.
+     */
     public static double baseHealth(int level) {
-        if (!hardStart) return 20 + 2 * (Math.max(0, level - 20) / 10);
-        return level <= 20 ? 12 + 2 * (level / 5) : 20 + 2 * ((level - 20) / 10);
+        int late = 20 + 2 * (past(level) / 14);
+        return hardStart && level < VANILLA_LEVEL ? START_HEALTH + 2 * (level / 6) : late;
     }
-    /** Hunger drain multiplier: 1.4 at level 1, 1.0 at 20, 0.85 at 100. */
+    /** Hunger drain multiplier: 1.5 at level 1, 1.0 at 30, 0.85 at 100. */
     public static double hungerRate(int level) {
-        if (level <= 20) return hardStart ? 1.4 - .4 * (level - 1) / 19.0 : 1;
-        return 1 - .15 * (level - 20) / 80.0;
+        if (level <= VANILLA_LEVEL) return hardStart ? 1.5 - .5 * startShare(level) : 1;
+        return 1 - .15 * past(level) / (double) (MAX_LEVEL - VANILLA_LEVEL);
     }
-    /** Melee damage before bonuses: 0.75 at level 1, 1.0 from level 15. */
-    public static double meleeBase(int level) { return !hardStart || level >= 15 ? 1 : .75 + .25 * (level - 1) / 14.0; }
-    /** Block breaking speed before skills: 0.6 at level 1, 1.0 from level 15. */
-    public static double mineBase(int level) { return !hardStart || level >= 15 ? 1 : .6 + .4 * (level - 1) / 14.0; }
+    /** The level multiplier on damage and block breaking: 0.5 at level 1, 1.0 at 30, 1.14 at 100. */
+    public static double startPower(int level) {
+        double start = hardStart ? START_POWER + (1 - START_POWER) * startShare(level) : 1;
+        return start + LATE_GROWTH * past(level);
+    }
+    /** Melee damage before bonuses: 0.5 at level 1, 1.0 at 30, 1.14 at 100. */
+    public static double meleeBase(int level) { return startPower(level); }
+    /** Projectile damage (bows, crossbows, tridents) before bonuses: 0.5 at level 1, 1.0 at 30, 1.14 at 100. */
+    public static double rangedBase(int level) { return startPower(level); }
+    /** Block breaking speed before skills: 0.5 at level 1, 1.0 at 30, 1.14 at 100. */
+    public static double mineBase(int level) { return startPower(level); }
 
     // -- attributes, per point ----------------------------------------------------------------------
-    public static final double VIT_HEALTH = .3, STR_MELEE = .01, DEX_SPEED = .008, AGI_SPEED = .002, AGI_JUMP = .002,
+    public static final double VIT_HEALTH = .2, STR_MELEE = .01, DEX_SPEED = .008, AGI_SPEED = .002, AGI_JUMP = .002,
             AGI_SAFE_FALL = .06, END_HUNGER = .008, END_BREATH = .04, TOU_ARMOR = .12, TOU_TOUGHNESS = .05,
             PRE_CRIT = .004, PRE_PROJECTILE = .006, LUCK_LUCK = .04, LUCK_LOOT = .005, WIS_XP = .01;
     /** Ticks between half-hearts of Recovery healing; 0 means none. */
@@ -105,9 +126,16 @@ public final class Balance {
     /** Character experience for a kill, from the mob's max health and how rare its kind is. */
     public static int killXp(float maxHealth, boolean hostile, Bestiary.Rarity rarity) {
         if (!hostile) return 1;
-        double mult = rarity == null ? 1 : switch (rarity) { case COMMON -> 1; case UNCOMMON -> 1.3; case RARE -> 1.6; case BOSS -> 6; };
+        double mult = rarity == null ? 1 : switch (rarity) { case COMMON -> 1; case UNCOMMON -> 1.3; case RARE -> 1.6; case ELITE -> 3; case BOSS -> 6; };
         return (int) Math.clamp(Math.round(maxHealth * .6 * mult), 1, 4000);
     }
+    /**
+     * Character experience for discovering a modpack place ({@link Atlas}) of tier 1-5: 10% of the current
+     * level's need for a tier 1 place, up to 30% for a tier 5 one, so it's worth the trip at any level.
+     */
+    public static long discoveryXp(int tier, int level) { return Math.round(need(level) * (.05 + .05 * Math.clamp(tier, 1, 5))); }
+    /** Taming an animal: Husbandry and character experience. */
+    public static final double TAME_SKILL = 15, TAME_XP = 5;
     /** Seconds between kills of one kind that still count as "in a row", and the window for a mass kill. */
     public static final int STREAK_SECONDS = 30, BURST_SECONDS = 4;
     /**

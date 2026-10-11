@@ -11,7 +11,7 @@ public enum Skill {
     EXCAVATION("Excavation", "Dig dirt, sand and gravel with a shovel"),
     FARMING("Farming", "Harvest ripe crops"),
     FISHING("Fishing", "Catch fish (rarer fish and perfect catches teach more)"),
-    HUSBANDRY("Husbandry", "Breed animals and hunt livestock"),
+    HUSBANDRY("Husbandry", "Breed, tame and hunt animals"),
     ATHLETICS("Athletics", "Sprint"),
     SWIMMING("Swimming", "Swim"),
     ACROBATICS("Acrobatics", "Survive falls"),

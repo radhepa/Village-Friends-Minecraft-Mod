@@ -9,11 +9,17 @@ import java.util.Map;
  * Every tier adds +2% damage against the family and -2% damage taken from it; Slayer (tier 3) and
  * Legend (tier 5) each unlock a named passive tied to that monster; Legend also unlocks an active
  * ability used with the ability key. Pure data, no Minecraft types.
+ *
+ * <p>Monsters from the other modpack mods count too: Not-So-Vanilla Mobs' variants join the vanilla family
+ * they're kin to, and the pack's own foes get families of their own (NSV's Challengers, The Plata Clan and
+ * its Silver Mother). Those families only show up when their mod is installed ({@link Modpack}).
  */
 public final class Bestiary {
     private Bestiary() {}
     public enum Rarity {
-        COMMON(25, 100, 300, 750, 1500), UNCOMMON(15, 60, 180, 450, 900), RARE(5, 20, 60, 150, 300), BOSS(1, 2, 3, 5, 8);
+        COMMON(25, 100, 300, 750, 1500), UNCOMMON(15, 60, 180, 450, 900), RARE(5, 20, 60, 150, 300), BOSS(1, 2, 3, 5, 8),
+        /** Rare, solitary mini-bosses: fewer kills than a rare mob, more than a boss. */
+        ELITE(1, 3, 6, 10, 15);
         public final int[] tiers;
         Rarity(int... tiers) { this.tiers = tiers; }
     }
@@ -24,7 +30,8 @@ public final class Bestiary {
      * active (amount = cooldown seconds, count = hunger cost).
      */
     public record Perk(int tier, String name, String desc, String kind, String key, double amount, int count) {}
-    public record Family(String id, String label, Rarity rarity, List<String> mobs, List<Perk> perks) {
+    /** A monster family; {@code mod} is the mod its monsters come from ("" for vanilla and Village Friends). */
+    public record Family(String id, String label, Rarity rarity, List<String> mobs, List<Perk> perks, String mod) {
         public int tier(int kills) { int t = 0; while (t < 5 && kills >= rarity.tiers[t]) t++; return t; }
         /** Kills needed for the next tier, or -1 at Legend. */
         public int next(int kills) { int t = tier(kills); return t >= 5 ? -1 : rarity.tiers[t]; }
@@ -62,8 +69,15 @@ public final class Bestiary {
             Map.entry("warden", act("Sonic Boom", "10 damage through armor to the monster you look at, up to 15 blocks", 60, 4)),
             Map.entry("wither", act("Wither Skull", "Shoot a wither skull", 20, 2)),
             Map.entry("dragon", act("Dragon Roar", "3 hearts of damage to monsters within 8 blocks, knocking them back", 90, 3)),
-            Map.entry("elder_guardian", act("Abyssal Ward", "Resistance II for 8s", 120, 2)));
-    private static Family f(String id, String label, Rarity r, List<String> mobs, Perk slayer, Perk legend) { return new Family(id, label, r, mobs, List.of(slayer, legend, ACTIVES.get(id))); }
+            Map.entry("elder_guardian", act("Abyssal Ward", "Resistance II for 8s", 120, 2)),
+            Map.entry("challenger", act("Second Wind", "4 hearts of Absorption for 20s and Speed I for 10s", 120, 3)),
+            Map.entry("plata", act("Molt", "Shed harmful effects, then Invisibility and Speed II for 5s", 60, 2)),
+            Map.entry("silver_mother", act("Mother's Shriek", "Monsters within 10 blocks are weakened and slowed for 8s", 60, 2)));
+    private static Family f(String id, String label, Rarity r, List<String> mobs, Perk slayer, Perk legend) { return m("", id, label, r, mobs, slayer, legend); }
+    /** A family whose monsters come from another mod of the pack; {@code mobs} are full entity ids. */
+    private static Family m(String mod, String id, String label, Rarity r, List<String> mobs, Perk slayer, Perk legend) {
+        return new Family(id, label, r, mobs, List.of(slayer, legend, ACTIVES.get(id)), mod);
+    }
 
     public static final List<Family> FAMILIES = List.of(
             f("zombie", "Zombies", Rarity.COMMON, List.of("zombie", "zombie_villager", "husk"),
@@ -131,11 +145,59 @@ public final class Bestiary {
                     p(5, "Dragonslayer", "+10% damage to bosses", "damage", "boss", .10)),
             f("elder_guardian", "Elder Guardians", Rarity.BOSS, List.of("elder_guardian"),
                     p(3, "Abyssal Lungs", "+3 breath", "attr", "oxygen_bonus", 3),
-                    p(5, "Tidebreaker", "+0.3 water movement", "attr", "water_movement_efficiency", .3)));
+                    p(5, "Tidebreaker", "+0.3 water movement", "attr", "water_movement_efficiency", .3)),
+            // -- the modpack's own foes ----------------------------------------------------------------
+            m("nsvmobs", "challenger", "Challengers", Rarity.ELITE, List.of("nsvmobs:broodmother", "nsvmobs:sandmaw", "nsvmobs:cinderhulk",
+                            "nsvmobs:crag_troll", "nsvmobs:prowler", "nsvmobs:stormcaller", "nsvmobs:brineclaw", "nsvmobs:rimewraith",
+                            "nsvmobs:riftstalker", "nsvmobs:oregorger"),
+                    p(3, "Trophy Hunter", "Challengers drop their loot twice", "special", "trophy_hunter", 0),
+                    p(5, "Giant's Heart", "+2 max health", "attr", "max_health", 2)),
+            m("plataclan", "plata", "The Plata Clan", Rarity.RARE, List.of("plataclan:plata_scuttler", "plataclan:plata_shardcaster", "plataclan:plata_warden"),
+                    p(3, "Keen Eye", "Disguised Plata within 24 blocks shimmer silver (only you see it)", "special", "plata_sight", 0),
+                    p(5, "Shardproof", "Projectiles hurt 20% less", "resist", "projectile", .20)),
+            m("plataclan", "silver_mother", "The Silver Mother", Rarity.BOSS, List.of("plataclan:silver_mother"),
+                    p(3, "Brood Ward", "Silverfish, endermites and the Clan hurt you 30% less", "resist", "silver", .30),
+                    p(5, "Silver Heart", "+4 max health", "attr", "max_health", 4)));
 
-    private static final Map<String, Family> BY_MOB = new HashMap<>(), BY_ID = new HashMap<>();
-    static { for (var f : FAMILIES) { BY_ID.put(f.id(), f); for (var m : f.mobs()) BY_MOB.put(m, f); } }
-    /** The family of a mob, by entity type path (e.g. "zombie"), or null. */
+    /**
+     * Not-So-Vanilla Mobs' monsters that are kin to a vanilla family, by full entity id. (Its Challengers have
+     * a family of their own above.) NSV used to teach the add-on these itself, through a mixin on {@link #ofMob}.
+     */
+    private static final Map<String, String> KIN = Map.ofEntries(
+            Map.entry("nsvmobs:sporeling", "zombie"), Map.entry("nsvmobs:frostbitten", "zombie"),
+            Map.entry("nsvmobs:lost_miner", "zombie"), Map.entry("nsvmobs:scarecrow", "zombie"),
+            Map.entry("nsvmobs:briarbones", "skeleton"), Map.entry("nsvmobs:gravewarden", "skeleton"),
+            Map.entry("nsvmobs:soulpyre", "skeleton"), Map.entry("nsvmobs:sculkbones", "skeleton"),
+            Map.entry("nsvmobs:dune_scorpion", "spider"), Map.entry("nsvmobs:dripfang", "spider"),
+            Map.entry("nsvmobs:bog_lurker", "slime"), Map.entry("nsvmobs:gloomwing", "phantom"), Map.entry("nsvmobs:vulture", "phantom"),
+            Map.entry("nsvmobs:angler", "guardian"), Map.entry("nsvmobs:driftcap", "enderman"));
+
+    private static final Map<String, Family> BY_MOB = new HashMap<>(), BY_ID = new HashMap<>(), BY_ENTITY = new HashMap<>();
+    static {
+        for (var f : FAMILIES) { BY_ID.put(f.id(), f); for (var m : f.mobs()) (m.indexOf(':') < 0 ? BY_MOB : BY_ENTITY).put(m, f); }
+        KIN.forEach((mob, family) -> BY_ENTITY.put(mob, BY_ID.get(family)));
+    }
+    /** The family of a mob, by entity type path (e.g. "zombie"), or null. Other mods may hook this to add their own. */
     public static Family ofMob(String path) { return BY_MOB.get(path); }
+    /**
+     * The family of a mob by full entity id ("minecraft:husk", "nsvmobs:sporeling", "plataclan:plata_warden"), or
+     * null: the modpack's monsters first, then vanilla and Village Friends ones by path (through {@link #ofMob}).
+     */
+    public static Family of(String id) {
+        var f = BY_ENTITY.get(id);
+        if (f != null) return f;
+        int colon = id.indexOf(':');
+        return ofMob(colon < 0 ? id : id.substring(colon + 1));
+    }
     public static Family byId(String id) { return BY_ID.get(id); }
+    /** Every modpack mob the add-on knows by full id, with its family id (for the start-up audit and tests). */
+    public static Map<String, String> modpackMobs() {
+        var all = new java.util.TreeMap<String, String>();
+        BY_ENTITY.forEach((mob, f) -> all.put(mob, f.id()));
+        return all;
+    }
+    /** Whether a family's mod is installed, so its masteries can be earned and shown. */
+    public static boolean present(Family f) { return Modpack.installed(f.mod()); }
+    /** The families of installed mods, in the order the character sheet lists them. */
+    public static List<Family> shown() { return FAMILIES.stream().filter(Bestiary::present).toList(); }
 }

@@ -14,7 +14,7 @@ public final class RpgConfig {
         boolean hardStart = true;
         String _help = "xpRate/skillXpRate scale experience; deathPenalty is the share of level progress lost on death; "
                 + "bossBonusShare is how much of your damage bonus counts against bosses; bossHitCap caps that bonus per hit "
-                + "as a share of the boss's max health; hardStart starts you at 6 hearts and hungrier.";
+                + "as a share of the boss's max health; hardStart starts you at 5 hearts, hungrier, with half damage and half block-breaking speed, earned back by level 30.";
     }
 
     public static void load() {
@@ -23,6 +23,7 @@ public final class RpgConfig {
         var v = new Values();
         try {
             if (Files.exists(file)) { var read = gson.fromJson(Files.readString(file), Values.class); if (read != null) v = read; }
+            v._help = new Values()._help;
             Files.writeString(file, gson.toJson(v));
         } catch (Exception e) { Rpg.LOGGER.warn("Couldn't read {}, using defaults: {}", file, e.toString()); }
         Balance.xpRate = Math.max(0, v.xpRate); Balance.skillXpRate = Math.max(0, v.skillXpRate);

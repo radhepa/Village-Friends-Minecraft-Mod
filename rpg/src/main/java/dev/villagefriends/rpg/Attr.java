@@ -2,7 +2,7 @@ package dev.villagefriends.rpg;
 
 /** The ten character attributes. Points come from levels, each attribute caps at {@link Balance#ATTR_CAP}. */
 public enum Attr {
-    VITALITY("Vitality", "+0.3 max health"),
+    VITALITY("Vitality", "+0.2 max health"),
     STRENGTH("Strength", "+1% melee damage"),
     DEXTERITY("Dexterity", "+0.8% attack speed"),
     AGILITY("Agility", "+0.2% speed, +0.2% jump, +0.06 safe fall"),

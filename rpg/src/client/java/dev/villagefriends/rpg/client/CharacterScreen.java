@@ -1,9 +1,11 @@
 package dev.villagefriends.rpg.client;
 
+import dev.villagefriends.rpg.Atlas;
 import dev.villagefriends.rpg.Attr;
 import dev.villagefriends.rpg.Balance;
 import dev.villagefriends.rpg.Bestiary;
 import dev.villagefriends.rpg.Life;
+import dev.villagefriends.rpg.Modpack;
 import dev.villagefriends.rpg.Rpg;
 import dev.villagefriends.rpg.RpgActionPayload;
 import dev.villagefriends.rpg.Sheet;
@@ -19,9 +21,9 @@ import net.minecraft.world.level.Level;
 import java.util.ArrayList;
 import java.util.List;
 
-/** The character sheet (K): overview, attributes, skills, bestiary and jobs. Reads the synced sheet live. */
+/** The character sheet (K): overview, attributes, skills, bestiary, jobs and the Atlas of the modpack's places. Reads the synced sheet live. */
 public final class CharacterScreen extends Screen {
-    private static final String[] TABS = {"Overview", "Attributes", "Skills", "Bestiary", "Jobs"};
+    private static final String[] TABS = {"Overview", "Attributes", "Skills", "Bestiary", "Jobs", "Atlas"};
     private static final int BG = 0xEE16110C, EDGE = 0xFFC9A75E, INK = 0xFFF4E6C3, DIM = 0xFF9C8B6A, GOOD = 0xFF7FD36B,
             GOLD = 0xFFE0B04A, PURPLE = 0xFFC28BF0, BAR = 0xFF3A2E1E;
     private static int tab;
@@ -65,7 +67,8 @@ public final class CharacterScreen extends Screen {
     @Override public void tick() { if (sheet() != seen) rebuildWidgets(); }
     @Override public boolean isPauseScreen() { return false; }
     @Override public boolean mouseScrolled(double mx, double my, double sx, double sy) {
-        if (tab == 3) { scroll = Math.clamp(scroll - (int) Math.signum(sy), 0, Math.max(0, Bestiary.FAMILIES.size() - bestiaryRows())); return true; }
+        if (tab == 3) { scroll = Math.clamp(scroll - (int) Math.signum(sy), 0, Math.max(0, Bestiary.shown().size() - bestiaryRows())); return true; }
+        if (tab == 5) { scroll = Math.clamp(scroll - 2 * (int) Math.signum(sy), 0, Math.max(0, atlasRows(sheet()).size() - atlasVisible())); return true; }
         return super.mouseScrolled(mx, my, sx, sy);
     }
     private int bestiaryRows() { return Math.max(1, (h - 44) / 24); }
@@ -83,7 +86,8 @@ public final class CharacterScreen extends Screen {
             case 1 -> attributes(g, s, mouseX, mouseY);
             case 2 -> skills(g, s, mouseX, mouseY);
             case 3 -> bestiary(g, s, mouseX, mouseY);
-            default -> jobs(g, s);
+            case 4 -> jobs(g, s);
+            default -> atlas(g, s);
         }
     }
 
@@ -96,18 +100,22 @@ public final class CharacterScreen extends Screen {
         g.text(font, "Unspent points: " + s.points(), x, y + 32, s.points() > 0 ? GOOD : INK, false);
         g.text(font, "Jobs done: " + s.mark("quests_done") + "   Active: " + s.quests().size() + "/" + Balance.maxQuests(s.level()), x, y + 44, INK, false);
         int legends = s.masteries(), tiers = 0;
-        for (var f : Bestiary.FAMILIES) tiers += s.tier(f);
-        g.text(font, "Bestiary: " + tiers + "/" + Bestiary.FAMILIES.size() * 5 + " tiers, " + legends + " Legend", x, y + 56, INK, false);
+        var families = Bestiary.shown();
+        for (var f : families) tiers += s.tier(f);
+        g.text(font, "Bestiary: " + tiers + "/" + families.size() * 5 + " tiers, " + legends + " Legend", x, y + 56, INK, false);
         int skills = 0; for (var sk : Skill.values()) skills += s.skill(sk);
         g.text(font, "Skill levels: " + skills + "/" + Skill.values().length * Balance.SKILL_CAP, x, y + 68, INK, false);
-        String next = s.level() < 10 ? "Reach level 10 to be called an Adventurer." : s.level() < 30 ? "Level 30 lets you take a 4th job." : s.level() < 60 ? "Level 60 lets you take a 5th job." : "The road goes ever on.";
-        wrap(g, next, x, y + 86, 170, DIM);
+        var places = Atlas.shown(); long found = places.stream().filter(pl -> s.marks().containsKey(Atlas.mark(pl))).count();
+        g.text(font, "Atlas: " + found + "/" + places.size() + " places found", x, y + 80, INK, false);
+        String next = s.level() < 10 ? "Reach level 10 to be called an Adventurer." : s.level() < Balance.VANILLA_LEVEL ? "You're still finding your strength: by level "
+                + Balance.VANILLA_LEVEL + " you'll hit as hard and dig as fast as anyone." : s.level() < 60 ? "Level 60 lets you take a 5th job." : "The road goes ever on.";
+        wrap(g, next, x, y + 96, 170, DIM);
 
         // Derived numbers, worked out the same way the server does.
         var p = minecraft.player; int rx = x0 + w / 2 + 6, ry = y0 + 30;
         boolean nether = p.level().dimension() == Level.NETHER;
         double melee = Balance.meleeBase(s.level()) + Balance.STR_MELEE * s.attr(Attr.STRENGTH);
-        double proj = 1 + Balance.PRE_PROJECTILE * s.attr(Attr.PRECISION) + Balance.ARCHERY_DAMAGE * s.skill(Skill.ARCHERY) + s.perk("damage", "projectile");
+        double proj = Balance.rangedBase(s.level()) + Balance.PRE_PROJECTILE * s.attr(Attr.PRECISION) + Balance.ARCHERY_DAMAGE * s.skill(Skill.ARCHERY) + s.perk("damage", "projectile");
         double hunger = Math.max(Balance.MIN_HUNGER, Balance.hungerRate(s.level()) * (1 - Balance.END_HUNGER * s.attr(Attr.ENDURANCE)));
         int rec = Balance.recoveryInterval(s.attr(Attr.RECOVERY));
         String[][] rows = {
@@ -158,25 +166,28 @@ public final class CharacterScreen extends Screen {
 
     private void bestiary(GuiGraphicsExtractor g, Sheet s, int mx, int my) {
         int rows = bestiaryRows(), y = y0 + 30;
-        for (int i = scroll; i < Math.min(Bestiary.FAMILIES.size(), scroll + rows); i++, y += 24) {
-            var f = Bestiary.FAMILIES.get(i); int k = s.kills(f.id()), t = f.tier(k), next = f.next(k);
+        var families = Bestiary.shown();
+        for (int i = scroll; i < Math.min(families.size(), scroll + rows); i++, y += 24) {
+            var f = families.get(i); int k = s.kills(f.id()), t = f.tier(k), next = f.next(k);
             g.text(font, f.label(), x0 + 10, y, t >= 5 ? GOLD : t > 0 ? INK : DIM, false);
             g.text(font, Balance.tierName(t) + " - " + k + " kills" + (next > 0 ? ", next at " + next : ""), x0 + 130, y, t > 0 ? PURPLE : DIM, false);
             var perks = new ArrayList<String>();
             for (var p : f.perks()) perks.add((t >= p.tier() ? "" : "[" + Balance.tierName(p.tier()) + "] ") + p.name());
             g.text(font, font.plainSubstrByWidth("+" + 2 * t + "% dmg, -" + 2 * t + "% taken  |  " + String.join(", ", perks), w - 24), x0 + 14, y + 10, t >= 3 ? GOOD : DIM, false);
             if (mx >= x0 + 8 && mx < x0 + w - 8 && my >= y - 1 && my < y + 22) {
-                var lines = new ArrayList<String>(List.of(f.label() + " (" + f.rarity().name().toLowerCase() + ")", "Tiers at " + join(f.rarity().tiers) + " kills"));
+                var lines = new ArrayList<String>(List.of(f.label() + " (" + f.rarity().name().toLowerCase() + (f.mod().isEmpty() ? "" : ", " + Modpack.name(f.mod())) + ")",
+                        "Tiers at " + join(f.rarity().tiers) + " kills"));
                 for (var p : f.perks()) lines.add((t >= p.tier() ? "Unlocked " : "At " + Balance.tierName(p.tier()) + ": ") + p.name() + " - " + p.desc());
                 g.setTooltipForNextFrame(Component.literal(String.join("\n", lines)), mx, my);
             }
         }
-        g.text(font, (scroll + 1) + "-" + Math.min(Bestiary.FAMILIES.size(), scroll + rows) + " of " + Bestiary.FAMILIES.size() + " (scroll)", x0 + w - 110, y0 + h - 12, DIM, false);
+        g.text(font, (scroll + 1) + "-" + Math.min(families.size(), scroll + rows) + " of " + families.size() + " (scroll)", x0 + w - 110, y0 + h - 12, DIM, false);
     }
 
     private void jobs(GuiGraphicsExtractor g, Sheet s) {
         if (s.quests().isEmpty()) {
-            wrap(g, "No jobs yet. Talk to a villager with a trade (farmers, smiths, guards, clerics, librarians, fishermen and more) and ask \"Any work for me?\". "
+            wrap(g, "No jobs yet. Talk to a villager with a trade (farmers, smiths, guards, clerics, librarians, fishermen, and the modpack's miners, lightkeepers, "
+                    + "smugglers and merfolk) and ask \"Any work for me?\". "
                     + "Each villager has one job a day. Jobs pay experience, emeralds and friendship.", x0 + 10, y0 + 34, w - 20, DIM);
             return;
         }
@@ -187,6 +198,36 @@ public final class CharacterScreen extends Screen {
             g.text(font, q.done() ? "Ready! Return to " + q.giverName() : "For " + q.giverName() + (q.job().isEmpty() ? "" : ", " + q.job().replace('_', ' ')), x0 + 136, y + 9, q.done() ? GOOD : DIM, false);
             g.text(font, "Reward: " + q.xp() + " XP, " + q.emeralds() + " emeralds, +" + q.friendship() + " friendship (before Bartering)", x0 + 10, y + 20, DIM, false);
         }
+    }
+
+    /** The Atlas: every place the installed modpack mods build, grouped by mod; ??? until you've stood inside one. */
+    private void atlas(GuiGraphicsExtractor g, Sheet s) {
+        var rows = atlasRows(s); int visible = atlasVisible(), y = y0 + 44;
+        var places = Atlas.shown(); long found = places.stream().filter(pl -> s.marks().containsKey(Atlas.mark(pl))).count();
+        g.text(font, "Places found: " + found + "/" + places.size() + "   (stand inside one to discover it; jobs can send you to them)", x0 + 10, y0 + 30, GOLD, false);
+        for (int i = scroll; i < Math.min(rows.size(), scroll + visible); i++, y += 10)
+            g.text(font, font.plainSubstrByWidth((String) rows.get(i)[0], w - 20), x0 + 10, y, (int) rows.get(i)[1], false);
+        if (rows.size() > visible) g.text(font, (scroll + 1) + "-" + Math.min(rows.size(), scroll + visible) + " of " + rows.size() + " (scroll)", x0 + w - 110, y0 + h - 12, DIM, false);
+    }
+    private int atlasVisible() { return Math.max(1, (h - 58) / 10); }
+    private List<Object[]> atlasRows(Sheet s) {
+        var rows = new ArrayList<Object[]>();
+        for (var mod : Modpack.present()) {
+            var places = Atlas.shown().stream().filter(pl -> pl.mod().equals(mod)).toList();
+            if (places.isEmpty()) continue;
+            long found = places.stream().filter(pl -> s.marks().containsKey(Atlas.mark(pl))).count();
+            rows.add(new Object[]{Modpack.name(mod) + "  " + found + "/" + places.size(), found == places.size() ? GOLD : PURPLE});
+            for (var pl : places) {
+                boolean f = s.marks().containsKey(Atlas.mark(pl));
+                rows.add(new Object[]{"   " + (f ? title(pl.name()) + "   found on day " + (s.mark(Atlas.mark(pl)) - 1) : "???" + "  " + "*".repeat(pl.tier())), f ? GOOD : DIM});
+            }
+        }
+        return rows;
+    }
+    /** "the Sunken Forge" / "a Silver Warren" to "Sunken Forge" / "Silver Warren". */
+    private static String title(String name) {
+        for (var article : new String[]{"a ", "an ", "the "}) if (name.startsWith(article)) { name = name.substring(article.length()); break; }
+        return name.isEmpty() ? name : Character.toUpperCase(name.charAt(0)) + name.substring(1);
     }
 
     // -- helpers -----------------------------------------------------------------------------------
