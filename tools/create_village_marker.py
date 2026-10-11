@@ -28,7 +28,7 @@ language['block.villagefriends.village_marker']='Village Marker'
 save(Path('assets/villagefriends/lang/en_us.json'),language)
 save(Path('data/villagefriends/recipe/village_marker.json'),{'type':'minecraft:crafting_shaped','pattern':['PSP',' C ',' P '],
     'key':{'P':'#minecraft:planks','S':'minecraft:oak_sign','C':'minecraft:copper_ingot'},'result':{'id':'villagefriends:village_marker','count':1}})
-save(Path('data/villagefriends/loot_table/blocks/village_marker.json'),{'type':'minecraft:block','pools':[{'rolls':1,'entries':[{'type':'minecraft:item','name':'villagefriends:village_marker'}],'conditions':[{'condition':'minecraft:survives_explosion'}]}]})
+save(Path('data/villagefriends/loot_table/blocks/village_marker.json'),{'type':'minecraft:block','pools':[{'rolls':1,'entries':[{'type':'minecraft:item','name':'villagefriends:village_marker'}],'condition':{'type':'minecraft:survives_explosion'}}]})
 axe_path=ROOT/'data/minecraft/tags/block/mineable/axe.json'
 axe=json.loads(axe_path.read_text(encoding='utf-8')) if axe_path.exists() else {'replace':False,'values':[]}
 axe['values']=sorted(set(axe['values'])|{'villagefriends:village_marker'})

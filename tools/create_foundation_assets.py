@@ -119,7 +119,7 @@ def block_art(name, stone):
 
 for name, entry in blocks.items():
     language[f'block.{NS}.{name}'] = name.replace('_', ' ').title()
-    save(f'data/{NS}/loot_table/blocks/{name}.json', {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
+    save(f'data/{NS}/loot_table/blocks/{name}.json', {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'condition': {'type': 'minecraft:survives_explosion'}}]})
     if entry['workstation'] or name in MODELED_ELSEWHERE:
         continue  # Models and art come from tools/workstations/workstations.py or the tool in MODELED_ELSEWHERE.
     png(f'assets/{NS}/textures/block/{name}.png', block_art(name, entry['stone']))

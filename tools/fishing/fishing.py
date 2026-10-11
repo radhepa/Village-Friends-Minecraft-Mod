@@ -240,7 +240,7 @@ def recipes():
     files[DATA / f'{NS}/loot_table/blocks/trophy_mount.json'] = dump({
         'type': 'minecraft:block', 'random_sequence': f'{NS}:blocks/trophy_mount',
         'pools': [{'rolls': 1, 'bonus_rolls': 0, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:trophy_mount'}],
-                   'conditions': [{'condition': 'minecraft:survives_explosion'}]}]})
+                   'condition': {'type': 'minecraft:survives_explosion'}}]})
     files[DATA / f'{NS}/recipe/grilled_fish.json'] = cooking('smelting', 200, 0.35)
     files[DATA / f'{NS}/recipe/grilled_fish_from_smoking.json'] = cooking('smoking', 100, 0.35)
     files[DATA / f'{NS}/recipe/grilled_fish_from_campfire_cooking.json'] = cooking('campfire_cooking', 600, 0.35)

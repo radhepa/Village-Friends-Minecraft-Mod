@@ -1,6 +1,5 @@
 package dev.villagefriends;
 
-import dev.villagefriends.hearth.HearthBlocks;
 import dev.villagefriends.hearth.HearthItems;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +30,9 @@ import org.slf4j.LoggerFactory;
 /**
  * Hearth & Harvest's crop and station loot tables in a real world: an unripe crop gives back only its seed; a
  * ripe one gives 1 to its most produce and 1-3 seeds, Fortune adds seeds, an explosion thins the drops out; a
- * survival player's break drops the same on the ground; the stations drop themselves unless blown up. Every
- * case is rolled hundreds of times through the block's own loot table ({@code -Ptests=HarvestGameTest}).
+ * survival player's break drops the same on the ground; every other block with a loot table (stations,
+ * workstations, furniture) drops itself unless blown up. Every case is rolled hundreds of times through the
+ * block's own loot table ({@code -Ptests=HarvestGameTest}).
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class HarvestGameTest implements FabricClientGameTest {
@@ -142,19 +142,26 @@ public final class HarvestGameTest implements FabricClientGameTest {
                 }
             });
 
-            // -- the stations drop themselves, unless an explosion takes them ----------------------------------
+            // -- the stations, workstations and furniture drop themselves, unless an explosion takes them --------
             w.getServer().runOnServer(s -> {
                 var level = level(w);
                 var pos = player(w).blockPosition().offset(0, 0, 4);
-                for (Block station : HearthBlocks.blocks()) {
-                    var state = station.defaultBlockState();
+                var crops = HearthItems.crops();
+                int checked = 0;
+                for (Block block : BuiltInRegistries.BLOCK) {
+                    var id = BuiltInRegistries.BLOCK.getKey(block);
+                    if (!id.getNamespace().equals("villagefriends") || crops.contains(block)) continue;
+                    var state = block.defaultBlockState();
                     var whole = drops(level, state, pos, ItemStack.EMPTY, 0);
-                    check(whole.size() == 1 && whole.getFirst().is(station.asItem()) && whole.getFirst().getCount() == 1, station + " drops itself, got " + whole);
+                    if (whole.isEmpty()) continue; // no loot table (seats and other helper blocks)
+                    check(whole.size() == 1 && whole.getFirst().is(block.asItem()) && whole.getFirst().getCount() == 1, id + " drops itself, got " + whole);
                     int kept = 0;
                     for (int i = 0; i < ROLLS; i++) for (var stack : drops(level, state, pos, ItemStack.EMPTY, 8)) kept += stack.getCount();
-                    LOGGER.info("{} survived {} of {} radius-8 explosions", station, kept, ROLLS);
-                    check(kept > ROLLS / 8 / 3 && kept < ROLLS / 8 * 3, station + " survives about 1 in 8 radius-8 explosions, got " + kept + " of " + ROLLS);
+                    LOGGER.info("{} survived {} of {} radius-8 explosions", id, kept, ROLLS);
+                    check(kept > ROLLS / 8 / 3 && kept < ROLLS / 8 * 3, id + " survives about 1 in 8 radius-8 explosions, got " + kept + " of " + ROLLS);
+                    checked++;
                 }
+                check(checked == 29, "The 29 blocks with their own loot table were checked, got " + checked);
             });
             LOGGER.info("Harvest loot checks passed");
         }

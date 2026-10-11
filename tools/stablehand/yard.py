@@ -369,7 +369,7 @@ RECIPES = {
 def loot(name):
     """A broken block drops itself (a trough's hay is lost with it), unless an explosion destroyed it."""
     return {'type': 'minecraft:block', 'pools': [{'rolls': 1, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}],
-                                                  'conditions': [{'condition': 'minecraft:survives_explosion'}]}]}
+                                                  'condition': {'type': 'minecraft:survives_explosion'}}]}
 
 
 # -- trades -----------------------------------------------------------------------------------------
