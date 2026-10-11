@@ -1,3 +1,12 @@
+# Crop harvest verification (2.29.1)
+
+Checked October 10, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, on branch `crop-loot-fix` (from main 2d4b58b).
+
+- The cause: 26.3 loot entries, pools and tables read one `condition` and one `modifier` (see vanilla's `data/minecraft/loot_table/blocks/wheat.json`, and `LootPoolEntryContainer.commonFields` in the 26.3 jar). The six crop tables used 1.21's `conditions`/`functions` lists, which the codec skips as unknown keys, so `AlternativesEntry.validate` found a first child with no condition and logged "Unreachable entry!" for `pools[0].entries[0]`.
+- `gradlew :rpg:runServer -Paudit=true` logged the six warnings before the fix and none after.
+- `-Ptests=HarvestGameTest -PtestHeap=1536m` on the old tables failed at its first check: an age-0 onion dropped 1 onion and 1 seed on all 400 rolls. Every condition and count was ignored, so every crop gave exactly that at any age. On the regenerated tables it passed. Ages 0–6 give exactly one seed. Ripe crops give 1–2 (cabbage, barley, leek) or 1–3 (onion, garlic, herbs) produce and 1–3 seeds, about 2.1 on average. With Fortune III they give 1–6 seeds, about 3.8. In a radius-8 explosion each drops about a quarter of an item of each kind. A survival player breaking young barley got 1 seed and nothing else; breaking ripe barley got barley and seeds on the ground. The three stations drop themselves, and survived 42–48 of 400 radius-8 explosions; before, they survived every one.
+- `python tools/hearth/hearth.py --check` (167 files) and `gradlew test` (308 unit tests in 40 classes) pass.
+
 # Stablehand verification (2.29.0)
 
 Checked October 9-10, 2026 on Windows with Minecraft 26.3, Fabric 0.19.5 and Java 25, on branch `stablehand` after merging the four Stablehand packages (breeds, gear, stables, riders) on top of Hearth & Harvest 2.27.0, then again after merging Tall Tales Fishing 2.28.0.

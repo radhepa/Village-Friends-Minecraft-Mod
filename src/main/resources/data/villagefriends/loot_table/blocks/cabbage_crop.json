@@ -1,14 +1,11 @@
 {
   "type": "minecraft:block",
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
-    }
-  ],
+  "modifier": {
+    "type": "minecraft:explosion_decay"
+  },
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -16,26 +13,21 @@
             {
               "type": "minecraft:item",
               "name": "villagefriends:cabbage",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "villagefriends:cabbage_crop",
-                  "properties": {
-                    "age": "7"
-                  }
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "villagefriends:cabbage_crop",
+                "state": {
+                  "age": "7"
                 }
-              ],
-              "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "min": 1,
-                    "max": 2
-                  },
-                  "add": false
+              },
+              "modifier": {
+                "type": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1,
+                  "max": 2
                 }
-              ]
+              }
             },
             {
               "type": "minecraft:item",
@@ -46,32 +38,27 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "villagefriends:cabbage_crop",
-          "properties": {
-            "age": "7"
-          }
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "villagefriends:cabbage_crop",
+        "state": {
+          "age": "7"
         }
-      ],
+      },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "villagefriends:cabbage_seeds",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 2,
-                "probability": 0.5714286
-              }
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:binomial_with_bonus_count",
+            "parameters": {
+              "extra": 2,
+              "probability": 0.5714286
             }
-          ]
+          }
         }
       ]
     }

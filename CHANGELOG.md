@@ -1,3 +1,8 @@
+# Village Friends 2.29.1 — Crop harvests
+
+- **Fix: Hearth & Harvest's crops dropped the wrong things.** Breaking an onion, cabbage, barley, leek, garlic or kitchen herbs crop at any age gave one produce and one seed, so a seed broken straight after planting came back as food; a ripe crop never gave more than one of each, and Fortune did nothing. Their loot tables were written in 1.21's format, and Minecraft 26.3 silently ignores its `conditions` and `functions` keys (26.3 reads one `condition` and one `modifier`, as vanilla's own `wheat.json` does). Now an unripe crop gives back just its seed and a ripe one gives 1–2 or 1–3 produce and 1–3 seeds (always one to replant). Fortune adds seeds and explosions destroy most of the drops. The server no longer warns "Unreachable entry!" about the six tables at start-up. The cooking pot, clay oven and prep table no longer drop themselves from every explosion either.
+- Add `HarvestGameTest` (`-Ptests=HarvestGameTest`): every crop and station rolled through its loot table hundreds of times, plus a survival player's break.
+
 # Village Friends RPG 1.2.0 — The whole modpack
 
 The RPG add-on now knows every mod of the Village Friends modpack (all optional; each piece appears only when its mod is installed). Village Friends itself is unchanged (still 2.29.0).

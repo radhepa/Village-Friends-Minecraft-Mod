@@ -235,25 +235,27 @@ def crop_assets(c):
         files[ASSETS / f'models/block/{block}_stage{s}.json'] = dump(
             {'parent': 'minecraft:block/crop', 'textures': {'crop': f'{NS}:block/{c["id"]}_stage{s}'}})
     lo, hi = (int(x) for x in c['drops'].split('-'))
-    ripe = [{'condition': 'minecraft:block_state_property', 'block': f'{NS}:{block}', 'properties': {'age': '7'}}]
+    # 26.3's loot format, as in vanilla's wheat.json: one 'condition' and one 'modifier' per entry, pool and table
+    # ('match_block' tests the state). The 1.21 keys ('conditions', 'functions') are silently ignored by 26.3.
+    ripe = {'type': 'minecraft:match_block', 'blocks': f'{NS}:{block}', 'state': {'age': '7'}}
     files[DATA / f'{NS}/loot_table/blocks/{block}.json'] = dump({
         'type': 'minecraft:block',
-        'functions': [{'function': 'minecraft:explosion_decay'}],
+        'modifier': {'type': 'minecraft:explosion_decay'},
         'pools': [
-            {'rolls': 1.0, 'bonus_rolls': 0.0, 'entries': [{'type': 'minecraft:alternatives', 'children': [
-                {'type': 'minecraft:item', 'name': f'{NS}:{c["id"]}', 'conditions': ripe,
-                 'functions': [{'function': 'minecraft:set_count', 'count': {'type': 'minecraft:uniform', 'min': lo, 'max': hi}, 'add': False}]},
+            {'rolls': 1, 'entries': [{'type': 'minecraft:alternatives', 'children': [
+                {'type': 'minecraft:item', 'name': f'{NS}:{c["id"]}', 'condition': ripe,
+                 'modifier': {'type': 'minecraft:set_count', 'count': {'type': 'minecraft:uniform', 'min': lo, 'max': hi}}},
                 {'type': 'minecraft:item', 'name': f'{NS}:{c["seed"]}'}]}]},
-            {'rolls': 1.0, 'bonus_rolls': 0.0, 'conditions': ripe, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{c["seed"]}',
-                'functions': [{'function': 'minecraft:apply_bonus', 'enchantment': 'minecraft:fortune',
-                               'formula': 'minecraft:binomial_with_bonus_count', 'parameters': {'extra': 2, 'probability': 0.5714286}}]}]}],
+            {'rolls': 1, 'condition': ripe, 'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{c["seed"]}',
+                'modifier': {'type': 'minecraft:apply_bonus', 'enchantment': 'minecraft:fortune',
+                             'formula': 'minecraft:binomial_with_bonus_count', 'parameters': {'extra': 2, 'probability': 0.5714286}}}]}],
         'random_sequence': f'{NS}:blocks/{block}'})
     return files
 
 
 def station_loot(name):
-    return dump({'type': 'minecraft:block', 'pools': [{'rolls': 1.0, 'bonus_rolls': 0.0,
-        'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}], 'conditions': [{'condition': 'minecraft:survives_explosion'}]}],
+    return dump({'type': 'minecraft:block', 'pools': [{'rolls': 1, 'condition': {'type': 'minecraft:survives_explosion'},
+        'entries': [{'type': 'minecraft:item', 'name': f'{NS}:{name}'}]}],
         'random_sequence': f'{NS}:blocks/{name}'})
 
 
